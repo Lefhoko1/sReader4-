@@ -1,0 +1,189 @@
+/*
+2026-06-05 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+*/
+/*
+Responsive Landing Page - Balanced Mobile Layout
+*/
+.root {
+    flex-grow: 1;
+    background-color: #E6F3FF;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 8% 0;
+}
+
+.background-glow {
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 0%;
+    left: -25%;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/glow.png");
+    opacity: 0.3;
+    rotate: 45deg;
+}
+
+.decor-cloud {
+    position: absolute;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.cloud-1 {
+    width: 50%;
+    height: 20%;
+    top: 5%;
+    left: -15%;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/cloud_1.png");
+    opacity: 0.6;
+}
+
+.cloud-2 {
+    width: 45%;
+    height: 18%;
+    top: 15%;
+    right: -12%;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/cloud_2.png");
+    opacity: 0.5;
+}
+
+.cloud-3 {
+    width: 60%;
+    height: 25%;
+    bottom: -8%;
+    left: -15%;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/cloud_1.png");
+    opacity: 0.4;
+    rotate: 15deg;
+}
+
+.header {
+    width: 100%;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.logo {
+    width: 65%;
+    height: 100px;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/logo.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.main-container {
+    flex-grow: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.platform {
+    position: absolute;
+    width: 100%;
+    height: 18%;
+    bottom: 5%;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/platform.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.character-space {
+    width: 60%;
+    height: 45%;
+    bottom: 8%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.reading-character {
+    width: 100%;
+    height: 100%;
+}
+
+.floating-item {
+    position: absolute;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.item-bookstack {
+    width: 22%;
+    height: 20%;
+    bottom: 15%;
+    left: 5%;
+    rotate: -10deg;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/book_stack_new.png");
+}
+
+.item-backpack {
+    width: 24%;
+    height: 24%;
+    bottom: 12%;
+    right: 5%;
+    rotate: 15deg;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/backpack_new.png");
+}
+
+.item-gradcap {
+    width: 18%;
+    height: 16%;
+    top: 10%;
+    left: 12%;
+    rotate: -20deg;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/grad_cap_new.png");
+}
+
+.item-openbook {
+    width: 22%;
+    height: 14%;
+    top: 8%;
+    right: 12%;
+    rotate: 10deg;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/open_book_new.png");
+}
+
+.item-globe {
+    width: 18%;
+    height: 20%;
+    bottom: 28%;
+    left: 3%;
+    background-image: url("project://database/Assets/Sprites/LandingPageAssets_ExtractedAssets/globe_new.png");
+}
+
+.bottom-panel {
+    width: 100%;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+.btn-login {
+    width: 65%;
+    height: 80px;
+    background-color: #FF5A5F;
+    color: white;
+    border-radius: 40px;
+    font-size: 26px;
+    -unity-font-style: bold;
+    border-width: 0;
+    margin-bottom: 20px;
+}
+
+.button-row {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #4A90E2;
+    border-radius: 20px;
+    padding: 12px 20px;
+    margin: 0 10px;
+    border-width: 2px;
+    border-color: #4A90E2;
+    font-size: 16px;
+    -unity-font-style: bold;
+}

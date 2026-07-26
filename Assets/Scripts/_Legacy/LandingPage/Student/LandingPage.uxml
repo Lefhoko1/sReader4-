@@ -1,0 +1,22 @@
+<!--
+2026-06-05 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+-->
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/Scripts/LandingPage/Student/LandingPage.uss" />
+    <ui:VisualElement name="Root" class="root">
+
+        <ui:VisualElement name="CharacterSpace" class="character-space">
+            <ui:VisualElement name="reading-character" class="reading-character" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="BottomPanel" class="bottom-panel">
+            <ui:Button name="login-button" text="Get Started" class="btn-login" />
+            <ui:VisualElement class="button-row">
+                <ui:Button name="about-button" text="About Us" class="btn-secondary" />
+                <ui:Button name="contact-button" text="Contact Us" class="btn-secondary" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

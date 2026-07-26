@@ -1,0 +1,64 @@
+/*
+    Story Trek — design tokens (Phase 1).
+    The game world uses the mockup's STORYBOOK palette (warm, bright), distinct
+    from the app shell's dark theme; HUD chips sit on translucent "glass".
+    C# twin: Assets/Scripts/Game/Trek/TrekTheme.cs — KEEP THE TWO IN SYNC.
+*/
+
+:root {
+    /* Storybook tokens (from the design mockup) */
+    --trek-paper: rgb(247, 248, 244);
+    --trek-card: rgb(255, 255, 255);
+    --trek-ink: rgb(29, 36, 23);
+    --trek-line: rgb(224, 229, 216);
+    --trek-leaf: rgb(95, 206, 126);
+    --trek-sun: rgb(255, 201, 60);
+    --trek-sky: rgb(87, 200, 242);
+    --trek-coral: rgb(255, 107, 93);
+    --trek-violet: rgb(154, 134, 242);
+    --trek-night: rgb(18, 34, 23);
+    --trek-panel: rgb(29, 53, 36);
+
+    /* HUD glass */
+    --trek-glass: rgba(18, 34, 23, 0.78);
+
+    /* Ribbon / Reading View text states (R-1) */
+    --trek-read: rgb(154, 163, 148);        /* already read: dimmed, readable */
+    --trek-current: rgb(29, 36, 23);        /* lantern line: ink, bold */
+    --trek-upcoming: rgb(185, 192, 178);    /* upcoming: visible, muted */
+    --trek-seal: rgb(154, 134, 242);        /* sealed word slots [⬚⬚⬚] */
+    --trek-won: rgb(46, 156, 85);           /* won words */
+
+    /* Gate solve tiers (R-8) */
+    --trek-gold: rgb(255, 201, 60);
+    --trek-silver: rgb(95, 206, 126);
+    --trek-bronze: rgb(184, 137, 92);
+
+    --trek-radius: 14px;
+}
+
+.trek-card {
+    background-color: var(--trek-card);
+    border-left-width: 1px; border-right-width: 1px;
+    border-top-width: 1px; border-bottom-width: 1px;
+    border-left-color: var(--trek-line); border-right-color: var(--trek-line);
+    border-top-color: var(--trek-line); border-bottom-color: var(--trek-line);
+    border-top-left-radius: 16px; border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;
+}
+
+.trek-glass-chip {
+    background-color: var(--trek-glass);
+    color: var(--trek-paper);
+    -unity-font-style: bold;
+    border-top-left-radius: 12px; border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;
+}
+
+.trek-primary {
+    background-color: var(--trek-sun);
+    color: var(--trek-ink);
+    -unity-font-style: bold;
+    border-top-left-radius: 12px; border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;
+}

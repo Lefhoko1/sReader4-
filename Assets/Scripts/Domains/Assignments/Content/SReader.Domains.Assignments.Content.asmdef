@@ -1,0 +1,14 @@
+{
+    "name": "SReader.Domains.Assignments.Content",
+    "rootNamespace": "SReader.Domains.Assignments.Models",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

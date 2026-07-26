@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    sReader — Profile / signed-in landing page (Huawei Y5 · 720×1520)
+    ───────────────────────────────────────────────────────────────────
+    Shown after a successful sign-in. Same three-zone language as the
+    auth pages: header (wordmark + greeting), a scrolling body that
+    toggles between a read-only "view" card and an "edit" card, and a
+    9% bottom bar with sign-out. Edits sync to Supabase (see
+    ProfileViewModel → IUserService / ILocationService).
+-->
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+
+    <!-- Cursor/selection colors for text inputs (C# setters are obsolete) -->
+    <ui:Style src="project://database/Assets/Scripts/UI/Views/Shared/AuthFields.uss" />
+
+    <ui:VisualElement name="page-root"
+        style="width: 100%; height: 100%; background-color: rgb(18, 20, 25); padding-left: 6%; padding-right: 6%; padding-top: 3%; padding-bottom: 1.5%;">
+
+        <!-- ── Zone 1 · Header ── -->
+        <ui:VisualElement name="header"
+            style="flex-shrink: 0; justify-content: flex-end; align-items: center; padding-top: 52px; padding-bottom: 14px;">
+
+            <ui:VisualElement name="bookmark-ribbon"
+                style="position: absolute; top: 0; right: 2%; width: 4.5%; height: 44px; background-color: rgb(233, 223, 200); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;" />
+
+            <!-- Back to the role home -->
+            <ui:Button name="back-button" text="‹ Back"
+                style="position: absolute; top: 8px; left: 0; background-color: rgba(0, 0, 0, 0); color: rgb(233, 223, 200); font-size: 16px; -unity-font-style: bold; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 0; padding-right: 16px; padding-top: 10px; padding-bottom: 10px;" />
+
+            <!-- Profile photo (WhatsApp-style); falls back to the default user icon -->
+            <ui:VisualElement name="profile-avatar"
+                style="width: 88px; height: 88px; margin-bottom: 3%; background-color: rgb(233, 223, 200); background-image: url('project://database/Assets/Sprites/PersonImage.jpg'); -unity-background-scale-mode: scale-and-crop; border-top-left-radius: 44px; border-top-right-radius: 44px; border-bottom-left-radius: 44px; border-bottom-right-radius: 44px; overflow: hidden;" />
+
+            <ui:Label name="wordmark" text="sReader"
+                style="font-size: 36px; color: rgb(242, 239, 230); -unity-font-style: bold; letter-spacing: 3px;" />
+            <ui:VisualElement
+                style="height: 1px; width: 11%; background-color: rgb(233, 223, 200); margin-top: 1.5%; margin-bottom: 2%;" />
+            <ui:Label name="greeting" text="Welcome"
+                style="font-size: 18px; color: rgb(233, 223, 200); -unity-font-style: bold; -unity-text-align: middle-center; white-space: normal;" />
+            <ui:Label name="account-line" text=""
+                style="font-size: 13px; color: rgb(152, 160, 174); -unity-text-align: middle-center; white-space: normal; margin-top: 1%;" />
+        </ui:VisualElement>
+
+        <!-- ── Zone 2 · Body (scrolls) ── -->
+        <ui:ScrollView name="body" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden" style="flex-grow: 1;">
+
+            <!-- ── VIEW card · read-only summary ── -->
+            <ui:VisualElement name="view-card"
+                style="background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 18px; padding-right: 18px; padding-top: 18px; padding-bottom: 20px; margin-top: 2%;">
+
+                <ui:Label text="Your profile"
+                    style="font-size: 18px; color: rgb(233, 223, 200); -unity-font-style: bold; margin-bottom: 4%;" />
+
+                <ui:Label text="DISPLAY NAME" style="font-size: 11px; color: rgb(122, 130, 145); letter-spacing: 1px; margin-bottom: 1%;" />
+                <ui:Label name="view-display-name" text="—" style="font-size: 16px; color: rgb(242, 239, 230); white-space: normal; margin-bottom: 4%;" />
+
+                <ui:Label text="USERNAME" style="font-size: 11px; color: rgb(122, 130, 145); letter-spacing: 1px; margin-bottom: 1%;" />
+                <ui:Label name="view-username" text="—" style="font-size: 16px; color: rgb(242, 239, 230); white-space: normal; margin-bottom: 4%;" />
+
+                <ui:Label text="BIO" style="font-size: 11px; color: rgb(122, 130, 145); letter-spacing: 1px; margin-bottom: 1%;" />
+                <ui:Label name="view-bio" text="—" style="font-size: 16px; color: rgb(242, 239, 230); white-space: normal; margin-bottom: 4%;" />
+
+                <ui:Label text="COUNTRY · TIMEZONE" style="font-size: 11px; color: rgb(122, 130, 145); letter-spacing: 1px; margin-bottom: 1%;" />
+                <ui:Label name="view-country" text="—" style="font-size: 16px; color: rgb(242, 239, 230); white-space: normal; margin-bottom: 4%;" />
+
+                <ui:Label text="LOCATION" style="font-size: 11px; color: rgb(122, 130, 145); letter-spacing: 1px; margin-bottom: 1%;" />
+                <ui:Label name="view-location" text="—" style="font-size: 16px; color: rgb(242, 239, 230); white-space: normal; margin-bottom: 6%;" />
+
+                <ui:Button name="edit-button" text="Edit profile"
+                    style="height: 48px; background-color: rgb(233, 223, 200); color: rgb(18, 20, 25); font-size: 16px; -unity-font-style: bold; letter-spacing: 1px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+            </ui:VisualElement>
+
+            <!-- ── EDIT card · editable fields (hidden until "Edit profile") ── -->
+            <ui:VisualElement name="edit-card"
+                style="display: none; background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 18px; padding-right: 18px; padding-top: 18px; padding-bottom: 20px; margin-top: 2%;">
+
+                <ui:Label text="Edit profile"
+                    style="font-size: 18px; color: rgb(233, 223, 200); -unity-font-style: bold; margin-bottom: 4%;" />
+
+                <ui:TextField name="display-name" placeholder-text="Display name"
+                    style="height: 48px; margin-bottom: 3%; justify-content: center; background-color: rgb(18, 20, 25); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 2%; padding-right: 2%; color: rgb(242, 239, 230); font-size: 16px;" />
+
+                <ui:TextField name="username" placeholder-text="Username"
+                    style="height: 48px; margin-bottom: 3%; justify-content: center; background-color: rgb(18, 20, 25); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 2%; padding-right: 2%; color: rgb(242, 239, 230); font-size: 16px;" />
+
+                <ui:TextField name="bio" placeholder-text="Bio" multiline="true"
+                    style="min-height: 72px; margin-bottom: 3%; background-color: rgb(18, 20, 25); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 2%; padding-right: 2%; padding-top: 2%; padding-bottom: 2%; color: rgb(242, 239, 230); font-size: 16px; white-space: normal;" />
+
+                <ui:Label text="Country &amp; timezone" style="font-size: 13px; color: rgb(152, 160, 174); margin-bottom: 2%; margin-top: 1%;" />
+
+                <ui:TextField name="country" placeholder-text="Country"
+                    style="height: 48px; margin-bottom: 3%; justify-content: center; background-color: rgb(18, 20, 25); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 2%; padding-right: 2%; color: rgb(242, 239, 230); font-size: 16px;" />
+
+                <ui:TextField name="timezone" placeholder-text="Timezone (e.g. Africa/Johannesburg)"
+                    style="height: 48px; margin-bottom: 4%; justify-content: center; background-color: rgb(18, 20, 25); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 2%; padding-right: 2%; color: rgb(242, 239, 230); font-size: 16px;" />
+
+                <ui:Label text="Location" style="font-size: 13px; color: rgb(152, 160, 174); margin-bottom: 2%;" />
+
+                <ui:TextField name="loc-country" placeholder-text="Country"
+                    style="height: 48px; margin-bottom: 3%; justify-content: center; background-color: rgb(18, 20, 25); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 2%; padding-right: 2%; color: rgb(242, 239, 230); font-size: 16px;" />
+
+                <ui:TextField name="province" placeholder-text="Province / state"
+                    style="height: 48px; margin-bottom: 3%; justify-content: center; background-color: rgb(18, 20, 25); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 2%; padding-right: 2%; color: rgb(242, 239, 230); font-size: 16px;" />
+
+                <ui:TextField name="city" placeholder-text="City"
+                    style="height: 48px; margin-bottom: 3%; justify-content: center; background-color: rgb(18, 20, 25); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 2%; padding-right: 2%; color: rgb(242, 239, 230); font-size: 16px;" />
+
+                <ui:TextField name="address" placeholder-text="Address"
+                    style="height: 48px; margin-bottom: 4%; justify-content: center; background-color: rgb(18, 20, 25); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 2%; padding-right: 2%; color: rgb(242, 239, 230); font-size: 16px;" />
+
+                <ui:Label name="error-label" text=""
+                    style="font-size: 14px; color: rgb(224,122,113); white-space: normal; display: none; margin-bottom: 3%;" />
+                <ui:Label name="status-label" text=""
+                    style="font-size: 14px; color: rgb(140, 196, 140); white-space: normal; display: none; margin-bottom: 3%;" />
+
+                <ui:Button name="save-button" text="Save changes"
+                    style="height: 52px; background-color: rgb(233, 223, 200); color: rgb(18, 20, 25); font-size: 16px; -unity-font-style: bold; letter-spacing: 1px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-bottom: 3%;" />
+
+                <ui:Button name="cancel-button" text="Cancel"
+                    style="height: 48px; background-color: rgba(0, 0, 0, 0); color: rgb(242, 239, 230); font-size: 16px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64);" />
+            </ui:VisualElement>
+
+        </ui:ScrollView>
+
+        <!-- ── Zone 3 · Bottom bar — 9% of screen height ── -->
+        <ui:VisualElement name="bottom-bar"
+            style="height: 9%; flex-shrink: 0; justify-content: center; align-items: center; border-top-width: 1px; border-top-color: rgb(35, 39, 51);">
+            <ui:Button name="signout-button" text="Sign out"
+                style="background-color: rgba(0, 0, 0, 0); color: rgb(233, 223, 200); font-size: 14px; -unity-font-style: bold; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+            <ui:Label text="sReader · read anywhere"
+                style="color: rgb(90, 97, 110); font-size: 12px; letter-spacing: 2px; margin-top: 1%;" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

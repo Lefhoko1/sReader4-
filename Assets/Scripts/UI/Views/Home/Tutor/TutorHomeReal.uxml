@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    sReader — Tutor Home (post-login landing for Tutor / Teacher accounts)
+    ──────────────────────────────────────────────────────────────────────
+    Same LinkedIn-style shell as the student home, driven by
+    ShellHomeController via TutorHomeController:
+        Top bar     tappable avatar (profile-button → ProfilePage) + greeting
+                    + sign out
+        Top menu    sub-tabs for the active section (built in code, "top-menu")
+        Center      content area that swaps per selection ("content-area")
+        Bottom nav  Students · Academies · Guardians · Assignments
+    Element names read by the controller:
+        profile-button, greeting, signout-button, top-menu, content-area,
+        nav-students, nav-academies, nav-guardians, nav-assignments.
+-->
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+
+    <ui:VisualElement name="page-root"
+        style="width: 100%; height: 100%; background-color: rgb(18, 20, 25); padding-top: 3%;">
+
+        <!-- ── Top bar ── -->
+        <ui:VisualElement name="top-bar"
+            style="flex-shrink: 0; flex-direction: row; align-items: center; justify-content: space-between; padding-left: 5%; padding-right: 5%; padding-top: 44px; padding-bottom: 12px; border-bottom-width: 1px; border-bottom-color: rgb(35, 39, 51);">
+
+            <ui:VisualElement name="identity" style="flex-direction: row; align-items: center; flex-shrink: 1;">
+                <!-- Tappable avatar (WhatsApp-style) → opens ProfilePage -->
+                <ui:Button name="profile-button" text=""
+                    style="width: 44px; height: 44px; flex-shrink: 0; margin-right: 12px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgb(233, 223, 200); background-image: url('project://database/Assets/Sprites/PersonImage.jpg'); -unity-background-scale-mode: scale-and-crop; border-top-left-radius: 22px; border-top-right-radius: 22px; border-bottom-left-radius: 22px; border-bottom-right-radius: 22px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; overflow: hidden;" />
+                <ui:Label name="greeting" text="Welcome"
+                    style="font-size: 18px; color: rgb(242, 239, 230); -unity-font-style: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 1;" />
+            </ui:VisualElement>
+
+            <ui:Button name="signout-button" text="Sign out"
+                style="flex-shrink: 0; background-color: rgba(0, 0, 0, 0); color: rgb(152, 160, 174); font-size: 13px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 6px; padding-right: 0; margin-left: 8px;" />
+        </ui:VisualElement>
+
+        <!-- ── Top menu (sub-tabs, built in code from the active section) ── -->
+        <ui:VisualElement name="top-menu"
+            style="flex-shrink: 0; flex-direction: row; align-items: center; padding-left: 5%; padding-right: 5%; padding-top: 10px; padding-bottom: 10px; border-bottom-width: 1px; border-bottom-color: rgb(35, 39, 51);" />
+
+        <!-- ── Center content (swaps per selection) ── -->
+        <ui:ScrollView name="content-area" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden"
+            style="flex-grow: 1; padding-left: 5%; padding-right: 5%; padding-top: 4%; padding-bottom: 4%;" />
+
+        <!-- ── Bottom navigation ── -->
+        <ui:VisualElement name="bottom-nav"
+            style="flex-shrink: 0; flex-direction: row; align-items: center; justify-content: space-between; height: 9%; min-height: 56px; padding-left: 2%; padding-right: 2%; border-top-width: 1px; border-top-color: rgb(35, 39, 51); background-color: rgb(22, 25, 31);">
+            <ui:Button name="nav-students" text="Students"
+                style="flex-grow: 1; flex-basis: 0; height: 100%; background-color: rgba(0,0,0,0); color: rgb(152, 160, 174); font-size: 12px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+            <ui:Button name="nav-academies" text="Academies"
+                style="flex-grow: 1; flex-basis: 0; height: 100%; background-color: rgba(0,0,0,0); color: rgb(152, 160, 174); font-size: 12px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+            <ui:Button name="nav-guardians" text="Guardians"
+                style="flex-grow: 1; flex-basis: 0; height: 100%; background-color: rgba(0,0,0,0); color: rgb(152, 160, 174); font-size: 12px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+            <ui:Button name="nav-assignments" text="Assignments"
+                style="flex-grow: 1; flex-basis: 0; height: 100%; background-color: rgba(0,0,0,0); color: rgb(152, 160, 174); font-size: 12px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

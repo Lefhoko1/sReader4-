@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60e7d42b14283c41a0d12e5c90019b0, type: 3}
+  m_Name: AppSettings
+  m_EditorClassIdentifier:
+  environment: 0
+  supabaseUrl: https://wmfaumjseuzhlwwhaudy.supabase.co
+  supabaseAnonKey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndtZmF1bWpzZXV6aGx3d2hhdWR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEyNzk0NTUsImV4cCI6MjA5Njg1NTQ1NX0.NUysmP6lAp3-A2vM3igF-0aqdNqoFOYFqKAHVDf_ox0
+  syncIntervalSeconds: 60

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    sReader — About Us Page (Huawei Y5 · 720×1520 · relative units)
+    ───────────────────────────────────────────────────────────────────
+    Three-zone layout — no scrolling, the long about copy is split into
+    pages the reader flips through sideways (see UIPager.cs):
+        Header      16%  of screen height
+        Pages       flex-grow:1 — one centered screen at a time
+        Bottom bar   9%  of screen height
+    Only px values are font sizes, hairlines and corner radii.
+-->
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+
+    <!-- Page root: fills the panel completely -->
+    <ui:VisualElement name="page-root"
+        style="width: 100%; height: 100%; background-color: rgb(18, 20, 25); padding-left: 6%; padding-right: 6%; padding-top: 3%; padding-bottom: 1.5%;">
+
+        <!-- ── Zone 1 · Header ── -->
+        <ui:VisualElement name="header"
+            style="flex-shrink: 0; justify-content: flex-end; align-items: center; padding-top: 52px; padding-bottom: 14px;">
+
+            <!-- Back button hanging in the top-left corner -->
+            <ui:Button name="back-button" text="‹ Back"
+                style="position: absolute; top: 8px; left: 0; background-color: rgba(0, 0, 0, 0); color: rgb(233, 223, 200); font-size: 16px; -unity-font-style: bold; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 0; padding-right: 16px; padding-top: 10px; padding-bottom: 10px; margin-left: 0;" />
+
+            <!-- Signature bookmark ribbon hanging from the top edge -->
+            <ui:VisualElement name="bookmark-ribbon"
+                style="position: absolute; top: 0; right: 2%; width: 4.5%; height: 44px; background-color: rgb(233, 223, 200); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;" />
+
+            <ui:Label name="wordmark" text="sReader"
+                style="font-size: 36px; color: rgb(242, 239, 230); -unity-font-style: bold; letter-spacing: 3px;" />
+            <ui:VisualElement name="title-rule"
+                style="height: 1px; width: 11%; background-color: rgb(233, 223, 200); margin-top: 1.5%; margin-bottom: 2%;" />
+            <ui:Label name="subtitle" text="The story behind every page."
+                style="font-size: 14px; color: rgb(152, 160, 174); -unity-text-align: middle-center; white-space: normal;" />
+        </ui:VisualElement>
+
+        <!-- ── Zone 2 · Pages — one screen at a time, never scrolls ── -->
+        <ui:VisualElement name="pager-pages" style="flex-grow: 1;">
+
+            <!-- Page 1 · Mission -->
+            <ui:VisualElement name="page-mission" style="flex-grow: 1; justify-content: center;">
+                <ui:Label text="Our mission"
+                    style="font-size: 22px; color: rgb(233, 223, 200); -unity-font-style: bold; -unity-text-align: middle-center;" />
+                <ui:Label text="sReader exists to make reading a habit, not a chore. We schedule reading, deliver content students can truly understand, and make sure no sentence is left behind — because understanding every sentence is how readers are made."
+                    style="font-size: 15px; color: rgb(152, 160, 174); white-space: normal; -unity-text-align: middle-center; margin-top: 4%;" />
+            </ui:VisualElement>
+
+            <!-- Page 2 · What we do (1 of 2) -->
+            <ui:VisualElement name="page-what-we-do" style="flex-grow: 1; justify-content: center; display: none;">
+                <ui:Label text="What we do"
+                    style="font-size: 18px; color: rgb(233, 223, 200); -unity-font-style: bold; -unity-text-align: middle-center; margin-bottom: 3%;" />
+
+                <ui:VisualElement name="card-scheduled"
+                    style="background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 14px; margin-bottom: 12px;">
+                    <ui:Label text="Scheduled reading"
+                        style="font-size: 16px; color: rgb(242, 239, 230); -unity-font-style: bold; white-space: normal;" />
+                    <ui:Label text="Reading happens on a schedule. Tutors plan assignments, set the pace, and provide guidance so students always know what to read next."
+                        style="font-size: 14px; color: rgb(152, 160, 174); white-space: normal; margin-top: 1%;" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="card-collaboration"
+                    style="background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 14px;">
+                    <ui:Label text="Parents, teachers and students — together"
+                        style="font-size: 16px; color: rgb(242, 239, 230); -unity-font-style: bold; white-space: normal;" />
+                    <ui:Label text="sReader encourages collaboration between parents, teachers and students, so everyone can see progress and support the reader."
+                        style="font-size: 14px; color: rgb(152, 160, 174); white-space: normal; margin-top: 1%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- Page 3 · What we do (2 of 2) -->
+            <ui:VisualElement name="page-what-we-do-2" style="flex-grow: 1; justify-content: center; display: none;">
+                <ui:Label text="What we do"
+                    style="font-size: 18px; color: rgb(233, 223, 200); -unity-font-style: bold; -unity-text-align: middle-center; margin-bottom: 3%;" />
+
+                <ui:VisualElement name="card-multiplayer"
+                    style="background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 14px; margin-bottom: 12px;">
+                    <ui:Label text="Multiplayer learning, played online"
+                        style="font-size: 16px; color: rgb(242, 239, 230); -unity-font-style: bold; white-space: normal;" />
+                    <ui:Label text="Students join online reading games with their classmates to discuss, debate and understand together — or play single-player when they want to read alone."
+                        style="font-size: 14px; color: rgb(152, 160, 174); white-space: normal; margin-top: 1%;" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="card-understanding"
+                    style="background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 14px;">
+                    <ui:Label text="Every sentence understood"
+                        style="font-size: 16px; color: rgb(242, 239, 230); -unity-font-style: bold; white-space: normal;" />
+                    <ui:Label text="We are focused on reading itself — delivering content at the right level and checking comprehension sentence by sentence."
+                        style="font-size: 14px; color: rgb(152, 160, 174); white-space: normal; margin-top: 1%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- Page 4 · Pricing + call to action -->
+            <ui:VisualElement name="page-pricing" style="flex-grow: 1; justify-content: center; display: none;">
+                <ui:Label text="A service worth every page"
+                    style="font-size: 22px; color: rgb(233, 223, 200); -unity-font-style: bold; -unity-text-align: middle-center;" />
+                <ui:Label text="sReader is a paid service for schools and families. Try everything free first — your trial includes the full experience."
+                    style="font-size: 15px; color: rgb(152, 160, 174); white-space: normal; -unity-text-align: middle-center; margin-top: 4%; margin-bottom: 8%;" />
+                <ui:Button name="get-started-button" text="Start free trial"
+                    style="height: 52px; background-color: rgb(233, 223, 200); color: rgb(18, 20, 25); font-size: 16px; -unity-font-style: bold; letter-spacing: 1px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+        <!-- ── Pager nav · ‹ dots › — centered, like turning a page ── -->
+        <ui:VisualElement name="pager-nav"
+            style="flex-shrink: 0; flex-direction: row; justify-content: center; align-items: center; padding-top: 8px; padding-bottom: 10px;">
+            <ui:Button name="pager-prev" text="‹"
+                style="width: 44px; height: 44px; background-color: rgb(35, 39, 51); color: rgb(233, 223, 200); font-size: 22px; -unity-font-style: bold; border-top-left-radius: 22px; border-top-right-radius: 22px; border-bottom-left-radius: 22px; border-bottom-right-radius: 22px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0;" />
+            <ui:VisualElement name="pager-dots"
+                style="flex-direction: row; align-items: center; margin-left: 14px; margin-right: 14px;" />
+            <ui:Button name="pager-next" text="›"
+                style="width: 44px; height: 44px; background-color: rgb(35, 39, 51); color: rgb(233, 223, 200); font-size: 22px; -unity-font-style: bold; border-top-left-radius: 22px; border-top-right-radius: 22px; border-bottom-left-radius: 22px; border-bottom-right-radius: 22px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0;" />
+        </ui:VisualElement>
+
+        <!-- ── Zone 3 · Bottom bar — 9% of screen height ── -->
+        <ui:VisualElement name="bottom-bar"
+            style="height: 9%; flex-shrink: 0; justify-content: center; align-items: center; border-top-width: 1px; border-top-color: rgb(35, 39, 51);">
+            <ui:VisualElement name="contact-row" style="flex-direction: row; align-items: center;">
+                <ui:Label text="Questions?" style="color: rgb(152, 160, 174); font-size: 14px;" />
+                <ui:Button name="contact-button" text="Contact us"
+                    style="background-color: rgba(0, 0, 0, 0); color: rgb(233, 223, 200); font-size: 14px; -unity-font-style: bold; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 4px; padding-right: 0; margin-left: 2px; margin-right: 0;" />
+            </ui:VisualElement>
+            <ui:Label name="footer" text="sReader · read anywhere"
+                style="color: rgb(90, 97, 110); font-size: 12px; letter-spacing: 2px; margin-top: 1%;" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

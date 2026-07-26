@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    sReader — OTP Verification Page (Huawei Y5 · 720×1520 · relative units)
+    Six individual digit boxes in a flex row, same three-zone layout as Login/Register.
+    The OTPController auto-advances focus between boxes and limits each to one character.
+-->
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+
+    <!-- Cursor/selection colors for text inputs (C# setters are obsolete) -->
+    <ui:Style src="project://database/Assets/Scripts/UI/Views/Shared/AuthFields.uss" />
+
+    <ui:VisualElement name="page-root"
+        style="width: 100%; height: 100%; background-color: rgb(18, 20, 25); padding-left: 6%; padding-right: 6%; padding-top: 3%; padding-bottom: 1.5%;">
+
+        <!-- ── Zone 1 · Header — 16% of screen height ── -->
+        <ui:VisualElement name="header"
+            style="flex-shrink: 0; justify-content: flex-end; align-items: center; padding-top: 52px; padding-bottom: 14px;">
+
+            <!-- Back button hanging in the top-left corner -->
+            <ui:Button name="back-button" text="‹ Back"
+                style="position: absolute; top: 8px; left: 0; background-color: rgba(0, 0, 0, 0); color: rgb(233, 223, 200); font-size: 16px; -unity-font-style: bold; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 0; padding-right: 16px; padding-top: 10px; padding-bottom: 10px; margin-left: 0;" />
+
+            <ui:VisualElement name="bookmark-ribbon"
+                style="position: absolute; top: 0; right: 2%; width: 4.5%; height: 44px; background-color: rgb(233, 223, 200); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;" />
+
+            <ui:Label name="wordmark" text="sReader"
+                style="font-size: 36px; color: rgb(242, 239, 230); -unity-font-style: bold; letter-spacing: 3px;" />
+            <ui:VisualElement
+                style="height: 1px; width: 11%; background-color: rgb(233, 223, 200); margin-top: 1.5%; margin-bottom: 2%;" />
+            <ui:Label name="subtitle" text="Check your inbox."
+                style="font-size: 14px; color: rgb(152, 160, 174); -unity-text-align: middle-center; white-space: normal;" />
+        </ui:VisualElement>
+
+        <!-- ── Zone 2 · Form ── -->
+        <ui:VisualElement name="form"
+            style="flex-grow: 1; justify-content: center;">
+
+            <ui:Label text="Enter code"
+                style="font-size: 26px; color: rgb(242, 239, 230); -unity-font-style: bold; margin-bottom: 3%;" />
+            <ui:Label name="email-hint" text="We sent a 6-digit code to your email address."
+                style="font-size: 14px; color: rgb(122, 130, 145); white-space: normal; margin-bottom: 7%;" />
+
+            <!-- Six OTP digit boxes -->
+            <ui:VisualElement name="otp-row"
+                style="height: 56px; flex-direction: row; align-items: stretch; margin-bottom: 4%;">
+
+                <ui:TextField name="otp-0"
+                    style="flex-grow: 1; flex-basis: 0; height: 100%; margin-right: 2%; justify-content: center; background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); color: rgb(242, 239, 230); font-size: 24px; -unity-font-style: bold; -unity-text-align: middle-center;" />
+
+                <ui:TextField name="otp-1"
+                    style="flex-grow: 1; flex-basis: 0; height: 100%; margin-left: 1%; margin-right: 1%; justify-content: center; background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); color: rgb(242, 239, 230); font-size: 24px; -unity-font-style: bold; -unity-text-align: middle-center;" />
+
+                <ui:TextField name="otp-2"
+                    style="flex-grow: 1; flex-basis: 0; height: 100%; margin-left: 1%; margin-right: 1%; justify-content: center; background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); color: rgb(242, 239, 230); font-size: 24px; -unity-font-style: bold; -unity-text-align: middle-center;" />
+
+                <ui:TextField name="otp-3"
+                    style="flex-grow: 1; flex-basis: 0; height: 100%; margin-left: 1%; margin-right: 1%; justify-content: center; background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); color: rgb(242, 239, 230); font-size: 24px; -unity-font-style: bold; -unity-text-align: middle-center;" />
+
+                <ui:TextField name="otp-4"
+                    style="flex-grow: 1; flex-basis: 0; height: 100%; margin-left: 1%; margin-right: 1%; justify-content: center; background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); color: rgb(242, 239, 230); font-size: 24px; -unity-font-style: bold; -unity-text-align: middle-center;" />
+
+                <ui:TextField name="otp-5"
+                    style="flex-grow: 1; flex-basis: 0; height: 100%; margin-left: 2%; justify-content: center; background-color: rgb(35, 39, 51); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(46, 51, 64); border-right-color: rgb(46, 51, 64); border-top-color: rgb(46, 51, 64); border-bottom-color: rgb(46, 51, 64); color: rgb(242, 239, 230); font-size: 24px; -unity-font-style: bold; -unity-text-align: middle-center;" />
+
+            </ui:VisualElement>
+
+            <!-- Resend row -->
+            <ui:VisualElement style="flex-direction: row; justify-content: flex-end; align-items: center; margin-bottom: 5%;">
+                <ui:Label text="Didn&#39;t receive it?"
+                    style="color: rgb(122, 130, 145); font-size: 14px;" />
+                <ui:Button name="resend-button" text="Resend"
+                    style="background-color: rgba(0, 0, 0, 0); color: rgb(233, 223, 200); font-size: 14px; -unity-font-style: bold; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 4px; margin-left: 2px; margin-right: 0;" />
+            </ui:VisualElement>
+
+            <ui:Label name="error-label" text=""
+                style="font-size: 14px; color: rgb(224, 122, 113); white-space: normal; display: none; margin-bottom: 3%;" />
+
+            <ui:Button name="verify-button" text="Verify code"
+                style="height: 52px; background-color: rgb(233, 223, 200); color: rgb(18, 20, 25); font-size: 16px; -unity-font-style: bold; letter-spacing: 1px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+
+        </ui:VisualElement>
+
+        <!-- ── Zone 3 · Bottom bar — 9% of screen height ── -->
+        <ui:VisualElement name="bottom-bar"
+            style="height: 9%; flex-shrink: 0; justify-content: center; align-items: center; border-top-width: 1px; border-top-color: rgb(35, 39, 51);">
+            <ui:VisualElement style="flex-direction: row; align-items: center;">
+                <ui:Label text="Back to"
+                    style="color: rgb(152, 160, 174); font-size: 14px;" />
+                <ui:Button name="signin-link" text="Sign in"
+                    style="background-color: rgba(0, 0, 0, 0); color: rgb(233, 223, 200); font-size: 14px; -unity-font-style: bold; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 4px; margin-left: 2px; margin-right: 0;" />
+            </ui:VisualElement>
+            <ui:Label text="sReader · read anywhere"
+                style="color: rgb(90, 97, 110); font-size: 12px; letter-spacing: 2px; margin-top: 1%;" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

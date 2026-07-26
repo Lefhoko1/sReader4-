@@ -1,0 +1,929 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "pageNumber": 1,
+      "sourcePdf": "",
+      "sentences": [
+        {
+          "tokens": [
+            {
+              "text": "Long",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "ago",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "people",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "built",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "simple",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "machines",
+              "isWord": true,
+              "activity": 3,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "to",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "help",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "them",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "work",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": ".",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            }
+          ]
+        },
+        {
+          "tokens": [
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "A",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "lever",
+              "isWord": true,
+              "activity": 1,
+              "definition": "a stiff bar that turns on a fixed point to lift a load",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 15
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "could",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "lift",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "a",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "heavy",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "stone",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "with",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "ease",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": ".",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            }
+          ]
+        },
+        {
+          "tokens": [
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "The",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "idea",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "seemed",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "almost",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "like",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "magic",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": ".",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            }
+          ]
+        }
+      ],
+      "imageUrls": []
+    },
+    {
+      "pageNumber": 2,
+      "sourcePdf": "",
+      "sentences": [
+        {
+          "tokens": [
+            {
+              "text": "Every",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "moving",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "part",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "had",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "to",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "fight",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "friction",
+              "isWord": true,
+              "activity": 1,
+              "definition": "the force that slows down things that rub together",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 15
+            },
+            {
+              "text": ".",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            }
+          ]
+        },
+        {
+          "tokens": [
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "A",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "round",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "gear",
+              "isWord": true,
+              "activity": 2,
+              "definition": "",
+              "imageOptions": [
+                "gear.png",
+                "spring.png",
+                "rope.png"
+              ],
+              "correctImage": "gear.png",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "helped",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "turn",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "one",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "wheel",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "with",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "another",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": ".",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            }
+          ]
+        },
+        {
+          "tokens": [
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "Together",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "these",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "parts",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "changed",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "the",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": " ",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": "world",
+              "isWord": true,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            },
+            {
+              "text": ".",
+              "isWord": false,
+              "activity": 0,
+              "definition": "",
+              "imageOptions": [],
+              "correctImage": "",
+              "points": 10
+            }
+          ]
+        }
+      ],
+      "imageUrls": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+/*
+    sReader — shared text-field cursor & selection colors.
+    ITextSelection.cursorColor / selectionColor are obsolete in Unity 6;
+    these USS custom properties are the supported replacement. The page
+    stylers (AuthPageStyler / RegisterPageStyler) still handle the rest
+    of the inner-input skinning from C#.
+*/
+.unity-base-text-field__input {
+    --unity-cursor-color: rgb(233, 223, 200);
+    --unity-selection-color: rgba(232, 222, 199, 0.35);
+}

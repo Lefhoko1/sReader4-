@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($log = \"$env:LOCALAPPDATA\\\\Unity\\\\Editor\\\\Editor.log\"; if \\(Test-Path $log\\) { Get-Content $log | Select-String -Pattern \"InferenceEngine|error CS|BuildFinished\" | Select-Object -Last 60 })",
+      "PowerShell(Get-Command claude -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command uvx -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command uv -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command npx -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command python -ErrorAction SilentlyContinue)",
+      "Read(//c/Users/11113930/.claude/**)",
+      "Read(//c/Users/11113930/AppData/Roaming/Code/**)",
+      "Bash(tail -n 50 \"/c/Users/11113930/AppData/Roaming/Code/logs/20260704T210835/window1/mcpServer.workspace-dot-mcp.0.blender.log\")",
+      "Read(//c/Users/11113930/AppData/Roaming/Code/logs/20260704T210835/window1/**)",
+      "Bash(ls -la \"/c/Users/11113930/AppData/Roaming/Code/logs/\" | tail -5 *)",
+      "Read(//c/Users/11113930/AppData/Roaming/Code/logs//**)",
+      "Read(//c/Users/11113930/AppData/Roaming/Code/logs/**)",
+      "Bash(mkdir -p \"/c/Users/11113930/sReader4/Docs\" && echo created)",
+      "PowerShell(1..4 | ForEach-Object { \\(New-Guid\\).ToString\\(\"N\"\\) })",
+      "Bash(mkdir -p Content)",
+      "Bash(mv \"Models/AssignmentContent.cs\" \"Content/AssignmentContent.cs\")",
+      "Bash(mv \"Models/AssignmentContent.cs.meta\" \"Content/AssignmentContent.cs.meta\")",
+      "Bash(mv \"Models/AssignmentContentBuilder.cs\" \"Content/AssignmentContentBuilder.cs\")",
+      "Bash(mv \"Models/AssignmentContentBuilder.cs.meta\" \"Content/AssignmentContentBuilder.cs.meta\")",
+      "Bash(wc -c /c/Users/11113930/sReader4/Docs/sreader-2d-reading-game-design-v3-complete.html)",
+      "Bash(wc -l /c/Users/11113930/sReader4/Docs/sreader-2d-reading-game-design-v3-complete.html)",
+      "Bash(grep -v '^\\\\s*$')",
+      "Bash(grep -rIl \"landTexture\" Assets --include=*.unity --include=*.prefab --include=*.uxml --include=*.uss --include=*.cs)",
+      "Bash(head -5 Assets/Sprites/landTexture.png.meta)",
+      "Bash(grep -iE \"textureType|spriteMode|wrapMode|mipmap\" Assets/Sprites/landTexture.png.meta)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\11113930\\sReader4"
+    ]
+  }
+}

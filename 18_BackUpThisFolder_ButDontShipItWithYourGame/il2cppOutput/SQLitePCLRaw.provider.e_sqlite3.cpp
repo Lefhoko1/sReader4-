@@ -1,0 +1,11972 @@
+﻿#include "pch-cpp.hpp"
+
+
+
+
+
+struct InterfaceActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+
+struct ConcurrentDictionary_2_tEF1D1D45D3DB2E2FEE67A0CE6A8C5E24E3D1D522;
+struct ConcurrentDictionary_2_tF47EFE7CCFE1E29580989F631F638E0434111517;
+struct ConcurrentDictionary_2_tEFA4BFFF7CD4FFD4A7A9EF772AF343FBCFABB476;
+struct Dictionary_2_t87EDE08B2E48F793A22DE50D6B3CC2E7EBB2DB54;
+struct Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4;
+struct Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81;
+struct Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083;
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
+struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
+struct sqlite3_valueU5BU5D_t8DE0FEFC735FE16A1877E152BA6750433C4C2894;
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
+struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
+struct CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2;
+struct DecoderFallback_t7324102215E4ED41EC065C02EB501CB0BC23CD90;
+struct Delegate_t;
+struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+struct EncoderFallback_tD2C40CE114AA9D8E1F7196608B2D088548015293;
+struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095;
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
+struct IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5;
+struct MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553;
+struct MethodInfo_t;
+struct SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3;
+struct SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7;
+struct String_t;
+struct Type_t;
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+struct authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A;
+struct collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98;
+struct commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78;
+struct delegate_authorizer_tCD3D6AAEEEB5C24F8531B924B9317AD676C25933;
+struct delegate_collation_t8DE04E00895A6B578A732989AFCE272264DF5CCF;
+struct delegate_commit_tFB9621864DD3318A8343B71F10623E409A6A551A;
+struct delegate_exec_t41D7BC9F896A9FF945FC4548BFA2CB5B698D3AD3;
+struct delegate_function_aggregate_final_t8B6A92360745F4E49F100C9F709467A57C153FD0;
+struct delegate_function_aggregate_step_t0FAD6EBC679FFDE154D560BFED981933489B6957;
+struct delegate_function_scalar_t6ACAAB11456A0DAC29290263706F889CF8639EE5;
+struct delegate_log_tE18367F8F9FEC29177DF17197EC57B54B04E5712;
+struct delegate_profile_tBCB8F1F2018A12E6A5EB205454BFD82CA0182779;
+struct delegate_progress_t2315CA638C6F11381A7046E279792FDCBC421710;
+struct delegate_rollback_t9C71A4F72D71A2E27A4B866E7496F8254CF08174;
+struct delegate_trace_t305C5668766EF69B59A7CA173C227301583E2172;
+struct delegate_update_t56D212B3CC0976C795F39D25F683364DBF6ABC80;
+struct exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8;
+struct function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017;
+struct hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC;
+struct hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33;
+struct log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116;
+struct profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34;
+struct progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641;
+struct rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185;
+struct sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2;
+struct sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30;
+struct sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057;
+struct sqlite3_context_tEC606503DE111D8B720AE90A4A514F7B8D99C37C;
+struct sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475;
+struct sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F;
+struct trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4;
+struct update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968;
+struct callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F;
+struct callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED;
+struct callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696;
+struct callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED;
+struct callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12;
+struct callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351;
+struct callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D;
+struct callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B;
+struct callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4;
+struct callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2;
+struct callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7;
+struct callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054;
+struct callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190;
+struct callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90;
+struct SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826;
+
+IL2CPP_EXTERN_C RuntimeClass* Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral1F080C0A268DCE50EA57CD766D6EA437363F3F75;
+IL2CPP_EXTERN_C String_t* _stringLiteralFA4C5FF8A68887C1283B169941A6090D7B6C606B;
+IL2CPP_EXTERN_C const RuntimeMethod* ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ReadOnlySpan_1_GetPinnableReference_mB710059C1A1A30270065958DE8345808C6683638_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_U3Cget_hooksU3Eb__4_0_mB46358DB13286AFA2E46375065B5AAAF83886445_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_agg_function_final_hook_bridge_impl_m006814ED6B9BD7CF4532668020724B43D91AEF03_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_agg_function_step_hook_bridge_impl_m5224AECAA46541E71A56BCF661727137741E5ED4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_authorizer_hook_bridge_impl_m6B55BC239D83BBF905BA28662CA6DAEE279BC9E4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_collation_hook_bridge_impl_m5F14F85C72F67AF006FC3FFC2C1A1B3F80E6F5F0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_commit_hook_bridge_impl_m0E7A8FAC8E69E8F505846E21BF1F51FAA0A30F5B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_exec_hook_bridge_impl_mF469E38331889AE90BAC1EEFDFC4348890D39B93_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_log_hook_bridge_impl_mCECCC0F3FD715008B2384E2F4AFC05A2455C37E0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_my_streq_m8739278305E4F8F0D3B3A0D51AD0A8AA3FE20EA7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_profile_hook_bridge_impl_m11AFCD1AB7A052E5EB9938B8EAF9F1E2C83FA77A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_progress_handler_hook_bridge_impl_m982DE88858258854F532E5E21E81965E6CAE09E3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_rollback_hook_bridge_impl_m7F9D5FD5953803A1B2D57E68BE6522FFE681062F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_scalar_function_hook_bridge_impl_m4D1C3607D8062CFB548C8248142770A3EA2BEE88_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_trace_hook_bridge_impl_m1A72E4987D934C291169F2C6A7816798FA6998AC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SQLite3Provider_e_sqlite3_update_hook_bridge_impl_mF608B2F9975550DCC69E48100606BA7187B9E880_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Span_1_GetPinnableReference_m55DA180AC02A047DAC0626C7B8CBC2E87626DD0C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Span_1_get_Length_m8E944E4954E037877A25B9FF6B901F1F901D4769_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* sqlite3_GetOrCreateExtra_Tishook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33_m9D3A3879372BFE12DCDA4ABE6D83D1C197ECE27E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeType* sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_0_0_0_var;
+struct Delegate_t_marshaled_com;
+struct Delegate_t_marshaled_pinvoke;
+
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+struct U3CModuleU3E_t0D73DDDE60939F932DEB15FA30010059624B3BE5 
+{
+};
+struct CriticalFinalizerObject_t1DCAB623CAEA6529A96F5F3EDE3C7048A6E313C9  : public RuntimeObject
+{
+};
+struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095  : public RuntimeObject
+{
+	int32_t ___m_codePage;
+	CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2* ___dataItem;
+	bool ___m_deserializedFromEverett;
+	bool ___m_isReadOnly;
+	EncoderFallback_tD2C40CE114AA9D8E1F7196608B2D088548015293* ___encoderFallback;
+	DecoderFallback_t7324102215E4ED41EC065C02EB501CB0BC23CD90* ___decoderFallback;
+};
+struct MemberInfo_t  : public RuntimeObject
+{
+};
+struct RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF  : public RuntimeObject
+{
+};
+struct SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3  : public RuntimeObject
+{
+	callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* ___commit_hook_bridge;
+	callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* ___scalar_function_hook_bridge;
+	callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* ___log_hook_bridge;
+	callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* ___agg_function_step_hook_bridge;
+	callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* ___agg_function_final_hook_bridge;
+	callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* ___collation_hook_bridge;
+	callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* ___update_hook_bridge;
+	callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* ___rollback_hook_bridge;
+	callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* ___trace_hook_bridge;
+	callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* ___profile_hook_bridge;
+	callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* ___progress_handler_hook_bridge;
+	callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* ___authorizer_hook_bridge;
+};
+struct String_t  : public RuntimeObject
+{
+	int32_t ____stringLength;
+	Il2CppChar ____firstChar;
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+struct authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A  : public RuntimeObject
+{
+	delegate_authorizer_tCD3D6AAEEEB5C24F8531B924B9317AD676C25933* ____func;
+	RuntimeObject* ____user_data;
+};
+struct collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98  : public RuntimeObject
+{
+	delegate_collation_t8DE04E00895A6B578A732989AFCE272264DF5CCF* ____func;
+	RuntimeObject* ____user_data;
+};
+struct commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78  : public RuntimeObject
+{
+	delegate_commit_tFB9621864DD3318A8343B71F10623E409A6A551A* ___U3C_funcU3Ek__BackingField;
+	RuntimeObject* ___U3C_user_dataU3Ek__BackingField;
+};
+struct exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8  : public RuntimeObject
+{
+	delegate_exec_t41D7BC9F896A9FF945FC4548BFA2CB5B698D3AD3* ____func;
+	RuntimeObject* ____user_data;
+};
+struct function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017  : public RuntimeObject
+{
+	delegate_function_scalar_t6ACAAB11456A0DAC29290263706F889CF8639EE5* ____func_scalar;
+	delegate_function_aggregate_step_t0FAD6EBC679FFDE154D560BFED981933489B6957* ____func_step;
+	delegate_function_aggregate_final_t8B6A92360745F4E49F100C9F709467A57C153FD0* ____func_final;
+	RuntimeObject* ____user_data;
+};
+struct hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33  : public RuntimeObject
+{
+	ConcurrentDictionary_2_tEF1D1D45D3DB2E2FEE67A0CE6A8C5E24E3D1D522* ___collation;
+	ConcurrentDictionary_2_tF47EFE7CCFE1E29580989F631F638E0434111517* ___scalar;
+	ConcurrentDictionary_2_tF47EFE7CCFE1E29580989F631F638E0434111517* ___agg;
+	RuntimeObject* ___update;
+	RuntimeObject* ___rollback;
+	RuntimeObject* ___commit;
+	RuntimeObject* ___trace;
+	RuntimeObject* ___profile;
+	RuntimeObject* ___progress;
+	RuntimeObject* ___authorizer;
+};
+struct log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116  : public RuntimeObject
+{
+	delegate_log_tE18367F8F9FEC29177DF17197EC57B54B04E5712* ____func;
+	RuntimeObject* ____user_data;
+};
+struct profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34  : public RuntimeObject
+{
+	delegate_profile_tBCB8F1F2018A12E6A5EB205454BFD82CA0182779* ____func;
+	RuntimeObject* ____user_data;
+};
+struct progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641  : public RuntimeObject
+{
+	delegate_progress_t2315CA638C6F11381A7046E279792FDCBC421710* ____func;
+	RuntimeObject* ____user_data;
+};
+struct rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185  : public RuntimeObject
+{
+	delegate_rollback_t9C71A4F72D71A2E27A4B866E7496F8254CF08174* ____func;
+	RuntimeObject* ____user_data;
+};
+struct trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4  : public RuntimeObject
+{
+	delegate_trace_t305C5668766EF69B59A7CA173C227301583E2172* ____func;
+	RuntimeObject* ____user_data;
+};
+struct update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968  : public RuntimeObject
+{
+	delegate_update_t56D212B3CC0976C795F39D25F683364DBF6ABC80* ____func;
+	RuntimeObject* ____user_data;
+};
+struct NativeMethods_tD0A40E17DD3EEDDE815AEFBF51F16F7A928E2A87  : public RuntimeObject
+{
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22 
+{
+	bool ___m_value;
+};
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3 
+{
+	uint8_t ___m_value;
+};
+struct Char_t521A6F19B456D956AF452D926C32709DC03D6B17 
+{
+	Il2CppChar ___m_value;
+};
+struct Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F 
+{
+	double ___m_value;
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
+{
+};
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
+{
+	int32_t ___m_value;
+};
+struct Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3 
+{
+	int64_t ___m_value;
+};
+struct IntPtr_t 
+{
+	void* ___m_value;
+};
+struct OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 
+{
+	String_t* ____osPlatform;
+};
+struct OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_marshaled_pinvoke
+{
+	char* ____osPlatform;
+};
+struct OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_marshaled_com
+{
+	Il2CppChar* ____osPlatform;
+};
+struct UInt32_t1833D51FFA667B18A5AA4B8D34DE284F8495D29B 
+{
+	uint32_t ___m_value;
+};
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
+	};
+};
+struct ByReference_1_t9C85BCCAAF8C525B6C06B07E922D8D217BE8D6FC 
+{
+	intptr_t ____value;
+};
+struct ByReference_1_t7BA5A6CA164F770BC688F21C5978D368716465F5 
+{
+	intptr_t ____value;
+};
+struct Architecture_t6C2664B4DC57F7351DD0D6F0F0E8E03210B708A7 
+{
+	int32_t ___value__;
+};
+struct Delegate_t  : public RuntimeObject
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	RuntimeObject* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	bool ___method_is_virtual;
+};
+struct Delegate_t_marshaled_pinvoke
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Delegate_t_marshaled_com
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B 
+{
+	intptr_t ___value;
+};
+struct SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7  : public CriticalFinalizerObject_t1DCAB623CAEA6529A96F5F3EDE3C7048A6E313C9
+{
+	intptr_t ___handle;
+	int32_t ____state;
+	bool ____ownsHandle;
+	bool ____fullyInitialized;
+};
+struct sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801 
+{
+	int32_t ___iVersion;
+	int32_t ___szOsFile;
+	int32_t ___mxPathname;
+	intptr_t ___pNext;
+	intptr_t ___zName;
+	intptr_t ___pAppData;
+	intptr_t ___xOpen;
+	SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* ___xDelete;
+	intptr_t ___xAccess;
+	intptr_t ___xFullPathname;
+	intptr_t ___xDlOpen;
+	intptr_t ___xDlError;
+	intptr_t ___xDlSym;
+	intptr_t ___xDlClose;
+	intptr_t ___xRandomness;
+	intptr_t ___xSleep;
+	intptr_t ___xCurrentTime;
+	intptr_t ___xGetLastError;
+};
+struct sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshaled_pinvoke
+{
+	int32_t ___iVersion;
+	int32_t ___szOsFile;
+	int32_t ___mxPathname;
+	intptr_t ___pNext;
+	intptr_t ___zName;
+	intptr_t ___pAppData;
+	intptr_t ___xOpen;
+	Il2CppMethodPointer ___xDelete;
+	intptr_t ___xAccess;
+	intptr_t ___xFullPathname;
+	intptr_t ___xDlOpen;
+	intptr_t ___xDlError;
+	intptr_t ___xDlSym;
+	intptr_t ___xDlClose;
+	intptr_t ___xRandomness;
+	intptr_t ___xSleep;
+	intptr_t ___xCurrentTime;
+	intptr_t ___xGetLastError;
+};
+struct sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshaled_com
+{
+	int32_t ___iVersion;
+	int32_t ___szOsFile;
+	int32_t ___mxPathname;
+	intptr_t ___pNext;
+	intptr_t ___zName;
+	intptr_t ___pAppData;
+	intptr_t ___xOpen;
+	Il2CppMethodPointer ___xDelete;
+	intptr_t ___xAccess;
+	intptr_t ___xFullPathname;
+	intptr_t ___xDlOpen;
+	intptr_t ___xDlError;
+	intptr_t ___xDlSym;
+	intptr_t ___xDlClose;
+	intptr_t ___xRandomness;
+	intptr_t ___xSleep;
+	intptr_t ___xCurrentTime;
+	intptr_t ___xGetLastError;
+};
+struct ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D 
+{
+	ByReference_1_t9C85BCCAAF8C525B6C06B07E922D8D217BE8D6FC ____pointer;
+	int32_t ____length;
+};
+struct ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 
+{
+	ByReference_1_t7BA5A6CA164F770BC688F21C5978D368716465F5 ____pointer;
+	int32_t ____length;
+};
+struct Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305 
+{
+	ByReference_1_t9C85BCCAAF8C525B6C06B07E922D8D217BE8D6FC ____pointer;
+	int32_t ____length;
+};
+struct MulticastDelegate_t  : public Delegate_t
+{
+	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates;
+};
+struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
+{
+	Delegate_t_marshaled_pinvoke** ___delegates;
+};
+struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
+{
+	Delegate_t_marshaled_com** ___delegates;
+};
+struct SafeGCHandle_tE8D8C107E75BFC0FAC19C271622895B407785D3E  : public SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7
+{
+};
+struct Type_t  : public MemberInfo_t
+{
+	RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ____impl;
+};
+struct sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2  : public SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7
+{
+	ConcurrentDictionary_2_tEFA4BFFF7CD4FFD4A7A9EF772AF343FBCFABB476* ____stmts;
+	RuntimeObject* ___extra;
+};
+struct sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30  : public SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7
+{
+};
+struct sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057  : public SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7
+{
+};
+struct sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475  : public SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7
+{
+};
+struct sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F  : public SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7
+{
+	sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ____db;
+};
+struct Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81  : public MulticastDelegate_t
+{
+};
+struct Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083  : public MulticastDelegate_t
+{
+};
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C  : public MulticastDelegate_t
+{
+};
+struct delegate_collation_t8DE04E00895A6B578A732989AFCE272264DF5CCF  : public MulticastDelegate_t
+{
+};
+struct delegate_commit_tFB9621864DD3318A8343B71F10623E409A6A551A  : public MulticastDelegate_t
+{
+};
+struct delegate_exec_t41D7BC9F896A9FF945FC4548BFA2CB5B698D3AD3  : public MulticastDelegate_t
+{
+};
+struct delegate_function_aggregate_final_t8B6A92360745F4E49F100C9F709467A57C153FD0  : public MulticastDelegate_t
+{
+};
+struct delegate_function_aggregate_step_t0FAD6EBC679FFDE154D560BFED981933489B6957  : public MulticastDelegate_t
+{
+};
+struct delegate_function_scalar_t6ACAAB11456A0DAC29290263706F889CF8639EE5  : public MulticastDelegate_t
+{
+};
+struct delegate_progress_t2315CA638C6F11381A7046E279792FDCBC421710  : public MulticastDelegate_t
+{
+};
+struct delegate_rollback_t9C71A4F72D71A2E27A4B866E7496F8254CF08174  : public MulticastDelegate_t
+{
+};
+struct hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC  : public SafeGCHandle_tE8D8C107E75BFC0FAC19C271622895B407785D3E
+{
+};
+struct utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 
+{
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___sp;
+};
+struct callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F  : public MulticastDelegate_t
+{
+};
+struct callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED  : public MulticastDelegate_t
+{
+};
+struct callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696  : public MulticastDelegate_t
+{
+};
+struct callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED  : public MulticastDelegate_t
+{
+};
+struct callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12  : public MulticastDelegate_t
+{
+};
+struct callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351  : public MulticastDelegate_t
+{
+};
+struct callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D  : public MulticastDelegate_t
+{
+};
+struct callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B  : public MulticastDelegate_t
+{
+};
+struct callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4  : public MulticastDelegate_t
+{
+};
+struct callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2  : public MulticastDelegate_t
+{
+};
+struct callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7  : public MulticastDelegate_t
+{
+};
+struct callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054  : public MulticastDelegate_t
+{
+};
+struct callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190  : public MulticastDelegate_t
+{
+};
+struct callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90  : public MulticastDelegate_t
+{
+};
+struct SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826  : public MulticastDelegate_t
+{
+};
+struct delegate_authorizer_tCD3D6AAEEEB5C24F8531B924B9317AD676C25933  : public MulticastDelegate_t
+{
+};
+struct delegate_log_tE18367F8F9FEC29177DF17197EC57B54B04E5712  : public MulticastDelegate_t
+{
+};
+struct delegate_profile_tBCB8F1F2018A12E6A5EB205454BFD82CA0182779  : public MulticastDelegate_t
+{
+};
+struct delegate_trace_t305C5668766EF69B59A7CA173C227301583E2172  : public MulticastDelegate_t
+{
+};
+struct delegate_update_t56D212B3CC0976C795F39D25F683364DBF6ABC80  : public MulticastDelegate_t
+{
+};
+struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095_StaticFields
+{
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___defaultEncoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___unicodeEncoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___bigEndianUnicode;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___utf7Encoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___utf8Encoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___utf32Encoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___asciiEncoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___latin1Encoding;
+	Dictionary_2_t87EDE08B2E48F793A22DE50D6B3CC2E7EBB2DB54* ___encodings;
+	RuntimeObject* ___s_InternalSyncObject;
+};
+struct RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_StaticFields
+{
+	int32_t ____osArchitecture;
+	int32_t ____processArchitecture;
+	OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 ____osPlatform;
+};
+struct SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields
+{
+	bool ___IsArm64cc;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___disp_log_hook_handle;
+};
+struct String_t_StaticFields
+{
+	String_t* ___Empty;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
+{
+	String_t* ___TrueString;
+	String_t* ___FalseString;
+};
+struct Char_t521A6F19B456D956AF452D926C32709DC03D6B17_StaticFields
+{
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___s_categoryForLatin1;
+};
+struct IntPtr_t_StaticFields
+{
+	intptr_t ___Zero;
+};
+struct OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_StaticFields
+{
+	OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 ___U3CLinuxU3Ek__BackingField;
+	OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 ___U3COSXU3Ek__BackingField;
+	OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 ___U3CWindowsU3Ek__BackingField;
+};
+struct Type_t_StaticFields
+{
+	Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235* ___s_defaultBinder;
+	Il2CppChar ___Delimiter;
+	TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___EmptyTypes;
+	RuntimeObject* ___Missing;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterAttribute;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterName;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterNameIgnoreCase;
+};
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
+{
+	ALIGN_FIELD (8) uint8_t m_Items[1];
+
+	inline uint8_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, uint8_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline uint8_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, uint8_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Delegate_t* m_Items[1];
+
+	inline Delegate_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Delegate_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_1__ctor_m663374A863E492A515BE9626B6F0E444991834E8_gshared (Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* sqlite3_GetOrCreateExtra_TisRuntimeObject_mBEAA607E240266FEE23ACFF03E6E3432ABC8E260_gshared (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* __this, Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* ___0_f, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_gshared (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_gshared_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27_gshared (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_gshared_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, int32_t ___0_start, int32_t ___1_length, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* Span_1_GetPinnableReference_m55DA180AC02A047DAC0626C7B8CBC2E87626DD0C_gshared (Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Span_1_get_Length_m8E944E4954E037877A25B9FF6B901F1F901D4769_gshared_inline (Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_gshared_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, void* ___0_pointer, int32_t ___1_length, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644_gshared (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_array, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_gshared_inline (ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar* ReadOnlySpan_1_GetPinnableReference_mB710059C1A1A30270065958DE8345808C6683638_gshared (ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_4__ctor_mD903E3907D0CE6F5928A315B41E43525FD88515F_gshared (Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReadOnlySpan_1__ctor_m0FC0B92549C2968E80B5F75A85F28B96DBFCFD63_gshared_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, uint8_t* ___0_ptr, int32_t ___1_length, const RuntimeMethod* method) ;
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_exec_hook_bridge_impl_mF469E38331889AE90BAC1EEFDFC4348890D39B93 (intptr_t ___0_p, int32_t ___1_n, intptr_t ___2_values_ptr, intptr_t ___3_names_ptr, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_commit_hook_bridge_impl_m0E7A8FAC8E69E8F505846E21BF1F51FAA0A30F5B (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_scalar_function_hook_bridge_impl_m4D1C3607D8062CFB548C8248142770A3EA2BEE88 (intptr_t ___0_context, int32_t ___1_num_args, intptr_t ___2_argsptr, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_log_hook_bridge_impl_mCECCC0F3FD715008B2384E2F4AFC05A2455C37E0 (intptr_t ___0_p, int32_t ___1_rc, intptr_t ___2_s, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_agg_function_step_hook_bridge_impl_m5224AECAA46541E71A56BCF661727137741E5ED4 (intptr_t ___0_context, int32_t ___1_num_args, intptr_t ___2_argsptr, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_agg_function_final_hook_bridge_impl_m006814ED6B9BD7CF4532668020724B43D91AEF03 (intptr_t ___0_context, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_collation_hook_bridge_impl_m5F14F85C72F67AF006FC3FFC2C1A1B3F80E6F5F0 (intptr_t ___0_p, int32_t ___1_len1, intptr_t ___2_pv1, int32_t ___3_len2, intptr_t ___4_pv2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_update_hook_bridge_impl_mF608B2F9975550DCC69E48100606BA7187B9E880 (intptr_t ___0_p, int32_t ___1_typ, intptr_t ___2_db, intptr_t ___3_tbl, int64_t ___4_rowid, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_rollback_hook_bridge_impl_m7F9D5FD5953803A1B2D57E68BE6522FFE681062F (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_trace_hook_bridge_impl_m1A72E4987D934C291169F2C6A7816798FA6998AC (intptr_t ___0_p, intptr_t ___1_s, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_profile_hook_bridge_impl_m11AFCD1AB7A052E5EB9938B8EAF9F1E2C83FA77A (intptr_t ___0_p, intptr_t ___1_s, int64_t ___2_elapsed, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_progress_handler_hook_bridge_impl_m982DE88858258854F532E5E21E81965E6CAE09E3 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_authorizer_hook_bridge_impl_m6B55BC239D83BBF905BA28662CA6DAEE279BC9E4 (intptr_t ___0_p, int32_t ___1_action_code, intptr_t ___2_param0, intptr_t ___3_param1, intptr_t ___4_dbName, intptr_t ___5_inner_most_trigger_or_view, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_strnicmp_m9B0F44BA1B0EF0A26CB3ACD472FA33354B5D1505 (intptr_t ___0_p, intptr_t ___1_q, int32_t ___2_n, const RuntimeMethod* method) ;
+inline void Func_1__ctor_m5B138A470220E888E073E33BAED7B0551135492F (Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_1__ctor_m663374A863E492A515BE9626B6F0E444991834E8_gshared)(__this, ___0_object, ___1_method, method);
+}
+inline hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* sqlite3_GetOrCreateExtra_Tishook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33_m9D3A3879372BFE12DCDA4ABE6D83D1C197ECE27E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* __this, Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81* ___0_f, const RuntimeMethod* method)
+{
+	return ((  hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* (*) (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2*, Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81*, const RuntimeMethod*))sqlite3_GetOrCreateExtra_TisRuntimeObject_mBEAA607E240266FEE23ACFF03E6E3432ABC8E260_gshared)(__this, ___0_f, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5 (utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_open_mC6CB397252A981ED08F3E1E51E5881D5535B3A23 (uint8_t* ___0_filename, intptr_t* ___1_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_open_v2_mEC85A62F0C7B514435B64202F0E9DE399E946056 (uint8_t* ___0_filename, intptr_t* ___1_db, int32_t ___2_flags, uint8_t* ___3_vfs, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_vfs_find_mA8DBAB1449AE16809E018BB76FA98D9B8851D29C (uint8_t* ___0_vfs, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57 (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___0_handle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Marshal_PtrToStructure_m235E141E21BFB69A01B07DDDF1702BA7D5723AC3 (intptr_t ___0_ptr, Type_t* ___1_structureType, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SQLiteDeleteDelegate_Invoke_m05864E249C3D97BD1CE9D33569AC2607AF36697A_inline (SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, intptr_t ___0_pVfs, uint8_t* ___1_zName, int32_t ___2_syncDir, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_close_v2_m47CDE601B77EA589F910B5C069FF148CF4A29DE5 (intptr_t ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_close_mED3AC3B0ADC674BE66282A6C6C7F307B8E7ECE1D (intptr_t ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_malloc_mE761F12FAF80EE702E043062C5CA1F0CB414D989 (int32_t ___0_n, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_malloc64_m6BA1C52143314F33577A81914A9E32E965763917 (int64_t ___0_n, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_free_m56243724F4A36EDA54D1353A30A40FAE3A6A12C1 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stricmp_mAE8E1DBE81B0A7A004DF7AFFDC3568F9BA45E8C7 (intptr_t ___0_p, intptr_t ___1_q, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_enable_shared_cache_mA23CC3E85ABA7FF0ECD7F729097E40AD060C941C (int32_t ___0_enable, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_interrupt_mA22234311DF51ABAF7BDC154E491BC75822A7F58 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8* exec_hook_info_from_ptr_m12E3B2B744FC54C5D4743771EAA23288615B4BDF (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t exec_hook_info_call_mA713B5044B9732EB1EE735288166504122BFCA77 (exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8* __this, int32_t ___0_n, intptr_t ___1_values_ptr, intptr_t ___2_names_ptr, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_exec__ctor_mE3FE6BAA7DB36577FC047933558235EEE1C7B040 (callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void exec_hook_info__ctor_mF44B73FC081E66935ACBC8C8635D85C9E4D3ED24 (exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8* __this, delegate_exec_t41D7BC9F896A9FF945FC4548BFA2CB5B698D3AD3* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524 (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* __this, RuntimeObject* ___0_target, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_exec_m5E45F8606A33788DFC994E37D07B95D741F02060 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_strSql, callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* ___2_cb, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___3_pvParam, intptr_t* ___4_errMsg, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeHandle_Dispose_m4FB5B8A7ED78B90757F1B570D4025F3BA26A39F3 (SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_complete_mC15263E100F1BC846FDA791A82A343FED9EFFE42 (uint8_t* ___0_pSql, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_compileoption_get_m21B3C2120E8D05CE9E7B79AEC1DADC53B765583C (int32_t ___0_n, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116 (uint8_t* ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_compileoption_used_mA9E70414A31701C66949FCECB8CE3AC8C1B99F79 (uint8_t* ___0_pSql, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_table_column_metadata_mB0353A92E430864E1618FBDD969417CD7AC0437D (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbName, uint8_t* ___2_tblName, uint8_t* ___3_colName, uint8_t** ___4_ptrDataType, uint8_t** ___5_ptrCollSeq, int32_t* ___6_notNull, int32_t* ___7_primaryKey, int32_t* ___8_autoInc, const RuntimeMethod* method) ;
+inline uint8_t* ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57 (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, const RuntimeMethod* method)
+{
+	return ((  uint8_t* (*) (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D*, const RuntimeMethod*))ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_gshared)(__this, method);
+}
+inline int32_t ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D*, const RuntimeMethod*))ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_key_m2062C8CDA986281E1F26715BA8C3208FA1A39A01 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_key, int32_t ___2_keylen, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_key_v2_mA88F77CF5F04EA4A4504E8801520BB213586BF9F (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbname, uint8_t* ___2_key, int32_t ___3_keylen, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_rekey_m8771AF524E2C8D5E68AA05445579C0C4A35E5DCB (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_key, int32_t ___2_keylen, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_rekey_v2_m4996B7D6A0A1489081836C5E09E077B4DFAAE37E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbname, uint8_t* ___2_key, int32_t ___3_keylen, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_prepare_v2_m41342AED3FFC4BE5823F9DD0D16AC04A435955CD (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_pSql, int32_t ___2_nBytes, intptr_t* ___3_stmt, uint8_t** ___4_ptrRemain, const RuntimeMethod* method) ;
+inline ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27 (const RuntimeMethod* method)
+{
+	return ((  ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D (*) (const RuntimeMethod*))ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27_gshared)(method);
+}
+inline ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, int32_t ___0_start, int32_t ___1_length, const RuntimeMethod* method)
+{
+	return ((  ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D (*) (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D*, int32_t, int32_t, const RuntimeMethod*))ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_gshared_inline)(__this, ___0_start, ___1_length, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_prepare_v3_m6E2A4FD05EF9F59BEE2FA1F4F60A55369857F93C (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_pSql, int32_t ___2_nBytes, uint32_t ___3_flags, intptr_t* ___4_stmt, uint8_t** ___5_ptrRemain, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_status_m28E97986E40B52B293238A78F20E08E270D4CF30 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, int32_t* ___2_current, int32_t* ___3_highest, int32_t ___4_resetFlg, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_sql_m87A1B371A6877EB8C732076420DD4244881AEC78 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_db_handle_m2477E1760DBA3CEC75321782D5EF12EB5382C406 (intptr_t ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_open_mE9024A71D2196E007FD62A66376117ABE976A06A (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_sdb, uint8_t* ___2_table, uint8_t* ___3_col, int64_t ___4_rowid, int32_t ___5_flags, sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057** ___6_blob, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_bytes_mE0CE568996D0321E37433DC4A5AFC4EA8F42FD6A (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_reopen_m1EEC5541C6FB038C676000EDD6F8907EBB9ECF3C (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, int64_t ___1_rowid, const RuntimeMethod* method) ;
+inline uint8_t* Span_1_GetPinnableReference_m55DA180AC02A047DAC0626C7B8CBC2E87626DD0C (Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305* __this, const RuntimeMethod* method)
+{
+	return ((  uint8_t* (*) (Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305*, const RuntimeMethod*))Span_1_GetPinnableReference_m55DA180AC02A047DAC0626C7B8CBC2E87626DD0C_gshared)(__this, method);
+}
+inline int32_t Span_1_get_Length_m8E944E4954E037877A25B9FF6B901F1F901D4769_inline (Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305*, const RuntimeMethod*))Span_1_get_Length_m8E944E4954E037877A25B9FF6B901F1F901D4769_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_read_mBACB8E76DFC2D19A137A2B439009162F0377A1E9 (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, uint8_t* ___1_b, int32_t ___2_n, int32_t ___3_offset, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_write_mAB5436F556D20B11EAD2896720AF1F0BF57A5BCB (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, uint8_t* ___1_b, int32_t ___2_n, int32_t ___3_offset, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_close_mB991EBF186781C6A48BD1A4FFCDD71C3424F468B (intptr_t ___0_blob, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_snapshot_get_mAB8467745A5605B867275F4D3A745C68714EDD5D (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_schema, intptr_t* ___2_snap, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_snapshot_cmp_m7CC285F6C3C4C8790F7946F9597595594C84936A (sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* ___0_p1, sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* ___1_p2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_snapshot_open_m03272621ED49584DE5D1C024C40DD323089ABE58 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_schema, sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* ___2_snap, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_snapshot_recover_m876BB09CEDFBEC0B49B6A2439E0128C8F58C66C9 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_name, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_snapshot_free_m15E8179E1ABEDD7BF346F3C09868E03D4A12383F (intptr_t ___0_snap, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* NativeMethods_sqlite3_backup_init_mC396545FECB75F4F5E5755DA5001499E66C00071 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_destDb, uint8_t* ___1_zDestName, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___2_sourceDb, uint8_t* ___3_zSourceName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_backup_step_m77D3876F06A33CDA6B3844AF090EF849EBE18321 (sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* ___0_backup, int32_t ___1_nPage, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_backup_remaining_m8C47F277EBA1815D31F7610CB94430E39D79820F (sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* ___0_backup, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_backup_pagecount_mEA68B0630198E84415AE6C72679F26BCBAEF86A0 (sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* ___0_backup, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_backup_finish_m4D682B70469F04D1B073E1D278486FD5B92F0F4F (intptr_t ___0_backup, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_next_stmt_mC220BABB46706E121D5CA9200A50F60BBE3EED65 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, intptr_t ___1_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_last_insert_rowid_m39D5A39CC0FFD9ABCC3C60397BD8494940F20888 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_changes_m27EC91C84867C9B5EF0D2D491CFEA79292B3721D (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_total_changes_mD6AB0F90D0C16D5277F0DF2CC26FB29DE502C1A3 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_extended_result_codes_m21C0ED4AE65E8D0A8694CB0304C836E49D158E6E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_onoff, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_errstr_m5130988CC20B5C68D039C4B9CA452AA911D13BA4 (int32_t ___0_rc, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_errcode_m15FD41D74B6E1266605E7B843F57F7E5C56A100E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_extended_errcode_mB17190AA0E4AF17D7E187DBEBAA64BEAE3CFBD5F (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_busy_timeout_m1B7F39D1AC141048765E2E9D5F1264D42022850E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_ms, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_get_autocommit_m9139AD931266DBB7BB2EDF00C13303CFA0452897 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_readonly_mA7B1C029DDB56E7C89CF1C632702566910C668F5 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_db_filename_mCF68D2E29879EA828D41554366E248D7AC31BE39 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_att, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_errmsg_m97AC77D22E61B412572D670A3B697612018530D5 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_libversion_m905E2F843C51BE29E47B5BD892D9FE2B99C48A9A (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_libversion_number_m8AFAEF0D32835FCE8373DF78E2A5C44D7D5B8E3F (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_threadsafe_mB2970EA4677ABABD9A64FEC36A68FDF9E943DA46 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_none_mC19B753F7D8BB8551DDBF7E04F1A411B26F9B76C (int32_t ___0_op, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_int_arm64cc_m9152F31E9D37A090E33585C0E9D429D0BD59AF72 (int32_t ___0_op, intptr_t ___1_dummy1, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, int32_t ___8_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_int_m73A62A5D5A211487BECC191061CE11B1FA51CB51 (int32_t ___0_op, int32_t ___1_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_charptr_arm64cc_m612E7C58D17D5FFFE83868CAEDF6304651A11924 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, uint8_t* ___8_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_charptr_m5DD1EF94C3525E3F296AEBE592D033C193EF7063 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, uint8_t* ___2_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_int_outint_arm64cc_m51738C5ED1C35274F2E90819279812608F99B3CC (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, int32_t ___8_val, int32_t* ___9_result, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_int_outint_m6231F6BE5A38384588988CAC32B64211CDDE4ED7 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, int32_t ___2_val, int32_t* ___3_result, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_intptr_int_int_arm64cc_m0DB99D4377ED4C3D728B1B64C091AD76EE0E76C1 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, intptr_t ___8_ptr, int32_t ___9_int0, int32_t ___10_int1, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_intptr_int_int_mDA52C53B1808DFF86712C28D7A0F701C8AAB4D99 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, intptr_t ___2_ptr, int32_t ___3_int0, int32_t ___4_int1, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_limit_m784FD2B0BFC0566C7BC726D68F318DDDA6637FCC (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_id, int32_t ___2_newVal, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_initialize_mE4342B5EE5B74088F885378D65D6BB1B0E24B040 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_shutdown_m48E097036353F1D9DCBC5785259B997CE19567ED (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_enable_load_extension_mE6C839EC992333038574323E3903C77BA714B28E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_enable, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78* commit_hook_info_from_ptr_m148F08D6E0B637E71B38D49209199AFCD2C73732 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t commit_hook_info_call_mE9C755CD3924D7327451B4E46477242A86EED90A (commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void commit_hook_info__ctor_m4B4EC8FA983EECCEF944C38F087A910E4B85C74C (commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78* __this, delegate_commit_tFB9621864DD3318A8343B71F10623E409A6A551A* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_commit_hook_m2C261D8A2B45F98F7B4B2F6262681BF890F4A068 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588 (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_user_data_mF2A40FA200DF74049844E616584A6C9FC3BEA68E (intptr_t ___0_context, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* function_hook_info_from_ptr_mCA53C85ACFB80A6A189E7CA538BE44E0D400F923 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void function_hook_info_call_scalar_mAA7975A8E3B3EDBE7C1FCDFC02178C7F72DDD7BB (function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* __this, intptr_t ___0_context, int32_t ___1_num_args, intptr_t ___2_argsptr, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool hook_handles_RemoveScalarFunction_m9159BE57F6977DCF622FE30506A7F771739B423F (hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_name, int32_t ___1_nargs, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void function_hook_info__ctor_m4B1D6B0D2A0FF53B36B2BF437FD87A3BB8B20E86 (function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* __this, delegate_function_scalar_t6ACAAB11456A0DAC29290263706F889CF8639EE5* ___0_func_scalar, RuntimeObject* ___1_user_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_create_function_v2_m0760B009E420EC8F3ECA41F59E5E0EEF302DA49B (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_strName, int32_t ___2_nArgs, int32_t ___3_nType, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___4_pvUser, callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* ___5_func, callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* ___6_fstep, callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* ___7_ffinal, callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* ___8_fdestroy, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void hook_handles_AddScalarFunction_mD241ED7FC4CFCD555C808E31748100FCAA652047 (hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_name, int32_t ___1_nargs, RuntimeObject* ___2_d, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116* log_hook_info_from_ptr_m4ACDB4DE324881C384D383EE3CA41933E31C3A03 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void log_hook_info_call_mBBD1CECB059D785233952F83C5582786DBEFE694 (log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116* __this, int32_t ___0_rc, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_msg, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void log_hook_info__ctor_m72FEA14AC551F530BD79A2442BF002D7237EFDFC (log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116* __this, delegate_log_tE18367F8F9FEC29177DF17197EC57B54B04E5712* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_log_arm64cc_m459CC6B3C26448122EDE2DB29A260F46B4A3A133 (int32_t ___0_op, intptr_t ___1_dummy1, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* ___8_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___9_pvUser, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_log_m6E221F0799E330F69ECF0C7D21E49D81181387DC (int32_t ___0_op, callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_log_m784D1A8926E3652C59E5F5D2A6AFF654F59CD96F (int32_t ___0_iErrCode, uint8_t* ___1_zFormat, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_aggregate_context_m35391325DE6CB95FA6BCFE9E1424FCDFFB08C5BE (intptr_t ___0_context, int32_t ___1_nBytes, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void function_hook_info_call_step_m50C9070AFF7A909228C5C298AE3CB348571F9FF9 (function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* __this, intptr_t ___0_context, intptr_t ___1_agg_context, int32_t ___2_num_args, intptr_t ___3_argsptr, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void function_hook_info_call_final_m41F22B0B1C88975CAE40BD2E8A8F2ACAB962C76E (function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* __this, intptr_t ___0_context, intptr_t ___1_agg_context, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool hook_handles_RemoveAggFunction_mA42A9716C0A6E544449532021405FA05652BE8C0 (hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_name, int32_t ___1_nargs, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void function_hook_info__ctor_mD469D8E11284B583FA130AFD16FB2EBACB59FDF2 (function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* __this, delegate_function_aggregate_step_t0FAD6EBC679FFDE154D560BFED981933489B6957* ___0_func_step, delegate_function_aggregate_final_t8B6A92360745F4E49F100C9F709467A57C153FD0* ___1_func_final, RuntimeObject* ___2_user_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void hook_handles_AddAggFunction_m81386278C3F4916C5052FD699F25319A978F651A (hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_name, int32_t ___1_nargs, RuntimeObject* ___2_d, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98* collation_hook_info_from_ptr_mADF5398D8E60D65B942882B28C339CA80ABEF966 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* IntPtr_ToPointer_m1A0612EED3A1C8B8850BE2943CFC42523064B4F6_inline (intptr_t* __this, const RuntimeMethod* method) ;
+inline void ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, void* ___0_pointer, int32_t ___1_length, const RuntimeMethod* method)
+{
+	((  void (*) (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D*, void*, int32_t, const RuntimeMethod*))ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_gshared_inline)(__this, ___0_pointer, ___1_length, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t collation_hook_info_call_mF9F263DD935E37DD890058669056336B8ED6E178 (collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98* __this, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___0_s1, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___1_s2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool hook_handles_RemoveCollation_mAC3B05DE2CB2A4322F0A035E577FCF6194665012 (hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_name, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void collation_hook_info__ctor_mDB95BB4828C4E65CB57C4BCEE0516A06E6B1CB0A (collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98* __this, delegate_collation_t8DE04E00895A6B578A732989AFCE272264DF5CCF* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_create_collation_mD0E33AFCC223873880399FEDF2E98134F9C6448A (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_strName, int32_t ___2_nType, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___3_pvUser, callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* ___4_func, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void hook_handles_AddCollation_mFFF6F01B318D1CDF9E0980812744B1251C09343F (hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_name, RuntimeObject* ___1_d, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968* update_hook_info_from_ptr_mE288FBF47CDEC3705ABBBD89202E5426CF7A2084 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void update_hook_info_call_mAF608749DC3EC4FD8EFAF0D535E17C0E99EE5D7F (update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968* __this, int32_t ___0_typ, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___2_tbl, int64_t ___3_rowid, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void update_hook_info__ctor_mA3635FE2E96A5676FE6834AE74D6E18ACBE5206E (update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968* __this, delegate_update_t56D212B3CC0976C795F39D25F683364DBF6ABC80* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_update_hook_m223062D8C47CB7A9507CDBEB8985C68B4903E858 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185* rollback_hook_info_from_ptr_mFE4504F4B5F5151FA11537A355453CD824D5CCB7 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void rollback_hook_info_call_m8CC5F80155D547D5AB32D3C9737E8F0F5E410353 (rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void rollback_hook_info__ctor_m13E17137A92C3596FED3261983A9BB4C0ECEF32E (rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185* __this, delegate_rollback_t9C71A4F72D71A2E27A4B866E7496F8254CF08174* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_rollback_hook_m32C703D20AC6455B4B22FF77E7A3D686CFFE5B51 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4* trace_hook_info_from_ptr_mE42166E00F3CD4951400F295150C299A55FDC8B8 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void trace_hook_info_call_mA98E6A93D09DD73D282B0C0C657CBF0DBF741B00 (trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4* __this, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___0_s, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void trace_hook_info__ctor_mA70153D94F7B356F1C59FFF1F66037EC470FA9D0 (trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4* __this, delegate_trace_t305C5668766EF69B59A7CA173C227301583E2172* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_trace_m92990850680EE9667ECCCC6778341948BFBA45D8 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34* profile_hook_info_from_ptr_m3A176B51EBEA07D80FC850F2C169109E7DE1A940 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void profile_hook_info_call_m438C34143623CA589DC456BFEBD6EC5499E4BDB0 (profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34* __this, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___0_s, int64_t ___1_elapsed, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void profile_hook_info__ctor_mA79CFEE7D02660A458390BF3C4218C78E22E679E (profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34* __this, delegate_profile_tBCB8F1F2018A12E6A5EB205454BFD82CA0182779* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_profile_mFBCBC561864BFE6D8E97BACE7999D009E67C0E4F (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641* progress_hook_info_from_ptr_m5367E1B00176E2D1A5CF6BCAA4B54159BB178494 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t progress_hook_info_call_m1DBC36FDEF18460447F83230864D87083BCD6C16 (progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void progress_hook_info__ctor_mD9BE365FBD60098A96229B0A7FE561438372B947 (progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641* __this, delegate_progress_t2315CA638C6F11381A7046E279792FDCBC421710* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_progress_handler_mDB48A3C57C45F26D556E860DB4D9E65D06084EE1 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_instructions, callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* ___2_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___3_pvUser, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A* authorizer_hook_info_from_ptr_m05FE8A7AE031944CFECB7FEAAD7E6FAD0A836C8C (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t authorizer_hook_info_call_mF1D0501AEBFE5DFE6FD3DA44EC327A13D0FADCBF (authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A* __this, int32_t ___0_action_code, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_param0, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___2_param1, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___3_dbName, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___4_inner_most_trigger_or_view, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void authorizer_hook_info__ctor_m356DDFFD020722A4AB519EE7BB5513B56AF063B4 (authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A* __this, delegate_authorizer_tCD3D6AAEEEB5C24F8531B924B9317AD676C25933* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_set_authorizer_m453B4962FE8A2FB7A110C1ABCFF8783352039FCC (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* ___1_cb, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_memory_used_m3A784674CDAA2ADB4D548F52D0BC643D791AA0BD (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_memory_highwater_m109A354CF154A8462BC1766E0C31EA0B8C1FD9CB (int32_t ___0_resetFlag, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_soft_heap_limit64_m27E808495350435BC962DF2EE3CF5FB96B3C55BA (int64_t ___0_n, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_hard_heap_limit64_m418FD768ACFF2D6288C58285FEDC38B4B883BFE3 (int64_t ___0_n, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_status_m00147E7B91CEC510EF629B44FD1A17CDF7960E14 (int32_t ___0_op, int32_t* ___1_current, int32_t* ___2_highwater, int32_t ___3_resetFlag, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_sourceid_m7633E75448D51255F31FD7B482C4850F15A6EDA1 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_int64_m98DDA204911392FCCD6B5B0D56717271ECB64387 (intptr_t ___0_context, int64_t ___1_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_int_m94EB377F87FD59B116C572413A47956FD0DBAC36 (intptr_t ___0_context, int32_t ___1_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_double_m0C8D30FF994C8503E1B748A087BBDACC70317128 (intptr_t ___0_context, double ___1_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_null_mF608ACEAEA63397AD5D9DBC55DDF40748AEC3018 (intptr_t ___0_context, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_error_m0F6DD9E44B7B8CE7FA73350E1DA17446CC25F8A1 (intptr_t ___0_context, uint8_t* ___1_strErr, int32_t ___2_nLen, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7 (intptr_t* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_text_mC53514E44EFC50DB4AB6E7CFC5AD74679CEA94C2 (intptr_t ___0_context, uint8_t* ___1_val, int32_t ___2_nLen, intptr_t ___3_pvReserved, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t IntPtr_op_Explicit_mE2CEC14C61FD5E2159A03EA2AD97F5CDC5BB9F4D (void* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_blob_m2E07AA620425E788BD778594335C3387945A83F8 (intptr_t ___0_context, intptr_t ___1_val, int32_t ___2_nSize, intptr_t ___3_pvReserved, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_zeroblob_m280974C4B32FE102D1C0D1F968E5803D78CF2E25 (intptr_t ___0_context, int32_t ___1_n, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_error_toobig_mD53496313DAC24069DED9DB01121C8B27B7F6E23 (intptr_t ___0_context, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_error_nomem_m0A85A5A220BDFA624111A79E472B90C1447F2373 (intptr_t ___0_context, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_error_code_m2FFDBC8325F5243C77C7ECB16D0A1E21F3B3391E (intptr_t ___0_context, int32_t ___1_code, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_value_blob_mBB4CD6F32E729A169908CEB9DB167311C456546E (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) ;
+inline ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644 (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_array, const RuntimeMethod* method)
+{
+	return ((  ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D (*) (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, const RuntimeMethod*))ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644_gshared)(___0_array, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_value_bytes_m58CC7A54E1D8F5E758CCDC940B3BEDA8064DF7FF (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double NativeMethods_sqlite3_value_double_m9E8EAC14A692E9B38842B373C8AA50D6676FFA38 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_value_int_m5DA03EF1BA685B7A31EFF8A8551D5373036476B5 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_value_int64_mD64FB7288F4B830C2B1E8CFBF46093AA7558CA8B (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_value_type_mDE053B60DF467AB0C80174906C35B24C2402B245 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_value_text_mC67842B0F56FA8E3882441EC91CB7D3F3C9DD072 (intptr_t ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_int_m540D5670C86028EE450403DB98351DEA0FDCD905 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, int32_t ___2_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_int64_mCCF613075783EA1C66918FFED7FF3EDDAF98D433 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, int64_t ___2_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_text_m9F412DA6A0CC8C81CB187071417F667ED4BBC1CF (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, uint8_t* ___2_val, int32_t ___3_nlen, intptr_t ___4_pvReserved, const RuntimeMethod* method) ;
+inline int32_t ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_inline (ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1*, const RuntimeMethod*))ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_text16_m7AC3DAF934D8EE0B43100B43531B95A27DD1D822 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, Il2CppChar* ___2_val, int32_t ___3_nlen, intptr_t ___4_pvReserved, const RuntimeMethod* method) ;
+inline Il2CppChar* ReadOnlySpan_1_GetPinnableReference_mB710059C1A1A30270065958DE8345808C6683638 (ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1* __this, const RuntimeMethod* method)
+{
+	return ((  Il2CppChar* (*) (ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1*, const RuntimeMethod*))ReadOnlySpan_1_GetPinnableReference_mB710059C1A1A30270065958DE8345808C6683638_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_double_m477271935B21CCC68B9E65E3AF041204BDF5898D (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, double ___2_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_blob_m46B0FDCEA11EC76B1803B623D628081BE57B4D17 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, uint8_t* ___2_val, int32_t ___3_nSize, intptr_t ___4_nTransient, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_zeroblob_m7BDBFC82A3ABB4D090CF12FFD594DF44618E4A73 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, int32_t ___2_size, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_null_mF27E5ADBA2058737D75823C425FD32B7527B3A26 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_parameter_count_m15A657827FB05A90DD8B2D98BACAF1768329D240 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_bind_parameter_name_m6E8241B68486F941FBA262FB94EADE4753638145 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_parameter_index_mAC026BDB1787E5C1B68B0BFD9FEFE04D71BA101F (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, uint8_t* ___1_strName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_step_mA66F45248DDB41374C399DE7B1BB07E579537A93 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stmt_isexplain_m3A1B6F024F781DD86F29EB3CE450DA99831C2CB6 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stmt_busy_mC85D1149FA7A3214A82E54BBEAC82A937CFF7E27 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stmt_readonly_m33A9A109FDD5B82FC8684E7B8D182AFA70583F19 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_column_int_m0E4230B2E6C7981BCADE09965FF982ED1977EBD5 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_column_int64_m76DBCC148DCD8626D045FF47DF914F1DFD143C41 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_text_m57DD3330CC5A9FDBAEC7F828E97A7C24763EFD5C (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_column_bytes_m8E23E6D116BF8EDDBD7662327A2D0B6B76A9D34C (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 utf8z_FromPtrLen_m1B6B151AAF2F122387D310CB69A3C45948F9F098 (uint8_t* ___0_p, int32_t ___1_len, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_decltype_mFF1CBAA3DA2EC2A37DECC574E8B795D093A3ABA2 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double NativeMethods_sqlite3_column_double_m5F41EB90F3EB11751856873A3387C44F53DB2CE4 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_column_blob_m08764BE4D2B04D3C74BD2ACD5AE7D4EE8B06852A (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_column_type_mC65B510028F38418FABB64026C661BB7830ACEBA (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_column_count_m6B6174E516DB8B2DE87642E8C7E3723A6E450C29 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_data_count_m2BEFFE88E58964784698F1365AEC42D71BFBCEEE (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_name_m7AEDE674A0EA9352D9D9FAE71663A9E934BA328D (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_origin_name_m00C2935EE53B1741062DF639340A95DE8197CA3F (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_table_name_m2C17E195B249AB9E64774054EFFB017DA3907D2D (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_database_name_mB6E488121D372DB1A901A7615FD680DD2DC3DFE8 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_reset_m8CDA4563E27D9A5482C13457295E7840E2BA354C (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_clear_bindings_mBEEA936F583558913D3AA0502D724554AD9FE73F (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stmt_status_mF8A0E11BC4223070F01198EE5283F2C92617DA6F (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_op, int32_t ___2_resetFlg, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_finalize_mDB6B3D32A22713D9589F71F6E8BBA503328466A8 (intptr_t ___0_stmt, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_wal_autocheckpoint_m79101C1B3E8231720620CF97B161192B44BC3077 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_n, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_wal_checkpoint_mACB84BDEBE7F06C246B82764077CBA78C2DA5464 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_wal_checkpoint_v2_m5F0678DFE51A0A0C878E8533CAD5F02881D82515 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbName, int32_t ___2_eMode, int32_t* ___3_logSize, int32_t* ___4_framesCheckPointed, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_keyword_count_mAABDA4F380BCCFA3E3F5BF7341CEFBA0B3A70E09 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_keyword_name_m7E2DA42004F0A883820721947AD3C27199118AA6 (int32_t ___0_i, uint8_t** ___1_name, int32_t* ___2_length, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Encoding_GetString_m42BFF0862341DCD5289A7D75B5D7A22CE9690EAD (Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* __this, uint8_t* ___0_bytes, int32_t ___1_byteCount, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_serialize_m376409574407750CE5FF2D13A147357E150FF282 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_schema, int64_t* ___2_size, int32_t ___3_flags, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_deserialize_mC8B1A52F584A3927CF82AA3BEAA46F0939A5AE63 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_schema, intptr_t ___2_data, int64_t ___3_szDb, int64_t ___4_szBuf, int32_t ___5_flags, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_commit__ctor_mDB4A28C9FFFB6737E5CED81EB1F87B10E8C09322 (callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_scalar_function__ctor_mFAB24FB7BD04C8B6DA4F8D7D7F9A1B9AC12DB58F (callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_log__ctor_m1FB9275EE1F814C65D6BA2A64C164147C1DE7AFC (callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_agg_function_step__ctor_mD9169C85C8988341AA108B7C2713D855B043BF78 (callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_agg_function_final__ctor_m24AD2C75EEF8546805DE08FEA65A74EAF335B788 (callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_collation__ctor_mCC4562D044D6941D6F721FA0EFD0EC5B1FE81492 (callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_update__ctor_m702943B46304E4C1D52A8CB9FF89CD94399396BB (callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_rollback__ctor_mAAA9D0128F246165CD4C717D630F69CFAE5DC2B2 (callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_trace__ctor_mB7045C1E866EF82F727938567620E2359EA834B5 (callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_profile__ctor_mCA3D9C6C318620A09239BF7F76D45C97897AEFA5 (callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_progress_handler__ctor_mAAED7B981A29A66D7B99E2149A38F7EAC3AD7753 (callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_authorizer__ctor_mBE07180CDB573196133F892C032B9B366FFD15EA (callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t RuntimeInformation_get_ProcessArchitecture_mB2DAF77FAF4F8F97AE4045FA7DD140D60D8BF3F3_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 OSPlatform_get_OSX_m3618C7AE4705A5980128252AF2FD065694C048F2_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RuntimeInformation_IsOSPlatform_m848A0E9A227256C42AE4053143A57B6E1F4CD6E0 (OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 ___0_osPlatform, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 OSPlatform_Create_m7B939633BCB627C34B1ED3DC14E99AB1D3C3F800 (String_t* ___0_osPlatform, const RuntimeMethod* method) ;
+inline void Func_4__ctor_mD903E3907D0CE6F5928A315B41E43525FD88515F (Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_4__ctor_mD903E3907D0CE6F5928A315B41E43525FD88515F_gshared)(__this, ___0_object, ___1_method, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void hook_handles__ctor_m1F7D3F0DEC6B04876796D7A4935396F2CD8DD292 (hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* __this, Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083* ___0_f, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922 (SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7* __this, bool* ___0_success, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E (SafeHandle_tC1A4DA80DA89B867CC011B707A07275230321BF7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void sqlite3_backup__ctor_m63CDC567578C17953C38ACA2E9FAAE0BFF778F7C (sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void sqlite3_blob__ctor_mF7C7B725FB9FE141587C4BE5A547765610962159 (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowHelper_ThrowArgumentOutOfRangeException_mD7D90276EDCDF9394A8EA635923E3B48BB71BD56 (const RuntimeMethod* method) ;
+inline void ReadOnlySpan_1__ctor_m0FC0B92549C2968E80B5F75A85F28B96DBFCFD63_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, uint8_t* ___0_ptr, int32_t ___1_length, const RuntimeMethod* method)
+{
+	((  void (*) (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D*, uint8_t*, int32_t, const RuntimeMethod*))ReadOnlySpan_1__ctor_m0FC0B92549C2968E80B5F75A85F28B96DBFCFD63_gshared_inline)(__this, ___0_ptr, ___1_length, method);
+}
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_close(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_close_v2(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_enable_shared_cache(int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_interrupt(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_finalize(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_reset(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_clear_bindings(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_stmt_status(void*, int32_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_bind_parameter_name(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_column_database_name(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_column_decltype(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_column_name(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_column_origin_name(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_column_table_name(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_column_text(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_errmsg(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_db_readonly(void*, uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_db_filename(void*, uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_prepare_v2(void*, uint8_t*, int32_t, intptr_t*, uint8_t**);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_prepare_v3(void*, uint8_t*, int32_t, uint32_t, intptr_t*, uint8_t**);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_db_status(void*, int32_t, int32_t*, int32_t*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_complete(uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_compileoption_used(uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_compileoption_get(int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_table_column_metadata(void*, uint8_t*, uint8_t*, uint8_t*, uint8_t**, uint8_t**, int32_t*, int32_t*, int32_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_value_text(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_enable_load_extension(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_limit(void*, int32_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_initialize();
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_shutdown();
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_libversion();
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_libversion_number();
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_threadsafe();
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_sourceid();
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_malloc(int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_malloc64(int64_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_realloc(intptr_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_free(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_stricmp(intptr_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_strnicmp(intptr_t, intptr_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_open(uint8_t*, intptr_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_open_v2(uint8_t*, intptr_t*, int32_t, uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_vfs_find(uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int64_t CDECL sqlite3_last_insert_rowid(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_changes(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_total_changes(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int64_t CDECL sqlite3_memory_used();
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int64_t CDECL sqlite3_memory_highwater(int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int64_t CDECL sqlite3_soft_heap_limit64(int64_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int64_t CDECL sqlite3_hard_heap_limit64(int64_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_status(int32_t, int32_t*, int32_t*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_busy_timeout(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_blob(void*, int32_t, uint8_t*, int32_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_zeroblob(void*, int32_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_double(void*, int32_t, double);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_int(void*, int32_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_int64(void*, int32_t, int64_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_null(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_text(void*, int32_t, uint8_t*, int32_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_text16(void*, int32_t, Il2CppChar*, int32_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_parameter_count(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_bind_parameter_index(void*, uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_column_count(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_data_count(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_step(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_sql(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C double CDECL sqlite3_column_double(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_column_int(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int64_t CDECL sqlite3_column_int64(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_column_blob(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_column_bytes(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_column_type(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_aggregate_count(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_value_blob(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_value_bytes(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C double CDECL sqlite3_value_double(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_value_int(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int64_t CDECL sqlite3_value_int64(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_value_type(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_user_data(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_blob(intptr_t, intptr_t, int32_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_double(intptr_t, double);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_error(intptr_t, uint8_t*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_int(intptr_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_int64(intptr_t, int64_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_null(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_text(intptr_t, uint8_t*, int32_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_zeroblob(intptr_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_error_toobig(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_error_nomem(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_result_error_code(intptr_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_aggregate_context(intptr_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_key(void*, uint8_t*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_key_v2(void*, uint8_t*, uint8_t*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_rekey(void*, uint8_t*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_rekey_v2(void*, uint8_t*, uint8_t*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_config(int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_db_config(void*, int32_t, uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_create_collation(void*, uint8_t*, int32_t, void*, Il2CppMethodPointer);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_update_hook(void*, Il2CppMethodPointer, void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_commit_hook(void*, Il2CppMethodPointer, void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_profile(void*, Il2CppMethodPointer, void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_progress_handler(void*, int32_t, Il2CppMethodPointer, void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_trace(void*, Il2CppMethodPointer, void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_rollback_hook(void*, Il2CppMethodPointer, void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_db_handle(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_next_stmt(void*, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_stmt_isexplain(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_stmt_busy(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_stmt_readonly(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_exec(void*, uint8_t*, Il2CppMethodPointer, void*, intptr_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_get_autocommit(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_extended_result_codes(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_errcode(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_extended_errcode(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C uint8_t* CDECL sqlite3_errstr(int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_log(int32_t, uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_file_control(void*, uint8_t*, int32_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void* CDECL sqlite3_backup_init(void*, uint8_t*, void*, uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_backup_step(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_backup_remaining(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_backup_pagecount(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_backup_finish(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_snapshot_get(void*, uint8_t*, intptr_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_snapshot_open(void*, uint8_t*, void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_snapshot_recover(void*, uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_snapshot_cmp(void*, void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C void CDECL sqlite3_snapshot_free(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_blob_open(void*, uint8_t*, uint8_t*, uint8_t*, int64_t, int32_t, void**);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_blob_write(void*, uint8_t*, int32_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_blob_read(void*, uint8_t*, int32_t, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_blob_bytes(void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_blob_reopen(void*, int64_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_blob_close(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_wal_autocheckpoint(void*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_wal_checkpoint(void*, uint8_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_wal_checkpoint_v2(void*, uint8_t*, int32_t, int32_t*, int32_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_set_authorizer(void*, Il2CppMethodPointer, void*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_create_function_v2(void*, uint8_t*, int32_t, int32_t, void*, Il2CppMethodPointer, Il2CppMethodPointer, Il2CppMethodPointer, Il2CppMethodPointer);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_keyword_count();
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_keyword_name(int32_t, uint8_t**, int32_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C intptr_t CDECL sqlite3_serialize(void*, uint8_t*, int64_t*, int32_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+IL2CPP_EXTERN_C int32_t CDECL sqlite3_deserialize(void*, uint8_t*, intptr_t, int64_t, int64_t, int32_t);
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+extern "C" int32_t CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_exec_hook_bridge_impl_mF469E38331889AE90BAC1EEFDFC4348890D39B93(intptr_t ___0_p, int32_t ___1_n, intptr_t ___2_values_ptr, intptr_t ___3_names_ptr)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	int32_t returnValue;
+	returnValue = SQLite3Provider_e_sqlite3_exec_hook_bridge_impl_mF469E38331889AE90BAC1EEFDFC4348890D39B93(___0_p, ___1_n, ___2_values_ptr, ___3_names_ptr, NULL);
+
+	return returnValue;
+}
+extern "C" int32_t CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_commit_hook_bridge_impl_m0E7A8FAC8E69E8F505846E21BF1F51FAA0A30F5B(intptr_t ___0_p)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	int32_t returnValue;
+	returnValue = SQLite3Provider_e_sqlite3_commit_hook_bridge_impl_m0E7A8FAC8E69E8F505846E21BF1F51FAA0A30F5B(___0_p, NULL);
+
+	return returnValue;
+}
+extern "C" void CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_scalar_function_hook_bridge_impl_m4D1C3607D8062CFB548C8248142770A3EA2BEE88(intptr_t ___0_context, int32_t ___1_num_args, intptr_t ___2_argsptr)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	SQLite3Provider_e_sqlite3_scalar_function_hook_bridge_impl_m4D1C3607D8062CFB548C8248142770A3EA2BEE88(___0_context, ___1_num_args, ___2_argsptr, NULL);
+
+}
+extern "C" void CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_log_hook_bridge_impl_mCECCC0F3FD715008B2384E2F4AFC05A2455C37E0(intptr_t ___0_p, int32_t ___1_rc, intptr_t ___2_s)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	SQLite3Provider_e_sqlite3_log_hook_bridge_impl_mCECCC0F3FD715008B2384E2F4AFC05A2455C37E0(___0_p, ___1_rc, ___2_s, NULL);
+
+}
+extern "C" void CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_agg_function_step_hook_bridge_impl_m5224AECAA46541E71A56BCF661727137741E5ED4(intptr_t ___0_context, int32_t ___1_num_args, intptr_t ___2_argsptr)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	SQLite3Provider_e_sqlite3_agg_function_step_hook_bridge_impl_m5224AECAA46541E71A56BCF661727137741E5ED4(___0_context, ___1_num_args, ___2_argsptr, NULL);
+
+}
+extern "C" void CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_agg_function_final_hook_bridge_impl_m006814ED6B9BD7CF4532668020724B43D91AEF03(intptr_t ___0_context)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	SQLite3Provider_e_sqlite3_agg_function_final_hook_bridge_impl_m006814ED6B9BD7CF4532668020724B43D91AEF03(___0_context, NULL);
+
+}
+extern "C" int32_t CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_collation_hook_bridge_impl_m5F14F85C72F67AF006FC3FFC2C1A1B3F80E6F5F0(intptr_t ___0_p, int32_t ___1_len1, intptr_t ___2_pv1, int32_t ___3_len2, intptr_t ___4_pv2)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	int32_t returnValue;
+	returnValue = SQLite3Provider_e_sqlite3_collation_hook_bridge_impl_m5F14F85C72F67AF006FC3FFC2C1A1B3F80E6F5F0(___0_p, ___1_len1, ___2_pv1, ___3_len2, ___4_pv2, NULL);
+
+	return returnValue;
+}
+extern "C" void CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_update_hook_bridge_impl_mF608B2F9975550DCC69E48100606BA7187B9E880(intptr_t ___0_p, int32_t ___1_typ, intptr_t ___2_db, intptr_t ___3_tbl, int64_t ___4_rowid)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	SQLite3Provider_e_sqlite3_update_hook_bridge_impl_mF608B2F9975550DCC69E48100606BA7187B9E880(___0_p, ___1_typ, ___2_db, ___3_tbl, ___4_rowid, NULL);
+
+}
+extern "C" void CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_rollback_hook_bridge_impl_m7F9D5FD5953803A1B2D57E68BE6522FFE681062F(intptr_t ___0_p)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	SQLite3Provider_e_sqlite3_rollback_hook_bridge_impl_m7F9D5FD5953803A1B2D57E68BE6522FFE681062F(___0_p, NULL);
+
+}
+extern "C" void CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_trace_hook_bridge_impl_m1A72E4987D934C291169F2C6A7816798FA6998AC(intptr_t ___0_p, intptr_t ___1_s)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	SQLite3Provider_e_sqlite3_trace_hook_bridge_impl_m1A72E4987D934C291169F2C6A7816798FA6998AC(___0_p, ___1_s, NULL);
+
+}
+extern "C" void CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_profile_hook_bridge_impl_m11AFCD1AB7A052E5EB9938B8EAF9F1E2C83FA77A(intptr_t ___0_p, intptr_t ___1_s, int64_t ___2_elapsed)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	SQLite3Provider_e_sqlite3_profile_hook_bridge_impl_m11AFCD1AB7A052E5EB9938B8EAF9F1E2C83FA77A(___0_p, ___1_s, ___2_elapsed, NULL);
+
+}
+extern "C" int32_t CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_progress_handler_hook_bridge_impl_m982DE88858258854F532E5E21E81965E6CAE09E3(intptr_t ___0_p)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	int32_t returnValue;
+	returnValue = SQLite3Provider_e_sqlite3_progress_handler_hook_bridge_impl_m982DE88858258854F532E5E21E81965E6CAE09E3(___0_p, NULL);
+
+	return returnValue;
+}
+extern "C" int32_t CDECL ReversePInvokeWrapper_SQLite3Provider_e_sqlite3_authorizer_hook_bridge_impl_m6B55BC239D83BBF905BA28662CA6DAEE279BC9E4(intptr_t ___0_p, int32_t ___1_action_code, intptr_t ___2_param0, intptr_t ___3_param1, intptr_t ___4_dbName, intptr_t ___5_inner_most_trigger_or_view)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	int32_t returnValue;
+	returnValue = SQLite3Provider_e_sqlite3_authorizer_hook_bridge_impl_m6B55BC239D83BBF905BA28662CA6DAEE279BC9E4(___0_p, ___1_action_code, ___2_param0, ___3_param1, ___4_dbName, ___5_inner_most_trigger_or_view, NULL);
+
+	return returnValue;
+}
+// Method Definition Index: 80048
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_GetNativeLibraryName_mEE9F8E9B2FF812894590A9BBA3AC2AAB7F612976 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1F080C0A268DCE50EA57CD766D6EA437363F3F75);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral1F080C0A268DCE50EA57CD766D6EA437363F3F75;
+	}
+}
+// Method Definition Index: 80049
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SQLite3Provider_e_sqlite3_my_streq_m8739278305E4F8F0D3B3A0D51AD0A8AA3FE20EA7 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, intptr_t ___1_q, int32_t ___2_len, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		intptr_t L_1 = ___1_q;
+		int32_t L_2 = ___2_len;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_strnicmp_m9B0F44BA1B0EF0A26CB3ACD472FA33354B5D1505(L_0, L_1, L_2, NULL);
+		return (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
+	}
+}
+// Method Definition Index: 80050
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_U3Cget_hooksU3Eb__4_0_mB46358DB13286AFA2E46375065B5AAAF83886445_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&sqlite3_GetOrCreateExtra_Tishook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33_m9D3A3879372BFE12DCDA4ABE6D83D1C197ECE27E_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81* L_1 = (Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81*)il2cpp_codegen_object_new(Func_1_t202B5DFEFBE5BA53985475F7441D184AE39ECE81_il2cpp_TypeInfo_var);
+		Func_1__ctor_m5B138A470220E888E073E33BAED7B0551135492F(L_1, __this, (intptr_t)((void*)SQLite3Provider_e_sqlite3_U3Cget_hooksU3Eb__4_0_mB46358DB13286AFA2E46375065B5AAAF83886445_RuntimeMethod_var), NULL);
+		NullCheck(L_0);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2;
+		L_2 = sqlite3_GetOrCreateExtra_Tishook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33_m9D3A3879372BFE12DCDA4ABE6D83D1C197ECE27E(L_0, L_1, sqlite3_GetOrCreateExtra_Tishook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33_m9D3A3879372BFE12DCDA4ABE6D83D1C197ECE27E_RuntimeMethod_var);
+		return L_2;
+	}
+}
+// Method Definition Index: 80051
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_win32_set_directory_m3BBF070465638589751A9FC66B7D7AC5D8AE7B88 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_typ, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_path, const RuntimeMethod* method) 
+{
+	{
+		return 1;
+	}
+}
+// Method Definition Index: 80052
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_open_mBF56A39FB4511180E119A033F37216098A6B2536 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___0_filename, intptr_t* ___1_db, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___0_filename), NULL);
+		V_0 = L_0;
+		uint8_t* L_1 = V_0;
+		intptr_t* L_2 = ___1_db;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_open_mC6CB397252A981ED08F3E1E51E5881D5535B3A23((uint8_t*)((uintptr_t)L_1), L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80053
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_open_v2_m4504578397FB5AD2A044A04B3BE3B34EBD60268A (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___0_filename, intptr_t* ___1_db, int32_t ___2_flags, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___3_vfs, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___0_filename), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		uint8_t* L_2;
+		L_2 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___3_vfs), NULL);
+		V_2 = L_2;
+		uint8_t* L_3 = V_2;
+		V_0 = (uint8_t*)((uintptr_t)L_3);
+		intptr_t* L_4 = ___1_db;
+		int32_t L_5 = ___2_flags;
+		uint8_t* L_6 = V_0;
+		int32_t L_7;
+		L_7 = NativeMethods_sqlite3_open_v2_mEC85A62F0C7B514435B64202F0E9DE399E946056((uint8_t*)((uintptr_t)L_1), L_4, L_5, L_6, NULL);
+		return L_7;
+	}
+}
+// Method Definition Index: 80054
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3__vfs__delete_m86D4718FA8B8FD7F1355C641CB3D1A17C317ED05 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___0_vfs, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_filename, int32_t ___2_syncDir, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	intptr_t V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___0_vfs), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		uint8_t* L_2;
+		L_2 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_filename), NULL);
+		V_2 = L_2;
+		uint8_t* L_3 = V_2;
+		V_0 = (uint8_t*)((uintptr_t)L_3);
+		intptr_t L_4;
+		L_4 = NativeMethods_sqlite3_vfs_find_mA8DBAB1449AE16809E018BB76FA98D9B8851D29C((uint8_t*)((uintptr_t)L_1), NULL);
+		V_3 = L_4;
+		intptr_t L_5 = V_3;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_6 = { reinterpret_cast<intptr_t> (sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
+		Type_t* L_7;
+		L_7 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_6, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		RuntimeObject* L_8;
+		L_8 = Marshal_PtrToStructure_m235E141E21BFB69A01B07DDDF1702BA7D5723AC3(L_5, L_7, NULL);
+		SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* L_9 = ((*(sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801*)UnBox(L_8, sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_il2cpp_TypeInfo_var))).___xDelete;
+		intptr_t L_10 = V_3;
+		uint8_t* L_11 = V_0;
+		NullCheck(L_9);
+		int32_t L_12;
+		L_12 = SQLiteDeleteDelegate_Invoke_m05864E249C3D97BD1CE9D33569AC2607AF36697A_inline(L_9, L_10, L_11, 1, NULL);
+		return L_12;
+	}
+}
+// Method Definition Index: 80055
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_close_v2_m9897A119BFA8F844AB2A13A36798CD4DBADFFB0A (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_db, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_db;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_close_v2_m47CDE601B77EA589F910B5C069FF148CF4A29DE5(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80056
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_close_m60A20ED9F45DCC180E9DF8EFAC0CA8201C388168 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_db, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_db;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_close_mED3AC3B0ADC674BE66282A6C6C7F307B8E7ECE1D(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80057
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_malloc_m7E073938EC5C8980B758C9350334AA51C26537B9 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_n, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_n;
+		intptr_t L_1;
+		L_1 = NativeMethods_sqlite3_malloc_mE761F12FAF80EE702E043062C5CA1F0CB414D989(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80058
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_malloc64_mB76490DD4093EC84E4D90C651A4EFCC68D2BD0E2 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int64_t ___0_n, const RuntimeMethod* method) 
+{
+	{
+		int64_t L_0 = ___0_n;
+		intptr_t L_1;
+		L_1 = NativeMethods_sqlite3_malloc64_m6BA1C52143314F33577A81914A9E32E965763917(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80059
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_free_mACBC19ADC11ECC5133BEB189AB0A51A6081AE0DB (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		NativeMethods_sqlite3_free_m56243724F4A36EDA54D1353A30A40FAE3A6A12C1(L_0, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80060
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_stricmp_m6DC469CD86F5BFF2617F696D062FEACB7B4D7FA8 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, intptr_t ___1_q, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		intptr_t L_1 = ___1_q;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_stricmp_mAE8E1DBE81B0A7A004DF7AFFDC3568F9BA45E8C7(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80061
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_strnicmp_mF6DBFC2DEA1C248D123B5B5F993FF15B72EF735E (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, intptr_t ___1_q, int32_t ___2_n, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		intptr_t L_1 = ___1_q;
+		int32_t L_2 = ___2_n;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_strnicmp_m9B0F44BA1B0EF0A26CB3ACD472FA33354B5D1505(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80062
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_enable_shared_cache_m71AD83DF42A2C29EABEE871B13016DAA244CE88C (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_enable, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_enable;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_enable_shared_cache_mA23CC3E85ABA7FF0ECD7F729097E40AD060C941C(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80063
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_interrupt_m9A3127FD1C4C9F1E2D42A85645E930C43129BD7F (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		NativeMethods_sqlite3_interrupt_mA22234311DF51ABAF7BDC154E491BC75822A7F58(L_0, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80064
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_exec_hook_bridge_impl_mF469E38331889AE90BAC1EEFDFC4348890D39B93 (intptr_t ___0_p, int32_t ___1_n, intptr_t ___2_values_ptr, intptr_t ___3_names_ptr, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8* L_1;
+		L_1 = exec_hook_info_from_ptr_m12E3B2B744FC54C5D4743771EAA23288615B4BDF(L_0, NULL);
+		int32_t L_2 = ___1_n;
+		intptr_t L_3 = ___2_values_ptr;
+		intptr_t L_4 = ___3_names_ptr;
+		NullCheck(L_1);
+		int32_t L_5;
+		L_5 = exec_hook_info_call_mA713B5044B9732EB1EE735288166504122BFCA77(L_1, L_2, L_3, L_4, NULL);
+		return L_5;
+	}
+}
+// Method Definition Index: 80065
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_exec_mB33B515A8F155E2E8789BE363E13950098E74AAC (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_sql, delegate_exec_t41D7BC9F896A9FF945FC4548BFA2CB5B698D3AD3* ___2_func, RuntimeObject* ___3_user_data, intptr_t* ___4_errMsg, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_exec_hook_bridge_impl_mF469E38331889AE90BAC1EEFDFC4348890D39B93_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* V_0 = NULL;
+	exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8* V_1 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_2 = NULL;
+	uint8_t* V_3 = NULL;
+	uint8_t* V_4 = NULL;
+	{
+		delegate_exec_t41D7BC9F896A9FF945FC4548BFA2CB5B698D3AD3* L_0 = ___2_func;
+		if (!L_0)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* L_1 = (callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D*)il2cpp_codegen_object_new(callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D_il2cpp_TypeInfo_var);
+		callback_exec__ctor_mE3FE6BAA7DB36577FC047933558235EEE1C7B040(L_1, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_exec_hook_bridge_impl_mF469E38331889AE90BAC1EEFDFC4348890D39B93_RuntimeMethod_var), NULL);
+		V_0 = L_1;
+		delegate_exec_t41D7BC9F896A9FF945FC4548BFA2CB5B698D3AD3* L_2 = ___2_func;
+		RuntimeObject* L_3 = ___3_user_data;
+		exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8* L_4 = (exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8*)il2cpp_codegen_object_new(exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8_il2cpp_TypeInfo_var);
+		exec_hook_info__ctor_mF44B73FC081E66935ACBC8C8635D85C9E4D3ED24(L_4, L_2, L_3, NULL);
+		V_1 = L_4;
+		goto IL_001f;
+	}
+
+IL_001b:
+	{
+		V_0 = (callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D*)NULL;
+		V_1 = (exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8*)NULL;
+	}
+
+IL_001f:
+	{
+		exec_hook_info_tB2C6835FA07DBFA56D9C701D6A2C0FC6D9201CA8* L_5 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_6 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_6, L_5, NULL);
+		V_2 = L_6;
+		uint8_t* L_7;
+		L_7 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_sql), NULL);
+		V_4 = L_7;
+		uint8_t* L_8 = V_4;
+		V_3 = (uint8_t*)((uintptr_t)L_8);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_9 = ___0_db;
+		uint8_t* L_10 = V_3;
+		callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* L_11 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_12 = V_2;
+		intptr_t* L_13 = ___4_errMsg;
+		int32_t L_14;
+		L_14 = NativeMethods_sqlite3_exec_m5E45F8606A33788DFC994E37D07B95D741F02060(L_9, L_10, L_11, L_12, L_13, NULL);
+		V_4 = (uint8_t*)((uintptr_t)0);
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_15 = V_2;
+		NullCheck(L_15);
+		SafeHandle_Dispose_m4FB5B8A7ED78B90757F1B570D4025F3BA26A39F3(L_15, NULL);
+		return L_14;
+	}
+}
+// Method Definition Index: 80066
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_complete_m3B6C33725954C3ED4CFE64EAA7A52DBDC1004FBE (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___0_sql, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___0_sql), NULL);
+		V_0 = L_0;
+		uint8_t* L_1 = V_0;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_complete_mC15263E100F1BC846FDA791A82A343FED9EFFE42((uint8_t*)((uintptr_t)L_1), NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80067
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_compileoption_get_m4A2D9F08AC8245B17CD87B2302CC4371F44AE7D6 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_n, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_n;
+		uint8_t* L_1;
+		L_1 = NativeMethods_sqlite3_compileoption_get_m21B3C2120E8D05CE9E7B79AEC1DADC53B765583C(L_0, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_2;
+		L_2 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80068
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_compileoption_used_m3A2E1AE52636EE6D014206C8C799E3E46F0AF53B (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___0_s, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___0_s), NULL);
+		V_0 = L_0;
+		uint8_t* L_1 = V_0;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_compileoption_used_mA9E70414A31701C66949FCECB8CE3AC8C1B99F79((uint8_t*)((uintptr_t)L_1), NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80069
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_table_column_metadata_mA5F7AB13FC3F26E6A15394DB8F052D9FBF73EBEE (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_dbName, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___2_tblName, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___3_colName, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* ___4_dataType, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* ___5_collSeq, int32_t* ___6_notNull, int32_t* ___7_primaryKey, int32_t* ___8_autoInc, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	uint8_t* V_3 = NULL;
+	uint8_t* V_4 = NULL;
+	uint8_t* V_5 = NULL;
+	uint8_t* V_6 = NULL;
+	uint8_t* V_7 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_dbName), NULL);
+		V_3 = L_0;
+		uint8_t* L_1 = V_3;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		uint8_t* L_2;
+		L_2 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___2_tblName), NULL);
+		V_4 = L_2;
+		uint8_t* L_3 = V_4;
+		V_1 = (uint8_t*)((uintptr_t)L_3);
+		uint8_t* L_4;
+		L_4 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___3_colName), NULL);
+		V_5 = L_4;
+		uint8_t* L_5 = V_5;
+		V_2 = (uint8_t*)((uintptr_t)L_5);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_6 = ___0_db;
+		uint8_t* L_7 = V_0;
+		uint8_t* L_8 = V_1;
+		uint8_t* L_9 = V_2;
+		int32_t* L_10 = ___6_notNull;
+		int32_t* L_11 = ___7_primaryKey;
+		int32_t* L_12 = ___8_autoInc;
+		int32_t L_13;
+		L_13 = NativeMethods_sqlite3_table_column_metadata_mB0353A92E430864E1618FBDD969417CD7AC0437D(L_6, L_7, L_8, L_9, (&V_6), (&V_7), L_10, L_11, L_12, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* L_14 = ___4_dataType;
+		uint8_t* L_15 = V_6;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_16;
+		L_16 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_15, NULL);
+		*(utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25*)L_14 = L_16;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* L_17 = ___5_collSeq;
+		uint8_t* L_18 = V_7;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_19;
+		L_19 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_18, NULL);
+		*(utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25*)L_17 = L_19;
+		return L_13;
+	}
+}
+// Method Definition Index: 80070
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_key_mEBCDCFC44DBA4C4903572876F1862F5BBE19F0E4 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___1_k, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___1_k), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_k), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		int32_t L_5;
+		L_5 = NativeMethods_sqlite3_key_m2062C8CDA986281E1F26715BA8C3208FA1A39A01(L_2, L_3, L_4, NULL);
+		return L_5;
+	}
+}
+// Method Definition Index: 80071
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_key_v2_m2298200D6369B02ECEE3D127C3A3283262A6BBEE (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_name, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___2_k, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	uint8_t* V_3 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___2_k), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_2 = L_0;
+		uint8_t* L_1 = V_2;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		uint8_t* L_2;
+		L_2 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_name), NULL);
+		V_3 = L_2;
+		uint8_t* L_3 = V_3;
+		V_1 = (uint8_t*)((uintptr_t)L_3);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_4 = ___0_db;
+		uint8_t* L_5 = V_1;
+		uint8_t* L_6 = V_0;
+		int32_t L_7;
+		L_7 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___2_k), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		int32_t L_8;
+		L_8 = NativeMethods_sqlite3_key_v2_mA88F77CF5F04EA4A4504E8801520BB213586BF9F(L_4, L_5, L_6, L_7, NULL);
+		return L_8;
+	}
+}
+// Method Definition Index: 80072
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_rekey_mBF5CADA1E6801A5EC58C8BAD84489A26AB610593 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___1_k, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___1_k), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_k), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		int32_t L_5;
+		L_5 = NativeMethods_sqlite3_rekey_m8771AF524E2C8D5E68AA05445579C0C4A35E5DCB(L_2, L_3, L_4, NULL);
+		return L_5;
+	}
+}
+// Method Definition Index: 80073
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_rekey_v2_m16C78BE20A2B838E97C095FAA7AC3E4817090477 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_name, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___2_k, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	uint8_t* V_3 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___2_k), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_2 = L_0;
+		uint8_t* L_1 = V_2;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		uint8_t* L_2;
+		L_2 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_name), NULL);
+		V_3 = L_2;
+		uint8_t* L_3 = V_3;
+		V_1 = (uint8_t*)((uintptr_t)L_3);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_4 = ___0_db;
+		uint8_t* L_5 = V_1;
+		uint8_t* L_6 = V_0;
+		int32_t L_7;
+		L_7 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___2_k), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		int32_t L_8;
+		L_8 = NativeMethods_sqlite3_rekey_v2_m4996B7D6A0A1489081836C5E09E077B4DFAAE37E(L_4, L_5, L_6, L_7, NULL);
+		return L_8;
+	}
+}
+// Method Definition Index: 80074
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_prepare_v2_mBD99FC0FE389C7103681D3A7B9DAB5BB244D8B06 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___1_sql, intptr_t* ___2_stm, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* ___3_tail, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	int32_t G_B7_0 = 0;
+	int32_t G_B1_0 = 0;
+	int32_t G_B2_0 = 0;
+	int32_t G_B3_0 = 0;
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* G_B5_0 = NULL;
+	int32_t G_B5_1 = 0;
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* G_B4_0 = NULL;
+	int32_t G_B4_1 = 0;
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D G_B6_0;
+	memset((&G_B6_0), 0, sizeof(G_B6_0));
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* G_B6_1 = NULL;
+	int32_t G_B6_2 = 0;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___1_sql), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_sql), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		intptr_t* L_5 = ___2_stm;
+		int32_t L_6;
+		L_6 = NativeMethods_sqlite3_prepare_v2_m41342AED3FFC4BE5823F9DD0D16AC04A435955CD(L_2, L_3, L_4, L_5, (&V_2), NULL);
+		uint8_t* L_7 = V_2;
+		if ((((intptr_t)L_7) == ((intptr_t)((uintptr_t)0))))
+		{
+			G_B7_0 = L_6;
+			goto IL_0062;
+		}
+		G_B1_0 = L_6;
+	}
+	{
+		uint8_t* L_8 = V_2;
+		uint8_t* L_9 = V_0;
+		if ((!(((uintptr_t)L_8) >= ((uintptr_t)L_9))))
+		{
+			G_B7_0 = G_B1_0;
+			goto IL_0062;
+		}
+		G_B2_0 = G_B1_0;
+	}
+	{
+		uint8_t* L_10 = V_2;
+		uint8_t* L_11 = V_0;
+		int32_t L_12;
+		L_12 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_sql), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		if ((!(((uintptr_t)L_10) <= ((uintptr_t)((uint8_t*)il2cpp_codegen_add((intptr_t)L_11, L_12))))))
+		{
+			G_B7_0 = G_B2_0;
+			goto IL_0062;
+		}
+		G_B3_0 = G_B2_0;
+	}
+	{
+		uint8_t* L_13 = V_2;
+		uint8_t* L_14 = V_0;
+		V_3 = ((int32_t)((int64_t)(intptr_t)((uint8_t*)((intptr_t)((uint8_t*)il2cpp_codegen_subtract((intptr_t)L_13, (intptr_t)L_14))/1))));
+		int32_t L_15;
+		L_15 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_sql), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		int32_t L_16 = V_3;
+		V_4 = ((int32_t)il2cpp_codegen_subtract(L_15, L_16));
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* L_17 = ___3_tail;
+		int32_t L_18 = V_4;
+		if ((((int32_t)L_18) > ((int32_t)0)))
+		{
+			G_B5_0 = L_17;
+			G_B5_1 = G_B3_0;
+			goto IL_0052;
+		}
+		G_B4_0 = L_17;
+		G_B4_1 = G_B3_0;
+	}
+	{
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_19;
+		L_19 = ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27(ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27_RuntimeMethod_var);
+		G_B6_0 = L_19;
+		G_B6_1 = G_B4_0;
+		G_B6_2 = G_B4_1;
+		goto IL_005c;
+	}
+
+IL_0052:
+	{
+		int32_t L_20 = V_3;
+		int32_t L_21 = V_4;
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_22;
+		L_22 = ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_inline((&___1_sql), L_20, L_21, ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_RuntimeMethod_var);
+		G_B6_0 = L_22;
+		G_B6_1 = G_B5_0;
+		G_B6_2 = G_B5_1;
+	}
+
+IL_005c:
+	{
+		*(ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D*)G_B6_1 = G_B6_0;
+		return G_B6_2;
+	}
+
+IL_0062:
+	{
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* L_23 = ___3_tail;
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_24;
+		L_24 = ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27(ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27_RuntimeMethod_var);
+		*(ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D*)L_23 = L_24;
+		return G_B7_0;
+	}
+}
+// Method Definition Index: 80075
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_prepare_v2_mE192D17C8D2A6C7CFDC418A182471B0092943F06 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_sql, intptr_t* ___2_stm, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* ___3_tail, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_sql), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		intptr_t* L_4 = ___2_stm;
+		int32_t L_5;
+		L_5 = NativeMethods_sqlite3_prepare_v2_m41342AED3FFC4BE5823F9DD0D16AC04A435955CD(L_2, L_3, (-1), L_4, (&V_2), NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* L_6 = ___3_tail;
+		uint8_t* L_7 = V_2;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_8;
+		L_8 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_7, NULL);
+		*(utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25*)L_6 = L_8;
+		return L_5;
+	}
+}
+// Method Definition Index: 80076
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_prepare_v3_m96C68A7B4091781923330A6D89F405DE180BDBC9 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___1_sql, uint32_t ___2_flags, intptr_t* ___3_stm, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* ___4_tail, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	int32_t G_B7_0 = 0;
+	int32_t G_B1_0 = 0;
+	int32_t G_B2_0 = 0;
+	int32_t G_B3_0 = 0;
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* G_B5_0 = NULL;
+	int32_t G_B5_1 = 0;
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* G_B4_0 = NULL;
+	int32_t G_B4_1 = 0;
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D G_B6_0;
+	memset((&G_B6_0), 0, sizeof(G_B6_0));
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* G_B6_1 = NULL;
+	int32_t G_B6_2 = 0;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___1_sql), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_sql), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		uint32_t L_5 = ___2_flags;
+		intptr_t* L_6 = ___3_stm;
+		int32_t L_7;
+		L_7 = NativeMethods_sqlite3_prepare_v3_m6E2A4FD05EF9F59BEE2FA1F4F60A55369857F93C(L_2, L_3, L_4, L_5, L_6, (&V_2), NULL);
+		uint8_t* L_8 = V_2;
+		if ((((intptr_t)L_8) == ((intptr_t)((uintptr_t)0))))
+		{
+			G_B7_0 = L_7;
+			goto IL_0064;
+		}
+		G_B1_0 = L_7;
+	}
+	{
+		uint8_t* L_9 = V_2;
+		uint8_t* L_10 = V_0;
+		if ((!(((uintptr_t)L_9) >= ((uintptr_t)L_10))))
+		{
+			G_B7_0 = G_B1_0;
+			goto IL_0064;
+		}
+		G_B2_0 = G_B1_0;
+	}
+	{
+		uint8_t* L_11 = V_2;
+		uint8_t* L_12 = V_0;
+		int32_t L_13;
+		L_13 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_sql), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		if ((!(((uintptr_t)L_11) <= ((uintptr_t)((uint8_t*)il2cpp_codegen_add((intptr_t)L_12, L_13))))))
+		{
+			G_B7_0 = G_B2_0;
+			goto IL_0064;
+		}
+		G_B3_0 = G_B2_0;
+	}
+	{
+		uint8_t* L_14 = V_2;
+		uint8_t* L_15 = V_0;
+		V_3 = ((int32_t)((int64_t)(intptr_t)((uint8_t*)((intptr_t)((uint8_t*)il2cpp_codegen_subtract((intptr_t)L_14, (intptr_t)L_15))/1))));
+		int32_t L_16;
+		L_16 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_sql), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		int32_t L_17 = V_3;
+		V_4 = ((int32_t)il2cpp_codegen_subtract(L_16, L_17));
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* L_18 = ___4_tail;
+		int32_t L_19 = V_4;
+		if ((((int32_t)L_19) > ((int32_t)0)))
+		{
+			G_B5_0 = L_18;
+			G_B5_1 = G_B3_0;
+			goto IL_0054;
+		}
+		G_B4_0 = L_18;
+		G_B4_1 = G_B3_0;
+	}
+	{
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_20;
+		L_20 = ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27(ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27_RuntimeMethod_var);
+		G_B6_0 = L_20;
+		G_B6_1 = G_B4_0;
+		G_B6_2 = G_B4_1;
+		goto IL_005e;
+	}
+
+IL_0054:
+	{
+		int32_t L_21 = V_3;
+		int32_t L_22 = V_4;
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_23;
+		L_23 = ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_inline((&___1_sql), L_21, L_22, ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_RuntimeMethod_var);
+		G_B6_0 = L_23;
+		G_B6_1 = G_B5_0;
+		G_B6_2 = G_B5_1;
+	}
+
+IL_005e:
+	{
+		*(ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D*)G_B6_1 = G_B6_0;
+		return G_B6_2;
+	}
+
+IL_0064:
+	{
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* L_24 = ___4_tail;
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_25;
+		L_25 = ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27(ReadOnlySpan_1_get_Empty_mF590D02EC6334390A18F6F05B80FDD62991A3C27_RuntimeMethod_var);
+		*(ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D*)L_24 = L_25;
+		return G_B7_0;
+	}
+}
+// Method Definition Index: 80077
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_prepare_v3_mBDBAE4645CE9F2F0A111BCD9BC4F7F9C6B8667B3 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_sql, uint32_t ___2_flags, intptr_t* ___3_stm, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* ___4_tail, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_sql), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		uint32_t L_4 = ___2_flags;
+		intptr_t* L_5 = ___3_stm;
+		int32_t L_6;
+		L_6 = NativeMethods_sqlite3_prepare_v3_m6E2A4FD05EF9F59BEE2FA1F4F60A55369857F93C(L_2, L_3, (-1), L_4, L_5, (&V_2), NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* L_7 = ___4_tail;
+		uint8_t* L_8 = V_2;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_9;
+		L_9 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_8, NULL);
+		*(utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25*)L_7 = L_9;
+		return L_6;
+	}
+}
+// Method Definition Index: 80078
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_db_status_m98D5485B11AA66EE178CB3950950120C6CD5EB10 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, int32_t* ___2_current, int32_t* ___3_highest, int32_t ___4_resetFlg, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1 = ___1_op;
+		int32_t* L_2 = ___2_current;
+		int32_t* L_3 = ___3_highest;
+		int32_t L_4 = ___4_resetFlg;
+		int32_t L_5;
+		L_5 = NativeMethods_sqlite3_db_status_m28E97986E40B52B293238A78F20E08E270D4CF30(L_0, L_1, L_2, L_3, L_4, NULL);
+		return L_5;
+	}
+}
+// Method Definition Index: 80079
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_sql_mFB9702302D5D3BAFBD56E10628BCF155E825AC33 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stmt;
+		uint8_t* L_1;
+		L_1 = NativeMethods_sqlite3_sql_m87A1B371A6877EB8C732076420DD4244881AEC78(L_0, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_2;
+		L_2 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80080
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_db_handle_m0AFA4DF15673AA4C5DF4B73C8B8FDB0554198917 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_stmt, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_stmt;
+		intptr_t L_1;
+		L_1 = NativeMethods_sqlite3_db_handle_m2477E1760DBA3CEC75321782D5EF12EB5382C406(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80081
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_blob_open_m6F379A8AB09594757D0BF97328F9C3B8DCABCD15 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_db_utf8, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___2_table_utf8, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___3_col_utf8, int64_t ___4_rowid, int32_t ___5_flags, sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057** ___6_blob, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	uint8_t* V_3 = NULL;
+	uint8_t* V_4 = NULL;
+	uint8_t* V_5 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_db_utf8), NULL);
+		V_3 = L_0;
+		uint8_t* L_1 = V_3;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		uint8_t* L_2;
+		L_2 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___2_table_utf8), NULL);
+		V_4 = L_2;
+		uint8_t* L_3 = V_4;
+		V_1 = (uint8_t*)((uintptr_t)L_3);
+		uint8_t* L_4;
+		L_4 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___3_col_utf8), NULL);
+		V_5 = L_4;
+		uint8_t* L_5 = V_5;
+		V_2 = (uint8_t*)((uintptr_t)L_5);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_6 = ___0_db;
+		uint8_t* L_7 = V_0;
+		uint8_t* L_8 = V_1;
+		uint8_t* L_9 = V_2;
+		int64_t L_10 = ___4_rowid;
+		int32_t L_11 = ___5_flags;
+		sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057** L_12 = ___6_blob;
+		int32_t L_13;
+		L_13 = NativeMethods_sqlite3_blob_open_mE9024A71D2196E007FD62A66376117ABE976A06A(L_6, L_7, L_8, L_9, L_10, L_11, L_12, NULL);
+		return L_13;
+	}
+}
+// Method Definition Index: 80082
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_blob_bytes_m38E75125F3BDA1BFFDA366C22DDE388AFBB4E8F6 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* L_0 = ___0_blob;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_blob_bytes_mE0CE568996D0321E37433DC4A5AFC4EA8F42FD6A(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80083
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_blob_reopen_m83FBFEA4ACB2D5DDAB685385DB2C1D15746F47B3 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, int64_t ___1_rowid, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* L_0 = ___0_blob;
+		int64_t L_1 = ___1_rowid;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_blob_reopen_m1EEC5541C6FB038C676000EDD6F8907EBB9ECF3C(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80084
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_blob_read_mE3D5172BAF9FA50BB9543F8AC597870F630E485C (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305 ___1_b, int32_t ___2_offset, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Span_1_GetPinnableReference_m55DA180AC02A047DAC0626C7B8CBC2E87626DD0C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Span_1_get_Length_m8E944E4954E037877A25B9FF6B901F1F901D4769_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = Span_1_GetPinnableReference_m55DA180AC02A047DAC0626C7B8CBC2E87626DD0C((&___1_b), Span_1_GetPinnableReference_m55DA180AC02A047DAC0626C7B8CBC2E87626DD0C_RuntimeMethod_var);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* L_2 = ___0_blob;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = Span_1_get_Length_m8E944E4954E037877A25B9FF6B901F1F901D4769_inline((&___1_b), Span_1_get_Length_m8E944E4954E037877A25B9FF6B901F1F901D4769_RuntimeMethod_var);
+		int32_t L_5 = ___2_offset;
+		int32_t L_6;
+		L_6 = NativeMethods_sqlite3_blob_read_mBACB8E76DFC2D19A137A2B439009162F0377A1E9(L_2, L_3, L_4, L_5, NULL);
+		return L_6;
+	}
+}
+// Method Definition Index: 80085
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_blob_write_m7E218696E969D9177122118DF4D2035DF38452A5 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___1_b, int32_t ___2_offset, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___1_b), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* L_2 = ___0_blob;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_b), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		int32_t L_5 = ___2_offset;
+		int32_t L_6;
+		L_6 = NativeMethods_sqlite3_blob_write_mAB5436F556D20B11EAD2896720AF1F0BF57A5BCB(L_2, L_3, L_4, L_5, NULL);
+		return L_6;
+	}
+}
+// Method Definition Index: 80086
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_blob_close_mCF30D13F5809AB859210FD5A8386CA4AAC2BC27D (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_blob, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_blob;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_blob_close_mB991EBF186781C6A48BD1A4FFCDD71C3424F468B(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80087
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_snapshot_get_mC05237EF3601C77E6FE5FE7B00EEE1D6C6E0D8CB (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_schema, intptr_t* ___2_snap, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_schema), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		intptr_t* L_4 = ___2_snap;
+		int32_t L_5;
+		L_5 = NativeMethods_sqlite3_snapshot_get_mAB8467745A5605B867275F4D3A745C68714EDD5D(L_2, L_3, L_4, NULL);
+		return L_5;
+	}
+}
+// Method Definition Index: 80088
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_snapshot_cmp_m036000FABF9256BE99F05E35BCE02CD4967586A4 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* ___0_p1, sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* ___1_p2, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* L_0 = ___0_p1;
+		sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* L_1 = ___1_p2;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_snapshot_cmp_m7CC285F6C3C4C8790F7946F9597595594C84936A(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80089
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_snapshot_open_m84B3DC9D5B8F004819DF10B477DE03CFB1EBDF74 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_schema, sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* ___2_snap, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_schema), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* L_4 = ___2_snap;
+		int32_t L_5;
+		L_5 = NativeMethods_sqlite3_snapshot_open_m03272621ED49584DE5D1C024C40DD323089ABE58(L_2, L_3, L_4, NULL);
+		return L_5;
+	}
+}
+// Method Definition Index: 80090
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_snapshot_recover_m7251F5F6A8476D118A747FB1CED01309EB5DFD46 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_name, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_name), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = NativeMethods_sqlite3_snapshot_recover_m876BB09CEDFBEC0B49B6A2439E0128C8F58C66C9(L_2, L_3, NULL);
+		return L_4;
+	}
+}
+// Method Definition Index: 80091
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_snapshot_free_m28399AB8B800100141F50384F9871069F09BC349 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_snap, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_snap;
+		NativeMethods_sqlite3_snapshot_free_m15E8179E1ABEDD7BF346F3C09868E03D4A12383F(L_0, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80092
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_backup_init_mB45C9D5A8E3BF102365979DA22321511152762D2 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_destDb, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_destName, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___2_sourceDb, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___3_sourceName, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	uint8_t* V_3 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_destName), NULL);
+		V_2 = L_0;
+		uint8_t* L_1 = V_2;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		uint8_t* L_2;
+		L_2 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___3_sourceName), NULL);
+		V_3 = L_2;
+		uint8_t* L_3 = V_3;
+		V_1 = (uint8_t*)((uintptr_t)L_3);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_4 = ___0_destDb;
+		uint8_t* L_5 = V_0;
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_6 = ___2_sourceDb;
+		uint8_t* L_7 = V_1;
+		sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* L_8;
+		L_8 = NativeMethods_sqlite3_backup_init_mC396545FECB75F4F5E5755DA5001499E66C00071(L_4, L_5, L_6, L_7, NULL);
+		return L_8;
+	}
+}
+// Method Definition Index: 80093
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_backup_step_mCF8F8DF4DF2A3488F12CCA6098F1A31C70338B19 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* ___0_backup, int32_t ___1_nPage, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* L_0 = ___0_backup;
+		int32_t L_1 = ___1_nPage;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_backup_step_m77D3876F06A33CDA6B3844AF090EF849EBE18321(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80094
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_backup_remaining_m84AD7AA511ABFCC9BE6A2FFEF98400A1ABB09622 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* ___0_backup, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* L_0 = ___0_backup;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_backup_remaining_m8C47F277EBA1815D31F7610CB94430E39D79820F(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80095
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_backup_pagecount_m3582BB02AB4EDD5611376D17F67FC53D3CA47829 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* ___0_backup, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* L_0 = ___0_backup;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_backup_pagecount_mEA68B0630198E84415AE6C72679F26BCBAEF86A0(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80096
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_backup_finish_mC621B89829595E24653DEFBA255276AC030834E9 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_backup, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_backup;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_backup_finish_m4D682B70469F04D1B073E1D278486FD5B92F0F4F(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80097
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_next_stmt_m62B92B8C4EB695997D298BB6E174EB238A9C4C2E (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, intptr_t ___1_stmt, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		intptr_t L_1 = ___1_stmt;
+		intptr_t L_2;
+		L_2 = NativeMethods_sqlite3_next_stmt_mC220BABB46706E121D5CA9200A50F60BBE3EED65(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80098
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_last_insert_rowid_m63A43339DA494D3A27E8BC46003CFFFA6180B21C (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int64_t L_1;
+		L_1 = NativeMethods_sqlite3_last_insert_rowid_m39D5A39CC0FFD9ABCC3C60397BD8494940F20888(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80099
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_changes_m5AF723F3905B5775A1F47A5334F7B0CA49D43673 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_changes_m27EC91C84867C9B5EF0D2D491CFEA79292B3721D(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80100
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_total_changes_mA58BDC1BD63218D1D52090328C3E8D0E7CD96F3D (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_total_changes_mD6AB0F90D0C16D5277F0DF2CC26FB29DE502C1A3(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80101
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_extended_result_codes_m95F73DA190DE377AB93666939C00F5AE94FDD983 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_onoff, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1 = ___1_onoff;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_extended_result_codes_m21C0ED4AE65E8D0A8694CB0304C836E49D158E6E(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80102
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_errstr_m2F65EB92C455A06A5D033672FF338B29575FB789 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_rc, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_rc;
+		uint8_t* L_1;
+		L_1 = NativeMethods_sqlite3_errstr_m5130988CC20B5C68D039C4B9CA452AA911D13BA4(L_0, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_2;
+		L_2 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80103
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_errcode_m94224A8B294FB20C32C13BED0205C4548AFB81E7 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_errcode_m15FD41D74B6E1266605E7B843F57F7E5C56A100E(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80104
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_extended_errcode_m45BA2CC755E5C655124D5BF4B9EC0E852EF3459B (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_extended_errcode_mB17190AA0E4AF17D7E187DBEBAA64BEAE3CFBD5F(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80105
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_busy_timeout_m77B0665498E87AC101D1D1E327F98F20BA80AC2F (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_ms, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1 = ___1_ms;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_busy_timeout_m1B7F39D1AC141048765E2E9D5F1264D42022850E(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80106
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_get_autocommit_mF83F69DE003771F07EA3149345572D73B847A189 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_get_autocommit_m9139AD931266DBB7BB2EDF00C13303CFA0452897(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80107
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_db_readonly_mB5F69EFFCC28A1C9596A309D7048BA036CE6A38D (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_dbName, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_dbName), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = NativeMethods_sqlite3_db_readonly_mA7B1C029DDB56E7C89CF1C632702566910C668F5(L_2, L_3, NULL);
+		return L_4;
+	}
+}
+// Method Definition Index: 80108
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_db_filename_m2F3EAEA356C391580427F9BAA3AF8C70CB4294AA (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_att, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_att), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		uint8_t* L_4;
+		L_4 = NativeMethods_sqlite3_db_filename_mCF68D2E29879EA828D41554366E248D7AC31BE39(L_2, L_3, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_5;
+		L_5 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_4, NULL);
+		return L_5;
+	}
+}
+// Method Definition Index: 80109
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_errmsg_m0D6C809CFDCA0C575F4AC2E308BE4C2E670EA5B3 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		uint8_t* L_1;
+		L_1 = NativeMethods_sqlite3_errmsg_m97AC77D22E61B412572D670A3B697612018530D5(L_0, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_2;
+		L_2 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80110
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_libversion_mA4BCC5B2439AF88BCF35DFF90D67A6B309F3DE64 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	{
+		uint8_t* L_0;
+		L_0 = NativeMethods_sqlite3_libversion_m905E2F843C51BE29E47B5BD892D9FE2B99C48A9A(NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_1;
+		L_1 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80111
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_libversion_number_m87F44BC508BAF46E1D54BD7449A5B9DD4709960C (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0;
+		L_0 = NativeMethods_sqlite3_libversion_number_m8AFAEF0D32835FCE8373DF78E2A5C44D7D5B8E3F(NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 80112
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_threadsafe_mE8CEF086544C69C9BF1808A9C22CCA173A9B27A9 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0;
+		L_0 = NativeMethods_sqlite3_threadsafe_mB2970EA4677ABABD9A64FEC36A68FDF9E943DA46(NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 80113
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_config_m98D1A5BFE4D7353D91A9DFBD31525C3648BC1E9C (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_op, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_op;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_config_none_mC19B753F7D8BB8551DDBF7E04F1A411B26F9B76C(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80114
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_config_m70BEC695D7BAA76B0CA93B8933BAFBDC4067E5D0 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_op, int32_t ___1_val, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		bool L_0 = ((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___IsArm64cc;
+		if (!L_0)
+		{
+			goto IL_0032;
+		}
+	}
+	{
+		int32_t L_1 = ___0_op;
+		int32_t L_2 = ___1_val;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_config_int_arm64cc_m9152F31E9D37A090E33585C0E9D429D0BD59AF72(L_1, 0, 0, 0, 0, 0, 0, 0, L_2, NULL);
+		return L_3;
+	}
+
+IL_0032:
+	{
+		int32_t L_4 = ___0_op;
+		int32_t L_5 = ___1_val;
+		int32_t L_6;
+		L_6 = NativeMethods_sqlite3_config_int_m73A62A5D5A211487BECC191061CE11B1FA51CB51(L_4, L_5, NULL);
+		return L_6;
+	}
+}
+// Method Definition Index: 80115
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_db_config_mCC8199ED6F1DBD3439E0723EFF2AEE4408CF8875 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___2_val, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___2_val), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		il2cpp_codegen_runtime_class_init_inline(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		bool L_2 = ((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___IsArm64cc;
+		if (!L_2)
+		{
+			goto IL_0039;
+		}
+	}
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_3 = ___0_db;
+		int32_t L_4 = ___1_op;
+		uint8_t* L_5 = V_0;
+		int32_t L_6;
+		L_6 = NativeMethods_sqlite3_db_config_charptr_arm64cc_m612E7C58D17D5FFFE83868CAEDF6304651A11924(L_3, L_4, 0, 0, 0, 0, 0, 0, L_5, NULL);
+		return L_6;
+	}
+
+IL_0039:
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_7 = ___0_db;
+		int32_t L_8 = ___1_op;
+		uint8_t* L_9 = V_0;
+		int32_t L_10;
+		L_10 = NativeMethods_sqlite3_db_config_charptr_m5DD1EF94C3525E3F296AEBE592D033C193EF7063(L_7, L_8, L_9, NULL);
+		return L_10;
+	}
+}
+// Method Definition Index: 80116
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_db_config_mCC89C6AE4E7446889C97A88482569AFE19E4FDAF (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, int32_t ___2_val, int32_t* ___3_result, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	{
+		V_0 = 0;
+		il2cpp_codegen_runtime_class_init_inline(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		bool L_0 = ((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___IsArm64cc;
+		if (!L_0)
+		{
+			goto IL_0035;
+		}
+	}
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_1 = ___0_db;
+		int32_t L_2 = ___1_op;
+		int32_t L_3 = ___2_val;
+		int32_t L_4;
+		L_4 = NativeMethods_sqlite3_db_config_int_outint_arm64cc_m51738C5ED1C35274F2E90819279812608F99B3CC(L_1, L_2, 0, 0, 0, 0, 0, 0, L_3, (int32_t*)((uintptr_t)(&V_0)), NULL);
+		V_1 = L_4;
+		goto IL_0041;
+	}
+
+IL_0035:
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_5 = ___0_db;
+		int32_t L_6 = ___1_op;
+		int32_t L_7 = ___2_val;
+		int32_t L_8;
+		L_8 = NativeMethods_sqlite3_db_config_int_outint_m6231F6BE5A38384588988CAC32B64211CDDE4ED7(L_5, L_6, L_7, (int32_t*)((uintptr_t)(&V_0)), NULL);
+		V_1 = L_8;
+	}
+
+IL_0041:
+	{
+		int32_t* L_9 = ___3_result;
+		int32_t L_10 = V_0;
+		*((int32_t*)L_9) = (int32_t)L_10;
+		int32_t L_11 = V_1;
+		return L_11;
+	}
+}
+// Method Definition Index: 80117
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_db_config_mF4A2E4A6DAD5C4EAD9B0941A5E5CD146B772737C (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, intptr_t ___2_ptr, int32_t ___3_int0, int32_t ___4_int1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		bool L_0 = ((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___IsArm64cc;
+		if (!L_0)
+		{
+			goto IL_0032;
+		}
+	}
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_1 = ___0_db;
+		int32_t L_2 = ___1_op;
+		intptr_t L_3 = ___2_ptr;
+		int32_t L_4 = ___3_int0;
+		int32_t L_5 = ___4_int1;
+		int32_t L_6;
+		L_6 = NativeMethods_sqlite3_db_config_intptr_int_int_arm64cc_m0DB99D4377ED4C3D728B1B64C091AD76EE0E76C1(L_1, L_2, 0, 0, 0, 0, 0, 0, L_3, L_4, L_5, NULL);
+		return L_6;
+	}
+
+IL_0032:
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_7 = ___0_db;
+		int32_t L_8 = ___1_op;
+		intptr_t L_9 = ___2_ptr;
+		int32_t L_10 = ___3_int0;
+		int32_t L_11 = ___4_int1;
+		int32_t L_12;
+		L_12 = NativeMethods_sqlite3_db_config_intptr_int_int_mDA52C53B1808DFF86712C28D7A0F701C8AAB4D99(L_7, L_8, L_9, L_10, L_11, NULL);
+		return L_12;
+	}
+}
+// Method Definition Index: 80118
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_limit_mC763482C8D0AAF4F3D2CE09B51E621CAC22FAB57 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_id, int32_t ___2_newVal, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1 = ___1_id;
+		int32_t L_2 = ___2_newVal;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_limit_m784FD2B0BFC0566C7BC726D68F318DDDA6637FCC(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80119
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_initialize_mB6A6677431B9218C07489B67C098A2E87105D3D3 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0;
+		L_0 = NativeMethods_sqlite3_initialize_mE4342B5EE5B74088F885378D65D6BB1B0E24B040(NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 80120
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_shutdown_mF0EBC761EF68D468543C2C1949D083FBF491849A (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0;
+		L_0 = NativeMethods_sqlite3_shutdown_m48E097036353F1D9DCBC5785259B997CE19567ED(NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 80121
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_enable_load_extension_m40A1469BDF79FD177A54F57F278CBFB7F71E3771 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_onoff, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1 = ___1_onoff;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_enable_load_extension_mE6C839EC992333038574323E3903C77BA714B28E(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80122
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_load_extension_mFBFAEAD85A269B8E43781C6E9687AD63A9183D8B (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_zFile, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___2_zProc, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* ___3_pzErrMsg, const RuntimeMethod* method) 
+{
+	{
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25* L_0 = ___3_pzErrMsg;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_1;
+		L_1 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116((uint8_t*)((uintptr_t)0), NULL);
+		*(utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25*)L_0 = L_1;
+		return 1;
+	}
+}
+// Method Definition Index: 80123
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_commit_hook_bridge_impl_m0E7A8FAC8E69E8F505846E21BF1F51FAA0A30F5B (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78* L_1;
+		L_1 = commit_hook_info_from_ptr_m148F08D6E0B637E71B38D49209199AFCD2C73732(L_0, NULL);
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = commit_hook_info_call_mE9C755CD3924D7327451B4E46477242A86EED90A(L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80124
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_commit_hook_m9A42C727C0E2A01DD029996209EAE906377E9568 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, delegate_commit_tFB9621864DD3318A8343B71F10623E409A6A551A* ___1_func, RuntimeObject* ___2_v, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* V_1 = NULL;
+	commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78* V_2 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_3 = NULL;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		NullCheck(L_2);
+		RuntimeObject* L_3 = L_2->___commit;
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_4 = V_0;
+		NullCheck(L_4);
+		RuntimeObject* L_5 = L_4->___commit;
+		NullCheck(L_5);
+		InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_6 = V_0;
+		NullCheck(L_6);
+		L_6->___commit = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_6->___commit), (void*)(RuntimeObject*)NULL);
+	}
+
+IL_0022:
+	{
+		delegate_commit_tFB9621864DD3318A8343B71F10623E409A6A551A* L_7 = ___1_func;
+		if (!L_7)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* L_8 = __this->___commit_hook_bridge;
+		V_1 = L_8;
+		delegate_commit_tFB9621864DD3318A8343B71F10623E409A6A551A* L_9 = ___1_func;
+		RuntimeObject* L_10 = ___2_v;
+		commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78* L_11 = (commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78*)il2cpp_codegen_object_new(commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78_il2cpp_TypeInfo_var);
+		commit_hook_info__ctor_m4B4EC8FA983EECCEF944C38F087A910E4B85C74C(L_11, L_9, L_10, NULL);
+		V_2 = L_11;
+		goto IL_003a;
+	}
+
+IL_0036:
+	{
+		V_1 = (callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12*)NULL;
+		V_2 = (commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78*)NULL;
+	}
+
+IL_003a:
+	{
+		commit_hook_info_tB926B425FE1E7B690A3C92BB526B96E9C11E2E78* L_12 = V_2;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_13 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_13, L_12, NULL);
+		V_3 = L_13;
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_14 = ___0_db;
+		callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* L_15 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_16 = V_3;
+		intptr_t L_17;
+		L_17 = NativeMethods_sqlite3_commit_hook_m2C261D8A2B45F98F7B4B2F6262681BF890F4A068(L_14, L_15, L_16, NULL);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_18 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_19 = V_3;
+		NullCheck(L_19);
+		RuntimeObject* L_20;
+		L_20 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_19, NULL);
+		NullCheck(L_18);
+		L_18->___commit = L_20;
+		Il2CppCodeGenWriteBarrier((void**)(&L_18->___commit), (void*)L_20);
+		return;
+	}
+}
+// Method Definition Index: 80125
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_scalar_function_hook_bridge_impl_m4D1C3607D8062CFB548C8248142770A3EA2BEE88 (intptr_t ___0_context, int32_t ___1_num_args, intptr_t ___2_argsptr, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_context;
+		intptr_t L_1;
+		L_1 = NativeMethods_sqlite3_user_data_mF2A40FA200DF74049844E616584A6C9FC3BEA68E(L_0, NULL);
+		function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* L_2;
+		L_2 = function_hook_info_from_ptr_mCA53C85ACFB80A6A189E7CA538BE44E0D400F923(L_1, NULL);
+		intptr_t L_3 = ___0_context;
+		int32_t L_4 = ___1_num_args;
+		intptr_t L_5 = ___2_argsptr;
+		NullCheck(L_2);
+		function_hook_info_call_scalar_mAA7975A8E3B3EDBE7C1FCDFC02178C7F72DDD7BB(L_2, L_3, L_4, L_5, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80126
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_create_function_m2C270844EDF077E6137935A04DB4C6B33C1E99DA (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_name, int32_t ___2_nargs, int32_t ___3_flags, RuntimeObject* ___4_v, delegate_function_scalar_t6ACAAB11456A0DAC29290263706F889CF8639EE5* ___5_func, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	int32_t V_1 = 0;
+	callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* V_2 = NULL;
+	function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* V_3 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_4 = NULL;
+	int32_t G_B6_0 = 0;
+	int32_t G_B4_0 = 0;
+	int32_t G_B5_0 = 0;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = ___1_name;
+		int32_t L_4 = ___2_nargs;
+		NullCheck(L_2);
+		bool L_5;
+		L_5 = hook_handles_RemoveScalarFunction_m9159BE57F6977DCF622FE30506A7F771739B423F(L_2, L_3, L_4, NULL);
+		int32_t L_6 = ___3_flags;
+		V_1 = ((int32_t)(1|L_6));
+		delegate_function_scalar_t6ACAAB11456A0DAC29290263706F889CF8639EE5* L_7 = ___5_func;
+		if (!L_7)
+		{
+			goto IL_002d;
+		}
+	}
+	{
+		callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* L_8 = __this->___scalar_function_hook_bridge;
+		V_2 = L_8;
+		delegate_function_scalar_t6ACAAB11456A0DAC29290263706F889CF8639EE5* L_9 = ___5_func;
+		RuntimeObject* L_10 = ___4_v;
+		function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* L_11 = (function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017*)il2cpp_codegen_object_new(function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017_il2cpp_TypeInfo_var);
+		function_hook_info__ctor_m4B1D6B0D2A0FF53B36B2BF437FD87A3BB8B20E86(L_11, L_9, L_10, NULL);
+		V_3 = L_11;
+		goto IL_0031;
+	}
+
+IL_002d:
+	{
+		V_2 = (callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054*)NULL;
+		V_3 = (function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017*)NULL;
+	}
+
+IL_0031:
+	{
+		function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* L_12 = V_3;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_13 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_13, L_12, NULL);
+		V_4 = L_13;
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_14 = ___0_db;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_15 = ___1_name;
+		int32_t L_16 = ___2_nargs;
+		int32_t L_17 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_18 = V_4;
+		callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* L_19 = V_2;
+		int32_t L_20;
+		L_20 = NativeMethods_sqlite3_create_function_v2_m0760B009E420EC8F3ECA41F59E5E0EEF302DA49B(L_14, L_15, L_16, L_17, L_18, L_19, (callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED*)NULL, (callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F*)NULL, (callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351*)NULL, NULL);
+		int32_t L_21 = L_20;
+		if (L_21)
+		{
+			G_B6_0 = L_21;
+			goto IL_005d;
+		}
+		G_B4_0 = L_21;
+	}
+	{
+		callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* L_22 = V_2;
+		if (!L_22)
+		{
+			G_B6_0 = G_B4_0;
+			goto IL_005d;
+		}
+		G_B5_0 = G_B4_0;
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_23 = V_0;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_24 = ___1_name;
+		int32_t L_25 = ___2_nargs;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_26 = V_4;
+		NullCheck(L_26);
+		RuntimeObject* L_27;
+		L_27 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_26, NULL);
+		NullCheck(L_23);
+		hook_handles_AddScalarFunction_mD241ED7FC4CFCD555C808E31748100FCAA652047(L_23, L_24, L_25, L_27, NULL);
+		G_B6_0 = G_B5_0;
+	}
+
+IL_005d:
+	{
+		return G_B6_0;
+	}
+}
+// Method Definition Index: 80127
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_log_hook_bridge_impl_mCECCC0F3FD715008B2384E2F4AFC05A2455C37E0 (intptr_t ___0_p, int32_t ___1_rc, intptr_t ___2_s, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116* L_1;
+		L_1 = log_hook_info_from_ptr_m4ACDB4DE324881C384D383EE3CA41933E31C3A03(L_0, NULL);
+		int32_t L_2 = ___1_rc;
+		intptr_t L_3 = ___2_s;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_4;
+		L_4 = utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79(L_3, NULL);
+		NullCheck(L_1);
+		log_hook_info_call_mBBD1CECB059D785233952F83C5582786DBEFE694(L_1, L_2, L_4, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80128
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_config_log_mD1EF33B045D0664BC51E80216C64AE74BD929C17 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, delegate_log_tE18367F8F9FEC29177DF17197EC57B54B04E5712* ___0_func, RuntimeObject* ___1_v, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* V_0 = NULL;
+	log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116* V_1 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_0 = ((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___disp_log_hook_handle;
+		if (!L_0)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_1 = ((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___disp_log_hook_handle;
+		NullCheck(L_1);
+		SafeHandle_Dispose_m4FB5B8A7ED78B90757F1B570D4025F3BA26A39F3(L_1, NULL);
+		((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___disp_log_hook_handle = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___disp_log_hook_handle), (void*)(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)NULL);
+	}
+
+IL_0017:
+	{
+		delegate_log_tE18367F8F9FEC29177DF17197EC57B54B04E5712* L_2 = ___0_func;
+		if (!L_2)
+		{
+			goto IL_002b;
+		}
+	}
+	{
+		callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* L_3 = __this->___log_hook_bridge;
+		V_0 = L_3;
+		delegate_log_tE18367F8F9FEC29177DF17197EC57B54B04E5712* L_4 = ___0_func;
+		RuntimeObject* L_5 = ___1_v;
+		log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116* L_6 = (log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116*)il2cpp_codegen_object_new(log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116_il2cpp_TypeInfo_var);
+		log_hook_info__ctor_m72FEA14AC551F530BD79A2442BF002D7237EFDFC(L_6, L_4, L_5, NULL);
+		V_1 = L_6;
+		goto IL_002f;
+	}
+
+IL_002b:
+	{
+		V_0 = (callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B*)NULL;
+		V_1 = (log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116*)NULL;
+	}
+
+IL_002f:
+	{
+		log_hook_info_tDC91F629B2B139A944265087648F73E1BB31A116* L_7 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_8 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_8, L_7, NULL);
+		V_2 = L_8;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_9 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___disp_log_hook_handle = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___disp_log_hook_handle), (void*)L_9);
+		bool L_10 = ((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___IsArm64cc;
+		if (!L_10)
+		{
+			goto IL_0070;
+		}
+	}
+	{
+		callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* L_11 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_12 = V_2;
+		int32_t L_13;
+		L_13 = NativeMethods_sqlite3_config_log_arm64cc_m459CC6B3C26448122EDE2DB29A260F46B4A3A133(((int32_t)16), 0, 0, 0, 0, 0, 0, 0, L_11, L_12, NULL);
+		return L_13;
+	}
+
+IL_0070:
+	{
+		callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* L_14 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_15 = V_2;
+		int32_t L_16;
+		L_16 = NativeMethods_sqlite3_config_log_m6E221F0799E330F69ECF0C7D21E49D81181387DC(((int32_t)16), L_14, L_15, NULL);
+		return L_16;
+	}
+}
+// Method Definition Index: 80129
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_log_m637957B7E793589976B64DA76B6685D3B5FA47AB (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_errcode, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_s, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_s), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		int32_t L_2 = ___0_errcode;
+		uint8_t* L_3 = V_0;
+		NativeMethods_sqlite3_log_m784D1A8926E3652C59E5F5D2A6AFF654F59CD96F(L_2, L_3, NULL);
+		V_1 = (uint8_t*)((uintptr_t)0);
+		return;
+	}
+}
+// Method Definition Index: 80130
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_agg_function_step_hook_bridge_impl_m5224AECAA46541E71A56BCF661727137741E5ED4 (intptr_t ___0_context, int32_t ___1_num_args, intptr_t ___2_argsptr, const RuntimeMethod* method) 
+{
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		intptr_t L_0 = ___0_context;
+		intptr_t L_1;
+		L_1 = NativeMethods_sqlite3_aggregate_context_m35391325DE6CB95FA6BCFE9E1424FCDFFB08C5BE(L_0, 8, NULL);
+		V_0 = L_1;
+		intptr_t L_2 = ___0_context;
+		intptr_t L_3;
+		L_3 = NativeMethods_sqlite3_user_data_mF2A40FA200DF74049844E616584A6C9FC3BEA68E(L_2, NULL);
+		function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* L_4;
+		L_4 = function_hook_info_from_ptr_mCA53C85ACFB80A6A189E7CA538BE44E0D400F923(L_3, NULL);
+		intptr_t L_5 = ___0_context;
+		intptr_t L_6 = V_0;
+		int32_t L_7 = ___1_num_args;
+		intptr_t L_8 = ___2_argsptr;
+		NullCheck(L_4);
+		function_hook_info_call_step_m50C9070AFF7A909228C5C298AE3CB348571F9FF9(L_4, L_5, L_6, L_7, L_8, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80131
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_agg_function_final_hook_bridge_impl_m006814ED6B9BD7CF4532668020724B43D91AEF03 (intptr_t ___0_context, const RuntimeMethod* method) 
+{
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		intptr_t L_0 = ___0_context;
+		intptr_t L_1;
+		L_1 = NativeMethods_sqlite3_aggregate_context_m35391325DE6CB95FA6BCFE9E1424FCDFFB08C5BE(L_0, 8, NULL);
+		V_0 = L_1;
+		intptr_t L_2 = ___0_context;
+		intptr_t L_3;
+		L_3 = NativeMethods_sqlite3_user_data_mF2A40FA200DF74049844E616584A6C9FC3BEA68E(L_2, NULL);
+		function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* L_4;
+		L_4 = function_hook_info_from_ptr_mCA53C85ACFB80A6A189E7CA538BE44E0D400F923(L_3, NULL);
+		intptr_t L_5 = ___0_context;
+		intptr_t L_6 = V_0;
+		NullCheck(L_4);
+		function_hook_info_call_final_m41F22B0B1C88975CAE40BD2E8A8F2ACAB962C76E(L_4, L_5, L_6, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80132
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_create_function_m52AA9EA24AF7340B981F6EAE51451B9BF746AEF8 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_name, int32_t ___2_nargs, int32_t ___3_flags, RuntimeObject* ___4_v, delegate_function_aggregate_step_t0FAD6EBC679FFDE154D560BFED981933489B6957* ___5_func_step, delegate_function_aggregate_final_t8B6A92360745F4E49F100C9F709467A57C153FD0* ___6_func_final, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	int32_t V_1 = 0;
+	callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* V_2 = NULL;
+	callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* V_3 = NULL;
+	function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* V_4 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_5 = NULL;
+	int32_t G_B6_0 = 0;
+	int32_t G_B4_0 = 0;
+	int32_t G_B5_0 = 0;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = ___1_name;
+		int32_t L_4 = ___2_nargs;
+		NullCheck(L_2);
+		bool L_5;
+		L_5 = hook_handles_RemoveAggFunction_mA42A9716C0A6E544449532021405FA05652BE8C0(L_2, L_3, L_4, NULL);
+		int32_t L_6 = ___3_flags;
+		V_1 = ((int32_t)(1|L_6));
+		delegate_function_aggregate_step_t0FAD6EBC679FFDE154D560BFED981933489B6957* L_7 = ___5_func_step;
+		if (!L_7)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* L_8 = __this->___agg_function_step_hook_bridge;
+		V_2 = L_8;
+		callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* L_9 = __this->___agg_function_final_hook_bridge;
+		V_3 = L_9;
+		delegate_function_aggregate_step_t0FAD6EBC679FFDE154D560BFED981933489B6957* L_10 = ___5_func_step;
+		delegate_function_aggregate_final_t8B6A92360745F4E49F100C9F709467A57C153FD0* L_11 = ___6_func_final;
+		RuntimeObject* L_12 = ___4_v;
+		function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* L_13 = (function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017*)il2cpp_codegen_object_new(function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017_il2cpp_TypeInfo_var);
+		function_hook_info__ctor_mD469D8E11284B583FA130AFD16FB2EBACB59FDF2(L_13, L_10, L_11, L_12, NULL);
+		V_4 = L_13;
+		goto IL_003e;
+	}
+
+IL_0037:
+	{
+		V_2 = (callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED*)NULL;
+		V_3 = (callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F*)NULL;
+		V_4 = (function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017*)NULL;
+	}
+
+IL_003e:
+	{
+		function_hook_info_t2884BE4D2AF455A249E6382005E52E62CDB7E017* L_14 = V_4;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_15 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_15, L_14, NULL);
+		V_5 = L_15;
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_16 = ___0_db;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_17 = ___1_name;
+		int32_t L_18 = ___2_nargs;
+		int32_t L_19 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_20 = V_5;
+		callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* L_21 = V_2;
+		callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* L_22 = V_3;
+		int32_t L_23;
+		L_23 = NativeMethods_sqlite3_create_function_v2_m0760B009E420EC8F3ECA41F59E5E0EEF302DA49B(L_16, L_17, L_18, L_19, L_20, (callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054*)NULL, L_21, L_22, (callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351*)NULL, NULL);
+		int32_t L_24 = L_23;
+		if (L_24)
+		{
+			G_B6_0 = L_24;
+			goto IL_006b;
+		}
+		G_B4_0 = L_24;
+	}
+	{
+		callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* L_25 = V_2;
+		if (!L_25)
+		{
+			G_B6_0 = G_B4_0;
+			goto IL_006b;
+		}
+		G_B5_0 = G_B4_0;
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_26 = V_0;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_27 = ___1_name;
+		int32_t L_28 = ___2_nargs;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_29 = V_5;
+		NullCheck(L_29);
+		RuntimeObject* L_30;
+		L_30 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_29, NULL);
+		NullCheck(L_26);
+		hook_handles_AddAggFunction_m81386278C3F4916C5052FD699F25319A978F651A(L_26, L_27, L_28, L_30, NULL);
+		G_B6_0 = G_B5_0;
+	}
+
+IL_006b:
+	{
+		return G_B6_0;
+	}
+}
+// Method Definition Index: 80133
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_collation_hook_bridge_impl_m5F14F85C72F67AF006FC3FFC2C1A1B3F80E6F5F0 (intptr_t ___0_p, int32_t ___1_len1, intptr_t ___2_pv1, int32_t ___3_len2, intptr_t ___4_pv2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		intptr_t L_0 = ___0_p;
+		collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98* L_1;
+		L_1 = collation_hook_info_from_ptr_mADF5398D8E60D65B942882B28C339CA80ABEF966(L_0, NULL);
+		void* L_2;
+		L_2 = IntPtr_ToPointer_m1A0612EED3A1C8B8850BE2943CFC42523064B4F6_inline((&___2_pv1), NULL);
+		int32_t L_3 = ___1_len1;
+		ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_inline((&V_0), L_2, L_3, ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_RuntimeMethod_var);
+		void* L_4;
+		L_4 = IntPtr_ToPointer_m1A0612EED3A1C8B8850BE2943CFC42523064B4F6_inline((&___4_pv2), NULL);
+		int32_t L_5 = ___3_len2;
+		ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_inline((&V_1), L_4, L_5, ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_RuntimeMethod_var);
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_6 = V_0;
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_7 = V_1;
+		NullCheck(L_1);
+		int32_t L_8;
+		L_8 = collation_hook_info_call_mF9F263DD935E37DD890058669056336B8ED6E178(L_1, L_6, L_7, NULL);
+		return L_8;
+	}
+}
+// Method Definition Index: 80134
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_create_collation_mB582E5677DBB401656B5AE32149B9F00CE19B23D (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_name, RuntimeObject* ___2_v, delegate_collation_t8DE04E00895A6B578A732989AFCE272264DF5CCF* ___3_func, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* V_1 = NULL;
+	collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98* V_2 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_3 = NULL;
+	int32_t G_B6_0 = 0;
+	int32_t G_B4_0 = 0;
+	int32_t G_B5_0 = 0;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = ___1_name;
+		NullCheck(L_2);
+		bool L_4;
+		L_4 = hook_handles_RemoveCollation_mAC3B05DE2CB2A4322F0A035E577FCF6194665012(L_2, L_3, NULL);
+		delegate_collation_t8DE04E00895A6B578A732989AFCE272264DF5CCF* L_5 = ___3_func;
+		if (!L_5)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* L_6 = __this->___collation_hook_bridge;
+		V_1 = L_6;
+		delegate_collation_t8DE04E00895A6B578A732989AFCE272264DF5CCF* L_7 = ___3_func;
+		RuntimeObject* L_8 = ___2_v;
+		collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98* L_9 = (collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98*)il2cpp_codegen_object_new(collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98_il2cpp_TypeInfo_var);
+		collation_hook_info__ctor_mDB95BB4828C4E65CB57C4BCEE0516A06E6B1CB0A(L_9, L_7, L_8, NULL);
+		V_2 = L_9;
+		goto IL_002a;
+	}
+
+IL_0026:
+	{
+		V_1 = (callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED*)NULL;
+		V_2 = (collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98*)NULL;
+	}
+
+IL_002a:
+	{
+		collation_hook_info_tDD9E78A2C2512E1FEF753347B75A4DEC251D9E98* L_10 = V_2;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_11 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_11, L_10, NULL);
+		V_3 = L_11;
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_12 = ___0_db;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_13 = ___1_name;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_14 = V_3;
+		callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* L_15 = V_1;
+		int32_t L_16;
+		L_16 = NativeMethods_sqlite3_create_collation_mD0E33AFCC223873880399FEDF2E98134F9C6448A(L_12, L_13, 1, L_14, L_15, NULL);
+		int32_t L_17 = L_16;
+		if (L_17)
+		{
+			G_B6_0 = L_17;
+			goto IL_004e;
+		}
+		G_B4_0 = L_17;
+	}
+	{
+		callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* L_18 = V_1;
+		if (!L_18)
+		{
+			G_B6_0 = G_B4_0;
+			goto IL_004e;
+		}
+		G_B5_0 = G_B4_0;
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_19 = V_0;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_20 = ___1_name;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_21 = V_3;
+		NullCheck(L_21);
+		RuntimeObject* L_22;
+		L_22 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_21, NULL);
+		NullCheck(L_19);
+		hook_handles_AddCollation_mFFF6F01B318D1CDF9E0980812744B1251C09343F(L_19, L_20, L_22, NULL);
+		G_B6_0 = G_B5_0;
+	}
+
+IL_004e:
+	{
+		return G_B6_0;
+	}
+}
+// Method Definition Index: 80135
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_update_hook_bridge_impl_mF608B2F9975550DCC69E48100606BA7187B9E880 (intptr_t ___0_p, int32_t ___1_typ, intptr_t ___2_db, intptr_t ___3_tbl, int64_t ___4_rowid, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968* L_1;
+		L_1 = update_hook_info_from_ptr_mE288FBF47CDEC3705ABBBD89202E5426CF7A2084(L_0, NULL);
+		int32_t L_2 = ___1_typ;
+		intptr_t L_3 = ___2_db;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_4;
+		L_4 = utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79(L_3, NULL);
+		intptr_t L_5 = ___3_tbl;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_6;
+		L_6 = utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79(L_5, NULL);
+		int64_t L_7 = ___4_rowid;
+		NullCheck(L_1);
+		update_hook_info_call_mAF608749DC3EC4FD8EFAF0D535E17C0E99EE5D7F(L_1, L_2, L_4, L_6, L_7, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80136
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_update_hook_m855F95044B6888BE3441904E256AD2821EAE9C7C (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, delegate_update_t56D212B3CC0976C795F39D25F683364DBF6ABC80* ___1_func, RuntimeObject* ___2_v, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* V_1 = NULL;
+	update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968* V_2 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_3 = NULL;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		NullCheck(L_2);
+		RuntimeObject* L_3 = L_2->___update;
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_4 = V_0;
+		NullCheck(L_4);
+		RuntimeObject* L_5 = L_4->___update;
+		NullCheck(L_5);
+		InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_6 = V_0;
+		NullCheck(L_6);
+		L_6->___update = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_6->___update), (void*)(RuntimeObject*)NULL);
+	}
+
+IL_0022:
+	{
+		delegate_update_t56D212B3CC0976C795F39D25F683364DBF6ABC80* L_7 = ___1_func;
+		if (!L_7)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* L_8 = __this->___update_hook_bridge;
+		V_1 = L_8;
+		delegate_update_t56D212B3CC0976C795F39D25F683364DBF6ABC80* L_9 = ___1_func;
+		RuntimeObject* L_10 = ___2_v;
+		update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968* L_11 = (update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968*)il2cpp_codegen_object_new(update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968_il2cpp_TypeInfo_var);
+		update_hook_info__ctor_mA3635FE2E96A5676FE6834AE74D6E18ACBE5206E(L_11, L_9, L_10, NULL);
+		V_2 = L_11;
+		goto IL_003a;
+	}
+
+IL_0036:
+	{
+		V_1 = (callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90*)NULL;
+		V_2 = (update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968*)NULL;
+	}
+
+IL_003a:
+	{
+		update_hook_info_tC07EBFD924B99F90D87267BC47281F4AC1098968* L_12 = V_2;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_13 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_13, L_12, NULL);
+		V_3 = L_13;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_14 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_15 = V_3;
+		NullCheck(L_15);
+		RuntimeObject* L_16;
+		L_16 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_15, NULL);
+		NullCheck(L_14);
+		L_14->___update = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&L_14->___update), (void*)L_16);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_17 = ___0_db;
+		callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* L_18 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_19 = V_3;
+		intptr_t L_20;
+		L_20 = NativeMethods_sqlite3_update_hook_m223062D8C47CB7A9507CDBEB8985C68B4903E858(L_17, L_18, L_19, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80137
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_rollback_hook_bridge_impl_m7F9D5FD5953803A1B2D57E68BE6522FFE681062F (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185* L_1;
+		L_1 = rollback_hook_info_from_ptr_mFE4504F4B5F5151FA11537A355453CD824D5CCB7(L_0, NULL);
+		NullCheck(L_1);
+		rollback_hook_info_call_m8CC5F80155D547D5AB32D3C9737E8F0F5E410353(L_1, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80138
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_rollback_hook_mA16EC6A444CEF2B22AC06FDFB752AEEB5800A69A (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, delegate_rollback_t9C71A4F72D71A2E27A4B866E7496F8254CF08174* ___1_func, RuntimeObject* ___2_v, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* V_1 = NULL;
+	rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185* V_2 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_3 = NULL;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		NullCheck(L_2);
+		RuntimeObject* L_3 = L_2->___rollback;
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_4 = V_0;
+		NullCheck(L_4);
+		RuntimeObject* L_5 = L_4->___rollback;
+		NullCheck(L_5);
+		InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_6 = V_0;
+		NullCheck(L_6);
+		L_6->___rollback = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_6->___rollback), (void*)(RuntimeObject*)NULL);
+	}
+
+IL_0022:
+	{
+		delegate_rollback_t9C71A4F72D71A2E27A4B866E7496F8254CF08174* L_7 = ___1_func;
+		if (!L_7)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* L_8 = __this->___rollback_hook_bridge;
+		V_1 = L_8;
+		delegate_rollback_t9C71A4F72D71A2E27A4B866E7496F8254CF08174* L_9 = ___1_func;
+		RuntimeObject* L_10 = ___2_v;
+		rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185* L_11 = (rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185*)il2cpp_codegen_object_new(rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185_il2cpp_TypeInfo_var);
+		rollback_hook_info__ctor_m13E17137A92C3596FED3261983A9BB4C0ECEF32E(L_11, L_9, L_10, NULL);
+		V_2 = L_11;
+		goto IL_003a;
+	}
+
+IL_0036:
+	{
+		V_1 = (callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7*)NULL;
+		V_2 = (rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185*)NULL;
+	}
+
+IL_003a:
+	{
+		rollback_hook_info_t413A1090EF5A7F4DC0305C94AAA26DB193291185* L_12 = V_2;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_13 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_13, L_12, NULL);
+		V_3 = L_13;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_14 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_15 = V_3;
+		NullCheck(L_15);
+		RuntimeObject* L_16;
+		L_16 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_15, NULL);
+		NullCheck(L_14);
+		L_14->___rollback = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&L_14->___rollback), (void*)L_16);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_17 = ___0_db;
+		callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* L_18 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_19 = V_3;
+		intptr_t L_20;
+		L_20 = NativeMethods_sqlite3_rollback_hook_m32C703D20AC6455B4B22FF77E7A3D686CFFE5B51(L_17, L_18, L_19, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80139
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_trace_hook_bridge_impl_m1A72E4987D934C291169F2C6A7816798FA6998AC (intptr_t ___0_p, intptr_t ___1_s, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4* L_1;
+		L_1 = trace_hook_info_from_ptr_mE42166E00F3CD4951400F295150C299A55FDC8B8(L_0, NULL);
+		intptr_t L_2 = ___1_s;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_3;
+		L_3 = utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79(L_2, NULL);
+		NullCheck(L_1);
+		trace_hook_info_call_mA98E6A93D09DD73D282B0C0C657CBF0DBF741B00(L_1, L_3, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80140
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_trace_m6D4EC97B366744255A23CC5207C32858E899EE98 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, delegate_trace_t305C5668766EF69B59A7CA173C227301583E2172* ___1_func, RuntimeObject* ___2_v, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* V_1 = NULL;
+	trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4* V_2 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_3 = NULL;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		NullCheck(L_2);
+		RuntimeObject* L_3 = L_2->___trace;
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_4 = V_0;
+		NullCheck(L_4);
+		RuntimeObject* L_5 = L_4->___trace;
+		NullCheck(L_5);
+		InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_6 = V_0;
+		NullCheck(L_6);
+		L_6->___trace = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_6->___trace), (void*)(RuntimeObject*)NULL);
+	}
+
+IL_0022:
+	{
+		delegate_trace_t305C5668766EF69B59A7CA173C227301583E2172* L_7 = ___1_func;
+		if (!L_7)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* L_8 = __this->___trace_hook_bridge;
+		V_1 = L_8;
+		delegate_trace_t305C5668766EF69B59A7CA173C227301583E2172* L_9 = ___1_func;
+		RuntimeObject* L_10 = ___2_v;
+		trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4* L_11 = (trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4*)il2cpp_codegen_object_new(trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4_il2cpp_TypeInfo_var);
+		trace_hook_info__ctor_mA70153D94F7B356F1C59FFF1F66037EC470FA9D0(L_11, L_9, L_10, NULL);
+		V_2 = L_11;
+		goto IL_003a;
+	}
+
+IL_0036:
+	{
+		V_1 = (callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190*)NULL;
+		V_2 = (trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4*)NULL;
+	}
+
+IL_003a:
+	{
+		trace_hook_info_t4C641DC6C4FE4BFDFACF1B300BA0A794A91A53F4* L_12 = V_2;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_13 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_13, L_12, NULL);
+		V_3 = L_13;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_14 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_15 = V_3;
+		NullCheck(L_15);
+		RuntimeObject* L_16;
+		L_16 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_15, NULL);
+		NullCheck(L_14);
+		L_14->___trace = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&L_14->___trace), (void*)L_16);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_17 = ___0_db;
+		callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* L_18 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_19 = V_3;
+		intptr_t L_20;
+		L_20 = NativeMethods_sqlite3_trace_m92990850680EE9667ECCCC6778341948BFBA45D8(L_17, L_18, L_19, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80141
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_profile_hook_bridge_impl_m11AFCD1AB7A052E5EB9938B8EAF9F1E2C83FA77A (intptr_t ___0_p, intptr_t ___1_s, int64_t ___2_elapsed, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34* L_1;
+		L_1 = profile_hook_info_from_ptr_m3A176B51EBEA07D80FC850F2C169109E7DE1A940(L_0, NULL);
+		intptr_t L_2 = ___1_s;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_3;
+		L_3 = utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79(L_2, NULL);
+		int64_t L_4 = ___2_elapsed;
+		NullCheck(L_1);
+		profile_hook_info_call_m438C34143623CA589DC456BFEBD6EC5499E4BDB0(L_1, L_3, L_4, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80142
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_profile_mFEB586946A83C855DAFC62F188B8B4E13CB7D641 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, delegate_profile_tBCB8F1F2018A12E6A5EB205454BFD82CA0182779* ___1_func, RuntimeObject* ___2_v, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* V_1 = NULL;
+	profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34* V_2 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_3 = NULL;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		NullCheck(L_2);
+		RuntimeObject* L_3 = L_2->___profile;
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_4 = V_0;
+		NullCheck(L_4);
+		RuntimeObject* L_5 = L_4->___profile;
+		NullCheck(L_5);
+		InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_6 = V_0;
+		NullCheck(L_6);
+		L_6->___profile = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_6->___profile), (void*)(RuntimeObject*)NULL);
+	}
+
+IL_0022:
+	{
+		delegate_profile_tBCB8F1F2018A12E6A5EB205454BFD82CA0182779* L_7 = ___1_func;
+		if (!L_7)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* L_8 = __this->___profile_hook_bridge;
+		V_1 = L_8;
+		delegate_profile_tBCB8F1F2018A12E6A5EB205454BFD82CA0182779* L_9 = ___1_func;
+		RuntimeObject* L_10 = ___2_v;
+		profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34* L_11 = (profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34*)il2cpp_codegen_object_new(profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34_il2cpp_TypeInfo_var);
+		profile_hook_info__ctor_mA79CFEE7D02660A458390BF3C4218C78E22E679E(L_11, L_9, L_10, NULL);
+		V_2 = L_11;
+		goto IL_003a;
+	}
+
+IL_0036:
+	{
+		V_1 = (callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4*)NULL;
+		V_2 = (profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34*)NULL;
+	}
+
+IL_003a:
+	{
+		profile_hook_info_tE9263823781920B9D354CC58CF351F325EDF3D34* L_12 = V_2;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_13 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_13, L_12, NULL);
+		V_3 = L_13;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_14 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_15 = V_3;
+		NullCheck(L_15);
+		RuntimeObject* L_16;
+		L_16 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_15, NULL);
+		NullCheck(L_14);
+		L_14->___profile = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&L_14->___profile), (void*)L_16);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_17 = ___0_db;
+		callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* L_18 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_19 = V_3;
+		intptr_t L_20;
+		L_20 = NativeMethods_sqlite3_profile_mFBCBC561864BFE6D8E97BACE7999D009E67C0E4F(L_17, L_18, L_19, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80143
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_progress_handler_hook_bridge_impl_m982DE88858258854F532E5E21E81965E6CAE09E3 (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641* L_1;
+		L_1 = progress_hook_info_from_ptr_m5367E1B00176E2D1A5CF6BCAA4B54159BB178494(L_0, NULL);
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = progress_hook_info_call_m1DBC36FDEF18460447F83230864D87083BCD6C16(L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80144
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_progress_handler_mFA01EACD567A78DC781ADE8EAC8C994B06B5301A (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_instructions, delegate_progress_t2315CA638C6F11381A7046E279792FDCBC421710* ___2_func, RuntimeObject* ___3_v, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* V_1 = NULL;
+	progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641* V_2 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_3 = NULL;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		NullCheck(L_2);
+		RuntimeObject* L_3 = L_2->___progress;
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_4 = V_0;
+		NullCheck(L_4);
+		RuntimeObject* L_5 = L_4->___progress;
+		NullCheck(L_5);
+		InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_6 = V_0;
+		NullCheck(L_6);
+		L_6->___progress = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_6->___progress), (void*)(RuntimeObject*)NULL);
+	}
+
+IL_0022:
+	{
+		delegate_progress_t2315CA638C6F11381A7046E279792FDCBC421710* L_7 = ___2_func;
+		if (!L_7)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* L_8 = __this->___progress_handler_hook_bridge;
+		V_1 = L_8;
+		delegate_progress_t2315CA638C6F11381A7046E279792FDCBC421710* L_9 = ___2_func;
+		RuntimeObject* L_10 = ___3_v;
+		progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641* L_11 = (progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641*)il2cpp_codegen_object_new(progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641_il2cpp_TypeInfo_var);
+		progress_hook_info__ctor_mD9BE365FBD60098A96229B0A7FE561438372B947(L_11, L_9, L_10, NULL);
+		V_2 = L_11;
+		goto IL_003b;
+	}
+
+IL_0037:
+	{
+		V_1 = (callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2*)NULL;
+		V_2 = (progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641*)NULL;
+	}
+
+IL_003b:
+	{
+		progress_hook_info_tF0C73E17649E97704B133D3007AD666D3B416641* L_12 = V_2;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_13 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_13, L_12, NULL);
+		V_3 = L_13;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_14 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_15 = V_3;
+		NullCheck(L_15);
+		RuntimeObject* L_16;
+		L_16 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_15, NULL);
+		NullCheck(L_14);
+		L_14->___progress = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&L_14->___progress), (void*)L_16);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_17 = ___0_db;
+		int32_t L_18 = ___1_instructions;
+		callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* L_19 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_20 = V_3;
+		NativeMethods_sqlite3_progress_handler_mDB48A3C57C45F26D556E860DB4D9E65D06084EE1(L_17, L_18, L_19, L_20, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80145
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_authorizer_hook_bridge_impl_m6B55BC239D83BBF905BA28662CA6DAEE279BC9E4 (intptr_t ___0_p, int32_t ___1_action_code, intptr_t ___2_param0, intptr_t ___3_param1, intptr_t ___4_dbName, intptr_t ___5_inner_most_trigger_or_view, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A* L_1;
+		L_1 = authorizer_hook_info_from_ptr_m05FE8A7AE031944CFECB7FEAAD7E6FAD0A836C8C(L_0, NULL);
+		int32_t L_2 = ___1_action_code;
+		intptr_t L_3 = ___2_param0;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_4;
+		L_4 = utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79(L_3, NULL);
+		intptr_t L_5 = ___3_param1;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_6;
+		L_6 = utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79(L_5, NULL);
+		intptr_t L_7 = ___4_dbName;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_8;
+		L_8 = utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79(L_7, NULL);
+		intptr_t L_9 = ___5_inner_most_trigger_or_view;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_10;
+		L_10 = utf8z_FromIntPtr_m6E92ABD379F45CD90E4085B8886EEA755813EC79(L_9, NULL);
+		NullCheck(L_1);
+		int32_t L_11;
+		L_11 = authorizer_hook_info_call_mF1D0501AEBFE5DFE6FD3DA44EC327A13D0FADCBF(L_1, L_2, L_4, L_6, L_8, L_10, NULL);
+		return L_11;
+	}
+}
+// Method Definition Index: 80146
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_set_authorizer_m021EE9C1969A062739FCD24E92314022122A82C5 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, delegate_authorizer_tCD3D6AAEEEB5C24F8531B924B9317AD676C25933* ___1_func, RuntimeObject* ___2_v, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* V_0 = NULL;
+	callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* V_1 = NULL;
+	authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A* V_2 = NULL;
+	hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* V_3 = NULL;
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1;
+		L_1 = SQLite3Provider_e_sqlite3_get_hooks_m83CB238FC414AD9C7FA99D067B3511568712A72F(__this, L_0, NULL);
+		V_0 = L_1;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_2 = V_0;
+		NullCheck(L_2);
+		RuntimeObject* L_3 = L_2->___authorizer;
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_4 = V_0;
+		NullCheck(L_4);
+		RuntimeObject* L_5 = L_4->___authorizer;
+		NullCheck(L_5);
+		InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_6 = V_0;
+		NullCheck(L_6);
+		L_6->___authorizer = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_6->___authorizer), (void*)(RuntimeObject*)NULL);
+	}
+
+IL_0022:
+	{
+		delegate_authorizer_tCD3D6AAEEEB5C24F8531B924B9317AD676C25933* L_7 = ___1_func;
+		if (!L_7)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* L_8 = __this->___authorizer_hook_bridge;
+		V_1 = L_8;
+		delegate_authorizer_tCD3D6AAEEEB5C24F8531B924B9317AD676C25933* L_9 = ___1_func;
+		RuntimeObject* L_10 = ___2_v;
+		authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A* L_11 = (authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A*)il2cpp_codegen_object_new(authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A_il2cpp_TypeInfo_var);
+		authorizer_hook_info__ctor_m356DDFFD020722A4AB519EE7BB5513B56AF063B4(L_11, L_9, L_10, NULL);
+		V_2 = L_11;
+		goto IL_003a;
+	}
+
+IL_0036:
+	{
+		V_1 = (callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696*)NULL;
+		V_2 = (authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A*)NULL;
+	}
+
+IL_003a:
+	{
+		authorizer_hook_info_t27B31C9940EEBF2F29DD86AED0B1A0A04487768A* L_12 = V_2;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_13 = (hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC*)il2cpp_codegen_object_new(hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC_il2cpp_TypeInfo_var);
+		hook_handle__ctor_m6D8E37A8ADD1DC2ED8DAB0482D5E7212F4BBC524(L_13, L_12, NULL);
+		V_3 = L_13;
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_14 = V_0;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_15 = V_3;
+		NullCheck(L_15);
+		RuntimeObject* L_16;
+		L_16 = hook_handle_ForDispose_m75CB5080133A1EA42368D022BC358117AC9FE588(L_15, NULL);
+		NullCheck(L_14);
+		L_14->___authorizer = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&L_14->___authorizer), (void*)L_16);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_17 = ___0_db;
+		callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* L_18 = V_1;
+		hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* L_19 = V_3;
+		int32_t L_20;
+		L_20 = NativeMethods_sqlite3_set_authorizer_m453B4962FE8A2FB7A110C1ABCFF8783352039FCC(L_17, L_18, L_19, NULL);
+		return L_20;
+	}
+}
+// Method Definition Index: 80147
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_memory_used_m8F6AC8DF5171289EBB79D8BB217026FC505E38C4 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	{
+		int64_t L_0;
+		L_0 = NativeMethods_sqlite3_memory_used_m3A784674CDAA2ADB4D548F52D0BC643D791AA0BD(NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 80148
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_memory_highwater_m76365BDCAEDCDCFA82774C7E38C0525ACCF47221 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_resetFlag, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_resetFlag;
+		int64_t L_1;
+		L_1 = NativeMethods_sqlite3_memory_highwater_m109A354CF154A8462BC1766E0C31EA0B8C1FD9CB(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80149
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_soft_heap_limit64_m32A04D45228D0B47918AAB2E4A1137D7CA902D48 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int64_t ___0_n, const RuntimeMethod* method) 
+{
+	{
+		int64_t L_0 = ___0_n;
+		int64_t L_1;
+		L_1 = NativeMethods_sqlite3_soft_heap_limit64_m27E808495350435BC962DF2EE3CF5FB96B3C55BA(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80150
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_hard_heap_limit64_mB9BC840FC38A89BCF6C68DCC08C533B8E9342F57 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int64_t ___0_n, const RuntimeMethod* method) 
+{
+	{
+		int64_t L_0 = ___0_n;
+		int64_t L_1;
+		L_1 = NativeMethods_sqlite3_hard_heap_limit64_m418FD768ACFF2D6288C58285FEDC38B4B883BFE3(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80151
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_status_m799979DD9770C42D654930BC60E9273A50176BDC (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_op, int32_t* ___1_current, int32_t* ___2_highwater, int32_t ___3_resetFlag, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_op;
+		int32_t* L_1 = ___1_current;
+		int32_t* L_2 = ___2_highwater;
+		int32_t L_3 = ___3_resetFlag;
+		int32_t L_4;
+		L_4 = NativeMethods_sqlite3_status_m00147E7B91CEC510EF629B44FD1A17CDF7960E14(L_0, L_1, L_2, L_3, NULL);
+		return L_4;
+	}
+}
+// Method Definition Index: 80152
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_sourceid_mCB9042DE4D9F59FF6569BB149EE589B45ED4D31C (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	{
+		uint8_t* L_0;
+		L_0 = NativeMethods_sqlite3_sourceid_m7633E75448D51255F31FD7B482C4850F15A6EDA1(NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_1;
+		L_1 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80153
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_int64_mCDA5CF9C3FA1AD5F84E1EE839288EC37529BE728 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, int64_t ___1_val, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_ctx;
+		int64_t L_1 = ___1_val;
+		NativeMethods_sqlite3_result_int64_m98DDA204911392FCCD6B5B0D56717271ECB64387(L_0, L_1, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80154
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_int_m7850E4B6ABF381A314F68BAF36A7B06BB6069A5F (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, int32_t ___1_val, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_ctx;
+		int32_t L_1 = ___1_val;
+		NativeMethods_sqlite3_result_int_m94EB377F87FD59B116C572413A47956FD0DBAC36(L_0, L_1, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80155
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_double_m21AD9850E728070D1B9FC2999572127800D29F63 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, double ___1_val, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_ctx;
+		double L_1 = ___1_val;
+		NativeMethods_sqlite3_result_double_m0C8D30FF994C8503E1B748A087BBDACC70317128(L_0, L_1, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80156
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_null_m3A8645D246F2C079D8FAD45445141FDC2EC788BD (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_stm;
+		NativeMethods_sqlite3_result_null_mF608ACEAEA63397AD5D9DBC55DDF40748AEC3018(L_0, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80157
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_error_m5CD02629CF350148938CE8B370700AB20AFF8E33 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___1_val, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___1_val), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		intptr_t L_2 = ___0_ctx;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_val), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		NativeMethods_sqlite3_result_error_m0F6DD9E44B7B8CE7FA73350E1DA17446CC25F8A1(L_2, L_3, L_4, NULL);
+		V_1 = (uint8_t*)((uintptr_t)0);
+		return;
+	}
+}
+// Method Definition Index: 80158
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_error_m091A6F00848408627915176A70E8D29F749DBCEB (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_val, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_val), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		intptr_t L_2 = ___0_ctx;
+		uint8_t* L_3 = V_0;
+		NativeMethods_sqlite3_result_error_m0F6DD9E44B7B8CE7FA73350E1DA17446CC25F8A1(L_2, L_3, (-1), NULL);
+		V_1 = (uint8_t*)((uintptr_t)0);
+		return;
+	}
+}
+// Method Definition Index: 80159
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_text_mE15964017C3ED58FD9866EBB7FCC0E3FA085180F (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___1_val, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___1_val), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		intptr_t L_2 = ___0_ctx;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_val), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		intptr_t L_5;
+		memset((&L_5), 0, sizeof(L_5));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_5), (-1), NULL);
+		NativeMethods_sqlite3_result_text_mC53514E44EFC50DB4AB6E7CFC5AD74679CEA94C2(L_2, L_3, L_4, L_5, NULL);
+		V_1 = (uint8_t*)((uintptr_t)0);
+		return;
+	}
+}
+// Method Definition Index: 80160
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_text_m2C24F6A559485AEE2C62E9A8D5BAD69CA2265D5A (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_val, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_val), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		intptr_t L_2 = ___0_ctx;
+		uint8_t* L_3 = V_0;
+		intptr_t L_4;
+		memset((&L_4), 0, sizeof(L_4));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_4), (-1), NULL);
+		NativeMethods_sqlite3_result_text_mC53514E44EFC50DB4AB6E7CFC5AD74679CEA94C2(L_2, L_3, (-1), L_4, NULL);
+		V_1 = (uint8_t*)((uintptr_t)0);
+		return;
+	}
+}
+// Method Definition Index: 80161
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_blob_m112C4E67F8CD34CB05BD289FA20C7D3CE1327AAA (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___1_blob, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___1_blob), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		intptr_t L_2 = ___0_ctx;
+		uint8_t* L_3 = V_0;
+		intptr_t L_4;
+		L_4 = IntPtr_op_Explicit_mE2CEC14C61FD5E2159A03EA2AD97F5CDC5BB9F4D((void*)L_3, NULL);
+		int32_t L_5;
+		L_5 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___1_blob), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		intptr_t L_6;
+		memset((&L_6), 0, sizeof(L_6));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_6), (-1), NULL);
+		NativeMethods_sqlite3_result_blob_m2E07AA620425E788BD778594335C3387945A83F8(L_2, L_4, L_5, L_6, NULL);
+		V_1 = (uint8_t*)((uintptr_t)0);
+		return;
+	}
+}
+// Method Definition Index: 80162
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_zeroblob_mC7A1F2255C165C199C0F54DE94D89180C9B882A8 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, int32_t ___1_n, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_ctx;
+		int32_t L_1 = ___1_n;
+		NativeMethods_sqlite3_result_zeroblob_m280974C4B32FE102D1C0D1F968E5803D78CF2E25(L_0, L_1, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80163
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_error_toobig_m531E5E8577337D1ED1E82086D30BA58584D28AAF (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_ctx;
+		NativeMethods_sqlite3_result_error_toobig_mD53496313DAC24069DED9DB01121C8B27B7F6E23(L_0, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80164
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_error_nomem_m709888D56298313C8A387D41EE68FB95A20D2CEF (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_ctx;
+		NativeMethods_sqlite3_result_error_nomem_m0A85A5A220BDFA624111A79E472B90C1447F2373(L_0, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80165
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_result_error_code_m3A3C8CD6D10FBAC489175A853B3C755530761C91 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_ctx, int32_t ___1_code, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_ctx;
+		int32_t L_1 = ___1_code;
+		NativeMethods_sqlite3_result_error_code_m2FFDBC8325F5243C77C7ECB16D0A1E21F3B3391E(L_0, L_1, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80166
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_value_blob_m036D134140291FB48CDD64961B7FB614C6A339D3 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	int32_t V_1 = 0;
+	{
+		intptr_t L_0 = ___0_p;
+		intptr_t L_1;
+		L_1 = NativeMethods_sqlite3_value_blob_mBB4CD6F32E729A169908CEB9DB167311C456546E(L_0, NULL);
+		V_0 = L_1;
+		intptr_t L_2 = V_0;
+		bool L_3;
+		L_3 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_2, 0, NULL);
+		if (!L_3)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_4;
+		L_4 = ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)NULL, ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644_RuntimeMethod_var);
+		return L_4;
+	}
+
+IL_001b:
+	{
+		intptr_t L_5 = ___0_p;
+		int32_t L_6;
+		L_6 = NativeMethods_sqlite3_value_bytes_m58CC7A54E1D8F5E758CCDC940B3BEDA8064DF7FF(L_5, NULL);
+		V_1 = L_6;
+		void* L_7;
+		L_7 = IntPtr_ToPointer_m1A0612EED3A1C8B8850BE2943CFC42523064B4F6_inline((&V_0), NULL);
+		int32_t L_8 = V_1;
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_9;
+		memset((&L_9), 0, sizeof(L_9));
+		ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_inline((&L_9), L_7, L_8, ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_RuntimeMethod_var);
+		return L_9;
+	}
+}
+// Method Definition Index: 80167
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_value_bytes_m0AF3CD04056DE410F1750A52D603F2CAAF4435AD (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_value_bytes_m58CC7A54E1D8F5E758CCDC940B3BEDA8064DF7FF(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80168
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_value_double_mEDF03F4DAFFD4D507BF232909170C576BCF93B39 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		double L_1;
+		L_1 = NativeMethods_sqlite3_value_double_m9E8EAC14A692E9B38842B373C8AA50D6676FFA38(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80169
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_value_int_m4069F558A236C3A524CE0CDDF6768DA8AABEEC81 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_value_int_m5DA03EF1BA685B7A31EFF8A8551D5373036476B5(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80170
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_value_int64_mF4A4BF1D01AF903B685C62C6E2BADEF0534AD7DC (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		int64_t L_1;
+		L_1 = NativeMethods_sqlite3_value_int64_mD64FB7288F4B830C2B1E8CFBF46093AA7558CA8B(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80171
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_value_type_mEF4304BE6530DA07663408E939D54A2F373291B8 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_value_type_mDE053B60DF467AB0C80174906C35B24C2402B245(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80172
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_value_text_m42644225A96C0F487F0F4B5780EF8CD86A74E406 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_p;
+		uint8_t* L_1;
+		L_1 = NativeMethods_sqlite3_value_text_mC67842B0F56FA8E3882441EC91CB7D3F3C9DD072(L_0, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_2;
+		L_2 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80173
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_int_m6CDB602683EA0035918F0E5F2B8A96DA0B2E7B44 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, int32_t ___2_val, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_paramIndex;
+		int32_t L_2 = ___2_val;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_bind_int_m540D5670C86028EE450403DB98351DEA0FDCD905(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80174
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_int64_m599161CEA47FDACA69A94B7AE46606803C5B7F13 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, int64_t ___2_val, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_paramIndex;
+		int64_t L_2 = ___2_val;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_bind_int64_mCCF613075783EA1C66918FFED7FF3EDDAF98D433(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80175
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_text_m340977EADD32791E46FB080D4D1A2EC6868F4E50 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___2_t, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t V_0 = 0x0;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	{
+		int32_t L_0;
+		L_0 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___2_t), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		if (L_0)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		V_0 = (uint8_t)0;
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_1 = ___0_stm;
+		int32_t L_2 = ___1_paramIndex;
+		intptr_t L_3;
+		memset((&L_3), 0, sizeof(L_3));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_3), (-1), NULL);
+		int32_t L_4;
+		L_4 = NativeMethods_sqlite3_bind_text_m9F412DA6A0CC8C81CB187071417F667ED4BBC1CF(L_1, L_2, (uint8_t*)((uintptr_t)(&V_0)), 0, L_3, NULL);
+		return L_4;
+	}
+
+IL_001d:
+	{
+		uint8_t* L_5;
+		L_5 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___2_t), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_2 = L_5;
+		uint8_t* L_6 = V_2;
+		V_1 = (uint8_t*)((uintptr_t)L_6);
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_7 = ___0_stm;
+		int32_t L_8 = ___1_paramIndex;
+		uint8_t* L_9 = V_1;
+		int32_t L_10;
+		L_10 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___2_t), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		intptr_t L_11;
+		memset((&L_11), 0, sizeof(L_11));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_11), (-1), NULL);
+		int32_t L_12;
+		L_12 = NativeMethods_sqlite3_bind_text_m9F412DA6A0CC8C81CB187071417F667ED4BBC1CF(L_7, L_8, L_9, L_10, L_11, NULL);
+		return L_12;
+	}
+}
+// Method Definition Index: 80176
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_text16_mF19E30E81501F1744E0D6FCB0D463C16CDAEC7F5 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 ___2_t, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_mB710059C1A1A30270065958DE8345808C6683638_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Il2CppChar V_0 = 0x0;
+	Il2CppChar* V_1 = NULL;
+	Il2CppChar* V_2 = NULL;
+	{
+		int32_t L_0;
+		L_0 = ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_inline((&___2_t), ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_RuntimeMethod_var);
+		if (L_0)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		V_0 = 0;
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_1 = ___0_stm;
+		int32_t L_2 = ___1_paramIndex;
+		intptr_t L_3;
+		memset((&L_3), 0, sizeof(L_3));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_3), (-1), NULL);
+		int32_t L_4;
+		L_4 = NativeMethods_sqlite3_bind_text16_m7AC3DAF934D8EE0B43100B43531B95A27DD1D822(L_1, L_2, (Il2CppChar*)((uintptr_t)(&V_0)), 0, L_3, NULL);
+		return L_4;
+	}
+
+IL_001d:
+	{
+		Il2CppChar* L_5;
+		L_5 = ReadOnlySpan_1_GetPinnableReference_mB710059C1A1A30270065958DE8345808C6683638((&___2_t), ReadOnlySpan_1_GetPinnableReference_mB710059C1A1A30270065958DE8345808C6683638_RuntimeMethod_var);
+		V_2 = L_5;
+		Il2CppChar* L_6 = V_2;
+		V_1 = (Il2CppChar*)((uintptr_t)L_6);
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_7 = ___0_stm;
+		int32_t L_8 = ___1_paramIndex;
+		Il2CppChar* L_9 = V_1;
+		int32_t L_10;
+		L_10 = ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_inline((&___2_t), ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_RuntimeMethod_var);
+		intptr_t L_11;
+		memset((&L_11), 0, sizeof(L_11));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_11), (-1), NULL);
+		int32_t L_12;
+		L_12 = NativeMethods_sqlite3_bind_text16_m7AC3DAF934D8EE0B43100B43531B95A27DD1D822(L_7, L_8, L_9, ((int32_t)il2cpp_codegen_multiply(L_10, 2)), L_11, NULL);
+		return L_12;
+	}
+}
+// Method Definition Index: 80177
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_text_mCFF54CE37DE3CB0E2EC6F9A4BE508098154062E8 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___2_t, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___2_t), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_2 = ___0_stm;
+		int32_t L_3 = ___1_paramIndex;
+		uint8_t* L_4 = V_0;
+		intptr_t L_5;
+		memset((&L_5), 0, sizeof(L_5));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_5), (-1), NULL);
+		int32_t L_6;
+		L_6 = NativeMethods_sqlite3_bind_text_m9F412DA6A0CC8C81CB187071417F667ED4BBC1CF(L_2, L_3, L_4, (-1), L_5, NULL);
+		return L_6;
+	}
+}
+// Method Definition Index: 80178
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_double_m6E0DCA870EA217140259E837616788582CEE0461 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, double ___2_val, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_paramIndex;
+		double L_2 = ___2_val;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_bind_double_m477271935B21CCC68B9E65E3AF041204BDF5898D(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80179
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_blob_m64F4FC4C6ACAF8CD16B5EBBD909E1A28549D721E (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ___2_blob, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t V_0 = 0x0;
+	uint8_t* V_1 = NULL;
+	uint8_t* V_2 = NULL;
+	{
+		int32_t L_0;
+		L_0 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___2_blob), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		if (L_0)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		V_0 = (uint8_t)0;
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_1 = ___0_stm;
+		int32_t L_2 = ___1_paramIndex;
+		intptr_t L_3;
+		memset((&L_3), 0, sizeof(L_3));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_3), (-1), NULL);
+		int32_t L_4;
+		L_4 = NativeMethods_sqlite3_bind_blob_m46B0FDCEA11EC76B1803B623D628081BE57B4D17(L_1, L_2, (uint8_t*)((uintptr_t)(&V_0)), 0, L_3, NULL);
+		return L_4;
+	}
+
+IL_001d:
+	{
+		uint8_t* L_5;
+		L_5 = ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57((&___2_blob), ReadOnlySpan_1_GetPinnableReference_m365106BC7655B6A45D47673D473A699B5B69DA57_RuntimeMethod_var);
+		V_2 = L_5;
+		uint8_t* L_6 = V_2;
+		V_1 = (uint8_t*)((uintptr_t)L_6);
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_7 = ___0_stm;
+		int32_t L_8 = ___1_paramIndex;
+		uint8_t* L_9 = V_1;
+		int32_t L_10;
+		L_10 = ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_inline((&___2_blob), ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_RuntimeMethod_var);
+		intptr_t L_11;
+		memset((&L_11), 0, sizeof(L_11));
+		IntPtr__ctor_m20A566609A091311C734617C699E61F545250AC7((&L_11), (-1), NULL);
+		int32_t L_12;
+		L_12 = NativeMethods_sqlite3_bind_blob_m46B0FDCEA11EC76B1803B623D628081BE57B4D17(L_7, L_8, L_9, L_10, L_11, NULL);
+		return L_12;
+	}
+}
+// Method Definition Index: 80180
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_zeroblob_m41D58E2062BEB97875094E6C9280D93493E116F0 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, int32_t ___2_size, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_paramIndex;
+		int32_t L_2 = ___2_size;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_bind_zeroblob_m7BDBFC82A3ABB4D090CF12FFD594DF44618E4A73(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80181
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_null_mA41DB7E37B6CE887E4ADE2C79123235A25D08F0B (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_paramIndex;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_bind_null_mF27E5ADBA2058737D75823C425FD32B7527B3A26(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80182
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_parameter_count_m3BA48B519E04C994A1DF4D5C7535D30924A03289 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_bind_parameter_count_m15A657827FB05A90DD8B2D98BACAF1768329D240(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80183
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_parameter_name_m91349F5C4C051D21D04F8A9BB7B03E5409DF865A (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_paramIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_paramIndex;
+		uint8_t* L_2;
+		L_2 = NativeMethods_sqlite3_bind_parameter_name_m6E8241B68486F941FBA262FB94EADE4753638145(L_0, L_1, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_3;
+		L_3 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80184
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_bind_parameter_index_mA5E65F1E71B41729A3F497FC62040213B0FE9B77 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_paramName, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_paramName), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_2 = ___0_stm;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = NativeMethods_sqlite3_bind_parameter_index_mAC026BDB1787E5C1B68B0BFD9FEFE04D71BA101F(L_2, L_3, NULL);
+		return L_4;
+	}
+}
+// Method Definition Index: 80185
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_step_m9F3A00C848CF8E4E8EB256DF6B63944514AFD49E (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_step_mA66F45248DDB41374C399DE7B1BB07E579537A93(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80186
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_stmt_isexplain_mC481964B73AF6893007AD6A92158CE4C14951D98 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_stmt_isexplain_m3A1B6F024F781DD86F29EB3CE450DA99831C2CB6(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80187
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_stmt_busy_mCB9D1542F2AE124F9876FB27450FF143A0A540B5 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_stmt_busy_mC85D1149FA7A3214A82E54BBEAC82A937CFF7E27(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80188
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_stmt_readonly_m9AB727911A78CBA23589B87223A49DFC6E454F0D (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_stmt_readonly_m33A9A109FDD5B82FC8684E7B8D182AFA70583F19(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80189
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_int_m5BFC67A4003A327B80668039C4513619C1997B0D (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_column_int_m0E4230B2E6C7981BCADE09965FF982ED1977EBD5(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80190
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_int64_mFC1CCFF01D06D19960AE2D30AACF8661749F2C6F (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		int64_t L_2;
+		L_2 = NativeMethods_sqlite3_column_int64_m76DBCC148DCD8626D045FF47DF914F1DFD143C41(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80191
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_text_mC0D5FD3AFDFBF781482C3593CB59ADE7C942E4CB (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		uint8_t* L_2;
+		L_2 = NativeMethods_sqlite3_column_text_m57DD3330CC5A9FDBAEC7F828E97A7C24763EFD5C(L_0, L_1, NULL);
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_3 = ___0_stm;
+		int32_t L_4 = ___1_columnIndex;
+		int32_t L_5;
+		L_5 = NativeMethods_sqlite3_column_bytes_m8E23E6D116BF8EDDBD7662327A2D0B6B76A9D34C(L_3, L_4, NULL);
+		V_0 = L_5;
+		int32_t L_6 = V_0;
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_7;
+		L_7 = utf8z_FromPtrLen_m1B6B151AAF2F122387D310CB69A3C45948F9F098(L_2, L_6, NULL);
+		return L_7;
+	}
+}
+// Method Definition Index: 80192
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_decltype_m723C7034789DBF8FD1433E01D0A21BBB1BB102F4 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		uint8_t* L_2;
+		L_2 = NativeMethods_sqlite3_column_decltype_mFF1CBAA3DA2EC2A37DECC574E8B795D093A3ABA2(L_0, L_1, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_3;
+		L_3 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80193
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_double_mEC47DDBF28868D72E1CDBD9B28A294C57AA57220 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		double L_2;
+		L_2 = NativeMethods_sqlite3_column_double_m5F41EB90F3EB11751856873A3387C44F53DB2CE4(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80194
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_blob_mDCEAF8AD07A05B032A55FE03CD46C457BFC3F038 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	int32_t V_1 = 0;
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		intptr_t L_2;
+		L_2 = NativeMethods_sqlite3_column_blob_m08764BE4D2B04D3C74BD2ACD5AE7D4EE8B06852A(L_0, L_1, NULL);
+		V_0 = L_2;
+		intptr_t L_3 = V_0;
+		bool L_4;
+		L_4 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_3, 0, NULL);
+		if (!L_4)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_5;
+		L_5 = ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)NULL, ReadOnlySpan_1_op_Implicit_mCEA7A54A72D5D6EADEFE280B4927119123C8E644_RuntimeMethod_var);
+		return L_5;
+	}
+
+IL_001c:
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_6 = ___0_stm;
+		int32_t L_7 = ___1_columnIndex;
+		int32_t L_8;
+		L_8 = NativeMethods_sqlite3_column_bytes_m8E23E6D116BF8EDDBD7662327A2D0B6B76A9D34C(L_6, L_7, NULL);
+		V_1 = L_8;
+		void* L_9;
+		L_9 = IntPtr_ToPointer_m1A0612EED3A1C8B8850BE2943CFC42523064B4F6_inline((&V_0), NULL);
+		int32_t L_10 = V_1;
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_11;
+		memset((&L_11), 0, sizeof(L_11));
+		ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_inline((&L_11), L_9, L_10, ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_RuntimeMethod_var);
+		return L_11;
+	}
+}
+// Method Definition Index: 80195
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_type_mC70A1877F670A8CA69E140E94AD158C8AF3529D2 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_column_type_mC65B510028F38418FABB64026C661BB7830ACEBA(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80196
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_bytes_mA2AB7642900EF9EF9160781C66C4F95FB65FCBAE (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_column_bytes_m8E23E6D116BF8EDDBD7662327A2D0B6B76A9D34C(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80197
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_count_mCC9FFF998C04F78AA45676D8A2EF67C3CF39D32E (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_column_count_m6B6174E516DB8B2DE87642E8C7E3723A6E450C29(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80198
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_data_count_m0F3CC3FE3F6F68A5E306F52C491FE265EF1D06A4 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_data_count_m2BEFFE88E58964784698F1365AEC42D71BFBCEEE(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80199
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_name_m7D2112653149AD6B90F434F199ADD7FBB557E22A (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		uint8_t* L_2;
+		L_2 = NativeMethods_sqlite3_column_name_m7AEDE674A0EA9352D9D9FAE71663A9E934BA328D(L_0, L_1, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_3;
+		L_3 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80200
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_origin_name_m030F67182C63B504CFBE803C5F55C0DF143945A6 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		uint8_t* L_2;
+		L_2 = NativeMethods_sqlite3_column_origin_name_m00C2935EE53B1741062DF639340A95DE8197CA3F(L_0, L_1, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_3;
+		L_3 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80201
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_table_name_m49499EAE68839D033A57B7146DD4ED2327E082F6 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		uint8_t* L_2;
+		L_2 = NativeMethods_sqlite3_column_table_name_m2C17E195B249AB9E64774054EFFB017DA3907D2D(L_0, L_1, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_3;
+		L_3 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80202
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_column_database_name_mC7EC530642E245DA715AF61926F6AD6118CF9B72 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_columnIndex, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_columnIndex;
+		uint8_t* L_2;
+		L_2 = NativeMethods_sqlite3_column_database_name_mB6E488121D372DB1A901A7615FD680DD2DC3DFE8(L_0, L_1, NULL);
+		utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 L_3;
+		L_3 = utf8z_FromPtr_m79B82D5AA2EB5BF1F8E2F5FBA2A65AB9F8DDA116(L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80203
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_reset_m075611466227BE29655390A35C21344C223B3083 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_reset_m8CDA4563E27D9A5482C13457295E7840E2BA354C(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80204
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_clear_bindings_m21E44BC384C5326C2545E9491776050268B81EBC (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_clear_bindings_mBEEA936F583558913D3AA0502D724554AD9FE73F(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80205
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_stmt_status_m40D6BF754BF0A16F6F7050AC47DF0CD22125C8F3 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_op, int32_t ___2_resetFlg, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* L_0 = ___0_stm;
+		int32_t L_1 = ___1_op;
+		int32_t L_2 = ___2_resetFlg;
+		int32_t L_3;
+		L_3 = NativeMethods_sqlite3_stmt_status_mF8A0E11BC4223070F01198EE5283F2C92617DA6F(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// Method Definition Index: 80206
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_finalize_m17D10F18FD651BACE53ABFB0412B313DAD238714 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, intptr_t ___0_stm, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_stm;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_finalize_mDB6B3D32A22713D9589F71F6E8BBA503328466A8(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 80207
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_wal_autocheckpoint_mF4B214447F114C832261BCE7769A6F608341BF67 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_n, const RuntimeMethod* method) 
+{
+	{
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_0 = ___0_db;
+		int32_t L_1 = ___1_n;
+		int32_t L_2;
+		L_2 = NativeMethods_sqlite3_wal_autocheckpoint_m79101C1B3E8231720620CF97B161192B44BC3077(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// Method Definition Index: 80208
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_wal_checkpoint_mC0F2AC8DBE4470CD4A007B177576FE6939F67E15 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_dbName, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_dbName), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		int32_t L_4;
+		L_4 = NativeMethods_sqlite3_wal_checkpoint_mACB84BDEBE7F06C246B82764077CBA78C2DA5464(L_2, L_3, NULL);
+		return L_4;
+	}
+}
+// Method Definition Index: 80209
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_wal_checkpoint_v2_mC95A854B16AEEC851E6898E541EF0E74B82CAA3C (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_dbName, int32_t ___2_eMode, int32_t* ___3_logSize, int32_t* ___4_framesCheckPointed, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_dbName), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		int32_t L_4 = ___2_eMode;
+		int32_t* L_5 = ___3_logSize;
+		int32_t* L_6 = ___4_framesCheckPointed;
+		int32_t L_7;
+		L_7 = NativeMethods_sqlite3_wal_checkpoint_v2_m5F0678DFE51A0A0C878E8533CAD5F02881D82515(L_2, L_3, L_4, L_5, L_6, NULL);
+		return L_7;
+	}
+}
+// Method Definition Index: 80210
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_keyword_count_m7690E022A3996E2A7197191DEDA463113F915AC1 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0;
+		L_0 = NativeMethods_sqlite3_keyword_count_mAABDA4F380BCCFA3E3F5BF7341CEFBA0B3A70E09(NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 80211
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_keyword_name_m4A5A13B52472721B33CFC9C4C087F7598D9CF371 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, int32_t ___0_i, String_t** ___1_name, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		int32_t L_0 = ___0_i;
+		int32_t L_1;
+		L_1 = NativeMethods_sqlite3_keyword_name_m7E2DA42004F0A883820721947AD3C27199118AA6(L_0, (&V_0), (&V_1), NULL);
+		String_t** L_2 = ___1_name;
+		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_3;
+		L_3 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
+		uint8_t* L_4 = V_0;
+		int32_t L_5 = V_1;
+		NullCheck(L_3);
+		String_t* L_6;
+		L_6 = Encoding_GetString_m42BFF0862341DCD5289A7D75B5D7A22CE9690EAD(L_3, L_4, L_5, NULL);
+		*((String_t**)L_2) = (String_t*)L_6;
+		Il2CppCodeGenWriteBarrier((void**)(String_t**)L_2, (void*)(String_t*)L_6);
+		return L_1;
+	}
+}
+// Method Definition Index: 80212
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_serialize_m327F466C61863630FEC0FBB8D8AEBD0025439173 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_schema, int64_t* ___2_size, int32_t ___3_flags, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_schema), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		int64_t* L_4 = ___2_size;
+		int32_t L_5 = ___3_flags;
+		intptr_t L_6;
+		L_6 = NativeMethods_sqlite3_serialize_m376409574407750CE5FF2D13A147357E150FF282(L_2, L_3, L_4, L_5, NULL);
+		return L_6;
+	}
+}
+// Method Definition Index: 80213
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLite3Provider_e_sqlite3_SQLitePCL_ISQLite3Provider_sqlite3_deserialize_mE4717538302C66C3B21F8218C2B6E08AE8CA6809 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, utf8z_t829B6DD60834A606DBA0DFA173B38441D91E4E25 ___1_schema, intptr_t ___2_data, int64_t ___3_szDb, int64_t ___4_szBuf, int32_t ___5_flags, const RuntimeMethod* method) 
+{
+	uint8_t* V_0 = NULL;
+	uint8_t* V_1 = NULL;
+	{
+		uint8_t* L_0;
+		L_0 = utf8z_GetPinnableReference_m7FC3FFCB77E49E28512035FDEF8CF181E2D39FE5((&___1_schema), NULL);
+		V_1 = L_0;
+		uint8_t* L_1 = V_1;
+		V_0 = (uint8_t*)((uintptr_t)L_1);
+		sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* L_2 = ___0_db;
+		uint8_t* L_3 = V_0;
+		intptr_t L_4 = ___2_data;
+		int64_t L_5 = ___3_szDb;
+		int64_t L_6 = ___4_szBuf;
+		int32_t L_7 = ___5_flags;
+		int32_t L_8;
+		L_8 = NativeMethods_sqlite3_deserialize_mC8B1A52F584A3927CF82AA3BEAA46F0939A5AE63(L_2, L_3, L_4, L_5, L_6, L_7, NULL);
+		return L_8;
+	}
+}
+// Method Definition Index: 80214
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3__ctor_mE5F67BAD43E60B9AD410C3284B36A219660EF9C7 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_agg_function_final_hook_bridge_impl_m006814ED6B9BD7CF4532668020724B43D91AEF03_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_agg_function_step_hook_bridge_impl_m5224AECAA46541E71A56BCF661727137741E5ED4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_authorizer_hook_bridge_impl_m6B55BC239D83BBF905BA28662CA6DAEE279BC9E4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_collation_hook_bridge_impl_m5F14F85C72F67AF006FC3FFC2C1A1B3F80E6F5F0_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_commit_hook_bridge_impl_m0E7A8FAC8E69E8F505846E21BF1F51FAA0A30F5B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_log_hook_bridge_impl_mCECCC0F3FD715008B2384E2F4AFC05A2455C37E0_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_profile_hook_bridge_impl_m11AFCD1AB7A052E5EB9938B8EAF9F1E2C83FA77A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_progress_handler_hook_bridge_impl_m982DE88858258854F532E5E21E81965E6CAE09E3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_rollback_hook_bridge_impl_m7F9D5FD5953803A1B2D57E68BE6522FFE681062F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_scalar_function_hook_bridge_impl_m4D1C3607D8062CFB548C8248142770A3EA2BEE88_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_trace_hook_bridge_impl_m1A72E4987D934C291169F2C6A7816798FA6998AC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_update_hook_bridge_impl_mF608B2F9975550DCC69E48100606BA7187B9E880_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* L_0 = (callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12*)il2cpp_codegen_object_new(callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12_il2cpp_TypeInfo_var);
+		callback_commit__ctor_mDB4A28C9FFFB6737E5CED81EB1F87B10E8C09322(L_0, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_commit_hook_bridge_impl_m0E7A8FAC8E69E8F505846E21BF1F51FAA0A30F5B_RuntimeMethod_var), NULL);
+		__this->___commit_hook_bridge = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___commit_hook_bridge), (void*)L_0);
+		callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* L_1 = (callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054*)il2cpp_codegen_object_new(callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054_il2cpp_TypeInfo_var);
+		callback_scalar_function__ctor_mFAB24FB7BD04C8B6DA4F8D7D7F9A1B9AC12DB58F(L_1, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_scalar_function_hook_bridge_impl_m4D1C3607D8062CFB548C8248142770A3EA2BEE88_RuntimeMethod_var), NULL);
+		__this->___scalar_function_hook_bridge = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___scalar_function_hook_bridge), (void*)L_1);
+		callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* L_2 = (callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B*)il2cpp_codegen_object_new(callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B_il2cpp_TypeInfo_var);
+		callback_log__ctor_m1FB9275EE1F814C65D6BA2A64C164147C1DE7AFC(L_2, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_log_hook_bridge_impl_mCECCC0F3FD715008B2384E2F4AFC05A2455C37E0_RuntimeMethod_var), NULL);
+		__this->___log_hook_bridge = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___log_hook_bridge), (void*)L_2);
+		callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* L_3 = (callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED*)il2cpp_codegen_object_new(callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED_il2cpp_TypeInfo_var);
+		callback_agg_function_step__ctor_mD9169C85C8988341AA108B7C2713D855B043BF78(L_3, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_agg_function_step_hook_bridge_impl_m5224AECAA46541E71A56BCF661727137741E5ED4_RuntimeMethod_var), NULL);
+		__this->___agg_function_step_hook_bridge = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___agg_function_step_hook_bridge), (void*)L_3);
+		callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* L_4 = (callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F*)il2cpp_codegen_object_new(callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F_il2cpp_TypeInfo_var);
+		callback_agg_function_final__ctor_m24AD2C75EEF8546805DE08FEA65A74EAF335B788(L_4, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_agg_function_final_hook_bridge_impl_m006814ED6B9BD7CF4532668020724B43D91AEF03_RuntimeMethod_var), NULL);
+		__this->___agg_function_final_hook_bridge = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___agg_function_final_hook_bridge), (void*)L_4);
+		callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* L_5 = (callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED*)il2cpp_codegen_object_new(callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED_il2cpp_TypeInfo_var);
+		callback_collation__ctor_mCC4562D044D6941D6F721FA0EFD0EC5B1FE81492(L_5, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_collation_hook_bridge_impl_m5F14F85C72F67AF006FC3FFC2C1A1B3F80E6F5F0_RuntimeMethod_var), NULL);
+		__this->___collation_hook_bridge = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___collation_hook_bridge), (void*)L_5);
+		callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* L_6 = (callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90*)il2cpp_codegen_object_new(callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90_il2cpp_TypeInfo_var);
+		callback_update__ctor_m702943B46304E4C1D52A8CB9FF89CD94399396BB(L_6, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_update_hook_bridge_impl_mF608B2F9975550DCC69E48100606BA7187B9E880_RuntimeMethod_var), NULL);
+		__this->___update_hook_bridge = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___update_hook_bridge), (void*)L_6);
+		callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* L_7 = (callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7*)il2cpp_codegen_object_new(callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7_il2cpp_TypeInfo_var);
+		callback_rollback__ctor_mAAA9D0128F246165CD4C717D630F69CFAE5DC2B2(L_7, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_rollback_hook_bridge_impl_m7F9D5FD5953803A1B2D57E68BE6522FFE681062F_RuntimeMethod_var), NULL);
+		__this->___rollback_hook_bridge = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___rollback_hook_bridge), (void*)L_7);
+		callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* L_8 = (callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190*)il2cpp_codegen_object_new(callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190_il2cpp_TypeInfo_var);
+		callback_trace__ctor_mB7045C1E866EF82F727938567620E2359EA834B5(L_8, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_trace_hook_bridge_impl_m1A72E4987D934C291169F2C6A7816798FA6998AC_RuntimeMethod_var), NULL);
+		__this->___trace_hook_bridge = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___trace_hook_bridge), (void*)L_8);
+		callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* L_9 = (callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4*)il2cpp_codegen_object_new(callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4_il2cpp_TypeInfo_var);
+		callback_profile__ctor_mCA3D9C6C318620A09239BF7F76D45C97897AEFA5(L_9, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_profile_hook_bridge_impl_m11AFCD1AB7A052E5EB9938B8EAF9F1E2C83FA77A_RuntimeMethod_var), NULL);
+		__this->___profile_hook_bridge = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___profile_hook_bridge), (void*)L_9);
+		callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* L_10 = (callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2*)il2cpp_codegen_object_new(callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2_il2cpp_TypeInfo_var);
+		callback_progress_handler__ctor_mAAED7B981A29A66D7B99E2149A38F7EAC3AD7753(L_10, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_progress_handler_hook_bridge_impl_m982DE88858258854F532E5E21E81965E6CAE09E3_RuntimeMethod_var), NULL);
+		__this->___progress_handler_hook_bridge = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___progress_handler_hook_bridge), (void*)L_10);
+		callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* L_11 = (callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696*)il2cpp_codegen_object_new(callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696_il2cpp_TypeInfo_var);
+		callback_authorizer__ctor_mBE07180CDB573196133F892C032B9B366FFD15EA(L_11, NULL, (intptr_t)((void*)SQLite3Provider_e_sqlite3_authorizer_hook_bridge_impl_m6B55BC239D83BBF905BA28662CA6DAEE279BC9E4_RuntimeMethod_var), NULL);
+		__this->___authorizer_hook_bridge = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___authorizer_hook_bridge), (void*)L_11);
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 80215
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLite3Provider_e_sqlite3__cctor_mA56082A39DA7ED7A682997527314131B948EC074 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFA4C5FF8A68887C1283B169941A6090D7B6C606B);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t G_B5_0 = 0;
+	{
+		il2cpp_codegen_runtime_class_init_inline(RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_il2cpp_TypeInfo_var);
+		int32_t L_0;
+		L_0 = RuntimeInformation_get_ProcessArchitecture_mB2DAF77FAF4F8F97AE4045FA7DD140D60D8BF3F3_inline(NULL);
+		if ((!(((uint32_t)L_0) == ((uint32_t)3))))
+		{
+			goto IL_0028;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_il2cpp_TypeInfo_var);
+		OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 L_1;
+		L_1 = OSPlatform_get_OSX_m3618C7AE4705A5980128252AF2FD065694C048F2_inline(NULL);
+		il2cpp_codegen_runtime_class_init_inline(RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = RuntimeInformation_IsOSPlatform_m848A0E9A227256C42AE4053143A57B6E1F4CD6E0(L_1, NULL);
+		if (L_2)
+		{
+			goto IL_0025;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_il2cpp_TypeInfo_var);
+		OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 L_3;
+		L_3 = OSPlatform_Create_m7B939633BCB627C34B1ED3DC14E99AB1D3C3F800(_stringLiteralFA4C5FF8A68887C1283B169941A6090D7B6C606B, NULL);
+		il2cpp_codegen_runtime_class_init_inline(RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = RuntimeInformation_IsOSPlatform_m848A0E9A227256C42AE4053143A57B6E1F4CD6E0(L_3, NULL);
+		G_B5_0 = ((int32_t)(L_4));
+		goto IL_0029;
+	}
+
+IL_0025:
+	{
+		G_B5_0 = 1;
+		goto IL_0029;
+	}
+
+IL_0028:
+	{
+		G_B5_0 = 0;
+	}
+
+IL_0029:
+	{
+		((SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_StaticFields*)il2cpp_codegen_static_fields_for(SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3_il2cpp_TypeInfo_var))->___IsArm64cc = (bool)G_B5_0;
+		return;
+	}
+}
+// Method Definition Index: 80216
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* SQLite3Provider_e_sqlite3_U3Cget_hooksU3Eb__4_0_mB46358DB13286AFA2E46375065B5AAAF83886445 (SQLite3Provider_e_sqlite3_t05F535DCB5FC5999DB49D22FF90F9F599AA70BD3* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLite3Provider_e_sqlite3_my_streq_m8739278305E4F8F0D3B3A0D51AD0A8AA3FE20EA7_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083* L_0 = (Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083*)il2cpp_codegen_object_new(Func_4_t969FE6B8E28BD4E700C6BA2ED5F8794B88E37083_il2cpp_TypeInfo_var);
+		Func_4__ctor_mD903E3907D0CE6F5928A315B41E43525FD88515F(L_0, __this, (intptr_t)((void*)SQLite3Provider_e_sqlite3_my_streq_m8739278305E4F8F0D3B3A0D51AD0A8AA3FE20EA7_RuntimeMethod_var), NULL);
+		hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33* L_1 = (hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33*)il2cpp_codegen_object_new(hook_handles_tC761D4D430F6003B396C0AE3B469BDD80B3D4C33_il2cpp_TypeInfo_var);
+		hook_handles__ctor_m1F7D3F0DEC6B04876796D7A4935396F2CD8DD292(L_1, L_0, NULL);
+		return L_1;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshal_pinvoke(const sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801& unmarshaled, sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshaled_pinvoke& marshaled)
+{
+	marshaled.___iVersion = unmarshaled.___iVersion;
+	marshaled.___szOsFile = unmarshaled.___szOsFile;
+	marshaled.___mxPathname = unmarshaled.___mxPathname;
+	marshaled.___pNext = unmarshaled.___pNext;
+	marshaled.___zName = unmarshaled.___zName;
+	marshaled.___pAppData = unmarshaled.___pAppData;
+	marshaled.___xOpen = unmarshaled.___xOpen;
+	marshaled.___xDelete = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(unmarshaled.___xDelete));
+	marshaled.___xAccess = unmarshaled.___xAccess;
+	marshaled.___xFullPathname = unmarshaled.___xFullPathname;
+	marshaled.___xDlOpen = unmarshaled.___xDlOpen;
+	marshaled.___xDlError = unmarshaled.___xDlError;
+	marshaled.___xDlSym = unmarshaled.___xDlSym;
+	marshaled.___xDlClose = unmarshaled.___xDlClose;
+	marshaled.___xRandomness = unmarshaled.___xRandomness;
+	marshaled.___xSleep = unmarshaled.___xSleep;
+	marshaled.___xCurrentTime = unmarshaled.___xCurrentTime;
+	marshaled.___xGetLastError = unmarshaled.___xGetLastError;
+}
+IL2CPP_EXTERN_C void sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshal_pinvoke_back(const sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshaled_pinvoke& marshaled, sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801& unmarshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t unmarshalediVersion_temp_0 = 0;
+	unmarshalediVersion_temp_0 = marshaled.___iVersion;
+	unmarshaled.___iVersion = unmarshalediVersion_temp_0;
+	int32_t unmarshaledszOsFile_temp_1 = 0;
+	unmarshaledszOsFile_temp_1 = marshaled.___szOsFile;
+	unmarshaled.___szOsFile = unmarshaledszOsFile_temp_1;
+	int32_t unmarshaledmxPathname_temp_2 = 0;
+	unmarshaledmxPathname_temp_2 = marshaled.___mxPathname;
+	unmarshaled.___mxPathname = unmarshaledmxPathname_temp_2;
+	intptr_t unmarshaledpNext_temp_3;
+	memset((&unmarshaledpNext_temp_3), 0, sizeof(unmarshaledpNext_temp_3));
+	unmarshaledpNext_temp_3 = marshaled.___pNext;
+	unmarshaled.___pNext = unmarshaledpNext_temp_3;
+	intptr_t unmarshaledzName_temp_4;
+	memset((&unmarshaledzName_temp_4), 0, sizeof(unmarshaledzName_temp_4));
+	unmarshaledzName_temp_4 = marshaled.___zName;
+	unmarshaled.___zName = unmarshaledzName_temp_4;
+	intptr_t unmarshaledpAppData_temp_5;
+	memset((&unmarshaledpAppData_temp_5), 0, sizeof(unmarshaledpAppData_temp_5));
+	unmarshaledpAppData_temp_5 = marshaled.___pAppData;
+	unmarshaled.___pAppData = unmarshaledpAppData_temp_5;
+	intptr_t unmarshaledxOpen_temp_6;
+	memset((&unmarshaledxOpen_temp_6), 0, sizeof(unmarshaledxOpen_temp_6));
+	unmarshaledxOpen_temp_6 = marshaled.___xOpen;
+	unmarshaled.___xOpen = unmarshaledxOpen_temp_6;
+	unmarshaled.___xDelete = il2cpp_codegen_marshal_function_ptr_to_delegate<SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826>(marshaled.___xDelete, SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826_il2cpp_TypeInfo_var);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___xDelete), (void*)il2cpp_codegen_marshal_function_ptr_to_delegate<SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826>(marshaled.___xDelete, SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826_il2cpp_TypeInfo_var));
+	intptr_t unmarshaledxAccess_temp_8;
+	memset((&unmarshaledxAccess_temp_8), 0, sizeof(unmarshaledxAccess_temp_8));
+	unmarshaledxAccess_temp_8 = marshaled.___xAccess;
+	unmarshaled.___xAccess = unmarshaledxAccess_temp_8;
+	intptr_t unmarshaledxFullPathname_temp_9;
+	memset((&unmarshaledxFullPathname_temp_9), 0, sizeof(unmarshaledxFullPathname_temp_9));
+	unmarshaledxFullPathname_temp_9 = marshaled.___xFullPathname;
+	unmarshaled.___xFullPathname = unmarshaledxFullPathname_temp_9;
+	intptr_t unmarshaledxDlOpen_temp_10;
+	memset((&unmarshaledxDlOpen_temp_10), 0, sizeof(unmarshaledxDlOpen_temp_10));
+	unmarshaledxDlOpen_temp_10 = marshaled.___xDlOpen;
+	unmarshaled.___xDlOpen = unmarshaledxDlOpen_temp_10;
+	intptr_t unmarshaledxDlError_temp_11;
+	memset((&unmarshaledxDlError_temp_11), 0, sizeof(unmarshaledxDlError_temp_11));
+	unmarshaledxDlError_temp_11 = marshaled.___xDlError;
+	unmarshaled.___xDlError = unmarshaledxDlError_temp_11;
+	intptr_t unmarshaledxDlSym_temp_12;
+	memset((&unmarshaledxDlSym_temp_12), 0, sizeof(unmarshaledxDlSym_temp_12));
+	unmarshaledxDlSym_temp_12 = marshaled.___xDlSym;
+	unmarshaled.___xDlSym = unmarshaledxDlSym_temp_12;
+	intptr_t unmarshaledxDlClose_temp_13;
+	memset((&unmarshaledxDlClose_temp_13), 0, sizeof(unmarshaledxDlClose_temp_13));
+	unmarshaledxDlClose_temp_13 = marshaled.___xDlClose;
+	unmarshaled.___xDlClose = unmarshaledxDlClose_temp_13;
+	intptr_t unmarshaledxRandomness_temp_14;
+	memset((&unmarshaledxRandomness_temp_14), 0, sizeof(unmarshaledxRandomness_temp_14));
+	unmarshaledxRandomness_temp_14 = marshaled.___xRandomness;
+	unmarshaled.___xRandomness = unmarshaledxRandomness_temp_14;
+	intptr_t unmarshaledxSleep_temp_15;
+	memset((&unmarshaledxSleep_temp_15), 0, sizeof(unmarshaledxSleep_temp_15));
+	unmarshaledxSleep_temp_15 = marshaled.___xSleep;
+	unmarshaled.___xSleep = unmarshaledxSleep_temp_15;
+	intptr_t unmarshaledxCurrentTime_temp_16;
+	memset((&unmarshaledxCurrentTime_temp_16), 0, sizeof(unmarshaledxCurrentTime_temp_16));
+	unmarshaledxCurrentTime_temp_16 = marshaled.___xCurrentTime;
+	unmarshaled.___xCurrentTime = unmarshaledxCurrentTime_temp_16;
+	intptr_t unmarshaledxGetLastError_temp_17;
+	memset((&unmarshaledxGetLastError_temp_17), 0, sizeof(unmarshaledxGetLastError_temp_17));
+	unmarshaledxGetLastError_temp_17 = marshaled.___xGetLastError;
+	unmarshaled.___xGetLastError = unmarshaledxGetLastError_temp_17;
+}
+IL2CPP_EXTERN_C void sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshal_pinvoke_cleanup(sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshaled_pinvoke& marshaled)
+{
+}
+IL2CPP_EXTERN_C void sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshal_com(const sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801& unmarshaled, sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshaled_com& marshaled)
+{
+	marshaled.___iVersion = unmarshaled.___iVersion;
+	marshaled.___szOsFile = unmarshaled.___szOsFile;
+	marshaled.___mxPathname = unmarshaled.___mxPathname;
+	marshaled.___pNext = unmarshaled.___pNext;
+	marshaled.___zName = unmarshaled.___zName;
+	marshaled.___pAppData = unmarshaled.___pAppData;
+	marshaled.___xOpen = unmarshaled.___xOpen;
+	marshaled.___xDelete = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(unmarshaled.___xDelete));
+	marshaled.___xAccess = unmarshaled.___xAccess;
+	marshaled.___xFullPathname = unmarshaled.___xFullPathname;
+	marshaled.___xDlOpen = unmarshaled.___xDlOpen;
+	marshaled.___xDlError = unmarshaled.___xDlError;
+	marshaled.___xDlSym = unmarshaled.___xDlSym;
+	marshaled.___xDlClose = unmarshaled.___xDlClose;
+	marshaled.___xRandomness = unmarshaled.___xRandomness;
+	marshaled.___xSleep = unmarshaled.___xSleep;
+	marshaled.___xCurrentTime = unmarshaled.___xCurrentTime;
+	marshaled.___xGetLastError = unmarshaled.___xGetLastError;
+}
+IL2CPP_EXTERN_C void sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshal_com_back(const sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshaled_com& marshaled, sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801& unmarshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t unmarshalediVersion_temp_0 = 0;
+	unmarshalediVersion_temp_0 = marshaled.___iVersion;
+	unmarshaled.___iVersion = unmarshalediVersion_temp_0;
+	int32_t unmarshaledszOsFile_temp_1 = 0;
+	unmarshaledszOsFile_temp_1 = marshaled.___szOsFile;
+	unmarshaled.___szOsFile = unmarshaledszOsFile_temp_1;
+	int32_t unmarshaledmxPathname_temp_2 = 0;
+	unmarshaledmxPathname_temp_2 = marshaled.___mxPathname;
+	unmarshaled.___mxPathname = unmarshaledmxPathname_temp_2;
+	intptr_t unmarshaledpNext_temp_3;
+	memset((&unmarshaledpNext_temp_3), 0, sizeof(unmarshaledpNext_temp_3));
+	unmarshaledpNext_temp_3 = marshaled.___pNext;
+	unmarshaled.___pNext = unmarshaledpNext_temp_3;
+	intptr_t unmarshaledzName_temp_4;
+	memset((&unmarshaledzName_temp_4), 0, sizeof(unmarshaledzName_temp_4));
+	unmarshaledzName_temp_4 = marshaled.___zName;
+	unmarshaled.___zName = unmarshaledzName_temp_4;
+	intptr_t unmarshaledpAppData_temp_5;
+	memset((&unmarshaledpAppData_temp_5), 0, sizeof(unmarshaledpAppData_temp_5));
+	unmarshaledpAppData_temp_5 = marshaled.___pAppData;
+	unmarshaled.___pAppData = unmarshaledpAppData_temp_5;
+	intptr_t unmarshaledxOpen_temp_6;
+	memset((&unmarshaledxOpen_temp_6), 0, sizeof(unmarshaledxOpen_temp_6));
+	unmarshaledxOpen_temp_6 = marshaled.___xOpen;
+	unmarshaled.___xOpen = unmarshaledxOpen_temp_6;
+	unmarshaled.___xDelete = il2cpp_codegen_marshal_function_ptr_to_delegate<SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826>(marshaled.___xDelete, SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826_il2cpp_TypeInfo_var);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___xDelete), (void*)il2cpp_codegen_marshal_function_ptr_to_delegate<SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826>(marshaled.___xDelete, SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826_il2cpp_TypeInfo_var));
+	intptr_t unmarshaledxAccess_temp_8;
+	memset((&unmarshaledxAccess_temp_8), 0, sizeof(unmarshaledxAccess_temp_8));
+	unmarshaledxAccess_temp_8 = marshaled.___xAccess;
+	unmarshaled.___xAccess = unmarshaledxAccess_temp_8;
+	intptr_t unmarshaledxFullPathname_temp_9;
+	memset((&unmarshaledxFullPathname_temp_9), 0, sizeof(unmarshaledxFullPathname_temp_9));
+	unmarshaledxFullPathname_temp_9 = marshaled.___xFullPathname;
+	unmarshaled.___xFullPathname = unmarshaledxFullPathname_temp_9;
+	intptr_t unmarshaledxDlOpen_temp_10;
+	memset((&unmarshaledxDlOpen_temp_10), 0, sizeof(unmarshaledxDlOpen_temp_10));
+	unmarshaledxDlOpen_temp_10 = marshaled.___xDlOpen;
+	unmarshaled.___xDlOpen = unmarshaledxDlOpen_temp_10;
+	intptr_t unmarshaledxDlError_temp_11;
+	memset((&unmarshaledxDlError_temp_11), 0, sizeof(unmarshaledxDlError_temp_11));
+	unmarshaledxDlError_temp_11 = marshaled.___xDlError;
+	unmarshaled.___xDlError = unmarshaledxDlError_temp_11;
+	intptr_t unmarshaledxDlSym_temp_12;
+	memset((&unmarshaledxDlSym_temp_12), 0, sizeof(unmarshaledxDlSym_temp_12));
+	unmarshaledxDlSym_temp_12 = marshaled.___xDlSym;
+	unmarshaled.___xDlSym = unmarshaledxDlSym_temp_12;
+	intptr_t unmarshaledxDlClose_temp_13;
+	memset((&unmarshaledxDlClose_temp_13), 0, sizeof(unmarshaledxDlClose_temp_13));
+	unmarshaledxDlClose_temp_13 = marshaled.___xDlClose;
+	unmarshaled.___xDlClose = unmarshaledxDlClose_temp_13;
+	intptr_t unmarshaledxRandomness_temp_14;
+	memset((&unmarshaledxRandomness_temp_14), 0, sizeof(unmarshaledxRandomness_temp_14));
+	unmarshaledxRandomness_temp_14 = marshaled.___xRandomness;
+	unmarshaled.___xRandomness = unmarshaledxRandomness_temp_14;
+	intptr_t unmarshaledxSleep_temp_15;
+	memset((&unmarshaledxSleep_temp_15), 0, sizeof(unmarshaledxSleep_temp_15));
+	unmarshaledxSleep_temp_15 = marshaled.___xSleep;
+	unmarshaled.___xSleep = unmarshaledxSleep_temp_15;
+	intptr_t unmarshaledxCurrentTime_temp_16;
+	memset((&unmarshaledxCurrentTime_temp_16), 0, sizeof(unmarshaledxCurrentTime_temp_16));
+	unmarshaledxCurrentTime_temp_16 = marshaled.___xCurrentTime;
+	unmarshaled.___xCurrentTime = unmarshaledxCurrentTime_temp_16;
+	intptr_t unmarshaledxGetLastError_temp_17;
+	memset((&unmarshaledxGetLastError_temp_17), 0, sizeof(unmarshaledxGetLastError_temp_17));
+	unmarshaledxGetLastError_temp_17 = marshaled.___xGetLastError;
+	unmarshaled.___xGetLastError = unmarshaledxGetLastError_temp_17;
+}
+IL2CPP_EXTERN_C void sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshal_com_cleanup(sqlite3_vfs_tE5DAE91C090E1C709EC194893D25A0BF752EF801_marshaled_com& marshaled)
+{
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+int32_t SQLiteDeleteDelegate_Invoke_m05864E249C3D97BD1CE9D33569AC2607AF36697A_Multicast(SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, intptr_t ___0_pVfs, uint8_t* ___1_zName, int32_t ___2_syncDir, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	int32_t retVal = 0;
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* currentDelegate = reinterpret_cast<SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826*>(delegatesToInvoke[i]);
+		typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, uint8_t*, int32_t, const RuntimeMethod*);
+		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_pVfs, ___1_zName, ___2_syncDir, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+	return retVal;
+}
+int32_t SQLiteDeleteDelegate_Invoke_m05864E249C3D97BD1CE9D33569AC2607AF36697A_OpenInst(SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, intptr_t ___0_pVfs, uint8_t* ___1_zName, int32_t ___2_syncDir, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, uint8_t*, int32_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_pVfs, ___1_zName, ___2_syncDir, method);
+}
+int32_t SQLiteDeleteDelegate_Invoke_m05864E249C3D97BD1CE9D33569AC2607AF36697A_OpenStatic(SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, intptr_t ___0_pVfs, uint8_t* ___1_zName, int32_t ___2_syncDir, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, uint8_t*, int32_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_pVfs, ___1_zName, ___2_syncDir, method);
+}
+IL2CPP_EXTERN_C  int32_t DelegatePInvokeWrapper_SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826 (SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, intptr_t ___0_pVfs, uint8_t* ___1_zName, int32_t ___2_syncDir, const RuntimeMethod* method)
+{
+	typedef int32_t (CDECL *PInvokeFunc)(intptr_t, uint8_t*, int32_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	int32_t returnValue = il2cppPInvokeFunc(___0_pVfs, ___1_zName, ___2_syncDir);
+
+	return returnValue;
+}
+// Method Definition Index: 80217
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SQLiteDeleteDelegate__ctor_mCA6159A8C54EF2915773E9598CF7006173E981C3 (SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 3;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&SQLiteDeleteDelegate_Invoke_m05864E249C3D97BD1CE9D33569AC2607AF36697A_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&SQLiteDeleteDelegate_Invoke_m05864E249C3D97BD1CE9D33569AC2607AF36697A_Multicast;
+}
+// Method Definition Index: 80218
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLiteDeleteDelegate_Invoke_m05864E249C3D97BD1CE9D33569AC2607AF36697A (SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, intptr_t ___0_pVfs, uint8_t* ___1_zName, int32_t ___2_syncDir, const RuntimeMethod* method) 
+{
+	typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, uint8_t*, int32_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_pVfs, ___1_zName, ___2_syncDir, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80219
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SQLiteDeleteDelegate_BeginInvoke_m49A3687AC7C24CD40031ADEEA55F16CD19C7F778 (SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, intptr_t ___0_pVfs, uint8_t* ___1_zName, int32_t ___2_syncDir, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
+{
+	void *__d_args[4] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_pVfs);
+	__d_args[1] = ___1_zName;
+	__d_args[2] = Box(il2cpp_defaults.int32_class, &___2_syncDir);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
+}
+// Method Definition Index: 80220
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SQLiteDeleteDelegate_EndInvoke_m2B83A81BF5DBB76BA75AB3C1D421190598591E0C (SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+	return *(int32_t*)UnBox ((RuntimeObject*)__result);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 80221
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_close_mED3AC3B0ADC674BE66282A6C6C7F307B8E7ECE1D (intptr_t ___0_db, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_close", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_close)(___0_db);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_db);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80222
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_close_v2_m47CDE601B77EA589F910B5C069FF148CF4A29DE5 (intptr_t ___0_db, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_close_v2", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_close_v2)(___0_db);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_db);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80223
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_enable_shared_cache_mA23CC3E85ABA7FF0ECD7F729097E40AD060C941C (int32_t ___0_enable, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_enable_shared_cache", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_enable_shared_cache)(___0_enable);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_enable);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80224
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_interrupt_mA22234311DF51ABAF7BDC154E491BC75822A7F58 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_interrupt", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_interrupt)(____0_db_marshaled);
+	#else
+	il2cppPInvokeFunc(____0_db_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+}
+// Method Definition Index: 80225
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_finalize_mDB6B3D32A22713D9589F71F6E8BBA503328466A8 (intptr_t ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_finalize", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_finalize)(___0_stmt);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_stmt);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80226
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_reset_m8CDA4563E27D9A5482C13457295E7840E2BA354C (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_reset", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_reset)(____0_stmt_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80227
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_clear_bindings_mBEEA936F583558913D3AA0502D724554AD9FE73F (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_clear_bindings", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_clear_bindings)(____0_stmt_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80228
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stmt_status_mF8A0E11BC4223070F01198EE5283F2C92617DA6F (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stm, int32_t ___1_op, int32_t ___2_resetFlg, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_stmt_status", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stm_marshaled = NULL;
+	if (___0_stm == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stm"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stm = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stm, (&___safeHandle_reference_incremented_for____0_stm), NULL);
+	____0_stm_marshaled = reinterpret_cast<void*>((___0_stm)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_stmt_status)(____0_stm_marshaled, ___1_op, ___2_resetFlg);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stm_marshaled, ___1_op, ___2_resetFlg);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stm)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stm, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80229
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_bind_parameter_name_m6E8241B68486F941FBA262FB94EADE4753638145 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_parameter_name", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_parameter_name)(____0_stmt_marshaled, ___1_index);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80230
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_database_name_mB6E488121D372DB1A901A7615FD680DD2DC3DFE8 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_database_name", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_database_name)(____0_stmt_marshaled, ___1_index);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80231
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_decltype_mFF1CBAA3DA2EC2A37DECC574E8B795D093A3ABA2 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_decltype", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_decltype)(____0_stmt_marshaled, ___1_index);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80232
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_name_m7AEDE674A0EA9352D9D9FAE71663A9E934BA328D (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_name", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_name)(____0_stmt_marshaled, ___1_index);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80233
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_origin_name_m00C2935EE53B1741062DF639340A95DE8197CA3F (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_origin_name", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_origin_name)(____0_stmt_marshaled, ___1_index);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80234
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_table_name_m2C17E195B249AB9E64774054EFFB017DA3907D2D (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_table_name", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_table_name)(____0_stmt_marshaled, ___1_index);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80235
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_column_text_m57DD3330CC5A9FDBAEC7F828E97A7C24763EFD5C (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_text", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_text)(____0_stmt_marshaled, ___1_index);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80236
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_errmsg_m97AC77D22E61B412572D670A3B697612018530D5 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_errmsg", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_errmsg)(____0_db_marshaled);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_db_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80237
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_readonly_mA7B1C029DDB56E7C89CF1C632702566910C668F5 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbName, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_readonly", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_readonly)(____0_db_marshaled, ___1_dbName);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_dbName);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80238
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_db_filename_mCF68D2E29879EA828D41554366E248D7AC31BE39 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_att, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_filename", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_filename)(____0_db_marshaled, ___1_att);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_att);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80239
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_prepare_v2_m41342AED3FFC4BE5823F9DD0D16AC04A435955CD (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_pSql, int32_t ___2_nBytes, intptr_t* ___3_stmt, uint8_t** ___4_ptrRemain, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t, intptr_t*, uint8_t**);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(int32_t) + sizeof(intptr_t*) + sizeof(uint8_t**);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_prepare_v2", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	uint8_t* ____4_ptrRemain_empty = NULL;
+	uint8_t** ____4_ptrRemain_marshaled = &____4_ptrRemain_empty;
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_prepare_v2)(____0_db_marshaled, ___1_pSql, ___2_nBytes, ___3_stmt, ____4_ptrRemain_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_pSql, ___2_nBytes, ___3_stmt, ____4_ptrRemain_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	uint8_t* _____4_ptrRemain_marshaled_unmarshaled_dereferenced = NULL;
+	_____4_ptrRemain_marshaled_unmarshaled_dereferenced = *____4_ptrRemain_marshaled;
+	*___4_ptrRemain = _____4_ptrRemain_marshaled_unmarshaled_dereferenced;
+
+	return returnValue;
+}
+// Method Definition Index: 80240
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_prepare_v3_m6E2A4FD05EF9F59BEE2FA1F4F60A55369857F93C (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_pSql, int32_t ___2_nBytes, uint32_t ___3_flags, intptr_t* ___4_stmt, uint8_t** ___5_ptrRemain, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t, uint32_t, intptr_t*, uint8_t**);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(int32_t) + sizeof(uint32_t) + sizeof(intptr_t*) + sizeof(uint8_t**);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_prepare_v3", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	uint8_t* ____5_ptrRemain_empty = NULL;
+	uint8_t** ____5_ptrRemain_marshaled = &____5_ptrRemain_empty;
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_prepare_v3)(____0_db_marshaled, ___1_pSql, ___2_nBytes, ___3_flags, ___4_stmt, ____5_ptrRemain_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_pSql, ___2_nBytes, ___3_flags, ___4_stmt, ____5_ptrRemain_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	uint8_t* _____5_ptrRemain_marshaled_unmarshaled_dereferenced = NULL;
+	_____5_ptrRemain_marshaled_unmarshaled_dereferenced = *____5_ptrRemain_marshaled;
+	*___5_ptrRemain = _____5_ptrRemain_marshaled_unmarshaled_dereferenced;
+
+	return returnValue;
+}
+// Method Definition Index: 80241
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_status_m28E97986E40B52B293238A78F20E08E270D4CF30 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, int32_t* ___2_current, int32_t* ___3_highest, int32_t ___4_resetFlg, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, int32_t*, int32_t*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(int32_t*) + sizeof(int32_t*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_status", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_status)(____0_db_marshaled, ___1_op, ___2_current, ___3_highest, ___4_resetFlg);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_op, ___2_current, ___3_highest, ___4_resetFlg);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80242
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_complete_mC15263E100F1BC846FDA791A82A343FED9EFFE42 (uint8_t* ___0_pSql, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_complete", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_complete)(___0_pSql);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_pSql);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80243
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_compileoption_used_mA9E70414A31701C66949FCECB8CE3AC8C1B99F79 (uint8_t* ___0_pSql, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_compileoption_used", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_compileoption_used)(___0_pSql);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_pSql);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80244
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_compileoption_get_m21B3C2120E8D05CE9E7B79AEC1DADC53B765583C (int32_t ___0_n, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_compileoption_get", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_compileoption_get)(___0_n);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(___0_n);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80245
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_table_column_metadata_mB0353A92E430864E1618FBDD969417CD7AC0437D (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbName, uint8_t* ___2_tblName, uint8_t* ___3_colName, uint8_t** ___4_ptrDataType, uint8_t** ___5_ptrCollSeq, int32_t* ___6_notNull, int32_t* ___7_primaryKey, int32_t* ___8_autoInc, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, uint8_t*, uint8_t*, uint8_t**, uint8_t**, int32_t*, int32_t*, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(uint8_t*) + sizeof(uint8_t*) + sizeof(uint8_t**) + sizeof(uint8_t**) + sizeof(int32_t*) + sizeof(int32_t*) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_table_column_metadata", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	uint8_t* ____4_ptrDataType_empty = NULL;
+	uint8_t** ____4_ptrDataType_marshaled = &____4_ptrDataType_empty;
+
+	uint8_t* ____5_ptrCollSeq_empty = NULL;
+	uint8_t** ____5_ptrCollSeq_marshaled = &____5_ptrCollSeq_empty;
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_table_column_metadata)(____0_db_marshaled, ___1_dbName, ___2_tblName, ___3_colName, ____4_ptrDataType_marshaled, ____5_ptrCollSeq_marshaled, ___6_notNull, ___7_primaryKey, ___8_autoInc);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_dbName, ___2_tblName, ___3_colName, ____4_ptrDataType_marshaled, ____5_ptrCollSeq_marshaled, ___6_notNull, ___7_primaryKey, ___8_autoInc);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	uint8_t* _____4_ptrDataType_marshaled_unmarshaled_dereferenced = NULL;
+	_____4_ptrDataType_marshaled_unmarshaled_dereferenced = *____4_ptrDataType_marshaled;
+	*___4_ptrDataType = _____4_ptrDataType_marshaled_unmarshaled_dereferenced;
+
+	uint8_t* _____5_ptrCollSeq_marshaled_unmarshaled_dereferenced = NULL;
+	_____5_ptrCollSeq_marshaled_unmarshaled_dereferenced = *____5_ptrCollSeq_marshaled;
+	*___5_ptrCollSeq = _____5_ptrCollSeq_marshaled_unmarshaled_dereferenced;
+
+	return returnValue;
+}
+// Method Definition Index: 80246
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_value_text_mC67842B0F56FA8E3882441EC91CB7D3F3C9DD072 (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_value_text", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_value_text)(___0_p);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(___0_p);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80247
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_enable_load_extension_mE6C839EC992333038574323E3903C77BA714B28E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_enable, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_enable_load_extension", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_enable_load_extension)(____0_db_marshaled, ___1_enable);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_enable);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80248
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_limit_m784FD2B0BFC0566C7BC726D68F318DDDA6637FCC (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_id, int32_t ___2_newVal, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_limit", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_limit)(____0_db_marshaled, ___1_id, ___2_newVal);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_id, ___2_newVal);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80249
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_initialize_mE4342B5EE5B74088F885378D65D6BB1B0E24B040 (const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) ();
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = 0;
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_initialize", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_initialize)();
+	#else
+	int32_t returnValue = il2cppPInvokeFunc();
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80250
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_shutdown_m48E097036353F1D9DCBC5785259B997CE19567ED (const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) ();
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = 0;
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_shutdown", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_shutdown)();
+	#else
+	int32_t returnValue = il2cppPInvokeFunc();
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80251
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_libversion_m905E2F843C51BE29E47B5BD892D9FE2B99C48A9A (const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) ();
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = 0;
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_libversion", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_libversion)();
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc();
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80252
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_libversion_number_m8AFAEF0D32835FCE8373DF78E2A5C44D7D5B8E3F (const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) ();
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = 0;
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_libversion_number", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_libversion_number)();
+	#else
+	int32_t returnValue = il2cppPInvokeFunc();
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80253
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_threadsafe_mB2970EA4677ABABD9A64FEC36A68FDF9E943DA46 (const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) ();
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = 0;
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_threadsafe", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_threadsafe)();
+	#else
+	int32_t returnValue = il2cppPInvokeFunc();
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80254
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_sourceid_m7633E75448D51255F31FD7B482C4850F15A6EDA1 (const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) ();
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = 0;
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_sourceid", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_sourceid)();
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc();
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80255
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_malloc_mE761F12FAF80EE702E043062C5CA1F0CB414D989 (int32_t ___0_n, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_malloc", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_malloc)(___0_n);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(___0_n);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80256
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_malloc64_m6BA1C52143314F33577A81914A9E32E965763917 (int64_t ___0_n, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (int64_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int64_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_malloc64", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_malloc64)(___0_n);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(___0_n);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80257
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_realloc_m2FA480EF9F5411052F5EB9C3DF56A53BB51D1A45 (intptr_t ___0_p, int32_t ___1_n, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (intptr_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_realloc", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_realloc)(___0_p, ___1_n);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(___0_p, ___1_n);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80258
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_free_m56243724F4A36EDA54D1353A30A40FAE3A6A12C1 (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_free", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_free)(___0_p);
+	#else
+	il2cppPInvokeFunc(___0_p);
+	#endif
+
+}
+// Method Definition Index: 80259
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stricmp_mAE8E1DBE81B0A7A004DF7AFFDC3568F9BA45E8C7 (intptr_t ___0_p, intptr_t ___1_q, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_stricmp", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_stricmp)(___0_p, ___1_q);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_p, ___1_q);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80260
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_strnicmp_m9B0F44BA1B0EF0A26CB3ACD472FA33354B5D1505 (intptr_t ___0_p, intptr_t ___1_q, int32_t ___2_n, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t, intptr_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_strnicmp", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_strnicmp)(___0_p, ___1_q, ___2_n);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_p, ___1_q, ___2_n);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80261
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_open_mC6CB397252A981ED08F3E1E51E5881D5535B3A23 (uint8_t* ___0_filename, intptr_t* ___1_db, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (uint8_t*, intptr_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(uint8_t*) + sizeof(intptr_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_open", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_open)(___0_filename, ___1_db);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_filename, ___1_db);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80262
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_open_v2_mEC85A62F0C7B514435B64202F0E9DE399E946056 (uint8_t* ___0_filename, intptr_t* ___1_db, int32_t ___2_flags, uint8_t* ___3_vfs, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (uint8_t*, intptr_t*, int32_t, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(uint8_t*) + sizeof(intptr_t*) + sizeof(int32_t) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_open_v2", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_open_v2)(___0_filename, ___1_db, ___2_flags, ___3_vfs);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_filename, ___1_db, ___2_flags, ___3_vfs);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80263
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_vfs_find_mA8DBAB1449AE16809E018BB76FA98D9B8851D29C (uint8_t* ___0_vfs, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_vfs_find", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_vfs_find)(___0_vfs);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(___0_vfs);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80264
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_last_insert_rowid_m39D5A39CC0FFD9ABCC3C60397BD8494940F20888 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	typedef int64_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_last_insert_rowid", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int64_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_last_insert_rowid)(____0_db_marshaled);
+	#else
+	int64_t returnValue = il2cppPInvokeFunc(____0_db_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80265
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_changes_m27EC91C84867C9B5EF0D2D491CFEA79292B3721D (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_changes", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_changes)(____0_db_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80266
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_total_changes_mD6AB0F90D0C16D5277F0DF2CC26FB29DE502C1A3 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_total_changes", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_total_changes)(____0_db_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80267
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_memory_used_m3A784674CDAA2ADB4D548F52D0BC643D791AA0BD (const RuntimeMethod* method) 
+{
+	typedef int64_t (CDECL *PInvokeFunc) ();
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = 0;
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_memory_used", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int64_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_memory_used)();
+	#else
+	int64_t returnValue = il2cppPInvokeFunc();
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80268
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_memory_highwater_m109A354CF154A8462BC1766E0C31EA0B8C1FD9CB (int32_t ___0_resetFlag, const RuntimeMethod* method) 
+{
+	typedef int64_t (CDECL *PInvokeFunc) (int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_memory_highwater", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int64_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_memory_highwater)(___0_resetFlag);
+	#else
+	int64_t returnValue = il2cppPInvokeFunc(___0_resetFlag);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80269
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_soft_heap_limit64_m27E808495350435BC962DF2EE3CF5FB96B3C55BA (int64_t ___0_n, const RuntimeMethod* method) 
+{
+	typedef int64_t (CDECL *PInvokeFunc) (int64_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int64_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_soft_heap_limit64", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int64_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_soft_heap_limit64)(___0_n);
+	#else
+	int64_t returnValue = il2cppPInvokeFunc(___0_n);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80270
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_hard_heap_limit64_m418FD768ACFF2D6288C58285FEDC38B4B883BFE3 (int64_t ___0_n, const RuntimeMethod* method) 
+{
+	typedef int64_t (CDECL *PInvokeFunc) (int64_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int64_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_hard_heap_limit64", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int64_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_hard_heap_limit64)(___0_n);
+	#else
+	int64_t returnValue = il2cppPInvokeFunc(___0_n);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80271
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_status_m00147E7B91CEC510EF629B44FD1A17CDF7960E14 (int32_t ___0_op, int32_t* ___1_current, int32_t* ___2_highwater, int32_t ___3_resetFlag, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (int32_t, int32_t*, int32_t*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t) + sizeof(int32_t*) + sizeof(int32_t*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_status", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_status)(___0_op, ___1_current, ___2_highwater, ___3_resetFlag);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_op, ___1_current, ___2_highwater, ___3_resetFlag);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80272
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_busy_timeout_m1B7F39D1AC141048765E2E9D5F1264D42022850E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_ms, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_busy_timeout", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_busy_timeout)(____0_db_marshaled, ___1_ms);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_ms);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80273
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_blob_m46B0FDCEA11EC76B1803B623D628081BE57B4D17 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, uint8_t* ___2_val, int32_t ___3_nSize, intptr_t ___4_nTransient, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, uint8_t*, int32_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(uint8_t*) + sizeof(int32_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_blob", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_blob)(____0_stmt_marshaled, ___1_index, ___2_val, ___3_nSize, ___4_nTransient);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index, ___2_val, ___3_nSize, ___4_nTransient);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80274
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_zeroblob_m7BDBFC82A3ABB4D090CF12FFD594DF44618E4A73 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, int32_t ___2_size, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_zeroblob", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_zeroblob)(____0_stmt_marshaled, ___1_index, ___2_size);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index, ___2_size);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80275
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_double_m477271935B21CCC68B9E65E3AF041204BDF5898D (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, double ___2_val, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, double);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(double);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_double", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_double)(____0_stmt_marshaled, ___1_index, ___2_val);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index, ___2_val);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80276
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_int_m540D5670C86028EE450403DB98351DEA0FDCD905 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, int32_t ___2_val, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_int", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_int)(____0_stmt_marshaled, ___1_index, ___2_val);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index, ___2_val);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80277
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_int64_mCCF613075783EA1C66918FFED7FF3EDDAF98D433 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, int64_t ___2_val, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, int64_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(int64_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_int64", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_int64)(____0_stmt_marshaled, ___1_index, ___2_val);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index, ___2_val);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80278
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_null_mF27E5ADBA2058737D75823C425FD32B7527B3A26 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_null", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_null)(____0_stmt_marshaled, ___1_index);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80279
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_text_m9F412DA6A0CC8C81CB187071417F667ED4BBC1CF (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, uint8_t* ___2_val, int32_t ___3_nlen, intptr_t ___4_pvReserved, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, uint8_t*, int32_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(uint8_t*) + sizeof(int32_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_text", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_text)(____0_stmt_marshaled, ___1_index, ___2_val, ___3_nlen, ___4_pvReserved);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index, ___2_val, ___3_nlen, ___4_pvReserved);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80280
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_text16_m7AC3DAF934D8EE0B43100B43531B95A27DD1D822 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, Il2CppChar* ___2_val, int32_t ___3_nlen, intptr_t ___4_pvReserved, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, Il2CppChar*, int32_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(Il2CppChar*) + sizeof(int32_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_text16", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_text16)(____0_stmt_marshaled, ___1_index, ___2_val, ___3_nlen, ___4_pvReserved);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index, ___2_val, ___3_nlen, ___4_pvReserved);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80281
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_parameter_count_m15A657827FB05A90DD8B2D98BACAF1768329D240 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_parameter_count", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_parameter_count)(____0_stmt_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80282
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_bind_parameter_index_mAC026BDB1787E5C1B68B0BFD9FEFE04D71BA101F (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, uint8_t* ___1_strName, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_bind_parameter_index", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_bind_parameter_index)(____0_stmt_marshaled, ___1_strName);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_strName);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80283
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_column_count_m6B6174E516DB8B2DE87642E8C7E3723A6E450C29 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_count", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_count)(____0_stmt_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80284
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_data_count_m2BEFFE88E58964784698F1365AEC42D71BFBCEEE (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_data_count", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_data_count)(____0_stmt_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80285
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_step_mA66F45248DDB41374C399DE7B1BB07E579537A93 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_step", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_step)(____0_stmt_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80286
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_sql_m87A1B371A6877EB8C732076420DD4244881AEC78 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_sql", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_sql)(____0_stmt_marshaled);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80287
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double NativeMethods_sqlite3_column_double_m5F41EB90F3EB11751856873A3387C44F53DB2CE4 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef double (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_double", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	double returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_double)(____0_stmt_marshaled, ___1_index);
+	#else
+	double returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80288
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_column_int_m0E4230B2E6C7981BCADE09965FF982ED1977EBD5 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_int", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_int)(____0_stmt_marshaled, ___1_index);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80289
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_column_int64_m76DBCC148DCD8626D045FF47DF914F1DFD143C41 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef int64_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_int64", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int64_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_int64)(____0_stmt_marshaled, ___1_index);
+	#else
+	int64_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80290
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_column_blob_m08764BE4D2B04D3C74BD2ACD5AE7D4EE8B06852A (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_blob", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_blob)(____0_stmt_marshaled, ___1_index);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80291
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_column_bytes_m8E23E6D116BF8EDDBD7662327A2D0B6B76A9D34C (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_bytes", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_bytes)(____0_stmt_marshaled, ___1_index);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80292
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_column_type_mC65B510028F38418FABB64026C661BB7830ACEBA (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, int32_t ___1_index, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_column_type", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_column_type)(____0_stmt_marshaled, ___1_index);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled, ___1_index);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80293
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_aggregate_count_m329482E236B1661F1A2DE6473926D8E63BF92989 (intptr_t ___0_context, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_aggregate_count", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_aggregate_count)(___0_context);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_context);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80294
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_value_blob_mBB4CD6F32E729A169908CEB9DB167311C456546E (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_value_blob", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_value_blob)(___0_p);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(___0_p);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80295
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_value_bytes_m58CC7A54E1D8F5E758CCDC940B3BEDA8064DF7FF (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_value_bytes", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_value_bytes)(___0_p);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_p);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80296
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double NativeMethods_sqlite3_value_double_m9E8EAC14A692E9B38842B373C8AA50D6676FFA38 (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	typedef double (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_value_double", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	double returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_value_double)(___0_p);
+	#else
+	double returnValue = il2cppPInvokeFunc(___0_p);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80297
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_value_int_m5DA03EF1BA685B7A31EFF8A8551D5373036476B5 (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_value_int", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_value_int)(___0_p);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_p);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80298
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NativeMethods_sqlite3_value_int64_mD64FB7288F4B830C2B1E8CFBF46093AA7558CA8B (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	typedef int64_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_value_int64", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int64_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_value_int64)(___0_p);
+	#else
+	int64_t returnValue = il2cppPInvokeFunc(___0_p);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80299
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_value_type_mDE053B60DF467AB0C80174906C35B24C2402B245 (intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_value_type", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_value_type)(___0_p);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_p);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80300
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_user_data_mF2A40FA200DF74049844E616584A6C9FC3BEA68E (intptr_t ___0_context, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_user_data", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_user_data)(___0_context);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(___0_context);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80301
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_blob_m2E07AA620425E788BD778594335C3387945A83F8 (intptr_t ___0_context, intptr_t ___1_val, int32_t ___2_nSize, intptr_t ___3_pvReserved, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t, intptr_t, int32_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_blob", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_blob)(___0_context, ___1_val, ___2_nSize, ___3_pvReserved);
+	#else
+	il2cppPInvokeFunc(___0_context, ___1_val, ___2_nSize, ___3_pvReserved);
+	#endif
+
+}
+// Method Definition Index: 80302
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_double_m0C8D30FF994C8503E1B748A087BBDACC70317128 (intptr_t ___0_context, double ___1_val, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t, double);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(double);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_double", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_double)(___0_context, ___1_val);
+	#else
+	il2cppPInvokeFunc(___0_context, ___1_val);
+	#endif
+
+}
+// Method Definition Index: 80303
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_error_m0F6DD9E44B7B8CE7FA73350E1DA17446CC25F8A1 (intptr_t ___0_context, uint8_t* ___1_strErr, int32_t ___2_nLen, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t, uint8_t*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(uint8_t*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_error", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_error)(___0_context, ___1_strErr, ___2_nLen);
+	#else
+	il2cppPInvokeFunc(___0_context, ___1_strErr, ___2_nLen);
+	#endif
+
+}
+// Method Definition Index: 80304
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_int_m94EB377F87FD59B116C572413A47956FD0DBAC36 (intptr_t ___0_context, int32_t ___1_val, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_int", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_int)(___0_context, ___1_val);
+	#else
+	il2cppPInvokeFunc(___0_context, ___1_val);
+	#endif
+
+}
+// Method Definition Index: 80305
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_int64_m98DDA204911392FCCD6B5B0D56717271ECB64387 (intptr_t ___0_context, int64_t ___1_val, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t, int64_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(int64_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_int64", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_int64)(___0_context, ___1_val);
+	#else
+	il2cppPInvokeFunc(___0_context, ___1_val);
+	#endif
+
+}
+// Method Definition Index: 80306
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_null_mF608ACEAEA63397AD5D9DBC55DDF40748AEC3018 (intptr_t ___0_context, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_null", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_null)(___0_context);
+	#else
+	il2cppPInvokeFunc(___0_context);
+	#endif
+
+}
+// Method Definition Index: 80307
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_text_mC53514E44EFC50DB4AB6E7CFC5AD74679CEA94C2 (intptr_t ___0_context, uint8_t* ___1_val, int32_t ___2_nLen, intptr_t ___3_pvReserved, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t, uint8_t*, int32_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(uint8_t*) + sizeof(int32_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_text", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_text)(___0_context, ___1_val, ___2_nLen, ___3_pvReserved);
+	#else
+	il2cppPInvokeFunc(___0_context, ___1_val, ___2_nLen, ___3_pvReserved);
+	#endif
+
+}
+// Method Definition Index: 80308
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_zeroblob_m280974C4B32FE102D1C0D1F968E5803D78CF2E25 (intptr_t ___0_context, int32_t ___1_n, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_zeroblob", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_zeroblob)(___0_context, ___1_n);
+	#else
+	il2cppPInvokeFunc(___0_context, ___1_n);
+	#endif
+
+}
+// Method Definition Index: 80309
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_error_toobig_mD53496313DAC24069DED9DB01121C8B27B7F6E23 (intptr_t ___0_context, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_error_toobig", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_error_toobig)(___0_context);
+	#else
+	il2cppPInvokeFunc(___0_context);
+	#endif
+
+}
+// Method Definition Index: 80310
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_error_nomem_m0A85A5A220BDFA624111A79E472B90C1447F2373 (intptr_t ___0_context, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_error_nomem", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_error_nomem)(___0_context);
+	#else
+	il2cppPInvokeFunc(___0_context);
+	#endif
+
+}
+// Method Definition Index: 80311
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_result_error_code_m2FFDBC8325F5243C77C7ECB16D0A1E21F3B3391E (intptr_t ___0_context, int32_t ___1_code, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_result_error_code", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_result_error_code)(___0_context, ___1_code);
+	#else
+	il2cppPInvokeFunc(___0_context, ___1_code);
+	#endif
+
+}
+// Method Definition Index: 80312
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_aggregate_context_m35391325DE6CB95FA6BCFE9E1424FCDFFB08C5BE (intptr_t ___0_context, int32_t ___1_nBytes, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (intptr_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_aggregate_context", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_aggregate_context)(___0_context, ___1_nBytes);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(___0_context, ___1_nBytes);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80313
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_key_m2062C8CDA986281E1F26715BA8C3208FA1A39A01 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_key, int32_t ___2_keylen, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_key", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_key)(____0_db_marshaled, ___1_key, ___2_keylen);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_key, ___2_keylen);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80314
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_key_v2_mA88F77CF5F04EA4A4504E8801520BB213586BF9F (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbname, uint8_t* ___2_key, int32_t ___3_keylen, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, uint8_t*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(uint8_t*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_key_v2", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_key_v2)(____0_db_marshaled, ___1_dbname, ___2_key, ___3_keylen);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_dbname, ___2_key, ___3_keylen);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80315
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_rekey_m8771AF524E2C8D5E68AA05445579C0C4A35E5DCB (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_key, int32_t ___2_keylen, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_rekey", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_rekey)(____0_db_marshaled, ___1_key, ___2_keylen);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_key, ___2_keylen);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80316
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_rekey_v2_m4996B7D6A0A1489081836C5E09E077B4DFAAE37E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbname, uint8_t* ___2_key, int32_t ___3_keylen, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, uint8_t*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(uint8_t*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_rekey_v2", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_rekey_v2)(____0_db_marshaled, ___1_dbname, ___2_key, ___3_keylen);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_dbname, ___2_key, ___3_keylen);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80317
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_none_mC19B753F7D8BB8551DDBF7E04F1A411B26F9B76C (int32_t ___0_op, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_config)(___0_op);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_op);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80318
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_int_m73A62A5D5A211487BECC191061CE11B1FA51CB51 (int32_t ___0_op, int32_t ___1_val, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (int32_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_config)(___0_op, ___1_val);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_op, ___1_val);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80319
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_int_arm64cc_m9152F31E9D37A090E33585C0E9D429D0BD59AF72 (int32_t ___0_op, intptr_t ___1_dummy1, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, int32_t ___8_val, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (int32_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_config)(___0_op, ___1_dummy1, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ___8_val);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_op, ___1_dummy1, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ___8_val);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80320
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_log_m6E221F0799E330F69ECF0C7D21E49D81181387DC (int32_t ___0_op, callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (int32_t, Il2CppMethodPointer, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	Il2CppMethodPointer ____1_func_marshaled = NULL;
+	____1_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___1_func));
+
+	void* ____2_pvUser_marshaled = NULL;
+	if (___2_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____2_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___2_pvUser, (&___safeHandle_reference_incremented_for____2_pvUser), NULL);
+	____2_pvUser_marshaled = reinterpret_cast<void*>((___2_pvUser)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_config)(___0_op, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_op, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____2_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___2_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80321
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_config_log_arm64cc_m459CC6B3C26448122EDE2DB29A260F46B4A3A133 (int32_t ___0_op, intptr_t ___1_dummy1, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* ___8_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___9_pvUser, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (int32_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, Il2CppMethodPointer, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	Il2CppMethodPointer ____8_func_marshaled = NULL;
+	____8_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___8_func));
+
+	void* ____9_pvUser_marshaled = NULL;
+	if (___9_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____9_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___9_pvUser, (&___safeHandle_reference_incremented_for____9_pvUser), NULL);
+	____9_pvUser_marshaled = reinterpret_cast<void*>((___9_pvUser)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_config)(___0_op, ___1_dummy1, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ____8_func_marshaled, ____9_pvUser_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_op, ___1_dummy1, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ____8_func_marshaled, ____9_pvUser_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____9_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___9_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80322
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_charptr_m5DD1EF94C3525E3F296AEBE592D033C193EF7063 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, uint8_t* ___2_val, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_config)(____0_db_marshaled, ___1_op, ___2_val);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_op, ___2_val);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80323
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_charptr_arm64cc_m612E7C58D17D5FFFE83868CAEDF6304651A11924 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, uint8_t* ___8_val, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_config)(____0_db_marshaled, ___1_op, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ___8_val);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_op, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ___8_val);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80324
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_int_outint_m6231F6BE5A38384588988CAC32B64211CDDE4ED7 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, int32_t ___2_val, int32_t* ___3_result, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, int32_t, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(int32_t) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_config)(____0_db_marshaled, ___1_op, ___2_val, ___3_result);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_op, ___2_val, ___3_result);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80325
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_int_outint_arm64cc_m51738C5ED1C35274F2E90819279812608F99B3CC (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, int32_t ___8_val, int32_t* ___9_result, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, int32_t, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_config)(____0_db_marshaled, ___1_op, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ___8_val, ___9_result);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_op, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ___8_val, ___9_result);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80326
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_intptr_int_int_mDA52C53B1808DFF86712C28D7A0F701C8AAB4D99 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, intptr_t ___2_ptr, int32_t ___3_int0, int32_t ___4_int1, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, intptr_t, int32_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(intptr_t) + sizeof(int32_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_config)(____0_db_marshaled, ___1_op, ___2_ptr, ___3_int0, ___4_int1);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_op, ___2_ptr, ___3_int0, ___4_int1);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80327
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_db_config_intptr_int_int_arm64cc_m0DB99D4377ED4C3D728B1B64C091AD76EE0E76C1 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_op, intptr_t ___2_dummy2, intptr_t ___3_dummy3, intptr_t ___4_dummy4, intptr_t ___5_dummy5, intptr_t ___6_dummy6, intptr_t ___7_dummy7, intptr_t ___8_ptr, int32_t ___9_int0, int32_t ___10_int1, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, intptr_t, int32_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_config", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_config)(____0_db_marshaled, ___1_op, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ___8_ptr, ___9_int0, ___10_int1);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_op, ___2_dummy2, ___3_dummy3, ___4_dummy4, ___5_dummy5, ___6_dummy6, ___7_dummy7, ___8_ptr, ___9_int0, ___10_int1);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80328
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_create_collation_mD0E33AFCC223873880399FEDF2E98134F9C6448A (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_strName, int32_t ___2_nType, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___3_pvUser, callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* ___4_func, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t, void*, Il2CppMethodPointer);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*) + sizeof(int32_t) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_create_collation", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	uint8_t* ____1_strName_marshaled = NULL;
+	if (___1_strName != NULL)
+	{
+		____1_strName_marshaled = reinterpret_cast<uint8_t*>((___1_strName)->GetAddressAtUnchecked(0));
+	}
+
+	void* ____3_pvUser_marshaled = NULL;
+	if (___3_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____3_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___3_pvUser, (&___safeHandle_reference_incremented_for____3_pvUser), NULL);
+	____3_pvUser_marshaled = reinterpret_cast<void*>((___3_pvUser)->___handle);
+
+	Il2CppMethodPointer ____4_func_marshaled = NULL;
+	____4_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___4_func));
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_create_collation)(____0_db_marshaled, ____1_strName_marshaled, ___2_nType, ____3_pvUser_marshaled, ____4_func_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ____1_strName_marshaled, ___2_nType, ____3_pvUser_marshaled, ____4_func_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____3_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___3_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80329
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_update_hook_m223062D8C47CB7A9507CDBEB8985C68B4903E858 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (void*, Il2CppMethodPointer, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_update_hook", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	Il2CppMethodPointer ____1_func_marshaled = NULL;
+	____1_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___1_func));
+
+	void* ____2_pvUser_marshaled = NULL;
+	if (___2_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____2_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___2_pvUser, (&___safeHandle_reference_incremented_for____2_pvUser), NULL);
+	____2_pvUser_marshaled = reinterpret_cast<void*>((___2_pvUser)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_update_hook)(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____2_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___2_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80330
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_commit_hook_m2C261D8A2B45F98F7B4B2F6262681BF890F4A068 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (void*, Il2CppMethodPointer, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_commit_hook", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	Il2CppMethodPointer ____1_func_marshaled = NULL;
+	____1_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___1_func));
+
+	void* ____2_pvUser_marshaled = NULL;
+	if (___2_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____2_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___2_pvUser, (&___safeHandle_reference_incremented_for____2_pvUser), NULL);
+	____2_pvUser_marshaled = reinterpret_cast<void*>((___2_pvUser)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_commit_hook)(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____2_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___2_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80331
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_profile_mFBCBC561864BFE6D8E97BACE7999D009E67C0E4F (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (void*, Il2CppMethodPointer, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_profile", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	Il2CppMethodPointer ____1_func_marshaled = NULL;
+	____1_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___1_func));
+
+	void* ____2_pvUser_marshaled = NULL;
+	if (___2_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____2_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___2_pvUser, (&___safeHandle_reference_incremented_for____2_pvUser), NULL);
+	____2_pvUser_marshaled = reinterpret_cast<void*>((___2_pvUser)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_profile)(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____2_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___2_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80332
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_progress_handler_mDB48A3C57C45F26D556E860DB4D9E65D06084EE1 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_instructions, callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* ___2_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___3_pvUser, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (void*, int32_t, Il2CppMethodPointer, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_progress_handler", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	Il2CppMethodPointer ____2_func_marshaled = NULL;
+	____2_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___2_func));
+
+	void* ____3_pvUser_marshaled = NULL;
+	if (___3_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____3_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___3_pvUser, (&___safeHandle_reference_incremented_for____3_pvUser), NULL);
+	____3_pvUser_marshaled = reinterpret_cast<void*>((___3_pvUser)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_progress_handler)(____0_db_marshaled, ___1_instructions, ____2_func_marshaled, ____3_pvUser_marshaled);
+	#else
+	il2cppPInvokeFunc(____0_db_marshaled, ___1_instructions, ____2_func_marshaled, ____3_pvUser_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____3_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___3_pvUser, NULL);
+	}
+
+}
+// Method Definition Index: 80333
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_trace_m92990850680EE9667ECCCC6778341948BFBA45D8 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (void*, Il2CppMethodPointer, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_trace", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	Il2CppMethodPointer ____1_func_marshaled = NULL;
+	____1_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___1_func));
+
+	void* ____2_pvUser_marshaled = NULL;
+	if (___2_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____2_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___2_pvUser, (&___safeHandle_reference_incremented_for____2_pvUser), NULL);
+	____2_pvUser_marshaled = reinterpret_cast<void*>((___2_pvUser)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_trace)(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____2_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___2_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80334
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_rollback_hook_m32C703D20AC6455B4B22FF77E7A3D686CFFE5B51 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* ___1_func, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (void*, Il2CppMethodPointer, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_rollback_hook", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	Il2CppMethodPointer ____1_func_marshaled = NULL;
+	____1_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___1_func));
+
+	void* ____2_pvUser_marshaled = NULL;
+	if (___2_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____2_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___2_pvUser, (&___safeHandle_reference_incremented_for____2_pvUser), NULL);
+	____2_pvUser_marshaled = reinterpret_cast<void*>((___2_pvUser)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_rollback_hook)(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ____1_func_marshaled, ____2_pvUser_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____2_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___2_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80335
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_db_handle_m2477E1760DBA3CEC75321782D5EF12EB5382C406 (intptr_t ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_db_handle", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_db_handle)(___0_stmt);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(___0_stmt);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80336
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_next_stmt_mC220BABB46706E121D5CA9200A50F60BBE3EED65 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, intptr_t ___1_stmt, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (void*, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_next_stmt", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_next_stmt)(____0_db_marshaled, ___1_stmt);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_stmt);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80337
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stmt_isexplain_m3A1B6F024F781DD86F29EB3CE450DA99831C2CB6 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_stmt_isexplain", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_stmt_isexplain)(____0_stmt_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80338
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stmt_busy_mC85D1149FA7A3214A82E54BBEAC82A937CFF7E27 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_stmt_busy", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_stmt_busy)(____0_stmt_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80339
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_stmt_readonly_m33A9A109FDD5B82FC8684E7B8D182AFA70583F19 (sqlite3_stmt_t1D3FD1CE508E61E06BBEC8B87AA8785A0D1BF99F* ___0_stmt, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_stmt_readonly", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_stmt_marshaled = NULL;
+	if (___0_stmt == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("stmt"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_stmt = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_stmt, (&___safeHandle_reference_incremented_for____0_stmt), NULL);
+	____0_stmt_marshaled = reinterpret_cast<void*>((___0_stmt)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_stmt_readonly)(____0_stmt_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_stmt_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_stmt)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_stmt, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80340
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_exec_m5E45F8606A33788DFC994E37D07B95D741F02060 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_strSql, callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* ___2_cb, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___3_pvParam, intptr_t* ___4_errMsg, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, Il2CppMethodPointer, void*, intptr_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(void*) + sizeof(void*) + sizeof(intptr_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_exec", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	Il2CppMethodPointer ____2_cb_marshaled = NULL;
+	____2_cb_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___2_cb));
+
+	void* ____3_pvParam_marshaled = NULL;
+	if (___3_pvParam == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvParam"), NULL);
+	bool ___safeHandle_reference_incremented_for____3_pvParam = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___3_pvParam, (&___safeHandle_reference_incremented_for____3_pvParam), NULL);
+	____3_pvParam_marshaled = reinterpret_cast<void*>((___3_pvParam)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_exec)(____0_db_marshaled, ___1_strSql, ____2_cb_marshaled, ____3_pvParam_marshaled, ___4_errMsg);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_strSql, ____2_cb_marshaled, ____3_pvParam_marshaled, ___4_errMsg);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____3_pvParam)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___3_pvParam, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80341
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_get_autocommit_m9139AD931266DBB7BB2EDF00C13303CFA0452897 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_get_autocommit", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_get_autocommit)(____0_db_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80342
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_extended_result_codes_m21C0ED4AE65E8D0A8694CB0304C836E49D158E6E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_onoff, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_extended_result_codes", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_extended_result_codes)(____0_db_marshaled, ___1_onoff);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_onoff);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80343
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_errcode_m15FD41D74B6E1266605E7B843F57F7E5C56A100E (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_errcode", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_errcode)(____0_db_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80344
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_extended_errcode_mB17190AA0E4AF17D7E187DBEBAA64BEAE3CFBD5F (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_extended_errcode", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_extended_errcode)(____0_db_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80345
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t* NativeMethods_sqlite3_errstr_m5130988CC20B5C68D039C4B9CA452AA911D13BA4 (int32_t ___0_rc, const RuntimeMethod* method) 
+{
+	typedef uint8_t* (CDECL *PInvokeFunc) (int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_errstr", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	uint8_t* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_errstr)(___0_rc);
+	#else
+	uint8_t* returnValue = il2cppPInvokeFunc(___0_rc);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80346
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_log_m784D1A8926E3652C59E5F5D2A6AFF654F59CD96F (int32_t ___0_iErrCode, uint8_t* ___1_zFormat, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (int32_t, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_log", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_log)(___0_iErrCode, ___1_zFormat);
+	#else
+	il2cppPInvokeFunc(___0_iErrCode, ___1_zFormat);
+	#endif
+
+}
+// Method Definition Index: 80347
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_file_control_m1DD294DE9A59E4FC3B6BBFD2DC7C4B6E42DF09FF (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_zDbName, int32_t ___2_op, intptr_t ___3_pArg, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*) + sizeof(int32_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_file_control", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	uint8_t* ____1_zDbName_marshaled = NULL;
+	if (___1_zDbName != NULL)
+	{
+		____1_zDbName_marshaled = reinterpret_cast<uint8_t*>((___1_zDbName)->GetAddressAtUnchecked(0));
+	}
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_file_control)(____0_db_marshaled, ____1_zDbName_marshaled, ___2_op, ___3_pArg);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ____1_zDbName_marshaled, ___2_op, ___3_pArg);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80348
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* NativeMethods_sqlite3_backup_init_mC396545FECB75F4F5E5755DA5001499E66C00071 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_destDb, uint8_t* ___1_zDestName, sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___2_sourceDb, uint8_t* ___3_zSourceName, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	typedef void* (CDECL *PInvokeFunc) (void*, uint8_t*, void*, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(void*) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_backup_init", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_destDb_marshaled = NULL;
+	if (___0_destDb == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("destDb"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_destDb = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_destDb, (&___safeHandle_reference_incremented_for____0_destDb), NULL);
+	____0_destDb_marshaled = reinterpret_cast<void*>((___0_destDb)->___handle);
+
+	void* ____2_sourceDb_marshaled = NULL;
+	if (___2_sourceDb == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("sourceDb"), NULL);
+	bool ___safeHandle_reference_incremented_for____2_sourceDb = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___2_sourceDb, (&___safeHandle_reference_incremented_for____2_sourceDb), NULL);
+	____2_sourceDb_marshaled = reinterpret_cast<void*>((___2_sourceDb)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	void* returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_backup_init)(____0_destDb_marshaled, ___1_zDestName, ____2_sourceDb_marshaled, ___3_zSourceName);
+	#else
+	void* returnValue = il2cppPInvokeFunc(____0_destDb_marshaled, ___1_zDestName, ____2_sourceDb_marshaled, ___3_zSourceName);
+	#endif
+
+	sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* _returnValue_unmarshaled = (sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30*)il2cpp_codegen_object_new(sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30_il2cpp_TypeInfo_var);
+	sqlite3_backup__ctor_m63CDC567578C17953C38ACA2E9FAAE0BFF778F7C(_returnValue_unmarshaled, NULL);
+	intptr_t _returnValue_unmarshaled_handle_temp;
+	_returnValue_unmarshaled_handle_temp = (intptr_t)returnValue;
+	(_returnValue_unmarshaled)->___handle = _returnValue_unmarshaled_handle_temp;
+
+	if (___safeHandle_reference_incremented_for____0_destDb)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_destDb, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____2_sourceDb)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___2_sourceDb, NULL);
+	}
+
+	return _returnValue_unmarshaled;
+}
+// Method Definition Index: 80349
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_backup_step_m77D3876F06A33CDA6B3844AF090EF849EBE18321 (sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* ___0_backup, int32_t ___1_nPage, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_backup_step", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_backup_marshaled = NULL;
+	if (___0_backup == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("backup"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_backup = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_backup, (&___safeHandle_reference_incremented_for____0_backup), NULL);
+	____0_backup_marshaled = reinterpret_cast<void*>((___0_backup)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_backup_step)(____0_backup_marshaled, ___1_nPage);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_backup_marshaled, ___1_nPage);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_backup)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_backup, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80350
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_backup_remaining_m8C47F277EBA1815D31F7610CB94430E39D79820F (sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* ___0_backup, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_backup_remaining", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_backup_marshaled = NULL;
+	if (___0_backup == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("backup"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_backup = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_backup, (&___safeHandle_reference_incremented_for____0_backup), NULL);
+	____0_backup_marshaled = reinterpret_cast<void*>((___0_backup)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_backup_remaining)(____0_backup_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_backup_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_backup)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_backup, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80351
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_backup_pagecount_mEA68B0630198E84415AE6C72679F26BCBAEF86A0 (sqlite3_backup_tA63020E6886E8E4AC469CE68788C7FA2BE7B8C30* ___0_backup, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_backup_pagecount", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_backup_marshaled = NULL;
+	if (___0_backup == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("backup"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_backup = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_backup, (&___safeHandle_reference_incremented_for____0_backup), NULL);
+	____0_backup_marshaled = reinterpret_cast<void*>((___0_backup)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_backup_pagecount)(____0_backup_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_backup_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_backup)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_backup, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80352
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_backup_finish_m4D682B70469F04D1B073E1D278486FD5B92F0F4F (intptr_t ___0_backup, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_backup_finish", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_backup_finish)(___0_backup);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_backup);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80353
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_snapshot_get_mAB8467745A5605B867275F4D3A745C68714EDD5D (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_schema, intptr_t* ___2_snap, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, intptr_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(intptr_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_snapshot_get", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_snapshot_get)(____0_db_marshaled, ___1_schema, ___2_snap);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_schema, ___2_snap);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80354
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_snapshot_open_m03272621ED49584DE5D1C024C40DD323089ABE58 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_schema, sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* ___2_snap, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_snapshot_open", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	void* ____2_snap_marshaled = NULL;
+	if (___2_snap == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("snap"), NULL);
+	bool ___safeHandle_reference_incremented_for____2_snap = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___2_snap, (&___safeHandle_reference_incremented_for____2_snap), NULL);
+	____2_snap_marshaled = reinterpret_cast<void*>((___2_snap)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_snapshot_open)(____0_db_marshaled, ___1_schema, ____2_snap_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_schema, ____2_snap_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____2_snap)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___2_snap, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80355
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_snapshot_recover_m876BB09CEDFBEC0B49B6A2439E0128C8F58C66C9 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_name, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_snapshot_recover", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_snapshot_recover)(____0_db_marshaled, ___1_name);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_name);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80356
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_snapshot_cmp_m7CC285F6C3C4C8790F7946F9597595594C84936A (sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* ___0_p1, sqlite3_snapshot_tABC1706F945F4C8DF190B74C4DD0C0FC64682475* ___1_p2, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_snapshot_cmp", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_p1_marshaled = NULL;
+	if (___0_p1 == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("p1"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_p1 = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_p1, (&___safeHandle_reference_incremented_for____0_p1), NULL);
+	____0_p1_marshaled = reinterpret_cast<void*>((___0_p1)->___handle);
+
+	void* ____1_p2_marshaled = NULL;
+	if (___1_p2 == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("p2"), NULL);
+	bool ___safeHandle_reference_incremented_for____1_p2 = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___1_p2, (&___safeHandle_reference_incremented_for____1_p2), NULL);
+	____1_p2_marshaled = reinterpret_cast<void*>((___1_p2)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_snapshot_cmp)(____0_p1_marshaled, ____1_p2_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_p1_marshaled, ____1_p2_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_p1)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_p1, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____1_p2)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___1_p2, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80357
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeMethods_sqlite3_snapshot_free_m15E8179E1ABEDD7BF346F3C09868E03D4A12383F (intptr_t ___0_snap, const RuntimeMethod* method) 
+{
+	typedef void (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_snapshot_free", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	reinterpret_cast<PInvokeFunc>(sqlite3_snapshot_free)(___0_snap);
+	#else
+	il2cppPInvokeFunc(___0_snap);
+	#endif
+
+}
+// Method Definition Index: 80358
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_open_mE9024A71D2196E007FD62A66376117ABE976A06A (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_sdb, uint8_t* ___2_table, uint8_t* ___3_col, int64_t ___4_rowid, int32_t ___5_flags, sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057** ___6_blob, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, uint8_t*, uint8_t*, int64_t, int32_t, void**);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(uint8_t*) + sizeof(uint8_t*) + sizeof(int64_t) + sizeof(int32_t) + sizeof(void**);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_blob_open", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	void* ____6_blob_empty = NULL;
+	void** ____6_blob_marshaled = &____6_blob_empty;
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_blob_open)(____0_db_marshaled, ___1_sdb, ___2_table, ___3_col, ___4_rowid, ___5_flags, ____6_blob_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_sdb, ___2_table, ___3_col, ___4_rowid, ___5_flags, ____6_blob_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* _____6_blob_marshaled_unmarshaled_dereferenced = (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057*)il2cpp_codegen_object_new(sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057_il2cpp_TypeInfo_var);
+	sqlite3_blob__ctor_mF7C7B725FB9FE141587C4BE5A547765610962159(_____6_blob_marshaled_unmarshaled_dereferenced, NULL);
+	intptr_t _____6_blob_marshaled_unmarshaled_dereferenced_handle_temp;
+	_____6_blob_marshaled_unmarshaled_dereferenced_handle_temp = (intptr_t)*____6_blob_marshaled;
+	(_____6_blob_marshaled_unmarshaled_dereferenced)->___handle = _____6_blob_marshaled_unmarshaled_dereferenced_handle_temp;
+	*___6_blob = _____6_blob_marshaled_unmarshaled_dereferenced;
+	Il2CppCodeGenWriteBarrier((void**)___6_blob, (void*)____6_blob_marshaled);
+
+	return returnValue;
+}
+// Method Definition Index: 80359
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_write_mAB5436F556D20B11EAD2896720AF1F0BF57A5BCB (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, uint8_t* ___1_b, int32_t ___2_n, int32_t ___3_offset, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(int32_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_blob_write", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_blob_marshaled = NULL;
+	if (___0_blob == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("blob"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_blob = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_blob, (&___safeHandle_reference_incremented_for____0_blob), NULL);
+	____0_blob_marshaled = reinterpret_cast<void*>((___0_blob)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_blob_write)(____0_blob_marshaled, ___1_b, ___2_n, ___3_offset);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_blob_marshaled, ___1_b, ___2_n, ___3_offset);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_blob)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_blob, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80360
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_read_mBACB8E76DFC2D19A137A2B439009162F0377A1E9 (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, uint8_t* ___1_b, int32_t ___2_n, int32_t ___3_offset, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(int32_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_blob_read", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_blob_marshaled = NULL;
+	if (___0_blob == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("blob"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_blob = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_blob, (&___safeHandle_reference_incremented_for____0_blob), NULL);
+	____0_blob_marshaled = reinterpret_cast<void*>((___0_blob)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_blob_read)(____0_blob_marshaled, ___1_b, ___2_n, ___3_offset);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_blob_marshaled, ___1_b, ___2_n, ___3_offset);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_blob)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_blob, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80361
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_bytes_mE0CE568996D0321E37433DC4A5AFC4EA8F42FD6A (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_blob_bytes", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_blob_marshaled = NULL;
+	if (___0_blob == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("blob"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_blob = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_blob, (&___safeHandle_reference_incremented_for____0_blob), NULL);
+	____0_blob_marshaled = reinterpret_cast<void*>((___0_blob)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_blob_bytes)(____0_blob_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_blob_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_blob)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_blob, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80362
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_reopen_m1EEC5541C6FB038C676000EDD6F8907EBB9ECF3C (sqlite3_blob_tFE15C3078D13F18E37D20A3903D8198FD540C057* ___0_blob, int64_t ___1_rowid, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int64_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int64_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_blob_reopen", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_blob_marshaled = NULL;
+	if (___0_blob == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("blob"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_blob = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_blob, (&___safeHandle_reference_incremented_for____0_blob), NULL);
+	____0_blob_marshaled = reinterpret_cast<void*>((___0_blob)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_blob_reopen)(____0_blob_marshaled, ___1_rowid);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_blob_marshaled, ___1_rowid);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_blob)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_blob, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80363
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_blob_close_mB991EBF186781C6A48BD1A4FFCDD71C3424F468B (intptr_t ___0_blob, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_blob_close", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_blob_close)(___0_blob);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_blob);
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80364
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_wal_autocheckpoint_m79101C1B3E8231720620CF97B161192B44BC3077 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, int32_t ___1_n, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_wal_autocheckpoint", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_wal_autocheckpoint)(____0_db_marshaled, ___1_n);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_n);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80365
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_wal_checkpoint_mACB84BDEBE7F06C246B82764077CBA78C2DA5464 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbName, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_wal_checkpoint", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_wal_checkpoint)(____0_db_marshaled, ___1_dbName);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_dbName);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80366
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_wal_checkpoint_v2_m5F0678DFE51A0A0C878E8533CAD5F02881D82515 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_dbName, int32_t ___2_eMode, int32_t* ___3_logSize, int32_t* ___4_framesCheckPointed, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t, int32_t*, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(int32_t) + sizeof(int32_t*) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_wal_checkpoint_v2", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_wal_checkpoint_v2)(____0_db_marshaled, ___1_dbName, ___2_eMode, ___3_logSize, ___4_framesCheckPointed);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_dbName, ___2_eMode, ___3_logSize, ___4_framesCheckPointed);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80367
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_set_authorizer_m453B4962FE8A2FB7A110C1ABCFF8783352039FCC (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* ___1_cb, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___2_pvUser, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, Il2CppMethodPointer, void*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_set_authorizer", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	Il2CppMethodPointer ____1_cb_marshaled = NULL;
+	____1_cb_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___1_cb));
+
+	void* ____2_pvUser_marshaled = NULL;
+	if (___2_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____2_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___2_pvUser, (&___safeHandle_reference_incremented_for____2_pvUser), NULL);
+	____2_pvUser_marshaled = reinterpret_cast<void*>((___2_pvUser)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_set_authorizer)(____0_db_marshaled, ____1_cb_marshaled, ____2_pvUser_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ____1_cb_marshaled, ____2_pvUser_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____2_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___2_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80368
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_create_function_v2_m0760B009E420EC8F3ECA41F59E5E0EEF302DA49B (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_strName, int32_t ___2_nArgs, int32_t ___3_nType, hook_handle_tADC84A43AFFDADC460E97AB35367B400F2EB2EFC* ___4_pvUser, callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* ___5_func, callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* ___6_fstep, callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* ___7_ffinal, callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* ___8_fdestroy, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, int32_t, int32_t, void*, Il2CppMethodPointer, Il2CppMethodPointer, Il2CppMethodPointer, Il2CppMethodPointer);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(void*) + sizeof(int32_t) + sizeof(int32_t) + sizeof(void*) + sizeof(void*) + sizeof(void*) + sizeof(void*) + sizeof(void*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_create_function_v2", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	uint8_t* ____1_strName_marshaled = NULL;
+	if (___1_strName != NULL)
+	{
+		____1_strName_marshaled = reinterpret_cast<uint8_t*>((___1_strName)->GetAddressAtUnchecked(0));
+	}
+
+	void* ____4_pvUser_marshaled = NULL;
+	if (___4_pvUser == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("pvUser"), NULL);
+	bool ___safeHandle_reference_incremented_for____4_pvUser = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___4_pvUser, (&___safeHandle_reference_incremented_for____4_pvUser), NULL);
+	____4_pvUser_marshaled = reinterpret_cast<void*>((___4_pvUser)->___handle);
+
+	Il2CppMethodPointer ____5_func_marshaled = NULL;
+	____5_func_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___5_func));
+
+	Il2CppMethodPointer ____6_fstep_marshaled = NULL;
+	____6_fstep_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___6_fstep));
+
+	Il2CppMethodPointer ____7_ffinal_marshaled = NULL;
+	____7_ffinal_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___7_ffinal));
+
+	Il2CppMethodPointer ____8_fdestroy_marshaled = NULL;
+	____8_fdestroy_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___8_fdestroy));
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_create_function_v2)(____0_db_marshaled, ____1_strName_marshaled, ___2_nArgs, ___3_nType, ____4_pvUser_marshaled, ____5_func_marshaled, ____6_fstep_marshaled, ____7_ffinal_marshaled, ____8_fdestroy_marshaled);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ____1_strName_marshaled, ___2_nArgs, ___3_nType, ____4_pvUser_marshaled, ____5_func_marshaled, ____6_fstep_marshaled, ____7_ffinal_marshaled, ____8_fdestroy_marshaled);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	if (___safeHandle_reference_incremented_for____4_pvUser)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___4_pvUser, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80369
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_keyword_count_mAABDA4F380BCCFA3E3F5BF7341CEFBA0B3A70E09 (const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) ();
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = 0;
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_keyword_count", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_keyword_count)();
+	#else
+	int32_t returnValue = il2cppPInvokeFunc();
+	#endif
+
+	return returnValue;
+}
+// Method Definition Index: 80370
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_keyword_name_m7E2DA42004F0A883820721947AD3C27199118AA6 (int32_t ___0_i, uint8_t** ___1_name, int32_t* ___2_length, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (int32_t, uint8_t**, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(int32_t) + sizeof(uint8_t**) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_keyword_name", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	uint8_t* ____1_name_empty = NULL;
+	uint8_t** ____1_name_marshaled = &____1_name_empty;
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_keyword_name)(___0_i, ____1_name_marshaled, ___2_length);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(___0_i, ____1_name_marshaled, ___2_length);
+	#endif
+
+	uint8_t* _____1_name_marshaled_unmarshaled_dereferenced = NULL;
+	_____1_name_marshaled_unmarshaled_dereferenced = *____1_name_marshaled;
+	*___1_name = _____1_name_marshaled_unmarshaled_dereferenced;
+
+	return returnValue;
+}
+// Method Definition Index: 80371
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t NativeMethods_sqlite3_serialize_m376409574407750CE5FF2D13A147357E150FF282 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_schema, int64_t* ___2_size, int32_t ___3_flags, const RuntimeMethod* method) 
+{
+	typedef intptr_t (CDECL *PInvokeFunc) (void*, uint8_t*, int64_t*, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(int64_t*) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_serialize", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_serialize)(____0_db_marshaled, ___1_schema, ___2_size, ___3_flags);
+	#else
+	intptr_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_schema, ___2_size, ___3_flags);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+// Method Definition Index: 80372
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeMethods_sqlite3_deserialize_mC8B1A52F584A3927CF82AA3BEAA46F0939A5AE63 (sqlite3_tE144FE5AD2EDE033B98BE41F3E6D40AE2469BEA2* ___0_db, uint8_t* ___1_schema, intptr_t ___2_data, int64_t ___3_szDb, int64_t ___4_szBuf, int32_t ___5_flags, const RuntimeMethod* method) 
+{
+	typedef int32_t (CDECL *PInvokeFunc) (void*, uint8_t*, intptr_t, int64_t, int64_t, int32_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_e_sqlite3_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(void*) + sizeof(uint8_t*) + sizeof(intptr_t) + sizeof(int64_t) + sizeof(int64_t) + sizeof(int32_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("e_sqlite3"), "sqlite3_deserialize", IL2CPP_CALL_C, CHARSET_NOT_SPECIFIED, parameterSize, true);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	void* ____0_db_marshaled = NULL;
+	if (___0_db == NULL) IL2CPP_RAISE_MANAGED_EXCEPTION(il2cpp_codegen_get_argument_null_exception("db"), NULL);
+	bool ___safeHandle_reference_incremented_for____0_db = false;
+	SafeHandle_DangerousAddRef_m9FA46208A92D8B33059B8E8712F49AE45BB5E922(___0_db, (&___safeHandle_reference_incremented_for____0_db), NULL);
+	____0_db_marshaled = reinterpret_cast<void*>((___0_db)->___handle);
+
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_e_sqlite3_INTERNAL
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(sqlite3_deserialize)(____0_db_marshaled, ___1_schema, ___2_data, ___3_szDb, ___4_szBuf, ___5_flags);
+	#else
+	int32_t returnValue = il2cppPInvokeFunc(____0_db_marshaled, ___1_schema, ___2_data, ___3_szDb, ___4_szBuf, ___5_flags);
+	#endif
+
+	if (___safeHandle_reference_incremented_for____0_db)
+	{
+		SafeHandle_DangerousRelease_m30A8B4E5BEA935C8925BC2115CD0AD13B937953E(___0_db, NULL);
+	}
+
+	return returnValue;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void callback_log_Invoke_mCC53A07020C73947172FA70A1E193DEE478BBD73_Multicast(callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* __this, intptr_t ___0_pUserData, int32_t ___1_errorCode, intptr_t ___2_pMessage, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* currentDelegate = reinterpret_cast<callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_pUserData, ___1_errorCode, ___2_pMessage, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void callback_log_Invoke_mCC53A07020C73947172FA70A1E193DEE478BBD73_OpenInst(callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* __this, intptr_t ___0_pUserData, int32_t ___1_errorCode, intptr_t ___2_pMessage, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_pUserData, ___1_errorCode, ___2_pMessage, method);
+}
+void callback_log_Invoke_mCC53A07020C73947172FA70A1E193DEE478BBD73_OpenStatic(callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* __this, intptr_t ___0_pUserData, int32_t ___1_errorCode, intptr_t ___2_pMessage, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_pUserData, ___1_errorCode, ___2_pMessage, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B (callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* __this, intptr_t ___0_pUserData, int32_t ___1_errorCode, intptr_t ___2_pMessage, const RuntimeMethod* method)
+{
+	typedef void (CDECL *PInvokeFunc)(intptr_t, int32_t, intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_pUserData, ___1_errorCode, ___2_pMessage);
+
+}
+// Method Definition Index: 80373
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_log__ctor_m1FB9275EE1F814C65D6BA2A64C164147C1DE7AFC (callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 3;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_log_Invoke_mCC53A07020C73947172FA70A1E193DEE478BBD73_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_log_Invoke_mCC53A07020C73947172FA70A1E193DEE478BBD73_Multicast;
+}
+// Method Definition Index: 80374
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_log_Invoke_mCC53A07020C73947172FA70A1E193DEE478BBD73 (callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* __this, intptr_t ___0_pUserData, int32_t ___1_errorCode, intptr_t ___2_pMessage, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_pUserData, ___1_errorCode, ___2_pMessage, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80375
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_log_BeginInvoke_mD407B4C3C09A024DC1D43873095B3FB9EBAEA350 (callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* __this, intptr_t ___0_pUserData, int32_t ___1_errorCode, intptr_t ___2_pMessage, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
+{
+	void *__d_args[4] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_pUserData);
+	__d_args[1] = Box(il2cpp_defaults.int32_class, &___1_errorCode);
+	__d_args[2] = Box(il2cpp_defaults.int_class, &___2_pMessage);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
+}
+// Method Definition Index: 80376
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_log_EndInvoke_mCCF0EE18DC76D0870997ED5FD50E83F1B20DA569 (callback_log_t8787B292D5B69DD3FF3FE62744DF346AC72E327B* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void callback_scalar_function_Invoke_mC4D933FCC06483E42A0BDCEF97416AC6F763EBBA_Multicast(callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* currentDelegate = reinterpret_cast<callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_context, ___1_nArgs, ___2_argsptr, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void callback_scalar_function_Invoke_mC4D933FCC06483E42A0BDCEF97416AC6F763EBBA_OpenInst(callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_context, ___1_nArgs, ___2_argsptr, method);
+}
+void callback_scalar_function_Invoke_mC4D933FCC06483E42A0BDCEF97416AC6F763EBBA_OpenStatic(callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_context, ___1_nArgs, ___2_argsptr, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054 (callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method)
+{
+	typedef void (CDECL *PInvokeFunc)(intptr_t, int32_t, intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_context, ___1_nArgs, ___2_argsptr);
+
+}
+// Method Definition Index: 80377
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_scalar_function__ctor_mFAB24FB7BD04C8B6DA4F8D7D7F9A1B9AC12DB58F (callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 3;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_scalar_function_Invoke_mC4D933FCC06483E42A0BDCEF97416AC6F763EBBA_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_scalar_function_Invoke_mC4D933FCC06483E42A0BDCEF97416AC6F763EBBA_Multicast;
+}
+// Method Definition Index: 80378
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_scalar_function_Invoke_mC4D933FCC06483E42A0BDCEF97416AC6F763EBBA (callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_context, ___1_nArgs, ___2_argsptr, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80379
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_scalar_function_BeginInvoke_m75AD8B58A4A57FD2016F9492C01D38B07E3734F3 (callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
+{
+	void *__d_args[4] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_context);
+	__d_args[1] = Box(il2cpp_defaults.int32_class, &___1_nArgs);
+	__d_args[2] = Box(il2cpp_defaults.int_class, &___2_argsptr);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
+}
+// Method Definition Index: 80380
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_scalar_function_EndInvoke_m811B261F0E1AFEE1DC2D2DCDDA69E852B87840E6 (callback_scalar_function_tBF6A62A55E8AF47428E5F47D597F0D28F245B054* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void callback_agg_function_step_Invoke_m7994E830BD7088EE1008725FEC7F1FF59A00EAF3_Multicast(callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* currentDelegate = reinterpret_cast<callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_context, ___1_nArgs, ___2_argsptr, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void callback_agg_function_step_Invoke_m7994E830BD7088EE1008725FEC7F1FF59A00EAF3_OpenInst(callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_context, ___1_nArgs, ___2_argsptr, method);
+}
+void callback_agg_function_step_Invoke_m7994E830BD7088EE1008725FEC7F1FF59A00EAF3_OpenStatic(callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_context, ___1_nArgs, ___2_argsptr, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED (callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method)
+{
+	typedef void (CDECL *PInvokeFunc)(intptr_t, int32_t, intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_context, ___1_nArgs, ___2_argsptr);
+
+}
+// Method Definition Index: 80381
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_agg_function_step__ctor_mD9169C85C8988341AA108B7C2713D855B043BF78 (callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 3;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_agg_function_step_Invoke_m7994E830BD7088EE1008725FEC7F1FF59A00EAF3_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_agg_function_step_Invoke_m7994E830BD7088EE1008725FEC7F1FF59A00EAF3_Multicast;
+}
+// Method Definition Index: 80382
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_agg_function_step_Invoke_m7994E830BD7088EE1008725FEC7F1FF59A00EAF3 (callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_context, ___1_nArgs, ___2_argsptr, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80383
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_agg_function_step_BeginInvoke_m13D11BDBA04BBDAC2DF2E36CF46F092473D29F5A (callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* __this, intptr_t ___0_context, int32_t ___1_nArgs, intptr_t ___2_argsptr, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
+{
+	void *__d_args[4] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_context);
+	__d_args[1] = Box(il2cpp_defaults.int32_class, &___1_nArgs);
+	__d_args[2] = Box(il2cpp_defaults.int_class, &___2_argsptr);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
+}
+// Method Definition Index: 80384
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_agg_function_step_EndInvoke_mF3F724C851786E8C007AFB6A1197D66B4803C703 (callback_agg_function_step_t6631228D4986D5DAD1D773B550882D13FED65CED* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void callback_agg_function_final_Invoke_m7F5815ED66834AF16E3A62679F05C5D73A5556EC_Multicast(callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* __this, intptr_t ___0_context, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* currentDelegate = reinterpret_cast<callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_context, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void callback_agg_function_final_Invoke_m7F5815ED66834AF16E3A62679F05C5D73A5556EC_OpenInst(callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* __this, intptr_t ___0_context, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_context, method);
+}
+void callback_agg_function_final_Invoke_m7F5815ED66834AF16E3A62679F05C5D73A5556EC_OpenStatic(callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* __this, intptr_t ___0_context, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_context, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F (callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* __this, intptr_t ___0_context, const RuntimeMethod* method)
+{
+	typedef void (CDECL *PInvokeFunc)(intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_context);
+
+}
+// Method Definition Index: 80385
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_agg_function_final__ctor_m24AD2C75EEF8546805DE08FEA65A74EAF335B788 (callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_agg_function_final_Invoke_m7F5815ED66834AF16E3A62679F05C5D73A5556EC_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_agg_function_final_Invoke_m7F5815ED66834AF16E3A62679F05C5D73A5556EC_Multicast;
+}
+// Method Definition Index: 80386
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_agg_function_final_Invoke_m7F5815ED66834AF16E3A62679F05C5D73A5556EC (callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* __this, intptr_t ___0_context, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_context, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80387
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_agg_function_final_BeginInvoke_mA88324AA2D34EC351B58A86CFF07EEC97DE7A1CC (callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* __this, intptr_t ___0_context, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___1_callback, RuntimeObject* ___2_object, const RuntimeMethod* method) 
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_context);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___1_callback, (RuntimeObject*)___2_object);
+}
+// Method Definition Index: 80388
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_agg_function_final_EndInvoke_m55642A0F9B19928ED9D3F75FAC1FE0F1790A5BC2 (callback_agg_function_final_tBB6A7A6C560305F199E1A66DA41FDBCE4965B43F* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void callback_destroy_Invoke_mD611BA5D5BBE40FB606FC3AC697901E8E1BA4AAF_Multicast(callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* __this, intptr_t ___0_p, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* currentDelegate = reinterpret_cast<callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_p, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void callback_destroy_Invoke_mD611BA5D5BBE40FB606FC3AC697901E8E1BA4AAF_OpenInst(callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* __this, intptr_t ___0_p, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_p, method);
+}
+void callback_destroy_Invoke_mD611BA5D5BBE40FB606FC3AC697901E8E1BA4AAF_OpenStatic(callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* __this, intptr_t ___0_p, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_p, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351 (callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* __this, intptr_t ___0_p, const RuntimeMethod* method)
+{
+	typedef void (CDECL *PInvokeFunc)(intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_p);
+
+}
+// Method Definition Index: 80389
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_destroy__ctor_m1286A18C4EFEBB0293414CC02AB277F4D8D87EAF (callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_destroy_Invoke_mD611BA5D5BBE40FB606FC3AC697901E8E1BA4AAF_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_destroy_Invoke_mD611BA5D5BBE40FB606FC3AC697901E8E1BA4AAF_Multicast;
+}
+// Method Definition Index: 80390
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_destroy_Invoke_mD611BA5D5BBE40FB606FC3AC697901E8E1BA4AAF (callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* __this, intptr_t ___0_p, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_p, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80391
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_destroy_BeginInvoke_m2B5A7329B40BB22FEFC212B016E71A5F7C622F72 (callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* __this, intptr_t ___0_p, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___1_callback, RuntimeObject* ___2_object, const RuntimeMethod* method) 
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_p);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___1_callback, (RuntimeObject*)___2_object);
+}
+// Method Definition Index: 80392
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_destroy_EndInvoke_mE9ECAF11CAB26B6766448B389768DF8D84B70A03 (callback_destroy_t196CAA62B91CAB2FE7AFA98FA27B902DD949A351* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+int32_t callback_collation_Invoke_m5976D6716588157AC0D16E0987CE5F8EC173D5EA_Multicast(callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* __this, intptr_t ___0_puser, int32_t ___1_len1, intptr_t ___2_pv1, int32_t ___3_len2, intptr_t ___4_pv2, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	int32_t retVal = 0;
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* currentDelegate = reinterpret_cast<callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED*>(delegatesToInvoke[i]);
+		typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_puser, ___1_len1, ___2_pv1, ___3_len2, ___4_pv2, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+	return retVal;
+}
+int32_t callback_collation_Invoke_m5976D6716588157AC0D16E0987CE5F8EC173D5EA_OpenInst(callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* __this, intptr_t ___0_puser, int32_t ___1_len1, intptr_t ___2_pv1, int32_t ___3_len2, intptr_t ___4_pv2, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, int32_t, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_puser, ___1_len1, ___2_pv1, ___3_len2, ___4_pv2, method);
+}
+int32_t callback_collation_Invoke_m5976D6716588157AC0D16E0987CE5F8EC173D5EA_OpenStatic(callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* __this, intptr_t ___0_puser, int32_t ___1_len1, intptr_t ___2_pv1, int32_t ___3_len2, intptr_t ___4_pv2, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, int32_t, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_puser, ___1_len1, ___2_pv1, ___3_len2, ___4_pv2, method);
+}
+IL2CPP_EXTERN_C  int32_t DelegatePInvokeWrapper_callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED (callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* __this, intptr_t ___0_puser, int32_t ___1_len1, intptr_t ___2_pv1, int32_t ___3_len2, intptr_t ___4_pv2, const RuntimeMethod* method)
+{
+	typedef int32_t (CDECL *PInvokeFunc)(intptr_t, int32_t, intptr_t, int32_t, intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	int32_t returnValue = il2cppPInvokeFunc(___0_puser, ___1_len1, ___2_pv1, ___3_len2, ___4_pv2);
+
+	return returnValue;
+}
+// Method Definition Index: 80393
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_collation__ctor_mCC4562D044D6941D6F721FA0EFD0EC5B1FE81492 (callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 5;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_collation_Invoke_m5976D6716588157AC0D16E0987CE5F8EC173D5EA_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_collation_Invoke_m5976D6716588157AC0D16E0987CE5F8EC173D5EA_Multicast;
+}
+// Method Definition Index: 80394
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_collation_Invoke_m5976D6716588157AC0D16E0987CE5F8EC173D5EA (callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* __this, intptr_t ___0_puser, int32_t ___1_len1, intptr_t ___2_pv1, int32_t ___3_len2, intptr_t ___4_pv2, const RuntimeMethod* method) 
+{
+	typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, int32_t, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_puser, ___1_len1, ___2_pv1, ___3_len2, ___4_pv2, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80395
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_collation_BeginInvoke_m793E7EE8B341CFBD37D9BB1A5E4409999192A7B7 (callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* __this, intptr_t ___0_puser, int32_t ___1_len1, intptr_t ___2_pv1, int32_t ___3_len2, intptr_t ___4_pv2, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___5_callback, RuntimeObject* ___6_object, const RuntimeMethod* method) 
+{
+	void *__d_args[6] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_puser);
+	__d_args[1] = Box(il2cpp_defaults.int32_class, &___1_len1);
+	__d_args[2] = Box(il2cpp_defaults.int_class, &___2_pv1);
+	__d_args[3] = Box(il2cpp_defaults.int32_class, &___3_len2);
+	__d_args[4] = Box(il2cpp_defaults.int_class, &___4_pv2);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___5_callback, (RuntimeObject*)___6_object);
+}
+// Method Definition Index: 80396
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_collation_EndInvoke_m1C7E6CE729469EC07EB67AC8F0E8D40A853990DA (callback_collation_t09FDA630B6F3715072981DC6AA234B0CE61943ED* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+	return *(int32_t*)UnBox ((RuntimeObject*)__result);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void callback_update_Invoke_mE282153826547104535F334F329320703B15EEEA_Multicast(callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* __this, intptr_t ___0_p, int32_t ___1_typ, intptr_t ___2_db, intptr_t ___3_tbl, int64_t ___4_rowid, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* currentDelegate = reinterpret_cast<callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, intptr_t, int64_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_p, ___1_typ, ___2_db, ___3_tbl, ___4_rowid, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void callback_update_Invoke_mE282153826547104535F334F329320703B15EEEA_OpenInst(callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* __this, intptr_t ___0_p, int32_t ___1_typ, intptr_t ___2_db, intptr_t ___3_tbl, int64_t ___4_rowid, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, int32_t, intptr_t, intptr_t, int64_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_p, ___1_typ, ___2_db, ___3_tbl, ___4_rowid, method);
+}
+void callback_update_Invoke_mE282153826547104535F334F329320703B15EEEA_OpenStatic(callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* __this, intptr_t ___0_p, int32_t ___1_typ, intptr_t ___2_db, intptr_t ___3_tbl, int64_t ___4_rowid, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, int32_t, intptr_t, intptr_t, int64_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_p, ___1_typ, ___2_db, ___3_tbl, ___4_rowid, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90 (callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* __this, intptr_t ___0_p, int32_t ___1_typ, intptr_t ___2_db, intptr_t ___3_tbl, int64_t ___4_rowid, const RuntimeMethod* method)
+{
+	typedef void (CDECL *PInvokeFunc)(intptr_t, int32_t, intptr_t, intptr_t, int64_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_p, ___1_typ, ___2_db, ___3_tbl, ___4_rowid);
+
+}
+// Method Definition Index: 80397
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_update__ctor_m702943B46304E4C1D52A8CB9FF89CD94399396BB (callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 5;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_update_Invoke_mE282153826547104535F334F329320703B15EEEA_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_update_Invoke_mE282153826547104535F334F329320703B15EEEA_Multicast;
+}
+// Method Definition Index: 80398
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_update_Invoke_mE282153826547104535F334F329320703B15EEEA (callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* __this, intptr_t ___0_p, int32_t ___1_typ, intptr_t ___2_db, intptr_t ___3_tbl, int64_t ___4_rowid, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, intptr_t, int64_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_p, ___1_typ, ___2_db, ___3_tbl, ___4_rowid, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80399
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_update_BeginInvoke_mC80EED44E1B2D358ED0690F8ACA602B86B5D26FB (callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* __this, intptr_t ___0_p, int32_t ___1_typ, intptr_t ___2_db, intptr_t ___3_tbl, int64_t ___4_rowid, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___5_callback, RuntimeObject* ___6_object, const RuntimeMethod* method) 
+{
+	void *__d_args[6] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_p);
+	__d_args[1] = Box(il2cpp_defaults.int32_class, &___1_typ);
+	__d_args[2] = Box(il2cpp_defaults.int_class, &___2_db);
+	__d_args[3] = Box(il2cpp_defaults.int_class, &___3_tbl);
+	__d_args[4] = Box(il2cpp_defaults.int64_class, &___4_rowid);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___5_callback, (RuntimeObject*)___6_object);
+}
+// Method Definition Index: 80400
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_update_EndInvoke_m018DD31D36A7D89D9D08D351B603C4FB31969358 (callback_update_t7CF3339C3A0702F0B772A5406AEA1BE3C8AD1C90* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+int32_t callback_commit_Invoke_m5E78D7E26617156BA10479235AB35BD4D9DD6603_Multicast(callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	int32_t retVal = 0;
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* currentDelegate = reinterpret_cast<callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12*>(delegatesToInvoke[i]);
+		typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_puser, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+	return retVal;
+}
+int32_t callback_commit_Invoke_m5E78D7E26617156BA10479235AB35BD4D9DD6603_OpenInst(callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_puser, method);
+}
+int32_t callback_commit_Invoke_m5E78D7E26617156BA10479235AB35BD4D9DD6603_OpenStatic(callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_puser, method);
+}
+IL2CPP_EXTERN_C  int32_t DelegatePInvokeWrapper_callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12 (callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	typedef int32_t (CDECL *PInvokeFunc)(intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	int32_t returnValue = il2cppPInvokeFunc(___0_puser);
+
+	return returnValue;
+}
+// Method Definition Index: 80401
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_commit__ctor_mDB4A28C9FFFB6737E5CED81EB1F87B10E8C09322 (callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_commit_Invoke_m5E78D7E26617156BA10479235AB35BD4D9DD6603_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_commit_Invoke_m5E78D7E26617156BA10479235AB35BD4D9DD6603_Multicast;
+}
+// Method Definition Index: 80402
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_commit_Invoke_m5E78D7E26617156BA10479235AB35BD4D9DD6603 (callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* __this, intptr_t ___0_puser, const RuntimeMethod* method) 
+{
+	typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_puser, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80403
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_commit_BeginInvoke_m74C8FE3974E6DAB691C34432BED94F5838EC1721 (callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* __this, intptr_t ___0_puser, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___1_callback, RuntimeObject* ___2_object, const RuntimeMethod* method) 
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_puser);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___1_callback, (RuntimeObject*)___2_object);
+}
+// Method Definition Index: 80404
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_commit_EndInvoke_m681D7B05160B75B31D6A404304E04283C13C82C4 (callback_commit_t203B983F579B2FF81A83F1759DDCDE929DBBEA12* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+	return *(int32_t*)UnBox ((RuntimeObject*)__result);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void callback_profile_Invoke_m9C127DDC4FABA990639F98E4BF73C46FAE5B3FF8_Multicast(callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* __this, intptr_t ___0_puser, intptr_t ___1_statement, int64_t ___2_elapsed, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* currentDelegate = reinterpret_cast<callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, intptr_t, int64_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_puser, ___1_statement, ___2_elapsed, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void callback_profile_Invoke_m9C127DDC4FABA990639F98E4BF73C46FAE5B3FF8_OpenInst(callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* __this, intptr_t ___0_puser, intptr_t ___1_statement, int64_t ___2_elapsed, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, intptr_t, int64_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_puser, ___1_statement, ___2_elapsed, method);
+}
+void callback_profile_Invoke_m9C127DDC4FABA990639F98E4BF73C46FAE5B3FF8_OpenStatic(callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* __this, intptr_t ___0_puser, intptr_t ___1_statement, int64_t ___2_elapsed, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, intptr_t, int64_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_puser, ___1_statement, ___2_elapsed, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4 (callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* __this, intptr_t ___0_puser, intptr_t ___1_statement, int64_t ___2_elapsed, const RuntimeMethod* method)
+{
+	typedef void (CDECL *PInvokeFunc)(intptr_t, intptr_t, int64_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_puser, ___1_statement, ___2_elapsed);
+
+}
+// Method Definition Index: 80405
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_profile__ctor_mCA3D9C6C318620A09239BF7F76D45C97897AEFA5 (callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 3;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_profile_Invoke_m9C127DDC4FABA990639F98E4BF73C46FAE5B3FF8_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_profile_Invoke_m9C127DDC4FABA990639F98E4BF73C46FAE5B3FF8_Multicast;
+}
+// Method Definition Index: 80406
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_profile_Invoke_m9C127DDC4FABA990639F98E4BF73C46FAE5B3FF8 (callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* __this, intptr_t ___0_puser, intptr_t ___1_statement, int64_t ___2_elapsed, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, intptr_t, int64_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_puser, ___1_statement, ___2_elapsed, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80407
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_profile_BeginInvoke_m50F8D140747BBD915194268DD02011E535065D55 (callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* __this, intptr_t ___0_puser, intptr_t ___1_statement, int64_t ___2_elapsed, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
+{
+	void *__d_args[4] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_puser);
+	__d_args[1] = Box(il2cpp_defaults.int_class, &___1_statement);
+	__d_args[2] = Box(il2cpp_defaults.int64_class, &___2_elapsed);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
+}
+// Method Definition Index: 80408
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_profile_EndInvoke_m46C00518363DE34792FA0024A20F71CA2B83D6BD (callback_profile_tF975A629CD8D6A2339D430EA65A3661AEFE2F9F4* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+int32_t callback_progress_handler_Invoke_m93EBED9F8E05CA1B3373EA2639185F4B51A5B317_Multicast(callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	int32_t retVal = 0;
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* currentDelegate = reinterpret_cast<callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2*>(delegatesToInvoke[i]);
+		typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_puser, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+	return retVal;
+}
+int32_t callback_progress_handler_Invoke_m93EBED9F8E05CA1B3373EA2639185F4B51A5B317_OpenInst(callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_puser, method);
+}
+int32_t callback_progress_handler_Invoke_m93EBED9F8E05CA1B3373EA2639185F4B51A5B317_OpenStatic(callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_puser, method);
+}
+IL2CPP_EXTERN_C  int32_t DelegatePInvokeWrapper_callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2 (callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	typedef int32_t (CDECL *PInvokeFunc)(intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	int32_t returnValue = il2cppPInvokeFunc(___0_puser);
+
+	return returnValue;
+}
+// Method Definition Index: 80409
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_progress_handler__ctor_mAAED7B981A29A66D7B99E2149A38F7EAC3AD7753 (callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_progress_handler_Invoke_m93EBED9F8E05CA1B3373EA2639185F4B51A5B317_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_progress_handler_Invoke_m93EBED9F8E05CA1B3373EA2639185F4B51A5B317_Multicast;
+}
+// Method Definition Index: 80410
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_progress_handler_Invoke_m93EBED9F8E05CA1B3373EA2639185F4B51A5B317 (callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* __this, intptr_t ___0_puser, const RuntimeMethod* method) 
+{
+	typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_puser, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80411
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_progress_handler_BeginInvoke_m753AA0AEC0F4971625A2EFD1FAE3FC5E2540FF54 (callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* __this, intptr_t ___0_puser, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___1_callback, RuntimeObject* ___2_object, const RuntimeMethod* method) 
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_puser);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___1_callback, (RuntimeObject*)___2_object);
+}
+// Method Definition Index: 80412
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_progress_handler_EndInvoke_mFFEBCF02F436C816657771A961710F818ADEB34A (callback_progress_handler_tD1711E43931A200E3A0B623C0157337603CFDEE2* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+	return *(int32_t*)UnBox ((RuntimeObject*)__result);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+int32_t callback_authorizer_Invoke_m21F3CBD72EA36244A244FEB6475B94549C47B021_Multicast(callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* __this, intptr_t ___0_puser, int32_t ___1_action_code, intptr_t ___2_param0, intptr_t ___3_param1, intptr_t ___4_dbName, intptr_t ___5_inner_most_trigger_or_view, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	int32_t retVal = 0;
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* currentDelegate = reinterpret_cast<callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696*>(delegatesToInvoke[i]);
+		typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, intptr_t, intptr_t, intptr_t, const RuntimeMethod*);
+		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_puser, ___1_action_code, ___2_param0, ___3_param1, ___4_dbName, ___5_inner_most_trigger_or_view, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+	return retVal;
+}
+int32_t callback_authorizer_Invoke_m21F3CBD72EA36244A244FEB6475B94549C47B021_OpenInst(callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* __this, intptr_t ___0_puser, int32_t ___1_action_code, intptr_t ___2_param0, intptr_t ___3_param1, intptr_t ___4_dbName, intptr_t ___5_inner_most_trigger_or_view, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, int32_t, intptr_t, intptr_t, intptr_t, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_puser, ___1_action_code, ___2_param0, ___3_param1, ___4_dbName, ___5_inner_most_trigger_or_view, method);
+}
+int32_t callback_authorizer_Invoke_m21F3CBD72EA36244A244FEB6475B94549C47B021_OpenStatic(callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* __this, intptr_t ___0_puser, int32_t ___1_action_code, intptr_t ___2_param0, intptr_t ___3_param1, intptr_t ___4_dbName, intptr_t ___5_inner_most_trigger_or_view, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, int32_t, intptr_t, intptr_t, intptr_t, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_puser, ___1_action_code, ___2_param0, ___3_param1, ___4_dbName, ___5_inner_most_trigger_or_view, method);
+}
+IL2CPP_EXTERN_C  int32_t DelegatePInvokeWrapper_callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696 (callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* __this, intptr_t ___0_puser, int32_t ___1_action_code, intptr_t ___2_param0, intptr_t ___3_param1, intptr_t ___4_dbName, intptr_t ___5_inner_most_trigger_or_view, const RuntimeMethod* method)
+{
+	typedef int32_t (CDECL *PInvokeFunc)(intptr_t, int32_t, intptr_t, intptr_t, intptr_t, intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	int32_t returnValue = il2cppPInvokeFunc(___0_puser, ___1_action_code, ___2_param0, ___3_param1, ___4_dbName, ___5_inner_most_trigger_or_view);
+
+	return returnValue;
+}
+// Method Definition Index: 80413
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_authorizer__ctor_mBE07180CDB573196133F892C032B9B366FFD15EA (callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 6;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_authorizer_Invoke_m21F3CBD72EA36244A244FEB6475B94549C47B021_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_authorizer_Invoke_m21F3CBD72EA36244A244FEB6475B94549C47B021_Multicast;
+}
+// Method Definition Index: 80414
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_authorizer_Invoke_m21F3CBD72EA36244A244FEB6475B94549C47B021 (callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* __this, intptr_t ___0_puser, int32_t ___1_action_code, intptr_t ___2_param0, intptr_t ___3_param1, intptr_t ___4_dbName, intptr_t ___5_inner_most_trigger_or_view, const RuntimeMethod* method) 
+{
+	typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, intptr_t, intptr_t, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_puser, ___1_action_code, ___2_param0, ___3_param1, ___4_dbName, ___5_inner_most_trigger_or_view, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80415
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_authorizer_BeginInvoke_m56066294A8EEFD349E47C7DB6BCC506595AC3021 (callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* __this, intptr_t ___0_puser, int32_t ___1_action_code, intptr_t ___2_param0, intptr_t ___3_param1, intptr_t ___4_dbName, intptr_t ___5_inner_most_trigger_or_view, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___6_callback, RuntimeObject* ___7_object, const RuntimeMethod* method) 
+{
+	void *__d_args[7] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_puser);
+	__d_args[1] = Box(il2cpp_defaults.int32_class, &___1_action_code);
+	__d_args[2] = Box(il2cpp_defaults.int_class, &___2_param0);
+	__d_args[3] = Box(il2cpp_defaults.int_class, &___3_param1);
+	__d_args[4] = Box(il2cpp_defaults.int_class, &___4_dbName);
+	__d_args[5] = Box(il2cpp_defaults.int_class, &___5_inner_most_trigger_or_view);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___6_callback, (RuntimeObject*)___7_object);
+}
+// Method Definition Index: 80416
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_authorizer_EndInvoke_m21A8A565ABD67444540FB53C8E89FE8DEED780DC (callback_authorizer_tE18988B4BAECAF786D1F2ED56B9AEC01944D5696* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+	return *(int32_t*)UnBox ((RuntimeObject*)__result);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void callback_trace_Invoke_m857676219023A7B8DA01441728461AE6DF317199_Multicast(callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* __this, intptr_t ___0_puser, intptr_t ___1_statement, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* currentDelegate = reinterpret_cast<callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, intptr_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_puser, ___1_statement, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void callback_trace_Invoke_m857676219023A7B8DA01441728461AE6DF317199_OpenInst(callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* __this, intptr_t ___0_puser, intptr_t ___1_statement, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_puser, ___1_statement, method);
+}
+void callback_trace_Invoke_m857676219023A7B8DA01441728461AE6DF317199_OpenStatic(callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* __this, intptr_t ___0_puser, intptr_t ___1_statement, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_puser, ___1_statement, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190 (callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* __this, intptr_t ___0_puser, intptr_t ___1_statement, const RuntimeMethod* method)
+{
+	typedef void (CDECL *PInvokeFunc)(intptr_t, intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_puser, ___1_statement);
+
+}
+// Method Definition Index: 80417
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_trace__ctor_mB7045C1E866EF82F727938567620E2359EA834B5 (callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 2;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_trace_Invoke_m857676219023A7B8DA01441728461AE6DF317199_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_trace_Invoke_m857676219023A7B8DA01441728461AE6DF317199_Multicast;
+}
+// Method Definition Index: 80418
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_trace_Invoke_m857676219023A7B8DA01441728461AE6DF317199 (callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* __this, intptr_t ___0_puser, intptr_t ___1_statement, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_puser, ___1_statement, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80419
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_trace_BeginInvoke_m4D9A087716E2CAD6FE013BCFF481A0F8A0A1023E (callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* __this, intptr_t ___0_puser, intptr_t ___1_statement, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
+{
+	void *__d_args[3] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_puser);
+	__d_args[1] = Box(il2cpp_defaults.int_class, &___1_statement);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
+}
+// Method Definition Index: 80420
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_trace_EndInvoke_m413A152DD4AF1347321AC5275E2CDB20B48A64CA (callback_trace_t8BCD9E021AF886FC5CC9DCA10205D2888C793190* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void callback_rollback_Invoke_mB29E3CF0F5BF0B91FF71367FD25D1CA5D227735F_Multicast(callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* currentDelegate = reinterpret_cast<callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_puser, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void callback_rollback_Invoke_mB29E3CF0F5BF0B91FF71367FD25D1CA5D227735F_OpenInst(callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_puser, method);
+}
+void callback_rollback_Invoke_mB29E3CF0F5BF0B91FF71367FD25D1CA5D227735F_OpenStatic(callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_puser, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7 (callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* __this, intptr_t ___0_puser, const RuntimeMethod* method)
+{
+	typedef void (CDECL *PInvokeFunc)(intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_puser);
+
+}
+// Method Definition Index: 80421
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_rollback__ctor_mAAA9D0128F246165CD4C717D630F69CFAE5DC2B2 (callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_rollback_Invoke_mB29E3CF0F5BF0B91FF71367FD25D1CA5D227735F_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_rollback_Invoke_mB29E3CF0F5BF0B91FF71367FD25D1CA5D227735F_Multicast;
+}
+// Method Definition Index: 80422
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_rollback_Invoke_mB29E3CF0F5BF0B91FF71367FD25D1CA5D227735F (callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* __this, intptr_t ___0_puser, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_puser, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80423
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_rollback_BeginInvoke_mD1346ABEE81F24D0EA42A9CA8AE8E1291B99B582 (callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* __this, intptr_t ___0_puser, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___1_callback, RuntimeObject* ___2_object, const RuntimeMethod* method) 
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_puser);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___1_callback, (RuntimeObject*)___2_object);
+}
+// Method Definition Index: 80424
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_rollback_EndInvoke_mD8C53191874880D75C9435644E251BC3BCAC5AD0 (callback_rollback_t72B37645B1E2DC395C0573FEE41AFF7469CED3E7* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+int32_t callback_exec_Invoke_m5E8F650FE7E2A5228095D9831529F736F8F12C8F_Multicast(callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* __this, intptr_t ___0_db, int32_t ___1_n, intptr_t ___2_values, intptr_t ___3_names, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	int32_t retVal = 0;
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* currentDelegate = reinterpret_cast<callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D*>(delegatesToInvoke[i]);
+		typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, intptr_t, const RuntimeMethod*);
+		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_db, ___1_n, ___2_values, ___3_names, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+	return retVal;
+}
+int32_t callback_exec_Invoke_m5E8F650FE7E2A5228095D9831529F736F8F12C8F_OpenInst(callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* __this, intptr_t ___0_db, int32_t ___1_n, intptr_t ___2_values, intptr_t ___3_names, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, int32_t, intptr_t, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_db, ___1_n, ___2_values, ___3_names, method);
+}
+int32_t callback_exec_Invoke_m5E8F650FE7E2A5228095D9831529F736F8F12C8F_OpenStatic(callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* __this, intptr_t ___0_db, int32_t ___1_n, intptr_t ___2_values, intptr_t ___3_names, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (intptr_t, int32_t, intptr_t, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr)(___0_db, ___1_n, ___2_values, ___3_names, method);
+}
+IL2CPP_EXTERN_C  int32_t DelegatePInvokeWrapper_callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D (callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* __this, intptr_t ___0_db, int32_t ___1_n, intptr_t ___2_values, intptr_t ___3_names, const RuntimeMethod* method)
+{
+	typedef int32_t (CDECL *PInvokeFunc)(intptr_t, int32_t, intptr_t, intptr_t);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	int32_t returnValue = il2cppPInvokeFunc(___0_db, ___1_n, ___2_values, ___3_names);
+
+	return returnValue;
+}
+// Method Definition Index: 80425
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void callback_exec__ctor_mE3FE6BAA7DB36577FC047933558235EEE1C7B040 (callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 4;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&callback_exec_Invoke_m5E8F650FE7E2A5228095D9831529F736F8F12C8F_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&callback_exec_Invoke_m5E8F650FE7E2A5228095D9831529F736F8F12C8F_Multicast;
+}
+// Method Definition Index: 80426
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_exec_Invoke_m5E8F650FE7E2A5228095D9831529F736F8F12C8F (callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* __this, intptr_t ___0_db, int32_t ___1_n, intptr_t ___2_values, intptr_t ___3_names, const RuntimeMethod* method) 
+{
+	typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t, intptr_t, intptr_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_db, ___1_n, ___2_values, ___3_names, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 80427
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* callback_exec_BeginInvoke_m480A0DE46C69F4DD727D9B6D059A0893D2AE2B63 (callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* __this, intptr_t ___0_db, int32_t ___1_n, intptr_t ___2_values, intptr_t ___3_names, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___4_callback, RuntimeObject* ___5_object, const RuntimeMethod* method) 
+{
+	void *__d_args[5] = {0};
+	__d_args[0] = Box(il2cpp_defaults.int_class, &___0_db);
+	__d_args[1] = Box(il2cpp_defaults.int32_class, &___1_n);
+	__d_args[2] = Box(il2cpp_defaults.int_class, &___2_values);
+	__d_args[3] = Box(il2cpp_defaults.int_class, &___3_names);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___4_callback, (RuntimeObject*)___5_object);
+}
+// Method Definition Index: 80428
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t callback_exec_EndInvoke_m8B2FE6D24E99AA2B2798F196ECF4545C8EA9F79A (callback_exec_tA4B00F28CA7B7800454DE74E5D9BCF8FAECDFD5D* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+	return *(int32_t*)UnBox ((RuntimeObject*)__result);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Method Definition Index: 80218
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SQLiteDeleteDelegate_Invoke_m05864E249C3D97BD1CE9D33569AC2607AF36697A_inline (SQLiteDeleteDelegate_t73C62C6E66D9D335B31C419EC44EC3D7D8378826* __this, intptr_t ___0_pVfs, uint8_t* ___1_zName, int32_t ___2_syncDir, const RuntimeMethod* method) 
+{
+	typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, uint8_t*, int32_t, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_pVfs, ___1_zName, ___2_syncDir, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 3766
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* IntPtr_ToPointer_m1A0612EED3A1C8B8850BE2943CFC42523064B4F6_inline (intptr_t* __this, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = *__this;
+		return (void*)(L_0);
+	}
+}
+// Method Definition Index: 3769
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_value1;
+		intptr_t L_1 = ___1_value2;
+		return (bool)((((intptr_t)L_0) == ((intptr_t)L_1))? 1 : 0);
+	}
+}
+// Method Definition Index: 7853
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t RuntimeInformation_get_ProcessArchitecture_mB2DAF77FAF4F8F97AE4045FA7DD140D60D8BF3F3_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_il2cpp_TypeInfo_var);
+		int32_t L_0 = ((RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_StaticFields*)il2cpp_codegen_static_fields_for(RuntimeInformation_tB2DFA85FB9251AE3A3112904C9DF06C30D1D3EAF_il2cpp_TypeInfo_var))->____processArchitecture;
+		return L_0;
+	}
+}
+// Method Definition Index: 7790
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 OSPlatform_get_OSX_m3618C7AE4705A5980128252AF2FD065694C048F2_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_il2cpp_TypeInfo_var);
+		OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9 L_0 = ((OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_StaticFields*)il2cpp_codegen_static_fields_for(OSPlatform_t8D6BF4B4756716D5B2694BCA813A49AE0227B9F9_il2cpp_TypeInfo_var))->___U3COSXU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 2292
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ReadOnlySpan_1_get_Length_m54864A0BB817050A9110E85BB5FB31EF63699982_gshared_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____length;
+		return L_0;
+	}
+}
+// Method Definition Index: 2290
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D ReadOnlySpan_1_Slice_mEB3D3A427170FC5A0AB734619D4792C299697C89_gshared_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, int32_t ___0_start, int32_t ___1_length, const RuntimeMethod* method) 
+{
+	ByReference_1_t9C85BCCAAF8C525B6C06B07E922D8D217BE8D6FC V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		int32_t L_0 = ___0_start;
+		int32_t L_1 = __this->____length;
+		if ((!(((uint32_t)L_0) <= ((uint32_t)L_1))))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		int32_t L_2 = ___1_length;
+		int32_t L_3 = __this->____length;
+		int32_t L_4 = ___0_start;
+		if ((!(((uint32_t)L_2) > ((uint32_t)((int32_t)il2cpp_codegen_subtract(L_3, L_4))))))
+		{
+			goto IL_0019;
+		}
+	}
+
+IL_0014:
+	{
+		ThrowHelper_ThrowArgumentOutOfRangeException_mD7D90276EDCDF9394A8EA635923E3B48BB71BD56(NULL);
+	}
+
+IL_0019:
+	{
+		ByReference_1_t9C85BCCAAF8C525B6C06B07E922D8D217BE8D6FC L_5 = __this->____pointer;
+		V_0 = L_5;
+		uint8_t* L_6;
+		L_6 = IL2CPP_BY_REFERENCE_GET_VALUE(uint8_t, (Il2CppByReference*)(&V_0));
+		int32_t L_7 = ___0_start;
+		uint8_t* L_8;
+		L_8 = il2cpp_unsafe_add<uint8_t,int32_t>(L_6, L_7);
+		int32_t L_9 = ___1_length;
+		ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D L_10;
+		memset((&L_10), 0, sizeof(L_10));
+		ReadOnlySpan_1__ctor_m0FC0B92549C2968E80B5F75A85F28B96DBFCFD63_inline((&L_10), L_8, L_9, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 15));
+		return L_10;
+	}
+}
+// Method Definition Index: 2386
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Span_1_get_Length_m8E944E4954E037877A25B9FF6B901F1F901D4769_gshared_inline (Span_1_tDADAC65069DFE6B57C458109115ECD795ED39305* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____length;
+		return L_0;
+	}
+}
+// Method Definition Index: 2281
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReadOnlySpan_1__ctor_m470D1527EF015478E8677C7BCB52C8410A1DB604_gshared_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, void* ___0_pointer, int32_t ___1_length, const RuntimeMethod* method) 
+{
+	{
+		goto IL_0016;
+	}
+
+IL_0016:
+	{
+		int32_t L_0 = ___1_length;
+		if ((((int32_t)L_0) >= ((int32_t)0)))
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		ThrowHelper_ThrowArgumentOutOfRangeException_mD7D90276EDCDF9394A8EA635923E3B48BB71BD56(NULL);
+	}
+
+IL_001f:
+	{
+		void* L_1 = ___0_pointer;
+		uint8_t* L_2;
+		L_2 = il2cpp_unsafe_as_ref<uint8_t>((uint8_t*)L_1);
+		ByReference_1_t9C85BCCAAF8C525B6C06B07E922D8D217BE8D6FC L_3;
+		memset((&L_3), 0, sizeof(L_3));
+		il2cpp_codegen_by_reference_constructor((Il2CppByReference*)(&L_3), L_2);
+		__this->____pointer = L_3;
+		int32_t L_4 = ___1_length;
+		__this->____length = L_4;
+		return;
+	}
+}
+// Method Definition Index: 2292
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC351_gshared_inline (ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____length;
+		return L_0;
+	}
+}
+// Method Definition Index: 2282
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ReadOnlySpan_1__ctor_m0FC0B92549C2968E80B5F75A85F28B96DBFCFD63_gshared_inline (ReadOnlySpan_1_tA850A6C0E88ABBA37646A078ACBC24D6D5FD9B4D* __this, uint8_t* ___0_ptr, int32_t ___1_length, const RuntimeMethod* method) 
+{
+	{
+		uint8_t* L_0 = ___0_ptr;
+		ByReference_1_t9C85BCCAAF8C525B6C06B07E922D8D217BE8D6FC L_1;
+		memset((&L_1), 0, sizeof(L_1));
+		il2cpp_codegen_by_reference_constructor((Il2CppByReference*)(&L_1), L_0);
+		__this->____pointer = L_1;
+		int32_t L_2 = ___1_length;
+		__this->____length = L_2;
+		return;
+	}
+}

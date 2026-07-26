@@ -1,0 +1,13 @@
+<!--
+2026-06-05 AI-Tag
+This was created with the help of Assistant, a Unity Artificial Intelligence product.
+-->
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/Scripts/LandingPage/AboutUs/AboutUs.uss" />
+    <ui:VisualElement class="about-root">
+        <ui:VisualElement class="spacer" />
+        <ui:VisualElement class="footer">
+            <ui:Button name="backButton" text="Back" class="back-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

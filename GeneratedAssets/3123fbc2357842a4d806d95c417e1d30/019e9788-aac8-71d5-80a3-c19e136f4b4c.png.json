@@ -1,0 +1,38 @@
+{
+    "asset": "3123fbc2357842a4d806d95c417e1d30",
+    "fileName": "019e9788-aac8-71d5-80a3-c19e136f4b4c.png",
+    "prompt": "A Unity game asset sprite sheet. White background. STRICT 4x4 grid (4 columns, 4 rows = 16 equal cells). The grid should fill the entire image with size 1024x1024 with no extra border or padding outside the cells. Contains the following individual game assets, one per cell left-to-right top-to-bottom, styled to exactly match the art style of the provided reference image: sReader Logo, Blue Notebook, Open Blue Book, Graduation Cap, Purple Calculator, Yellow Pencil, Educational Globe, Stack of Colorful Books, Blue Backpack, Blue Pencil Cup, Pink Ruler. Rules: - ONE asset per grid cell, centered with ample padding - Assets must be scaled to fit within their cell — do NOT overflow into grid lines - Grid must have exactly 4 columns and 4 rows of equal-sized cells - Grid lines: clean, solid black, clearly visible but not overly thick - All cells must be equal in size - White background inside every cell - Any remaining empty cells must be pure white with no content - NO text, labels, captions, names, or annotations anywhere in the image - Assets must look like they belong in the original scene (match style exactly) - Do NOT remove background on the game asset sprite sheet. Negative prompt: text, labels, captions, watermark, signature, blurry, low quality, distorted, overlapping assets, cropped assets, crossing lines, uneven grid lines, non-uniform cells, merged cells, thin grid lines, graph paper style, multiple items in one cell, grouped items, any letters or words.",
+    "negativePrompt": "",
+    "model": "gemini-3.0-pro",
+    "modelName": "Gemini 3.0 Pro",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "77ec3ee743390564b9062071c8382480",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

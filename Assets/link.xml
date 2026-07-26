@@ -1,0 +1,13 @@
+<!--
+  Prevents IL2CPP managed-code stripping from removing SQLitePCLRaw, whose
+  native provider is resolved by reflection in Batteries_V2.Init() at runtime.
+  Without this, release/IL2CPP builds (Android, iOS) can strip the provider and
+  SQLite fails to initialise. Required once SQLitePCLRaw.bundle_e_sqlite3 is
+  imported and the USE_SQLITEPCL_RAW define is set.
+-->
+<linker>
+  <assembly fullname="SQLitePCLRaw.core" preserve="all"/>
+  <assembly fullname="SQLitePCLRaw.provider.e_sqlite3" preserve="all"/>
+  <assembly fullname="SQLitePCLRaw.batteries_v2" preserve="all"/>
+  <assembly fullname="SQLitePCLRaw.lib.e_sqlite3" preserve="all"/>
+</linker>
