@@ -568,30 +568,114 @@ public class StoryBook : MonoBehaviour
     // ============================================================ FX =====
     void EnsureFX()
     {
-        if (_star != null) return;
-        _star = Tex(64, (dx, dy) => {
+        if (_star != null && _fxMat != null) return;
+
+        // Five-point star with a hot core. The falloff is squared (not a hard
+        // clamp) so the edges dissolve instead of stepping.
+        _star = Tex(128, (dx, dy) => {
             float ang = Mathf.Atan2(dy, dx), r = Mathf.Sqrt(dx*dx+dy*dy);
             float st = 0.55f + 0.45f * Mathf.Cos(5f*(ang - Mathf.PI/2));
-            return Mathf.Clamp01((st*0.9f - r) * 6f); });
-        _dot = Tex(64, (dx, dy) =>
-            Mathf.Clamp01((1f - Mathf.Sqrt(dx*dx+dy*dy)) * 1.7f));
-        _ring = Tex(128, (dx, dy) => {
+            float body = Mathf.Clamp01(1f - r / Mathf.Max(st * 0.85f, 0.05f));
+            float core = Mathf.Clamp01(1f - r * 3.4f);
+            return Mathf.Clamp01(body * body * 0.9f + core * core * 0.6f); });
+
+        // Soft glow dot — the same read as the keyword burst's motes.
+        _dot = Tex(128, (dx, dy) => {
             float r = Mathf.Sqrt(dx*dx+dy*dy);
-            return Mathf.Clamp01(1f - Mathf.Abs(r - 0.78f) * 7f); });
-        var sh = Shader.Find("Particles/Standard Unlit")
-              ?? Shader.Find("Sprites/Default");
-        _fxMat = new Material(sh);
+            float g = Mathf.Clamp01(1f - r);
+            return Mathf.Clamp01(g * g * 0.85f + Mathf.Clamp01(1f - r*2.6f) * 0.5f); });
+
+        // Gaussian band instead of a clamped triangle: no visible ring edges.
+        _ring = Tex(256, (dx, dy) => {
+            float r = Mathf.Sqrt(dx*dx+dy*dy);
+            float d = (r - 0.78f) / 0.085f;
+            return Mathf.Exp(-0.5f * d * d); });
+
+        var sh = FXShader();
+        _fxMat = sh != null ? new Material(sh) : null;
+        MakeAdditive(_fxMat);
     }
 
+    // Prefer the project's URP additive shaders. The built-in particle shaders
+    // are the last resort: under URP a freshly-created "Particles/Standard
+    // Unlit" material is OPAQUE, which is what drew the hard squares.
+    static Shader FXShader()
+    {
+        // explicit null checks, not ??: Unity objects have an overloaded ==
+        string[] names = {
+            "GreatLibrary/SparkleAdditive",
+            "GreatLibrary/MoteAdditive",
+            "Universal Render Pipeline/Particles/Unlit",
+            "Particles/Standard Unlit",
+            "Sprites/Default",
+        };
+        foreach (var n in names)
+        {
+            var sh = Shader.Find(n);
+            if (sh != null) return sh;
+        }
+        Debug.LogWarning("[StoryBook] No sparkle shader found — FX will be flat.");
+        return null;
+    }
+
+    /// <summary>Force soft additive blending, whichever shader we landed on.</summary>
+    static void MakeAdditive(Material m)
+    {
+        if (m == null) return;
+        if (m.HasProperty("_Surface"))  m.SetFloat("_Surface", 1f);   // URP: transparent
+        if (m.HasProperty("_Blend"))    m.SetFloat("_Blend", 2f);     // URP: additive
+        if (m.HasProperty("_Mode"))     m.SetFloat("_Mode", 4f);      // built-in: additive
+        if (m.HasProperty("_SrcBlend"))
+            m.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.SrcAlpha);
+        if (m.HasProperty("_DstBlend"))
+            m.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.One);
+        if (m.HasProperty("_ZWrite"))   m.SetFloat("_ZWrite", 0f);
+        if (m.HasProperty("_Cull"))     m.SetFloat("_Cull", 0f);
+        m.DisableKeyword("_ALPHATEST_ON");
+        m.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+        m.EnableKeyword("_ALPHABLEND_ON");
+        m.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
+        m.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+    }
+
+    /// <summary>A per-effect instance of the FX material, on one sprite.</summary>
+    static Material FXMaterial(Texture2D tex, float intensity = 1.35f)
+    {
+        if (_fxMat == null) return null;
+        var m = new Material(_fxMat);
+        m.mainTexture = tex;
+        if (m.HasProperty("_BaseMap"))   m.SetTexture("_BaseMap", tex);
+        if (m.HasProperty("_Intensity")) m.SetFloat("_Intensity", intensity);
+        MakeAdditive(m);
+        return m;
+    }
+
+    // Supersampled + mip-mapped + clamped: the three things that stop a small
+    // billboard from shimmering or showing its own edges.
     static Texture2D Tex(int s, System.Func<float,float,float> f)
     {
-        var t = new Texture2D(s, s, TextureFormat.RGBA32, false);
+        const int SS = 3;                               // 3x3 samples per texel
+        var t = new Texture2D(s, s, TextureFormat.RGBA32, true)
+        {
+            wrapMode = TextureWrapMode.Clamp,
+            filterMode = FilterMode.Trilinear,
+            anisoLevel = 1,
+        };
+        var px = new Color[s * s];
         for (int y = 0; y < s; y++) for (int x = 0; x < s; x++)
         {
-            float dx = (x - s/2f)/(s/2f), dy = (y - s/2f)/(s/2f);
-            t.SetPixel(x, y, new Color(1,1,1, Mathf.Clamp01(f(dx,dy))));
+            float a = 0f;
+            for (int sy = 0; sy < SS; sy++) for (int sx = 0; sx < SS; sx++)
+            {
+                float fx = x + (sx + 0.5f) / SS, fy = y + (sy + 0.5f) / SS;
+                float dx = (fx - s/2f)/(s/2f), dy = (fy - s/2f)/(s/2f);
+                a += Mathf.Clamp01(f(dx, dy));
+            }
+            px[y * s + x] = new Color(1, 1, 1, a / (SS * SS));
         }
-        t.Apply(); return t;
+        t.SetPixels(px);
+        t.Apply(true, false);
+        return t;
     }
 
     Color RandCandy() => sparkleColors[Random.Range(0, sparkleColors.Length)];
@@ -603,69 +687,111 @@ public class StoryBook : MonoBehaviour
         go.transform.SetParent(parent, false);
         var ps = go.AddComponent<ParticleSystem>();
         var main = ps.main;
-        main.startLifetime = 0.55f;
-        main.startSpeed = 0.06f;
-        main.startSize = new ParticleSystem.MinMaxCurve(0.045f, 0.10f);
+        main.startLifetime = new ParticleSystem.MinMaxCurve(0.40f, 0.65f);
+        main.startSpeed = new ParticleSystem.MinMaxCurve(0.02f, 0.10f);
+        main.startSize = new ParticleSystem.MinMaxCurve(0.030f, 0.075f);
         main.startColor = new ParticleSystem.MinMaxGradient(
             RandCandy(), RandCandy());
+        main.startRotation = new ParticleSystem.MinMaxCurve(0f, Mathf.PI * 2f);
         main.simulationSpace = ParticleSystemSimulationSpace.World;
         main.gravityModifier = -0.03f;
         main.maxParticles = 80;
-        var em = ps.emission; em.rateOverTime = 55f;
+        var em = ps.emission; em.rateOverTime = 48f;
         var shape = ps.shape; shape.enabled = true;
-        shape.shapeType = ParticleSystemShapeType.Sphere; shape.radius = 0.05f;
+        shape.shapeType = ParticleSystemShapeType.Sphere; shape.radius = 0.045f;
         var col = ps.colorOverLifetime; col.enabled = true;
-        var g = new Gradient();
-        g.SetKeys(new[]{ new GradientColorKey(Color.white,0),
-                         new GradientColorKey(Color.white,1)},
-                  new[]{ new GradientAlphaKey(0.9f,0),
-                         new GradientAlphaKey(0f,1)});
-        col.color = g;
+        col.color = FadeGradient(0.85f, 0.06f);
         var sol = ps.sizeOverLifetime; sol.enabled = true;
-        sol.size = new ParticleSystem.MinMaxCurve(1f,
-            new AnimationCurve(new Keyframe(0,1), new Keyframe(1,0.1f)));
-        var r = go.GetComponent<ParticleSystemRenderer>();
-        var m = new Material(_fxMat); m.mainTexture = _star;
-        if (m.HasProperty("_BaseMap")) m.SetTexture("_BaseMap", _star);
-        r.material = m;
-        r.renderMode = ParticleSystemRenderMode.Billboard;
+        sol.size = new ParticleSystem.MinMaxCurve(1f, SoftSizeCurve());
+        SetupRenderer(go, _dot, 1.15f);
         return ps;
     }
 
     void Burst(Vector3 pos, int count, float size, float life)
     {
         EnsureFX();
-        var go = new GameObject("Sparkle");
-        go.transform.position = pos;
-        var ps = go.AddComponent<ParticleSystem>();
-        var main = ps.main;
-        main.startLifetime = life;
-        main.startSpeed = new ParticleSystem.MinMaxCurve(0.5f, 1.8f);
-        main.startSize = new ParticleSystem.MinMaxCurve(size*0.5f, size);
-        main.startColor = new ParticleSystem.MinMaxGradient(
-            RandCandy(), RandCandy());
-        main.simulationSpace = ParticleSystemSimulationSpace.World;
-        main.gravityModifier = 0.15f;
-        main.playOnAwake = false;
-        main.maxParticles = 60;
-        var em = ps.emission; em.enabled = false;
-        var shape = ps.shape; shape.shapeType = ParticleSystemShapeType.Sphere;
-        shape.radius = 0.12f;
-        var col = ps.colorOverLifetime; col.enabled = true;
+
+        // Two layers, exactly like the keyword burst: crisp stars over a soft
+        // glow. Both additive, so overlaps bloom instead of stacking squares.
+        Layer(_star, size * 0.62f, life, count, 1.35f, 0.45f, 1.25f);
+        Layer(_dot, size * 1.05f, life * 0.72f, Mathf.Max(4, count / 2),
+              0.95f, 0.25f, 0.70f);
+
+        void Layer(Texture2D tex, float sz, float lf, int n,
+                   float intensity, float spdMin, float spdMax)
+        {
+            var go = new GameObject("Sparkle");
+            go.transform.position = pos;
+            var ps = go.AddComponent<ParticleSystem>();
+            var main = ps.main;
+            main.startLifetime = new ParticleSystem.MinMaxCurve(lf * 0.7f, lf);
+            main.startSpeed = new ParticleSystem.MinMaxCurve(spdMin, spdMax);
+            main.startSize = new ParticleSystem.MinMaxCurve(sz * 0.55f, sz);
+            main.startColor = new ParticleSystem.MinMaxGradient(
+                RandCandy(), RandCandy());
+            main.startRotation = new ParticleSystem.MinMaxCurve(0f, Mathf.PI * 2f);
+            main.simulationSpace = ParticleSystemSimulationSpace.World;
+            main.gravityModifier = -0.04f;               // drift up, like motes
+            main.playOnAwake = false;
+            main.maxParticles = 64;
+            var em = ps.emission; em.enabled = false;
+            var shape = ps.shape; shape.enabled = true;
+            shape.shapeType = ParticleSystemShapeType.Circle;
+            shape.radius = size * 0.9f;                  // spread along the line
+            shape.radiusThickness = 1f;
+            // ease out of the launch instead of flying off at constant speed
+            var vel = ps.limitVelocityOverLifetime;
+            vel.enabled = true; vel.dampen = 0.35f;
+            vel.limit = new ParticleSystem.MinMaxCurve(spdMax * 0.5f);
+            var col = ps.colorOverLifetime; col.enabled = true;
+            col.color = FadeGradient(1f, 0.12f);
+            var sol = ps.sizeOverLifetime; sol.enabled = true;
+            sol.size = new ParticleSystem.MinMaxCurve(1f, SoftSizeCurve());
+            var rot = ps.rotationOverLifetime; rot.enabled = true;
+            rot.z = new ParticleSystem.MinMaxCurve(-1.8f, 1.8f);
+            SetupRenderer(go, tex, intensity);
+            ps.Emit(n);
+            Destroy(go, lf + 1.2f);
+        }
+    }
+
+    /// <summary>Fade in fast, fade out slowly — never pop on or off.</summary>
+    static Gradient FadeGradient(float peak, float peakAt)
+    {
         var g = new Gradient();
         g.SetKeys(new[]{ new GradientColorKey(Color.white,0),
                          new GradientColorKey(Color.white,1)},
-                  new[]{ new GradientAlphaKey(0,0), new GradientAlphaKey(1,0.1f),
-                         new GradientAlphaKey(0,1)});
-        col.color = g;
-        var rot = ps.rotationOverLifetime; rot.enabled = true;
-        rot.z = new ParticleSystem.MinMaxCurve(-3f, 3f);
+                  new[]{ new GradientAlphaKey(0f, 0f),
+                         new GradientAlphaKey(peak, peakAt),
+                         new GradientAlphaKey(peak * 0.45f, 0.55f),
+                         new GradientAlphaKey(0f, 1f)});
+        return g;
+    }
+
+    /// <summary>Small pop, long smooth shrink to nothing.</summary>
+    static AnimationCurve SoftSizeCurve()
+    {
+        var c = new AnimationCurve(
+            new Keyframe(0f, 0.45f),
+            new Keyframe(0.18f, 1f),
+            new Keyframe(1f, 0f));
+        for (int i = 0; i < c.length; i++)
+            c.SmoothTangents(i, 0.5f);
+        return c;
+    }
+
+    static void SetupRenderer(GameObject go, Texture2D tex, float intensity)
+    {
         var r = go.GetComponent<ParticleSystemRenderer>();
-        var m = new Material(_fxMat); m.mainTexture = _star;
-        if (m.HasProperty("_BaseMap")) m.SetTexture("_BaseMap", _star);
-        r.material = m;
-        ps.Emit(count);
-        Destroy(go, life + 1.2f);
+        var m = FXMaterial(tex, intensity);
+        if (m != null) r.material = m;
+        r.renderMode = ParticleSystemRenderMode.Billboard;
+        r.alignment = ParticleSystemRenderSpace.View;
+        r.sortMode = ParticleSystemSortMode.None;      // additive: order is free
+        r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        r.receiveShadows = false;
+        r.minParticleSize = 0f;
+        r.maxParticleSize = 0.35f;                     // no screen-filling quads
     }
 
     void RingFlash(Vector3 pos, Transform face)
@@ -676,22 +802,28 @@ public class StoryBook : MonoBehaviour
         q.transform.position = pos;
         q.transform.rotation = Quaternion.Euler(90, 0, 0);
         var r = q.GetComponent<Renderer>();
-        var m = new Material(Shader.Find("Sprites/Default"));
-        m.mainTexture = _ring;
-        m.color = new Color(1f, 0.85f, 0.45f, 1f);
-        r.material = m;
+        r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        r.receiveShadows = false;
+        var rm = FXMaterial(_ring, 1.1f);
+        if (rm != null) r.material = rm;
         StartCoroutine(RingGrow(q.transform, r));
     }
 
     IEnumerator RingGrow(Transform tr, Renderer r)
     {
+        var m = r.material;
+        string prop = m.HasProperty("_BaseColor") ? "_BaseColor"
+                    : m.HasProperty("_Color")     ? "_Color" : null;
+        var gold = new Color(1f, 0.85f, 0.45f, 1f);
+        if (prop != null) m.SetColor(prop, gold);
         for (float t = 0; t < 0.55f; t += Time.deltaTime)
         {
             float k = t / 0.55f;
             tr.localScale = Vector3.one * Mathf.Lerp(0.15f, 1.3f,
                                                      1 - (1-k)*(1-k));
-            var c = r.material.color; c.a = 1f - k;
-            r.material.color = c;
+            gold.a = (1f - k) * (1f - k);              // smooth, not linear
+            if (prop != null) m.SetColor(prop, gold);
+            else { var c = m.color; c.a = gold.a; m.color = c; }
             yield return null;
         }
         Destroy(tr.gameObject);
