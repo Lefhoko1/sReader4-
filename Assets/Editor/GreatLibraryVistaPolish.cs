@@ -78,6 +78,9 @@ public static class GreatLibraryVistaPolish
         }
         Touch("M_Sea", m =>
         {
+            // Step 5 moves M_Sea onto GreatLibrary/StylizedSea. Don't drag it
+            // back to flat URP/Lit paint if that has already run.
+            if (m.HasProperty("_ShallowColor")) return;
             m.SetColor("_BaseColor", new Color(0.18f, 0.46f, 0.56f));
             m.SetFloat("_Smoothness", 0.82f);           // sun sparkle
         });
