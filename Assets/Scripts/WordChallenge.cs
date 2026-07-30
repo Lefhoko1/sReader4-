@@ -128,10 +128,12 @@ public class WordChallenge : MonoBehaviour
         _prompt.transform.SetParent(transform, false);
         _prompt.transform.localPosition = new Vector3(0f, 0.55f, -0.01f);
         _prompt.text = prompt;
-        _prompt.fontSize = 2.2f;
         _prompt.color = Ink;
         _prompt.alignment = TextAlignmentOptions.Center;
         _prompt.rectTransform.sizeDelta = new Vector2(3.0f, 1.0f);
+        _prompt.enableAutoSizing = true;             // a long key word must not spill
+        _prompt.fontSizeMin = 0.9f;                  // off the parchment card
+        _prompt.fontSizeMax = 2.2f;
 
         _progress = new GameObject("Progress").AddComponent<TextMeshPro>();
         _progress.transform.SetParent(transform, false);

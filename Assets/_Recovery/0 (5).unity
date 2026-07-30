@@ -244,6 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WordPathBuilder
   sentence: The fox lived near a quiet river
+  keywords:
+  - river
   keyword: river
   stoneA: {fileID: 810577600722439469, guid: 50cfebcb9f8f9f9459c77b8fed61f16c, type: 3}
   stoneB: {fileID: 4878432318930416474, guid: 4640c9394805caa48af8abd9628b4b48, type: 3}
@@ -926,7 +928,11 @@ MonoBehaviour:
     they had so much *fun*.
   oneSentencePerSpread: 1
   linesPerPage: 3
+  markersInParagraph: 1
+  keywords: []
   stonePath: {fileID: 201584499}
+  rebuildStonesPerSentence: 1
+  revealWordsOnLanding: 1
   pageFill: 0.82
   columnFill: 0.9
   lineHeight: 0.92

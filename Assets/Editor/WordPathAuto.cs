@@ -7,12 +7,13 @@
 //    • finds your SM_WordStone_A/B/C/Key prefabs automatically
 //    • uses your existing PathStart/PathEnd if present; otherwise creates
 //      them between the dock and the library steps automatically
-//    • sets "The fox lived near a quiet river" / keyword "river" and builds
+//    • sets "The fox lived near a quiet river" / key words "fox" + "river" and builds
 //
 //  Tools > Great Library > Clear Word Path — removes the stones.
 //
 //  Put this file in Assets/Editor/.
 // ===========================================================================
+using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -84,7 +85,7 @@ public static class WordPathAuto
         var builder = host.GetComponent<WordPathBuilder>()
                       ?? Undo.AddComponent<WordPathBuilder>(host);
         builder.sentence  = "The fox lived near a quiet river";
-        builder.keyword   = "river";
+        builder.keywords  = new List<string> { "fox", "river" };   // two key words, not one
         builder.stoneA = a; builder.stoneB = b;
         builder.stoneC = c; builder.stoneKey = k;
         builder.startPoint = start; builder.endPoint = end;
@@ -96,7 +97,8 @@ public static class WordPathAuto
         UnityEditor.SceneManagement.EditorSceneManager
             .MarkSceneDirty(host.scene);
         Debug.Log("[WordPath] River word path built — press Play and tap " +
-                  "the glowing 'river' stone.");
+                  "a glowing key stone. The path is rebuilt per sentence, so the " +
+                  "stone count follows whichever sentence you click in the book.");
     }
 
     [MenuItem("Tools/Great Library/Clear Word Path")]

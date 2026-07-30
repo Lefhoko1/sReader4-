@@ -78,14 +78,44 @@ public class WordStone : MonoBehaviour
             go.transform.localPosition = new Vector3(0, 0.20f, 0);
         // rotation is handled each frame by LateUpdate (billboard toward camera)
         _tmp = go.AddComponent<TextMeshPro>();
-        _tmp.text = word + (endsSentence ? "." : "");
         _tmp.fontSize = textSize;
         _tmp.color = isKeyword ? keywordTextColor : textColor;
         _tmp.alignment = TextAlignmentOptions.Center;
         _tmp.fontStyle = FontStyles.Bold;
-        _tmp.rectTransform.sizeDelta = new Vector2(1.2f, 0.5f);
+        _tmp.textWrappingMode = TextWrappingModes.NoWrap;   // never break a word over two lines
+        _tmp.overflowMode = TextOverflowModes.Overflow;
         _tmp.outlineWidth = 0.12f;
         _tmp.outlineColor = new Color32(255, 250, 235, 160);
+        Relabel();
+    }
+
+    /// <summary>
+    /// Put the current word on the stone and fit the label's rect to it, so the
+    /// text is never clipped or wrapped by a fixed-size box.
+    /// </summary>
+    public void Relabel()
+    {
+        if (_tmp == null) return;
+        _tmp.text = word + (endsSentence ? "." : "");
+        _tmp.color = isKeyword ? keywordTextColor : textColor;
+        Fit();
+    }
+
+    /// <summary>Grow the label's rect to whatever it currently says.</summary>
+    void Fit()
+    {
+        if (_tmp == null) return;
+        var pref = _tmp.GetPreferredValues();
+        _tmp.rectTransform.sizeDelta = new Vector2(Mathf.Max(pref.x, 0.4f),
+                                                   Mathf.Max(pref.y, 0.3f));
+    }
+
+    /// <summary>Set the word this stone carries (used when a flying chip lands).</summary>
+    public void SetWord(string w, bool last)
+    {
+        word = w;
+        endsSentence = last;
+        Relabel();
     }
 
     /// <summary>Light the stone permanently — its challenge was solved.</summary>
@@ -97,6 +127,7 @@ public class WordStone : MonoBehaviour
             _tmp.color = new Color(0.45f, 0.30f, 0.05f);
             _tmp.fontStyle = FontStyles.Bold;
             _tmp.text = word + (endsSentence ? "." : "") + " <color=#E0A21Fff>*</color>";
+            Fit();
         }
         PlayKeywordBurst(transform.position + Vector3.up * 0.15f, transform);
     }
@@ -138,7 +169,10 @@ public class WordStone : MonoBehaviour
         if (_tmp == null) return;
         var cam = Camera.main;
         if (cam == null) return;
-        _tmp.transform.position = transform.position + Vector3.up * wordHeight;   // above the stone itself
+        // above the stone itself — scaled with it, so the label clears a far stone
+        // that perspective compensation has grown, and doesn't float off a near one
+        _tmp.transform.position = transform.position +
+                                  Vector3.up * wordHeight * Mathf.Max(0.01f, transform.lossyScale.y);
         _tmp.transform.rotation = Quaternion.LookRotation(
             _tmp.transform.position - cam.transform.position, Vector3.up);
     }

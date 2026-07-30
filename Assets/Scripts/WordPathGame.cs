@@ -110,12 +110,15 @@ public class WordPathGame : MonoBehaviour
             W("The"), W("leaves"), W("take"), W("in"), W("a"), W("gas"), W("called"),
             Key("carbon", ActivityType.FillBlank), W("dioxide"), W("from"), W("the"), W("air")));
 
+        // two key words in one sentence — the sentence is only ticked off once BOTH
+        // are restored (OnKeyWordSolved waits for every key stone)
         page.sentences.Add(S(
             W("Roots"), W("pull"),
             Key("water", ActivityType.Illustrate,
                 images: new[] { "a clear stream", "a dry stone", "a candle", "a closed book" },
                 correct: "a clear stream"),
-            W("up"), W("from"), W("the"), W("soil")));
+            W("up"), W("from"), W("the"),
+            Key("soil", ActivityType.Define, "the ground that plants grow in")));
 
         page.sentences.Add(S(
             W("Inside"), W("each"), W("leaf"), W("a"), W("green"), W("colour"), W("called"),

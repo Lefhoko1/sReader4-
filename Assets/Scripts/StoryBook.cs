@@ -18,6 +18,15 @@
 //  TARGET STONES
 //   Assign `stonePath` = the WordPath_River object (its children are stones,
 //   in order). Leave empty and it finds the first WordPathBuilder in the scene.
+//   The river is REBUILT for the sentence you click, so the number of stones is
+//   always the number of words in that sentence.
+//
+//  KEY WORDS
+//   Mark them inline in the paragraph with *asterisks* or [brackets]:
+//       "The *fox* lived near a quiet *river*."   -> two key stones
+//       "He loved to find new things."            -> none
+//   Any number per sentence. Markers never appear on the page. Words listed in
+//   `keywords` are key wherever they occur, on top of the markers.
 //
 //  Requires TextMeshPro. Works with both input backends.
 // ===========================================================================
@@ -53,10 +62,25 @@ public class StoryBook : MonoBehaviour
              "FEWER = bigger text.")]
     public int linesPerPage = 3;
 
+    [Header("Key words (any number per sentence)")]
+    [Tooltip("Mark key words inline in the paragraph with *asterisks* or [brackets]. " +
+             "A sentence may have none, one, two or as many as you like — every marked " +
+             "word gets its own gold Key stone. The markers are never shown on the page.")]
+    public bool markersInParagraph = true;
+    [Tooltip("Words that count as key words WHEREVER they appear, on top of the inline " +
+             "markers. Case and punctuation are ignored.")]
+    public string[] keywords = new string[0];
+
     [Header("Flight target")]
     [Tooltip("Object whose children are the word stones, in order. " +
              "Leave empty to auto-find WordPath_River / WordPathBuilder.")]
     public Transform stonePath;
+
+    [Tooltip("Rebuild the river for the chosen sentence, so there is exactly one stone " +
+             "per word. Off = fly onto whatever stones already sit in the scene.")]
+    public bool rebuildStonesPerSentence = true;
+    [Tooltip("Stones rise blank and each flying chip reveals its word as it lands.")]
+    public bool revealWordsOnLanding = true;
 
     [Header("Page layout (auto-fitted to the model)")]
     [Tooltip("How much of each page's depth the rows spread over.")]
@@ -95,14 +119,30 @@ public class StoryBook : MonoBehaviour
     public SentenceEvent onSentenceSent = new SentenceEvent();
 
     // ------------------------------------------------------------ INTERNAL
+    /// <summary>
+    /// A parsed sentence: what the page shows, and the exact words that become
+    /// stones — with a key-word flag per word, so any number of them can be key.
+    /// </summary>
+    class Sentence
+    {
+        public string display;                              // markers stripped
+        public readonly List<string> words = new List<string>();
+        public readonly List<bool> isKey = new List<bool>();
+        public int KeyCount => isKey.Count(k => k);
+    }
+
     class Line { public TextMeshPro tmp; public string text; public bool sent;
-                 public Vector3 home; public BoxCollider col; }
+                 public Vector3 home; public BoxCollider col; public Sentence sentence; }
     readonly List<Line> _lines = new List<Line>();
-    List<string> _sentences = new List<string>();
+    List<Sentence> _sentences = new List<Sentence>();
     int _page;
     Transform _flip;
     Line _hover;
     bool _busy;
+    WordPathBuilder _builder;
+    Sentence _pathSentence;                 // which sentence the river currently holds
+
+    static readonly char[] Markers = { '*', '[', ']' };
 
     static Texture2D _star, _dot, _ring;
     static Material _fxMat;
@@ -122,6 +162,7 @@ public class StoryBook : MonoBehaviour
         _flip = FindChild("SM_StoryBook_FlipPage");
         if (_flip != null) _flip.gameObject.SetActive(false);
         if (stonePath == null) AutoFindStones();
+        ResolveBuilder();
         MeasureBook();
         SplitSentences();
         BuildTitle();
@@ -138,6 +179,16 @@ public class StoryBook : MonoBehaviour
         if (go != null) { stonePath = go.transform; return; }
         var b = FindAnyObjectByType<WordPathBuilder>();
         if (b != null) stonePath = b.transform;
+    }
+
+    // The builder is what makes the stone count follow the sentence; without one
+    // we simply fly onto the stones already in the scene.
+    void ResolveBuilder()
+    {
+        _builder = stonePath != null ? stonePath.GetComponent<WordPathBuilder>() : null;
+        if (_builder == null) _builder = FindAnyObjectByType<WordPathBuilder>();
+        // tell the river what it must not hide the first stone behind: this book
+        if (_builder != null && _builder.avoid == null) _builder.avoid = transform;
     }
 
     // Work out the book's real size and the gap between line sockets, so text is
@@ -274,8 +325,80 @@ public class StoryBook : MonoBehaviour
             .Split('.')
             .Select(s => s.Trim())
             .Where(s => s.Length > 0)
-            .Select(s => s + ".")
+            .Select(s => ParseSentence(s + "."))
             .ToList();
+    }
+
+    /// <summary>
+    /// Split a sentence into the words that will become stones, flagging the key
+    /// ones. A word is key if it carries an inline marker (*word* / [word]) or is
+    /// listed in <see cref="keywords"/> — so a sentence can have none, one, two or
+    /// any number. Markers are stripped from what the page displays.
+    /// </summary>
+    Sentence ParseSentence(string raw)
+    {
+        var always = new HashSet<string>(
+            (keywords ?? new string[0]).Select(WordPathBuilder.Normalise));
+        always.Remove("");
+
+        var s = new Sentence();
+        var shown = new List<string>();
+
+        foreach (var tok in raw.Split(new[] { ' ', '\t' },
+                                      System.StringSplitOptions.RemoveEmptyEntries))
+        {
+            string clean = StripMarkers(tok);
+            if (clean.Length == 0) continue;
+            shown.Add(clean);
+
+            string word = clean.Trim('.');           // the stone adds its own full stop
+            if (word.Length == 0) continue;
+
+            bool marked = markersInParagraph && clean.Length != tok.Length;
+            s.words.Add(word);
+            s.isKey.Add(marked || always.Contains(WordPathBuilder.Normalise(clean)));
+        }
+
+        s.display = string.Join(" ", shown);
+        return s;
+    }
+
+    static string StripMarkers(string t)
+    {
+        if (t.IndexOfAny(Markers) < 0) return t;
+        var sb = new System.Text.StringBuilder(t.Length);
+        foreach (var c in t)
+            if (System.Array.IndexOf(Markers, c) < 0) sb.Append(c);
+        return sb.ToString();
+    }
+
+    /// <summary>
+    /// Rebuild the river so it holds exactly one stone per word of this sentence —
+    /// including a gold Key stone for every key word. Returns the stones in reading
+    /// order (falls back to whatever is already parented under stonePath).
+    /// </summary>
+    List<Transform> BuildStonesFor(Sentence s)
+    {
+        var stones = new List<Transform>();
+
+        if (_builder != null && rebuildStonesPerSentence && s != null && s.words.Count > 0)
+        {
+            // only rebuild when the river isn't already this sentence, so the page
+            // showing it and the chips landing on it share one set of stones
+            if (_pathSentence != s || _builder.Stones.Count != s.words.Count)
+            {
+                _builder.BuildWords(s.words, s.isKey, !revealWordsOnLanding);
+                _pathSentence = s;
+            }
+            foreach (var ws in _builder.Stones)
+                if (ws != null) stones.Add(ws.transform);
+            return stones;
+        }
+
+        if (stonePath != null)
+            for (int i = 0; i < stonePath.childCount; i++)
+                stones.Add(stonePath.GetChild(i));
+        return stones;
     }
 
     // ------------------------------------------------------------- LAYOUT
@@ -300,15 +423,19 @@ public class StoryBook : MonoBehaviour
         {
             if (_page < _sentences.Count)
             {
+                var s = _sentences[_page];
                 var size = SpreadSize();
                 var t = MakeText("Sentence", SpreadCentre(), size.x, size.y,
                                  inkColor, TextAlignmentOptions.Center);
-                t.text = _sentences[_page];
+                t.text = s.display;
                 var col = t.gameObject.AddComponent<BoxCollider>();
                 col.size = new Vector3(size.x, size.y, 0.01f);
                 col.isTrigger = true;
-                _lines.Add(new Line { tmp = t, text = _sentences[_page], col = col,
+                _lines.Add(new Line { tmp = t, text = s.display, sentence = s, col = col,
                                       home = t.transform.localPosition });
+
+                // the river waits with one stone per word of THIS sentence
+                BuildStonesFor(s);
             }
             return;
         }
@@ -325,21 +452,21 @@ public class StoryBook : MonoBehaviour
         }
     }
 
-    void MakeLine(string text, Vector3 worldPos, int rows)
+    void MakeLine(Sentence s, Vector3 worldPos, int rows)
     {
         var size = RowSize(rows);
         float w = size.x, h = size.y;
 
         var t = MakeText("Sentence", worldPos, w, h,
                          inkColor, TextAlignmentOptions.Left);
-        t.text = text;
+        t.text = s.display;
 
         // collider in the text's own space, so it matches the rect exactly
         var col = t.gameObject.AddComponent<BoxCollider>();
         col.size = new Vector3(w, h, 0.01f);
         col.isTrigger = true;
 
-        _lines.Add(new Line { tmp = t, text = text, col = col,
+        _lines.Add(new Line { tmp = t, text = s.display, sentence = s, col = col,
                               home = t.transform.localPosition });
     }
 
@@ -454,24 +581,23 @@ public class StoryBook : MonoBehaviour
         Burst(lineCentre, 18, 0.22f, 0.9f);
         yield return StartCoroutine(FlashLine(line));
 
-        // 2. gather targets
-        var stones = new List<Transform>();
-        if (stonePath != null)
-            for (int i = 0; i < stonePath.childCount; i++)
-                stones.Add(stonePath.GetChild(i));
-
-        var words = line.text.TrimEnd('.').Split(' ')
-                        .Where(w => w.Length > 0).ToArray();
+        // 2. gather targets — one stone per word of THIS sentence, key words included
+        var sentence = line.sentence;
+        var words = sentence.words;
+        var stones = BuildStonesFor(sentence);
+        Debug.Log($"[StoryBook] \"{sentence.display}\" -> {words.Count} words, " +
+                  $"{stones.Count} stones, {sentence.KeyCount} key word(s).");
 
         // 3. launch chips
-        for (int i = 0; i < words.Length; i++)
+        for (int i = 0; i < words.Count; i++)
         {
             Transform target = i < stones.Count ? stones[i] : null;
             Vector3 from = line.tmp.transform.position
                            + Vector3.up * 0.02f
                            + line.tmp.transform.right * (i * 0.01f);
             StartCoroutine(FlyChip(words[i], from, target,
-                                   i == words.Length - 1));
+                                   i == words.Count - 1,
+                                   sentence.isKey[i]));
             yield return new WaitForSeconds(chipStagger);
         }
 
@@ -494,7 +620,8 @@ public class StoryBook : MonoBehaviour
         }
     }
 
-    IEnumerator FlyChip(string word, Vector3 from, Transform target, bool isLast)
+    IEnumerator FlyChip(string word, Vector3 from, Transform target, bool isLast,
+                        bool isKeyword = false)
     {
         // the flying word chip
         var go = new GameObject("Chip_" + word);
@@ -544,9 +671,11 @@ public class StoryBook : MonoBehaviour
             var ws = target.GetComponent<WordStone>();
             if (ws != null)
             {
-                ws.word = word;
-                var t2 = target.GetComponentInChildren<TextMeshPro>();
-                if (t2 != null) t2.text = word + (isLast ? "." : "");
+                // the chip carries the word onto the stone (stones may have risen
+                // blank) — SetWord refits the label so long words never clip
+                ws.isKeyword = ws.isKeyword || isKeyword;
+                ws.SetWord(word, isLast);
+                if (ws.isKeyword) WordStone.PlayKeywordBurst(to, target);
                 StartCoroutine(StonePop(target));
             }
         }

@@ -51,6 +51,18 @@ public class IslandFlow : MonoBehaviour
         _lookEnd  = door + Vector3.up * 0.2f;
         _lookStart = islandCenter + Vector3.up * 2.8f;
 
+        // If the camera has been framed deliberately (CameraFraming), that pose IS
+        // the shot — fly TO it rather than over it, and start further out along the
+        // same line so the approach still reads as arriving.
+        var framing = _cam.GetComponent<CameraFraming>();
+        if (framing != null)
+        {
+            _endPos = _cam.transform.position;
+            _lookEnd = _endPos + _cam.transform.forward * 10f;
+            _startPos = _endPos - _cam.transform.forward * 14f + Vector3.up * 4f;
+            _lookStart = _lookEnd + Vector3.up * 2f;
+        }
+
         _cam.transform.position = _startPos;
         _cam.transform.LookAt(_lookStart);
 

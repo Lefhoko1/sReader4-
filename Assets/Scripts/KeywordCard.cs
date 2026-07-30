@@ -16,9 +16,19 @@ public class KeywordCard : MonoBehaviour
     static readonly Color GoldEdge = new Color(0.85f, 0.62f, 0.20f);
     static readonly Color GoldStar = new Color(1f, 0.75f, 0.15f);
 
+    // The card is grown to fit the word — never the other way round, so a long
+    // word can't spill over the panel edges.
+    const float WordFont = 4.2f;    // before any shrink-to-fit
+    const float TagFont  = 1.6f;
+    const float MaxWidth = 2.6f;    // widest the card may grow before the word shrinks
+    const float PadX     = 0.22f;   // breathing room either side of the word
+    const float PadY     = 0.10f;   // …and above / below
+    const float TagGap   = 0.04f;   // between the word and its "key word" tag
+
     LineRenderer _leader;
     Transform _stone;
     Renderer _dot;
+    float _halfHeight = 0.3f;       // measured, so the leader meets the real edge
 
     public static void Show(string word, Transform stone)
     {
@@ -34,43 +44,74 @@ public class KeywordCard : MonoBehaviour
         // Sits well clear of the stone's own word label so the two never crowd.
         transform.position = stone.position + Vector3.up * 1.5f
                              + Vector3.right * 0.25f;
+
+        // 1. the word FIRST — everything else is measured from it
+        var txt = new GameObject("Word").AddComponent<TextMeshPro>();
+        txt.transform.SetParent(transform, false);
+        txt.text = string.IsNullOrEmpty(word) ? " " : word;
+        txt.fontSize = WordFont;
+        txt.fontStyle = FontStyles.Bold;
+        txt.color = new Color(0.35f, 0.22f, 0.05f);
+        txt.alignment = TextAlignmentOptions.Center;
+        txt.textWrappingMode = TextWrappingModes.NoWrap;   // a word is never broken in two
+        txt.overflowMode = TextOverflowModes.Overflow;
+
+        Vector2 wordSize = txt.GetPreferredValues();
+        if (wordSize.x > MaxWidth)                    // very long word: shrink it to fit
+        {
+            txt.fontSize = WordFont * (MaxWidth / wordSize.x);
+            wordSize = txt.GetPreferredValues();
+        }
+        txt.rectTransform.sizeDelta = wordSize;
+
+        var tag = new GameObject("Tag").AddComponent<TextMeshPro>();
+        tag.transform.SetParent(transform, false);
+        tag.text = "key word";
+        tag.fontSize = TagFont;
+        tag.color = new Color(0.45f, 0.30f, 0.10f);
+        tag.alignment = TextAlignmentOptions.Center;
+        tag.textWrappingMode = TextWrappingModes.NoWrap;
+        Vector2 tagSize = tag.GetPreferredValues();
+        tag.rectTransform.sizeDelta = tagSize;
+
+        // 2. the card, grown around them
+        float w = Mathf.Max(wordSize.x, tagSize.x) + PadX * 2f;
+        float h = wordSize.y + TagGap + tagSize.y + PadY * 2f;
+        _halfHeight = h * 0.5f;
+
         // gold rounded panel (a scaled quad with generated rounded-rect tex)
         var panel = GameObject.CreatePrimitive(PrimitiveType.Quad);
         Destroy(panel.GetComponent<Collider>());
+        panel.name = "Panel";
         panel.transform.SetParent(transform, false);
-        panel.transform.localScale = new Vector3(1.1f, 0.55f, 1f);
+        panel.transform.localScale = new Vector3(w, h, 1f);
         var pr = panel.GetComponent<Renderer>();
         var sh = Shader.Find("Sprites/Default");
-        var pm = new Material(sh) { mainTexture = RoundedRect(256, 128, 28,
-            GoldFill, GoldEdge) };
+        // texture drawn at the card's own aspect so the corners stay round
+        // however wide the word made it
+        int th = 128;
+        int tw = Mathf.Clamp(Mathf.RoundToInt(th * (w / h)), 48, 1024);
+        var pm = new Material(sh) { mainTexture = RoundedRect(
+            tw, th, Mathf.RoundToInt(Mathf.Min(tw, th) * 0.22f), GoldFill, GoldEdge) };
         pr.material = pm;
+
+        // 3. place the contents inside the measured card
+        txt.transform.localPosition =
+            new Vector3(0f, h * 0.5f - PadY - wordSize.y * 0.5f, -0.01f);
+        tag.transform.localPosition =
+            new Vector3(0f, -h * 0.5f + PadY + tagSize.y * 0.5f, -0.01f);
 
         var star = GameObject.CreatePrimitive(PrimitiveType.Quad);
         Destroy(star.GetComponent<Collider>());
         star.name = "Star";
         star.transform.SetParent(transform, false);
-        star.transform.localPosition = new Vector3(0, 0.34f, -0.012f);
+        star.transform.localPosition = new Vector3(0f, h * 0.5f + 0.05f, -0.012f);
         star.transform.localScale = Vector3.one * 0.26f;
         var sr2 = star.GetComponent<Renderer>();
         var sm2 = new Material(Shader.Find("Sprites/Default"));
         sm2.mainTexture = WordStone.MakeStarTexture(64);
         sm2.color = GoldStar;
         sr2.material = sm2;
-
-        var txt = new GameObject("Word").AddComponent<TextMeshPro>();
-        txt.transform.SetParent(transform, false);
-        txt.transform.localPosition = new Vector3(0, 0.02f, -0.01f);
-        txt.text = word;
-        txt.fontSize = 4.2f; txt.fontStyle = FontStyles.Bold;
-        txt.color = new Color(0.35f, 0.22f, 0.05f);
-        txt.alignment = TextAlignmentOptions.Center;
-
-        var tag = new GameObject("Tag").AddComponent<TextMeshPro>();
-        tag.transform.SetParent(transform, false);
-        tag.transform.localPosition = new Vector3(0, -0.42f, -0.01f);
-        tag.text = "key word";
-        tag.fontSize = 1.6f; tag.color = new Color(0.45f, 0.30f, 0.10f);
-        tag.alignment = TextAlignmentOptions.Center;
 
         BuildLeader(stone);
         StartCoroutine(Life());
@@ -122,7 +163,7 @@ public class KeywordCard : MonoBehaviour
     {
         if (_leader == null || _stone == null) return;
         Vector3 from = _stone.position + Vector3.up * 0.30f;    // just above the stone's own word
-        Vector3 to   = transform.position - transform.up * 0.30f; // the card's lower edge
+        Vector3 to   = transform.position - transform.up * _halfHeight; // the card's real lower edge
         _leader.SetPosition(0, from);
         _leader.SetPosition(1, to);
 
