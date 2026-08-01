@@ -87,11 +87,10 @@ public class WordPathGame : MonoBehaviour
     void ClearPath()
     {
         if (path == null) return;
-        for (int i = path.transform.childCount - 1; i >= 0; i--)
-        {
-            var c = path.transform.GetChild(i).gameObject;
-            if (Application.isPlaying) Destroy(c); else DestroyImmediate(c);
-        }
+        // Ask the builder rather than deleting its children: when the river is
+        // pooled those children ARE the pool, and destroying them here would throw
+        // away the very thing that makes a sentence change cheap.
+        path.Clear();
         _stones.Clear();
     }
 

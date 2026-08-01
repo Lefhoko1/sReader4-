@@ -1,0 +1,101 @@
+{
+ "note": "Island walkway authored in Blender (SM_Island_Path): the centre line of the stair from the dock up to the library entrance, dock end first. BLENDER coords (Z-up, metres); the Unity importer solves the axis mapping by matching refPos against the same-named objects in the scene.",
+ "source": "C:\\Users\\11113930\\Downloads\\Island_Library_FBX\\island_source.blend",
+ "object": "SM_Island_Path",
+ "width": 1.15,
+ "steps": 6,
+ "points": [
+  {
+   "x": -0.15,
+   "y": -7.4,
+   "z": 0.4
+  },
+  {
+   "x": -0.15,
+   "y": -6.9,
+   "z": 0.4
+  },
+  {
+   "x": -0.5,
+   "y": -6.2,
+   "z": 0.68
+  },
+  {
+   "x": -0.4,
+   "y": -5.4,
+   "z": 0.96
+  },
+  {
+   "x": 0.15,
+   "y": -4.6,
+   "z": 1.24
+  },
+  {
+   "x": 0.35,
+   "y": -3.7,
+   "z": 1.52
+  },
+  {
+   "x": 0.0,
+   "y": -2.9,
+   "z": 1.8
+  },
+  {
+   "x": 0.0,
+   "y": -2.4,
+   "z": 1.8
+  }
+ ],
+ "refNames": [
+  "SM_Dock",
+  "SM_Boat",
+  "SM_Library_Exterior",
+  "SM_LanternPost",
+  "SM_Tree_A",
+  "SM_Tree_B",
+  "SM_Island_Path",
+  "SM_Crystal_Float"
+ ],
+ "refPos": [
+  {
+   "x": -0.15,
+   "y": -7.3,
+   "z": 0.0
+  },
+  {
+   "x": 0.55,
+   "y": -9.6,
+   "z": 0.02
+  },
+  {
+   "x": 0.0,
+   "y": 1.3,
+   "z": 1.62
+  },
+  {
+   "x": 0.75,
+   "y": -3.3,
+   "z": 1.45
+  },
+  {
+   "x": 2.9,
+   "y": -1.4,
+   "z": 1.7
+  },
+  {
+   "x": -3.1,
+   "y": -0.6,
+   "z": 1.75
+  },
+  {
+   "x": 0.0,
+   "y": 0.0,
+   "z": 0.0
+  },
+  {
+   "x": 2.4,
+   "y": 2.8,
+   "z": 4.4
+  }
+ ]
+}

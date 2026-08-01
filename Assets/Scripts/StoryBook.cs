@@ -396,8 +396,12 @@ public class StoryBook : MonoBehaviour
         }
 
         if (stonePath != null)
-            for (int i = 0; i < stonePath.childCount; i++)
-                stones.Add(stonePath.GetChild(i));
+            // Ask for the stones themselves, not for the children: a pooled river
+            // parents each stone under a slot, so the direct children are the slots
+            // and the sunk ones must not be counted. GetComponentsInChildren with
+            // includeInactive=false skips whatever is under the water.
+            foreach (var ws in stonePath.GetComponentsInChildren<WordStone>(false))
+                stones.Add(ws.transform);
         return stones;
     }
 

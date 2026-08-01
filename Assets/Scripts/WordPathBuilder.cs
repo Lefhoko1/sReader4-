@@ -31,6 +31,19 @@ public class WordPathBuilder : MonoBehaviour
     [Header("Stone prefabs (A/B/C + Key)")]
     public GameObject stoneA, stoneB, stoneC, stoneKey;
 
+    [Header("Pool (make the stones once, reuse them for every sentence)")]
+    [Tooltip("Off = the old behaviour: destroy and re-instantiate the whole river " +
+             "per sentence. On = a fixed set of slots that sink and rise instead.")]
+    public bool usePool = true;
+    [Tooltip("How many stones the pool holds — the longest sentence you will ever " +
+             "show. Sentences shorter than this leave the spare slots under water.")]
+    [Range(4, 64)] public int poolSlots = 24;
+
+    [Header("River shape (drawn in Blender)")]
+    [Tooltip("The authored curve the words follow. Empty = the straight " +
+             "PathStart -> PathEnd line with the sine meander, as before.")]
+    public WordRiverPath river;
+
     [Header("Path")]
     public Transform startPoint, endPoint;
     [Tooltip("How far the river wanders off its centre line, in world units. Kept small — " +
@@ -41,6 +54,12 @@ public class WordPathBuilder : MonoBehaviour
     [Tooltip("The most a stone may sit sideways of its neighbour, as a fraction of a stone's " +
              "width. Small values keep neighbours on one line instead of abreast.")]
     [Range(0.05f, 0.6f)] public float maxNeighbourStep = 0.3f;
+    [Tooltip("Slide every word stone sideways off the line it was authored on, in " +
+             "metres, so the reader can walk the line itself instead of over the " +
+             "words. Follows the bend: on a Blender curve the offset is taken " +
+             "across the river AT EACH STONE, not across one average direction. " +
+             "Negative puts them on the other side.")]
+    public float stoneSideOffset = 0f;
     public float stoneScale = 1f;
 
     [Header("Perspective (keeps the far stones readable)")]
@@ -98,6 +117,7 @@ public class WordPathBuilder : MonoBehaviour
     public IReadOnlyList<WordStone> Stones => _stones;
     readonly List<WordStone> _stones = new List<WordStone>();
     readonly List<float> _u = new List<float>();      // each stone's place along the path, 0-1
+    readonly WordStonePool _pool = new WordStonePool();
     Vector3 _lastEye = new Vector3(float.MaxValue, 0f, 0f);
     Transform _avoidCached; Renderer[] _avoidRends;   // the book's renderers, looked up once
     float _unitDiameter;                              // a stone's width at scale 1
@@ -107,6 +127,13 @@ public class WordPathBuilder : MonoBehaviour
 
     [ContextMenu("Build Path")]
     public void Build() => BuildSentence(sentence, AllKeywords());
+
+    /// <summary>
+    /// Take the river down. Pooled, that sinks the stones and keeps them; unpooled
+    /// it destroys them, as before. Callers must use THIS rather than deleting the
+    /// builder's children themselves — doing that destroys the pool.
+    /// </summary>
+    public void Clear() => ClearStones();
 
     /// <summary>
     /// Lay out a plain sentence: one stone per word, and a gold Key stone for every
@@ -181,8 +208,46 @@ public class WordPathBuilder : MonoBehaviour
         if (slots == null || slots.Count == 0) return new List<WordStone>();
 
         var variants = new[] { stoneA, stoneB, stoneC }.Where(p => p != null).ToArray();
-        Vector3 a = startPoint.position, b = endPoint.position;
 
+        if (usePool) BuildPooled(slots, showWords, variants);
+        else BuildInstantiated(slots, showWords, variants);
+
+        ApplyPerspective();          // spacing + size are solved against the camera
+        Debug.Log($"[WordPath] {(usePool ? "Raised" : "Built")} {_stones.Count} stones for " +
+                  $"{slots.Count} words ({_stones.Count(s => s.isKeyword)} key)" +
+                  $"{(river != null && river.Valid ? $", along {river.name}" : "")}.");
+        return new List<WordStone>(_stones);
+    }
+
+    /// <summary>Reuse the pool: raise the stones this sentence needs, sink the rest.</summary>
+    void BuildPooled(List<Slot> slots, bool showWords, GameObject[] variants)
+    {
+        if (slots.Count > poolSlots)
+            Debug.LogWarning($"[WordPath] '{slots[0].text}...' is {slots.Count} words but the " +
+                             $"pool holds {poolSlots}. Raise Pool Slots — the overflow is dropped.");
+
+        if (_pool.ParentChanged(transform)) _pool.Dispose();
+        _pool.EnsureCapacity(poolSlots, transform, variants, stoneKey);
+        _pool.Begin();
+
+        for (int i = 0; i < slots.Count; i++)
+        {
+            var slot = slots[i];
+            var ws = _pool.Take(slot.text, slot.isKey,
+                                i == slots.Count - 1, showWords);
+            if (ws == null) break;                       // pool ran dry
+            ws.token = slot.token;
+            if (_stones.Count == 0) MeasureStone(ws.gameObject);
+            _stones.Add(ws);
+            _u.Add(slots.Count == 1 ? 0.5f : i / (float)(slots.Count - 1));
+        }
+        _pool.EndBuild();
+    }
+
+    /// <summary>The original behaviour — one fresh Instantiate per word.</summary>
+    void BuildInstantiated(List<Slot> slots, bool showWords, GameObject[] variants)
+    {
+        Vector3 a = startPoint.position, b = endPoint.position;
         for (int i = 0; i < slots.Count; i++)
         {
             var slot = slots[i];
@@ -209,11 +274,6 @@ public class WordPathBuilder : MonoBehaviour
             _stones.Add(ws);
             _u.Add(u);
         }
-
-        ApplyPerspective();          // spacing + size are solved against the camera
-        Debug.Log($"[WordPath] Built {_stones.Count} stones for {slots.Count} words " +
-                  $"({_stones.Count(s => s.isKeyword)} key).");
-        return new List<WordStone>(_stones);
     }
 
     /// <summary>
@@ -247,7 +307,19 @@ public class WordPathBuilder : MonoBehaviour
 
         var cam = viewCamera != null ? viewCamera : Camera.main;
 
-        if (frameOnScreen && cam != null)
+        // A river drawn in Blender is authored IN WORLD SPACE: it bends where the
+        // artist put the bend, round the boat and in to the dock. So the screen
+        // framing below — which slides the ends along the straight PathStart→PathEnd
+        // line — has nothing to slide and would only drag the words off the curve.
+        // The camera still gets its say through the spacing and the per-stone size.
+        bool onRiver = river != null && river.Valid;
+
+        if (onRiver)
+        {
+            a = river.SampleByT(0f);
+            b = river.SampleByT(1f);
+        }
+        else if (frameOnScreen && cam != null)
         {
             // Slide BOTH ends along the PathStart→PathEnd line until the river fills
             // the screen band we want. `t` may go negative, which walks the near end
@@ -291,7 +363,10 @@ public class WordPathBuilder : MonoBehaviour
                 float d = 1f / Mathf.Lerp(1f / dA, 1f / dB, u);
                 t = Mathf.Lerp(u, Mathf.Clamp01((d - dA) / (dB - dA)), perspectiveCompensation);
             }
-            centre[i] = Vector3.Lerp(a, b, t);
+            // `t` is a fraction of the way ALONG the river, so on a curve it has to
+            // be measured by arc length — spacing the words by vertex index would
+            // bunch them wherever the artist happened to click more points.
+            centre[i] = onRiver ? river.SampleByT(t) : Vector3.Lerp(a, b, t);
 
             bool byScreen = cam != null && stoneScreenWidth > 0.001f && _unitDiameter > 0.0001f;
             if (byScreen)
@@ -372,14 +447,39 @@ public class WordPathBuilder : MonoBehaviour
             var ws = _stones[i];
             if (ws == null) continue;
 
-            // less than a full wave over the whole river, scaled with the stone so
-            // the bend looks as wide far away as it does near
-            float lateral = n > 1
+            // The sine meander exists to bend a STRAIGHT line into a river. A curve
+            // from Blender is already bent, and adding the wave on top would wobble
+            // the artist's shape, so on a river the offset is zero.
+            float lateral = !onRiver && n > 1
                 ? amplitude * size[i] * Mathf.Sin(_u[i] * meanderWaves * 2f * Mathf.PI)
                 : 0f;                                   // a lone stone sits mid-river
-            ws.transform.position = centre[i] + side * lateral;
-            ws.transform.localScale = Vector3.one * stoneScale * size[i] * fit *
-                                      (ws.isKeyword ? 1.25f : 1f);
+
+            // Standing the words to one side of the line. Taken across the river at
+            // THIS stone rather than across the whole path, or the offset would cut
+            // the corner on every bend and the words would drift back onto the line
+            // exactly where it turns.
+            Vector3 across = onRiver
+                ? Vector3.Cross(river.DirectionAtT(_u[i]), Vector3.up)
+                : side;
+            Vector3 pos = centre[i] + side * lateral + across * stoneSideOffset;
+            Vector3 scale = Vector3.one * stoneScale * size[i] * fit *
+                            (ws.isKeyword ? 1.25f : 1f);
+            // face the stone along the river, so a curve does not leave them all
+            // squared up to one arbitrary direction
+            Quaternion rot = onRiver
+                ? Quaternion.LookRotation(river.DirectionAtT(_u[i]), Vector3.up)
+                : ws.transform.rotation;
+
+            // With the pool it is the SLOT that gets moved — the stone sits at local
+            // zero inside it, so its tap-hop and the slot's sink never fight.
+            var slot = usePool ? _pool.SlotAt(i) : null;
+            if (slot != null) slot.Place(pos, rot, scale);
+            else
+            {
+                ws.transform.position = pos;
+                ws.transform.rotation = rot;
+                ws.transform.localScale = scale;
+            }
         }
 
         _lastEye = fix ? eye : _lastEye;
@@ -569,6 +669,24 @@ public class WordPathBuilder : MonoBehaviour
     {
         _stones.Clear();
         _u.Clear();
+
+        if (usePool)
+        {
+            // The pool is the point — nothing is destroyed. Sink whatever is up;
+            // the next build raises what it needs straight back out of the water.
+            _pool.SinkAll();
+            // ...but sweep away stones left by a previous non-pooled build (or by
+            // an older scene that serialised them as children), or they float there
+            // for ever with no one owning them.
+            for (int i = transform.childCount - 1; i >= 0; i--)
+            {
+                var c = transform.GetChild(i).gameObject;
+                if (c.GetComponent<StoneSlot>() != null) continue;
+                if (Application.isPlaying) Destroy(c); else DestroyImmediate(c);
+            }
+            return;
+        }
+
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
             var c = transform.GetChild(i).gameObject;

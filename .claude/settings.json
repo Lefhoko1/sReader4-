@@ -26,7 +26,18 @@
       "Bash(grep -v '^\\\\s*$')",
       "Bash(grep -rIl \"landTexture\" Assets --include=*.unity --include=*.prefab --include=*.uxml --include=*.uss --include=*.cs)",
       "Bash(head -5 Assets/Sprites/landTexture.png.meta)",
-      "Bash(grep -iE \"textureType|spriteMode|wrapMode|mipmap\" Assets/Sprites/landTexture.png.meta)"
+      "Bash(grep -iE \"textureType|spriteMode|wrapMode|mipmap\" Assets/Sprites/landTexture.png.meta)",
+      "Bash(grep -c WordRiverImport __TRACKED_VAR__/Assembly-CSharp-Editor.rsp)",
+      "Bash(grep -n Assembly-CSharp __TRACKED_VAR__/Assembly-CSharp-Editor.rsp)",
+      "Bash(awk '{print $6, $7}')",
+      "Bash(awk '{print $6}')",
+      "Bash(rm -f Assets/Editor/WordRiverImport.cs.meta)",
+      "Bash(touch Assets/Editor/WordRiverImport.cs)",
+      "Bash(touch Assets/Editor/RiversideWalkSetup.cs)",
+      "Bash(python -c ' *)",
+      "PowerShell(& \"C:/Users/11113930/AppData/Local/Temp/claude/c--Users-11113930-sReader4/c374353c-c4ab-4654-af88-0419a12527e7/scratchpad/bl.ps1\" -Json '{\"type\":\"get_scene_info\",\"params\":{}}')",
+      "Bash(awk -F/ '{print $1\"/\"$2\"/\"$3}')",
+      "Bash(git status *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\11113930\\sReader4"

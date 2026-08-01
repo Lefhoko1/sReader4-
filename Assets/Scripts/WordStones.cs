@@ -118,6 +118,27 @@ public class WordStone : MonoBehaviour
         Relabel();
     }
 
+    /// <summary>
+    /// Scrub everything the LAST sentence left on this stone. Only pooled stones
+    /// need it — a freshly instantiated one starts clean — but without it a reused
+    /// stone keeps its old click listeners (so one tap fires several sentences'
+    /// worth of handlers), its solved star, and its old tutor content.
+    /// </summary>
+    public void ResetForReuse()
+    {
+        onWordClicked.RemoveAllListeners();
+        solved = false;
+        suppressCard = false;
+        token = null;
+        StopAllCoroutines();                 // a half-finished hop would strand the stone
+        transform.localPosition = Vector3.zero;
+        if (_tmp != null)
+        {
+            _tmp.color = isKeyword ? keywordTextColor : textColor;
+            _tmp.fontStyle = FontStyles.Bold;
+        }
+    }
+
     /// <summary>Light the stone permanently — its challenge was solved.</summary>
     public void MarkSolved()
     {
