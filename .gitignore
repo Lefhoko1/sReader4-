@@ -4,16 +4,26 @@
 
 # ---------------------------------------------------------------
 #  Unity — generated folders (never commit these; they are rebuilt)
+#
+#  ANCHORED with a leading slash, and it matters. Unanchored, `[Ll]ibrary/`
+#  matches a folder called Library at ANY depth — which silently excluded
+#  Assets/Scripts/Game/Library/, i.e. the entire Great Library game code, from
+#  version control. The generated folders these rules are for only ever exist at
+#  the repo root, so anchoring loses nothing and stops the rules eating source.
 # ---------------------------------------------------------------
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
-[Uu]ser[Ss]ettings/
-[Mm]emoryCaptures/
-[Rr]ecordings/
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Generated caches that genuinely do live inside Assets/, named one at a time now
+# that the rules above no longer sweep every folder called Temp.
+/[Aa]ssets/AI Toolkit/Temp/
 
 /[Aa]ssets/AssetStoreTools*
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
