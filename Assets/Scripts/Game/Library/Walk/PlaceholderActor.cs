@@ -68,7 +68,7 @@ public class PlaceholderActor : MonoBehaviour
 
     /// <summary>Rebuild after changing the height or the colours.</summary>
     [ContextMenu("Rebuild Body")]
-    void RebuildBody()
+    public void RebuildBody()
     {
         var rig = transform.Find("Rig");
         if (rig != null) Kill(rig.gameObject);

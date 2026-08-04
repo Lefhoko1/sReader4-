@@ -227,18 +227,30 @@ public static class RiversideWalkSetup
     static void Reframe(WalkCamera wc)
     {
         Undo.RecordObject(wc, "Re-frame Walk Camera");
+
+        // Let go of whatever the camera was framing. `focus` puts WalkCamera into
+        // "point at this object" mode, and 'Build Book Reading Loop' sets it to the
+        // book — so the shot stays inside the library, 20 m from the reader, and
+        // every travel/read setting below is simply never consulted. Re-framing the
+        // WALK has to mean the walk is what gets framed.
+        wc.focus = null;
         wc.travelBack = 4.2f; wc.travelUp = 2.5f; wc.travelSide = 2.2f; wc.travelFov = 42f;
         wc.readBack = 2.6f; wc.readUp = 1.7f; wc.readSide = 2.4f; wc.readFov = 34f;
         wc.seatFront = 5.0f; wc.seatUp = 2.6f; wc.seatSide = 1.6f; wc.seatFov = 45f;
         wc.lookAhead = 3.5f;
 
-        wc.shotDistance = 1f;
+        wc.shotDistance = 0.85f;
         wc.fitToAspect = true;
         wc.referenceAspect = 16f / 9f;
-        wc.aspectCompensation = 0.7f;
+        // 0.7 pushed the lens 1.6x further out than the shot was authored for, to
+        // win back the width a portrait frame loses. That is right for taking in
+        // the island and wrong for READING: a word on a 0.9 m stone at 8.6 m is a
+        // smudge. The point of the walk is the text, so the width loses.
+        wc.aspectCompensation = 0.35f;
         wc.maxPullback = 2.4f;
         wc.maxFov = 64f;
-        wc.minReaderDistance = 4f;
+        wc.minReaderDistance = 3.2f;
+        wc.holdShotAtStones = true;
         EditorUtility.SetDirty(wc);
     }
 

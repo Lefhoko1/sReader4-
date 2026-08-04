@@ -31,8 +31,24 @@ public class WordStone : MonoBehaviour
 
     [Header("Look")]
     public float textSize = 1.6f;
-    [Tooltip("Word height above the stone (metres).")]
-    public float wordHeight = 0.3f;
+    [Tooltip("World size of the label, INDEPENDENT of how big the stone is. The " +
+             "stones are authored in Blender now and come in at whatever scale the " +
+             "artist placed them (0.43 on the river), and a label parented under " +
+             "one inherits that — which made every word less than half the size it " +
+             "was designed at, and unreadable while walking past. 1 = the size the " +
+             "text was authored at, whatever the stone does.")]
+    public float labelScale = 1f;
+    [Tooltip("Bounce the stone when its word is tapped. OFF: the tap answers with " +
+             "particles alone, which is the read that was wanted — a stone lying " +
+             "on a river should not jump out of it.")]
+    public bool hopOnTap = false;
+    [Tooltip("How far above the stone's TOP the word sits, in world metres. Small — " +
+             "a few centimetres reads as printed on the stone; more and it floats.")]
+    public float wordHeight = 0.06f;
+    [Tooltip("Lay the word flat on the stone, read from above, instead of standing " +
+             "it up to face the camera. The stones lie flat on the river, so the " +
+             "word lies with them.")]
+    public bool layFlat = true;
     public Color textColor = new Color(0.25f, 0.20f, 0.15f);
     public Color keywordTextColor = new Color(0.55f, 0.35f, 0.05f);
 
@@ -190,12 +206,49 @@ public class WordStone : MonoBehaviour
         if (_tmp == null) return;
         var cam = Camera.main;
         if (cam == null) return;
-        // above the stone itself — scaled with it, so the label clears a far stone
-        // that perspective compensation has grown, and doesn't float off a near one
-        _tmp.transform.position = transform.position +
-                                  Vector3.up * wordHeight * Mathf.Max(0.01f, transform.lossyScale.y);
-        _tmp.transform.rotation = Quaternion.LookRotation(
-            _tmp.transform.position - cam.transform.position, Vector3.up);
+        // ON the stone: a fixed height above its actual TOP SURFACE, in world
+        // metres, measured off the mesh.
+        //
+        // This used to be wordHeight * lossyScale.y. The stones are authored in
+        // Blender now and hang off slots the FBX importer scaled by 100, so the
+        // stone's world scale is around 50 — and 0.3 became FIFTEEN METRES. Every
+        // word has been hanging in the sky over the river, out of frame, which is
+        // the whole of "the stones show no text".
+        float top = transform.position.y;
+        var mesh = GetComponentInChildren<Renderer>();
+        if (mesh != null) top = mesh.bounds.max.y;
+        Vector3 at = new Vector3(transform.position.x, top + wordHeight, transform.position.z);
+        _tmp.transform.position = at;
+
+        if (layFlat)
+        {
+            // Lying on the stone, read from above. TMP shows its face to whatever
+            // its forward points AWAY from, so forward goes down; the page's own
+            // up is turned away from the camera, which is what makes the word read
+            // the right way up rather than mirrored or upside down.
+            Vector3 away = at - cam.transform.position;
+            away.y = 0f;
+            if (away.sqrMagnitude < 1e-6f) away = Vector3.forward;
+            _tmp.transform.rotation = Quaternion.LookRotation(Vector3.down, away.normalized);
+        }
+        else
+        {
+            _tmp.transform.rotation = Quaternion.LookRotation(at - cam.transform.position,
+                                                             Vector3.up);
+        }
+
+        // The WORD does not shrink with the stone. It is parented under the stone so
+        // it lives and dies with it, but a stone authored at 0.43 would otherwise
+        // drag the label down to under half the size it was designed at — which is
+        // the whole point of the walk gone: you cannot read the word you walked to.
+        // Cancel the inherited scale and hold the label at its authored size.
+        var parent = _tmp.transform.parent;
+        Vector3 inherited = parent != null ? parent.lossyScale : Vector3.one;
+        float s = Mathf.Max(0.0001f, labelScale);
+        _tmp.transform.localScale = new Vector3(
+            s / Mathf.Max(0.0001f, inherited.x),
+            s / Mathf.Max(0.0001f, inherited.y),
+            s / Mathf.Max(0.0001f, inherited.z));
     }
 
     static bool PointerDown(out Vector2 pos)
@@ -221,7 +274,7 @@ public class WordStone : MonoBehaviour
     public void Clicked()
     {
         if (solved) { PlayPuff(transform.position + Vector3.up * 0.15f); return; }
-        StartCoroutine(Hop());
+        if (hopOnTap) StartCoroutine(Hop());
         if (isKeyword)
         {
             PlayKeywordBurst(transform.position + Vector3.up * 0.15f,
@@ -235,11 +288,16 @@ public class WordStone : MonoBehaviour
 
     IEnumerator Hop()
     {
+        // In LOCAL units, and a stone authored in Blender is a child of a slot the
+        // FBX importer gave a scale of 100 — so this 0.06 was six metres, and a
+        // tapped word launched into the sky. Divided through by the inherited
+        // scale it is 6 cm again, whatever the stone is parented to.
+        float inherited = Mathf.Max(0.0001f, transform.lossyScale.y / transform.localScale.y);
         Vector3 home = transform.localPosition;
         for (float t = 0; t < 0.28f; t += Time.deltaTime)
         {
             float k = Mathf.Sin(Mathf.Clamp01(t / 0.28f) * Mathf.PI);
-            transform.localPosition = home + Vector3.up * 0.06f * k;
+            transform.localPosition = home + Vector3.up * (0.06f / inherited) * k;
             yield return null;
         }
         transform.localPosition = home;
