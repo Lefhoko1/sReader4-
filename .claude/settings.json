@@ -37,7 +37,20 @@
       "Bash(python -c ' *)",
       "PowerShell(& \"C:/Users/11113930/AppData/Local/Temp/claude/c--Users-11113930-sReader4/c374353c-c4ab-4654-af88-0419a12527e7/scratchpad/bl.ps1\" -Json '{\"type\":\"get_scene_info\",\"params\":{}}')",
       "Bash(awk -F/ '{print $1\"/\"$2\"/\"$3}')",
-      "Bash(git status *)"
+      "Bash(git status *)",
+      "Bash(awk 'NR>=4280 && NR<=4390' Assets/Scenes/SC_IslandVista.unity)",
+      "Bash(xxd)",
+      "Bash(iconv -f UTF-8 -t UTF-8 BookWalkFlow.cs)",
+      "Bash(grep -v \"BookWalkFlow.cs.meta$\")",
+      "Bash(rm -f BookWalkFlow.cs.meta)",
+      "Bash(touch BookWalkFlow.cs)",
+      "PowerShell(try { $c = New-Object System.Net.Sockets.TcpClient; $c.Connect\\('127.0.0.1',9876\\); \"PORT 9876 OPEN\"; $c.Close\\(\\) } catch { \"PORT 9876 CLOSED: \" + $_.Exception.Message })",
+      "Bash(python -c \"import json;d=json.load\\(open\\('WordRiver_Path.json'\\)\\);print\\({k:\\(len\\(v\\) if isinstance\\(v,list\\) else v\\) for k,v in d.items\\(\\)}\\)\")",
+      "Bash(grep -ao \"M_[A-Za-z]\\\\{3,\\\\}\" SM_Island_World.fbx)",
+      "Bash(grep -ao \"SOCKET_[A-Za-z]\\\\{3,\\\\}\" SM_Island_World.fbx)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(ffprobe -v error -show_entries format=duration,size -show_entries stream=width,height,r_frame_rate,codec_name -of default=noprint_wrappers=1 \"C:/Users/11113930/Documents/mine/sreader/BlenderFiles/playview1.mp4\")",
+      "Read(//c/Users/11113900/sReader4/Assets/Scripts/Game/Library/Walk/**)"
     ],
     "additionalDirectories": [
       "C:\\Users\\11113930\\sReader4"

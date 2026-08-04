@@ -95,6 +95,17 @@ public class StoryBook : MonoBehaviour
     public float pageLift = 0f;
     [Tooltip("Tick if the text reads mirrored/upside-down on your book.")]
     public bool flipText;
+    [Tooltip("Re-aim the page text at the camera every frame. TMP is single-sided, " +
+             "so text laid out for a camera that then MOVES ends up facing away — " +
+             "which is exactly what happens once a walking camera comes round to " +
+             "the lectern. Leave on for the walking game; off is fine for a fixed shot.")]
+    public bool keepFacingCamera = true;
+
+    [Header("Control")]
+    [Tooltip("Off = the book ignores the pointer entirely. The reading loop drops " +
+             "this while the reader is away walking the sentence, so a stray click " +
+             "can't launch a second sentence over the top of the first.")]
+    public bool interactive = true;
 
     [Header("Look — candy palette")]
     public Color inkColor      = new Color(0.30f, 0.22f, 0.35f);
@@ -135,6 +146,7 @@ public class StoryBook : MonoBehaviour
                  public Vector3 home; public BoxCollider col; public Sentence sentence; }
     readonly List<Line> _lines = new List<Line>();
     List<Sentence> _sentences = new List<Sentence>();
+    TextMeshPro _title;
     int _page;
     Transform _flip;
     Line _hover;
@@ -277,6 +289,14 @@ public class StoryBook : MonoBehaviour
 
     // The page plane's normal is the book's up; text reads "up the page" along
     // the book's forward. Derived from the model, so any book rotation works.
+    //
+    // The two signs are REMEMBERED between calls with a dead zone around the
+    // decision. A camera that walks round the lectern crosses the page plane at a
+    // grazing angle, and re-deciding from a dot product that is hovering near zero
+    // makes the whole page flip back and forth once a frame. Only a decisive
+    // crossing changes the answer.
+    int _normalSign = 1, _upSign = 1;
+
     Quaternion TextRotation()
     {
         Vector3 normal = transform.up;          // the page plane's normal
@@ -288,11 +308,37 @@ public class StoryBook : MonoBehaviour
         var cam = Camera.main;
         if (cam != null)
         {
-            if (Vector3.Dot(normal, cam.transform.position - transform.position) < 0f) normal = -normal;
-            if (Vector3.Dot(up, cam.transform.up) < 0f) up = -up;
+            const float deadZone = 0.06f;
+            float toCam = Vector3.Dot(normal.normalized,
+                                      (cam.transform.position - transform.position).normalized);
+            if (Mathf.Abs(toCam) > deadZone) _normalSign = toCam < 0f ? -1 : 1;
+
+            float upright = Vector3.Dot(up.normalized, cam.transform.up);
+            if (Mathf.Abs(upright) > deadZone) _upSign = upright < 0f ? -1 : 1;
         }
+
+        normal *= _normalSign;
+        up *= _upSign;
         if (flipText) up = -up;
         return Quaternion.LookRotation(-normal, up);
+    }
+
+    /// <summary>
+    /// Re-aim every piece of page text at the camera where it is NOW. Free to call
+    /// each frame — it is a handful of transforms — and the only thing that keeps
+    /// the page readable once the camera stopped being fixed.
+    /// </summary>
+    public void RefreshTextFacing()
+    {
+        var rot = TextRotation();
+        if (_title != null) _title.transform.rotation = rot;
+        foreach (var l in _lines)
+            if (l.tmp != null) l.tmp.transform.rotation = rot;
+    }
+
+    void LateUpdate()
+    {
+        if (keepFacingCamera) RefreshTextFacing();
     }
 
     // Build a TMP that AUTO-FITS a rect measured in world units — no font-size
@@ -415,7 +461,24 @@ public class StoryBook : MonoBehaviour
                          titleColor, TextAlignmentOptions.Center);
         t.text = title;
         t.fontStyle = FontStyles.Bold;
+        _title = t;
     }
+
+    // ── what the reading loop asks the book ────────────────────────────────
+
+    /// <summary>How many sentences the paragraph holds.</summary>
+    public int SentenceCount => _sentences.Count;
+
+    /// <summary>The spread on show. In one-sentence mode this IS the sentence index.</summary>
+    public int Page => _page;
+
+    /// <summary>True while there is another sentence to turn to.</summary>
+    public bool HasNextPage => oneSentencePerSpread
+        ? _page < _sentences.Count - 1
+        : _page < Mathf.CeilToInt(_sentences.Count / (float)(linesPerPage * 2)) - 1;
+
+    /// <summary>True while a sentence is in flight or a page is turning.</summary>
+    public bool Busy => _busy;
 
     void ShowPage(int page)
     {
@@ -511,6 +574,16 @@ public class StoryBook : MonoBehaviour
     void Update()
     {
         var cam = Camera.main; if (cam == null) return;
+
+        // Away walking the last sentence: no hover, no raycast, no click. Drop any
+        // warm sentence back to ink first, or it stays lit with nobody at the book.
+        if (!interactive)
+        {
+            if (_hover != null && !_hover.sent) Style(_hover, false);
+            _hover = null;
+            return;
+        }
+
         Vector2 p = Pointer();
         Ray ray = cam.ScreenPointToRay(p);
 
