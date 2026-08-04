@@ -39,6 +39,14 @@ public class WordPathBuilder : MonoBehaviour
              "show. Sentences shorter than this leave the spare slots under water.")]
     [Range(4, 64)] public int poolSlots = 24;
 
+    [Header("Stones placed in Blender")]
+    [Tooltip("Use the stones authored in the island .blend (WORDSLOT_00…19, each " +
+             "holding a plain and a gold variant) instead of pooling prefabs here. " +
+             "When they are in the scene this wins: positions are art, not maths.")]
+    public bool useAuthoredSlots = true;
+    [Tooltip("Name prefix the slot empties were exported with.")]
+    public string authoredSlotPrefix = "WORDSLOT_";
+
     [Header("River shape (drawn in Blender)")]
     [Tooltip("The authored curve the words follow. Empty = the straight " +
              "PathStart -> PathEnd line with the sine meander, as before.")]
@@ -118,6 +126,7 @@ public class WordPathBuilder : MonoBehaviour
     readonly List<WordStone> _stones = new List<WordStone>();
     readonly List<float> _u = new List<float>();      // each stone's place along the path, 0-1
     readonly WordStonePool _pool = new WordStonePool();
+    List<StoneSlot> _authored;                        // the Blender-placed slots
     Vector3 _lastEye = new Vector3(float.MaxValue, 0f, 0f);
     Transform _avoidCached; Renderer[] _avoidRends;   // the book's renderers, looked up once
     float _unitDiameter;                              // a stone's width at scale 1
@@ -209,15 +218,105 @@ public class WordPathBuilder : MonoBehaviour
 
         var variants = new[] { stoneA, stoneB, stoneC }.Where(p => p != null).ToArray();
 
-        if (usePool) BuildPooled(slots, showWords, variants);
+        bool authored = useAuthoredSlots && AuthoredSlots().Count > 0;
+        if (authored) BuildAuthored(slots, showWords);
+        else if (usePool) BuildPooled(slots, showWords, variants);
         else BuildInstantiated(slots, showWords, variants);
 
-        ApplyPerspective();          // spacing + size are solved against the camera
-        Debug.Log($"[WordPath] {(usePool ? "Raised" : "Built")} {_stones.Count} stones for " +
-                  $"{slots.Count} words ({_stones.Count(s => s.isKeyword)} key)" +
-                  $"{(river != null && river.Valid ? $", along {river.name}" : "")}.");
+        // Authored stones are already where the artist put them. ApplyPerspective
+        // would immediately drag them off those positions, which is the whole thing
+        // moving to Blender was meant to stop.
+        if (!authored) ApplyPerspective();
+
+        Debug.Log($"[WordPath] {(authored ? "Filled" : usePool ? "Raised" : "Built")} " +
+                  $"{_stones.Count} stones for {slots.Count} words " +
+                  $"({_stones.Count(s => s.isKeyword)} key)" +
+                  (authored
+                      ? $" — last {_stones.Count} of {AuthoredSlots().Count} authored slots, " +
+                        $"anchored at the shore."
+                      : river != null && river.Valid ? $", along {river.name}." : "."));
         return new List<WordStone>(_stones);
     }
+
+    /// <summary>
+    /// Fill the stones AUTHORED IN BLENDER: one word per slot, anchored at the
+    /// shore, everything before them left under the water.
+    ///
+    /// ANCHORED AT THE SHORE, NOT AT THE SEA. The twenty slots run from open water
+    /// (WORDSLOT_00) to the dock (WORDSLOT_19). Taking the first N would put the
+    /// words far out and leave the reader walking the rest of the river with
+    /// nothing to read; taking the LAST N means there is a word under every step
+    /// and the walk still finishes at the island. The journey gets shorter for a
+    /// short sentence, which is the point.
+    ///
+    /// Nothing here positions or scales anything — the slots already know where
+    /// they are. This only decides which of them surface, and which face of each
+    /// (plain or gold) is the one that shows.
+    /// </summary>
+    void BuildAuthored(List<Slot> slots, bool showWords)
+    {
+        var all = AuthoredSlots();
+        int n = Mathf.Min(slots.Count, all.Count);
+
+        if (slots.Count > all.Count)
+            Debug.LogWarning(
+                $"[WordPath] \"{slots[0].text}...\" is {slots.Count} words but only " +
+                $"{all.Count} stones were placed in Blender. The first " +
+                $"{slots.Count - all.Count} word(s) have nowhere to land. Place more " +
+                $"slots in island_library.blend and re-export.");
+
+        int first = all.Count - n;                 // the shore-anchored window
+
+        for (int i = 0; i < all.Count; i++)
+        {
+            var slot = all[i];
+            if (slot == null) continue;
+
+            if (i < first) { slot.Sink(); continue; }   // still out at sea: stay down
+
+            var word = slots[i - first];
+            slot.Raise(word.isKey);
+
+            var ws = slot.Active;
+            if (ws == null) continue;
+
+            // A stone carries whatever the last sentence left on it — listeners, a
+            // solved star, tutor content. Same reset the pool does, for the same
+            // reason: word 3 must not answer for the last sentence's word 3.
+            ws.ResetForReuse();
+            ws.word = showWords ? word.text : "";
+            ws.isKeyword = word.isKey;
+            ws.endsSentence = showWords && i == all.Count - 1;
+            ws.token = word.token;
+            ws.Relabel();
+
+            if (_stones.Count == 0) MeasureStone(ws.gameObject);
+            _stones.Add(ws);
+            _u.Add(n == 1 ? 0.5f : (i - first) / (float)(n - 1));
+        }
+    }
+
+    /// <summary>
+    /// The stones placed in Blender, in reading order — WORDSLOT_00 furthest out to
+    /// sea. Found by name because that is what survives the FBX round trip intact:
+    /// the empties lose their rotation, but never their names or their order.
+    /// </summary>
+    public List<StoneSlot> AuthoredSlots()
+    {
+        // a destroyed entry means the world was re-imported under us
+        if (_authored != null && _authored.Count > 0 && _authored[0] != null)
+            return _authored;
+
+        _authored = FindObjectsByType<StoneSlot>(FindObjectsInactive.Include,
+                                                 FindObjectsSortMode.None)
+            .Where(s => s != null && s.name.StartsWith(authoredSlotPrefix))
+            .OrderBy(s => s.name, System.StringComparer.Ordinal)
+            .ToList();
+        return _authored;
+    }
+
+    /// <summary>Forget the cached slots — call after re-importing the world.</summary>
+    public void ForgetAuthoredSlots() { _authored = null; }
 
     /// <summary>Reuse the pool: raise the stones this sentence needs, sink the rest.</summary>
     void BuildPooled(List<Slot> slots, bool showWords, GameObject[] variants)

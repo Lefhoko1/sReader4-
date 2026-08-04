@@ -99,17 +99,11 @@ public static class WordRiverImport
         float len = river.Length;
         Debug.Log(
             $"[River] Imported {pts.Length} points, {len:0.0} m of river.\n" +
-            $"  • axes {axes.name}, offset {offset}, matched {matched} landmark(s), " +
-            $"residual {residual:0.000} m {(residual < 0.05f ? "— exact" : residual < 0.5f ? "— close enough" : "— SUSPECT, see below")}\n" +
+            $"  • axes {axes.name}, offset {offset}, {Quality(residual, matched)}\n" +
             $"  • ends: {pts[0]} (open water) → {pts[pts.Length - 1]} (the shore)\n" +
             (builder != null
                 ? $"  • {builder.name} now follows it, pooled at {builder.poolSlots} slots.\n"
-                : "  • no WordPathBuilder in the scene — assign the river by hand.\n") +
-            (residual >= 0.5f
-                ? "  ! The landmarks do not line up. The island in this scene is probably " +
-                  "not the one the river was drawn against — re-export the island FBX, or " +
-                  "re-draw the river against the current one.\n"
-                : ""));
+                : "  • no WordPathBuilder in the scene — assign the river by hand.\n"));
     }
 
     // =======================================================================
@@ -139,10 +133,8 @@ public static class WordRiverImport
 
         Debug.Log(
             $"[Walk] Imported the authored walkway: {file.steps} steps, " +
-            $"{walk.Length:0.0} m, {file.width:0.00} m wide.\n" +
-            $"  • axes {axes.name}, offset {offset}, matched {matched} landmark(s), " +
-            $"residual {residual:0.000} m " +
-            $"{(residual < 0.05f ? "— exact" : residual < 0.5f ? "— close enough" : "— SUSPECT")}\n" +
+            $"{walk.Length:0.0} m.\n" +
+            $"  • axes {axes.name}, offset {offset}, {Quality(residual, matched)}\n" +
             $"  • ends: {walk.points[0]} (the dock) → " +
             $"{walk.points[walk.points.Length - 1]} (the entrance terrace)\n" +
             $"  • nothing follows it yet — it is scene data. It is NOT given to the " +
@@ -167,13 +159,28 @@ public static class WordRiverImport
             Debug.LogError($"[River] {json} has no polyline. Re-run the Blender export.");
             return null;
         }
-        if (!Solve(file, out axes, out offset, out residual, out matched)) return null;
+        // The world root wins over the landmark fit whenever it is there. See
+        // LockToWorld: the conversion is known exactly, so fitting one is strictly
+        // worse than not fitting one.
+        var root = WorldRoot();
+        if (root != null)
+        {
+            axes = FBX_CONVERSION;
+            offset = Vector3.zero;
+            residual = Verify(file, root, out matched);
+        }
+        else if (!Solve(file, out axes, out offset, out residual, out matched))
+        {
+            return null;
+        }
 
         // Locals: `map` and `off` are copies because an out parameter cannot be
         // captured by a lambda (CS1628).
         var map = axes.map;
         var off = offset;
-        var pts = file.points.Select(p => map(p) + off).ToArray();
+        var pts = root != null
+            ? file.points.Select(p => root.TransformPoint(map(p))).ToArray()
+            : file.points.Select(p => map(p) + off).ToArray();
 
         var go = GameObject.Find(goName);
         if (go == null)
@@ -181,6 +188,9 @@ public static class WordRiverImport
             go = new GameObject(goName);
             Undo.RegisterCreatedObjectUndo(go, undo);
         }
+        // keep the authored lines with the world they were authored against
+        if (root != null && go.transform.parent != root)
+            Undo.SetTransformParent(go.transform, root, undo);
         var line = go.GetComponent<WordRiverPath>();
         if (line == null) line = Undo.AddComponent<WordRiverPath>(go);
 
@@ -227,7 +237,7 @@ public static class WordRiverImport
         {
             if (file.refPos == null || i >= file.refPos.Length) break;
             var t = FindInScene(file.refNames[i]);
-            if (t != null) pairs.Add((file.refPos[i], t.position));
+            if (t != null) pairs.Add((file.refPos[i], Anchor(t)));
         }
         matched = pairs.Count;
 
@@ -262,6 +272,121 @@ public static class WordRiverImport
                              "is assumed rather than solved. Check the river sits on the " +
                              "water before trusting it.");
         return true;
+    }
+
+    // =======================================================================
+    //  Locking to the world root — why there is no solve any more
+    // =======================================================================
+    //  The whole island now arrives as ONE FBX under one root. That export uses
+    //  axis_forward='-Z', axis_up='Y', which converts Blender (x, y, z) to Unity
+    //  (-x, z, -y) — exactly, for every vertex and every object, with no leftover
+    //  translation. So the mapping is not something to discover; it is something
+    //  we already know.
+    //
+    //  Fitting it from landmarks was strictly worse than not fitting it. A fit can
+    //  only ever be as good as its worst pair, and it was picking up a spurious
+    //  1.9 m offset that put the whole river out to sea — a made-up correction to
+    //  a transform that needed no correcting.
+    //
+    //  Points are still baked to WORLD space, because that is what WordRiverPath
+    //  samples — but they are put there THROUGH the root's transform, so wherever
+    //  the island is placed, the river is placed to match. (Re-run the import if
+    //  the root ever moves; the baked points do not follow it by themselves.)
+    //
+    //  Verify() still measures the landmarks, but only to REPORT — never to change
+    //  the answer. If that number is ever large, the FBX was exported with
+    //  different axis flags, and it should say so loudly rather than quietly
+    //  bending the world to fit.
+
+    const string WORLD_ROOT = "IslandWorld";
+
+    static readonly Axes FBX_CONVERSION =
+        new Axes { name = "(-x, z, -y) locked to " + WORLD_ROOT,
+                   map = v => new Vector3(-v.x, v.z, -v.y) };
+
+    /// <summary>
+    /// How to describe the placement. When locked to the world root the placement
+    /// is EXACT by construction — the residual is a landmark health check, not a
+    /// measure of where the path ended up, and calling it "SUSPECT" sent us
+    /// hunting a placement bug that did not exist.
+    /// </summary>
+    static string Quality(float residual, int matched)
+    {
+        if (WorldRoot() != null)
+            return $"placement EXACT (no fitting involved). Landmark check over " +
+                   $"{matched} object(s): mean {residual:0.00} m" +
+                   (residual < 0.5f
+                       ? " — the scene matches the .blend."
+                       : " — some landmark has moved in Blender or is duplicated in " +
+                         "the scene. Does not affect the path.");
+
+        return $"matched {matched} landmark(s), residual {residual:0.000} m " +
+               (residual < 0.05f ? "— exact"
+                : residual < 0.5f ? "— close enough"
+                : "— SUSPECT: the path was FITTED to landmarks and they disagree. " +
+                  "Import the world FBX so this can lock to it instead.");
+    }
+
+    static Transform WorldRoot()
+    {
+        foreach (var r in EditorSceneManager.GetActiveScene().GetRootGameObjects())
+            foreach (var t in r.GetComponentsInChildren<Transform>(true))
+                if (t.name == WORLD_ROOT) return t;
+        return null;
+    }
+
+    /// <summary>
+    /// Measure how well the known conversion lines the landmarks up, and name the
+    /// worst offender. Reporting only — the mapping is not adjusted by this.
+    /// </summary>
+    static float Verify(RiverFile file, Transform root, out int matched)
+    {
+        matched = 0;
+        if (file.refNames == null || file.refPos == null) return 0f;
+
+        float sum = 0f, worst = 0f;
+        string worstName = null;
+        for (int i = 0; i < file.refNames.Length && i < file.refPos.Length; i++)
+        {
+            var t = FindInScene(file.refNames[i]);
+            if (t == null) continue;
+            float e = Vector3.Distance(root.TransformPoint(FBX_CONVERSION.map(file.refPos[i])),
+                                       Anchor(t));
+            sum += e; matched++;
+            if (e > worst) { worst = e; worstName = file.refNames[i]; }
+        }
+        if (matched == 0) return 0f;
+
+        float mean = sum / matched;
+        if (worst > 0.5f)
+            Debug.LogWarning(
+                $"[River] Landmarks do not sit where the known FBX conversion says " +
+                $"they should — worst is '{worstName}' at {worst:0.00} m, mean " +
+                $"{mean:0.00} m. The path was placed anyway (the conversion is not a " +
+                $"guess), but either that object moved in Blender since the FBX was " +
+                $"written, or there are two objects by that name in the scene.");
+        return mean;
+    }
+
+    /// <summary>
+    /// The point a landmark is measured at: TransformPoint(mesh.bounds.center),
+    /// falling back to the transform's own position.
+    ///
+    /// This MUST agree with what the Blender exporter writes into refPos, which is
+    /// matrix_world @ (local bounding-box centre). transform.position would NOT
+    /// agree: several island objects — the trees, the walkway — now carry their
+    /// offset inside their mesh and sit at the origin, so their pivot and the thing
+    /// you can actually see are metres apart. Measuring the pivot on one side and
+    /// the mesh on the other biases every candidate equally and silently, which
+    /// looks exactly like "the import is slightly wrong" and is impossible to spot
+    /// from the residual alone.
+    /// </summary>
+    static Vector3 Anchor(Transform t)
+    {
+        var mf = t.GetComponent<MeshFilter>();
+        if (mf != null && mf.sharedMesh != null)
+            return t.TransformPoint(mf.sharedMesh.bounds.center);
+        return t.position;
     }
 
     /// <summary>

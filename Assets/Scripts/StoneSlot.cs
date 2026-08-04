@@ -27,7 +27,18 @@ public class StoneSlot : MonoBehaviour
     [Tooltip("Metres per second the stone rises and sinks.")]
     public float speed = 2.6f;
 
-    Vector3 _home;          // where the slot sits when fully raised
+    // Where this slot stands when raised, IN ITS PARENT'S SPACE.
+    //
+    // Serialized, because the slots are authored in Blender and the position has to
+    // survive a recompile and a scene reload — a plain private field does not, and
+    // losing it sends the stone to the world origin.
+    //
+    // LOCAL, not world, and that distinction is the whole bug it was written with:
+    // a cached WORLD position goes stale the moment anybody moves or rotates the
+    // island root. Every stone then snaps back to where it used to be before the
+    // rotation, which looks like the river collapsing into a heap. Held against the
+    // parent, the slots simply travel with the world, as they should.
+    [SerializeField, HideInInspector] Vector3 _homeLocal;
     float _offset;          // how far below home it is right now (0 = up)
     float _target;          // where it is heading
     bool _isKey;
@@ -38,15 +49,52 @@ public class StoneSlot : MonoBehaviour
     /// <summary>True while this slot is raised (or on its way up).</summary>
     public bool Raised { get; private set; }
 
+    /// <summary>
+    /// Where this slot sits when raised. Zero means it has never been placed —
+    /// worth checking before raising, because a slot that has been sunk is no
+    /// longer standing at its own home and re-deriving one from the transform
+    /// would bake the sunk position in for good.
+    /// </summary>
+    public Vector3 Home =>
+        transform.parent != null ? transform.parent.TransformPoint(_homeLocal) : _homeLocal;
+
     /// <summary>Put the slot's raised position / facing / size. Does not raise it.</summary>
     public void Place(Vector3 worldPos, Quaternion rot, Vector3 scale)
     {
-        _home = worldPos;
+        _homeLocal = transform.parent != null
+            ? transform.parent.InverseTransformPoint(worldPos)
+            : worldPos;
         transform.rotation = rot;
         transform.localScale = scale;
-        transform.position = _home - Vector3.up * _offset;
-        // sink depth has to clear the stone itself, however big it was scaled
-        sinkDepth = Mathf.Max(1.0f, scale.y * 2.2f);
+        transform.position = Home - Vector3.up * _offset;
+        sinkDepth = MeasuredSinkDepth();
+    }
+
+    /// <summary>
+    /// Far enough under to be out of sight, measured from THE STONE — never from
+    /// the slot's own scale.
+    ///
+    /// This used to be scale.y * 2.2, which was fine while the slots were built in
+    /// Unity at scale 1. The slots are authored in Blender now and arrive as FBX
+    /// empties, and an empty has no meaningful scale — the importer handed these
+    /// ones about 100. So "hide this stone" quietly meant "drop it 220 metres",
+    /// and because the next bind read the slot's home back off that sunk
+    /// transform, the hole got deeper every single time: -220, then -750.
+    ///
+    /// The stone's rendered height is the only honest measure of how far it has to
+    /// go to disappear, and it cannot be poisoned by a number nobody authored.
+    /// </summary>
+    float MeasuredSinkDepth()
+    {
+        float tallest = 0f;
+        foreach (var ws in new[] { normal, key })
+        {
+            if (ws == null) continue;
+            foreach (var r in ws.GetComponentsInChildren<Renderer>(true))
+                tallest = Mathf.Max(tallest, r.bounds.size.y);
+        }
+        // a stone and a bit, so the top clears the water; never a runaway number
+        return Mathf.Clamp(tallest * 2.2f, 1.0f, 4.0f);
     }
 
     /// <summary>Show this slot, as a key word or a plain one.</summary>
@@ -62,7 +110,7 @@ public class StoneSlot : MonoBehaviour
         if (instant || !Application.isPlaying)
         {
             _offset = 0f;
-            transform.position = _home;
+            transform.position = Home;
         }
         enabled = true;
     }
@@ -75,7 +123,7 @@ public class StoneSlot : MonoBehaviour
         if (instant || !Application.isPlaying)
         {
             _offset = sinkDepth;
-            transform.position = _home - Vector3.up * _offset;
+            transform.position = Home - Vector3.up * _offset;
             gameObject.SetActive(false);
             return;
         }
@@ -94,7 +142,7 @@ public class StoneSlot : MonoBehaviour
         }
 
         _offset = Mathf.MoveTowards(_offset, _target, speed * Time.deltaTime);
-        transform.position = _home - Vector3.up * _offset;
+        transform.position = Home - Vector3.up * _offset;
 
         if (!Raised && _offset >= sinkDepth - 0.001f)
         {

@@ -217,6 +217,37 @@ public class RiversideRoad : MonoBehaviour
         }
         foreach (Transform c in path.transform)
             if (c.GetComponent<WordStone>() != null) _stones.Add(c);
+        if (_stones.Count == 0) CollectAuthored();
+    }
+
+    /// <summary>
+    /// The stones authored in Blender, which live under the WORLD, not under the
+    /// builder — so neither the live list nor the child scan above can find them.
+    ///
+    /// This is the path that matters after a script recompile or a fresh Play: the
+    /// builder's list is a plain List and does not survive a domain reload, and
+    /// without this the road silently rebuilds to ZERO stops. The stones are still
+    /// standing there in the river; nothing could see them.
+    ///
+    /// Read from the SCENE, not from runtime state: a slot's `Raised` flag is also
+    /// lost on reload, but whether its GameObject is switched on is saved with the
+    /// scene, and a sunk slot is a switched-off one.
+    /// </summary>
+    void CollectAuthored()
+    {
+        var slots = new List<StoneSlot>(
+            FindObjectsByType<StoneSlot>(FindObjectsInactive.Include, FindObjectsSortMode.None));
+        slots.RemoveAll(s => s == null || !s.name.StartsWith("WORDSLOT_") ||
+                             !s.gameObject.activeSelf);
+        slots.Sort((a, b) => string.CompareOrdinal(a.name, b.name));   // name order = reading order
+
+        foreach (var s in slots)
+        {
+            Transform t = null;
+            if (s.normal != null && s.normal.gameObject.activeSelf) t = s.normal.transform;
+            else if (s.key != null && s.key.gameObject.activeSelf) t = s.key.transform;
+            if (t != null) _stones.Add(t);
+        }
     }
 
     Vector3 Direction()
@@ -258,6 +289,40 @@ public class RiversideRoad : MonoBehaviour
         float seg = _cum[i + 1] - _cum[i];
         float t = seg > 1e-5f ? (d - _cum[i]) / seg : 0f;
         return Vector3.Lerp(_pts[i], _pts[i + 1], t);
+    }
+
+    /// <summary>
+    /// How far along the road the point nearest <paramref name="world"/> is.
+    /// Used to steer the walk by pointer: the road stays a 1-D problem, and
+    /// "where the finger is" becomes just another distance along it.
+    /// </summary>
+    public float NearestDistance(Vector3 world)
+    {
+        if (_pts.Count == 0) return 0f;
+        if (_pts.Count == 1) return 0f;
+
+        float best = 0f, bestSqr = float.MaxValue;
+        for (int i = 1; i < _pts.Count; i++)
+        {
+            Vector3 a = _pts[i - 1], b = _pts[i];
+            Vector3 ab = b - a;
+            float len2 = ab.sqrMagnitude;
+            if (len2 < 1e-6f) continue;
+
+            // clamped projection onto this segment, flat: height must not decide
+            // which part of the road a tap on the water is nearest to
+            float t = Mathf.Clamp01(Vector3.Dot(world - a, ab) / len2);
+            Vector3 p = a + ab * t;
+            Vector3 gap = p - world; gap.y = 0f;
+
+            float sqr = gap.sqrMagnitude;
+            if (sqr < bestSqr)
+            {
+                bestSqr = sqr;
+                best = Mathf.Lerp(_cum[i - 1], _cum[i], t);
+            }
+        }
+        return best;
     }
 
     /// <summary>Which way the road is heading, <paramref name="d"/> metres along.</summary>
