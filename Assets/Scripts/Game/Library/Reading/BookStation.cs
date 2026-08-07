@@ -49,6 +49,49 @@ public class BookStation : MonoBehaviour
     /// <summary>What the establishing shot frames. The hall if we have it.</summary>
     public Transform HallFocus => hallFocus != null ? hallFocus : FocusTarget;
 
+    [Header("Standing on the authored desk")]
+    [Tooltip("SIT ON THE DESK BLENDER PUT THERE, wherever that now is.\n\n" +
+             "The desk is Blender geometry; this nook is a Unity scene object. They " +
+             "describe the same piece of furniture and nothing keeps them together, " +
+             "so every time the library is re-exported with the desk somewhere new, " +
+             "the book stays behind — hanging in mid-air at the height the old desk " +
+             "top used to be, while the real desk sits somewhere else in the room. " +
+             "It has to be spotted by eye and corrected by hand, every time.\n\n" +
+             "With this on, the nook reads the socket and moves itself. The desk's " +
+             "position stops being something two places have to agree about.")]
+    public bool sitOnTheAuthoredDesk = true;
+    [Tooltip("The empty the Blender library carries at the reading desk.")]
+    public string deskSocketName = "SOCKET_ReadingDesk";
+
+    void OnEnable() { SitOnTheDesk(); }
+
+    /// <summary>
+    /// Move the nook onto its socket. Position only — the room has not turned, so
+    /// the facing is still whatever it was authored to be, and re-deriving it would
+    /// be inventing a second opinion about which way the book points.
+    /// </summary>
+    public void SitOnTheDesk()
+    {
+        if (!sitOnTheAuthoredDesk) return;
+
+        Transform socket = null;
+        foreach (var t in FindObjectsByType<Transform>(FindObjectsInactive.Include,
+                                                       FindObjectsSortMode.None))
+            if (t.name == deskSocketName) { socket = t; break; }
+        if (socket == null) return;
+
+        // Only when it actually differs: this runs in edit mode too, and a transform
+        // written every frame is a scene that is permanently dirty.
+        float off = (transform.position - socket.position).sqrMagnitude;
+        if (off < 0.0001f) return;
+
+        Vector3 was = transform.position;
+        transform.position = socket.position;
+        Debug.Log($"[BookStation] Nook moved onto {deskSocketName}: {was:0.00} → " +
+                  $"{socket.position:0.00} ({Mathf.Sqrt(off):0.00} m adrift). The desk " +
+                  "moved and the book had stayed behind.");
+    }
+
     [Header("Where it stands")]
     [Tooltip("The nook is inside a built room. The dressing pass then skips the " +
              "things the room already provides — its own paved terrace, its " +

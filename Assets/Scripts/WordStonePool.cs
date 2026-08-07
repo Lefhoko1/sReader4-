@@ -96,6 +96,7 @@ public class WordStonePool
         ws.isKeyword = isKey;
         ws.endsSentence = showWord && endsSentence;
         ws.Relabel();
+        ws.Awaiting(!showWord);       // unseen until its chip lands — see WordStone
         return ws;
     }
 

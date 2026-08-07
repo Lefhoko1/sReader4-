@@ -14,6 +14,15 @@
 //     READ   — closer, framing reader AND the stone they are standing at
 //     SEATED — out in front on the water, the reader on the mat, library behind
 //
+//  AND ONE RULE THAT OUTRANKS ALL THREE: inside the library, the lens stays
+//  inside the library. Every shot here is authored as a distance in open air —
+//  the reveal asks to be five metres back from the middle of a room four metres
+//  deep — and a shot that cannot have what it asked for gets the next best thing
+//  outdoors: a position through the wall, filming the outside of the building the
+//  reader is standing in. You cannot be in a house and see the outside of it, so
+//  the room is measured (its floor tiles are its plan) and the camera is held in
+//  it. See InsideTheHall, which runs last, after every other rule has had its say.
+//
 //  The three shots are composed for a 16:9 frame. The game runs portrait, which
 //  shows nearly four times less world sideways at the same distance and lens —
 //  so the reader fills the frame and the stones fall outside it. SolveShot()
@@ -211,6 +220,11 @@ public class WalkCamera : MonoBehaviour
     public float minReaderDistance = 4f;
 
     [Header("Staying out of trouble")]
+    [Tooltip("Near clip plane, in metres. 0 leaves the Camera's own. The default " +
+             "of 0.3 is sized for a world you stand back from; indoors the reader " +
+             "walks right up to a desk 0.56 m high and the near plane eats the front " +
+             "of it, which reads as the furniture being enormous and half missing.")]
+    public float nearClip = 0.05f;
     [Tooltip("What counts as solid. The camera stops short of anything on these " +
              "layers rather than sliding inside it.")]
     public LayerMask collideWith = ~0;
@@ -225,6 +239,70 @@ public class WalkCamera : MonoBehaviour
     [Tooltip("Metres the camera keeps above the reader's feet, on top of Min " +
              "Height — the reason it cannot sink to sea level and film the ocean.")]
     public float minAboveReader = 1.2f;
+    [Tooltip("Eye height above the reader's feet, IF Size From The Reader is off. " +
+             "Indoors the camera sits here, looking the way they face — you see the " +
+             "library through their eyes.")]
+    public float eyeHeight = 1.6f;
+    [Tooltip("A little in front of the face, so the reader's own head is not in " +
+             "the way of their own view. It is not enough on its own — the body is " +
+             "hidden as well; see Hide The Reader In First Person.")]
+    public float eyeForward = 0.28f;
+    [Tooltip("MEASURE THE READER RATHER THAN REMEMBERING HOW BIG THEY WERE. Eye " +
+             "Height and Head Height below are the same person written down twice " +
+             "more, so making the reader smaller used to be a three-place edit and " +
+             "missing one left the camera hovering where their head had been. With " +
+             "this on, both come off the reader's actual height and the one dial on " +
+             "PlaceholderActor moves the whole rig.")]
+    public bool sizeFromTheReader = true;
+    [Tooltip("Hide the reader's own body while the camera is at their eyes. You " +
+             "cannot see your own head: the lens sits inside the model, so without " +
+             "this the frame fills with the inside of it — which looks exactly like " +
+             "a character several times too big.")]
+    public bool hideReaderInFirstPerson = true;
+    [Tooltip("Wider lens indoors, to see any of the room from that short a boom. " +
+             "This is the VERTICAL field, which is the wide axis on a portrait " +
+             "phone — see Indoor Horizontal Fov for the axis that actually decides " +
+             "how much of the room you see.")]
+    public float indoorFov = 62f;
+    [Tooltip("How much of the room the lens shows ACROSS the frame, in degrees. " +
+             "On a portrait phone the horizontal field is the narrow one: 62° " +
+             "vertical on a 720x1520 screen is only 32° across, which is a keyhole " +
+             "— you stand in a library and see one shelf. This is solved into the " +
+             "vertical field from the frame we actually have, so the room reads the " +
+             "same on a phone as it does in the editor.")]
+    public float indoorHorizontalFov = 52f;
+    [Tooltip("Ceiling on the solved indoor lens. Past this the room bends.")]
+    public float indoorMaxFov = 78f;
+    [Tooltip("Name prefix of the library floor tiles. Their combined bounds ARE " +
+             "the room, and standing in them is what counts as being inside.")]
+    public string hallFloorPrefix = "Floor_";
+
+    [Tooltip("THE WALLS ARE SOLID FOR THE CAMERA TOO. Inside the library the lens " +
+             "is kept within the room — you cannot be in a building and see the " +
+             "outside of it. Untick only to debug where a shot wanted to go.")]
+    public bool stayInsideTheHall = true;
+    [Tooltip("Height of the room above its floor, in metres — the underside of the " +
+             "ceiling. The floor tiles give the camera the room's PLAN; nothing in " +
+             "the scene gives it the height, because the imported building carries " +
+             "no colliders, so it is a number. Tools ▸ Great Library ▸ Library ▸ " +
+             "7 measures it off the model and writes it here.")]
+    public float hallHeight = 3.4f;
+    [Tooltip("How far off the walls the lens is held, in metres. Zero would let it " +
+             "sit in the plaster, where the near plane clips through to the island.")]
+    public float wallClearance = 0.45f;
+    [Tooltip("How far under the ceiling the lens is held, in metres.")]
+    public float ceilingClearance = 0.3f;
+    [Range(0.1f, 0.6f)]
+    [Tooltip("Metres over which the eye view takes over at the doorway. SHORT on " +
+             "purpose: half way between the outdoor boom and the eye is a position " +
+             "that is neither, six metres back and four up scaled down — which is " +
+             "inside the wall. A long, pretty blend spends its whole length in " +
+             "masonry. Cross quickly; the damping still keeps it from being a cut. " +
+             "The ramp runs from the NEAREST WALL, so its length is also the width " +
+             "of the band around the room where the reader counts as half outside — " +
+             "which is why it is held to 0.6 m however it is set: a metre of it in a " +
+             "hall four metres deep leaves nowhere that reads as inside at all.")]
+    public float thresholdBlend = 0.35f;
 
     [Header("Feel")]
     [Tooltip("Seconds of position damping. Higher = heavier, more filmic.")]
@@ -234,14 +312,60 @@ public class WalkCamera : MonoBehaviour
     [Tooltip("The camera never drops below this height, so it can't dip under " +
              "the sea on the way in.")]
     public float minHeight = 0.9f;
-    [Tooltip("Eye height of the reader, in metres.")]
+    [Tooltip("Eye height of the reader, in metres, IF Size From The Reader is off.")]
     public float headHeight = 1.55f;
+
+    // ── how big the reader actually is ──────────────────────────────────────
+
+    float _readerHeight = -1f;
+
+    /// <summary>
+    /// The reader's height, measured off the reader. Their own component knows it;
+    /// failing that their renderers do. Cached, because it is a property of the
+    /// model and not of the frame — and because a walking placeholder's bounds bob
+    /// with the stride, which would wobble every shot built on it.
+    /// </summary>
+    public float ReaderHeight
+    {
+        get
+        {
+            if (_readerHeight > 0f) return _readerHeight;
+            _readerHeight = 0f;
+            if (walker == null) return 0f;
+
+            var actor = walker.GetComponentInChildren<PlaceholderActor>(true);
+            if (actor != null) { _readerHeight = Mathf.Max(0.2f, actor.height); return _readerHeight; }
+
+            var rends = Renderers(walker.transform);
+            if (rends.Length == 0) return 0f;
+            var b = rends[0].bounds;
+            foreach (var r in rends) b.Encapsulate(r.bounds);
+            _readerHeight = Mathf.Max(0f, b.max.y - walker.transform.position.y);
+            return _readerHeight;
+        }
+    }
+
+    /// <summary>Forget the reader's measured size — the editor rebuilds them.</summary>
+    public void ResetReaderSize() { _readerHeight = -1f; _actorLooked = false; }
+
+    /// <summary>Where the shots that frame the reader aim: the top of them.</summary>
+    public float HeadHeight =>
+        sizeFromTheReader && ReaderHeight > 0.2f ? ReaderHeight * 0.89f : headHeight;
+
+    /// <summary>Where the first-person lens sits.</summary>
+    public float EyeHeight =>
+        sizeFromTheReader && ReaderHeight > 0.2f ? ReaderHeight * 0.93f : eyeHeight;
 
     Camera _cam;
     Vector3 _vel;
     float _fov, _fovVel;
 
-    void Awake() { _cam = GetComponent<Camera>(); _fov = _cam.fieldOfView; }
+    void Awake()
+    {
+        _cam = GetComponent<Camera>();
+        _fov = _cam.fieldOfView;
+        if (nearClip > 0.0001f) _cam.nearClipPlane = nearClip;
+    }
 
     void Start()
     {
@@ -267,6 +391,10 @@ public class WalkCamera : MonoBehaviour
         if (walker == null) walker = FindAnyObjectByType<PathWalker>();
         if (walker == null) return;
         if (walker.road != null && walker.road.StopCount == 0) walker.road.Rebuild();
+        ResetHall();                    // the library may have just been moved
+        ResetReaderSize();              // and the reader may have just been resized
+        if (_cam == null) _cam = GetComponent<Camera>();
+        if (_cam != null && nearClip > 0.0001f) _cam.nearClipPlane = nearClip;
         Frame(1f);
     }
 
@@ -304,7 +432,7 @@ public class WalkCamera : MonoBehaviour
 
         var b = _libMeasured ? _libBounds
                              : new Bounds(walker.transform.position, Vector3.one * 4f);
-        b.Encapsulate(walker.transform.position + Vector3.up * headHeight);
+        b.Encapsulate(walker.transform.position + Vector3.up * HeadHeight);
 
         Vector3 firstStone = Vector3.zero; bool haveStone = false;
         if (walker.road != null)
@@ -347,7 +475,7 @@ public class WalkCamera : MonoBehaviour
         // ---- what the frame is centred on -----------------------------------
         // Sliding the centre toward the reader moves the camera; because the
         // direction above is fixed, moving it can only ever be a translation.
-        Vector3 reader = walker.transform.position + Vector3.up * (headHeight * 0.6f);
+        Vector3 reader = walker.transform.position + Vector3.up * (HeadHeight * 0.6f);
         centre = Vector3.Lerp(b.center, reader, Mathf.Clamp01(dioramaFollow));
 
         if (_cam == null) _cam = GetComponent<Camera>();
@@ -482,7 +610,7 @@ public class WalkCamera : MonoBehaviour
         EnsureAim();
         bool snap = dt >= 1f;
 
-        Vector3 head = walker.transform.position + Vector3.up * headHeight;
+        Vector3 head = walker.transform.position + Vector3.up * HeadHeight;
         Vector3 road = Flat(walker.Heading);
         if (road.sqrMagnitude < 0.0001f) road = Flat(walker.transform.forward);
         road.Normalize();
@@ -548,7 +676,7 @@ public class WalkCamera : MonoBehaviour
         else if (walker.Seated)
         {
             Vector3 f = Flat(walker.transform.forward);
-            aim = walker.transform.position + Vector3.up * (headHeight * 0.65f);
+            aim = walker.transform.position + Vector3.up * (HeadHeight * 0.65f);
             origin = aim;
             offset = f * seatFront + Vector3.up * seatUp +
                      Vector3.Cross(Vector3.up, f).normalized * seatSide;
@@ -600,23 +728,96 @@ public class WalkCamera : MonoBehaviour
             fromReader.sqrMagnitude > 1e-4f)
             wantPos = head + fromReader.normalized * near;
 
+        // INDOORS THE CAMERA GOES IN WITH THEM, AND TURNS WITH THEM.
+        //
+        // Two things are wrong with the outdoor shot in a room. It is composed for
+        // open water — six metres back, four up — and that boom is longer than the
+        // library is wide, so the lens ends up beyond a wall watching the outside
+        // of the building. And it is built on a LOCKED heading (the river's), which
+        // is right on the river and useless inside: the reader turns to look at a
+        // shelf and the camera keeps facing the water, so you never see what they
+        // are looking at.
+        //
+        // So indoors the shot is rebuilt on the READER'S OWN FACING, close behind
+        // them — which is exactly what "show me where they are looking" means. It
+        // is blended in by `indoors`, so the change happens over a stride at the
+        // door rather than as a cut.
+        float indoors = Insideness(walker.transform.position);
+        IndoorsBlend = indoors;          // read by the report; 0 outside, 1 inside
+
+        // WHAT THE SHOT IS ABOUT MAY BE INDOORS EVEN WHEN THE READER IS NOT. The
+        // reveal frames the middle of the hall while the reader is still on the
+        // threshold; the book shot frames a page on a desk at the back of the room
+        // while they walk in. In both the subject is in the library, so the lens
+        // belongs in the library — otherwise it solves its distance in open air and
+        // ends up outside the front wall, filming the building it is supposed to be
+        // inside. This is the reading that closes the walls for the camera.
+        Vector3 subject = focus != null ? focus.position : aim;
+
+        // The walls get their own reading, on a ramp no longer than a stride — see
+        // WallsShut. The shot may ease indoors over whatever length reads well; the
+        // building may not be half there while it does.
+        float wallsShut = Mathf.Max(WallsShut(walker.transform.position),
+                                    WallsShut(subject));
+        ShotInsideBlend = wallsShut;
+
+        if (indoors > 0f && focus == null)
+        {
+            // THROUGH THEIR EYES — but only while there is nothing else to look at.
+            // Any shot that looks AT the reader shows you the back of their head
+            // instead of the room, which is the opposite of what a look around a
+            // library is for. At the eyes, facing the way they face, turning the
+            // reader turns the view — so what they are looking at is simply what
+            // you see.
+            //
+            // With a focus set this stands down: the book shot exists to make one
+            // small page readable, and replacing it with a horizontal view from the
+            // reader's own eyes puts that page at the very bottom of the frame.
+            // Reading is the game; the room is the place it happens in.
+            Vector3 face = Flat(walker.transform.forward);
+            Vector3 eye = walker.transform.position + Vector3.up * EyeHeight
+                        + face * eyeForward;
+
+            wantPos = Vector3.Lerp(wantPos, eye, indoors);
+            aim = Vector3.Lerp(aim, eye + face * 3f, indoors);
+            wantFov = Mathf.Lerp(wantFov, IndoorFov(), indoors);
+        }
+
         // Never film the sea. minHeight is an absolute floor and does nothing once
         // the reader climbs; this keeps the lens above THEM as well, which is what
         // stops the shot sinking to water level and filling the frame with ocean.
         wantPos.y = Mathf.Max(wantPos.y, minHeight,
                               walker.transform.position.y + minAboveReader);
 
-        // Nothing solid between the subject and the lens — on the climb the shot
-        // wants a position inside the hill, which renders as a wall of terrain with
-        // nobody in it. This used to run for the book shot only; the walk needs it
-        // more, because that is where the island gets between them.
-        wantPos = Unobstructed(aim, wantPos);
+        // Both of the guards below exist to protect a shot of the reader, and in
+        // first person there is no such shot to protect — the reader is behind the
+        // lens. Left running they would undo it: the clearance test would shove the
+        // camera toward a point three metres ahead (into whatever is being looked
+        // at), and the framing guard would swing the view back round onto the
+        // reader's own head. So they stand down as the eye view fades in.
+        if (indoors < 0.5f)
+        {
+            // Nothing solid between the subject and the lens — on the climb the
+            // shot wants a position inside the hill, which renders as a wall of
+            // terrain with nobody in it.
+            wantPos = Unobstructed(aim, wantPos);
 
-        // Whatever the shot wanted, the reader stays in frame.
-        aim = KeepReaderInFrame(wantPos, aim, head);
+            // Whatever the shot wanted, the reader stays in frame.
+            aim = KeepReaderInFrame(wantPos, aim, head);
+        }
+
+        // THE LAST WORD, AFTER EVERY OTHER RULE HAS HAD ITS SAY. You cannot stand
+        // in a house and look at the outside of it. Every shot above solves its
+        // distance in open air — the reveal asks for five metres back from the
+        // middle of a room four metres deep — so without this the lens walks
+        // straight through the front wall and the "arrival at the library" is a
+        // picture of the island. It runs last on purpose: the height floor and the
+        // clearance test can both push the lens back out, and a wall that anything
+        // may overrule is not a wall.
+        wantPos = InsideTheHall(wantPos, wallsShut);
 
         aimTarget.position = aim;
-        if (!driveCamera) return;
+        if (!driveCamera) { ShowReader(true); return; }
 
         transform.position = snap
             ? wantPos
@@ -634,6 +835,47 @@ public class WalkCamera : MonoBehaviour
                                        Mathf.Max(0.01f, fovDamping));
         if (_cam == null) _cam = GetComponent<Camera>();
         _cam.fieldOfView = _fov;
+
+        // Tested against where the lens ACTUALLY ended up, not where the shot asked
+        // to be: damping means those differ for half a second at the door, and that
+        // half second is exactly when the lens is passing through the reader.
+        ShowReader(!InsideTheReader(transform.position));
+    }
+
+    /// <summary>
+    /// Is the lens inside the reader's own bulk? Generous — shoulders, head and the
+    /// peak of the cap — because a body clipping the near plane is far worse than a
+    /// body hidden a few centimetres early.
+    /// </summary>
+    bool InsideTheReader(Vector3 lens)
+    {
+        if (!hideReaderInFirstPerson || walker == null) return false;
+        float h = ReaderHeight > 0.2f ? ReaderHeight : eyeHeight;
+        Vector3 head = walker.transform.position + Vector3.up * (h * 0.9f);
+        float r = h * 0.42f;
+        return (lens - head).sqrMagnitude < r * r;
+    }
+
+    bool _readerShown = true;
+    PlaceholderActor _actor;
+    bool _actorLooked;
+
+    /// <summary>Show or hide the reader's body. Cheap to call every frame.</summary>
+    void ShowReader(bool show)
+    {
+        if (walker == null) return;
+
+        if (!_actorLooked)
+        {
+            _actor = walker.GetComponentInChildren<PlaceholderActor>(true);
+            _actorLooked = true;
+        }
+        if (_actor != null) { _actor.SetVisible(show); _readerShown = show; return; }
+
+        if (show == _readerShown) return;       // a real model: only touch on change
+        _readerShown = show;
+        foreach (var r in Renderers(walker.transform))
+            if (r != null) r.enabled = show;
     }
 
     /// <summary>
@@ -720,6 +962,157 @@ public class WalkCamera : MonoBehaviour
         return from + d * Mathf.Max(0.45f, nearest - collisionBuffer);
     }
 
+    Bounds _hall;
+    bool _hallFound;
+
+    /// <summary>
+    /// How far into the library the reader is, as the camera sees it. 0 = the eye
+    /// view is off entirely. Exposed because "the camera is still outside" has
+    /// exactly two causes — this reading 0 when it should not, or the shot itself
+    /// being wrong — and they need opposite fixes.
+    /// </summary>
+    public float IndoorsBlend { get; private set; }
+
+    /// <summary>
+    /// How much the SHOT is an interior — the reader inside, or the thing being
+    /// framed inside. This, not <see cref="IndoorsBlend"/>, is what shuts the
+    /// camera in with the walls.
+    /// </summary>
+    public float ShotInsideBlend { get; private set; }
+
+    /// <summary>
+    /// Metres the last frame's shot had to be pushed back into the room. Anything
+    /// above zero means a shot asked to be outside the building and was refused —
+    /// which is worth knowing, because the honest fix is usually to compose that
+    /// shot for the room rather than to lean on the clamp.
+    /// </summary>
+    public float PushedBackIn { get; private set; }
+
+    /// <summary>The hall the camera measured, for the report. Size zero = not found.</summary>
+    public Bounds HallBounds => _hallFound ? _hall : new Bounds();
+
+    /// <summary>The world height of the ceiling the camera is keeping under.</summary>
+    public float HallCeilingY => _hallFound ? _hall.max.y + Mathf.Max(0.5f, hallHeight) : 0f;
+
+    /// <summary>The room's plan, measured off the floor tiles. False = no library.</summary>
+    bool Hall()
+    {
+        if (_hallFound) return true;
+
+        LibraryFloor.TilePrefix = hallFloorPrefix;
+        if (!LibraryFloor.Known) return false;
+        _hall = LibraryFloor.Plan;
+        _hallFound = true;
+        return true;
+    }
+
+    /// <summary>Forget the measured room — for the editor, or a rebuilt world.</summary>
+    public void ResetHall() { _hallFound = false; LibraryFloor.Forget(); }
+
+    /// <summary>
+    /// 0 outside the library, 1 well inside, eased across the threshold.
+    ///
+    /// Measured against the LIBRARY FLOOR, not by raycasting for a roof. The
+    /// imported world carries no colliders on its scenery, so a probe upward finds
+    /// nothing and reports "outdoors" while the reader stands in the middle of the
+    /// hall. The floor tiles are right there in the scene with real bounds, and
+    /// they describe the room exactly.
+    ///
+    /// Eased rather than switched: crossing the door should draw the camera in over
+    /// a stride, not cut.
+    /// </summary>
+    float Insideness(Vector3 p) => Insideness(p, ThresholdBlend);
+
+    float Insideness(Vector3 p, float blend)
+    {
+        if (!Hall()) return 0f;
+
+        // Height matters as well as footprint: the river passes under the island's
+        // edge, and without this the reader would read as "indoors" from the water.
+        if (p.y < _hall.min.y - 1f || p.y > HallCeilingY + 1f) return 0f;
+
+        float dx = Mathf.Abs(p.x - _hall.center.x) - _hall.extents.x;
+        float dz = Mathf.Abs(p.z - _hall.center.z) - _hall.extents.z;
+        float outside = Mathf.Max(dx, dz);            // negative once inside
+        return Mathf.Clamp01(-outside / Mathf.Max(0.1f, blend));
+    }
+
+    /// <summary>
+    /// The threshold blend, held to a stride.
+    ///
+    /// This ramp is measured from the NEAREST WALL, so its length is also the width
+    /// of the band around the room in which the reader counts as only half indoors.
+    /// Set it to 1.2 m in a hall 4.2 m deep and there is no standing position left
+    /// that reads as inside at all: the camera spends the entire visit half way
+    /// between an eye and a six-metre boom — a position that is neither, and is
+    /// usually in the masonry. A door is a stride deep, so the blend is one.
+    /// </summary>
+    float ThresholdBlend => Mathf.Clamp(thresholdBlend, 0.1f, 0.6f);
+
+    /// <summary>
+    /// The same test, for the WALLS rather than for the shot.
+    ///
+    /// A wall is not 62% solid because the reader happens to be standing near one.
+    /// Whatever length the threshold ramp is tuned to for the sake of the eye view,
+    /// the room closes around the lens within a stride of the door — otherwise a
+    /// clamp that is only partly applied leaves the camera partly outside, which is
+    /// the whole complaint.
+    /// </summary>
+    float WallsShut(Vector3 p) => Insideness(p, Mathf.Min(0.3f, ThresholdBlend));
+
+    /// <summary>
+    /// Hold the lens inside the room, off the walls and under the ceiling.
+    ///
+    /// The room's PLAN is the floor tiles' own bounds, which stop a little short of
+    /// the walls — so clamping to them and then insetting by
+    /// <see cref="wallClearance"/> leaves the lens comfortably in the masonry's lee
+    /// rather than in it. The HEIGHT cannot be measured the same way (nothing in
+    /// the scene is the ceiling), so it is <see cref="hallHeight"/> above the floor.
+    ///
+    /// Blended by <paramref name="inside"/>, so walking through the door draws the
+    /// camera in over a stride instead of snapping it.
+    /// </summary>
+    Vector3 InsideTheHall(Vector3 pos, float inside)
+    {
+        PushedBackIn = 0f;
+        if (!stayInsideTheHall || inside <= 0.001f || !Hall()) return pos;
+
+        float pad = Mathf.Max(0f, wallClearance);
+        // A room smaller than twice the clearance would invert; meet in the middle.
+        float hx = Mathf.Max(0.2f, _hall.extents.x - pad);
+        float hz = Mathf.Max(0.2f, _hall.extents.z - pad);
+
+        var shut = new Vector3(
+            Mathf.Clamp(pos.x, _hall.center.x - hx, _hall.center.x + hx),
+            Mathf.Clamp(pos.y, _hall.max.y + 0.4f,
+                        Mathf.Max(_hall.max.y + 0.6f,
+                                  HallCeilingY - Mathf.Max(0f, ceilingClearance))),
+            Mathf.Clamp(pos.z, _hall.center.z - hz, _hall.center.z + hz));
+
+        PushedBackIn = Vector3.Distance(pos, shut) * inside;
+        return Vector3.Lerp(pos, shut, inside);
+    }
+
+    /// <summary>
+    /// The indoor lens, solved for the frame we actually have.
+    ///
+    /// A field of view is authored as the VERTICAL angle, and on a portrait phone
+    /// that is the roomy axis — the narrow one is across, where 62° vertical on a
+    /// 720x1520 screen leaves 32°. Standing in a five-metre hall and seeing 32° of
+    /// it is why an interior can read as a corridor. So indoors the horizontal
+    /// field is the thing asked for and the vertical is worked out from it.
+    /// </summary>
+    float IndoorFov()
+    {
+        if (_cam == null) _cam = GetComponent<Camera>();
+        float aspect = _cam != null && _cam.aspect > 0.01f ? _cam.aspect : referenceAspect;
+        if (indoorHorizontalFov <= 1f) return indoorFov;
+
+        float hHalf = Mathf.Clamp(indoorHorizontalFov, 10f, 160f) * 0.5f * Mathf.Deg2Rad;
+        float v = 2f * Mathf.Atan(Mathf.Tan(hHalf) / Mathf.Max(0.05f, aspect)) * Mathf.Rad2Deg;
+        return Mathf.Clamp(v, indoorFov, Mathf.Max(indoorFov, indoorMaxFov));
+    }
+
     /// <summary>The subject and the words are never obstacles — see Unobstructed.</summary>
     bool Ignored(Collider c)
     {
@@ -776,12 +1169,32 @@ public class WalkCamera : MonoBehaviour
         // The aim point is usually an empty marker inside the model, so fall back
         // to its parent — that is where the mesh actually lives.
         var rends = Renderers(focus);
-        if (rends.Length == 0 && focus.parent != null) rends = Renderers(focus.parent);
+        bool fromParent = false;
+        if (rends.Length == 0 && focus.parent != null)
+        {
+            rends = Renderers(focus.parent);
+            fromParent = rends.Length > 0;
+        }
         if (rends.Length == 0) return _measuredRadius;
 
         var b = rends[0].bounds;
         foreach (var r in rends) b.Encapsulate(r.bounds);
         _measuredRadius = Mathf.Max(0.05f, b.extents.magnitude);
+
+        // THE PARENT OF A SOCKET IN THE HALL IS THE WHOLE BUILDING. SOCKET_HallCentre
+        // hangs off SM_Library_Exterior, so the fallback above measures the library
+        // from its porch steps to its roof finial — seven metres of radius for a
+        // marker standing in a room four metres deep. Ask a shot to fit that and it
+        // solves to the far side of the front wall every time, which is precisely
+        // how "the reveal of the hall" became a picture of the island. When the
+        // point being framed is INSIDE the room, the room is what we are framing.
+        if (fromParent && Hall() && Insideness(focus.position) > 0.5f)
+        {
+            float roomRadius = new Vector3(_hall.extents.x,
+                                           Mathf.Max(0.5f, hallHeight) * 0.5f,
+                                           _hall.extents.z).magnitude;
+            _measuredRadius = Mathf.Min(_measuredRadius, roomRadius);
+        }
         return _measuredRadius;
     }
 

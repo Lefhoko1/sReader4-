@@ -39,6 +39,7 @@ public static class GreatLibraryReport
         Slots(sb);
         Builder(sb);
         Road(sb);
+        Nook(sb);
         Reader(sb);
         Shot(sb);
 
@@ -146,12 +147,109 @@ public static class GreatLibraryReport
                       $"seated {w.Seated}, " +
                       $"at stone {(w.CurrentStone != null ? w.CurrentStone.name : "none")}");
 
+        // Which of the two walks is running. They are not alternatives you pick —
+        // the reader is on a line outdoors and on a floor indoors — so "which one"
+        // is really "where are they", and getting it wrong looks like the controls
+        // having changed meaning for no reason.
+        string walk = w.Roaming
+            ? "FREE on the library floor — up/down walks the way they face, " +
+              "left/right steers"
+            : "along the road — up/down moves along it, left/right turns on the spot";
+        sb.AppendLine("        walk: " + walk +
+                      (w.roamIndoors ? "" : " (Roam Indoors is OFF)"));
+        if (LibraryFloor.Known)
+        {
+            var f = LibraryFloor.Plan;
+            sb.AppendLine($"        library floor: {f.size.x:0.0} x {f.size.z:0.0} m, " +
+                          $"{(LibraryFloor.Contains(w.transform.position) ? "reader is ON it" : "reader is off it")}" +
+                          Door(w));
+        }
+        else
+        {
+            sb.AppendLine("        library floor: not found — no 'Floor_*' tiles, so " +
+                          "there is nowhere to walk freely and the road is all there is.");
+        }
+
         var road = w.road;
         if (road != null && road.StopCount > 0)
         {
             float toFirst = Vector3.Distance(w.transform.position, road.PositionAt(road.StopDistance(0)));
             sb.AppendLine($"        {toFirst:0.0} m from the first word " +
                           (toFirst > 8f ? "— that is a long way; they may be starting at the wrong end." : ""));
+        }
+    }
+
+    /// <summary>
+    /// The way out of the library, and where it comes from.
+    ///
+    /// PathWalker.libraryDoor is wired when the reader first steps onto the floor,
+    /// not in the scene — so it is null in edit mode however healthy the wiring is.
+    /// The thing actually worth checking is the BookStation's doorway, because that
+    /// is what it gets wired FROM.
+    /// </summary>
+    static string Door(PathWalker w)
+    {
+        if (w.libraryDoor != null) return $", way out via {w.libraryDoor.name}";
+
+        var station = Object.FindAnyObjectByType<BookStation>(FindObjectsInactive.Include);
+        if (station != null && station.doorway != null)
+            return $", way out via {station.doorway.name} (the walker picks it up from " +
+                   "the BookStation when the reader first steps inside)";
+
+        return " — NO DOORWAY on the BookStation, so the free walk has no way out of " +
+               "the room and the arrival reveal is off";
+    }
+
+    /// <summary>
+    /// Is the book on the desk? They are authored in two different places — the desk
+    /// in Blender, the nook in the scene — so this is the pair that silently drifts
+    /// apart every time the library is re-exported, and it is invisible until you
+    /// happen to look at a book hanging in mid-air.
+    /// </summary>
+    static void Nook(StringBuilder sb)
+    {
+        var station = Object.FindAnyObjectByType<BookStation>(FindObjectsInactive.Include);
+        if (station == null) { sb.AppendLine("NOOK: no BookStation."); return; }
+
+        Transform socket = null;
+        foreach (var t in All<Transform>())
+            if (t.name == station.deskSocketName) { socket = t; break; }
+
+        sb.AppendLine($"NOOK: '{station.name}' at {V(station.transform.position)}, " +
+                      $"reading spot {V(station.StandPosition)}, indoors {station.indoors}");
+
+        if (socket == null)
+        {
+            sb.AppendLine($"      no '{station.deskSocketName}' in the scene — nothing to " +
+                          "sit on, so the nook stays wherever it was put.");
+        }
+        else
+        {
+            float off = Vector3.Distance(station.transform.position, socket.position);
+            sb.AppendLine($"      {station.deskSocketName} at {V(socket.position)} — " +
+                          (off < 0.02f
+                              ? "the nook is ON it."
+                              : $"the nook is {off:0.00} m ADRIFT of it" +
+                                (station.sitOnTheAuthoredDesk
+                                    ? ". Sit On The Authored Desk is on, so toggling the " +
+                                      "BookNook object off and on again will seat it."
+                                    : ". Sit On The Authored Desk is OFF — tick it, or " +
+                                      "move the nook by hand.")));
+        }
+
+        var book = station.Book;
+        if (book != null)
+        {
+            var rends = book.GetComponentsInChildren<Renderer>(true);
+            if (rends.Length > 0)
+            {
+                var b = rends[0].bounds;
+                foreach (var r in rends) b.Encapsulate(r.bounds);
+                sb.AppendLine($"      book bottom y {b.min.y:0.00}; a desk top is 2.03 — " +
+                              (Mathf.Abs(b.min.y - 2.03f) < 0.12f
+                                  ? "resting on it."
+                                  : "NOT resting on a desk at that height."));
+            }
         }
     }
 
@@ -167,6 +265,34 @@ public static class GreatLibraryReport
 
         sb.AppendLine($"CAMERA: at {V(cam.transform.position)}, fov {cam.fieldOfView:0.0}, " +
                       $"aspect {cam.aspect:0.00}, {d:0.0} m from the reader");
+
+        // THE SIZE OF EVERYTHING, IN ONE PLACE. "Too big" is never about one object;
+        // it is the reader, the lens and the room read against each other, and each
+        // of the three used to be written down somewhere different.
+        float across = 2f * Mathf.Atan(Mathf.Tan(cam.fieldOfView * 0.5f * Mathf.Deg2Rad) *
+                                       cam.aspect) * Mathf.Rad2Deg;
+        sb.AppendLine($"        lens: {cam.fieldOfView:0} deg tall x {across:0} deg across, " +
+                      $"near clip {cam.nearClipPlane:0.00} m, far {cam.farClipPlane:0} m" +
+                      (cam.nearClipPlane > 0.25f
+                          ? " — NEAR CLIP IS BIG: anything closer than that is cut " +
+                            "away, and indoors the reader stands within it of the desk."
+                          : ""));
+        if (wc != null)
+        {
+            sb.AppendLine($"        reader: {wc.ReaderHeight:0.00} m tall" +
+                          (wc.ReaderHeight <= 0.2f ? " (could not measure them)" : "") +
+                          $", eye at {wc.EyeHeight:0.00} m, shots aim at {wc.HeadHeight:0.00} m" +
+                          (wc.sizeFromTheReader
+                              ? " — all measured off the reader"
+                              : " — from Eye Height / Head Height, NOT the reader, so " +
+                                "resizing them leaves the lens where they used to be"));
+
+            // How much of the world one screen holds at the distance things are at.
+            if (walker != null && d > 0.05f)
+                sb.AppendLine($"        at {d:0.0} m the frame holds " +
+                              $"{2f * d * Mathf.Tan(across * 0.5f * Mathf.Deg2Rad):0.00} m across " +
+                              $"and {2f * d * Mathf.Tan(cam.fieldOfView * 0.5f * Mathf.Deg2Rad):0.00} m up");
+        }
         if (wc != null)
         {
             sb.AppendLine($"        shotDistance {wc.shotDistance:0.00}, " +
@@ -178,6 +304,98 @@ public static class GreatLibraryReport
                               ? "  ← FRAMING THAT, NOT THE WALK. Every travel/read " +
                                 "value is ignored while this is set."
                               : ""));
+
+            // Is the eye view on, and does the camera think there is a library?
+            var hall = wc.HallBounds;
+            bool found = hall.size.sqrMagnitude > 0.01f;
+            sb.AppendLine($"        indoors: {wc.IndoorsBlend:0.00} " +
+                          (wc.IndoorsBlend > 0.5f ? "(eye view ON)"
+                           : wc.IndoorsBlend > 0f ? "(easing in)"
+                           : "(outdoor follow shot)"));
+            // The camera only measures the hall inside Frame(), which does not run
+            // in edit mode — so an empty cache here means "not looked yet", NOT
+            // "no library". Saying the second when the first is true sends people
+            // hunting for missing floor tiles that are sitting right there.
+            if (found)
+                sb.AppendLine($"        hall from '{wc.hallFloorPrefix}*': " +
+                              $"x {hall.min.x:0.0}…{hall.max.x:0.0}, " +
+                              $"z {hall.min.z:0.0}…{hall.max.z:0.0}, " +
+                              $"y {hall.min.y:0.0}…{hall.max.y:0.0}");
+            else if (LibraryFloor.Known)
+            {
+                var f = LibraryFloor.Plan;
+                found = true;
+                hall = f;
+                sb.AppendLine($"        hall from '{wc.hallFloorPrefix}*': " +
+                              $"x {f.min.x:0.0}…{f.max.x:0.0}, z {f.min.z:0.0}…{f.max.z:0.0}" +
+                              (Application.isPlaying ? "" :
+                               " (measured here — the camera works this out during play)"));
+            }
+            else
+                sb.AppendLine($"        hall from '{wc.hallFloorPrefix}*': NOT FOUND — no " +
+                              "floor tiles by that name, so the camera can never know " +
+                              "the reader is inside.");
+
+            var wk = Object.FindAnyObjectByType<PathWalker>(FindObjectsInactive.Include);
+            if (found && wk != null)
+            {
+                Vector3 f = wk.transform.position;
+                bool within = f.x > hall.min.x && f.x < hall.max.x &&
+                              f.z > hall.min.z && f.z < hall.max.z;
+                sb.AppendLine($"        reader {V(f)} is {(within ? "INSIDE" : "outside")} " +
+                              $"that footprint" +
+                              (within && wc.IndoorsBlend <= 0f
+                                  ? " — but indoors reads 0, so the height test is " +
+                                    "rejecting it."
+                                  : ""));
+
+                // A partial blend indoors is its own failure and does not look like
+                // one: the camera is neither the eye nor the boom but half of each,
+                // which is a position no shot ever asked for.
+                if (within && wc.IndoorsBlend > 0.02f && wc.IndoorsBlend < 0.98f)
+                {
+                    float slack = Mathf.Min(hall.extents.x - Mathf.Abs(f.x - hall.center.x),
+                                            hall.extents.z - Mathf.Abs(f.z - hall.center.z));
+                    sb.AppendLine($"        ^ only {wc.IndoorsBlend:0.00} indoors while " +
+                                  $"standing {slack:0.00} m in from the nearest wall. " +
+                                  $"Threshold Blend is {wc.thresholdBlend:0.00} m, and " +
+                                  "that ramp is measured from the wall — so it is also " +
+                                  "the width of the band where the reader half counts " +
+                                  "as outside. Anything near a metre leaves no fully " +
+                                  "indoor spot in a room this size; 0.35 is the " +
+                                  "authored value. (Values over 0.6 are held at 0.6.)");
+                }
+            }
+
+            // THE ONE THAT ANSWERS "WHY CAN I SEE OUTSIDE FROM INSIDE". A shot is an
+            // interior only if the LENS is in the room; everything else — the reader
+            // being inside, the room being sealed — is beside the point if the camera
+            // solved its distance out on the porch.
+            if (found)
+            {
+                sb.AppendLine($"        shot is an interior: {wc.ShotInsideBlend:0.00} " +
+                              (wc.ShotInsideBlend > 0f
+                                  ? $"(walls closed for the camera, hall height " +
+                                    $"{wc.hallHeight:0.0} m, ceiling y {wc.HallCeilingY:0.0})"
+                                  : "(open air — no wall is holding the lens in)"));
+
+                Vector3 c = cam.transform.position;
+                bool lensIn = c.x > hall.min.x && c.x < hall.max.x &&
+                              c.z > hall.min.z && c.z < hall.max.z &&
+                              c.y > hall.max.y && c.y < wc.HallCeilingY;
+                sb.AppendLine($"        LENS is {(lensIn ? "INSIDE the room" : "OUTSIDE the room")}" +
+                              (wc.ShotInsideBlend > 0.5f && !lensIn
+                                  ? " — the shot says interior but the camera is not in " +
+                                    "it. Untick nothing; this is a bug."
+                                  : "") +
+                              (wc.PushedBackIn > 0.01f
+                                  ? $"; the shot asked to be {wc.PushedBackIn:0.00} m " +
+                                    "further out and was refused"
+                                  : ""));
+                if (!wc.stayInsideTheHall)
+                    sb.AppendLine("        ^ Stay Inside The Hall is OFF, so nothing is " +
+                                  "stopping the lens leaving the building.");
+            }
         }
 
         // How big is a word on screen? The number every "I can't read it" turns on.

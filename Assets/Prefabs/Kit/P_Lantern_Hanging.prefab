@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6230741661999285966
+--- !u!1 &7639919883416699693
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4648893990235939287}
-  - component: {fileID: 1210412410043571405}
+  - component: {fileID: 5569572574118096827}
+  - component: {fileID: 1647191237388595241}
   m_Layer: 0
   m_Name: Light_Candle
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4648893990235939287
+--- !u!4 &5569572574118096827
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6230741661999285966}
+  m_GameObject: {fileID: 7639919883416699693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2023816008746496736}
+  m_Father: {fileID: 7573379529288979234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &1210412410043571405
+--- !u!108 &1647191237388595241
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6230741661999285966}
+  m_GameObject: {fileID: 7639919883416699693}
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 2
@@ -97,7 +97,7 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1001 &7330060992140179035
+--- !u!1001 &1204043037192165273
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -170,11 +170,11 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8768387859567805627, guid: c7516dee0edc3d74e9e38034c358fd70, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4648893990235939287}
+      addedObject: {fileID: 5569572574118096827}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7516dee0edc3d74e9e38034c358fd70, type: 3}
---- !u!4 &2023816008746496736 stripped
+--- !u!4 &7573379529288979234 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8768387859567805627, guid: c7516dee0edc3d74e9e38034c358fd70, type: 3}
-  m_PrefabInstance: {fileID: 7330060992140179035}
+  m_PrefabInstance: {fileID: 1204043037192165273}
   m_PrefabAsset: {fileID: 0}

@@ -294,8 +294,25 @@ public static class RiversideWalkSetup
             door + outward * 1.5f,
             Quaternion.LookRotation(outward, Vector3.up));   // the reader looks out
 
+        // ONCE THE READING MOVED INDOORS THE MAT IS A LEFTOVER. It is the OUTDOOR
+        // seat: where the reader sat at the end of the river walk, back when the
+        // walk ended at a door and there was nothing on the other side of it. They
+        // now read at a desk inside the library, and the mat — a 1.5 m red disc,
+        // placed at the DOORWAY's height rather than the library floor's — hangs in
+        // the middle of the hall at eye level with nothing to explain it.
+        //
+        // The marker itself stays: the road may still be seating the reader on it.
+        // Only the disc goes, because only the disc is visible.
+        var station = Object.FindAnyObjectByType<BookStation>(FindObjectsInactive.Include);
+        var existing = mat.transform.Find("Disc");
+        if (station != null && station.indoors)
+        {
+            if (existing != null) Object.DestroyImmediate(existing.gameObject);
+            return;
+        }
+
         // a flat disc; no collider, or it would eat taps meant for the stones
-        var disc = mat.transform.Find("Disc");
+        var disc = existing;
         if (disc == null)
         {
             var go = GameObject.CreatePrimitive(PrimitiveType.Cylinder);

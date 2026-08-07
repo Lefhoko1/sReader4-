@@ -50,7 +50,14 @@
       "Bash(grep -ao \"SOCKET_[A-Za-z]\\\\{3,\\\\}\" SM_Island_World.fbx)",
       "Bash(awk '{print $5, $9}')",
       "Bash(ffprobe -v error -show_entries format=duration,size -show_entries stream=width,height,r_frame_rate,codec_name -of default=noprint_wrappers=1 \"C:/Users/11113930/Documents/mine/sreader/BlenderFiles/playview1.mp4\")",
-      "Read(//c/Users/11113900/sReader4/Assets/Scripts/Game/Library/Walk/**)"
+      "Read(//c/Users/11113900/sReader4/Assets/Scripts/Game/Library/Walk/**)",
+      "Bash(xargs grep -l \"PanelSettings\")",
+      "Bash(awk '/\\\\[Report\\\\]/{f=1} f{print} f&&/word |no word label|readable|TOO SMALL|ENORMOUS/{f=0}' C:/Users/11113930/AppData/Local/Unity/Editor/Editor.log)",
+      "Bash(sed 's/^ *//')",
+      "Bash(git -C . diff --stat)",
+      "Bash(python \"C:/Users/11113930/AppData/Local/Temp/claude/c--Users-11113930-sReader4/90e63d8b-4b35-4774-b651-5782f6bf1772/scratchpad/fbxdump.py\" Assets/Art/Models_Island/SM_Island_World.fbx)",
+      "Bash(python \"C:/Users/11113930/AppData/Local/Temp/claude/c--Users-11113930-sReader4/90e63d8b-4b35-4774-b651-5782f6bf1772/scratchpad/fbxmesh.py\" Assets/Art/Models_Island/SM_Island_World.fbx SM_Library_Exterior)",
+      "Bash(python \"C:/Users/11113930/AppData/Local/Temp/claude/c--Users-11113930-sReader4/90e63d8b-4b35-4774-b651-5782f6bf1772/scratchpad/fbxwalls.py\" Assets/Art/Models_Island/SM_Island_World.fbx SM_Library_Exterior)"
     ],
     "additionalDirectories": [
       "C:\\Users\\11113930\\sReader4"

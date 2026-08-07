@@ -897,6 +897,345 @@ public static class LibraryHallBuilder
     static bool FitValidate() => !Application.isPlaying;
 
     // ======================================================================
+    /// <summary>
+    /// Measure the room the reader actually stands in, and tell the camera how
+    /// tall it is.
+    ///
+    /// The camera can work the room's PLAN out for itself — the floor tiles are in
+    /// the scene with real bounds and they describe it exactly. Its HEIGHT is the
+    /// one number nothing in the scene answers: the imported building carries no
+    /// colliders, so a probe upward finds nothing, and the shell's own bounds are
+    /// the whole building including the roof and the porch steps. So it is read
+    /// here, off the mesh: the lowest downward-facing face above the floor that
+    /// covers the middle of the hall IS the ceiling. Editor-only, because an
+    /// imported mesh is readable here and not in a build — and because a room is
+    /// measured once and then baked, not re-derived every frame.
+    /// </summary>
+    [MenuItem("Tools/Great Library/Library/7. Measure The Library Interior")]
+    public static void MeasureInterior()
+    {
+        // ---- the floor: the room's plan --------------------------------
+        var tiles = Object.FindObjectsByType<MeshRenderer>(
+                        FindObjectsInactive.Exclude, FindObjectsSortMode.None)
+                    .Where(r => r.name.StartsWith("Floor_")).ToArray();
+        if (tiles.Length == 0)
+        {
+            Debug.LogError("[Sizes] No 'Floor_*' tiles in the scene, so there is no " +
+                           "room to measure. Run Island ▸ 0. Rebuild World From " +
+                           "Blender — the library floor comes in with the island.");
+            return;
+        }
+        Bounds floor = tiles[0].bounds;
+        foreach (var t in tiles) floor.Encapsulate(t.bounds);
+
+        // ---- the ceiling: read off the shell -------------------------------
+        float ceiling = 0f;
+        string how = "not found — hall height left as it was";
+        // The name has to match exactly. 'SM_Library_Exterior_DoorGlow' starts with
+        // the same letters and is a four-vertex plane in the doorway — measure the
+        // ceiling off THAT and the room comes out the height of a door.
+        var shells = Object.FindObjectsByType<MeshFilter>(
+                         FindObjectsInactive.Exclude, FindObjectsSortMode.None)
+                     .Where(m => m.sharedMesh != null &&
+                                 m.name.StartsWith("SM_Library_Exterior")).ToArray();
+        var shell = shells.FirstOrDefault(m => m.name == "SM_Library_Exterior")
+                 ?? shells.OrderByDescending(m => m.sharedMesh.vertexCount).FirstOrDefault();
+        if (shell != null)
+        {
+            // Two answers, because winding is not something to bet a room on: the
+            // faces that look DOWN at us are the ceiling proper, and any flat face
+            // over the hall is the same surface seen from a mesh whose triangles
+            // came through the FBX axis conversion wound the other way.
+            float lowest = float.MaxValue, lowestFlat = float.MaxValue;
+            var mesh = shell.sharedMesh;
+            var verts = mesh.vertices;
+            var tris = mesh.triangles;
+            var xf = shell.transform;
+            Vector3 mid = floor.center;
+
+            for (int i = 0; i < tris.Length; i += 3)
+            {
+                Vector3 a = xf.TransformPoint(verts[tris[i]]);
+                Vector3 b = xf.TransformPoint(verts[tris[i + 1]]);
+                Vector3 c = xf.TransformPoint(verts[tris[i + 2]]);
+
+                Vector3 n = Vector3.Cross(b - a, c - a);
+                if (n.sqrMagnitude < 1e-9f) continue;
+                n.Normalize();
+                if (Mathf.Abs(n.y) < 0.85f) continue;        // must be a flat face
+
+                float y = (a.y + b.y + c.y) / 3f;
+                if (y < floor.max.y + 1.6f) continue;        // below head height: not a ceiling
+                if (y >= lowestFlat && y >= lowest) continue;
+
+                // and it has to be over the middle of the room, not over the porch
+                float minX = Mathf.Min(a.x, Mathf.Min(b.x, c.x));
+                float maxX = Mathf.Max(a.x, Mathf.Max(b.x, c.x));
+                float minZ = Mathf.Min(a.z, Mathf.Min(b.z, c.z));
+                float maxZ = Mathf.Max(a.z, Mathf.Max(b.z, c.z));
+                if (mid.x < minX || mid.x > maxX || mid.z < minZ || mid.z > maxZ) continue;
+
+                lowestFlat = Mathf.Min(lowestFlat, y);
+                if (n.y < -0.85f) lowest = Mathf.Min(lowest, y);
+            }
+            if (lowest < float.MaxValue)
+            {
+                ceiling = lowest;
+                how = $"lowest downward-facing face over the hall centre, y = {ceiling:0.00}";
+            }
+            else if (lowestFlat < float.MaxValue)
+            {
+                ceiling = lowestFlat;
+                how = $"lowest flat face over the hall centre, y = {ceiling:0.00} — no " +
+                      "face there actually looks DOWN, so the shell's triangles are " +
+                      "wound outward only and the room has no inside surface to see";
+            }
+        }
+
+        // ---- write it where the camera reads it -----------------------------
+        string wrote = "no WalkCamera to tell";
+        var camGO = Camera.main != null ? Camera.main.gameObject : GameObject.Find("Main Camera");
+        var wc = camGO != null ? camGO.GetComponent<WalkCamera>() : null;
+        if (wc != null)
+        {
+            Undo.RecordObject(wc, "Measure The Library Interior");
+            if (ceiling > 0f) wc.hallHeight = Mathf.Max(1.5f, ceiling - floor.max.y);
+
+            // THE LENS THE ROOM NEEDS, not the one the editor window flattered.
+            // Standing at the back wall, seeing the whole width means an angle of
+            // 2*atan(halfWidth / depth) — a room is a shape, and the shape says how
+            // wide the lens has to be. The vertical ceiling is then whatever it
+            // takes to deliver that across a 720x1520 frame, capped before the walls
+            // start to bend.
+            wc.indoorHorizontalFov = Mathf.Clamp(
+                2f * Mathf.Atan(floor.size.x * 0.5f / Mathf.Max(0.5f, floor.size.z)) *
+                Mathf.Rad2Deg, 45f, 70f);
+            wc.indoorMaxFov = 88f;
+
+            // A ramp measured from the nearest wall cannot be a metre wide in a room
+            // four metres deep — see WalkCamera.ThresholdBlend, which refuses to
+            // honour it anyway. Written back so the Inspector stops lying.
+            if (wc.thresholdBlend > 0.6f) wc.thresholdBlend = 0.35f;
+
+            wc.ResetHall();
+            wc.ResetReaderSize();
+            EditorUtility.SetDirty(wc);
+
+            float phone = 720f / 1520f;
+            float got = Mathf.Min(wc.indoorMaxFov,
+                2f * Mathf.Atan(Mathf.Tan(wc.indoorHorizontalFov * 0.5f * Mathf.Deg2Rad) /
+                                phone) * Mathf.Rad2Deg);
+            wrote = $"WalkCamera ▸ Hall Height = {wc.hallHeight:0.00} m, indoor lens " +
+                    $"asks {wc.indoorHorizontalFov:0}° across (a {got:0}°-tall lens on " +
+                    $"a 720x1520 phone, giving " +
+                    $"{2f * Mathf.Atan(Mathf.Tan(got * 0.5f * Mathf.Deg2Rad) * phone) * Mathf.Rad2Deg:0}° " +
+                    "across)";
+        }
+
+        // ---- everything else, in metres, so the numbers can be argued with --
+        var sb = new System.Text.StringBuilder();
+        sb.AppendLine("[Sizes] The library, measured — every number in metres.");
+        sb.AppendLine($"  ROOM: floor {floor.size.x:0.00} x {floor.size.z:0.00}, " +
+                      $"floor top y {floor.max.y:0.00}" +
+                      (ceiling > 0f
+                          ? $", ceiling {ceiling - floor.max.y:0.00} above it ({how})"
+                          : $" — CEILING {how}"));
+        sb.AppendLine($"  → {wrote}");
+
+        Line(sb, "READER", Object.FindAnyObjectByType<PathWalker>(FindObjectsInactive.Include));
+        Line(sb, "DESK", NearestNamed("Desk_Reading", floor.center, 12f));
+        var station = Object.FindAnyObjectByType<BookStation>(FindObjectsInactive.Include);
+        if (station != null) Line(sb, "BOOK", station.Book);
+        Line(sb, "SHELF", NearestNamed("Shelf_Back", floor.center, 20f));
+        var stone = Object.FindAnyObjectByType<WordStone>(FindObjectsInactive.Exclude);
+        if (stone != null) Line(sb, "WORD STONE", stone.transform);
+
+        if (station != null)
+        {
+            Vector3 stand = station.StandPosition;
+            bool inside = stand.x > floor.min.x && stand.x < floor.max.x &&
+                          stand.z > floor.min.z && stand.z < floor.max.z;
+            sb.AppendLine($"  READING SPOT: {stand:0.00} — {(inside ? "INSIDE" : "OUTSIDE")} " +
+                          "the room" + (inside ? "." : ", so the reading shot is an exterior."));
+            if (station.doorway != null)
+            {
+                Vector3 d = station.doorway.position;
+                bool din = d.x > floor.min.x && d.x < floor.max.x &&
+                           d.z > floor.min.z && d.z < floor.max.z;
+                sb.AppendLine($"  DOORWAY: {d:0.00} — {(din ? "inside" : "outside")} the " +
+                              "floor, " +
+                              $"{Vector3.Distance(new Vector3(d.x, 0f, d.z), new Vector3(stand.x, 0f, stand.z)):0.0} m " +
+                              "from the reading spot");
+            }
+        }
+
+        // ---- and what a phone will make of it -------------------------------
+        if (wc != null)
+        {
+            var cam = camGO.GetComponent<Camera>();
+            float aspect = cam != null && cam.aspect > 0.01f ? cam.aspect : 720f / 1520f;
+            float v = cam != null ? cam.fieldOfView : 60f;
+            float h = 2f * Mathf.Atan(Mathf.Tan(v * 0.5f * Mathf.Deg2Rad) * aspect) * Mathf.Rad2Deg;
+            sb.AppendLine($"  FRAME: aspect {aspect:0.000} " +
+                          (aspect < 0.75f ? "(portrait — a phone)" : "(NOT portrait — this " +
+                           "is an editor window, so every framing number here is optimistic)"));
+            sb.AppendLine($"  LENS: {v:0} deg tall = {h:0} deg across at this aspect. " +
+                          $"Indoors the rig now asks for {wc.indoorHorizontalFov:0} deg " +
+                          $"ACROSS (capped at {wc.indoorMaxFov:0} tall), which on a " +
+                          $"720x1520 phone is a lens of " +
+                          $"{Mathf.Min(wc.indoorMaxFov, 2f * Mathf.Atan(Mathf.Tan(wc.indoorHorizontalFov * 0.5f * Mathf.Deg2Rad) / (720f / 1520f)) * Mathf.Rad2Deg):0} deg tall.");
+            float diag = new Vector2(floor.size.x, floor.size.z).magnitude;
+            sb.AppendLine($"  The longest sight line in this room is its diagonal, " +
+                          $"{diag:0.0} m — that is the most depth any interior shot can have.");
+        }
+
+        Debug.Log(sb.ToString());
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+    }
+
+    [MenuItem("Tools/Great Library/Library/7. Measure The Library Interior", true)]
+    static bool MeasureValidate() => !Application.isPlaying;
+
+    /// <summary>One measured line of the size report. Silent when there is nothing there.</summary>
+    static void Line(System.Text.StringBuilder sb, string label, Component c)
+    {
+        if (c == null) { sb.AppendLine($"  {label}: not in the scene"); return; }
+        var b = Measure(c.gameObject);
+        sb.AppendLine(b.HasValue
+            ? $"  {label}: {b.Value.size.x:0.00} w x {b.Value.size.y:0.00} h x " +
+              $"{b.Value.size.z:0.00} d, base y {b.Value.min.y:0.00}, top y {b.Value.max.y:0.00}"
+            : $"  {label}: '{c.name}' has no renderer to measure");
+    }
+
+    // ======================================================================
+    /// <summary>
+    /// Take the old outdoor reading mat out of the library.
+    ///
+    /// The mat is a 1.5 m disc in a dull red, and it is the seat from BEFORE the
+    /// library had an inside: the river walk ended at the door, the reader sat down
+    /// on it, and that was the end of the sentence. They now read at a desk in the
+    /// hall. What is left is a red disc placed at the DOORWAY's height rather than
+    /// the floor's, which puts it at eye level in the middle of the room with
+    /// nothing to explain it.
+    ///
+    /// The marker object stays. The road may still be seating the reader on it, and
+    /// deleting a transform something is holding is how a walk ends up teleporting
+    /// to the world origin. Only the visible disc goes.
+    /// </summary>
+    [MenuItem("Tools/Great Library/Library/8. Remove The Old Reading Mat")]
+    public static void RemoveTheMat()
+    {
+        var gone = new List<string>();
+
+        foreach (var mr in Object.FindObjectsByType<MeshRenderer>(
+                     FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            if (mr == null) continue;
+            bool isMat = mr.name == "Disc" &&
+                         mr.transform.parent != null &&
+                         mr.transform.parent.name.Contains("ReadingMat");
+            if (!isMat)
+                isMat = mr.sharedMaterial != null &&
+                        mr.sharedMaterial.name.StartsWith("M_ReadingMat");
+            if (!isMat) continue;
+
+            gone.Add($"{(mr.transform.parent != null ? mr.transform.parent.name + "/" : "")}{mr.name}");
+            Undo.DestroyObjectImmediate(mr.gameObject);
+        }
+
+        // Who was holding it? Worth saying, because an empty marker left behind
+        // looks like a mistake until you know it is load-bearing.
+        var road = Object.FindAnyObjectByType<RiversideRoad>(FindObjectsInactive.Include);
+        string seat = road != null && road.seat != null
+            ? $"the road still seats the reader on '{road.seat.name}', which is kept " +
+              "(it is a marker now, not a prop)"
+            : "nothing is holding a seat marker";
+
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        Debug.Log(gone.Count == 0
+            ? "[Mat] No reading mat found — either it is already gone, or it is not " +
+              "named 'Disc' under a 'ReadingMat' and is not using M_ReadingMat."
+            : $"[Mat] Removed {gone.Count} old reading mat disc(s): " +
+              $"{string.Join(", ", gone)}.\n  • {seat}\n" +
+              "  • re-running the riverside setup will not bring it back: it now " +
+              "skips the disc whenever the BookStation is indoors.");
+    }
+
+    [MenuItem("Tools/Great Library/Library/8. Remove The Old Reading Mat", true)]
+    static bool RemoveMatValidate() => !Application.isPlaying;
+
+    // ======================================================================
+    /// <summary>
+    /// Make the reader smaller, one notch at a time.
+    ///
+    /// Height is authored on the component and therefore lives in the SCENE, so a
+    /// better default in the code cannot reach it — this is the only honest way to
+    /// change a number the scene already has an opinion about. A notch rather than
+    /// a value because the right size is not calculable: it is whatever makes the
+    /// room read on the phone, and that is a thing you look at.
+    ///
+    /// The camera needs no adjusting. It takes its eye height off the reader.
+    /// </summary>
+    [MenuItem("Tools/Great Library/Library/9. Shrink The Reader")]
+    public static void ShrinkReader() => Resize(1f / 1.18f);
+
+    [MenuItem("Tools/Great Library/Library/9b. Grow The Reader")]
+    public static void GrowReader() => Resize(1.18f);
+
+    [MenuItem("Tools/Great Library/Library/9. Shrink The Reader", true)]
+    static bool ShrinkValidate() => !Application.isPlaying;
+
+    [MenuItem("Tools/Great Library/Library/9b. Grow The Reader", true)]
+    static bool GrowValidate() => !Application.isPlaying;
+
+    static void Resize(float by)
+    {
+        var actor = Object.FindAnyObjectByType<PlaceholderActor>(FindObjectsInactive.Include);
+        if (actor == null)
+        {
+            Debug.LogError("[Reader] No PlaceholderActor in the scene. If the real " +
+                           "character has replaced it, the camera measures them from " +
+                           "their renderers and this tool has nothing to turn — scale " +
+                           "the model itself.");
+            return;
+        }
+
+        float was = actor.height;
+        Undo.RecordObject(actor, "Resize The Reader");
+        actor.height = Mathf.Clamp(was * by, 0.7f, 2.2f);
+        actor.RebuildBody();
+        EditorUtility.SetDirty(actor);
+
+        string cam = "no WalkCamera to re-compose";
+        var camGO = Camera.main != null ? Camera.main.gameObject : GameObject.Find("Main Camera");
+        var wc = camGO != null ? camGO.GetComponent<WalkCamera>() : null;
+        if (wc != null)
+        {
+            Undo.RecordObject(wc, "Resize The Reader");
+            wc.ResetReaderSize();
+            wc.Compose();
+            EditorUtility.SetDirty(wc);
+            cam = $"eye now at {wc.EyeHeight:0.00} m " +
+                  (wc.sizeFromTheReader
+                      ? "(measured off them)"
+                      : "— but Size From The Reader is OFF, so the lens has NOT moved " +
+                        "with them; tick it on the WalkCamera");
+        }
+
+        float room = LibraryFloor.Known ? LibraryFloor.Plan.size.z : 0f;
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        Selection.activeGameObject = actor.gameObject;
+        Debug.Log(
+            $"[Reader] {was:0.00} m → {actor.height:0.00} m. {cam}.\n" +
+            (room > 0.1f
+                ? $"  • the hall is {LibraryFloor.Plan.size.x:0.0} x {room:0.0} m and " +
+                  $"{(actor.height / 3.4f * 100f):0}% of its ceiling is now reader — " +
+                  "the smaller that is, the bigger the room reads.\n"
+                : "") +
+            "  • run it again for another notch; 9b. Grow The Reader goes back.");
+    }
+
+    // ======================================================================
     [MenuItem("Tools/Great Library/Library/Remove Library Hall")]
     public static void Remove()
     {

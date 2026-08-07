@@ -63,6 +63,16 @@ public class BookWalkFlow : MonoBehaviour
              "tiresome fast.")]
     public bool revealOnceOnly = true;
 
+    [Header("Inside the library, the walk is the player's")]
+    [Tooltip("Do not march the reader to the lectern. Once they are through the " +
+             "door the library is theirs to walk — up the aisles, round the desk, " +
+             "turning on the spot to see what is on the shelves — and the book only " +
+             "takes the frame when they reach it. Untick to go back to the reader " +
+             "being carried straight to the page.")]
+    public bool freeWalkInTheLibrary = true;
+    [Tooltip("How near the reading spot counts as arriving at the book, in metres.")]
+    public float readRadius = 1.3f;
+
     [Header("Beats (seconds)")]
     [Tooltip("Pause after arriving at the book, before it becomes clickable — long " +
              "enough for the camera to settle onto the page.")]
@@ -185,21 +195,92 @@ public class BookWalkFlow : MonoBehaviour
         onParagraphFinished.Invoke();
     }
 
-    /// <summary>Walk to the lectern, settle the camera on the page, hand over control.</summary>
+    /// <summary>
+    /// Get to the lectern. Inside the library that is the PLAYER'S walk, not ours.
+    ///
+    /// Marching the reader to the book is the efficient version of this and it costs
+    /// the room: the player is carried past the shelves, the globe and the lit
+    /// windows on rails, arrives at a page, and never once chooses to look at
+    /// anything. So indoors this waits instead. The library is theirs to walk; the
+    /// book opens when they get to it, because getting to it is the point.
+    /// </summary>
     IEnumerator GoToBook()
     {
         book.interactive = false;
         yield return Reveal();
 
-        if (cam != null) cam.focus = station.FocusTarget;
-
         Vector3 spot = station.StandPosition;
-        Log($"walking to the book ({Vector3.Distance(walker.transform.position, spot):0.0} m).");
-        yield return walker.WalkTo(spot, walker.transitSpeed, station.LookAt - spot);
+
+        if (FreeWalk)
+        {
+            walker.Stand();                     // never wait for someone who is sitting
+            yield return StepInside();
+            Log("the library is yours — walk to the book when you are ready.");
+
+            // The camera is deliberately NOT put on the book yet. Framing the page
+            // from across the room while the player is trying to look at the shelves
+            // is the same railroading with the reader left free to walk under it.
+            if (cam != null) cam.focus = null;
+
+            float r = Mathf.Max(0.4f, readRadius);
+            yield return new WaitUntil(
+                () => Flat(walker.transform.position - spot).sqrMagnitude <= r * r);
+
+            if (cam != null) cam.focus = station.FocusTarget;
+            yield return walker.Turn(station.LookAt - walker.transform.position);
+        }
+        else
+        {
+            if (cam != null) cam.focus = station.FocusTarget;
+            Log($"walking to the book ({Vector3.Distance(walker.transform.position, spot):0.0} m).");
+            yield return walker.WalkTo(spot, walker.transitSpeed, station.LookAt - spot);
+        }
 
         yield return new WaitForSeconds(Mathf.Max(0f, beatAtBook));
         book.RefreshTextFacing();
     }
+
+    /// <summary>
+    /// Is the reader's walk theirs? Only where there is a library to walk in — out
+    /// on the river the road is the game and handing over would strand them.
+    /// </summary>
+    bool FreeWalk => freeWalkInTheLibrary && walker != null && walker.roamIndoors &&
+                     station != null && station.doorway != null;
+
+    /// <summary>
+    /// Carry the reader over the threshold, and no further.
+    ///
+    /// The reveal leaves them standing ON the doorway socket, which is out on the
+    /// porch between the columns — outside the floor, so the free walk has nothing
+    /// to hand over. One stride in puts them on the library's own floor with the
+    /// room around them and the walk theirs from that step on. It is the shortest
+    /// scripted move in the game and it exists so that the longest one can stop.
+    /// </summary>
+    IEnumerator StepInside()
+    {
+        if (!LibraryFloor.Known) yield break;
+        if (LibraryFloor.Contains(walker.transform.position, 0.3f)) yield break;
+
+        Vector3 door = station.doorway.position;
+        Vector3 inward = Flat(station.LookAt - door);
+        if (inward.sqrMagnitude < 1e-4f) yield break;
+        inward.Normalize();
+
+        for (float t = 0.2f; t <= 8f; t += 0.2f)
+        {
+            Vector3 p = door + inward * t;
+            p.y = LibraryFloor.FloorY;
+            if (!LibraryFloor.Contains(p, 0.4f)) continue;
+
+            Log($"through the door ({t:0.0} m).");
+            yield return walker.WalkTo(p, walker.transitSpeed, inward);
+            yield break;
+        }
+        Debug.LogWarning("[BookWalk] Could not find a way in from the doorway — is " +
+                         "SOCKET_Entrance still outside the library's own floor?");
+    }
+
+    static Vector3 Flat(Vector3 v) { v.y = 0f; return v; }
 
     /// <summary>
     /// Come in through the door under a WIDE shot of the hall, and hold it a beat

@@ -23,6 +23,7 @@
 //  pressing Play. The mesh is generated, never saved — it is rebuilt on load.
 // ===========================================================================
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [ExecuteAlways]
@@ -168,7 +169,7 @@ public class RiversideRoad : MonoBehaviour
         for (int i = 0; i < _stones.Count; i++)
         {
             Vector3 p = _stones[i].position + lateral * (SideSign * sideOffset);
-            p.y = StandHeight(_stones[i]) + surfaceRise;
+            p.y = Underfoot(p, StandHeight(_stones[i])) + surfaceRise;
             stoneKnot.Add(knots.Count);
             knots.Add(p);
         }
@@ -186,6 +187,42 @@ public class RiversideRoad : MonoBehaviour
 
         return knots.Count >= 2;
     }
+
+    /// <summary>
+    /// The top of whatever the reader is ACTUALLY standing on at this point.
+    ///
+    /// The height used to come from the word stone, and the reader does not stand
+    /// on those — they walk beside them, along the line of path stones the artist
+    /// laid, which are taller and rounder. Measuring one surface and standing on
+    /// the other put them into the path up to the knee.
+    ///
+    /// Measured from the path stones' RENDERER bounds rather than by raycasting:
+    /// the imported world has no colliders on its scenery, so a downward probe
+    /// would find nothing and silently fall back to the wrong answer.
+    /// </summary>
+    float Underfoot(Vector3 at, float fallback)
+    {
+        if (_pathStones == null || _pathStones.Length == 0)
+            _pathStones = FindObjectsByType<MeshRenderer>(FindObjectsInactive.Exclude,
+                                                          FindObjectsSortMode.None)
+                          .Where(r => r != null && r.name.StartsWith("SLOT_")).ToArray();
+
+        float best = float.NegativeInfinity, nearest = float.MaxValue;
+        foreach (var r in _pathStones)
+        {
+            if (r == null) continue;
+            var b = r.bounds;
+            Vector3 flat = new Vector3(b.center.x - at.x, 0f, b.center.z - at.z);
+            float d = flat.sqrMagnitude;
+            // only what is genuinely underfoot, not the next stone along
+            if (d > 1.0f || d >= nearest) continue;
+            nearest = d;
+            best = b.max.y;
+        }
+        return best > float.NegativeInfinity ? best : fallback;
+    }
+
+    MeshRenderer[] _pathStones;
 
     /// <summary>
     /// The height the reader's feet go at this stone: the top of the stone when

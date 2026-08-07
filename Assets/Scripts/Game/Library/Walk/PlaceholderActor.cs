@@ -24,7 +24,16 @@ using UnityEngine;
 public class PlaceholderActor : MonoBehaviour
 {
     [Header("Build")]
-    public float height = 1.75f;
+    [Tooltip("Total height in metres, feet to crown. THE ONE NUMBER FOR THE READER'S " +
+             "SIZE — the walking camera reads it and puts its eye at the top of it, " +
+             "so turning this down moves the lens down with them instead of leaving " +
+             "it hovering where their head used to be.\n\n" +
+             "1.45 is a child, and a child is what this game is for. It also buys " +
+             "the room back: the library hall is 5.6 x 4.2 m with a 3.4 m ceiling, " +
+             "and a grown adult standing in it is nearly as tall as the shelves, " +
+             "which is what makes everything read as crowded on a phone.")]
+    [Range(0.6f, 2.2f)]
+    public float height = 1.45f;
     public Color robe = new Color(0.86f, 0.62f, 0.30f);
     public Color skin = new Color(0.95f, 0.82f, 0.66f);
     public Color limbs = new Color(0.42f, 0.32f, 0.24f);
@@ -115,6 +124,12 @@ public class PlaceholderActor : MonoBehaviour
             Part(sh, PrimitiveType.Capsule, "Arm", limbMat,
                  new Vector3(0f, -h * 0.17f, 0f),
                  new Vector3(h * 0.07f, h * 0.17f, h * 0.07f));
+
+        // A fresh body arrives visible. If we were hidden — first person — it has
+        // to go back to being hidden, or rebuilding the rig pops the reader's own
+        // head into the middle of their own view.
+        _skin = null;
+        SetVisible(_visible);
     }
 
     static Transform Joint(Transform parent, string name, Vector3 localPos)
@@ -172,6 +187,29 @@ public class PlaceholderActor : MonoBehaviour
 
     /// <summary>Fold down onto the mat (or stand back up).</summary>
     public void SetSeated(bool seated) { _seated = seated; }
+
+    /// <summary>
+    /// Show or hide the body.
+    ///
+    /// You cannot see your own head. When the camera moves to the reader's eyes it
+    /// is INSIDE this model — the skull is a sphere 0.3 m across and the cap's peak
+    /// reaches further forward than the lens does — so the whole frame becomes the
+    /// inside of a brown capsule, which reads exactly like "the character is far too
+    /// big". Hiding the body is what first person means; nothing else here changes.
+    /// </summary>
+    public void SetVisible(bool visible)
+    {
+        if (_visible == visible && _skin != null) return;
+        _visible = visible;
+
+        if (_skin == null || System.Array.IndexOf(_skin, null) >= 0)
+            _skin = GetComponentsInChildren<MeshRenderer>(true);
+        foreach (var r in _skin)
+            if (r != null) r.enabled = visible;
+    }
+
+    MeshRenderer[] _skin;
+    bool _visible = true;
 
     // One pose per frame, after whoever is driving the walk has moved. Step()
     // only ever banks distance; this spends it and then clears it, so a walker

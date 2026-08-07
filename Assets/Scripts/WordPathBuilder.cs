@@ -290,6 +290,12 @@ public class WordPathBuilder : MonoBehaviour
             ws.token = word.token;
             ws.Relabel();
 
+            // Raised, positioned, and a target for its chip — but not on show until
+            // that chip lands. Without this the river stands up a line of blank
+            // stones the moment a page appears, and they stay blank right through
+            // the walk unless the player happens to click the sentence.
+            ws.Awaiting(!showWords);
+
             if (_stones.Count == 0) MeasureStone(ws.gameObject);
             _stones.Add(ws);
             _u.Add(n == 1 ? 0.5f : (i - first) / (float)(n - 1));
@@ -369,6 +375,7 @@ public class WordPathBuilder : MonoBehaviour
             ws.token = slot.token;
             // a blank stone must not show a lone full stop — whoever fills it sets this
             ws.endsSentence = showWords && i == slots.Count - 1;
+            ws.Awaiting(!showWords);                   // unseen until its chip lands
             if (_stones.Count == 0) MeasureStone(go);   // the set is sized from one stone
             _stones.Add(ws);
             _u.Add(u);

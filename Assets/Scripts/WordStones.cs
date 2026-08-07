@@ -132,7 +132,42 @@ public class WordStone : MonoBehaviour
         word = w;
         endsSentence = last;
         Relabel();
+
+        // A word has arrived, so the stone it arrived on is worth seeing. This is
+        // the other half of Awaiting() — see it for why a stone ever waits unseen.
+        if (!string.IsNullOrEmpty(w)) Awaiting(false);
     }
+
+    bool _awaiting;
+
+    /// <summary>
+    /// Hold this stone out of sight until its word lands on it.
+    ///
+    /// THE PROBLEM THIS SOLVES. The river is laid out the moment a page is shown,
+    /// one stone per word of that sentence — the stones have to exist by then,
+    /// because they are what the flying word chips aim at. But with Reveal Words On
+    /// Landing the words are deliberately withheld until each chip arrives, so
+    /// between those two moments the river holds a line of blank stones. Nothing
+    /// ever fills them in unless the player clicks the sentence, so "I started the
+    /// game and the stones have no words on them" is not a bug in the reveal — it
+    /// is the reveal, seen before it has been triggered.
+    ///
+    /// The stone still EXISTS and is still exactly where it will be: the chip needs
+    /// something to fly to, and it needs to arrive in the right place. Only its
+    /// renderers are off. So the river reads as open water until a sentence is
+    /// sent, and each stone surfaces as its own word lands on it — which is what
+    /// the loop always said it did.
+    /// </summary>
+    public void Awaiting(bool waiting)
+    {
+        if (_awaiting == waiting) return;
+        _awaiting = waiting;
+        foreach (var r in GetComponentsInChildren<Renderer>(true))
+            if (r != null) r.enabled = !waiting;
+    }
+
+    /// <summary>True while this stone is holding station for a word that has not landed.</summary>
+    public bool IsAwaiting => _awaiting;
 
     /// <summary>
     /// Scrub everything the LAST sentence left on this stone. Only pooled stones
