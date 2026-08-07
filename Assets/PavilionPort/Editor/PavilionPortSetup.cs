@@ -593,6 +593,146 @@ public static class PavilionPortSetup
     }
 
     // =======================================================================
+    //  6. sReader integration probe — bookshelf, book, and a word path
+    // =======================================================================
+    //  A deliberately small test: does sReader's own library kit and reading
+    //  code drop into the ported pavilion and behave?
+    //
+    //  Uses the project's REAL assets, not stand-ins — P_ShelfBay_A,
+    //  P_Book_Hero_Open, the SM_WordStone prefabs, BookStation and
+    //  WordPathBuilder — so what you see is what integration actually looks
+    //  like. Everything lands under one "sReaderTest" object; delete that and
+    //  the pavilion is untouched.
+    //
+    //  Placed in front of the active camera and dropped onto the floor by
+    //  raycast, so it appears where you are looking rather than at some
+    //  authored coordinate that may be inside a wall.
+    // =======================================================================
+    const string TestRoot = "sReaderTest";
+
+    [MenuItem(Menu + "6. Place sReader Test (shelf + book + sentence)", priority = 70)]
+    public static void PlaceSReaderTest()
+    {
+        if (!EnsureSceneOpen()) return;
+
+        GameObject Load(string path)
+        {
+            var go = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+            if (go == null) Debug.LogWarning($"sReader test: missing {path}");
+            return go;
+        }
+
+        var shelfPf = Load("Assets/Prefabs/Kit/P_ShelfBay_A.prefab");
+        var bookPf  = Load("Assets/Prefabs/Kit/P_Book_Hero_Open.prefab");
+        var deskPf  = Load("Assets/Prefabs/Kit/P_Desk_Reading.prefab");
+        var stoneA  = Load("Assets/Prefabs/SM_WordStone_A.prefab");
+        var stoneB  = Load("Assets/Prefabs/SM_WordStone_B.prefab");
+        var stoneC  = Load("Assets/Prefabs/SM_WordStone_C.prefab");
+        var stoneK  = Load("Assets/Prefabs/SM_WordStone_Key.prefab");
+
+        if (shelfPf == null || bookPf == null || stoneA == null)
+        {
+            EditorUtility.DisplayDialog("sReader test",
+                "Could not find the library kit or word stone prefabs. Nothing placed.", "OK");
+            return;
+        }
+
+        // --- where: in front of the camera, dropped to the floor -----------
+        var cam = Camera.main ?? FindAll<Camera>().FirstOrDefault(c => c.isActiveAndEnabled);
+        Vector3 origin = cam != null
+            ? cam.transform.position + Vector3.Scale(cam.transform.forward, new Vector3(1, 0, 1)).normalized * 6f
+            : Vector3.zero;
+        if (Physics.Raycast(origin + Vector3.up * 5f, Vector3.down, out var floor, 50f))
+            origin = floor.point;
+        else
+            origin.y = 0f;
+
+        // Face back toward the camera so the shelf and book are readable.
+        var faceCam = cam != null
+            ? Quaternion.LookRotation(Vector3.Scale(cam.transform.position - origin, new Vector3(1, 0, 1)).normalized)
+            : Quaternion.identity;
+
+        // --- clear any previous run so this is repeatable ------------------
+        var existing = EditorSceneManager.GetActiveScene().GetRootGameObjects()
+            .FirstOrDefault(g => g.name == TestRoot);
+        if (existing != null) Undo.DestroyObjectImmediate(existing);
+
+        var root = new GameObject(TestRoot);
+        Undo.RegisterCreatedObjectUndo(root, "Place sReader test");
+        root.transform.SetPositionAndRotation(origin, faceCam);
+
+        GameObject Place(GameObject pf, string name, Vector3 local, Transform parent)
+        {
+            if (pf == null) return null;
+            var go = (GameObject)PrefabUtility.InstantiatePrefab(pf, parent);
+            go.name = name;
+            go.transform.localPosition = local;
+            go.transform.localRotation = Quaternion.identity;
+            Undo.RegisterCreatedObjectUndo(go, "Place sReader test");
+            return go;
+        }
+
+        // --- the furniture -------------------------------------------------
+        Place(shelfPf, "Bookshelf", new Vector3(-2.2f, 0f, 0.6f), root.transform);
+        var desk = Place(deskPf, "ReadingDesk", new Vector3(0f, 0f, 0f), root.transform);
+
+        // The book sits on the desk if we have one, otherwise waist height.
+        float bookY = 0.95f;
+        if (desk != null)
+        {
+            var rends = desk.GetComponentsInChildren<Renderer>();
+            if (rends.Length > 0)
+            {
+                var b = rends[0].bounds;
+                foreach (var r in rends) b.Encapsulate(r.bounds);
+                bookY = b.max.y - root.transform.position.y;
+            }
+        }
+        var book = Place(bookPf, "StoryBook", new Vector3(0f, bookY, 0f), root.transform);
+
+        // --- BookStation: sReader's lectern marker --------------------------
+        var station = Undo.AddComponent<BookStation>(root);
+        if (book != null) station.book = book.transform;
+
+        // --- the word path: one stone per word ------------------------------
+        var pathGo = new GameObject("WordPath");
+        Undo.RegisterCreatedObjectUndo(pathGo, "Place sReader test");
+        pathGo.transform.SetParent(root.transform, false);
+        pathGo.transform.localPosition = new Vector3(0f, 0f, -2.5f);
+
+        var a = new GameObject("Start").transform; a.SetParent(pathGo.transform, false);
+        a.localPosition = new Vector3(-3f, 0.02f, 0f);
+        var z = new GameObject("End").transform; z.SetParent(pathGo.transform, false);
+        z.localPosition = new Vector3(3f, 0.02f, 0f);
+
+        var builder = Undo.AddComponent<WordPathBuilder>(pathGo);
+        builder.sentence = "The reader walked into the quiet library";
+        builder.keywords = new List<string> { "library" };
+        builder.stoneA = stoneA; builder.stoneB = stoneB ?? stoneA;
+        builder.stoneC = stoneC ?? stoneA; builder.stoneKey = stoneK ?? stoneA;
+        builder.startPoint = a; builder.endPoint = z;
+        builder.useAuthoredSlots = false;   // no WORDSLOT_ markers in this scene
+        builder.usePool = false;            // build directly, simpler at edit time
+        builder.frameOnScreen = false;      // keep the authored placement
+        builder.curve = 0.4f;
+        builder.viewCamera = cam;
+
+        try { builder.Build(); }
+        catch (System.Exception e) { Debug.LogWarning($"WordPathBuilder.Build() threw: {e.Message}"); }
+
+        Selection.activeGameObject = root;
+        SceneView.lastActiveSceneView?.FrameSelected();
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+
+        Debug.Log($"sReader test placed at {origin}.\n" +
+                  $"  Bookshelf   : P_ShelfBay_A\n" +
+                  $"  Desk + book : P_Desk_Reading + P_Book_Hero_Open\n" +
+                  $"  BookStation : book -> {(book == null ? "none" : book.name)}\n" +
+                  $"  WordPath    : \"{builder.sentence}\" -> {builder.Stones.Count} stones\n" +
+                  $"Delete the '{TestRoot}' object to remove all of it.");
+    }
+
+    // =======================================================================
     //  9. Diagnose — read-only. For working out why nothing renders.
     // =======================================================================
     [MenuItem(Menu + "9. Diagnose Camera / Render", priority = 80)]
