@@ -383,6 +383,91 @@ public static class PavilionPortSetup
     }
 
     // =======================================================================
+    //  9. Diagnose — read-only. For working out why nothing renders.
+    // =======================================================================
+    [MenuItem(Menu + "9. Diagnose Camera / Render", priority = 80)]
+    public static void Diagnose()
+    {
+        if (!SceneIsOpen()) { Debug.LogWarning($"Open {ScenePath} first."); return; }
+
+        var sb = new StringBuilder("=== Pavilion render diagnosis ===\n");
+
+        var cam = Camera.main ?? FindAll<Camera>().FirstOrDefault(c => c.isActiveAndEnabled);
+        if (cam == null) { Debug.LogError("No active camera at all."); return; }
+
+        var t = cam.transform;
+        sb.AppendLine($"Camera            : {cam.name}");
+        sb.AppendLine($"  position        : {t.position}");
+        sb.AppendLine($"  forward         : {t.forward}");
+        sb.AppendLine($"  clip near/far   : {cam.nearClipPlane} / {cam.farClipPlane}");
+        sb.AppendLine($"  fov / ortho     : {cam.fieldOfView} / {cam.orthographic}");
+        sb.AppendLine($"  clearFlags      : {cam.clearFlags}");
+        sb.AppendLine($"  cullingMask     : {cam.cullingMask}  (-1 = everything)");
+        sb.AppendLine($"  depth / target  : {cam.depth} / {(cam.targetTexture == null ? "screen" : cam.targetTexture.name)}");
+        sb.AppendLine($"  rect            : {cam.rect}");
+
+        var uacd = cam.GetComponent<UniversalAdditionalCameraData>();
+        if (uacd != null)
+        {
+            sb.AppendLine($"  renderer index  : {ReadInt(uacd, "m_RendererIndex")}");
+            sb.AppendLine($"  post processing : {uacd.renderPostProcessing}");
+            sb.AppendLine($"  renderType      : {uacd.renderType}");
+        }
+
+        // --- what is actually in the scene, and where -----------------------
+        var rends = FindAll<Renderer>().Where(r => r.enabled && r.gameObject.activeInHierarchy).ToList();
+        sb.AppendLine($"\nActive renderers  : {rends.Count}");
+        if (rends.Count > 0)
+        {
+            var b = rends[0].bounds;
+            foreach (var r in rends) b.Encapsulate(r.bounds);
+            sb.AppendLine($"  scene bounds    : center {b.center}  size {b.size}");
+            sb.AppendLine($"  camera inside?  : {b.Contains(t.position)}");
+            sb.AppendLine($"  dist to center  : {Vector3.Distance(t.position, b.center):F1} m");
+
+            // How many renderers actually fall inside the camera frustum?
+            var planes = GeometryUtility.CalculateFrustumPlanes(cam);
+            int visible = rends.Count(r => GeometryUtility.TestPlanesAABB(planes, r.bounds));
+            sb.AppendLine($"  in frustum      : {visible}");
+        }
+
+        // --- is anything straight ahead? -----------------------------------
+        if (Physics.Raycast(t.position, t.forward, out var hit, 5000f))
+            sb.AppendLine($"\nRaycast forward   : hit '{hit.collider.name}' at {hit.distance:F1} m");
+        else
+            sb.AppendLine("\nRaycast forward   : hits nothing (camera may be facing empty space/sky)");
+
+        // --- environment ---------------------------------------------------
+        sb.AppendLine($"\nSkybox            : {(RenderSettings.skybox == null ? "NONE" : RenderSettings.skybox.name)}");
+        if (RenderSettings.skybox != null)
+            sb.AppendLine($"  shader          : {(RenderSettings.skybox.shader == null ? "MISSING" : RenderSettings.skybox.shader.name)}");
+        sb.AppendLine($"Ambient mode      : {RenderSettings.ambientMode}  intensity {RenderSettings.ambientIntensity}");
+        sb.AppendLine($"Sun               : {(RenderSettings.sun == null ? "none assigned" : RenderSettings.sun.name)}");
+
+        var lights = FindAll<Light>().Where(l => l.isActiveAndEnabled).ToList();
+        sb.AppendLine($"Active lights     : {lights.Count}");
+        foreach (var l in lights.Take(6))
+            sb.AppendLine($"   {l.name,-24} {l.type,-12} intensity={l.intensity} mode={l.lightmapBakeType}");
+
+        var urp = GetUrpAsset();
+        if (urp != null)
+        {
+            var so = new SerializedObject(urp);
+            sb.AppendLine($"\nURP renderScale   : {so.FindProperty("m_RenderScale")?.floatValue}");
+            sb.AppendLine($"URP HDR           : {so.FindProperty("m_SupportsHDR")?.boolValue}");
+            sb.AppendLine($"URP MSAA          : {so.FindProperty("m_MSAA")?.intValue}");
+        }
+
+        // --- volumes affecting the camera ----------------------------------
+        var vols = FindAll<Volume>().Where(v => v.isActiveAndEnabled).ToList();
+        sb.AppendLine($"\nActive volumes    : {vols.Count}");
+        foreach (var v in vols)
+            sb.AppendLine($"   {v.name,-24} global={v.isGlobal} weight={v.weight} profile={(v.sharedProfile == null ? "none" : v.sharedProfile.name)}");
+
+        Debug.Log(sb.ToString());
+    }
+
+    // =======================================================================
     //  helpers
     // =======================================================================
 
