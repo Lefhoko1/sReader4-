@@ -338,6 +338,64 @@ public static class PavilionPortSetup
     }
 
     // =======================================================================
+    //  1d. Discard the HDRP-baked lighting data
+    // =======================================================================
+    //  The port copied the original scene's baked lighting wholesale: the
+    //  lightmap EXRs, the 19 reflection probe captures, and the Adaptive Probe
+    //  Volume cell data. All of it was baked by HDRP in PHYSICAL units — the
+    //  same scale that produced a 100,000 lux sun.
+    //
+    //  URP reads those values at face value, so as soon as APV is switched on
+    //  the scene blows out to white. The data is not convertible; it has to be
+    //  thrown away and rebaked by URP.
+    // =======================================================================
+    const string BakeFolder = "Assets/PavilionPort/SC_Pavilion";
+
+    [MenuItem(Menu + "1d. Discard HDRP-Baked Lighting Data", priority = 24)]
+    public static void ClearStaleBake()
+    {
+        if (!EnsureSceneOpen()) return;
+
+        var files = AssetDatabase.FindAssets("", new[] { BakeFolder })
+            .Select(AssetDatabase.GUIDToAssetPath)
+            .Where(p => !AssetDatabase.IsValidFolder(p))
+            .Distinct()
+            .ToList();
+
+        if (files.Count == 0)
+        {
+            Debug.Log("No baked lighting data found — already clear. Run step 4 to bake.");
+            return;
+        }
+
+        long bytes = files.Sum(p => { var fi = new System.IO.FileInfo(p); return fi.Exists ? fi.Length : 0; });
+
+        if (!EditorUtility.DisplayDialog("Pavilion Port",
+                $"Discard {files.Count} baked lighting file(s) ({bytes / 1048576} MB)?\n\n" +
+                "These were baked by HDRP in physical units. URP reads them at face " +
+                "value, which is why the scene turns white with APV enabled. They " +
+                "cannot be converted — the scene must be rebaked.\n\n" +
+                "Recoverable from git.",
+                "Discard and rebake", "Cancel"))
+            return;
+
+        // Detach first so the scene stops pointing at data that is going away.
+        Lightmapping.Clear();
+        Lightmapping.ClearLightingDataAsset();
+
+        int deleted = 0;
+        foreach (var p in files) if (AssetDatabase.DeleteAsset(p)) deleted++;
+
+        AssetDatabase.Refresh();
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        EditorSceneManager.SaveOpenScenes();
+
+        Debug.Log($"Discarded {deleted} HDRP-baked lighting file(s).\n" +
+                  "The scene is now unlit-but-correct: direct light only, no indirect. " +
+                  "Run step 4 to bake it properly in URP.");
+    }
+
+    // =======================================================================
     //  2. Decal Renderer Feature — edits Assets/Settings/Renderer3D.asset
     // =======================================================================
     [MenuItem(Menu + "2. Add Decal Renderer Feature", priority = 21)]
