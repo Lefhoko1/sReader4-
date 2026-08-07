@@ -244,6 +244,100 @@ public static class PavilionPortSetup
     }
 
     // =======================================================================
+    //  1c. Light intensities — HDRP physical units -> URP arbitrary units
+    // =======================================================================
+    //  HDRP stores light intensity in PHYSICAL units: lux for directional,
+    //  candela for punctual. URP has no physical light units (there is no
+    //  LightUnit anywhere in URP 17.4), and its scale is arbitrary — 1 to 3 is
+    //  an ordinary light.
+    //
+    //  The port carried the physical numbers straight across on the native
+    //  Light component, so the scene arrived with a 100,000 "lux" sun and
+    //  ~900 candela spots. That is roughly two orders of magnitude too bright
+    //  and renders as a pure white screen.
+    //
+    //  Both the prefab assets and the scene instances are converted, so the
+    //  fix survives re-instantiating a light prefab later.
+    // =======================================================================
+
+    /// <summary>100,000 lux is roughly midday sun, which is URP intensity ~1.</summary>
+    const float LuxPerUrpUnit = 100000f;
+
+    /// <summary>Candela per URP unit. 100 cd ≈ a 1 unit domestic lamp.</summary>
+    const float CandelaPerUrpUnit = 100f;
+
+    /// <summary>
+    /// Anything at or below this is already in URP's range, so conversion is
+    /// skipped. That is what makes this menu item safe to run twice.
+    /// </summary>
+    const float AlreadyConvertedBelow = 25f;
+
+    [MenuItem(Menu + "1c. Fix Light Intensities (HDRP units → URP)", priority = 23)]
+    public static void FixLightIntensities()
+    {
+        if (!EnsureSceneOpen()) return;
+
+        int prefabLights = 0, sceneLights = 0, skipped = 0;
+        var log = new StringBuilder("=== Light intensity conversion ===\n");
+
+        // --- prefab assets first, so future instances are correct -----------
+        foreach (var guid in AssetDatabase.FindAssets("t:Prefab", new[] { "Assets/PavilionPort" }))
+        {
+            var path = AssetDatabase.GUIDToAssetPath(guid);
+            var root = PrefabUtility.LoadPrefabContents(path);
+            bool changed = false;
+            foreach (var l in root.GetComponentsInChildren<Light>(true))
+            {
+                if (Convert(l, out float from, out float to)) { changed = true; prefabLights++; log.AppendLine($"  {System.IO.Path.GetFileNameWithoutExtension(path),-28} {l.type,-11} {from,10:F1} -> {to:F2}"); }
+                else skipped++;
+            }
+            if (changed) PrefabUtility.SaveAsPrefabAsset(root, path);
+            PrefabUtility.UnloadPrefabContents(root);
+        }
+
+        // --- then anything living directly in the scene ---------------------
+        foreach (var l in FindAll<Light>())
+        {
+            // Instances of the prefabs fixed above already inherit the new
+            // value, so they fall under AlreadyConvertedBelow and are skipped.
+            // Only scene-level lights and per-instance overrides are touched.
+            Undo.RecordObject(l, "Pavilion: convert light intensity");
+            if (Convert(l, out float from, out float to))
+            {
+                sceneLights++;
+                EditorUtility.SetDirty(l);
+                log.AppendLine($"  [scene] {l.name,-22} {l.type,-11} {from,10:F1} -> {to:F2}");
+            }
+            else skipped++;
+        }
+
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        EditorSceneManager.SaveOpenScenes();
+        AssetDatabase.SaveAssets();
+
+        log.AppendLine($"\nConverted: {prefabLights} in prefabs, {sceneLights} in scene. " +
+                       $"Already in URP range: {skipped}.");
+        Debug.Log(log.ToString());
+    }
+
+    /// <summary>
+    /// Rescales one light. Returns false if it was already within URP's range,
+    /// which keeps this idempotent.
+    /// </summary>
+    static bool Convert(Light l, out float from, out float to)
+    {
+        from = l.intensity; to = from;
+        if (from <= AlreadyConvertedBelow) return false;
+
+        to = l.type == LightType.Directional
+            ? Mathf.Clamp(from / LuxPerUrpUnit, 0.4f, 3f)
+            : Mathf.Clamp(from / CandelaPerUrpUnit, 0.5f, 12f);
+
+        l.intensity = to;
+        return true;
+    }
+
+    // =======================================================================
     //  2. Decal Renderer Feature — edits Assets/Settings/Renderer3D.asset
     // =======================================================================
     [MenuItem(Menu + "2. Add Decal Renderer Feature", priority = 21)]
