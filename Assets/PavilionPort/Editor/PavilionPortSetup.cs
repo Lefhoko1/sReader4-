@@ -58,6 +58,9 @@ public static class PavilionPortSetup
 
         if (SceneIsOpen())
         {
+            sb.AppendLine($"\nSkybox material      : {(RenderSettings.skybox == null ? "NONE — run step 1b (no sky, no ambient light)" : RenderSettings.skybox.name)}");
+            sb.AppendLine($"Ambient mode         : {RenderSettings.ambientMode}");
+
             var cams = FindAll<Camera>();
             var active = cams.Where(c => c.gameObject.activeInHierarchy).ToList();
             sb.AppendLine($"\nScene cameras        : {cams.Count} total, {active.Count} active");
@@ -185,6 +188,59 @@ public static class PavilionPortSetup
         EditorSceneManager.SaveOpenScenes();
         log.AppendLine("\nScene saved.");
         Debug.Log(log.ToString());
+    }
+
+    // =======================================================================
+    //  1b. Environment — sky + ambient
+    // =======================================================================
+    //  The HDRP original got its sky from PhysicallyBasedSky / VisualEnvironment
+    //  volume overrides, which have no URP equivalent and were dropped in the
+    //  port. URP takes its sky from RenderSettings.skybox instead, and this
+    //  scene arrived with that empty (m_SkyboxMaterial: {fileID: 0}) while
+    //  ambient mode was still set to Skybox — so there was no sky AND no
+    //  environment light, leaving only the single directional light.
+    // =======================================================================
+    const string SkyMaterialPath = "Assets/PavilionPort/Sky_Pavilion.mat";
+
+    [MenuItem(Menu + "1b. Fix Environment (sky + ambient)", priority = 22)]
+    public static void FixEnvironment()
+    {
+        if (!EnsureSceneOpen()) return;
+
+        var sky = AssetDatabase.LoadAssetAtPath<Material>(SkyMaterialPath);
+        if (sky == null)
+        {
+            var shader = Shader.Find("Skybox/Procedural");
+            if (shader == null)
+            {
+                Debug.LogError("Skybox/Procedural shader not found — cannot build a sky material.");
+                return;
+            }
+            sky = new Material(shader) { name = "Sky_Pavilion" };
+            // Overcast-ish daylight: the pavilion is a bright, open building and
+            // its baked look assumed a soft sky rather than a hard blue one.
+            sky.SetFloat("_SunSize", 0.04f);
+            sky.SetFloat("_AtmosphereThickness", 1.0f);
+            sky.SetFloat("_Exposure", 1.15f);
+            sky.SetColor("_SkyTint", new Color(0.62f, 0.68f, 0.78f));
+            sky.SetColor("_GroundColor", new Color(0.30f, 0.29f, 0.27f));
+            AssetDatabase.CreateAsset(sky, SkyMaterialPath);
+            AssetDatabase.SaveAssets();
+            Debug.Log($"Created {SkyMaterialPath}");
+        }
+
+        // RenderSettings is static scene state; it has no Undo target. The scene
+        // is saved below, and the change is reversible through git.
+        RenderSettings.skybox = sky;
+        RenderSettings.ambientMode = AmbientMode.Skybox;
+        RenderSettings.ambientIntensity = 1f;
+        RenderSettings.reflectionIntensity = 1f;
+        DynamicGI.UpdateEnvironment();
+
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        EditorSceneManager.SaveOpenScenes();
+        Debug.Log("Environment set: skybox assigned, ambient = Skybox. " +
+                  "The scene now has sky light; bake (step 4) to get indirect bounce.");
     }
 
     // =======================================================================
