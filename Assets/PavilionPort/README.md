@@ -9,40 +9,93 @@ or need maintaining later.
 
 ---
 
-## Before it will look right — 3 manual steps
+## Before it will look right — 4 manual steps, in this order
 
-The port is complete, but three things can only be done in the Unity editor:
+The port is complete, but four things can only be done in the Unity editor. **Do
+them in this order** — the first two are why the scene will look broken on first
+open, and no amount of relighting fixes them.
 
-### 1. Add the Decal Renderer Feature (required for 80 decals)
+### 1. Give the scene an active camera
 
-The scene has 80 `DecalProjector` components, remapped to URP's own decal system.
-URP only draws decals if the renderer has the feature enabled:
+**All 12 cameras in this scene are inactive and untagged.** There is no
+`MainCamera`. On first open you will see nothing in Game view — that is expected,
+not a failed port.
 
-> `Assets/Settings/Renderer3D.asset` → Inspector → **Add Renderer Feature** → **Decal**
+The scene's cameras were driven by **Cinemachine 2.10**; this project runs
+**Cinemachine 3.1.7**, an incompatible rewrite, so the 84 Cinemachine components
+were stripped rather than left as missing scripts. The plain `Camera` objects all
+survived.
 
-This was left as a manual step on purpose: hand-editing `Renderer3D.asset` risks
-corrupting the renderer your actual game uses, and it's a single click here.
+> Pick one (e.g. `Screenshot Camera 1`) → tick its **enabled** checkbox in the
+> Inspector header → set **Tag** to `MainCamera`.
 
-Without it the geometry still renders — you just lose the grime, puddles and wear.
+Or point your existing `PathWalker` / `WalkCamera` rig at the scene instead.
 
-### 2. Rebake the lighting
+### 2. Set that camera's renderer to Renderer3D  ← easiest step to miss
 
-`LightingData.asset` and the lightmaps came across, but they were baked by HDRP
-against HDRP's physical light units. Treat whatever you see on first open as
-provisional and rebake:
+`Assets/Settings/UniversalRP.asset` has **`m_DefaultRendererIndex: 0`**, and index 0
+is **`Renderer2D`**. `Renderer3D` is index 1.
 
-> `Window → Rendering → Lighting → Generate Lighting`
+So any camera that doesn't explicitly override its renderer draws through the **2D
+renderer** — no 3D lighting, no shadows, no reflection probes, no decals. The scene
+will look flat and wrong, and it will look that way no matter how many times you
+rebake.
 
-Also rebake reflection probes — 19 native probes survived, but their HDRP capture
-data did not.
+> Camera → Inspector → **Rendering** → **Renderer** → **Renderer3D**
 
-### 3. Pick a camera
+Set this on every camera you actually use. **Do not** change
+`m_DefaultRendererIndex` globally to "fix" this — the rest of this project's scenes
+rely on Renderer2D being the default.
 
-The scene had 12 native cameras driven by **Cinemachine 2.10**. This project runs
-**Cinemachine 3.1.7**, which is a rewrite with incompatible types, so the 84
-Cinemachine components were stripped rather than left as missing scripts. The plain
-`Camera` objects are all still there — either drive one directly, wire up
-Cinemachine 3 cameras, or point your existing `PathWalker` / `WalkCamera` at it.
+### 3. Add the Decal Renderer Feature (required for 80 decals)
+
+The scene has 80 `DecalProjector` components remapped to URP's decal system. URP
+only draws decals if the renderer has the feature:
+
+> `Assets/Settings/Renderer3D.asset` → Inspector → **Add Renderer Feature** →
+> **Decal**
+
+Then set **Technique** to `Screen Space` for mobile — the default `Automatic` picks
+DBuffer, which forces a depth prepass and costs bandwidth phones don't have. Drop
+**Surface Data** to `Albedo Normal` (or just `Albedo`) for the same reason.
+
+This was left manual on purpose: hand-authoring a renderer-feature sub-asset that
+can't be verified without opening Unity risks corrupting the renderer your real
+game uses. Without it the geometry still renders — you just lose grime, puddles and
+wear.
+
+### 4. Relight
+
+Two things to know before you press Bake.
+
+**This scene is Adaptive-Probe-Volume driven, not lightmap driven.** Of the objects
+in the prefabs, 261 carry only the `ReflectionProbeStatic` flag and just a handful
+have `ContributeGI`. Its indirect light came from APV, and the `ProbeVolume` /
+`ProbeAdjustmentVolume` components survived the port.
+
+**But APV is currently switched off in this project:** `UniversalRP.asset` has
+`m_LightProbeSystem: 0` (Legacy light probes). Until that changes, the probe
+volumes do nothing.
+
+You have two routes:
+
+- **Route A — enable APV** (faithful to the original, least marking work):
+  `UniversalRP.asset` → **Lighting** → **Light Probe System** → *Adaptive Probe
+  Volumes*, then `Window → Rendering → Lighting → Generate Lighting`.
+  ⚠️ `UniversalRP.asset` is used by **all six quality levels**, so this is a
+  project-wide change that will also affect how `SC_IslandVista` lights. Check that
+  scene afterwards, or clone the URP asset for this scene only.
+
+- **Route B — traditional lightmaps** (isolated, kinder to low-end phones): select
+  the scene geometry, tick **Contribute GI** + **Static**, then Generate Lighting.
+  More marking work, but nothing outside this folder changes.
+
+Either way, also rebake the **19 reflection probes** — the native probes survived
+but their HDRP capture data did not. Set them to *Baked* and they bake along with
+Generate Lighting.
+
+Finally, add `SC_Pavilion` to **File → Build Settings** if you want to run it on
+device.
 
 ---
 
