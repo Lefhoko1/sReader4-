@@ -562,6 +562,81 @@ public static class PavilionPortSetup
     }
 
     // =======================================================================
+    //  9b. Geometry outliers — read-only. Run before baking.
+    // =======================================================================
+    //  The scene's combined renderer bounds are ~4.4 km tall, which is not the
+    //  pavilion. Lightmapping and APV size their working volume from those
+    //  bounds, so one stray object kilometres away silently wrecks bake
+    //  quality (and bake time) for everything else.
+    //
+    //  Reports by distance from the MEDIAN centre rather than the mean, so a
+    //  handful of outliers cannot drag the reference point out with them.
+    // =======================================================================
+    [MenuItem(Menu + "9b. Find Geometry Outliers", priority = 81)]
+    public static void FindOutliers()
+    {
+        if (!SceneIsOpen()) { Debug.LogWarning($"Open {ScenePath} first."); return; }
+
+        var rends = FindAll<Renderer>().Where(r => r.enabled && r.gameObject.activeInHierarchy).ToList();
+        if (rends.Count == 0) { Debug.Log("No active renderers."); return; }
+
+        Vector3 Median(System.Func<Renderer, float> sel)
+        {
+            var v = rends.Select(sel).OrderBy(x => x).ToList();
+            return Vector3.one * v[v.Count / 2];
+        }
+        var centre = new Vector3(
+            Median(r => r.bounds.center.x).x,
+            Median(r => r.bounds.center.y).y,
+            Median(r => r.bounds.center.z).z);
+
+        var ranked = rends
+            .Select(r => new { r, d = Vector3.Distance(r.bounds.center, centre) })
+            .OrderByDescending(x => x.d)
+            .ToList();
+
+        var sb = new StringBuilder("=== Geometry outliers ===\n");
+        sb.AppendLine($"Median centre     : {centre}");
+        sb.AppendLine($"Renderers         : {rends.Count}");
+
+        var bAll = rends[0].bounds;
+        foreach (var r in rends) bAll.Encapsulate(r.bounds);
+        sb.AppendLine($"Bounds WITH all   : size {bAll.size}");
+
+        // What the bounds would be if the worst offenders were dealt with.
+        var keep = ranked.Where(x => x.d < 500f).Select(x => x.r).ToList();
+        if (keep.Count > 0)
+        {
+            var bKeep = keep[0].bounds;
+            foreach (var r in keep) bKeep.Encapsulate(r.bounds);
+            sb.AppendLine($"Bounds WITHOUT    : size {bKeep.size}   ({rends.Count - keep.Count} excluded, >500 m out)");
+        }
+
+        sb.AppendLine("\nFurthest 12:");
+        foreach (var x in ranked.Take(12))
+            sb.AppendLine($"  {x.d,10:F1} m   {Path(x.r.transform)}");
+
+        sb.AppendLine("\nSelect them in the Hierarchy with the selection below.");
+        Debug.Log(sb.ToString());
+
+        // Leave the far ones selected so they can be inspected or deleted.
+        var far = ranked.Where(x => x.d > 500f).Select(x => (Object)x.r.gameObject).ToArray();
+        if (far.Length > 0)
+        {
+            Selection.objects = far;
+            Debug.Log($"Selected {far.Length} renderer(s) more than 500 m from the pavilion.");
+        }
+        else Debug.Log("Nothing beyond 500 m — the tall bounds come from something closer in.");
+    }
+
+    static string Path(Transform t)
+    {
+        var s = t.name;
+        while (t.parent != null) { t = t.parent; s = t.name + "/" + s; }
+        return s;
+    }
+
+    // =======================================================================
     //  helpers
     // =======================================================================
 
