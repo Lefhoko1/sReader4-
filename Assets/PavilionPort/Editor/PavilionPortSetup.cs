@@ -490,17 +490,28 @@ public static class PavilionPortSetup
     }
 
     // =======================================================================
-    //  3b. Route B — traditional lightmaps, isolated to this scene.
+    //  3b. Contribute GI — REQUIRED before any bake, APV or lightmaps
     // =======================================================================
-    [MenuItem(Menu + "3b. Mark Scene Static for Lightmaps (Route B)", priority = 41)]
+    //  Not an alternative to 3a. The scene arrived with 261 objects flagged
+    //  ReflectionProbeStatic only and almost nothing marked Contribute GI,
+    //  because HDRP drove its indirect light from APV without needing it.
+    //
+    //  Unity places adaptive probes around GI-CONTRIBUTING geometry, so with
+    //  nothing contributing, an APV bake produces an empty baking set and the
+    //  scene goes black in play mode. Lightmapping has the same requirement.
+    //  Run this before step 4 whichever lighting route you took.
+    // =======================================================================
+    [MenuItem(Menu + "3b. Mark Contribute GI (REQUIRED before baking)", priority = 41)]
     public static void MarkStatic()
     {
         if (!EnsureSceneOpen()) return;
 
         if (!EditorUtility.DisplayDialog("Pavilion Port",
                 "Mark every MeshRenderer in the scene as Contribute GI + Batching Static?\n\n" +
-                "This is the alternative to Adaptive Probe Volumes. It writes static flags " +
-                "as scene overrides only — the prefab assets are not modified.",
+                "Required before baking, for Adaptive Probe Volumes as much as for " +
+                "lightmaps — neither can bake anything without GI-contributing geometry.\n\n" +
+                "Writes static flags as scene overrides only; the prefab assets are " +
+                "not modified.",
                 "Mark static", "Cancel"))
             return;
 
@@ -530,8 +541,55 @@ public static class PavilionPortSetup
         if (!EnsureSceneOpen()) return;
         if (Lightmapping.isRunning) { Debug.LogWarning("A bake is already running."); return; }
 
-        Debug.Log("Baking lighting — this takes a while. Progress is in the Lighting window.");
+        // A bake with no GI-contributing geometry "succeeds" and writes an empty
+        // baking set, which then reads as pitch black in play mode. Refuse it.
+        var rends = FindAll<MeshRenderer>().Where(r => r.enabled && r.gameObject.activeInHierarchy).ToList();
+        int contributing = rends.Count(r =>
+            (GameObjectUtility.GetStaticEditorFlags(r.gameObject) & StaticEditorFlags.ContributeGI) != 0);
+
+        if (contributing == 0)
+        {
+            EditorUtility.DisplayDialog("Pavilion Port — nothing to bake",
+                $"None of the {rends.Count} active renderers is marked Contribute GI, so the " +
+                "bake would produce an empty result and the scene would go black in play mode.\n\n" +
+                "Run \"3b. Mark Contribute GI\" first. It is required for Adaptive Probe " +
+                "Volumes as well as for lightmaps.", "OK");
+            return;
+        }
+
+        if (contributing < rends.Count / 4)
+            Debug.LogWarning($"Only {contributing} of {rends.Count} renderers contribute GI. " +
+                             "The bake will be sparse — consider running 3b first.");
+
+        Debug.Log($"Baking lighting ({contributing} of {rends.Count} renderers contribute GI). " +
+                  "This takes a while; progress is in the Lighting window.");
         Lightmapping.BakeAsync();
+    }
+
+    // =======================================================================
+    //  1e. Missing scripts — left behind by packages this project lacks
+    // =======================================================================
+    [MenuItem(Menu + "1e. Remove Missing Scripts", priority = 25)]
+    public static void RemoveMissingScripts()
+    {
+        if (!EnsureSceneOpen()) return;
+
+        int objs = 0, comps = 0;
+        foreach (var go in EditorSceneManager.GetActiveScene().GetRootGameObjects())
+            foreach (var t in go.GetComponentsInChildren<Transform>(true))
+            {
+                int n = GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject);
+                if (n == 0) continue;
+                Undo.RegisterCompleteObjectUndo(t.gameObject, "Remove missing scripts");
+                comps += GameObjectUtility.RemoveMonoBehavioursWithMissingScript(t.gameObject);
+                objs++;
+            }
+
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        EditorSceneManager.SaveOpenScenes();
+        Debug.Log(comps == 0
+            ? "No missing scripts in the scene."
+            : $"Removed {comps} missing script(s) from {objs} object(s).");
     }
 
     // =======================================================================
