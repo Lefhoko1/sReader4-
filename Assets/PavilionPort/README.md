@@ -9,7 +9,29 @@ or need maintaining later.
 
 ---
 
-## Before it will look right — 4 manual steps, in this order
+## Quick path: the editor menu
+
+`Editor/PavilionPortSetup.cs` does the steps below from a menu:
+
+> **Tools → Pavilion Port →**
+> `0. Report Status` · `1. Set Up Scene` · `2. Add Decal Renderer Feature` ·
+> `3a. Enable Adaptive Probe Volumes` · `3b. Mark Scene Static` · `4. Bake Lighting`
+
+Run **0. Report Status** first — it only reads, and prints exactly what is still
+missing. Then 1, 2, and one of 3a/3b, then 4.
+
+Nothing in that script runs on its own: no `InitializeOnLoad`, no callbacks, no
+asset postprocessors. It acts only when you click a menu item, every action is safe
+to run twice, and deleting the file leaves no trace. The two steps that touch files
+outside this folder (`2` and `3a`) ask for confirmation first and say what they will
+affect.
+
+The rest of this document explains what each step does and why, if you would rather
+do it by hand or need to understand what the script changed.
+
+---
+
+## The steps, in this order
 
 The port is complete, but four things can only be done in the Unity editor. **Do
 them in this order** — the first two are why the scene will look broken on first
