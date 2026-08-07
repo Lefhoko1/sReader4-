@@ -629,6 +629,64 @@ public static class PavilionPortSetup
         else Debug.Log("Nothing beyond 500 m — the tall bounds come from something closer in.");
     }
 
+    // =======================================================================
+    //  9c. Remove stray geometry from the PORT'S PREFABS
+    // =======================================================================
+    //  Leaves.prefab ships with one leaf at y = -4422.7 — present in Unity's
+    //  original HDRP sample, so this is an upstream authoring slip rather than
+    //  anything the port did. It is invisible in play, but it stretches the
+    //  scene's GI bounds to ~4.4 km, which ruins lightmap and APV bake density.
+    //
+    //  Fixes the prefab rather than the scene instance, so the strays cannot
+    //  come back the next time the prefab is used.
+    // =======================================================================
+    [MenuItem(Menu + "9c. Remove Stray Prefab Geometry", priority = 82)]
+    public static void RemoveStrays()
+    {
+        const float MaxFromRoot = 500f;
+
+        var found = new List<(string prefab, string child, Vector3 pos)>();
+        foreach (var guid in AssetDatabase.FindAssets("t:Prefab", new[] { "Assets/PavilionPort" }))
+        {
+            var path = AssetDatabase.GUIDToAssetPath(guid);
+            var root = PrefabUtility.LoadPrefabContents(path);
+            foreach (var tr in root.GetComponentsInChildren<Transform>(true))
+                if (tr != root.transform && tr.position.magnitude > MaxFromRoot)
+                    found.Add((path, tr.name, tr.position));
+            PrefabUtility.UnloadPrefabContents(root);
+        }
+
+        if (found.Count == 0) { Debug.Log("No stray geometry beyond 500 m in any PavilionPort prefab."); return; }
+
+        var list = string.Join("\n", found.Take(10).Select(f =>
+            $"  {System.IO.Path.GetFileName(f.prefab)} → {f.child}  at {f.pos}"));
+
+        if (!EditorUtility.DisplayDialog("Pavilion Port",
+                $"Delete {found.Count} stray object(s) from the port's prefabs?\n\n{list}\n\n" +
+                "These sit kilometres from the pavilion and stretch the GI bounds, " +
+                "ruining bake density. Recoverable from git.",
+                $"Delete {found.Count}", "Cancel"))
+            return;
+
+        int removed = 0;
+        foreach (var g in found.GroupBy(f => f.prefab))
+        {
+            var root = PrefabUtility.LoadPrefabContents(g.Key);
+            foreach (var tr in root.GetComponentsInChildren<Transform>(true).ToList())
+            {
+                if (tr == null || tr == root.transform) continue;
+                if (tr.position.magnitude <= MaxFromRoot) continue;
+                Object.DestroyImmediate(tr.gameObject);
+                removed++;
+            }
+            PrefabUtility.SaveAsPrefabAsset(root, g.Key);
+            PrefabUtility.UnloadPrefabContents(root);
+        }
+        AssetDatabase.SaveAssets();
+        Debug.Log($"Removed {removed} stray object(s). Re-run 9b — the scene bounds should now be " +
+                  "the pavilion's real size, and the bake will be worth running.");
+    }
+
     static string Path(Transform t)
     {
         var s = t.name;
