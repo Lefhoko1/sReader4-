@@ -37,6 +37,29 @@ The port is complete, but four things can only be done in the Unity editor. **Do
 them in this order** — the first two are why the scene will look broken on first
 open, and no amount of relighting fixes them.
 
+### Cinemachine: restored, not lost
+
+An earlier pass stripped 84 Cinemachine 2.x components on the assumption that
+Cinemachine 3.1.7 could not load them. **That was wrong.** CM 3.1.7 ships every
+one of those classes under `Runtime/Deprecated/` with byte-identical GUIDs, and
+they are functional — `CinemachineVirtualCamera` is 648 lines with `[ExecuteAlways]`
+and a full update pipeline. It is marked `[Obsolete]` and hidden from the Add
+Component menu, but it runs.
+
+The controller rig has been restored from the source project, 5 components each:
+
+- `NestedParentArmature_Unpack.prefab` — the third-person rig
+- `First Person Controller.prefab`
+
+each carrying `CinemachineBrain`, `CinemachineVirtualCamera`, `CinemachinePipeline`,
+`Cinemachine3rdPersonFollow` and `CinemachineBasicMultiChannelPerlin`. So the
+player walks and the camera follows exactly as in the original project.
+
+Once that is confirmed working, the recommended end state is Unity's own converter —
+**`Window → Cinemachine → Upgrade`** — which turns the deprecated 2.x components into
+native CM3 `CinemachineCamera`. Do that *after* verifying the walk, not before:
+working-then-upgrade is recoverable, upgrade-then-broken is harder to unpick.
+
 ### 1. Give the scene an active camera
 
 **All 12 cameras in this scene are inactive and untagged.** There is no
@@ -156,7 +179,7 @@ references resolve exactly as they did in the source project.
 | Removed | Reason |
 |---|---|
 | 69 HDRP-only components | `HDAdditionalLightData` ×28, `HDAdditionalReflectionData` ×19, `HDAdditionalCameraData` ×14, `ReflectionProxyVolumeComponent` ×4, plus water/fog/sky singletons. No URP counterpart; the native `Light`, `Camera` and `ReflectionProbe` components underneath them all survived. |
-| 84 Cinemachine 2.x components | Cinemachine 3.1.7 is installed here; the 2.x types don't exist. |
+| 24 Cinemachine demo cameras | The scene's `Screenshot Camera 1-10` and `Cinematic Physical Camera A/B` shots. Kept out because the two Timelines that sequenced them use track types that exist in neither project, so the cameras would sit inert. The **controller rig was restored** — see below. |
 | 3 VFX Graph effects | Butterflies, falling leaves, floating dust. `com.unity.visualeffectgraph` is not installed in this project. |
 | HDRP water system | No URP equivalent exists. |
 | 337 tutorial files | `com.unity.learn.iet-framework` is not installed. |
