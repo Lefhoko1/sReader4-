@@ -38,6 +38,11 @@ public class WordStone : MonoBehaviour
              "was designed at, and unreadable while walking past. 1 = the size the " +
              "text was authored at, whatever the stone does.")]
     public float labelScale = 1f;
+    [Tooltip("Play a chime when a key word appears on this stone, so it registers " +
+             "even if the player is looking elsewhere. The sound is synthesised in " +
+             "code — there is no clip to import.")]
+    public bool keywordChime = true;
+    [Range(0f, 1f)] public float keywordChimeVolume = 0.5f;
     [Tooltip("Bounce the stone when its word is tapped. OFF: the tap answers with " +
              "particles alone, which is the read that was wanted — a stone lying " +
              "on a river should not jump out of it.")]
@@ -109,12 +114,147 @@ public class WordStone : MonoBehaviour
     /// Put the current word on the stone and fit the label's rect to it, so the
     /// text is never clipped or wrapped by a fixed-size box.
     /// </summary>
+    /// <summary>
+    /// Mark this stone as a key word, or stop marking it.
+    ///
+    /// The burst that already existed only fires when a key word is SOLVED or
+    /// tapped — by which time you have already had to find it. A key stone needs
+    /// to announce itself while you are still walking toward it, so this is a
+    /// standing aura rather than a one-off, and it goes out once the word is
+    /// solved because at that point the star says so instead.
+    ///
+    /// Built in code like the rest of the FX here: no prefab, no asset to wire.
+    /// </summary>
+    void MarkKeyword(bool on)
+    {
+        if (!on)
+        {
+            if (_aura != null) _aura.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            return;
+        }
+        if (_aura == null) _aura = BuildAura();
+        if (_aura != null && !_aura.isPlaying) _aura.Play();
+    }
+
+    ParticleSystem _aura;
+
+    ParticleSystem BuildAura()
+    {
+        var go = new GameObject("KeywordAura") { hideFlags = HideFlags.DontSave };
+        go.transform.SetParent(transform, false);
+        // above the stone's face, in WORLD units — the stone's own scale must not
+        // decide how big a hint looks
+        float lift = 0.12f / Mathf.Max(0.0001f, transform.lossyScale.y);
+        go.transform.localPosition = new Vector3(0f, lift, 0f);
+
+        var ps = go.AddComponent<ParticleSystem>();
+        ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+
+        var main = ps.main;
+        main.startLifetime = 1.6f;
+        main.startSpeed = 0.18f;
+        main.startSize = 0.05f;
+        main.startColor = new Color(1f, 0.82f, 0.35f, 0.9f);
+        main.simulationSpace = ParticleSystemSimulationSpace.World;
+        main.scalingMode = ParticleSystemScalingMode.Hierarchy;
+        main.loop = true;
+
+        var em = ps.emission;
+        em.rateOverTime = 7f;
+
+        var sh = ps.shape;
+        sh.shapeType = ParticleSystemShapeType.Circle;
+        sh.radius = 0.22f;
+
+        var col = ps.colorOverLifetime;
+        col.enabled = true;
+        col.color = new ParticleSystem.MinMaxGradient(new Gradient
+        {
+            colorKeys = new[] { new GradientColorKey(new Color(1f, 0.85f, 0.4f), 0f),
+                                new GradientColorKey(new Color(1f, 0.65f, 0.2f), 1f) },
+            alphaKeys = new[] { new GradientAlphaKey(0f, 0f), new GradientAlphaKey(0.85f, 0.25f),
+                                new GradientAlphaKey(0f, 1f) },
+        });
+
+        var r = go.GetComponent<ParticleSystemRenderer>();
+        r.renderMode = ParticleSystemRenderMode.Billboard;
+        r.material = KeywordMaterial();
+        return ps;
+    }
+
+    /// <summary>
+    /// A short chime when a key word appears, so it lands on the ear as well as
+    /// the eye — a player looking somewhere else still knows one arrived.
+    ///
+    /// The clip is SYNTHESISED, not loaded: two decaying sine partials written
+    /// into an AudioClip once and shared. Everything else in this file is built in
+    /// code for the same reason — no asset to import, wire, or lose.
+    /// </summary>
+    void Chime()
+    {
+        if (_chimeSource == null)
+        {
+            var go = new GameObject("KeywordChime") { hideFlags = HideFlags.DontSave };
+            go.transform.SetParent(transform, false);
+            _chimeSource = go.AddComponent<AudioSource>();
+            _chimeSource.playOnAwake = false;
+            _chimeSource.spatialBlend = 1f;      // it comes from the stone
+            _chimeSource.minDistance = 2f;
+            _chimeSource.maxDistance = 25f;
+            _chimeSource.volume = keywordChimeVolume;
+        }
+        _chimeSource.PlayOneShot(ChimeClip(), keywordChimeVolume);
+    }
+
+    AudioSource _chimeSource;
+    static AudioClip _chimeClip;
+
+    static AudioClip ChimeClip()
+    {
+        if (_chimeClip != null) return _chimeClip;
+
+        const int rate = 44100;
+        const float seconds = 0.55f;
+        int n = (int)(rate * seconds);
+        var data = new float[n];
+        for (int i = 0; i < n; i++)
+        {
+            float t = i / (float)rate;
+            float decay = Mathf.Exp(-t * 6f);
+            // a fifth above the root: bright, and it does not sound like a warning
+            data[i] = decay * 0.6f * (Mathf.Sin(2f * Mathf.PI * 880f * t) +
+                                      0.5f * Mathf.Sin(2f * Mathf.PI * 1320f * t));
+        }
+        _chimeClip = AudioClip.Create("KeywordChime", n, 1, rate, false);
+        _chimeClip.SetData(data, 0);
+        return _chimeClip;
+    }
+
+    static Material _auraMat;
+    static Material KeywordMaterial()
+    {
+        if (_auraMat != null) return _auraMat;
+        var sh = Shader.Find("Universal Render Pipeline/Particles/Unlit")
+              ?? Shader.Find("Particles/Standard Unlit")
+              ?? Shader.Find("Sprites/Default");
+        _auraMat = new Material(sh) { name = "M_KeywordAura", hideFlags = HideFlags.DontSave };
+        if (_auraMat.HasProperty("_BaseColor"))
+            _auraMat.SetColor("_BaseColor", new Color(1f, 0.8f, 0.35f, 1f));
+        return _auraMat;
+    }
+
     public void Relabel()
     {
         if (_tmp == null) return;
         _tmp.text = word + (endsSentence ? "." : "");
         _tmp.color = isKeyword ? keywordTextColor : textColor;
         Fit();
+
+        // A key word announces itself the moment it has a word to be. Solved ones
+        // stop: the star has taken over the job of saying so.
+        bool mark = isKeyword && !solved && !string.IsNullOrEmpty(word);
+        MarkKeyword(mark);
+        if (mark && Application.isPlaying && keywordChime) Chime();
     }
 
     /// <summary>Grow the label's rect to whatever it currently says.</summary>
