@@ -1,0 +1,137 @@
+playing=False dirty=False
+GPU=NVIDIA RTX 3500 Ada Generation Laptop GPU
+pipeline=Assets/Settings/UniversalRP.asset
+ambient=Trilight sky=RGBA(1.000, 0.918, 0.824, 1.000) equator=RGBA(0.941, 0.784, 0.627, 1.000) ground=RGBA(0.431, 0.298, 0.216, 1.000)
+LIGHT Key Light (warm) position=(0.000, 0.000, 0.000) rotation=(48.00, 18.00, 0.00) type=Directional bake=Realtime color=RGBA(1.000, 0.886, 0.745, 1.000) intensity=1,05 range=10 shadows=None
+LIGHT Wall Glow Left position=(-3.900, 3.000, -2.000) rotation=(0.00, 0.00, 0.00) type=Point bake=Realtime color=RGBA(1.000, 0.690, 0.439, 1.000) intensity=1,4 range=6 shadows=None
+LIGHT Wall Glow Right position=(3.900, 3.000, -2.000) rotation=(0.00, 0.00, 0.00) type=Point bake=Realtime color=RGBA(1.000, 0.690, 0.439, 1.000) intensity=1,4 range=6 shadows=None
+CAM Reading House Camera renderer={"MonoBehaviour":{"m_Enabled":true,"m_EditorHideFlags":0,"m_Name":"","m_EditorClassIdentifier":"Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData","m_RenderShadows":false,"m_RequiresDepthTextureOption":2,"m_RequiresOpaqueTextureOption":2,"m_CameraType":0,"m_Cameras":[],"m_RendererIndex":1,"m_VolumeLayerMask":{"serializedVersion":"2","m_Bits":1},"m_VolumeTrigger":{"instanceID":0},"m_VolumeFrameworkUpdateModeOption":2,"m_RenderPostProcessing":false,"m_Antialiasing":0,"m_AntialiasingQuality":2,"m_StopNaN":false,"m_Dithering":false,"m_ClearDepth":true,"m_AllowXRRendering":true,"m_AllowHDROutput":true,"m_UseScreenCoordOverride":false,"m_ScreenSizeOverride":{"x":0.0,"y":0.0,"z":0.0,"w":0.0},"m_ScreenCoordScaleBias":{"x":0.0,"y":0.0,"z":0.0,"w":0.0},"m_RequiresDepthTexture":false,"m_RequiresColorTexture":false,"m_TaaSettings":{"m_Quality":3,"m_FrameInfluence":0.10000000149011612,"m_JitterScale":1.0,"m_MipBias":0.0,"m_VarianceClampScale":0.8999999761581421,"m_ContrastAdaptiveSharpening":0.0},"m_Version":2}}
+RENDERER Environment/SR_Chair/Chair_Seat bounds=(3.280, 0.940, -0.080)/(0.780, 0.160, 0.700) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_REF_golden
+RENDERER Environment/SR_Chair.001/Chair_Seat.001 bounds=(-3.280, 0.940, -0.080)/(0.780, 0.160, 0.700) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_REF_golden
+RENDERER Environment/SR_Front_Window_-1_glazing bounds=(3.050, 2.375, 4.080)/(1.300, 2.350, 0.025) enabled=True static=0 mats=SR_Amber_Glass
+RENDERER Environment/SR_Front_Window_-1_inner_bronze bounds=(3.050, 2.388, 4.170)/(1.352, 2.376, 0.052) enabled=True static=0 mats=SR_Gold
+RENDERER Environment/SR_Front_Window_-1_lead bounds=(3.375, 2.200, 4.150)/(0.264, 0.424, 0.024) enabled=True static=0 mats=SR_Gold
+RENDERER Environment/SR_Front_Window_-1_lead.001 bounds=(2.725, 2.200, 4.150)/(0.264, 0.424, 0.024) enabled=True static=0 mats=SR_Gold
+RENDERER Environment/SR_Front_Window_-1_mullion bounds=(3.050, 2.375, 4.145)/(0.044, 2.350, 0.044) enabled=True static=0 mats=SR_Walnut
+RENDERER Environment/SR_Front_Window_-1_sill bounds=(3.050, 1.120, 4.120)/(1.650, 0.120, 0.480) enabled=True static=0 mats=SR_Carved_Limestone
+RENDERER Environment/SR_Front_Window_-1_stone_arch bounds=(3.050, 2.435, 4.130)/(1.640, 2.570, 0.160) enabled=True static=0 mats=SR_Carved_Limestone
+RENDERER Environment/SR_Front_Window_-1_transom bounds=(3.050, 1.780, 4.145)/(1.300, 0.044, 0.044) enabled=True static=0 mats=SR_Walnut
+RENDERER Environment/SR_Front_Window_-1_transom.001 bounds=(3.050, 2.350, 4.145)/(1.300, 0.044, 0.044) enabled=True static=0 mats=SR_Walnut
+RENDERER Environment/SR_Front_Window_1_glazing bounds=(-3.050, 2.375, 4.080)/(1.300, 2.350, 0.025) enabled=True static=0 mats=SR_Amber_Glass
+RENDERER Environment/SR_Front_Window_1_inner_bronze bounds=(-3.050, 2.388, 4.170)/(1.352, 2.376, 0.052) enabled=True static=0 mats=SR_Gold
+RENDERER Environment/SR_Front_Window_1_lead bounds=(-2.725, 2.200, 4.150)/(0.264, 0.424, 0.024) enabled=True static=0 mats=SR_Gold
+RENDERER Environment/SR_Front_Window_1_lead.001 bounds=(-3.375, 2.200, 4.150)/(0.264, 0.424, 0.024) enabled=True static=0 mats=SR_Gold
+RENDERER Environment/SR_Front_Window_1_mullion bounds=(-3.050, 2.375, 4.145)/(0.044, 2.350, 0.044) enabled=True static=0 mats=SR_Walnut
+RENDERER Environment/SR_Front_Window_1_sill bounds=(-3.050, 1.120, 4.120)/(1.650, 0.120, 0.480) enabled=True static=0 mats=SR_Carved_Limestone
+RENDERER Environment/SR_Front_Window_1_stone_arch bounds=(-3.050, 2.435, 4.130)/(1.640, 2.570, 0.160) enabled=True static=0 mats=SR_Carved_Limestone
+RENDERER Environment/SR_Front_Window_1_transom bounds=(-3.050, 1.780, 4.145)/(1.300, 0.044, 0.044) enabled=True static=0 mats=SR_Walnut
+RENDERER Environment/SR_Front_Window_1_transom.001 bounds=(-3.050, 2.350, 4.145)/(1.300, 0.044, 0.044) enabled=True static=0 mats=SR_Walnut
+RENDERER Environment/SR_Rug bounds=(0.000, 0.353, 0.700)/(5.650, 0.045, 3.000) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_REF_rugblue
+RENDERER Environment/SR_Rug_Gold_Inlay bounds=(0.000, 0.380, 0.700)/(5.320, 0.028, 2.660) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_REF_golden
+RENDERER Environment/SR_Side_Window_-1_-1.8_glazing bounds=(4.500, 2.515, -1.800)/(0.025, 2.330, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Amber_Glass
+RENDERER Environment/SR_Side_Window_-1_-1.8_inner_bronze bounds=(4.590, 2.528, -1.800)/(0.052, 2.356, 1.412) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_-1_-1.8_lead bounds=(4.570, 2.200, -2.140)/(0.024, 0.424, 0.264) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_-1_-1.8_lead.001 bounds=(4.570, 2.200, -1.460)/(0.024, 0.424, 0.264) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_-1_-1.8_mullion bounds=(4.565, 2.515, -1.800)/(0.044, 2.330, 0.044) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_-1_-1.8_sill bounds=(4.540, 1.270, -1.800)/(0.480, 0.120, 1.710) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Carved_Limestone
+RENDERER Environment/SR_Side_Window_-1_-1.8_stone_arch bounds=(4.550, 2.575, -1.800)/(0.160, 2.550, 1.700) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Carved_Limestone
+RENDERER Environment/SR_Side_Window_-1_-1.8_transom bounds=(4.565, 1.930, -1.800)/(0.044, 0.044, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_-1_-1.8_transom.001 bounds=(4.565, 2.500, -1.800)/(0.044, 0.044, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_-1_1.8_glazing bounds=(4.500, 2.515, 1.800)/(0.025, 2.330, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Amber_Glass
+RENDERER Environment/SR_Side_Window_-1_1.8_inner_bronze bounds=(4.590, 2.528, 1.800)/(0.052, 2.356, 1.412) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_-1_1.8_lead bounds=(4.570, 2.200, 1.460)/(0.024, 0.424, 0.264) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_-1_1.8_lead.001 bounds=(4.570, 2.200, 2.140)/(0.024, 0.424, 0.264) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_-1_1.8_mullion bounds=(4.565, 2.515, 1.800)/(0.044, 2.330, 0.044) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_-1_1.8_sill bounds=(4.540, 1.270, 1.800)/(0.480, 0.120, 1.710) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Carved_Limestone
+RENDERER Environment/SR_Side_Window_-1_1.8_stone_arch bounds=(4.550, 2.575, 1.800)/(0.160, 2.550, 1.700) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Carved_Limestone
+RENDERER Environment/SR_Side_Window_-1_1.8_transom bounds=(4.565, 1.930, 1.800)/(0.044, 0.044, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_-1_1.8_transom.001 bounds=(4.565, 2.500, 1.800)/(0.044, 0.044, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_1_-1.8_glazing bounds=(-4.500, 2.515, 1.800)/(0.025, 2.330, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Amber_Glass
+RENDERER Environment/SR_Side_Window_1_-1.8_inner_bronze bounds=(-4.590, 2.528, 1.800)/(0.052, 2.356, 1.412) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_1_-1.8_lead bounds=(-4.570, 2.200, 2.140)/(0.024, 0.424, 0.264) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_1_-1.8_lead.001 bounds=(-4.570, 2.200, 1.460)/(0.024, 0.424, 0.264) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_1_-1.8_mullion bounds=(-4.565, 2.515, 1.800)/(0.044, 2.330, 0.044) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_1_-1.8_sill bounds=(-4.540, 1.270, 1.800)/(0.480, 0.120, 1.710) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Carved_Limestone
+RENDERER Environment/SR_Side_Window_1_-1.8_stone_arch bounds=(-4.550, 2.575, 1.800)/(0.160, 2.550, 1.700) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Carved_Limestone
+RENDERER Environment/SR_Side_Window_1_-1.8_transom bounds=(-4.565, 1.930, 1.800)/(0.044, 0.044, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_1_-1.8_transom.001 bounds=(-4.565, 2.500, 1.800)/(0.044, 0.044, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_1_1.8_glazing bounds=(-4.500, 2.515, -1.800)/(0.025, 2.330, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Amber_Glass
+RENDERER Environment/SR_Side_Window_1_1.8_inner_bronze bounds=(-4.590, 2.528, -1.800)/(0.052, 2.356, 1.412) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_1_1.8_lead bounds=(-4.570, 2.200, -1.460)/(0.024, 0.424, 0.264) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_1_1.8_lead.001 bounds=(-4.570, 2.200, -2.140)/(0.024, 0.424, 0.264) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Gold
+RENDERER Environment/SR_Side_Window_1_1.8_mullion bounds=(-4.565, 2.515, -1.800)/(0.044, 2.330, 0.044) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_1_1.8_sill bounds=(-4.540, 1.270, -1.800)/(0.480, 0.120, 1.710) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Carved_Limestone
+RENDERER Environment/SR_Side_Window_1_1.8_stone_arch bounds=(-4.550, 2.575, -1.800)/(0.160, 2.550, 1.700) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Carved_Limestone
+RENDERER Environment/SR_Side_Window_1_1.8_transom bounds=(-4.565, 1.930, -1.800)/(0.044, 0.044, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_Side_Window_1_1.8_transom.001 bounds=(-4.565, 2.500, -1.800)/(0.044, 0.044, 1.360) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Walnut
+RENDERER Environment/SR_WindowPanel_-1_apron bounds=(3.050, 0.770, 4.050)/(1.300, 0.860, 0.280) enabled=True static=0 mats=SR_Parchment
+RENDERER Environment/SR_WindowPanel_-1_spandrel bounds=(3.050, 3.700, 4.050)/(1.300, 1.600, 0.280) enabled=True static=0 mats=SR_Parchment
+RENDERER Environment/SR_WindowPanel_1_apron bounds=(-3.050, 0.770, 4.050)/(1.300, 0.860, 0.280) enabled=True static=0 mats=SR_Parchment
+RENDERER Environment/SR_WindowPanel_1_spandrel bounds=(-3.050, 3.700, 4.050)/(1.300, 1.600, 0.280) enabled=True static=0 mats=SR_Parchment
+RENDERER Environment/SR_Wood_Floor bounds=(0.000, 0.285, 0.000)/(8.720, 0.090, 7.720) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_Floor
+RENDERER Dashboard/SR_DASHBOARD_ROOT/SR_DB_Tray_Floor bounds=(0.000, 1.240, -1.400)/(6.720, 0.100, 1.260) enabled=True static=OccluderStatic, BatchingStatic, OccludeeStatic mats=SR_MAT_Plastic_Cyan
+RENDERER Student 2D bounds=(0.000, 1.609, 0.570)/(1.750, 2.625, 0.200) enabled=True static=0 mats=M_Student2D
+RENDERER Encourager (seated) bounds=(3.124, 1.684, 0.390)/(1.889, 2.833, 0.200) enabled=True static=0 mats=M_Student2D
+RENDERER Zombie (seated) bounds=(-3.124, 1.642, 0.390)/(1.749, 2.624, 0.200) enabled=True static=0 mats=M_Student2D
+MAT LiberationSans SDF Material shader=TextMeshPro/Mobile/Distance Field path=Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset color=- smooth=- emission=-
+MAT M_Student2D shader=Universal Render Pipeline/2D/Sprite-Unlit-Default path=Assets/Art/ReadingHouse/Student2D/M_Student2D.mat color=- smooth=- emission=-
+MAT M_StudentShadow shader=Universal Render Pipeline/Unlit path=Assets/Art/ReadingHouse/Student2D/M_StudentShadow.mat color=RGBA(1.000, 1.000, 1.000, 1.000) smooth=- emission=-
+MAT RH_Lit_Transparent_VariantKeeper shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/RH_Lit_Transparent_VariantKeeper.mat color=RGBA(1.000, 1.000, 1.000, 1.000) smooth=0,5 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT RH_Sentence_Panel shader=Universal Render Pipeline/Unlit path=Assets/Art/ReadingHouse/Materials/RH_Sentence_Panel.mat color=RGBA(0.984, 0.973, 0.941, 1.000) smooth=- emission=-
+MAT SR_Amber_Glass shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Amber_Glass.mat color=RGBA(0.965, 0.890, 0.722, 1.000) smooth=0,85 emission=RGBA(0.550, 0.420, 0.220, 1.000)
+MAT SR_Book_0 shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Book_0.mat color=RGBA(0.192, 0.314, 0.329, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Book_1 shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Book_1.mat color=RGBA(0.408, 0.255, 0.290, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Book_2 shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Book_2.mat color=RGBA(0.424, 0.388, 0.267, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Book_3 shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Book_3.mat color=RGBA(0.239, 0.302, 0.400, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Book_4 shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Book_4.mat color=RGBA(0.463, 0.314, 0.224, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Book_5 shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Book_5.mat color=RGBA(0.376, 0.420, 0.333, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Carved_Limestone shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Carved_Limestone.mat color=RGBA(0.753, 0.706, 0.612, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Floor shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Floor.mat color=RGBA(0.376, 0.271, 0.196, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Garden_Soil shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Garden_Soil.mat color=RGBA(0.188, 0.180, 0.153, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Gold shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Gold.mat color=RGBA(0.839, 0.682, 0.345, 1.000) smooth=0,68 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Limestone shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Limestone.mat color=RGBA(0.533, 0.549, 0.553, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Ceiling_Warm shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Ceiling_Warm.mat color=RGBA(0.980, 0.886, 0.745, 1.000) smooth=0,2 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Chalkboard shader=Universal Render Pipeline/2D/Sprite-Lit-Default path=Assets/Art/ReadingHouse/Models/SM_ReadingHouse_Environment.fbx color=- smooth=- emission=-
+MAT SR_MAT_Display_Blank shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Display_Blank.mat color=RGBA(0.886, 0.941, 0.965, 1.000) smooth=0,4 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Housing_Cream shader=Universal Render Pipeline/2D/Sprite-Lit-Default path=Assets/Art/ReadingHouse/Models/SM_ReadingHouse_Environment.fbx color=- smooth=- emission=-
+MAT SR_MAT_Housing_Cream shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Housing_Cream.mat color=RGBA(0.988, 0.973, 0.933, 1.000) smooth=0,75 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Light_Warm shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Light_Warm.mat color=RGBA(1.000, 0.902, 0.588, 1.000) smooth=0,7 emission=RGBA(3.000, 2.518, 1.412, 3.000)
+MAT SR_MAT_Moss shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Moss.mat color=RGBA(0.310, 0.604, 0.227, 1.000) smooth=0,25 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Plastic_Cyan shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Plastic_Cyan.mat color=RGBA(0.275, 0.784, 0.941, 1.000) smooth=0,82 emission=RGBA(0.096, 0.288, 0.343, 0.350)
+MAT SR_MAT_Plastic_DeepBlue shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Plastic_DeepBlue.mat color=RGBA(0.094, 0.361, 0.784, 1.000) smooth=0,8 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Plastic_Navy shader=Universal Render Pipeline/2D/Sprite-Lit-Default path=Assets/Art/ReadingHouse/Models/SM_ReadingHouse_Environment.fbx color=- smooth=- emission=-
+MAT SR_MAT_Plastic_Navy shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Plastic_Navy.mat color=RGBA(0.063, 0.173, 0.424, 1.000) smooth=0,55 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Plastic_Orange shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Plastic_Orange.mat color=RGBA(0.941, 0.463, 0.063, 1.000) smooth=0,78 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Plastic_Purple shader=Universal Render Pipeline/2D/Sprite-Lit-Default path=Assets/Art/ReadingHouse/Models/SM_ReadingHouse_Environment.fbx color=- smooth=- emission=-
+MAT SR_MAT_Plastic_Purple shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Plastic_Purple.mat color=RGBA(0.408, 0.227, 0.839, 1.000) smooth=0,8 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Plastic_PurpleHi shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Plastic_PurpleHi.mat color=RGBA(0.541, 0.361, 0.941, 1.000) smooth=0,88 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Progress_Fill shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Progress_Fill.mat color=RGBA(0.275, 0.769, 0.361, 1.000) smooth=0,7 emission=RGBA(0.141, 0.345, 0.173, 0.400)
+MAT SR_MAT_Trim_Gold shader=Universal Render Pipeline/2D/Sprite-Lit-Default path=Assets/Art/ReadingHouse/Models/SM_ReadingHouse_Environment.fbx color=- smooth=- emission=-
+MAT SR_MAT_Trim_Gold shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Trim_Gold.mat color=RGBA(1.000, 0.729, 0.118, 1.000) smooth=0,85 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_MAT_Wall_Interior_Warm shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_MAT_Wall_Interior_Warm.mat color=RGBA(0.969, 0.808, 0.612, 1.000) smooth=0,25 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Moss shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Moss.mat color=RGBA(0.231, 0.314, 0.267, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Oak shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Oak.mat color=RGBA(0.510, 0.365, 0.239, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Parchment shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Parchment.mat color=RGBA(0.914, 0.875, 0.784, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_PREVIEW_ONLY_Landscape shader=Universal Render Pipeline/Unlit path=Assets/Art/ReadingHouse/Materials/SR_PREVIEW_ONLY_Landscape.mat color=RGBA(1.000, 1.000, 1.000, 1.000) smooth=- emission=-
+MAT SR_REF_blue shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_blue.mat color=RGBA(0.020, 0.408, 0.702, 1.000) smooth=0,76 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_brown shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_brown.mat color=RGBA(0.537, 0.271, 0.118, 1.000) smooth=0,52 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_eye shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_eye.mat color=RGBA(1.000, 0.973, 0.894, 1.000) smooth=0,74 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_golden shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_golden.mat color=RGBA(1.000, 0.710, 0.106, 1.000) smooth=0,74 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_hair shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_hair.mat color=RGBA(0.082, 0.063, 0.129, 1.000) smooth=0,28 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_hood shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_hood.mat color=RGBA(0.318, 0.278, 0.337, 1.000) smooth=0,3 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_iris shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_iris.mat color=RGBA(0.310, 0.173, 0.090, 1.000) smooth=0,76 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_light shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_light.mat color=RGBA(1.000, 0.941, 0.675, 1.000) smooth=0,7 emission=RGBA(3.000, 2.824, 2.024, 3.000)
+MAT SR_REF_moss shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_moss.mat color=RGBA(0.243, 0.588, 0.114, 1.000) smooth=0,32 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_pack shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_pack.mat color=RGBA(0.729, 0.412, 0.176, 1.000) smooth=0,62 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_pants shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_pants.mat color=RGBA(0.086, 0.227, 0.424, 1.000) smooth=0,4 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_rugblue shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_rugblue.mat color=RGBA(0.027, 0.333, 0.608, 1.000) smooth=0,1 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_shoe shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_shoe.mat color=RGBA(0.647, 0.231, 0.204, 1.000) smooth=0,6 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_skin shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_skin.mat color=RGBA(0.616, 0.322, 0.169, 1.000) smooth=0,47 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_skin2 shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_skin2.mat color=RGBA(0.769, 0.467, 0.247, 1.000) smooth=0,48 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_white shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_white.mat color=RGBA(0.969, 0.949, 0.863, 1.000) smooth=0,68 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_zshade shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_zshade.mat color=RGBA(0.427, 0.490, 0.278, 1.000) smooth=0,4 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_REF_zskin shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_REF_zskin.mat color=RGBA(0.631, 0.702, 0.416, 1.000) smooth=0,36 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Sage_Leaves shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Sage_Leaves.mat color=RGBA(0.325, 0.427, 0.329, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Slate shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Slate.mat color=RGBA(0.137, 0.153, 0.200, 1.000) smooth=0,48 emission=RGBA(0.000, 0.000, 0.000, 1.000)
+MAT SR_Slate_Light shader=Universal Render Pipeline/2D/Sprite-Lit-Default path=Assets/Art/ReadingHouse/Models/SM_ReadingHouse_Environment.fbx color=- smooth=- emission=-
+MAT SR_Walnut shader=Universal Render Pipeline/Lit path=Assets/Art/ReadingHouse/Materials/SR_Walnut.mat color=RGBA(0.318, 0.216, 0.157, 1.000) smooth=0,45 emission=RGBA(0.000, 0.000, 0.000, 1.000)
