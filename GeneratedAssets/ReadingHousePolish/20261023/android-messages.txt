@@ -1,0 +1,23 @@
+Result=Succeeded, errors=13, warnings=348
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/CinematicPhysicalCamera.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]
+
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/ScreenshotsTimeline.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]
+
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeDefault.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]
+
+Postprocess built player: [Error] Broken text PPtr in file(Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeGlobal.asset). Local file identifier (8100002) doesn't exist!
+Postprocess built player: [Error] Broken text PPtr in file(Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeGlobal.asset). Local file identifier (8100003) doesn't exist!
+Postprocess built player: [Error] Broken text PPtr in file(Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeGlobal.asset). Local file identifier (8100004) doesn't exist!
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeRayTracing.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]
+
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeRoom1.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]
+
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeRoom2.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]
+
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeRoom2Skylight.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]
+
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeRoom3.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]
+
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeRoom3Corridor.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]
+
+Postprocess built player: [Error] Unable to parse file Assets/PavilionPort/SampleSceneAssets/Settings/Volumes/VolumeRoom3Sitting.asset: [Parser Failure at line 18: Expect ':' between key and value within mapping]

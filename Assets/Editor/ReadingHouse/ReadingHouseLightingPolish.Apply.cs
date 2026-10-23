@@ -28,6 +28,8 @@ namespace SReader.EditorTools.ReadingHouse
                 case "tune": TuneLighting(); break;
                 case "cleanup": CleanupPreview(); break;
                 case "isolate": IsolateRenderer(); GoldKeyMaterial(); break;
+                case "keymatte": MatteKey(); break;
+                case "buildreport": BuildMessages(); break;
                 case "mobilebake": Lightmapping.lightingSettings.directionalityMode = LightmapsMode.NonDirectional; EditorUtility.SetDirty(Lightmapping.lightingSettings); AssetDatabase.SaveAssets(); break;
                 case "bake":
                     Lightmapping.bakeCompleted -= BakeCompleted; Lightmapping.bakeCompleted += BakeCompleted;
@@ -283,7 +285,7 @@ namespace SReader.EditorTools.ReadingHouse
             if (material == null) { material = new Material(Shader.Find("Universal Render Pipeline/Lit")) { name = "M_RH_KeyStone_Gold" }; AssetDatabase.CreateAsset(material, matPath); }
             material.SetColor("_BaseColor", Hex("F3CA6C")); material.SetColor("_Color", Hex("F3CA6C"));
             material.SetFloat("_Smoothness", .24f); material.SetFloat("_Metallic", .08f);
-            material.SetColor("_EmissionColor", Hex("FFD075") * .08f); material.EnableKeyword("_EMISSION");
+            material.SetColor("_EmissionColor", Color.black); material.DisableKeyword("_EMISSION"); material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
             EditorUtility.SetDirty(material);
             var originalPath = AssetDatabase.GetAssetPath(board.keyPrefab);
             var contents = PrefabUtility.LoadPrefabContents(originalPath);
@@ -303,6 +305,20 @@ namespace SReader.EditorTools.ReadingHouse
             board.keyPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
             EditorUtility.SetDirty(board);
             AssetDatabase.SaveAssets(); EditorSceneManager.SaveScene(House());
+        }
+        static void MatteKey()
+        {
+            var material = AssetDatabase.LoadAssetAtPath<Material>(Art + "/Materials/M_RH_KeyStone_Gold.mat");
+            material.SetColor("_EmissionColor", Color.black); material.DisableKeyword("_EMISSION");
+            material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+            EditorUtility.SetDirty(material); AssetDatabase.SaveAssets();
+        }
+        static void BuildMessages()
+        {
+            var report = UnityEditor.Build.Reporting.BuildReport.GetLatestReport();
+            if (report == null) throw new InvalidOperationException("No Android build report available");
+            var errors = report.steps.SelectMany(s => s.messages.Where(m => m.type == LogType.Error || m.type == LogType.Exception).Select(m => $"{s.name}: [{m.type}] {m.content}"));
+            File.WriteAllLines(Output + "/android-messages.txt", new[] { $"Result={report.summary.result}, errors={report.summary.totalErrors}, warnings={report.summary.totalWarnings}" }.Concat(errors));
         }
         static void Validate()
         {

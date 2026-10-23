@@ -1,0 +1,3 @@
+Result Succeeded, 13 errors, 348 warnings, size 2395,4 MB, time 02:30, output C:/Users/11113930/sReader4/GeneratedAssets/ReadingHouseUnity/build/sReader_ReadingHouse_Test.apk
+
+Actual APK file: 271.2 MiB (284335491 bytes). The totalSize reported above is Unity's build total, rather than the APK file length.

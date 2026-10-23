@@ -1,0 +1,7 @@
+1520x720 editor camera renders; no sample content loaded. Activity/chalkboard surfaces are geometry previews, not signed-in UI.
+UnityStats are editor counters at capture time, not Android performance.
+01_exterior: batches=410, setPass=31, triangles=121882, vertices=104603, renderTime=4,47ms
+02_follow_inside: batches=410, setPass=31, triangles=121882, vertices=104603, renderTime=4,47ms
+03_reading: batches=410, setPass=31, triangles=121882, vertices=104603, renderTime=4,47ms
+04_activity_surface_preview: batches=410, setPass=31, triangles=121882, vertices=104603, renderTime=4,47ms
+05_chalkboard_surface_preview: batches=410, setPass=31, triangles=121882, vertices=104603, renderTime=4,47ms

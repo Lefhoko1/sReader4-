@@ -18,7 +18,7 @@ SR_MAT_Ceiling_Warm	#FAE2BEFF	#F1DEBB	0.2	0.12	0	RGBA(0.000, 0.000, 0.000, 1.000
 SR_Sage_Leaves	#536D54FF	#78935B	0.45	0.1	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Sage_Leaves.mat
 SR_Garden_Soil	#302E27FF	#736444	0.45	0.1	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Garden_Soil.mat
 SR_Slate_Light	embedded 2D shader	#7A91A2	-	0.17	0	-	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Slate_Light.mat
-SR_REF_rugblue	#07559BFF	#387C9D	0.1	0.08	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_REF_rugblue.mat
+SR_REF_rugblue	#07559BFF	#2069A4	0.1	0.08	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_REF_rugblue.mat
 SR_MAT_Wall_Interior_Warm	#F7CE9CFF	#EAD0AA	0.25	0.16	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Wall_Interior_Warm.mat
 SR_REF_light	#FFF0ACFF	#FFE6AC	0.7	0.28	0	RGBA(3.000, 2.824, 2.024, 3.000)	RGBA(2.000, 1.765, 1.271, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_REF_light.mat
 SR_Floor	#604532FF	#AA805D	0.45	0.2	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Floor.mat

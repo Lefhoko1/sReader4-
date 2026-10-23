@@ -1,0 +1,1 @@
+Baked lightmap renderers=121; probe-lit small renderers=114; probes=78; baked window lights=4; GPU=NVIDIA RTX 3500 Ada Generation Laptop GPU

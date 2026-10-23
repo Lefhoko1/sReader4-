@@ -1,0 +1,4 @@
+lightmaps=1
+lightingData=Assets/Art/ReadingHouse/Lighting/LightingData.asset
+probes=78
+Assets/Art/ReadingHouse/Lighting/Lightmap-0_comp_light.exr 512x512

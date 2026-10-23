@@ -1,0 +1,14 @@
+{
+  "screenshots_checked": 35,
+  "passed": true,
+  "existing_transforms_checked": 71,
+  "prefab_pose_values_checked": 45,
+  "existing_behaviours_checked": 129,
+  "visual_material_prefab_references": 1,
+  "protected_files_checked": 3068,
+  "allowed_uv_importer_changes": [
+    "Assets/Art/ReadingHouse/Models/SM_ReadingHouse_Dashboard.fbx.meta",
+    "Assets/Art/ReadingHouse/Models/SM_ReadingHouse_Environment.fbx.meta"
+  ],
+  "failures": []
+}
