@@ -1,0 +1,5 @@
+01_exterior signedIn=True sampleAllowed=False batches/drawCalls=367 setPass=35 triangles=100740 editorFrame=5,46ms
+02_follow_inside signedIn=True sampleAllowed=False batches/drawCalls=188 setPass=22 triangles=63156 editorFrame=5,57ms
+05_chalkboard signedIn=True sampleAllowed=False batches/drawCalls=42 setPass=13 triangles=8053 editorFrame=4,65ms
+03_reading signedIn=True sampleAllowed=False batches/drawCalls=279 setPass=49 triangles=81338 editorFrame=4,92ms
+04_activity signedIn=True sampleAllowed=False batches/drawCalls=140 setPass=18 triangles=49221 editorFrame=5,73ms

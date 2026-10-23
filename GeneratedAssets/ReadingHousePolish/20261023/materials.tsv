@@ -1,0 +1,30 @@
+source	old base	new base	old smoothness	new smoothness	new metallic	old emission	new emission	new asset
+SR_Oak	#825D3DFF	#AC8457	0.45	0.24	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Oak.mat
+SR_Walnut	#513728FF	#886346	0.45	0.23	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Walnut.mat
+SR_REF_golden	#FFB51BFF	#DDB669	0.74	0.36	0.16	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_REF_golden.mat
+SR_MAT_Housing_Cream	#FCF8EEFF	#E9DABC	0.75	0.32	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Housing_Cream.mat
+SR_MAT_Trim_Gold	#FFBA1EFF	#E1B765	0.85	0.44	0.28	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Trim_Gold.mat
+SR_MAT_Chalkboard	embedded 2D shader	#294A48	-	0.1	0	-	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Chalkboard.mat
+SR_Gold	#D6AE58FF	#CFA45D	0.68	0.4	0.3	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Gold.mat
+SR_MAT_Plastic_Orange	#F07610FF	#CD914B	0.78	0.36	0.2	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Plastic_Orange.mat
+SR_MAT_Plastic_Purple	#683AD6FF	#70529F	0.8	0.34	0.02	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Plastic_Purple.mat
+SR_MAT_Plastic_Navy	#102C6CFF	#283F68	0.55	0.29	0.02	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Plastic_Navy.mat
+SR_Slate	#232733FF	#48596F	0.48	0.18	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Slate.mat
+SR_Carved_Limestone	#C0B49CFF	#D8C7A5	0.45	0.16	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Carved_Limestone.mat
+SR_Amber_Glass	#F6E3B8FF	#FFE6B4	0.85	0.34	0.02	RGBA(0.550, 0.420, 0.220, 1.000)	RGBA(0.800, 0.709, 0.562, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Amber_Glass.mat
+SR_Limestone	#888C8DFF	#C2B59D	0.45	0.14	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Limestone.mat
+SR_Moss	#3B5044FF	#587649	0.45	0.1	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Moss.mat
+SR_MAT_Ceiling_Warm	#FAE2BEFF	#F1DEBB	0.2	0.12	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Ceiling_Warm.mat
+SR_Sage_Leaves	#536D54FF	#78935B	0.45	0.1	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Sage_Leaves.mat
+SR_Garden_Soil	#302E27FF	#736444	0.45	0.1	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Garden_Soil.mat
+SR_Slate_Light	embedded 2D shader	#7A91A2	-	0.17	0	-	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Slate_Light.mat
+SR_REF_rugblue	#07559BFF	#387C9D	0.1	0.08	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_REF_rugblue.mat
+SR_MAT_Wall_Interior_Warm	#F7CE9CFF	#EAD0AA	0.25	0.16	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Wall_Interior_Warm.mat
+SR_REF_light	#FFF0ACFF	#FFE6AC	0.7	0.28	0	RGBA(3.000, 2.824, 2.024, 3.000)	RGBA(2.000, 1.765, 1.271, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_REF_light.mat
+SR_Floor	#604532FF	#AA805D	0.45	0.2	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_Floor.mat
+SR_MAT_Light_Warm	#FFE696FF	#FFE3A0	0.7	0.3	0	RGBA(3.000, 2.518, 1.412, 3.000)	RGBA(2.200, 1.933, 1.380, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Light_Warm.mat
+SR_MAT_Plastic_DeepBlue	#185CC8FF	#416F94	0.8	0.3	0.02	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Plastic_DeepBlue.mat
+SR_MAT_Plastic_PurpleHi	#8A5CF0FF	#9B7FC2	0.88	0.38	0.02	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Plastic_PurpleHi.mat
+SR_MAT_Plastic_Cyan	#46C8F0FF	#66BEB9	0.82	0.3	0.03	RGBA(0.096, 0.288, 0.343, 0.350)	RGBA(0.044, 0.096, 0.093, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Plastic_Cyan.mat
+SR_MAT_Moss	#4F9A3AFF	#75A154	0.25	0.1	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_MAT_Moss.mat
+SR_REF_brown	#89451EFF	#98704F	0.52	0.23	0	RGBA(0.000, 0.000, 0.000, 1.000)	RGBA(0.000, 0.000, 0.000, 1.000)	Assets/Art/ReadingHouse/Lighting/Materials/M_RH_SR_REF_brown.mat
