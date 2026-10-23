@@ -15,6 +15,7 @@ namespace SReader.EditorTools.ReadingHouse
     {
         const string PlayKey = "RH.Polish.CaptureStep", StageKey = "RH.Polish.Stage";
         static double playNext, authDeadline;
+        static int resolutionRetries;
         static EditorWindow gameView;
         static ReadingHouseLightingPolishPlayHooks hooks = new ReadingHouseLightingPolishPlayHooks();
         sealed class ReadingHouseLightingPolishPlayHooks
@@ -23,7 +24,7 @@ namespace SReader.EditorTools.ReadingHouse
             {
                 EditorApplication.update += PlayTick;
                 EditorApplication.playModeStateChanged += state => {
-                    if (state == PlayModeStateChange.EnteredPlayMode && SessionState.GetInt(PlayKey, -1) == 0) { playNext = EditorApplication.timeSinceStartup + 5; authDeadline = playNext + 20; }
+                    if (state == PlayModeStateChange.EnteredPlayMode && SessionState.GetInt(PlayKey, -1) == 0) { SetCaptureSize(false); playNext = EditorApplication.timeSinceStartup + 5; authDeadline = playNext + 20; }
                     if (state == PlayModeStateChange.EnteredEditMode && SessionState.GetInt(PlayKey, -1) == 99) {
                         SessionState.EraseInt(PlayKey);
                         if (gameView != null) gameView.GetType().GetProperty("selectedSizeIndex", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)?.SetValue(gameView, SessionState.GetInt("RH.Polish.OldSize", 0));
@@ -33,7 +34,14 @@ namespace SReader.EditorTools.ReadingHouse
         }
         static partial void StartPlayCapture(string stage)
         {
-            if (EditorApplication.isPlaying || House().isDirty) throw new InvalidOperationException("Capture needs the saved house in Edit mode.");
+            if (EditorApplication.isPlayingOrWillChangePlaymode || House().isDirty) throw new InvalidOperationException("Capture needs the saved house in Edit mode.");
+            resolutionRetries = 0; SetCaptureSize(true);
+            Directory.CreateDirectory(Output + "/" + stage + "-play");
+            SessionState.SetString(StageKey, stage); SessionState.SetInt(PlayKey, 0);
+            EditorApplication.isPlaying = true;
+        }
+        static void SetCaptureSize(bool remember)
+        {
             var assembly = typeof(EditorWindow).Assembly;
             var gameType = assembly.GetType("UnityEditor.GameView");
             gameView = EditorWindow.GetWindow(gameType); gameView.Show();
@@ -55,10 +63,7 @@ namespace SReader.EditorTools.ReadingHouse
                 group.GetType().GetMethod("AddCustomSize", flags).Invoke(group, new[] { size }); index = count;
             }
             var selected = gameType.GetProperty("selectedSizeIndex", flags);
-            SessionState.SetInt("RH.Polish.OldSize", (int)selected.GetValue(gameView)); selected.SetValue(gameView, index);
-            Directory.CreateDirectory(Output + "/" + stage + "-play");
-            SessionState.SetString(StageKey, stage); SessionState.SetInt(PlayKey, 0);
-            EditorApplication.isPlaying = true;
+            if (remember) SessionState.SetInt("RH.Polish.OldSize", (int)selected.GetValue(gameView)); selected.SetValue(gameView, 0); selected.SetValue(gameView, index); gameView.Repaint();
         }
         static void PlayLog(string message) => File.AppendAllText(Output + "/" + SessionState.GetString(StageKey, "unknown") + "-play/log.txt", message + "\n");
         static void PlayTick()
@@ -70,6 +75,10 @@ namespace SReader.EditorTools.ReadingHouse
             if (EditorApplication.timeSinceStartup < playNext) return;
             try
             {
+                if (step == 0 && (Screen.width != 1520 || Screen.height != 720)) {
+                    if (++resolutionRetries > 20) throw new InvalidOperationException($"Game view did not settle at 1520x720: {Screen.width}x{Screen.height}");
+                    SetCaptureSize(false); playNext = EditorApplication.timeSinceStartup + .5; return;
+                }
                 var d = All<ReadingHouseExploreDirector>().Single(); var p = d.presenter;
                 void Wait(int n, double s) { SessionState.SetInt(PlayKey, n); playNext = EditorApplication.timeSinceStartup + s; }
                 void Save(string name) {

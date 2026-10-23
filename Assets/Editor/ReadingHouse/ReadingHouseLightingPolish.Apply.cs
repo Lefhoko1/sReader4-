@@ -25,6 +25,10 @@ namespace SReader.EditorTools.ReadingHouse
             switch (cmd) {
                 case "palette": Palette(); break;
                 case "lighting": Lighting(); break;
+                case "tune": TuneLighting(); break;
+                case "cleanup": CleanupPreview(); break;
+                case "isolate": IsolateRenderer(); GoldKeyMaterial(); break;
+                case "mobilebake": Lightmapping.lightingSettings.directionalityMode = LightmapsMode.NonDirectional; EditorUtility.SetDirty(Lightmapping.lightingSettings); AssetDatabase.SaveAssets(); break;
                 case "bake":
                     Lightmapping.bakeCompleted -= BakeCompleted; Lightmapping.bakeCompleted += BakeCompleted;
                     if (!Lightmapping.BakeAsync()) throw new InvalidOperationException("Unity did not start the bake");
@@ -138,7 +142,7 @@ namespace SReader.EditorTools.ReadingHouse
             // Preserve all existing pipeline settings except the house renderer and legacy probe support.
             var pipeline = AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/Settings/UniversalRP.asset");
             var pipelineSO = new SerializedObject(pipeline);
-            pipelineSO.FindProperty("m_RendererDataList").GetArrayElementAtIndex(1).objectReferenceValue = renderer;
+            var rendererList = pipelineSO.FindProperty("m_RendererDataList"); if (rendererList.arraySize < 3) rendererList.arraySize = 3; rendererList.GetArrayElementAtIndex(2).objectReferenceValue = renderer; data.SetRenderer(2);
             pipelineSO.FindProperty("m_LightProbeSystem").intValue = 0;
             pipelineSO.ApplyModifiedPropertiesWithoutUndo();
             RenderSettings.ambientMode = AmbientMode.Trilight;
@@ -189,7 +193,7 @@ namespace SReader.EditorTools.ReadingHouse
                 PrefabUtility.RecordPrefabInstancePropertyModifications(r.gameObject);
             }
             var settings = new LightingSettings { name = "LS_ReadingHouse_Mobile_Baked" };
-            settings.bakedGI = true; settings.realtimeGI = false; settings.lightmapper = LightingSettings.Lightmapper.ProgressiveGPU;
+            settings.directionalityMode = LightmapsMode.NonDirectional; settings.bakedGI = true; settings.realtimeGI = false; settings.lightmapper = LightingSettings.Lightmapper.ProgressiveGPU;
             settings.lightmapResolution = 10; settings.lightmapMaxSize = 1024; settings.lightmapPadding = 3;
             settings.directSampleCount = 32; settings.indirectSampleCount = 128; settings.environmentSampleCount = 64; settings.maxBounces = 3;
             settings.mixedBakeMode = MixedLightingMode.Shadowmask;
@@ -210,18 +214,13 @@ namespace SReader.EditorTools.ReadingHouse
                 foreach (var guid in AssetDatabase.FindAssets("", new[] { bakeFolder })) {
                     var path = AssetDatabase.GUIDToAssetPath(guid); if (AssetDatabase.IsValidFolder(path)) continue;
                     string destination = Art + "/" + Path.GetFileName(path);
-                    if (path != destination && !File.Exists(destination)) {
+                    if (path != destination) {
+                        if (File.Exists(destination)) destination = AssetDatabase.GenerateUniqueAssetPath(destination);
                         var error = AssetDatabase.MoveAsset(path, destination); if (!string.IsNullOrEmpty(error)) Debug.LogWarning(error);
                     }
                 }
             }
-            var reflections = All<ReflectionProbe>();
-            foreach (var probe in reflections) {
-                string path = Art + "/Reflection_Room.exr";
-                var hidden = All<Renderer>().Where(r => r.transform.root.name == "Characters" || r is SpriteRenderer).Select(r => (r, r.enabled)).ToArray();
-                try { foreach (var state in hidden) state.r.enabled = false; Lightmapping.BakeReflectionProbe(probe, path); }
-                finally { foreach (var state in hidden) state.r.enabled = state.enabled; }
-            }
+            BakeRoomCubemap();
             AssetDatabase.Refresh();
             foreach (string path in Directory.GetFiles(Art, "*", SearchOption.AllDirectories).Where(p => p.EndsWith(".exr") || p.EndsWith(".png"))) {
                 var importer = AssetImporter.GetAtPath(path.Replace('\\', '/')) as TextureImporter;
@@ -232,6 +231,78 @@ namespace SReader.EditorTools.ReadingHouse
             AssetDatabase.SaveAssets(); EditorSceneManager.SaveScene(House());
             var maps = LightmapSettings.lightmaps;
             File.WriteAllLines(Output + "/bake-result.txt", new[] { "lightmaps=" + maps.Length, "lightingData=" + AssetDatabase.GetAssetPath(Lightmapping.lightingDataAsset), "probes=" + (LightmapSettings.lightProbes == null ? 0 : LightmapSettings.lightProbes.count) }.Concat(maps.Select(m => $"{AssetDatabase.GetAssetPath(m.lightmapColor)} {m.lightmapColor?.width}x{m.lightmapColor?.height}")));
+        }
+        static void TuneLighting()
+        {
+            foreach (var light in All<Light>().Where(l => l.type == LightType.Rectangle)) { light.color = Hex("FFF1DD"); light.intensity = 4.5f; }
+            void Fill(string name, Vector3 position, Vector3 direction, Vector2 size, float intensity, string color)
+            {
+                var go = new GameObject(name); go.transform.SetParent(LightingRoot().transform, false);
+                go.transform.SetPositionAndRotation(position, Quaternion.LookRotation(direction, Vector3.up));
+                var light = go.AddComponent<Light>(); light.type = LightType.Rectangle; light.areaSize = size;
+                light.lightmapBakeType = LightmapBakeType.Baked; light.intensity = intensity; light.color = Hex(color); light.range = 9; light.shadows = LightShadows.Soft;
+            }
+            Fill("Baked soft sky bounce - front", new Vector3(0, 2.6f, 3.2f), Vector3.back, new Vector2(6, 2.5f), 2.4f, "E6F1FF");
+            Fill("Baked soft sky bounce - ceiling", new Vector3(0, 3.9f, -.2f), new Vector3(0, -1, .001f), new Vector2(7, 5), 1.4f, "EDF2FF");
+            var rug = AssetDatabase.LoadAssetAtPath<Material>(Art + "/Materials/M_RH_SR_REF_rugblue.mat");
+            rug.SetColor("_BaseColor", Hex("2069A4")); rug.SetColor("_Color", Hex("2069A4")); EditorUtility.SetDirty(rug);
+            AssetDatabase.SaveAssets(); EditorSceneManager.SaveScene(House());
+        }
+        static void CleanupPreview()
+        {
+            // Assigning an unchanged imported quaternion during preview can normalize it and create a redundant override.
+            var ids = new HashSet<long> { -8369905298956550269, -6246968032396232732, -5911943615363941590, -429566468442726374 };
+            foreach (var transform in All<Transform>()) {
+                var source = PrefabUtility.GetCorrespondingObjectFromSource(transform);
+                if (source != null && AssetDatabase.TryGetGUIDAndLocalFileIdentifier(source, out string guid, out long id) && ids.Contains(id)) {
+                    var property = new SerializedObject(transform).FindProperty("m_LocalRotation");
+                    if (property.prefabOverride) PrefabUtility.RevertPropertyOverride(property, InteractionMode.AutomatedAction);
+                }
+            }
+            // Keep a clear blue exterior after Neutral's highlight roll-off.
+            All<Camera>().Single().backgroundColor = new Color(.24f, .55f, .93f, 1);
+            AssetDatabase.SaveAssets(); EditorSceneManager.SaveScene(House());
+        }
+        static void IsolateRenderer()
+        {
+            var pipeline = new SerializedObject(AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/Settings/UniversalRP.asset"));
+            var renderers = pipeline.FindProperty("m_RendererDataList");
+            if (renderers.arraySize < 3) renderers.arraySize = 3;
+            renderers.GetArrayElementAtIndex(1).objectReferenceValue = AssetDatabase.LoadAssetAtPath<UniversalRendererData>("Assets/Settings/Renderer3D.asset");
+            renderers.GetArrayElementAtIndex(2).objectReferenceValue = AssetDatabase.LoadAssetAtPath<UniversalRendererData>(Art + "/Renderer_ReadingHouse_Mobile.asset");
+            pipeline.ApplyModifiedPropertiesWithoutUndo();
+            All<Camera>().Single().GetUniversalAdditionalCameraData().SetRenderer(2);
+            AssetDatabase.SaveAssets(); EditorSceneManager.SaveScene(House());
+        }
+        static void GoldKeyMaterial()
+        {
+            var board = All<SReader.Game.ReadingHouse.MatStoneBoard>().Single();
+            const string matPath = Art + "/Materials/M_RH_KeyStone_Gold.mat";
+            const string prefabPath = Art + "/P_KeyStone_Gold.prefab";
+            var material = AssetDatabase.LoadAssetAtPath<Material>(matPath);
+            if (material == null) { material = new Material(Shader.Find("Universal Render Pipeline/Lit")) { name = "M_RH_KeyStone_Gold" }; AssetDatabase.CreateAsset(material, matPath); }
+            material.SetColor("_BaseColor", Hex("F3CA6C")); material.SetColor("_Color", Hex("F3CA6C"));
+            material.SetFloat("_Smoothness", .24f); material.SetFloat("_Metallic", .08f);
+            material.SetColor("_EmissionColor", Hex("FFD075") * .08f); material.EnableKeyword("_EMISSION");
+            EditorUtility.SetDirty(material);
+            var originalPath = AssetDatabase.GetAssetPath(board.keyPrefab);
+            var contents = PrefabUtility.LoadPrefabContents(originalPath);
+            try {
+                var stone = contents.GetComponentInChildren<WordStone>(true);
+                string stoneBefore = JsonUtility.ToJson(stone);
+                var poses = contents.GetComponentsInChildren<Transform>(true).Select(t => (t, t.localPosition, t.localRotation, t.localScale)).ToArray();
+                if (!File.Exists(Output + "/key-material-before.txt")) File.WriteAllLines(Output + "/key-material-before.txt", contents.GetComponentsInChildren<MeshRenderer>(true).SelectMany(r => r.sharedMaterials).Where(m => m != null).Distinct().Select(m => $"{m.name}: shader={m.shader.name}, base={(m.HasProperty("_BaseColor") ? m.GetColor("_BaseColor").ToString() : m.HasProperty("_Color") ? m.GetColor("_Color").ToString() : "embedded default")}"));
+                foreach (var renderer in contents.GetComponentsInChildren<MeshRenderer>(true)) {
+                    if (renderer.GetComponent<TMPro.TMP_Text>() != null) continue;
+                    renderer.sharedMaterials = renderer.sharedMaterials.Select(m => material).ToArray();
+                }
+                if (JsonUtility.ToJson(stone) != stoneBefore || poses.Any(p => !p.t.localPosition.Equals(p.localPosition) || !p.t.localRotation.Equals(p.localRotation) || !p.t.localScale.Equals(p.localScale))) throw new InvalidOperationException("Key material pass changed a non-visual prefab field");
+                PrefabUtility.SaveAsPrefabAsset(contents, prefabPath);
+            }
+            finally { PrefabUtility.UnloadPrefabContents(contents); }
+            board.keyPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
+            EditorUtility.SetDirty(board);
+            AssetDatabase.SaveAssets(); EditorSceneManager.SaveScene(House());
         }
         static void Validate()
         {
@@ -249,4 +320,3 @@ namespace SReader.EditorTools.ReadingHouse
         }
     }
 }
-

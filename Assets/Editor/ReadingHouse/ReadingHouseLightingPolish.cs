@@ -131,7 +131,7 @@ namespace SReader.EditorTools.ReadingHouse
             }
             finally
             {
-                foreach (var s in transforms) { s.t.localPosition = s.localPosition; s.t.localRotation = s.localRotation; s.t.localScale = s.localScale; }
+                foreach (var s in transforms) { if (!s.t.localPosition.Equals(s.localPosition)) s.t.localPosition = s.localPosition; if (!s.t.localRotation.Equals(s.localRotation)) s.t.localRotation = s.localRotation; if (!s.t.localScale.Equals(s.localScale)) s.t.localScale = s.localScale; }
                 foreach (var s in renderers) s.r.enabled = s.enabled;
                 // TMP_Text.enabled is a component flag, independent of MeshRenderer.
                 foreach (var cut in All<FrontWallCutaway>()) foreach (var l in cut.labels) if (l != null) l.enabled = true;
@@ -144,4 +144,3 @@ namespace SReader.EditorTools.ReadingHouse
         static partial void StartPlayCapture(string stage);
     }
 }
-
