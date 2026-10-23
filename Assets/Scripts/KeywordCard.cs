@@ -3,7 +3,9 @@
 //  to the stone it belongs to.
 //  (Own file so Unity can load it — one MonoBehaviour per file.)
 // ===========================================================================
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -28,28 +30,78 @@ public class KeywordCard : MonoBehaviour
     LineRenderer _leader;
     Transform _stone;
     Renderer _dot;
+    Action _action;
+    Camera _camera;
+    Rect _buttonRect, _cardRect;
+    readonly List<UnityEngine.Object> _owned = new List<UnityEngine.Object>();
+    public static bool ActionOpen => _current != null && _current._action != null;
+
+    public static void Dismiss()
+    {
+        if (_current == null) return;
+        _current.gameObject.SetActive(false);
+        Destroy(_current.gameObject);
+        _current = null;
+    }
+
+    // The earlier Word Path callout remains unchanged. The house adds an explicit
+    // action instead of opening a puzzle before the student has read the card.
+    public static void ShowAction(string word, Transform stone, string action, Action onAction, Camera camera)
+    {
+        Dismiss();
+        var go = new GameObject("KeywordCard");
+        _current = go.AddComponent<KeywordCard>();
+        _current._action = onAction;
+        _current._camera = camera;
+        _current.Build(word, stone, action);
+    }
+
+    /// <summary>Route a house tap before the rug; outside taps dismiss the card.</summary>
+    public static bool HandleTap(Vector2 point, Camera camera)
+    {
+        if (!ActionOpen) return false;
+        var card = _current;
+        var ray = camera.ScreenPointToRay(point);
+        var plane = new Plane(card.transform.forward, card.transform.position);
+        if (!plane.Raycast(ray, out float distance)) { Dismiss(); return true; }
+        Vector3 local = card.transform.InverseTransformPoint(ray.GetPoint(distance));
+        var xy = new Vector2(local.x, local.y);
+        if (card._buttonRect.Contains(xy))
+        {
+            var action = card._action;
+            Dismiss();
+            action?.Invoke();
+        }
+        else if (!card._cardRect.Contains(xy)) Dismiss();
+        return true;
+    }
+
+    T Own<T>(T resource) where T : UnityEngine.Object { _owned.Add(resource); return resource; }
+    void OnDestroy() { foreach (var resource in _owned) if (resource != null) Destroy(resource); }
+
     float _halfHeight = 0.3f;       // measured, so the leader meets the real edge
 
     public static void Show(string word, Transform stone)
     {
-        if (_current != null) Destroy(_current.gameObject);
+        Dismiss();
         var go = new GameObject("KeywordCard");
         _current = go.AddComponent<KeywordCard>();
         _current.Build(word, stone);
     }
 
-    void Build(string word, Transform stone)
+    void Build(string word, Transform stone, string action = null)
     {
         // world-space card floating above the stone, always facing camera.
         // Sits well clear of the stone's own word label so the two never crowd.
-        transform.position = stone.position + Vector3.up * 1.5f
-                             + Vector3.right * 0.25f;
+        var cam = _camera != null ? _camera : Camera.main;
+        transform.position = stone.position + Vector3.up * (action != null ? 1.05f : 1.5f)
+                             + (cam != null ? cam.transform.right : Vector3.right) * 0.18f;
 
         // 1. the word FIRST — everything else is measured from it
         var txt = new GameObject("Word").AddComponent<TextMeshPro>();
         txt.transform.SetParent(transform, false);
         txt.text = string.IsNullOrEmpty(word) ? " " : word;
-        txt.fontSize = WordFont;
+        txt.fontSize = action != null ? 3.2f : WordFont;
         txt.fontStyle = FontStyles.Bold;
         txt.color = new Color(0.35f, 0.22f, 0.05f);
         txt.alignment = TextAlignmentOptions.Center;
@@ -59,25 +111,31 @@ public class KeywordCard : MonoBehaviour
         Vector2 wordSize = txt.GetPreferredValues();
         if (wordSize.x > MaxWidth)                    // very long word: shrink it to fit
         {
-            txt.fontSize = WordFont * (MaxWidth / wordSize.x);
+            txt.fontSize *= MaxWidth / wordSize.x;
             wordSize = txt.GetPreferredValues();
         }
         txt.rectTransform.sizeDelta = wordSize;
+        txt.renderer.sortingOrder = 102;
 
         var tag = new GameObject("Tag").AddComponent<TextMeshPro>();
         tag.transform.SetParent(transform, false);
-        tag.text = "key word";
-        tag.fontSize = TagFont;
+        tag.text = action != null ? "KEY WORD" : "key word";
+        tag.fontSize = action != null ? 1.3f : TagFont;
         tag.color = new Color(0.45f, 0.30f, 0.10f);
         tag.alignment = TextAlignmentOptions.Center;
         tag.textWrappingMode = TextWrappingModes.NoWrap;
         Vector2 tagSize = tag.GetPreferredValues();
         tag.rectTransform.sizeDelta = tagSize;
+        tag.renderer.sortingOrder = 102;
 
         // 2. the card, grown around them
         float w = Mathf.Max(wordSize.x, tagSize.x) + PadX * 2f;
-        float h = wordSize.y + TagGap + tagSize.y + PadY * 2f;
+        float buttonHeight = action != null ? 0.38f : 0f;
+        float actionSpace = action != null ? buttonHeight + 0.10f : 0f;
+        if (action != null) w = Mathf.Max(w, 1.9f);
+        float h = wordSize.y + TagGap + tagSize.y + PadY * 2f + actionSpace;
         _halfHeight = h * 0.5f;
+        _cardRect = new Rect(-w * 0.5f, -h * 0.5f, w, h);
 
         // gold rounded panel (a scaled quad with generated rounded-rect tex)
         var panel = GameObject.CreatePrimitive(PrimitiveType.Quad);
@@ -91,15 +149,43 @@ public class KeywordCard : MonoBehaviour
         // however wide the word made it
         int th = 128;
         int tw = Mathf.Clamp(Mathf.RoundToInt(th * (w / h)), 48, 1024);
-        var pm = new Material(sh) { mainTexture = RoundedRect(
-            tw, th, Mathf.RoundToInt(Mathf.Min(tw, th) * 0.22f), GoldFill, GoldEdge) };
-        pr.material = pm;
+        var pm = Own(new Material(sh));
+        pm.mainTexture = Own(RoundedRect(tw, th, Mathf.RoundToInt(Mathf.Min(tw, th) * 0.22f), GoldFill, GoldEdge));
+        pr.sharedMaterial = pm;
+        pr.sortingOrder = 100;
 
         // 3. place the contents inside the measured card
         txt.transform.localPosition =
             new Vector3(0f, h * 0.5f - PadY - wordSize.y * 0.5f, -0.01f);
         tag.transform.localPosition =
-            new Vector3(0f, -h * 0.5f + PadY + tagSize.y * 0.5f, -0.01f);
+            new Vector3(0f, -h * 0.5f + PadY + actionSpace + tagSize.y * 0.5f, -0.01f);
+
+        if (action != null)
+        {
+            float by = -h * 0.5f + PadY + buttonHeight * 0.5f;
+            _buttonRect = new Rect(-w * 0.5f + 0.12f, by - buttonHeight * 0.5f, w - 0.24f, buttonHeight);
+            var button = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            Destroy(button.GetComponent<Collider>());
+            button.name = "Keyword Action";
+            button.transform.SetParent(transform, false);
+            button.transform.localPosition = new Vector3(0f, by, -0.02f);
+            button.transform.localScale = new Vector3(_buttonRect.width, buttonHeight, 1f);
+            var material = Own(new Material(sh));
+            material.mainTexture = Own(RoundedRect(512, 96, 22, new Color32(27, 46, 89, 255), GoldEdge));
+            button.GetComponent<Renderer>().sharedMaterial = material;
+            button.GetComponent<Renderer>().sortingOrder = 101;
+            var label = new GameObject("Action Label").AddComponent<TextMeshPro>();
+            label.transform.SetParent(transform, false);
+            label.transform.localPosition = new Vector3(0f, by, -0.03f);
+            label.text = action;
+            label.fontSize = 2.4f;
+            label.renderer.sortingOrder = 102;
+            label.fontStyle = FontStyles.Bold;
+            label.color = new Color32(255, 235, 173, 255);
+            label.alignment = TextAlignmentOptions.Center;
+            label.textWrappingMode = TextWrappingModes.NoWrap;
+            label.rectTransform.sizeDelta = new Vector2(_buttonRect.width, buttonHeight);
+        }
 
         var star = GameObject.CreatePrimitive(PrimitiveType.Quad);
         Destroy(star.GetComponent<Collider>());
@@ -108,10 +194,11 @@ public class KeywordCard : MonoBehaviour
         star.transform.localPosition = new Vector3(0f, h * 0.5f + 0.05f, -0.012f);
         star.transform.localScale = Vector3.one * 0.26f;
         var sr2 = star.GetComponent<Renderer>();
-        var sm2 = new Material(Shader.Find("Sprites/Default"));
-        sm2.mainTexture = WordStone.MakeStarTexture(64);
+        var sm2 = Own(new Material(Shader.Find("Sprites/Default")));
+        sm2.mainTexture = Own(WordStone.MakeStarTexture(64));
         sm2.color = GoldStar;
-        sr2.material = sm2;
+        sr2.sharedMaterial = sm2;
+        sr2.sortingOrder = 101;
 
         BuildLeader(stone);
         StartCoroutine(Life());
@@ -135,8 +222,9 @@ public class KeywordCard : MonoBehaviour
         _leader.receiveShadows = false;
         _leader.widthCurve = AnimationCurve.Linear(0f, 0.035f, 1f, 0.018f);  // thick at the stone, fine at the card
 
-        var mat = new Material(Shader.Find("Sprites/Default"));
-        _leader.material = mat;
+        var mat = Own(new Material(Shader.Find("Sprites/Default")));
+        _leader.sharedMaterial = mat;
+        _leader.sortingOrder = 99;
         _leader.colorGradient = new Gradient
         {
             colorKeys = new[] { new GradientColorKey(GoldEdge, 0f), new GradientColorKey(GoldFill, 1f) },
@@ -149,11 +237,11 @@ public class KeywordCard : MonoBehaviour
         dot.transform.SetParent(transform, false);
         dot.transform.localScale = Vector3.one * 0.16f;
         _dot = dot.GetComponent<Renderer>();
-        _dot.material = new Material(Shader.Find("Sprites/Default"))
+        _dot.sharedMaterial = Own(new Material(Shader.Find("Sprites/Default"))
         {
-            mainTexture = WordStone.MakeStarTexture(32),
+            mainTexture = Own(WordStone.MakeStarTexture(32)),
             color = GoldStar
-        };
+        });
 
         UpdateLeader(1f);
     }
@@ -176,7 +264,7 @@ public class KeywordCard : MonoBehaviour
             _dot.transform.position = from;
             _dot.transform.rotation = transform.rotation;       // face the camera with the card
             var c = GoldStar; c.a = alpha;
-            _dot.material.color = c;
+            _dot.sharedMaterial.color = c;
         }
     }
 
@@ -194,7 +282,7 @@ public class KeywordCard : MonoBehaviour
         }
         transform.localScale = target;
         float life = 0;
-        while (life < 3.2f)                      // hold ~3 s, gentle float
+        while ((_action != null || life < 3.2f) && _stone != null && _stone.gameObject.activeInHierarchy)                      // hold ~3 s, gentle float
         {
             life += Time.deltaTime;
             transform.position += Vector3.up * Mathf.Sin(life * 2f)
@@ -212,10 +300,10 @@ public class KeywordCard : MonoBehaviour
 
     void Face()
     {
-        var cam = Camera.main;
+        var cam = _camera != null ? _camera : Camera.main;
         if (cam != null)
-            transform.rotation = Quaternion.LookRotation(
-                transform.position - cam.transform.position);
+            transform.rotation = _action != null ? cam.transform.rotation
+                : Quaternion.LookRotation(transform.position - cam.transform.position);
     }
 
     static Texture2D RoundedRect(int w, int h, int rad, Color fill, Color edge)

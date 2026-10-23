@@ -80,7 +80,14 @@ public class WordStone : MonoBehaviour
     /// </summary>
     [System.NonSerialized] public bool suppressCard;
 
+    // Optional house-board presentation; other paths keep their authored labels.
+    [System.NonSerialized] public float maxLabelWidth;
+    [System.NonSerialized] public bool labelAboveSurface;
+    [System.NonSerialized] public Camera labelCamera;
+
     TextMeshPro _tmp;
+    Renderer _surface;
+    Vector2 _labelSize;
     static Material _burstMat;
     static Texture2D _starTex, _dotTex;
 
@@ -92,6 +99,7 @@ public class WordStone : MonoBehaviour
 
     void BuildText()
     {
+        _surface = GetComponentInChildren<MeshRenderer>();
         var socket = transform.Find("SOCKET_Text");
         var go = new GameObject("WordText");
         go.transform.SetParent(socket != null ? socket : transform, false);
@@ -247,8 +255,7 @@ public class WordStone : MonoBehaviour
     {
         if (_tmp == null) return;
         _tmp.text = word + (endsSentence ? "." : "");
-        _tmp.color = isKeyword ? keywordTextColor : textColor;
-        Fit();
+        RefreshLabelStyle();
 
         // A key word announces itself the moment it has a word to be. Solved ones
         // stop: the star has taken over the job of saying so.
@@ -257,11 +264,19 @@ public class WordStone : MonoBehaviour
         if (mark && Application.isPlaying && keywordChime) Chime();
     }
 
+    public void RefreshLabelStyle()
+    {
+        if (_tmp == null) return;
+        _tmp.color = isKeyword ? keywordTextColor : textColor;
+        Fit();
+    }
+
     /// <summary>Grow the label's rect to whatever it currently says.</summary>
     void Fit()
     {
         if (_tmp == null) return;
         var pref = _tmp.GetPreferredValues();
+        _labelSize = pref;
         _tmp.rectTransform.sizeDelta = new Vector2(Mathf.Max(pref.x, 0.4f),
                                                    Mathf.Max(pref.y, 0.3f));
     }
@@ -321,6 +336,9 @@ public class WordStone : MonoBehaviour
         solved = false;
         suppressCard = false;
         token = null;
+        maxLabelWidth = 0f;
+        labelAboveSurface = false;
+        labelCamera = null;
         StopAllCoroutines();                 // a half-finished hop would strand the stone
         transform.localPosition = Vector3.zero;
         if (_tmp != null)
@@ -379,7 +397,7 @@ public class WordStone : MonoBehaviour
     void LateUpdate()
     {
         if (_tmp == null) return;
-        var cam = Camera.main;
+        var cam = labelCamera != null ? labelCamera : Camera.main;
         if (cam == null) return;
         // ON the stone: a fixed height above its actual TOP SURFACE, in world
         // metres, measured off the mesh.
@@ -390,9 +408,32 @@ public class WordStone : MonoBehaviour
         // word has been hanging in the sky over the river, out of frame, which is
         // the whole of "the stones show no text".
         float top = transform.position.y;
-        var mesh = GetComponentInChildren<Renderer>();
+        var mesh = _surface;
         if (mesh != null) top = mesh.bounds.max.y;
         Vector3 at = new Vector3(transform.position.x, top + wordHeight, transform.position.z);
+        float s = Mathf.Max(0.0001f, labelScale);
+        if (maxLabelWidth > 0f && _labelSize.x > 0f)
+            s = Mathf.Min(s, maxLabelWidth / _labelSize.x);
+        if (labelAboveSurface && !layFlat)
+        {
+            if (mesh != null)
+            {
+                // Centre on the visible stone, then lift along the viewing ray.
+                // This clears its surface without moving the word up into the
+                // dashboard bezel. Compensate scale to keep its projected size.
+                var centre = mesh.bounds.center;
+                var towardCamera = cam.transform.position - centre;
+                float halfHeight = _labelSize.y * s * 0.5f;
+                if (towardCamera.y > 0.05f)
+                {
+                    float lift = Mathf.Clamp((top + 0.025f - centre.y + halfHeight)
+                        / (towardCamera.y + halfHeight), 0f, 0.6f);
+                    at = centre + towardCamera * lift;
+                    s *= 1f - lift;
+                }
+                else at = new Vector3(centre.x, top + wordHeight + halfHeight, centre.z);
+            }
+        }
         _tmp.transform.position = at;
 
         if (layFlat)
@@ -408,8 +449,8 @@ public class WordStone : MonoBehaviour
         }
         else
         {
-            _tmp.transform.rotation = Quaternion.LookRotation(at - cam.transform.position,
-                                                             Vector3.up);
+            _tmp.transform.rotation = labelAboveSurface ? cam.transform.rotation
+                : Quaternion.LookRotation(at - cam.transform.position, Vector3.up);
         }
 
         // The WORD does not shrink with the stone. It is parented under the stone so
@@ -419,7 +460,6 @@ public class WordStone : MonoBehaviour
         // Cancel the inherited scale and hold the label at its authored size.
         var parent = _tmp.transform.parent;
         Vector3 inherited = parent != null ? parent.lossyScale : Vector3.one;
-        float s = Mathf.Max(0.0001f, labelScale);
         _tmp.transform.localScale = new Vector3(
             s / Mathf.Max(0.0001f, inherited.x),
             s / Mathf.Max(0.0001f, inherited.y),

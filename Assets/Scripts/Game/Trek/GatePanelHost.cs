@@ -90,7 +90,7 @@ namespace SReader.Game.Trek
             sheet.Add(TrekTheme.Title(fill ? "Forge the word" : "Define: " + token.text, 18));
             sheet.Add(TrekTheme.Sub(fill ? "Tap the letters to spell the hidden word." : "Arrange the definition in the right order."));
 
-            var preview = new Label();            // slot preview (fill only)
+            var preview = new Label { name = "gate-preview" };            // slot preview (fill only)
             if (fill)
             {
                 preview.style.fontSize = 24;
@@ -105,11 +105,11 @@ namespace SReader.Game.Trek
             clue.style.display = DisplayStyle.None;
             sheet.Add(clue);
 
-            var answerRow = WrapRow(); sheet.Add(answerRow);
+            var answerRow = WrapRow(); answerRow.name = "gate-answer"; sheet.Add(answerRow);
             var divider = TrekTheme.Sub(fill ? "Letters" : "Pieces", 11);
             divider.style.marginTop = 6;
             sheet.Add(divider);
-            var poolRow = WrapRow(); sheet.Add(poolRow);
+            var poolRow = WrapRow(); poolRow.name = "gate-pool"; sheet.Add(poolRow);
 
             var status = TrekTheme.Sub("");
             status.style.display = DisplayStyle.None;
@@ -122,7 +122,7 @@ namespace SReader.Game.Trek
                 if (!fill) return;
                 var slots = new List<string>(correct.Count);
                 for (int i = 0; i < correct.Count; i++)
-                    slots.Add(i < answer.Count ? answer[i].ToUpperInvariant() : "▢");
+                    slots.Add(i < answer.Count ? answer[i].ToUpperInvariant() : "_");
                 preview.text = string.Join(" ", slots);
             }
 
@@ -230,7 +230,7 @@ namespace SReader.Game.Trek
                 Rebuild();
             }
 
-            var actions = WrapRow();
+            var actions = WrapRow(); actions.name = "gate-actions";
             actions.style.marginTop = 10;
 
             actions.Add(TrekTheme.Primary("Check", () =>
@@ -356,7 +356,7 @@ namespace SReader.Game.Trek
                 clue.style.display = DisplayStyle.Flex;
             }
 
-            var actions = WrapRow();
+            var actions = WrapRow(); actions.name = "gate-actions";
             actions.style.marginTop = 10;
 
             hint = TrekTheme.Ghost(HintLabel(gate.HintsUsed), () =>
