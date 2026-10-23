@@ -1,0 +1,689 @@
+--- a/Assets/Scripts/WordStones.cs
++++ b/Assets/Scripts/WordStones.cs
+@@ -80,7 +80,14 @@
+     /// </summary>
+     [System.NonSerialized] public bool suppressCard;
+ 
++    // Optional house-board presentation; other paths keep their authored labels.
++    [System.NonSerialized] public float maxLabelWidth;
++    [System.NonSerialized] public bool labelAboveSurface;
++    [System.NonSerialized] public Camera labelCamera;
++
+     TextMeshPro _tmp;
++    Renderer _surface;
++    Vector2 _labelSize;
+     static Material _burstMat;
+     static Texture2D _starTex, _dotTex;
+ 
+@@ -92,6 +99,7 @@
+ 
+     void BuildText()
+     {
++        _surface = GetComponentInChildren<MeshRenderer>();
+         var socket = transform.Find("SOCKET_Text");
+         var go = new GameObject("WordText");
+         go.transform.SetParent(socket != null ? socket : transform, false);
+@@ -247,8 +255,7 @@
+     {
+         if (_tmp == null) return;
+         _tmp.text = word + (endsSentence ? "." : "");
+-        _tmp.color = isKeyword ? keywordTextColor : textColor;
+-        Fit();
++        RefreshLabelStyle();
+ 
+         // A key word announces itself the moment it has a word to be. Solved ones
+         // stop: the star has taken over the job of saying so.
+@@ -257,11 +264,19 @@
+         if (mark && Application.isPlaying && keywordChime) Chime();
+     }
+ 
++    public void RefreshLabelStyle()
++    {
++        if (_tmp == null) return;
++        _tmp.color = isKeyword ? keywordTextColor : textColor;
++        Fit();
++    }
++
+     /// <summary>Grow the label's rect to whatever it currently says.</summary>
+     void Fit()
+     {
+         if (_tmp == null) return;
+         var pref = _tmp.GetPreferredValues();
++        _labelSize = pref;
+         _tmp.rectTransform.sizeDelta = new Vector2(Mathf.Max(pref.x, 0.4f),
+                                                    Mathf.Max(pref.y, 0.3f));
+     }
+@@ -321,6 +336,9 @@
+         solved = false;
+         suppressCard = false;
+         token = null;
++        maxLabelWidth = 0f;
++        labelAboveSurface = false;
++        labelCamera = null;
+         StopAllCoroutines();                 // a half-finished hop would strand the stone
+         transform.localPosition = Vector3.zero;
+         if (_tmp != null)
+@@ -379,7 +397,7 @@
+     void LateUpdate()
+     {
+         if (_tmp == null) return;
+-        var cam = Camera.main;
++        var cam = labelCamera != null ? labelCamera : Camera.main;
+         if (cam == null) return;
+         // ON the stone: a fixed height above its actual TOP SURFACE, in world
+         // metres, measured off the mesh.
+@@ -390,9 +408,32 @@
+         // word has been hanging in the sky over the river, out of frame, which is
+         // the whole of "the stones show no text".
+         float top = transform.position.y;
+-        var mesh = GetComponentInChildren<Renderer>();
++        var mesh = _surface;
+         if (mesh != null) top = mesh.bounds.max.y;
+         Vector3 at = new Vector3(transform.position.x, top + wordHeight, transform.position.z);
++        float s = Mathf.Max(0.0001f, labelScale);
++        if (maxLabelWidth > 0f && _labelSize.x > 0f)
++            s = Mathf.Min(s, maxLabelWidth / _labelSize.x);
++        if (labelAboveSurface && !layFlat)
++        {
++            if (mesh != null)
++            {
++                // Centre on the visible stone, then lift along the viewing ray.
++                // This clears its surface without moving the word up into the
++                // dashboard bezel. Compensate scale to keep its projected size.
++                var centre = mesh.bounds.center;
++                var towardCamera = cam.transform.position - centre;
++                float halfHeight = _labelSize.y * s * 0.5f;
++                if (towardCamera.y > 0.05f)
++                {
++                    float lift = Mathf.Clamp((top + 0.025f - centre.y + halfHeight)
++                        / (towardCamera.y + halfHeight), 0f, 0.6f);
++                    at = centre + towardCamera * lift;
++                    s *= 1f - lift;
++                }
++                else at = new Vector3(centre.x, top + wordHeight + halfHeight, centre.z);
++            }
++        }
+         _tmp.transform.position = at;
+ 
+         if (layFlat)
+@@ -408,8 +449,8 @@
+         }
+         else
+         {
+-            _tmp.transform.rotation = Quaternion.LookRotation(at - cam.transform.position,
+-                                                             Vector3.up);
++            _tmp.transform.rotation = labelAboveSurface ? cam.transform.rotation
++                : Quaternion.LookRotation(at - cam.transform.position, Vector3.up);
+         }
+ 
+         // The WORD does not shrink with the stone. It is parented under the stone so
+@@ -419,7 +460,6 @@
+         // Cancel the inherited scale and hold the label at its authored size.
+         var parent = _tmp.transform.parent;
+         Vector3 inherited = parent != null ? parent.lossyScale : Vector3.one;
+-        float s = Mathf.Max(0.0001f, labelScale);
+         _tmp.transform.localScale = new Vector3(
+             s / Mathf.Max(0.0001f, inherited.x),
+             s / Mathf.Max(0.0001f, inherited.y),
+--- a/Assets/Scripts/KeywordCard.cs
++++ b/Assets/Scripts/KeywordCard.cs
+@@ -3,7 +3,9 @@
+ //  to the stone it belongs to.
+ //  (Own file so Unity can load it — one MonoBehaviour per file.)
+ // ===========================================================================
++using System;
+ using System.Collections;
++using System.Collections.Generic;
+ using UnityEngine;
+ using TMPro;
+ 
+@@ -28,28 +30,78 @@
+     LineRenderer _leader;
+     Transform _stone;
+     Renderer _dot;
++    Action _action;
++    Camera _camera;
++    Rect _buttonRect, _cardRect;
++    readonly List<UnityEngine.Object> _owned = new List<UnityEngine.Object>();
++    public static bool ActionOpen => _current != null && _current._action != null;
++
++    public static void Dismiss()
++    {
++        if (_current == null) return;
++        _current.gameObject.SetActive(false);
++        Destroy(_current.gameObject);
++        _current = null;
++    }
++
++    // The earlier Word Path callout remains unchanged. The house adds an explicit
++    // action instead of opening a puzzle before the student has read the card.
++    public static void ShowAction(string word, Transform stone, string action, Action onAction, Camera camera)
++    {
++        Dismiss();
++        var go = new GameObject("KeywordCard");
++        _current = go.AddComponent<KeywordCard>();
++        _current._action = onAction;
++        _current._camera = camera;
++        _current.Build(word, stone, action);
++    }
++
++    /// <summary>Route a house tap before the rug; outside taps dismiss the card.</summary>
++    public static bool HandleTap(Vector2 point, Camera camera)
++    {
++        if (!ActionOpen) return false;
++        var card = _current;
++        var ray = camera.ScreenPointToRay(point);
++        var plane = new Plane(card.transform.forward, card.transform.position);
++        if (!plane.Raycast(ray, out float distance)) { Dismiss(); return true; }
++        Vector3 local = card.transform.InverseTransformPoint(ray.GetPoint(distance));
++        var xy = new Vector2(local.x, local.y);
++        if (card._buttonRect.Contains(xy))
++        {
++            var action = card._action;
++            Dismiss();
++            action?.Invoke();
++        }
++        else if (!card._cardRect.Contains(xy)) Dismiss();
++        return true;
++    }
++
++    T Own<T>(T resource) where T : UnityEngine.Object { _owned.Add(resource); return resource; }
++    void OnDestroy() { foreach (var resource in _owned) if (resource != null) Destroy(resource); }
++
+     float _halfHeight = 0.3f;       // measured, so the leader meets the real edge
+ 
+     public static void Show(string word, Transform stone)
+     {
+-        if (_current != null) Destroy(_current.gameObject);
++        Dismiss();
+         var go = new GameObject("KeywordCard");
+         _current = go.AddComponent<KeywordCard>();
+         _current.Build(word, stone);
+     }
+ 
+-    void Build(string word, Transform stone)
++    void Build(string word, Transform stone, string action = null)
+     {
+         // world-space card floating above the stone, always facing camera.
+         // Sits well clear of the stone's own word label so the two never crowd.
+-        transform.position = stone.position + Vector3.up * 1.5f
+-                             + Vector3.right * 0.25f;
++        var cam = _camera != null ? _camera : Camera.main;
++        transform.position = stone.position + Vector3.up * (action != null ? 1.05f : 1.5f)
++                             + (cam != null ? cam.transform.right : Vector3.right) * 0.18f;
+ 
+         // 1. the word FIRST — everything else is measured from it
+         var txt = new GameObject("Word").AddComponent<TextMeshPro>();
+         txt.transform.SetParent(transform, false);
+         txt.text = string.IsNullOrEmpty(word) ? " " : word;
+-        txt.fontSize = WordFont;
++        txt.fontSize = action != null ? 3.2f : WordFont;
+         txt.fontStyle = FontStyles.Bold;
+         txt.color = new Color(0.35f, 0.22f, 0.05f);
+         txt.alignment = TextAlignmentOptions.Center;
+@@ -59,25 +111,31 @@
+         Vector2 wordSize = txt.GetPreferredValues();
+         if (wordSize.x > MaxWidth)                    // very long word: shrink it to fit
+         {
+-            txt.fontSize = WordFont * (MaxWidth / wordSize.x);
++            txt.fontSize *= MaxWidth / wordSize.x;
+             wordSize = txt.GetPreferredValues();
+         }
+         txt.rectTransform.sizeDelta = wordSize;
++        txt.renderer.sortingOrder = 102;
+ 
+         var tag = new GameObject("Tag").AddComponent<TextMeshPro>();
+         tag.transform.SetParent(transform, false);
+-        tag.text = "key word";
+-        tag.fontSize = TagFont;
++        tag.text = action != null ? "KEY WORD" : "key word";
++        tag.fontSize = action != null ? 1.3f : TagFont;
+         tag.color = new Color(0.45f, 0.30f, 0.10f);
+         tag.alignment = TextAlignmentOptions.Center;
+         tag.textWrappingMode = TextWrappingModes.NoWrap;
+         Vector2 tagSize = tag.GetPreferredValues();
+         tag.rectTransform.sizeDelta = tagSize;
++        tag.renderer.sortingOrder = 102;
+ 
+         // 2. the card, grown around them
+         float w = Mathf.Max(wordSize.x, tagSize.x) + PadX * 2f;
+-        float h = wordSize.y + TagGap + tagSize.y + PadY * 2f;
++        float buttonHeight = action != null ? 0.38f : 0f;
++        float actionSpace = action != null ? buttonHeight + 0.10f : 0f;
++        if (action != null) w = Mathf.Max(w, 1.9f);
++        float h = wordSize.y + TagGap + tagSize.y + PadY * 2f + actionSpace;
+         _halfHeight = h * 0.5f;
++        _cardRect = new Rect(-w * 0.5f, -h * 0.5f, w, h);
+ 
+         // gold rounded panel (a scaled quad with generated rounded-rect tex)
+         var panel = GameObject.CreatePrimitive(PrimitiveType.Quad);
+@@ -91,15 +149,43 @@
+         // however wide the word made it
+         int th = 128;
+         int tw = Mathf.Clamp(Mathf.RoundToInt(th * (w / h)), 48, 1024);
+-        var pm = new Material(sh) { mainTexture = RoundedRect(
+-            tw, th, Mathf.RoundToInt(Mathf.Min(tw, th) * 0.22f), GoldFill, GoldEdge) };
+-        pr.material = pm;
++        var pm = Own(new Material(sh));
++        pm.mainTexture = Own(RoundedRect(tw, th, Mathf.RoundToInt(Mathf.Min(tw, th) * 0.22f), GoldFill, GoldEdge));
++        pr.sharedMaterial = pm;
++        pr.sortingOrder = 100;
+ 
+         // 3. place the contents inside the measured card
+         txt.transform.localPosition =
+             new Vector3(0f, h * 0.5f - PadY - wordSize.y * 0.5f, -0.01f);
+         tag.transform.localPosition =
+-            new Vector3(0f, -h * 0.5f + PadY + tagSize.y * 0.5f, -0.01f);
++            new Vector3(0f, -h * 0.5f + PadY + actionSpace + tagSize.y * 0.5f, -0.01f);
++
++        if (action != null)
++        {
++            float by = -h * 0.5f + PadY + buttonHeight * 0.5f;
++            _buttonRect = new Rect(-w * 0.5f + 0.12f, by - buttonHeight * 0.5f, w - 0.24f, buttonHeight);
++            var button = GameObject.CreatePrimitive(PrimitiveType.Quad);
++            Destroy(button.GetComponent<Collider>());
++            button.name = "Keyword Action";
++            button.transform.SetParent(transform, false);
++            button.transform.localPosition = new Vector3(0f, by, -0.02f);
++            button.transform.localScale = new Vector3(_buttonRect.width, buttonHeight, 1f);
++            var material = Own(new Material(sh));
++            material.mainTexture = Own(RoundedRect(512, 96, 22, new Color32(27, 46, 89, 255), GoldEdge));
++            button.GetComponent<Renderer>().sharedMaterial = material;
++            button.GetComponent<Renderer>().sortingOrder = 101;
++            var label = new GameObject("Action Label").AddComponent<TextMeshPro>();
++            label.transform.SetParent(transform, false);
++            label.transform.localPosition = new Vector3(0f, by, -0.03f);
++            label.text = action;
++            label.fontSize = 2.4f;
++            label.renderer.sortingOrder = 102;
++            label.fontStyle = FontStyles.Bold;
++            label.color = new Color32(255, 235, 173, 255);
++            label.alignment = TextAlignmentOptions.Center;
++            label.textWrappingMode = TextWrappingModes.NoWrap;
++            label.rectTransform.sizeDelta = new Vector2(_buttonRect.width, buttonHeight);
++        }
+ 
+         var star = GameObject.CreatePrimitive(PrimitiveType.Quad);
+         Destroy(star.GetComponent<Collider>());
+@@ -108,10 +194,11 @@
+         star.transform.localPosition = new Vector3(0f, h * 0.5f + 0.05f, -0.012f);
+         star.transform.localScale = Vector3.one * 0.26f;
+         var sr2 = star.GetComponent<Renderer>();
+-        var sm2 = new Material(Shader.Find("Sprites/Default"));
+-        sm2.mainTexture = WordStone.MakeStarTexture(64);
++        var sm2 = Own(new Material(Shader.Find("Sprites/Default")));
++        sm2.mainTexture = Own(WordStone.MakeStarTexture(64));
+         sm2.color = GoldStar;
+-        sr2.material = sm2;
++        sr2.sharedMaterial = sm2;
++        sr2.sortingOrder = 101;
+ 
+         BuildLeader(stone);
+         StartCoroutine(Life());
+@@ -135,8 +222,9 @@
+         _leader.receiveShadows = false;
+         _leader.widthCurve = AnimationCurve.Linear(0f, 0.035f, 1f, 0.018f);  // thick at the stone, fine at the card
+ 
+-        var mat = new Material(Shader.Find("Sprites/Default"));
+-        _leader.material = mat;
++        var mat = Own(new Material(Shader.Find("Sprites/Default")));
++        _leader.sharedMaterial = mat;
++        _leader.sortingOrder = 99;
+         _leader.colorGradient = new Gradient
+         {
+             colorKeys = new[] { new GradientColorKey(GoldEdge, 0f), new GradientColorKey(GoldFill, 1f) },
+@@ -149,11 +237,11 @@
+         dot.transform.SetParent(transform, false);
+         dot.transform.localScale = Vector3.one * 0.16f;
+         _dot = dot.GetComponent<Renderer>();
+-        _dot.material = new Material(Shader.Find("Sprites/Default"))
+-        {
+-            mainTexture = WordStone.MakeStarTexture(32),
++        _dot.sharedMaterial = Own(new Material(Shader.Find("Sprites/Default"))
++        {
++            mainTexture = Own(WordStone.MakeStarTexture(32)),
+             color = GoldStar
+-        };
++        });
+ 
+         UpdateLeader(1f);
+     }
+@@ -176,7 +264,7 @@
+             _dot.transform.position = from;
+             _dot.transform.rotation = transform.rotation;       // face the camera with the card
+             var c = GoldStar; c.a = alpha;
+-            _dot.material.color = c;
++            _dot.sharedMaterial.color = c;
+         }
+     }
+ 
+@@ -194,7 +282,7 @@
+         }
+         transform.localScale = target;
+         float life = 0;
+-        while (life < 3.2f)                      // hold ~3 s, gentle float
++        while ((_action != null || life < 3.2f) && _stone != null && _stone.gameObject.activeInHierarchy)                      // hold ~3 s, gentle float
+         {
+             life += Time.deltaTime;
+             transform.position += Vector3.up * Mathf.Sin(life * 2f)
+@@ -212,10 +300,10 @@
+ 
+     void Face()
+     {
+-        var cam = Camera.main;
++        var cam = _camera != null ? _camera : Camera.main;
+         if (cam != null)
+-            transform.rotation = Quaternion.LookRotation(
+-                transform.position - cam.transform.position);
++            transform.rotation = _action != null ? cam.transform.rotation
++                : Quaternion.LookRotation(transform.position - cam.transform.position);
+     }
+ 
+     static Texture2D RoundedRect(int w, int h, int rad, Color fill, Color edge)
+--- a/Assets/Scripts/Game/ReadingHouse/MatStoneBoard.cs
++++ b/Assets/Scripts/Game/ReadingHouse/MatStoneBoard.cs
+@@ -61,7 +61,7 @@
+ 
+         float StoneWidth(string word) => stoneWidth;
+         /// <summary>Label size for a word: as large as labelScale allows while it still fits on its stone.</summary>
+-        float LabelFor(string word) => Mathf.Min(labelScale, stoneWidth * 1.05f / Mathf.Max(0.1f, word.Length * 0.12f));
++        float LabelFor(string word) => labelScale;
+ 
+         /// <summary>Row centres along the rug, far (dashboard side) to near, stopping short of the student.</summary>
+         List<Vector3> Rows(out float halfWidth)
+@@ -129,8 +129,15 @@
+                 var ws = pool.Take(words[word], isKey(word), false, true);
+                 if (ws == null) break;
+                 ws.labelScale = LabelFor(words[word]);
++                ws.maxLabelWidth = w + gap * 0.6f;
++                ws.labelAboveSurface = true;
++                ws.labelCamera = viewCamera;
++                ws.wordHeight = 0.075f;
++                ws.textColor = new Color32(24, 38, 63, 255);
++                ws.keywordTextColor = new Color32(42, 34, 19, 255);
+                 ws.layFlat = !wordsStandUp;
+                 ws.suppressCard = true;
++                ws.RefreshLabelStyle();
+                 var slot = ws.GetComponentInParent<StoneSlot>();
+                 float scale = w / Mathf.Max(0.05f, UnitWidth(ws));                 // each stone variant measured on its own
+                 var centre = rows[row] + right * (px + w * 0.5f - rowWidth[row] * 0.5f);
+--- a/Assets/Scripts/Game/ReadingHouse/ReadingHousePresenter.cs
++++ b/Assets/Scripts/Game/ReadingHouse/ReadingHousePresenter.cs
+@@ -197,9 +197,22 @@
+         static bool Solved(GateData g) => g.State == GateState.SolvedGold || g.State == GateState.SolvedSilver || g.State == GateState.SolvedBronze;
+ 
+         /// <summary>Open a key word's activity (only the word the session is at, as in the Classroom).</summary>
+-        void TryOpenGate(GateData gate)
++        void TryOpenGate(GateData gate, WordStone source = null)
+         {
+             if (session == null || Host == null || AttemptUIOpen || submitting) return;
++            if (source != null)
++            {
++                source.token = gate.ChallengePayload as ContentToken;
++                string action = gate.Type == GateType.Define ? "Define"
++                    : gate.Type == GateType.Illustrate ? "Illustrate" : "Fill the word";
++                KeywordCard.ShowAction(gate.Word, source.transform, action, () =>
++                {
++                    // Revalidate the real session when the student chooses the action.
++                    if (this != null && source != null && source.gameObject.activeInHierarchy)
++                        TryOpenGate(gate);
++                }, matStones.viewCamera);
++                return;
++            }
+             if (Solved(gate)) { Say($"“{gate.Word}” is already restored in gold!"); return; }
+             var current = session.ActiveGate ?? session.ArriveAtGate();
+             if (current != gate)
+@@ -208,6 +221,7 @@
+                 RefreshTray();
+                 return;
+             }
++            KeywordCard.Dismiss();
+             if (encourager != null) encourager.GoodPick();
+             activity.Open(Host, gate, new GatePanelHost.Hooks
+             {
+@@ -233,6 +247,22 @@
+             var overlay = host[host.childCount - 1];
+             if (overlay.childCount == 0) return;
+             var sheet = overlay[0];
++            if (dashboardScreen != null && dashboardScreen.IsOpen)
++            {
++                string context = "";
++                if (gate.SentenceIndex >= 0 && gate.SentenceIndex < trail.Sentences.Count)
++                {
++                    var span = trail.Sentences[gate.SentenceIndex];
++                    context = trail.PassageText.Substring(span.Start, span.Length);
++                    if (gate.Type == GateType.Fill)
++                    {
++                        int offset = gate.PassageCharIndex - span.Start;
++                        context = context.Substring(0, offset) + "____" + context.Substring(offset + gate.Word.Length);
++                    }
++                }
++                dashboardScreen.PresentActivity(sheet, context);
++                return;
++            }
+             sheet.style.maxHeight = Length.Percent(80);
+             var scroll = new ScrollView(ScrollViewMode.Vertical); scroll.style.flexShrink = 1;
+             var children = new List<VisualElement>(sheet.Children());
+@@ -258,6 +288,7 @@
+         public void OpenReader()
+         {
+             if (!CanRead) return;
++            KeywordCard.Dismiss();
+             session.PauseTimer();
+             reader.Open(Host, trail, session.CurrentSentenceIndex, () => { session.ResumeTimer(); FocusDisplay(false); }, classroomMode: true);
+             FocusDisplay(true);
+@@ -295,6 +326,7 @@
+         /// <summary>Back while an activity or the reader is open closes it first (true = handled).</summary>
+         bool CloseAttemptUI()
+         {
++            if (KeywordCard.ActionOpen) { KeywordCard.Dismiss(); return true; }
+             if (reader.IsOpen) { reader.Close(() => session?.ResumeTimer()); FocusDisplay(false); return true; }
+             if (activity.IsOpen) { activity.Close(); Save(); RefreshTray(); FocusDisplay(false); return true; }
+             return false;
+@@ -323,6 +355,7 @@
+ 
+         void CloseDashboardScreen()
+         {
++            KeywordCard.Dismiss();
+             if (dashboardScreen == null || !dashboardScreen.IsOpen) return;
+             CloseAttemptUI();
+             dashboardScreen.Close();
+@@ -335,7 +368,7 @@
+             stone.Clicked();                                   // its own feedback: gold burst for a key word, a puff otherwise
+             if (dashboardScreen != null && !dashboardScreen.IsOpen) { Say("Tap the dashboard to start reading — then tap the glowing stones."); return; }
+             var gate = GateInWord(wordIndex);
+-            if (gate != null && liveVm != null) TryOpenGate(gate);
++            if (gate != null && liveVm != null) TryOpenGate(gate, stone);
+         }
+ 
+         public void NextPage() { if (page < pageStarts.Count - 1) { page++; RefreshTray(); } }
+@@ -350,6 +383,7 @@
+ 
+         void OnDestroy()
+         {
++            KeywordCard.Dismiss();
+             if (session != null) Save();
+             activity.Close(); reader.Close();
+         }
+@@ -536,6 +570,7 @@
+ 
+         void RefreshTray()
+         {
++            KeywordCard.Dismiss();
+             if (trail == null || pageStarts.Count == 0) { tray.HideAll(); return; }
+             int start = pageStarts[page];
+             int end = page + 1 < pageStarts.Count ? pageStarts[page + 1] : words.Count;
+--- a/Assets/Scripts/Game/ReadingHouse/ReadingHouseInput.cs
++++ b/Assets/Scripts/Game/ReadingHouse/ReadingHouseInput.cs
+@@ -72,6 +72,7 @@
+             if (cameraRig != null && cameraRig.IsMoving) return;
+             if (director != null && director.OverlayOpen) return;            // the sign-in card / the board has the input
+             if (director != null && director.hud != null && director.hud.KnobBusy) return;   // that was the board knob
++            if (KeywordCard.HandleTap(screenPosition, viewCamera)) return;
+             if (presenter.AttemptUIOpen) return;                                           // a word activity / the reader has the input
+             // The Word Path stones on the rug have trigger colliders (the student walks over them): look for one first.
+             var ray = viewCamera.ScreenPointToRay(screenPosition);
+--- a/Assets/Scripts/Game/ReadingHouse/DashboardScreen.cs
++++ b/Assets/Scripts/Game/ReadingHouse/DashboardScreen.cs
+@@ -95,12 +95,108 @@
+             prev.SetEnabled(canPrev); next.SetEnabled(canNext);
+         }
+ 
++        /// <summary>Keep the action row fixed; only the challenge body scrolls.</summary>
++        public void PresentActivity(VisualElement sheet, string sentence)
++        {
++            sheet.AddToClassList("rh-activity");
++            sheet.style.height = Length.Percent(94);
++            sheet.style.minHeight = 0;
++            sheet.style.flexShrink = 0;
++            sheet.style.paddingTop = sheet.style.paddingBottom = 12;
++            sheet.style.paddingLeft = sheet.style.paddingRight = 18;
++
++            var footer = sheet.Q<VisualElement>("gate-actions");
++            footer?.RemoveFromHierarchy();
++            var body = new ScrollView(ScrollViewMode.Vertical) { name = "rh-activity-body" };
++            body.style.flexGrow = 1;
++            body.style.flexShrink = 1;
++            body.style.minHeight = 0;
++            body.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
++            body.verticalScrollerVisibility = ScrollerVisibility.Auto;
++            var children = new System.Collections.Generic.List<VisualElement>(sheet.Children());
++            foreach (var child in children) { child.style.flexShrink = 0; body.Add(child); }
++            if (!string.IsNullOrWhiteSpace(sentence))
++            {
++                var context = new Label(sentence) { name = "rh-activity-context" };
++                context.style.whiteSpace = WhiteSpace.Normal;
++                context.style.fontSize = 15;
++                context.style.color = Cream;
++                context.style.marginBottom = 8;
++                context.style.flexShrink = 0;
++                body.Insert(0, context);
++            }
++            // A single compact heading replaces three stacked header rows.
++            if (children.Count >= 3 && footer != null)
++            {
++                children[0].RemoveFromHierarchy();
++                var heading = new VisualElement { name = "rh-challenge-heading" };
++                heading.style.flexDirection = FlexDirection.Row;
++                heading.style.alignItems = Align.Center;
++                heading.style.flexWrap = Wrap.Wrap;
++                heading.style.flexShrink = 0;
++                heading.style.marginBottom = 6;
++                children[1].style.fontSize = 20;
++                children[2].style.fontSize = 14;
++                children[2].style.marginLeft = 18;
++                heading.Add(children[1]); heading.Add(children[2]);
++                body.Insert(string.IsNullOrWhiteSpace(sentence) ? 0 : 1, heading);
++            }
++            body.Query<Label>().ForEach(l =>
++            {
++                l.style.marginTop = 0; l.style.marginBottom = 4;
++                l.style.paddingTop = l.style.paddingBottom = 0;
++                l.style.paddingLeft = l.style.paddingRight = 0;
++            });
++            sheet.Add(body);
++            if (footer != null)
++            {
++                footer.style.flexShrink = 0;
++                footer.style.marginTop = 8;
++                footer.style.paddingTop = 6;
++                footer.style.borderTopWidth = 1;
++                footer.style.borderTopColor = new Color(Gold.r, Gold.g, Gold.b, 0.35f);
++                sheet.Add(footer);
++            }
++            sheet.Query<Button>().ForEach(b =>
++            {
++                b.style.minHeight = 48;
++                b.style.minWidth = 48;
++                b.style.fontSize = 19;
++                b.style.whiteSpace = WhiteSpace.Normal;
++                b.style.flexShrink = 0;
++            });
++            var bar = body.verticalScroller;
++            bar.style.width = 8;
++            bar.lowButton.style.display = bar.highButton.style.display = DisplayStyle.None;
++            var track = bar.slider.Q("unity-tracker");
++            var thumb = bar.slider.Q("unity-dragger");
++            if (track != null) { track.style.backgroundColor = NavyDeep; Round(track, 4); }
++            if (thumb != null) { thumb.style.backgroundColor = StoneEdge; Round(thumb, 4); }
++        }
++
++        static void RefreshActivityLayout(VisualElement overlay)
++        {
++            var sheet = overlay.Q(className: "rh-activity");
++            if (sheet == null) return;
++            // The preview and the answer chips used to repeat the same letters,
++            // consuming another row. Keep the tappable answer once it has pieces.
++            var preview = sheet.Q<Label>("gate-preview");
++            var answer = sheet.Q("gate-answer");
++            if (preview != null && answer != null)
++            {
++                bool hasAnswer = answer.childCount > 0;
++                preview.style.display = hasAnswer ? DisplayStyle.None : DisplayStyle.Flex;
++                preview.style.fontSize = 24;
++                answer.style.marginTop = hasAnswer ? 6 : 0;
++            }
++        }
++
+         void LateUpdate()
+         {
+             // The activities rebuild their pieces as the student plays: keep recolouring what appears.
+             if (Host == null || Host.childCount == 0 || Time.unscaledTime < nextStyle) return;
+             nextStyle = Time.unscaledTime + 0.1f;
+-            foreach (var overlay in Host.Children()) Restyle(overlay, top: true);
++            foreach (var overlay in Host.Children()) { Restyle(overlay, top: true); RefreshActivityLayout(overlay); }
+         }
+ 
+         /// <summary>The light Trek card look → the dashboard's game palette (only TrekTheme's own colours are changed).</summary>
+--- a/Assets/Scripts/Game/Trek/GatePanelHost.cs
++++ b/Assets/Scripts/Game/Trek/GatePanelHost.cs
+@@ -91,7 +91,7 @@
+             sheet.Add(TrekTheme.Title(fill ? "Forge the word" : "Define: " + token.text, 18));
+             sheet.Add(TrekTheme.Sub(fill ? "Tap the letters to spell the hidden word." : "Arrange the definition in the right order."));
+ 
+-            var preview = new Label();            // slot preview (fill only)
++            var preview = new Label { name = "gate-preview" };            // slot preview (fill only)
+             if (fill)
+             {
+                 preview.style.fontSize = 24;
+@@ -106,11 +106,11 @@
+             clue.style.display = DisplayStyle.None;
+             sheet.Add(clue);
+ 
+-            var answerRow = WrapRow(); sheet.Add(answerRow);
++            var answerRow = WrapRow(); answerRow.name = "gate-answer"; sheet.Add(answerRow);
+             var divider = TrekTheme.Sub(fill ? "Letters" : "Pieces", 11);
+             divider.style.marginTop = 6;
+             sheet.Add(divider);
+-            var poolRow = WrapRow(); sheet.Add(poolRow);
++            var poolRow = WrapRow(); poolRow.name = "gate-pool"; sheet.Add(poolRow);
+ 
+             var status = TrekTheme.Sub("");
+             status.style.display = DisplayStyle.None;
+@@ -123,7 +123,7 @@
+                 if (!fill) return;
+                 var slots = new List<string>(correct.Count);
+                 for (int i = 0; i < correct.Count; i++)
+-                    slots.Add(i < answer.Count ? answer[i].ToUpperInvariant() : "▢");
++                    slots.Add(i < answer.Count ? answer[i].ToUpperInvariant() : "_");
+                 preview.text = string.Join(" ", slots);
+             }
+ 
+@@ -231,7 +231,7 @@
+                 Rebuild();
+             }
+ 
+-            var actions = WrapRow();
++            var actions = WrapRow(); actions.name = "gate-actions";
+             actions.style.marginTop = 10;
+ 
+             actions.Add(TrekTheme.Primary("Check", () =>
+@@ -358,7 +358,7 @@
+                 clue.style.display = DisplayStyle.Flex;
+             }
+ 
+-            var actions = WrapRow();
++            var actions = WrapRow(); actions.name = "gate-actions";
+             actions.style.marginTop = 10;
+ 
+             hint = TrekTheme.Ghost(HintLabel(gate.HintsUsed), () =>

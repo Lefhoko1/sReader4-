@@ -1,0 +1,36 @@
+01_exterior signedIn=True sampleAllowed=False batches/drawCalls=383 setPass=61 triangles=100787 editorFrame=25,98ms
+02_follow_inside signedIn=True sampleAllowed=False batches/drawCalls=202 setPass=48 triangles=63183 editorFrame=5,51ms
+05_chalkboard signedIn=True sampleAllowed=False batches/drawCalls=53 setPass=21 triangles=8974 editorFrame=5,06ms
+PASS all live word labels centred on their stones in screen space
+03_reading signedIn=True sampleAllowed=False batches/drawCalls=295 setPass=71 triangles=81330 editorFrame=5,20ms
+06_keyword_card signedIn=True sampleAllowed=False batches/drawCalls=304 setPass=80 triangles=81448 editorFrame=5,65ms
+PASS keyword tap opens its card before the activity
+Keyword action: Fill the word
+PASS keyword action tap opens the real activity
+04_activity signedIn=True sampleAllowed=False batches/drawCalls=153 setPass=34 triangles=49116 editorFrame=6,33ms
+PASS activity footer visible: (x:55.34, y:260.91, width:1039.31, height:58.94), display (x:0.00, y:0.00, width:1150.00, height:345.00)
+LABEL Titration preferred=(0.67, 0.18) world=(0.61, 0.11, 0.00) position=(1.92, 0.67, 0.20)
+LABEL is preferred=(0.13, 0.18) world=(0.12, 0.12, 0.00) position=(1.16, 0.65, 0.18)
+LABEL a preferred=(0.09, 0.18) world=(0.09, 0.09, 0.00) position=(0.39, 0.66, 0.18)
+LABEL laboratory preferred=(0.82, 0.18) world=(0.70, 0.14, 0.00) position=(-0.38, 0.66, 0.19)
+LABEL method preferred=(0.60, 0.18) world=(0.54, 0.12, 0.00) position=(-1.15, 0.65, 0.18)
+LABEL used preferred=(0.39, 0.18) world=(0.35, 0.12, 0.00) position=(-1.92, 0.66, 0.18)
+LABEL to preferred=(0.15, 0.18) world=(0.14, 0.10, 0.00) position=(1.92, 0.66, 0.76)
+LABEL determine preferred=(0.81, 0.18) world=(0.71, 0.11, 0.00) position=(1.16, 0.64, 0.74)
+LABEL the preferred=(0.25, 0.18) world=(0.23, 0.12, 0.00) position=(0.39, 0.66, 0.74)
+LABEL concentration preferred=(1.10, 0.18) world=(0.71, 0.08, 0.00) position=(-0.38, 0.65, 0.74)
+LABEL of preferred=(0.15, 0.18) world=(0.15, 0.12, 0.00) position=(-1.15, 0.65, 0.75)
+LABEL an preferred=(0.19, 0.18) world=(0.17, 0.09, 0.00) position=(-1.92, 0.66, 0.74)
+LABEL identified preferred=(0.75, 0.18) world=(0.68, 0.11, 0.00) position=(1.92, 0.66, 1.33)
+LABEL analyte preferred=(0.59, 0.18) world=(0.54, 0.14, 0.01) position=(1.16, 0.65, 1.32)
+LABEL by preferred=(0.18, 0.18) world=(0.17, 0.14, 0.01) position=(0.39, 0.66, 1.31)
+LABEL gradually preferred=(0.74, 0.18) world=(0.68, 0.14, 0.01) position=(-0.38, 0.66, 1.33)
+LABEL adding preferred=(0.54, 0.18) world=(0.49, 0.14, 0.01) position=(-1.15, 0.65, 1.32)
+LABEL a preferred=(0.09, 0.18) world=(0.09, 0.09, 0.00) position=(-1.92, 0.66, 1.31)
+Real gates: Titration:Define:SolvedGold, concentration:Fill:Active, concentration:Illustrate:SolvedGold
+08_activity_selected signedIn=True sampleAllowed=False batches/drawCalls=157 setPass=34 triangles=49087 editorFrame=5,27ms
+PASS letter selected through dashboard screen-to-panel mapping
+PASS selected letter returned; no score awarded
+07_define_card signedIn=True sampleAllowed=False batches/drawCalls=304 setPass=84 triangles=81421 editorFrame=5,56ms
+PASS real Define keyword card; Back dismisses without leaving reading
+PASS outside tap and sentence refresh dismiss the card; real score unchanged

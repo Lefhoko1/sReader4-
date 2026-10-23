@@ -1,0 +1,5 @@
+Result Succeeded, 13 errors, 24 warnings, size 2424,1 MB, time 15:04, output C:/Users/11113930/sReader4/GeneratedAssets/ReadingHouseUnity/build/sReader_ReadingHouse_Test.apk
+Actual APK bytes: 314129550
+Actual APK MiB: 299.6
+SHA256: 0caec1839e8f3e42fb4db240a6471821173e3a329c6e6a4005278a9651ae5c86
+ZIP CRC: PASS

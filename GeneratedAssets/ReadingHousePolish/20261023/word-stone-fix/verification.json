@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "live_checks": [
+    "PASS all live word labels centred on their stones in screen space",
+    "PASS keyword tap opens its card before the activity",
+    "PASS keyword action tap opens the real activity",
+    "PASS activity footer visible: (x:55.34, y:260.91, width:1039.31, height:58.94), display (x:0.00, y:0.00, width:1150.00, height:345.00)",
+    "PASS letter selected through dashboard screen-to-panel mapping",
+    "PASS selected letter returned; no score awarded",
+    "PASS real Define keyword card; Back dismisses without leaving reading",
+    "PASS outside tap and sentence refresh dismiss the card; real score unchanged"
+  ],
+  "screenshots": 8,
+  "untouched_protected_files_checked": 3059,
+  "failures": []
+}
