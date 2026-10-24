@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &748500147970069930
+--- !u!1 &1240926328650327701
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9056527241084224954}
-  - component: {fileID: 6642515686621332216}
+  - component: {fileID: 6901149424343212291}
+  - component: {fileID: 4579479591504332870}
   m_Layer: 0
   m_Name: Light_Candle
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9056527241084224954
+--- !u!4 &6901149424343212291
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748500147970069930}
+  m_GameObject: {fileID: 1240926328650327701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5693719331496449600}
+  m_Father: {fileID: 4662054393743155695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &6642515686621332216
+--- !u!108 &4579479591504332870
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748500147970069930}
+  m_GameObject: {fileID: 1240926328650327701}
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 2
@@ -97,7 +97,7 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1 &4240327697760656469
+--- !u!1 &4476290870059521279
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,8 +105,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1635053059614386662}
-  - component: {fileID: 4053405285635101000}
+  - component: {fileID: 216176297731756053}
+  - component: {fileID: 4767222928746227816}
   m_Layer: 0
   m_Name: Light_Candle
   m_TagString: Untagged
@@ -114,28 +114,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1635053059614386662
+--- !u!4 &216176297731756053
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4240327697760656469}
+  m_GameObject: {fileID: 4476290870059521279}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2354746156657581062}
+  m_Father: {fileID: 5417170262771528360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &4053405285635101000
+--- !u!108 &4767222928746227816
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4240327697760656469}
+  m_GameObject: {fileID: 4476290870059521279}
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 2
@@ -194,7 +194,7 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1 &4808135330112201975
+--- !u!1 &6930153327906009778
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,8 +202,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 385695620241196539}
-  - component: {fileID: 1062415381578012757}
+  - component: {fileID: 7494171601444077753}
+  - component: {fileID: 1982414788979200991}
   m_Layer: 0
   m_Name: Light_Candle
   m_TagString: Untagged
@@ -211,28 +211,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &385695620241196539
+--- !u!4 &7494171601444077753
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808135330112201975}
+  m_GameObject: {fileID: 6930153327906009778}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3112808975747829569}
+  m_Father: {fileID: 2631295225097238766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &1062415381578012757
+--- !u!108 &1982414788979200991
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4808135330112201975}
+  m_GameObject: {fileID: 6930153327906009778}
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 2
@@ -291,7 +291,7 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1001 &5211060171291279288
+--- !u!1001 &2580981627492782358
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -339,10 +339,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: dca42b5e6c3e18b4b8e663851638c9c3, type: 2}
     - target: {fileID: 919132149155446097, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
       propertyPath: m_Name
       value: P_Candle_Cluster_01
@@ -356,27 +352,27 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7161722694610219257, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 385695620241196539}
+      addedObject: {fileID: 6901149424343212291}
     - targetCorrespondingSourceObject: {fileID: -1658210068119018562, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1635053059614386662}
+      addedObject: {fileID: 216176297731756053}
     - targetCorrespondingSourceObject: {fileID: -8694973079083914760, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9056527241084224954}
+      addedObject: {fileID: 7494171601444077753}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
---- !u!4 &2354746156657581062 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1658210068119018562, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
-  m_PrefabInstance: {fileID: 5211060171291279288}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3112808975747829569 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7161722694610219257, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
-  m_PrefabInstance: {fileID: 5211060171291279288}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5693719331496449600 stripped
+--- !u!4 &2631295225097238766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8694973079083914760, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
-  m_PrefabInstance: {fileID: 5211060171291279288}
+  m_PrefabInstance: {fileID: 2580981627492782358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4662054393743155695 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7161722694610219257, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
+  m_PrefabInstance: {fileID: 2580981627492782358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5417170262771528360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1658210068119018562, guid: e92bd3ecaeaaf2947beedeae273d0b15, type: 3}
+  m_PrefabInstance: {fileID: 2580981627492782358}
   m_PrefabAsset: {fileID: 0}

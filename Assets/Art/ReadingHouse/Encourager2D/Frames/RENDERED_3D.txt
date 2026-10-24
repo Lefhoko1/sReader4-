@@ -1,0 +1,1 @@
+Frames rendered from the 3D student by GeneratedAssets/StudentModel/render_sprites.py.

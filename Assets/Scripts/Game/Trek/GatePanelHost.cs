@@ -31,6 +31,7 @@ namespace SReader.Game.Trek
 
         VisualElement overlay;
         public bool IsOpen => overlay != null;
+        public Func<VisualElement,string,bool> TryLoadLocalImage;
 
         public void Open(VisualElement host, GateData gate, Hooks hooks)
         {
@@ -318,7 +319,8 @@ namespace SReader.Game.Trek
                 TrekTheme.Round(box, 10);
                 TrekTheme.Border(box, TrekTheme.Line, 1);
                 box.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Contain);
-                HomeUI.LoadImageInto(box, captured);
+                box.name = "picture-option"; box.userData = captured;
+                if (TryLoadLocalImage?.Invoke(box,captured) != true) HomeUI.LoadImageInto(box, captured);
                 boxes[captured] = box;
 
                 box.RegisterCallback<ClickEvent>(_ =>

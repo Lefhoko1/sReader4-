@@ -1,0 +1,27 @@
+{
+    "passed": true,
+    "error": "",
+    "checks": [
+        "Bundled assignment binds all four gates",
+        "Linked Blender geometry active",
+        "Board title comes from assignment data",
+        "Hero book opens the reading interface after camera movement",
+        "Full original passage is readable, including unsolved words",
+        "Reading pauses the word timer",
+        "Chalkboard selection opens the existing Fill activity",
+        "Fill activity keeps a blank in its sentence while the book retains the complete passage",
+        "Fill solve awards Gold through TrekSession",
+        "Later defers the Define word without skipping completion",
+        "Completion is blocked while required words remain",
+        "Illustrate activity opens",
+        "Correct picture awards Gold through the existing activity callback",
+        "First hint uses the shared hint ladder",
+        "Hinted Define solve awards Silver",
+        "Deferred word returns after the main passage order",
+        "Two hints and guided solve use the shared engine",
+        "Guided solve completes the required word as Bronze",
+        "All four required activities complete before finishing",
+        "Full points, 40 percent hint deduction and zero guided points are preserved",
+        "Completed chalkboard words turn gold"
+    ]
+}

@@ -1848,6 +1848,8 @@ MonoBehaviour:
   director: {fileID: 1398087498}
   joystick: {fileID: 390554558}
   maxTapDragPixels: 24
+  orbitDegreesPerPixel: 0.25
+  orbitHeightPerPixel: 0.006
 --- !u!114 &176413095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,11 +1885,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   chalkboard: {fileID: 739196723}
-  encourager: {fileID: 2032901963}
-  zombie: {fileID: 1475118378}
+  encourager: {fileID: 1661916836}
+  zombie: {fileID: 1092797548}
   dashboardScreen: {fileID: 1849910341}
   matStones: {fileID: 544827836}
   allowSampleContent: 1
+  readSecondsPerWord: 0.38
+  readSecondsRange: {x: 2.4, y: 7}
 --- !u!4 &176413096
 Transform:
   m_ObjectHideFlags: 0
@@ -3669,6 +3673,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.TouchJoystick
   radiusFraction: 0.11
   showStick: 1
+  interactive: 1
+  compactZone: 0
 --- !u!4 &390554559
 Transform:
   m_ObjectHideFlags: 0
@@ -4628,7 +4634,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.05
-  far clip plane: 120
+  far clip plane: 154
   field of view: 29.367956
   orthographic: 0
   orthographic size: 5
@@ -4736,6 +4742,8 @@ MonoBehaviour:
   followSmoothTime: 0.16
   poseSmoothTime: 0.55
   rotationSharpness: 9
+  followYawLimit: 80
+  heightRange: {x: 1.4, y: 6}
 --- !u!1 &527739974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2476743110430581762, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
@@ -4896,6 +4904,16 @@ MonoBehaviour:
   stoneWidth: 0.66
   labelScale: 1
   wordsStandUp: 1
+  cream: {r: 1, g: 0.94509804, b: 0.85490197, a: 1}
+  keyCandy:
+  - {r: 1, g: 0.5882353, b: 0.74509805, a: 1}
+  - {r: 0.54901963, g: 0.89411765, b: 0.76862746, a: 1}
+  - {r: 1, g: 0.87058824, b: 0.43137255, a: 1}
+  - {r: 0.74509805, g: 0.627451, b: 1, a: 1}
+  candyGloss: 0.82
+  kerbPadding: 0.12
+  walkMargin: 0.5
+  walkingStudent: {fileID: 0}
 --- !u!4 &544827837
 Transform:
   m_ObjectHideFlags: 0
@@ -4910,78 +4928,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &545411516
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 545411519}
-  - component: {fileID: 545411518}
-  - component: {fileID: 545411517}
-  m_Layer: 0
-  m_Name: Candy Speech Bubble
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &545411517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545411516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3270cfa7cdd35b6489b6cedee477859e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.CandySpeechBubble
-  viewCamera: {fileID: 517642610}
-  speaker: {fileID: 2032901964}
-  aboveHead: 0.12
-  maxWidth: 360
---- !u!114 &545411518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545411516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
-  m_PanelSettings: {fileID: 11400000, guid: 1cc78bf4656c97846843960aade62f2c, type: 2}
-  m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 0}
-  m_SortingOrder: 20
-  m_Position: 0
-  m_WorldSpaceSizeMode: 1
-  m_WorldSpaceWidth: 1920
-  m_WorldSpaceHeight: 1080
-  m_PivotReferenceSize: 0
-  m_Pivot: 0
-  m_WorldSpaceCollider: {fileID: 0}
---- !u!4 &545411519
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545411516}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2032901965}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &547678530 stripped
 GameObject:
@@ -6752,6 +6698,96 @@ RectTransform:
   m_AnchoredPosition: {x: -4.26, y: 3.07}
   m_SizeDelta: {x: 1.8, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &740452603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740452606}
+  - component: {fileID: 740452605}
+  - component: {fileID: 740452604}
+  m_Layer: 0
+  m_Name: World Backdrop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &740452604
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740452603}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e5e5cd61dd563e84ba8b5d9eca6e0617, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &740452605
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740452603}
+  m_Mesh: {fileID: 4300000, guid: 030fe564a2c31f740a4de4da3da94e68, type: 2}
+--- !u!4 &740452606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740452603}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: -0, w: -0}
+  m_LocalPosition: {x: 0, y: -6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &748253424 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5993132057826108151, guid: f3c4909188c547646856a7071c9effae, type: 3}
@@ -7713,9 +7749,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.StudentWalker
   input: {fileID: 390554558}
   viewCamera: {fileID: 517642613}
-  speed: 1.6
-  acceleration: 5
-  deceleration: 8
+  speed: 1.35
+  turnRate: 300
   turnSharpness: 10
   deadZone: 0.12
   gravity: -12
@@ -10290,6 +10325,127 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092718469}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1092797547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1092797550}
+  - component: {fileID: 1092797549}
+  - component: {fileID: 1092797548}
+  m_Layer: 0
+  m_Name: Zombie (seated)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1092797548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092797547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8975e61eacacc8e4eb90597179cec2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.ActorSpriteAnimator
+  viewCamera: {fileID: 517642610}
+  set: {fileID: 11400000, guid: fb28adf01f425164ab91ddde5eee4774, type: 2}
+  spriteRenderer: {fileID: 1092797549}
+  blendRenderer: {fileID: 0}
+  shadow: {fileID: 0}
+  model3D: {fileID: 1436409131}
+  faceTarget: {fileID: 0}
+  crossFade: 0.18
+  blinkEvery: {x: 3, y: 6}
+  blinkTime: 0.45
+  idleQuirks:
+  - yawn
+  - stand
+  - yawn
+  idleQuirkEvery: {x: 10, y: 20}
+  facingHysteresis: 6
+  use2D: 1
+--- !u!212 &1092797549
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092797547}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a81726bcc0ef97748ab28740da567f53, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 21300000, guid: 0a6a342be132b6f47a038fcf14eac49e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.7490207, y: 2.6235309}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &1092797550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092797547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1240213, y: 0.5422054, z: 0.38983792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1112706707 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 983016460258277190, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
@@ -11189,6 +11345,78 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -398628903931632166, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
+--- !u!1 &1271321440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1271321443}
+  - component: {fileID: 1271321442}
+  - component: {fileID: 1271321441}
+  m_Layer: 0
+  m_Name: Candy Speech Bubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1271321441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271321440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3270cfa7cdd35b6489b6cedee477859e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.CandySpeechBubble
+  viewCamera: {fileID: 517642610}
+  speaker: {fileID: 1661916837}
+  aboveHead: 0.12
+  maxWidth: 360
+--- !u!114 &1271321442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271321440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 1cc78bf4656c97846843960aade62f2c, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 0}
+  m_SortingOrder: 20
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &1271321443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271321440}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1661916838}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272757735 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1349312793064222883, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
@@ -16740,6 +16968,7 @@ MonoBehaviour:
   knobDragFull: 300
   studentSprite: {fileID: 1800003775}
   boardFraming: 0.92
+  mobileRenderScale: 0.85
 --- !u!1 &1399133525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6273006844524787696, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
@@ -17405,127 +17634,6 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 6871294125436966196, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
   m_PrefabInstance: {fileID: 1297172141}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1475118377
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1475118380}
-  - component: {fileID: 1475118379}
-  - component: {fileID: 1475118378}
-  m_Layer: 0
-  m_Name: Zombie (seated)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1475118378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475118377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8975e61eacacc8e4eb90597179cec2ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.ActorSpriteAnimator
-  viewCamera: {fileID: 517642610}
-  set: {fileID: 11400000, guid: fb28adf01f425164ab91ddde5eee4774, type: 2}
-  spriteRenderer: {fileID: 1475118379}
-  blendRenderer: {fileID: 0}
-  shadow: {fileID: 0}
-  model3D: {fileID: 1436409131}
-  faceTarget: {fileID: 0}
-  crossFade: 0.18
-  blinkEvery: {x: 3, y: 6}
-  blinkTime: 0.45
-  idleQuirks:
-  - yawn
-  - stand
-  - yawn
-  idleQuirkEvery: {x: 10, y: 20}
-  facingHysteresis: 6
-  use2D: 1
---- !u!212 &1475118379
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475118377}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a81726bcc0ef97748ab28740da567f53, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 0a6a342be132b6f47a038fcf14eac49e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.7490207, y: 2.6235309}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!4 &1475118380
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475118377}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1240213, y: 0.37356192, z: 0.38983792}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1476300595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6159943184318606818, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
@@ -19424,6 +19532,168 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7684841189736290232, guid: f3c4909188c547646856a7071c9effae, type: 3}
+--- !u!1 &1661916835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661916838}
+  - component: {fileID: 1661916837}
+  - component: {fileID: 1661916839}
+  - component: {fileID: 1661916836}
+  m_Layer: 0
+  m_Name: Encourager (seated)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1661916836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661916835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07f0334e1811484c81397bcf0cd573a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.EncouragerBehaviour
+  actor: {fileID: 1661916839}
+  bubble: {fileID: 1271321441}
+  welcome:
+  - Welcome to the Reading House, superstar!
+  - Hooray, you're here! Let's read something amazing!
+  - Yay! My favourite reader just walked in!
+  greet:
+  - "You've got this \u2014 let's read!"
+  - One word at a time. I believe in you!
+  - Ready, reader? This is going to be fun!
+  encourage:
+  - "Keep going \u2014 you're doing great!"
+  - Every sentence makes you stronger!
+  - You're a reading champion!
+  - Nice and steady. You can do it!
+  pick:
+  - Great pick!
+  - "Ooh, good choice \u2014 go for it!"
+  - You know this one!
+  praise:
+  - "Amazing \u2014 you did it!"
+  - Brilliant! That word shines gold now!
+  - Woohoo! You're on fire!
+  - Fantastic reading!
+  nudge:
+  - Let's restore the glowing word first!
+  - "Try the shining stone first \u2014 you've got this!"
+  finish:
+  - You finished! I'm SO proud of you!
+  - "Every word restored \u2014 what a star!"
+--- !u!212 &1661916837
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661916835}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a81726bcc0ef97748ab28740da567f53, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 21300000, guid: 1f5aec6e261958545a6dcc14799611f1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.8889422, y: 2.8334134}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &1661916838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661916835}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1240213, y: 0.53632176, z: 0.38983792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1271321443}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1661916839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661916835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8975e61eacacc8e4eb90597179cec2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.ActorSpriteAnimator
+  viewCamera: {fileID: 517642610}
+  set: {fileID: 11400000, guid: 7d210426c40bcbe47bcd0217eea5da56, type: 2}
+  spriteRenderer: {fileID: 1661916837}
+  blendRenderer: {fileID: 0}
+  shadow: {fileID: 0}
+  model3D: {fileID: 299380886}
+  faceTarget: {fileID: 1800003777}
+  crossFade: 0.18
+  blinkEvery: {x: 3, y: 6}
+  blinkTime: 0.18
+  idleQuirks: []
+  idleQuirkEvery: {x: 9, y: 16}
+  facingHysteresis: 6
+  use2D: 1
 --- !u!1 &1664091593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6238973359292384018, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
@@ -21421,6 +21691,8 @@ MonoBehaviour:
   smileEvery: {x: 7, y: 12}
   smileHold: 2.2
   smileFade: 0.3
+  groundToFloor: 1
+  footSink: 0.012
   hidden: 0
   use2D: 1
 --- !u!212 &1800003776
@@ -23733,168 +24005,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7794512615644016817, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
---- !u!1 &2032901962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2032901965}
-  - component: {fileID: 2032901964}
-  - component: {fileID: 2032901966}
-  - component: {fileID: 2032901963}
-  m_Layer: 0
-  m_Name: Encourager (seated)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2032901963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032901962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07f0334e1811484c81397bcf0cd573a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.EncouragerBehaviour
-  actor: {fileID: 2032901966}
-  bubble: {fileID: 545411517}
-  welcome:
-  - Welcome to the Reading House, superstar!
-  - Hooray, you're here! Let's read something amazing!
-  - Yay! My favourite reader just walked in!
-  greet:
-  - "You've got this \u2014 let's read!"
-  - One word at a time. I believe in you!
-  - Ready, reader? This is going to be fun!
-  encourage:
-  - "Keep going \u2014 you're doing great!"
-  - Every sentence makes you stronger!
-  - You're a reading champion!
-  - Nice and steady. You can do it!
-  pick:
-  - Great pick!
-  - "Ooh, good choice \u2014 go for it!"
-  - You know this one!
-  praise:
-  - "Amazing \u2014 you did it!"
-  - Brilliant! That word shines gold now!
-  - Woohoo! You're on fire!
-  - Fantastic reading!
-  nudge:
-  - Let's restore the glowing word first!
-  - "Try the shining stone first \u2014 you've got this!"
-  finish:
-  - You finished! I'm SO proud of you!
-  - "Every word restored \u2014 what a star!"
---- !u!212 &2032901964
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032901962}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a81726bcc0ef97748ab28740da567f53, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 1f5aec6e261958545a6dcc14799611f1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.8889422, y: 2.8334134}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!4 &2032901965
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032901962}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1240213, y: 0.31479487, z: 0.38983792}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 545411519}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2032901966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032901962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8975e61eacacc8e4eb90597179cec2ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.ActorSpriteAnimator
-  viewCamera: {fileID: 517642610}
-  set: {fileID: 11400000, guid: 7d210426c40bcbe47bcd0217eea5da56, type: 2}
-  spriteRenderer: {fileID: 2032901964}
-  blendRenderer: {fileID: 0}
-  shadow: {fileID: 0}
-  model3D: {fileID: 299380886}
-  faceTarget: {fileID: 1800003777}
-  crossFade: 0.18
-  blinkEvery: {x: 3, y: 6}
-  blinkTime: 0.18
-  idleQuirks: []
-  idleQuirkEvery: {x: 9, y: 16}
-  facingHysteresis: 6
-  use2D: 1
 --- !u!1 &2034613211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2326828619535451092, guid: cec98364ca2f5024fb12b667a3d83fa3, type: 3}
@@ -25191,7 +25301,8 @@ SceneRoots:
   - {fileID: 1224559741}
   - {fileID: 949812328}
   - {fileID: 1800003777}
-  - {fileID: 2032901965}
-  - {fileID: 1475118380}
   - {fileID: 544827837}
   - {fileID: 210698572}
+  - {fileID: 740452606}
+  - {fileID: 1661916838}
+  - {fileID: 1092797550}

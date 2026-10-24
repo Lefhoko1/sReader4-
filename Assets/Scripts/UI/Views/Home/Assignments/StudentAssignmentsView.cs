@@ -26,6 +26,7 @@ namespace SReader.UI.Views.Home
         readonly StudentAssignmentsViewModel vm;
         readonly Action onFindClass;   // jump the student to "Discover" to enrol (optional)
         readonly Action<AssignmentView> onOpenTrek;   // launch the Story Trek for an assignment (optional)
+        readonly Action<AssignmentView> onOpenReadingHouse;   // launch the 3D Reading House for an assignment (optional)
         VisualElement content;
 
         // Shared back stack for the everyday flow (list ↔ profile ↔ submit ↔
@@ -39,11 +40,13 @@ namespace SReader.UI.Views.Home
         AssignmentFilter filter = AssignmentFilter.All;
         string classFilter;   // null = all classes
 
-        public StudentAssignmentsView(StudentAssignmentsViewModel vm, Action onFindClass = null, Action<AssignmentView> onOpenTrek = null)
+        public StudentAssignmentsView(StudentAssignmentsViewModel vm, Action onFindClass = null, Action<AssignmentView> onOpenTrek = null,
+            Action<AssignmentView> onOpenReadingHouse = null)
         {
             this.vm = vm;
             this.onFindClass = onFindClass;
             this.onOpenTrek = onOpenTrek;
+            this.onOpenReadingHouse = onOpenReadingHouse;
         }
 
         public void Render(VisualElement contentArea)
@@ -304,6 +307,9 @@ namespace SReader.UI.Views.Home
             // Opens the Trek scene page for this assignment; Back returns here.
             if (onOpenTrek != null && !v.Submitted)
                 actions.Add(Pill(v.Started ? "▶ Resume trek" : "▶ Story Trek", () => onOpenTrek(v)));
+            // The 3D Reading House — shown only when a launcher is wired.
+            if (onOpenReadingHouse != null && !v.Submitted && a.HasContent)
+                actions.Add(Pill("🏠 Reading House", () => onOpenReadingHouse(v)));
             // Read first (R-3): read the whole passage, untimed, before the trek starts.
             if (!v.Submitted && a.HasContent)
                 actions.Add(Pill("📖 Read first", () => ReadFirst(v)));
@@ -527,6 +533,8 @@ namespace SReader.UI.Views.Home
         {
             var parsed = vm.ContentFor(v.Assignment);
             if (parsed == null || !parsed.HasActivities) { BackToProfile(v); return; }
+
+            if (!multiplayer && SReader.Game.Classroom.ClassroomLaunch.TryOpen(v, vm, () => BackToProfile(v))) return;
 
             var game = new AssignmentGameView();
             if (multiplayer)

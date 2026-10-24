@@ -1,0 +1,471 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66aa1d65afbeed34cb53545f4630fc87, type: 3}
+  m_Name: EncouragerSeated
+  m_EditorClassIdentifier: Assembly-CSharp::SReader.Game.ReadingHouse.ActorSpriteSet
+  idleFps: 8
+  facings:
+  - yaw: -50
+    idle:
+      name: seat_idle_m50
+      frames:
+      - {fileID: 21300000, guid: 7cc3f32ca9978db4dba97736b42b60f0, type: 3}
+      - {fileID: 21300000, guid: e6db1e5ebae7a9b4a9519ee91d3d9f24, type: 3}
+      - {fileID: 21300000, guid: 445e0e71fd138f14fb55e317f9192a51, type: 3}
+      - {fileID: 21300000, guid: 613d4dae82cf36044bf68a4dcfdfcdd0, type: 3}
+      - {fileID: 21300000, guid: 2f3b93aac342e934d8a0da0d495bbca7, type: 3}
+      - {fileID: 21300000, guid: bd4b232062dd0634a80da8fe27cebb3e, type: 3}
+      - {fileID: 21300000, guid: 5d9be2d58ffdcdf4699fce7ed9a1cb37, type: 3}
+      - {fileID: 21300000, guid: 748c03e890783114d84585068d98248b, type: 3}
+      - {fileID: 21300000, guid: fc86febcef19de04b9627e2b50eae3c9, type: 3}
+      - {fileID: 21300000, guid: 4a406fa5dcc9ae14ea9cc1fcba9a27cc, type: 3}
+      - {fileID: 21300000, guid: f22b4c9acd936ce49b8e2358265f6edc, type: 3}
+      - {fileID: 21300000, guid: 12a66b763112ac64a9113fc295eb40ce, type: 3}
+      - {fileID: 21300000, guid: bfba52eea8bc8b74e878632b843e4eed, type: 3}
+      - {fileID: 21300000, guid: 78e8a2afa2b98d240a67879bf75dad16, type: 3}
+      - {fileID: 21300000, guid: b9f83a247dccf3d43a13101e17f1f23f, type: 3}
+      - {fileID: 21300000, guid: 4d4df85b9c85b594eb88135cd26ebafe, type: 3}
+      fps: 10
+      loop: 1
+    blinkHalf:
+      name: 
+      frames: []
+      fps: 10
+      loop: 1
+    blinkClosed:
+      name: seat_blink_m50
+      frames:
+      - {fileID: 21300000, guid: af47e24013b8b08409cd2802f13302ca, type: 3}
+      - {fileID: 21300000, guid: 818bb82722f12124ab5bbba35300cdbf, type: 3}
+      - {fileID: 21300000, guid: aa14a15216c43244db180be2d221f60f, type: 3}
+      - {fileID: 21300000, guid: 92ffa3dcdd11d2e4f9db88886c04af6a, type: 3}
+      - {fileID: 21300000, guid: 281a505daf483e4459facb6e843de3b2, type: 3}
+      - {fileID: 21300000, guid: 3bdc63ef643a4fe4da62d12080c6aa1e, type: 3}
+      - {fileID: 21300000, guid: 514400d2f7a478a45ab4d2e9077caaab, type: 3}
+      - {fileID: 21300000, guid: f16679412ef72f04fba66ce1396cd054, type: 3}
+      fps: 10
+      loop: 1
+    actions:
+    - name: talk
+      clip:
+        name: seat_talk_m50
+        frames:
+        - {fileID: 21300000, guid: e62520bb16408084184b8e98f4d3a0a9, type: 3}
+        - {fileID: 21300000, guid: 99fd179cd6adb0448a6a5fa8d3ce51f4, type: 3}
+        - {fileID: 21300000, guid: 33cf5bf4a4fdc954582dd71a8106e608, type: 3}
+        - {fileID: 21300000, guid: 0da6f8b994d932e4391eb451c4a9c73b, type: 3}
+        - {fileID: 21300000, guid: fb10c05e3b2b22d42954cddd451108e0, type: 3}
+        - {fileID: 21300000, guid: 7e8afd408d204c640b5c53d3a153e068, type: 3}
+        - {fileID: 21300000, guid: 14e1f684d7c7b2e4fa1290af3661352c, type: 3}
+        - {fileID: 21300000, guid: 1ecdf1c3a4cbe80459f70c5e76a08bbe, type: 3}
+        - {fileID: 21300000, guid: f3a016efc356bc84a837a3a9779550ea, type: 3}
+        - {fileID: 21300000, guid: 751f680377d0e6045986e5847e193e21, type: 3}
+        - {fileID: 21300000, guid: 3740587353c53b840ace027fb23b65b7, type: 3}
+        - {fileID: 21300000, guid: 778a679b513d69f45ab67747c572d0bb, type: 3}
+        - {fileID: 21300000, guid: 615ffa89db898d9479b15a178a9bf269, type: 3}
+        - {fileID: 21300000, guid: 6f18c756da21fc94d8bb24fda8409b26, type: 3}
+        - {fileID: 21300000, guid: 5d1693ca60643494b944b0eaf6a874a7, type: 3}
+        - {fileID: 21300000, guid: c2262a525951f6842ad137c14626c468, type: 3}
+        fps: 10
+        loop: 1
+      fps: 12
+    - name: cheer
+      clip:
+        name: seat_cheer_m50
+        frames:
+        - {fileID: 21300000, guid: 013e0fc162f431647a4215d7cd330282, type: 3}
+        - {fileID: 21300000, guid: 65b1a87fa317a6d498b57e1f84d2395a, type: 3}
+        - {fileID: 21300000, guid: 0d5c8d31f369f584ca3acafec8b6f959, type: 3}
+        - {fileID: 21300000, guid: 4ba0a16da3b5bee46915feeb1ea547ad, type: 3}
+        - {fileID: 21300000, guid: b8f5b4157aa72834fb6edaa96bf06197, type: 3}
+        - {fileID: 21300000, guid: 6713d768429c8b546a424d4e814ff49e, type: 3}
+        - {fileID: 21300000, guid: a90737924f9f61f41bd9c0e659a5d8f7, type: 3}
+        - {fileID: 21300000, guid: b235ff710b999074fa15e8922a3b4d3c, type: 3}
+        - {fileID: 21300000, guid: 1a5e888ffc7b3e74b8862e53b9de9a83, type: 3}
+        - {fileID: 21300000, guid: a8031cab5155ab1429b2767e5ea1fb7a, type: 3}
+        - {fileID: 21300000, guid: 1e98064fe9052314f9e1d78bd49e04ef, type: 3}
+        - {fileID: 21300000, guid: 0c8a3ea1c784aa94e849138157672e76, type: 3}
+        - {fileID: 21300000, guid: 8affc2d3c6e6b10498e972e4c28fd360, type: 3}
+        - {fileID: 21300000, guid: 13508af1f1410634a9da1d920a0b875c, type: 3}
+        - {fileID: 21300000, guid: 0da13a6e3c302bb41a5144271b12a852, type: 3}
+        - {fileID: 21300000, guid: ffdaecc9489ccb440bba3f29c822f003, type: 3}
+        - {fileID: 21300000, guid: d4da8031d2a546d44aac9d21539ee7c4, type: 3}
+        - {fileID: 21300000, guid: 405131ce3bfc9d240bb8529940e2fda9, type: 3}
+        - {fileID: 21300000, guid: 6833da8344a720d4e914779ac512fa8a, type: 3}
+        - {fileID: 21300000, guid: 98c18f1d92ca78e42a672595187151a3, type: 3}
+        fps: 10
+        loop: 0
+      fps: 13
+  - yaw: -25
+    idle:
+      name: seat_idle_m25
+      frames:
+      - {fileID: 21300000, guid: ea3fac5b6ae08fc4b8fa4467207517f9, type: 3}
+      - {fileID: 21300000, guid: 3108268165f031a4d800fc029965a851, type: 3}
+      - {fileID: 21300000, guid: 712832e3d63ef1244ae5bb2702e67160, type: 3}
+      - {fileID: 21300000, guid: 44532752a3b448847b92f3cbbc8828d2, type: 3}
+      - {fileID: 21300000, guid: c812dc0d88790234eac1e0c631f5f848, type: 3}
+      - {fileID: 21300000, guid: 5005933f430a8f6429cd12ddbcd4d08e, type: 3}
+      - {fileID: 21300000, guid: 5819c24c137a1bf49bcd3ea4cdd9383c, type: 3}
+      - {fileID: 21300000, guid: 20d6c15beab950c4a95ddc7e9caf8d2b, type: 3}
+      - {fileID: 21300000, guid: 1e74c80afb3785943a32c7809ce6f57d, type: 3}
+      - {fileID: 21300000, guid: 6618a409cfd4c87478ab1e6fd853391f, type: 3}
+      - {fileID: 21300000, guid: 1373bd0421f0f9442a215042ea99691b, type: 3}
+      - {fileID: 21300000, guid: d794ef3e4a7b10a429aedfb9e8bec0c6, type: 3}
+      - {fileID: 21300000, guid: 707402b5919676546b93fd89cad82058, type: 3}
+      - {fileID: 21300000, guid: 7ea42e44c09fbd7438b3beebd1c84906, type: 3}
+      - {fileID: 21300000, guid: 4880733b3e500fd4bbf22d24edac5dd2, type: 3}
+      - {fileID: 21300000, guid: aa83cea3b4e21a6468b564927e30ba98, type: 3}
+      fps: 10
+      loop: 1
+    blinkHalf:
+      name: 
+      frames: []
+      fps: 10
+      loop: 1
+    blinkClosed:
+      name: seat_blink_m25
+      frames:
+      - {fileID: 21300000, guid: 932ab051cd320b74e8838f34cb87b349, type: 3}
+      - {fileID: 21300000, guid: 407710a93837e984d99be48fe0c2d97e, type: 3}
+      - {fileID: 21300000, guid: 233cd635d928bf74c95fd62240de23dd, type: 3}
+      - {fileID: 21300000, guid: 531baf5a4ef5acd42a9d17844f81f929, type: 3}
+      - {fileID: 21300000, guid: 686fa94e4195d3c42862bfb4926694d5, type: 3}
+      - {fileID: 21300000, guid: 6334b2b431414b243a03a67fd16cc0d2, type: 3}
+      - {fileID: 21300000, guid: bd379b3b61972ff4a8481e386db1f066, type: 3}
+      - {fileID: 21300000, guid: 74bf9141a8378704ba236983fe6b0c91, type: 3}
+      fps: 10
+      loop: 1
+    actions:
+    - name: talk
+      clip:
+        name: seat_talk_m25
+        frames:
+        - {fileID: 21300000, guid: e1258e3807c323448bad689e922d46b7, type: 3}
+        - {fileID: 21300000, guid: 5c0bfbd0356178746acb7e9a1fd93e3f, type: 3}
+        - {fileID: 21300000, guid: e6099bacc8aec0a46947c09e90e50f5a, type: 3}
+        - {fileID: 21300000, guid: b456796d529d3f846ba056db2a10c84a, type: 3}
+        - {fileID: 21300000, guid: 852f7bdf807515c44a30270ee59a0fb0, type: 3}
+        - {fileID: 21300000, guid: 4c157f3109231e2419efbf293d0b544a, type: 3}
+        - {fileID: 21300000, guid: 78ca23818a6dc114895a599391dc5128, type: 3}
+        - {fileID: 21300000, guid: bd4a85b0c0a60284b8f816a0bac5e992, type: 3}
+        - {fileID: 21300000, guid: b84a76d4d74958649af33abb47326c38, type: 3}
+        - {fileID: 21300000, guid: 5b28dc5c7d1e30a4c8e322500db80b4f, type: 3}
+        - {fileID: 21300000, guid: 010abcdce8946ee4eb8670cc896e5fc6, type: 3}
+        - {fileID: 21300000, guid: 3d44f42fa05f35441a70810b0edbde41, type: 3}
+        - {fileID: 21300000, guid: 1c6c33957858e1643b0900ce99895f81, type: 3}
+        - {fileID: 21300000, guid: eede333f360c7dc478431cb25036200d, type: 3}
+        - {fileID: 21300000, guid: 3abe91c49e7e36640b091013c4910721, type: 3}
+        - {fileID: 21300000, guid: 771f06136c13c31458cff198549cf502, type: 3}
+        fps: 10
+        loop: 1
+      fps: 12
+    - name: cheer
+      clip:
+        name: seat_cheer_m25
+        frames:
+        - {fileID: 21300000, guid: 834415c81fc46b74f9dabd42c5de19a1, type: 3}
+        - {fileID: 21300000, guid: 39064dd5c54f09e4e82bb243f9c42c3c, type: 3}
+        - {fileID: 21300000, guid: 71bc57f9565f9394ebb7719fc6cf2e7e, type: 3}
+        - {fileID: 21300000, guid: e3977e5b1e4c681409dd454643c28fb9, type: 3}
+        - {fileID: 21300000, guid: 9ed378e91c19c554bb40b209cddfb0f1, type: 3}
+        - {fileID: 21300000, guid: 2e092637e1819ad4d805a4d5f41427a7, type: 3}
+        - {fileID: 21300000, guid: f255976b9f2481543a290aaf923a5305, type: 3}
+        - {fileID: 21300000, guid: a6d877f1bc6e6fb4bb9a1ae4b4b05cbb, type: 3}
+        - {fileID: 21300000, guid: d47de9e4c19651d4a8b073ffa31014c7, type: 3}
+        - {fileID: 21300000, guid: 682ded613362bf846a087d25f8055498, type: 3}
+        - {fileID: 21300000, guid: 3acbd25645743c3449510fdf14a3deab, type: 3}
+        - {fileID: 21300000, guid: e28269441de6daa41814d91c6da565c4, type: 3}
+        - {fileID: 21300000, guid: e5000e9e4b644b745a231103109a9b61, type: 3}
+        - {fileID: 21300000, guid: 652ff97d2065c7342a1aa706cbe099d9, type: 3}
+        - {fileID: 21300000, guid: 16d8be9b91513ed42a233833ae1828d8, type: 3}
+        - {fileID: 21300000, guid: 73a78c02ca14cdc4da04e3e5ef565232, type: 3}
+        - {fileID: 21300000, guid: 711c4c37c116d6b4fb21c22c80f64177, type: 3}
+        - {fileID: 21300000, guid: 5a20cd40cd154b94ba24be7256d1086a, type: 3}
+        - {fileID: 21300000, guid: f92f9da8b22ca1d4686c29faf2a708b4, type: 3}
+        - {fileID: 21300000, guid: 6d826ac3d78d0aa43861fd4ace71a0c1, type: 3}
+        fps: 10
+        loop: 0
+      fps: 13
+  - yaw: 0
+    idle:
+      name: seat_idle_p00
+      frames:
+      - {fileID: 21300000, guid: 1f5aec6e261958545a6dcc14799611f1, type: 3}
+      - {fileID: 21300000, guid: 4fd7fcef867f5d348b0bfecd25638e4f, type: 3}
+      - {fileID: 21300000, guid: dd61f66ff9d686e49a557b30c185fbbb, type: 3}
+      - {fileID: 21300000, guid: f546b5828a5a6104a997011a948170fa, type: 3}
+      - {fileID: 21300000, guid: 0cde37089453e624d91ae74f8150441a, type: 3}
+      - {fileID: 21300000, guid: 64e981d289c80724092d972f710d7055, type: 3}
+      - {fileID: 21300000, guid: 33e13a7f802a4bf46942270395354f84, type: 3}
+      - {fileID: 21300000, guid: a6dc8e67055be5c47b2ee34faac4ce93, type: 3}
+      - {fileID: 21300000, guid: f3bbeda19c4dea24298c374fca7b0e4c, type: 3}
+      - {fileID: 21300000, guid: 632348548f006ae49908c7e9b7224f1a, type: 3}
+      - {fileID: 21300000, guid: 88086e919e93ffa468639b2d940ee936, type: 3}
+      - {fileID: 21300000, guid: 972a8fda7dfae674389db2a9fb2a845f, type: 3}
+      - {fileID: 21300000, guid: 2f10e5c9ce6333b4ab061324678eec69, type: 3}
+      - {fileID: 21300000, guid: e788548e4cff38b45924591756780fd5, type: 3}
+      - {fileID: 21300000, guid: 0012c6d2437b35c4980ba38ff7798272, type: 3}
+      - {fileID: 21300000, guid: ebd36dc503063dc4aaf7c71ebd747594, type: 3}
+      fps: 10
+      loop: 1
+    blinkHalf:
+      name: 
+      frames: []
+      fps: 10
+      loop: 1
+    blinkClosed:
+      name: seat_blink_p00
+      frames:
+      - {fileID: 21300000, guid: 0a18df430f1edda4cbad66d40d64f5fb, type: 3}
+      - {fileID: 21300000, guid: 1b4000fcc95c58346816daa37a44b880, type: 3}
+      - {fileID: 21300000, guid: 1db95bbf42ef0ac42842a67e1ef96e50, type: 3}
+      - {fileID: 21300000, guid: 3525af40fbdaed748b4d88d744c0e0f0, type: 3}
+      - {fileID: 21300000, guid: e5a06c78792901e428df4599127e41bf, type: 3}
+      - {fileID: 21300000, guid: a7ab7547160125948a9d8ebd4bc5a257, type: 3}
+      - {fileID: 21300000, guid: 9c598334e66c5d34aa80df093bdaed87, type: 3}
+      - {fileID: 21300000, guid: 301c7a88bc674674ab8ca78af6adba4b, type: 3}
+      fps: 10
+      loop: 1
+    actions:
+    - name: talk
+      clip:
+        name: seat_talk_p00
+        frames:
+        - {fileID: 21300000, guid: 15d13adf2cf5d8742b770cf86c17f2e4, type: 3}
+        - {fileID: 21300000, guid: 40004244176fb2f4fb0b2a417f8f402e, type: 3}
+        - {fileID: 21300000, guid: 0bd7da2e26b6fe34d88d32c9db4ea640, type: 3}
+        - {fileID: 21300000, guid: ce91cdda74b86344cadfeb7d0dbd00ca, type: 3}
+        - {fileID: 21300000, guid: f3c90466c1e31c140a385237735123cd, type: 3}
+        - {fileID: 21300000, guid: e9ab8fabf05849444a1afb727940f9fd, type: 3}
+        - {fileID: 21300000, guid: 5d1b93a851ee2604f92b0e29f991b6b1, type: 3}
+        - {fileID: 21300000, guid: 55f7ed295fa0fdd4ba9fd8864605cf1a, type: 3}
+        - {fileID: 21300000, guid: 9e9bf587f22527e4dadea9f8766403ce, type: 3}
+        - {fileID: 21300000, guid: 52347e0b845585749b0e4bac95f0bace, type: 3}
+        - {fileID: 21300000, guid: a14bf07d5632d8846842bef6dff0b99c, type: 3}
+        - {fileID: 21300000, guid: 7ea6f56a135648f46999e50d47bc7b9c, type: 3}
+        - {fileID: 21300000, guid: b98cd558f9491694fa4d8277c4a13b50, type: 3}
+        - {fileID: 21300000, guid: a3d1746aecc9a5f41b7d4b8ed717aec7, type: 3}
+        - {fileID: 21300000, guid: 86ab9c6a8aacdea4e82ca39211b8712b, type: 3}
+        - {fileID: 21300000, guid: 7dd092fbce1760140b800174daf21b5b, type: 3}
+        fps: 10
+        loop: 1
+      fps: 12
+    - name: cheer
+      clip:
+        name: seat_cheer_p00
+        frames:
+        - {fileID: 21300000, guid: 88f0b7445b79fe447a3e6e3c06dbb6eb, type: 3}
+        - {fileID: 21300000, guid: 19850579828877d498bc18a35c3601a7, type: 3}
+        - {fileID: 21300000, guid: c7eb69be8b2c26e4fb69da162cff35f0, type: 3}
+        - {fileID: 21300000, guid: 41b329f83afe42446900f447660f8a93, type: 3}
+        - {fileID: 21300000, guid: 5e55f1e1d5b9b1545941d816734f35a1, type: 3}
+        - {fileID: 21300000, guid: 06734ca14911ca742a4523fc4cfc987b, type: 3}
+        - {fileID: 21300000, guid: 118bb64d8b6de7e428777c295fc7b87a, type: 3}
+        - {fileID: 21300000, guid: 4eb4c377aeaf3f342a215b8633123996, type: 3}
+        - {fileID: 21300000, guid: 5613704bf908afd48a6af7b2f955f9e6, type: 3}
+        - {fileID: 21300000, guid: 32bf16686036c0e479bd38b0ad78b285, type: 3}
+        - {fileID: 21300000, guid: 226ead16480c546449ff9dcb42ebecb9, type: 3}
+        - {fileID: 21300000, guid: 93d169958240053489c8c69062604f32, type: 3}
+        - {fileID: 21300000, guid: 42ce117fdbd16a141bac5341082d6d5d, type: 3}
+        - {fileID: 21300000, guid: 638cd4b4cbed7f14cb84dbed6f8546ae, type: 3}
+        - {fileID: 21300000, guid: 8b658bd1fcd98f84aa633f12aa7bd0e8, type: 3}
+        - {fileID: 21300000, guid: 39d37ecc9eb87d144802f5191ee1d27d, type: 3}
+        - {fileID: 21300000, guid: 4d46b73c0828fb348af60065d6a72ca6, type: 3}
+        - {fileID: 21300000, guid: a6c5933db47c2524397c89d10dbb533e, type: 3}
+        - {fileID: 21300000, guid: fd796da1de60a6a4e8298e810d0a3018, type: 3}
+        - {fileID: 21300000, guid: e903bdc559f1a9242b7dfaab2c9b846d, type: 3}
+        fps: 10
+        loop: 0
+      fps: 13
+  - yaw: 25
+    idle:
+      name: seat_idle_p25
+      frames:
+      - {fileID: 21300000, guid: ddcdbe9bc460cd945a32cd6b37510cbc, type: 3}
+      - {fileID: 21300000, guid: 1d067a053ef602544b5b373448572140, type: 3}
+      - {fileID: 21300000, guid: 36954122f17451348ab3354304d98042, type: 3}
+      - {fileID: 21300000, guid: d3085a646cdfce14b97f0e8ae538a62c, type: 3}
+      - {fileID: 21300000, guid: c4ff41336476edd4e8db2a1cacc048c2, type: 3}
+      - {fileID: 21300000, guid: 76ccc186d570afb42b07f68cdf7a969d, type: 3}
+      - {fileID: 21300000, guid: 8c206cbc85841f64c8e2b275b28e0da2, type: 3}
+      - {fileID: 21300000, guid: e6849e2a3f1afe04dac328ffad2000f2, type: 3}
+      - {fileID: 21300000, guid: cb64ba6241af1d34fa14ecfe3524dc98, type: 3}
+      - {fileID: 21300000, guid: 06dd57da6689ff846949095764d0db6a, type: 3}
+      - {fileID: 21300000, guid: 11f0c8f25a3ccb94f815b5b9cd7a392f, type: 3}
+      - {fileID: 21300000, guid: f9d6f5a25ae2bdf4487ee150e316788f, type: 3}
+      - {fileID: 21300000, guid: f69cd0d3be5047d478caa0945780c2eb, type: 3}
+      - {fileID: 21300000, guid: 1b94ba1aac318504ea38a4e1843d4326, type: 3}
+      - {fileID: 21300000, guid: 23732de6dc906e84cbdabd031ffe763e, type: 3}
+      - {fileID: 21300000, guid: 437e4709013f6494487c0cc6e1e810e3, type: 3}
+      fps: 10
+      loop: 1
+    blinkHalf:
+      name: 
+      frames: []
+      fps: 10
+      loop: 1
+    blinkClosed:
+      name: seat_blink_p25
+      frames:
+      - {fileID: 21300000, guid: 45b1ca99191fd9b43bd10cf356c38721, type: 3}
+      - {fileID: 21300000, guid: 10679266268fef64f8a454558368cff3, type: 3}
+      - {fileID: 21300000, guid: 6a75d7a95ca399c46b7235639720538d, type: 3}
+      - {fileID: 21300000, guid: 28b20af2d28be0442bd593795f34aff0, type: 3}
+      - {fileID: 21300000, guid: 0c7bc8fada716674a9e5ad022f1f63df, type: 3}
+      - {fileID: 21300000, guid: eb582e9e039c52647b020c82552ffea3, type: 3}
+      - {fileID: 21300000, guid: fb90df45c68d32a4c9a0386d7ea3aa81, type: 3}
+      - {fileID: 21300000, guid: 2936f56c79c80954db444042945ef58f, type: 3}
+      fps: 10
+      loop: 1
+    actions:
+    - name: talk
+      clip:
+        name: seat_talk_p25
+        frames:
+        - {fileID: 21300000, guid: 13eed7bbd96bc2a49bc5ac0b83c8041f, type: 3}
+        - {fileID: 21300000, guid: 01942b62f669ade43a52a62499fddb37, type: 3}
+        - {fileID: 21300000, guid: 3b378fdeb0f761f4ab33741995f64b6c, type: 3}
+        - {fileID: 21300000, guid: 241e78794545d4a4fa92c1c5e7b87e3b, type: 3}
+        - {fileID: 21300000, guid: 052fd9fb5890a3c408e9294bea30d3ef, type: 3}
+        - {fileID: 21300000, guid: 8289199cc66edce4c9c7e224c38c10a8, type: 3}
+        - {fileID: 21300000, guid: c87d81570b04d8047880342cb15d1f9a, type: 3}
+        - {fileID: 21300000, guid: 1fb88d514a0b46b498a83a0d3bcb5373, type: 3}
+        - {fileID: 21300000, guid: 8cb4815a2b14a8048a8fb3b72a889033, type: 3}
+        - {fileID: 21300000, guid: 9f1d6ad6f094c8245b8f5da1325cea14, type: 3}
+        - {fileID: 21300000, guid: 4c88f34bbea685e4daead85934af0061, type: 3}
+        - {fileID: 21300000, guid: d530c92d1df35fc43bfce0f791ccb7d1, type: 3}
+        - {fileID: 21300000, guid: 782d9117da37a6848b586b3552e6fc9a, type: 3}
+        - {fileID: 21300000, guid: 2a77f5f22402c6c44b718a1c049916a2, type: 3}
+        - {fileID: 21300000, guid: 5db9ca509e9794b4fb3fb2c8b5499572, type: 3}
+        - {fileID: 21300000, guid: b96550b0a77b0ce46ab7a9409e97c108, type: 3}
+        fps: 10
+        loop: 1
+      fps: 12
+    - name: cheer
+      clip:
+        name: seat_cheer_p25
+        frames:
+        - {fileID: 21300000, guid: 772132279b585b24e834852971efd548, type: 3}
+        - {fileID: 21300000, guid: 01b9023ea8ad22b479fe616e10a35afb, type: 3}
+        - {fileID: 21300000, guid: 71b90d2920cef2a448cefdcf91d77c45, type: 3}
+        - {fileID: 21300000, guid: 5626f742327eb6e458e4420b78c471dc, type: 3}
+        - {fileID: 21300000, guid: 40b89206c1c2d404d8cc159ac2839a3b, type: 3}
+        - {fileID: 21300000, guid: bbe0ecad111611449aae5ffca91eb756, type: 3}
+        - {fileID: 21300000, guid: af9ef4f37ef748e43a4e106fefd06364, type: 3}
+        - {fileID: 21300000, guid: 9fe6a6c843e8f8140822335fac8f4826, type: 3}
+        - {fileID: 21300000, guid: 9f380237be1d61a4ca9675cdfceb31d7, type: 3}
+        - {fileID: 21300000, guid: e9c51c15d3c96b446a05ee1c10e39740, type: 3}
+        - {fileID: 21300000, guid: 6d0340ee6e7a2d9408eff539cc8756c2, type: 3}
+        - {fileID: 21300000, guid: 151cbe1702ecf4e4190f803dcee20e9f, type: 3}
+        - {fileID: 21300000, guid: 2929588bfb434994e9bc249640d15d56, type: 3}
+        - {fileID: 21300000, guid: a67d92a84eff43845b0a80e94479216b, type: 3}
+        - {fileID: 21300000, guid: f1ace677fe354f74daf1844c0f46773f, type: 3}
+        - {fileID: 21300000, guid: 1a317da322aafbb42845dd9a506f329c, type: 3}
+        - {fileID: 21300000, guid: 7daa38b55ac8f8440851aa91154c3e38, type: 3}
+        - {fileID: 21300000, guid: 224c4c40f7a6cc042a59a32c21cf90f8, type: 3}
+        - {fileID: 21300000, guid: d004401b4a100e3468a9753b49d6f1cd, type: 3}
+        - {fileID: 21300000, guid: 8a9be12f17f9cb8469892a3f3cbf5557, type: 3}
+        fps: 10
+        loop: 0
+      fps: 13
+  - yaw: 50
+    idle:
+      name: seat_idle_p50
+      frames:
+      - {fileID: 21300000, guid: 59ba24e6a025c3743a6d3884abd75dc2, type: 3}
+      - {fileID: 21300000, guid: eaa9c1176fde5b848bb1f9c30569d262, type: 3}
+      - {fileID: 21300000, guid: f6d177ec5f2046144a973e1ead6157d8, type: 3}
+      - {fileID: 21300000, guid: f13f65f28e335534ca41ac0d98ef22f5, type: 3}
+      - {fileID: 21300000, guid: 8d9982dd4f5174a409a369f441cf2740, type: 3}
+      - {fileID: 21300000, guid: db7e9e3de2627254b8595f5cbbfde57f, type: 3}
+      - {fileID: 21300000, guid: 722a6615701c9d9468c17ed84fcb2c46, type: 3}
+      - {fileID: 21300000, guid: 02f8fe44d41cede47bcee7b80f81ebda, type: 3}
+      - {fileID: 21300000, guid: 523d78b815eb6584b99094c08221c505, type: 3}
+      - {fileID: 21300000, guid: 2ee50cc8e5f6b2d4e822946a4daa1ff6, type: 3}
+      - {fileID: 21300000, guid: 5d68f3568bdb4eb4caf4b6ea06fcbfdc, type: 3}
+      - {fileID: 21300000, guid: 175d6a3ad58384e4eb8c1eef2244ba9f, type: 3}
+      - {fileID: 21300000, guid: f42c0cf8e3e5a6a47b242862ee47b9dd, type: 3}
+      - {fileID: 21300000, guid: b2774a50c50b4e64f94b28e5c560462c, type: 3}
+      - {fileID: 21300000, guid: b7140bc64c6f64541b9cc928dfbdf3af, type: 3}
+      - {fileID: 21300000, guid: a533b4435c4120d478bad2080de785b6, type: 3}
+      fps: 10
+      loop: 1
+    blinkHalf:
+      name: 
+      frames: []
+      fps: 10
+      loop: 1
+    blinkClosed:
+      name: seat_blink_p50
+      frames:
+      - {fileID: 21300000, guid: 62b28f433d80ff24a8d44571edf90b7a, type: 3}
+      - {fileID: 21300000, guid: 216a327cff39c8c47a5de0f6017bde88, type: 3}
+      - {fileID: 21300000, guid: 2d0e26f25d06a58498cbcd24fc9de362, type: 3}
+      - {fileID: 21300000, guid: b4a633a5b38407c41baee0ad2ffc80af, type: 3}
+      - {fileID: 21300000, guid: 8290d789383a3d14782bb72fe0bc9454, type: 3}
+      - {fileID: 21300000, guid: ec6d5ab8027ca4546af92fc079c7f8f8, type: 3}
+      - {fileID: 21300000, guid: 52e73a66d16d1404cbb3d5057c8f21f5, type: 3}
+      - {fileID: 21300000, guid: 4d54d2819ed98e9429e1ed692e3925c1, type: 3}
+      fps: 10
+      loop: 1
+    actions:
+    - name: talk
+      clip:
+        name: seat_talk_p50
+        frames:
+        - {fileID: 21300000, guid: 57b3cedaccb89844a8272d5b30e219ce, type: 3}
+        - {fileID: 21300000, guid: d125dfdeebaf76541aedaab266465084, type: 3}
+        - {fileID: 21300000, guid: e30b6e2d29d2be34088ba19136c82197, type: 3}
+        - {fileID: 21300000, guid: 70483ccaa57fde742adcb4231305fe5c, type: 3}
+        - {fileID: 21300000, guid: 9372ba5b385f1f34582595d66680eb6f, type: 3}
+        - {fileID: 21300000, guid: 0a3981e5b8921554b99c6248e53411ed, type: 3}
+        - {fileID: 21300000, guid: 5a2a4a3eee1985440bd6f8967d1423a6, type: 3}
+        - {fileID: 21300000, guid: dd4cec345e55da84d926bcb207e7c001, type: 3}
+        - {fileID: 21300000, guid: 84033c8dd502d5d4cbb1bcaf7b7df6dc, type: 3}
+        - {fileID: 21300000, guid: 3a8853de9ca6b884aae640eff6afa4d6, type: 3}
+        - {fileID: 21300000, guid: 2e0f865a810a9c84c9b4a013fb1bd065, type: 3}
+        - {fileID: 21300000, guid: a6832341182650246838286d8c91f7fb, type: 3}
+        - {fileID: 21300000, guid: 78d493fa60d7bc343b6c18174c798653, type: 3}
+        - {fileID: 21300000, guid: 9a0362853d1377e49a64e44855e4e6fd, type: 3}
+        - {fileID: 21300000, guid: ae367a62811cdc348a95cd48a7328374, type: 3}
+        - {fileID: 21300000, guid: 891da3065091ac24e9a74ac85c199a1a, type: 3}
+        fps: 10
+        loop: 1
+      fps: 12
+    - name: cheer
+      clip:
+        name: seat_cheer_p50
+        frames:
+        - {fileID: 21300000, guid: da6b9b44fd3aac143aa87e35b39d836f, type: 3}
+        - {fileID: 21300000, guid: 50018d45f7b75f446ab0d38bc7fb9086, type: 3}
+        - {fileID: 21300000, guid: 33b310225b83ee34b9330e103f4042d2, type: 3}
+        - {fileID: 21300000, guid: ad9f5921e82c5dd4f9b2e518c7afff9f, type: 3}
+        - {fileID: 21300000, guid: 79f4135c4723e0e4f81e77af8df0db8f, type: 3}
+        - {fileID: 21300000, guid: 6f0f9daff2e76c546b21c5746bdb9141, type: 3}
+        - {fileID: 21300000, guid: 42fabb0782d2c0a43a620830c86039ae, type: 3}
+        - {fileID: 21300000, guid: 533805e8a1a383d4ab01a94f053c3caa, type: 3}
+        - {fileID: 21300000, guid: c57327a39cf164c44bc00a5dcafefa16, type: 3}
+        - {fileID: 21300000, guid: 27858cd83ca9a6f43a1e0d6edbb02903, type: 3}
+        - {fileID: 21300000, guid: 3488e349f629c1b48987e0fd74217455, type: 3}
+        - {fileID: 21300000, guid: 6b491c2cd0e0b1f46918843e038a25cf, type: 3}
+        - {fileID: 21300000, guid: c7eb5b61c21675b4a9d165ac19e3827b, type: 3}
+        - {fileID: 21300000, guid: 099cd839e163287408e41e2cbfa35ece, type: 3}
+        - {fileID: 21300000, guid: 0f6dc9f878ad5cf47b9bd21fe8f817f2, type: 3}
+        - {fileID: 21300000, guid: 981f30735a3dc624d99a937dd61048e9, type: 3}
+        - {fileID: 21300000, guid: 54b20270c89fb4e4d800ad4d66fa2268, type: 3}
+        - {fileID: 21300000, guid: 2873b3f1239377842939d7b5d3625739, type: 3}
+        - {fileID: 21300000, guid: dfe7caddbf2c07540a8c0b1e634b852a, type: 3}
+        - {fileID: 21300000, guid: 72d805476af1d7743afc681e9a726bc7, type: 3}
+        fps: 10
+        loop: 0
+      fps: 13

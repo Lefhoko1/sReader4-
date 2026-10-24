@@ -1,0 +1,84 @@
+{
+ "idle": {
+  "count": 9,
+  "body_height_px": 139,
+  "min_h": 137,
+  "max_h": 139
+ },
+ "walk_right": {
+  "count": 10,
+  "body_height_px": 138,
+  "min_h": 137,
+  "max_h": 140
+ },
+ "walk_left": {
+  "count": 8,
+  "body_height_px": 131,
+  "min_h": 130,
+  "max_h": 131
+ },
+ "walk_back": {
+  "count": 7,
+  "body_height_px": 135,
+  "min_h": 133,
+  "max_h": 137
+ },
+ "walk_front": {
+  "count": 6,
+  "body_height_px": 132,
+  "min_h": 131,
+  "max_h": 134
+ },
+ "read": {
+  "count": 6,
+  "body_height_px": 126,
+  "min_h": 124,
+  "max_h": 129
+ },
+ "point": {
+  "count": 7,
+  "body_height_px": 126,
+  "min_h": 124,
+  "max_h": 132
+ },
+ "pick_put": {
+  "count": 6,
+  "body_height_px": 116,
+  "min_h": 94,
+  "max_h": 132
+ },
+ "celebrate": {
+  "count": 7,
+  "body_height_px": 132,
+  "min_h": 119,
+  "max_h": 134
+ },
+ "think": {
+  "count": 6,
+  "body_height_px": 133,
+  "min_h": 132,
+  "max_h": 136
+ },
+ "surprised": {
+  "count": 7,
+  "body_height_px": 128,
+  "min_h": 120,
+  "max_h": 135
+ },
+ "sit": {
+  "count": 6,
+  "body_height_px": 140,
+  "min_h": 137,
+  "max_h": 153
+ },
+ "look_dashboard": {
+  "count": 7,
+  "body_height_px": 159,
+  "min_h": 158,
+  "max_h": 159
+ },
+ "faces": {
+  "count": 12,
+  "body_height_px": null
+ }
+}

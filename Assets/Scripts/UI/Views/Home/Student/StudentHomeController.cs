@@ -61,6 +61,9 @@ namespace SReader.UI.Views.Home
                     () => GoToSection("nav-academies"),
                     trekPage != null
                         ? (Action<AssignmentView>)(v => trekPage.Launch(v, Assignments))
+                        : null,
+                    SReader.Game.ReadingHouse.ReadingHouseLauncher.IsAvailable
+                        ? (Action<AssignmentView>)(v => SReader.Game.ReadingHouse.ReadingHouseLauncher.Launch(v, Assignments))
                         : null);
                 // Honour a deep-link from the home dashboard (open one assignment).
                 if (pendingAssignmentId != null) { assignmentsView.OpenAssignment(pendingAssignmentId); pendingAssignmentId = null; }

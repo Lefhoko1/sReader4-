@@ -1,0 +1,10 @@
+{
+    "renderScale": 0.800000011920929,
+    "triangles": 76604,
+    "materials": 26,
+    "realTimeShadows": false,
+    "postProcessing": false,
+    "deviceTested": false,
+    "textureFallback": "ETC2; ASTC requires a supported device build",
+    "graphics": "OpenGLES3"
+}

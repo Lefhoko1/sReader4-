@@ -1,0 +1,19 @@
+{
+  "batch": "Scene validation and checkpoint",
+  "saved_at": "2026-10-18T06:55:28.367351+02:00",
+  "scene": "C:\\Users\\11113930\\sReader4\\Assets\\Scenes\\SC_LibraryRedesignPreview.unity",
+  "scene_sha256": "cad6174dd5700e6b4280072a675b8ba777d9604391c332358eceda4b4ce7c592",
+  "blender_source": "C:\\Users\\11113930\\sReader4\\GeneratedAssets\\MagicalClassroom\\20261017_195009\\sReader_Classroom_v02.blend",
+  "fresh_interaction_checks_passed": 21,
+  "previous_picture_failure": "Not reproduced in a fresh Play Mode session; no speculative gameplay fix applied.",
+  "editor_state": "Stopped Play Mode; scene saved; previews refreshed.",
+  "next_batch": [
+    "Build Android development APK",
+    "Obtain a useful Frame Debugger capture and review rendering cost"
+  ],
+  "later_device_checks": [
+    "Huawei Y5 performance, memory and physical touch",
+    "Authenticated assignment resume and submission"
+  ],
+  "physical_device_fps_verified": false
+}

@@ -1,0 +1,2346 @@
+{
+  "source": "C:\\Users\\11113930\\sReader4\\GeneratedAssets\\ReadingDashboard\\20261018_ReferencePolish\\sReader_ReadingHouse_Reference_FINAL.blend",
+  "reference": "Docs/Photosynthesis Reading Adventure.png",
+  "preview_only_collection": "SR_Demo",
+  "required_names": {
+    "SR_DASHBOARD_ROOT": true,
+    "SR_DISPLAY_MAIN": true,
+    "SR_BUTTON_MULTIPLAYER": true,
+    "SR_BUTTON_MENU": true,
+    "SR_PANEL_POINTS": true,
+    "SR_ANCHOR_ASSIGNMENT_HEADER": true,
+    "SR_ANCHOR_SENTENCE_PROGRESS": true,
+    "SR_ANCHOR_MULTIPLAYER": true,
+    "SR_ANCHOR_READING_CONTENT": true,
+    "SR_STONE_TRAY_ANCHOR": true,
+    "SR_STONE_PLACEMENT_REGION": true,
+    "SR_ANCHOR_POINTS": true,
+    "SR_ANCHOR_MENU": true
+  },
+  "collections": {
+    "SR_Console": [
+      {
+        "name": "SR_DASHBOARD_ROOT",
+        "type": "EMPTY",
+        "parent": null,
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_Console_Sculpted_Base",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 12
+      },
+      {
+        "name": "SR_Tray_Gold_Lip",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Tray_Cyan_Inset",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Tray_Front_Orange_Rail",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Display_Integrated_Shell",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Display_Gold_Frame",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Display_Blue_Bezel",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Display_Inner_Navy",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_DISPLAY_MAIN",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Header_Backbone",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Header_Gold_Rail",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Assignment_Housing",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_BUTTON_MULTIPLAYER",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Nameplate_Gold",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Nameplate_Blue",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Brand",
+        "type": "FONT",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_Display_Light_Gold",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Display_Accent_Light",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Display_Light_Gold.001",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Display_Accent_Light.001",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_PANEL_POINTS",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_BUTTON_MENU",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Console_Light_Gold",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Console_Light",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Menu_Star",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 12
+      },
+      {
+        "name": "SR_Points_Star",
+        "type": "MESH",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": 12
+      },
+      {
+        "name": "SR_ANCHOR_ASSIGNMENT_HEADER",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_SENTENCE_PROGRESS",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_MULTIPLAYER",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_READING_CONTENT",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_STONE_TRAY_ANCHOR",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_POINTS",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_MENU",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_PREVIOUS_SENTENCE",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_NEXT_SENTENCE",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_READ_PASSAGE",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_ASSIGNMENTS",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_ANCHOR_INSTRUCTIONS",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_STONE_PLACEMENT_REGION",
+        "type": "EMPTY",
+        "parent": "SR_DASHBOARD_ROOT",
+        "mesh_polygons": null
+      }
+    ],
+    "SR_StoneSource": [
+      {
+        "name": "SR_STONE_PREFAB_SOURCE",
+        "type": "EMPTY",
+        "parent": null,
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_STONE_CAP_LEFT",
+        "type": "MESH",
+        "parent": "SR_STONE_PREFAB_SOURCE",
+        "mesh_polygons": 96
+      },
+      {
+        "name": "SR_STONE_CAP_RIGHT",
+        "type": "MESH",
+        "parent": "SR_STONE_PREFAB_SOURCE",
+        "mesh_polygons": 96
+      },
+      {
+        "name": "SR_STONE_STRETCH_CENTRE",
+        "type": "MESH",
+        "parent": "SR_STONE_PREFAB_SOURCE",
+        "mesh_polygons": 16
+      },
+      {
+        "name": "SR_STONE_TEXT_ANCHOR",
+        "type": "EMPTY",
+        "parent": "SR_STONE_PREFAB_SOURCE",
+        "mesh_polygons": null
+      }
+    ],
+    "SR_Characters": [
+      {
+        "name": "SR_CHARACTER_STUDENT",
+        "type": "EMPTY",
+        "parent": null,
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Shorts",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Student_Shirt",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Collar",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Student_Head_Pivot",
+        "type": "EMPTY",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Head",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Ear",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Ear_Inner",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Eye_White",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Iris",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Pupil",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Catchlight",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Brow",
+        "type": "CURVE",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Ear.001",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Ear_Inner.001",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Eye_White.001",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Iris.001",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Pupil.001",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Catchlight.001",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Brow.001",
+        "type": "CURVE",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Nose",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Smile",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Teeth",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Student_Lip",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.001",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.002",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.003",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.004",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.005",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.006",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.007",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.008",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.009",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.010",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.011",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.012",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.013",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.014",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.015",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.016",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.017",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.018",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.019",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.020",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.021",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.022",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.023",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.024",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.025",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.026",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.027",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.028",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.029",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.030",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.031",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.032",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.033",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.034",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.035",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.036",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.037",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.038",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.039",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.040",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.041",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.042",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.043",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.044",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.045",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.046",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.047",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.048",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.049",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.050",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.051",
+        "type": "MESH",
+        "parent": "Student_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Leg",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Shoe_Sole",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Shoe_Upper",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Shoe_Lace",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Shoe_Lace.001",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Shoe_Lace.002",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Sleeve",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Arm",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Hand",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Backpack_Strap",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Leg.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Shoe_Sole.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Shoe_Upper.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Shoe_Lace.003",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Shoe_Lace.004",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Shoe_Lace.005",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Sleeve.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Arm.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Hand.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Student_Backpack_Strap.001",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Backpack",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Student_Backpack_Pocket",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Student_Backpack_Handle",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Student_Pack_Badge",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_STUDENT",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_CHARACTER_ENCOURAGER",
+        "type": "EMPTY",
+        "parent": null,
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_Hood",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Chest",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Hoodie_Panel",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Encourager_Head_Pivot",
+        "type": "EMPTY",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_Head",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Ear",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Ear_Inner",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Eye_White",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Iris",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Pupil",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Catchlight",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Brow",
+        "type": "CURVE",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_Ear.001",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Ear_Inner.001",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Eye_White.001",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Iris.001",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Pupil.001",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Catchlight.001",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Brow.001",
+        "type": "CURVE",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_Nose",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Smile",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Teeth",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Encourager_Lip",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.052",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.053",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.054",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.055",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.056",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.057",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.058",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.059",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.060",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.061",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.062",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.063",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.064",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.065",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.066",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.067",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.068",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.069",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.070",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Hair_Curl.071",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Blue_Cap",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Cap_Brim",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Cap_Badge",
+        "type": "MESH",
+        "parent": "Encourager_Head_Pivot",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Encourager_Thigh",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Shin",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Sneaker_Sole",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Sneaker_Upper",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Sneaker_Lace",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_Sneaker_Lace.001",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_Sneaker_Lace.002",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_Thigh.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Shin.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Sneaker_Sole.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Sneaker_Upper.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Sneaker_Lace.003",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_Sneaker_Lace.004",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_Sneaker_Lace.005",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Encourager_LeftSleeve",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_LeftHand",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_RightSleeve",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_RightArm",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_ThumbsUp_Fist",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Thumb",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Encourager_Open_Book",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Encourager_Book_Cover",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Encourager_Open_Book.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Encourager_Book_Cover.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_ANCHOR_ENCOURAGER_SPEECH",
+        "type": "EMPTY",
+        "parent": "SR_CHARACTER_ENCOURAGER",
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_CHARACTER_ZOMBIE",
+        "type": "EMPTY",
+        "parent": null,
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Hood",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Chest",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Head_Pivot",
+        "type": "EMPTY",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Head",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Ear",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Ear_Inner",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Eye_White",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Iris",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Pupil",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Catchlight",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Brow",
+        "type": "CURVE",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Ear.001",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Ear_Inner.001",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Eye_White.001",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Iris.001",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Pupil.001",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Catchlight.001",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Brow.001",
+        "type": "CURVE",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Nose",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Mouth",
+        "type": "CURVE",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Tooth",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Zombie_Cheek",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Cheek.001",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.001",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.002",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.003",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.004",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.005",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.006",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.007",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.008",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.009",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.010",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.011",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.012",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.013",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.014",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.015",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.016",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.017",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.018",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.019",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.020",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Hair_Tuft.021",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Eyelid_L",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Eyelid_R",
+        "type": "MESH",
+        "parent": "Zombie_Head_Pivot",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Thigh",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Shin",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Sneaker_Sole",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Sneaker_Upper",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Sneaker_Lace",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Sneaker_Lace.001",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Sneaker_Lace.002",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Thigh.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Shin.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Sneaker_Sole.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Sneaker_Upper.001",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Sneaker_Lace.003",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Sneaker_Lace.004",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_Sneaker_Lace.005",
+        "type": "CURVE",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": null
+      },
+      {
+        "name": "Zombie_UpperArm",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Forearm",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_Chin_Hand",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_RightArm",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Zombie_RightHand",
+        "type": "MESH",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_ANCHOR_ZOMBIE_SPEECH",
+        "type": "EMPTY",
+        "parent": "SR_CHARACTER_ZOMBIE",
+        "mesh_polygons": null
+      }
+    ],
+    "SR_Decor": [
+      {
+        "name": "SR_Chair",
+        "type": "EMPTY",
+        "parent": null,
+        "mesh_polygons": null
+      },
+      {
+        "name": "Chair_Seat",
+        "type": "MESH",
+        "parent": "SR_Chair",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Chair_Back",
+        "type": "MESH",
+        "parent": "SR_Chair",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Chair.001",
+        "type": "EMPTY",
+        "parent": null,
+        "mesh_polygons": null
+      },
+      {
+        "name": "Chair_Seat.001",
+        "type": "MESH",
+        "parent": "SR_Chair.001",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Chair_Back.001",
+        "type": "MESH",
+        "parent": "SR_Chair.001",
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Rug",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Rug_Gold_Inlay",
+        "type": "CURVE",
+        "parent": null,
+        "mesh_polygons": null
+      },
+      {
+        "name": "SR_Plant_Pot",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 26
+      },
+      {
+        "name": "SR_Plant_Rim",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 26
+      },
+      {
+        "name": "SR_Plant_Leaf",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.001",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.002",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.003",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.004",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.005",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.006",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Pot.001",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 26
+      },
+      {
+        "name": "SR_Plant_Rim.001",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 26
+      },
+      {
+        "name": "SR_Plant_Leaf.007",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.008",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.009",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.010",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.011",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.012",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Plant_Leaf.013",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "SR_Wall_Light_Frame",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Wall_Light_Glass",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Wall_Light_Frame.001",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 6
+      },
+      {
+        "name": "SR_Wall_Light_Glass.001",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 6
+      },
+      {
+        "name": "Chair_Leg",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Chair_Leg.001",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Chair_Leg.002",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Chair_Leg.003",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Chair_Leg.004",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Chair_Leg.005",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Chair_Leg.006",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      },
+      {
+        "name": "Chair_Leg.007",
+        "type": "MESH",
+        "parent": null,
+        "mesh_polygons": 240
+      }
+    ]
+  },
+  "note": "Mobile performance untested; character assets are separate mesh hierarchies, not rigged. Unity exports await visual review.",
+  "evaluated_triangle_counts_new_assets": {
+    "SR_Console": 11444,
+    "SR_Characters": 90120,
+    "SR_Decor": 14669,
+    "SR_StoneSource": 876
+  },
+  "latest_render": "08_perspective_final.png",
+  "preview_landscape": "preview_landscape.png",
+  "stone_source_objects": [
+    "SR_STONE_PREFAB_SOURCE",
+    "SR_STONE_CAP_LEFT",
+    "SR_STONE_CAP_RIGHT",
+    "SR_STONE_STRETCH_CENTRE",
+    "SR_STONE_TEXT_ANCHOR",
+    "SR_STONE_MOSS_CAP_LEFT",
+    "SR_STONE_MOSS_CAP_RIGHT",
+    "SR_STONE_MOSS_STRETCH_CENTRE"
+  ],
+  "production_collection": "SR_PRODUCTION_EXPORT",
+  "stone_examples": [
+    "09_short_sentence_stones.png",
+    "10_long_sentence_stones.png"
+  ],
+  "exterior": "11_exterior_preserved.png",
+  "final_objects": {
+    "SR_Console": [
+      "SR_DASHBOARD_ROOT",
+      "SR_Console_Sculpted_Base",
+      "SR_Tray_Gold_Lip",
+      "SR_Tray_Cyan_Inset",
+      "SR_Tray_Front_Orange_Rail",
+      "SR_Display_Integrated_Shell",
+      "SR_Display_Gold_Frame",
+      "SR_Display_Blue_Bezel",
+      "SR_Display_Inner_Navy",
+      "SR_DISPLAY_MAIN",
+      "SR_Header_Backbone",
+      "SR_Header_Gold_Rail",
+      "SR_Assignment_Housing",
+      "SR_BUTTON_MULTIPLAYER",
+      "SR_Nameplate_Gold",
+      "SR_Nameplate_Blue",
+      "SR_Brand",
+      "SR_Display_Light_Gold",
+      "SR_Display_Accent_Light",
+      "SR_Display_Light_Gold.001",
+      "SR_Display_Accent_Light.001",
+      "SR_PANEL_POINTS",
+      "SR_BUTTON_MENU",
+      "SR_Console_Light_Gold",
+      "SR_Console_Light",
+      "SR_Menu_Star",
+      "SR_Points_Star",
+      "SR_ANCHOR_ASSIGNMENT_HEADER",
+      "SR_ANCHOR_SENTENCE_PROGRESS",
+      "SR_ANCHOR_MULTIPLAYER",
+      "SR_ANCHOR_READING_CONTENT",
+      "SR_STONE_TRAY_ANCHOR",
+      "SR_ANCHOR_POINTS",
+      "SR_ANCHOR_MENU",
+      "SR_ANCHOR_PREVIOUS_SENTENCE",
+      "SR_ANCHOR_NEXT_SENTENCE",
+      "SR_ANCHOR_READ_PASSAGE",
+      "SR_ANCHOR_ASSIGNMENTS",
+      "SR_ANCHOR_INSTRUCTIONS",
+      "SR_STONE_PLACEMENT_REGION"
+    ],
+    "SR_Characters": [
+      "SR_CHARACTER_STUDENT",
+      "Student_Shorts",
+      "Student_Shirt",
+      "Student_Collar",
+      "Student_Head_Pivot",
+      "Student_Head",
+      "Student_Ear",
+      "Student_Ear_Inner",
+      "Student_Eye_White",
+      "Student_Iris",
+      "Student_Pupil",
+      "Student_Catchlight",
+      "Student_Brow",
+      "Student_Ear.001",
+      "Student_Ear_Inner.001",
+      "Student_Eye_White.001",
+      "Student_Iris.001",
+      "Student_Pupil.001",
+      "Student_Catchlight.001",
+      "Student_Brow.001",
+      "Student_Nose",
+      "Student_Smile",
+      "Student_Teeth",
+      "Student_Lip",
+      "Hair_Curl",
+      "Hair_Curl.001",
+      "Hair_Curl.002",
+      "Hair_Curl.003",
+      "Hair_Curl.004",
+      "Hair_Curl.005",
+      "Hair_Curl.006",
+      "Hair_Curl.007",
+      "Hair_Curl.008",
+      "Hair_Curl.009",
+      "Hair_Curl.010",
+      "Hair_Curl.011",
+      "Hair_Curl.012",
+      "Hair_Curl.013",
+      "Hair_Curl.014",
+      "Hair_Curl.015",
+      "Hair_Curl.016",
+      "Hair_Curl.017",
+      "Hair_Curl.018",
+      "Hair_Curl.019",
+      "Hair_Curl.020",
+      "Hair_Curl.021",
+      "Hair_Curl.022",
+      "Hair_Curl.023",
+      "Hair_Curl.024",
+      "Hair_Curl.025",
+      "Hair_Curl.026",
+      "Hair_Curl.027",
+      "Hair_Curl.028",
+      "Hair_Curl.029",
+      "Hair_Curl.030",
+      "Hair_Curl.031",
+      "Hair_Curl.032",
+      "Hair_Curl.033",
+      "Hair_Curl.034",
+      "Hair_Curl.035",
+      "Hair_Curl.036",
+      "Hair_Curl.037",
+      "Hair_Curl.038",
+      "Hair_Curl.039",
+      "Hair_Curl.040",
+      "Hair_Curl.041",
+      "Hair_Curl.042",
+      "Hair_Curl.043",
+      "Hair_Curl.044",
+      "Hair_Curl.045",
+      "Hair_Curl.046",
+      "Hair_Curl.047",
+      "Hair_Curl.048",
+      "Hair_Curl.049",
+      "Hair_Curl.050",
+      "Hair_Curl.051",
+      "Student_Leg",
+      "Student_Shoe_Sole",
+      "Student_Shoe_Upper",
+      "Student_Shoe_Lace",
+      "Student_Shoe_Lace.001",
+      "Student_Shoe_Lace.002",
+      "Student_Sleeve",
+      "Student_Arm",
+      "Student_Hand",
+      "Student_Backpack_Strap",
+      "Student_Leg.001",
+      "Student_Shoe_Sole.001",
+      "Student_Shoe_Upper.001",
+      "Student_Shoe_Lace.003",
+      "Student_Shoe_Lace.004",
+      "Student_Shoe_Lace.005",
+      "Student_Sleeve.001",
+      "Student_Arm.001",
+      "Student_Hand.001",
+      "Student_Backpack_Strap.001",
+      "Student_Backpack",
+      "Student_Backpack_Pocket",
+      "Student_Backpack_Handle",
+      "Student_Pack_Badge",
+      "SR_CHARACTER_ENCOURAGER",
+      "Encourager_Hood",
+      "Encourager_Chest",
+      "Encourager_Hoodie_Panel",
+      "Encourager_Head_Pivot",
+      "Encourager_Head",
+      "Encourager_Ear",
+      "Encourager_Ear_Inner",
+      "Encourager_Eye_White",
+      "Encourager_Iris",
+      "Encourager_Pupil",
+      "Encourager_Catchlight",
+      "Encourager_Brow",
+      "Encourager_Ear.001",
+      "Encourager_Ear_Inner.001",
+      "Encourager_Eye_White.001",
+      "Encourager_Iris.001",
+      "Encourager_Pupil.001",
+      "Encourager_Catchlight.001",
+      "Encourager_Brow.001",
+      "Encourager_Nose",
+      "Encourager_Smile",
+      "Encourager_Teeth",
+      "Encourager_Lip",
+      "Hair_Curl.052",
+      "Hair_Curl.053",
+      "Hair_Curl.054",
+      "Hair_Curl.055",
+      "Hair_Curl.056",
+      "Hair_Curl.057",
+      "Hair_Curl.058",
+      "Hair_Curl.059",
+      "Hair_Curl.060",
+      "Hair_Curl.061",
+      "Hair_Curl.062",
+      "Hair_Curl.063",
+      "Hair_Curl.064",
+      "Hair_Curl.065",
+      "Hair_Curl.066",
+      "Hair_Curl.067",
+      "Hair_Curl.068",
+      "Hair_Curl.069",
+      "Hair_Curl.070",
+      "Hair_Curl.071",
+      "Encourager_Blue_Cap",
+      "Encourager_Cap_Brim",
+      "Encourager_Cap_Badge",
+      "Encourager_Thigh",
+      "Encourager_Shin",
+      "Encourager_Sneaker_Sole",
+      "Encourager_Sneaker_Upper",
+      "Encourager_Sneaker_Lace",
+      "Encourager_Sneaker_Lace.001",
+      "Encourager_Sneaker_Lace.002",
+      "Encourager_Thigh.001",
+      "Encourager_Shin.001",
+      "Encourager_Sneaker_Sole.001",
+      "Encourager_Sneaker_Upper.001",
+      "Encourager_Sneaker_Lace.003",
+      "Encourager_Sneaker_Lace.004",
+      "Encourager_Sneaker_Lace.005",
+      "Encourager_LeftSleeve",
+      "Encourager_LeftHand",
+      "Encourager_RightSleeve",
+      "Encourager_RightArm",
+      "Encourager_ThumbsUp_Fist",
+      "Encourager_Thumb",
+      "Encourager_Open_Book",
+      "Encourager_Book_Cover",
+      "Encourager_Open_Book.001",
+      "Encourager_Book_Cover.001",
+      "SR_ANCHOR_ENCOURAGER_SPEECH",
+      "SR_CHARACTER_ZOMBIE",
+      "Zombie_Hood",
+      "Zombie_Chest",
+      "Zombie_Head_Pivot",
+      "Zombie_Head",
+      "Zombie_Ear",
+      "Zombie_Ear_Inner",
+      "Zombie_Eye_White",
+      "Zombie_Iris",
+      "Zombie_Pupil",
+      "Zombie_Catchlight",
+      "Zombie_Brow",
+      "Zombie_Ear.001",
+      "Zombie_Ear_Inner.001",
+      "Zombie_Eye_White.001",
+      "Zombie_Iris.001",
+      "Zombie_Pupil.001",
+      "Zombie_Catchlight.001",
+      "Zombie_Brow.001",
+      "Zombie_Nose",
+      "Zombie_Mouth",
+      "Zombie_Tooth",
+      "Zombie_Cheek",
+      "Zombie_Cheek.001",
+      "Zombie_Hair_Tuft",
+      "Zombie_Hair_Tuft.001",
+      "Zombie_Hair_Tuft.002",
+      "Zombie_Hair_Tuft.003",
+      "Zombie_Hair_Tuft.004",
+      "Zombie_Hair_Tuft.005",
+      "Zombie_Hair_Tuft.006",
+      "Zombie_Hair_Tuft.007",
+      "Zombie_Hair_Tuft.008",
+      "Zombie_Hair_Tuft.009",
+      "Zombie_Hair_Tuft.010",
+      "Zombie_Hair_Tuft.011",
+      "Zombie_Hair_Tuft.012",
+      "Zombie_Hair_Tuft.013",
+      "Zombie_Hair_Tuft.014",
+      "Zombie_Hair_Tuft.015",
+      "Zombie_Hair_Tuft.016",
+      "Zombie_Hair_Tuft.017",
+      "Zombie_Hair_Tuft.018",
+      "Zombie_Hair_Tuft.019",
+      "Zombie_Hair_Tuft.020",
+      "Zombie_Hair_Tuft.021",
+      "Zombie_Eyelid_L",
+      "Zombie_Eyelid_R",
+      "Zombie_Thigh",
+      "Zombie_Shin",
+      "Zombie_Sneaker_Sole",
+      "Zombie_Sneaker_Upper",
+      "Zombie_Sneaker_Lace",
+      "Zombie_Sneaker_Lace.001",
+      "Zombie_Sneaker_Lace.002",
+      "Zombie_Thigh.001",
+      "Zombie_Shin.001",
+      "Zombie_Sneaker_Sole.001",
+      "Zombie_Sneaker_Upper.001",
+      "Zombie_Sneaker_Lace.003",
+      "Zombie_Sneaker_Lace.004",
+      "Zombie_Sneaker_Lace.005",
+      "Zombie_UpperArm",
+      "Zombie_Forearm",
+      "Zombie_Chin_Hand",
+      "Zombie_RightArm",
+      "Zombie_RightHand",
+      "SR_ANCHOR_ZOMBIE_SPEECH",
+      "Student_Hair_Solid_Cap",
+      "Encourager_Smile_Curve",
+      "Encourager_Smile_Teeth"
+    ],
+    "SR_Decor": [
+      "SR_Chair",
+      "Chair_Seat",
+      "Chair_Back",
+      "SR_Chair.001",
+      "Chair_Seat.001",
+      "Chair_Back.001",
+      "SR_Rug",
+      "SR_Rug_Gold_Inlay",
+      "SR_Plant_Pot",
+      "SR_Plant_Rim",
+      "SR_Plant_Leaf",
+      "SR_Plant_Leaf.001",
+      "SR_Plant_Leaf.002",
+      "SR_Plant_Leaf.003",
+      "SR_Plant_Leaf.004",
+      "SR_Plant_Leaf.005",
+      "SR_Plant_Leaf.006",
+      "SR_Plant_Pot.001",
+      "SR_Plant_Rim.001",
+      "SR_Plant_Leaf.007",
+      "SR_Plant_Leaf.008",
+      "SR_Plant_Leaf.009",
+      "SR_Plant_Leaf.010",
+      "SR_Plant_Leaf.011",
+      "SR_Plant_Leaf.012",
+      "SR_Plant_Leaf.013",
+      "SR_Wall_Light_Frame",
+      "SR_Wall_Light_Glass",
+      "SR_Wall_Light_Frame.001",
+      "SR_Wall_Light_Glass.001",
+      "Chair_Leg",
+      "Chair_Leg.001",
+      "Chair_Leg.002",
+      "Chair_Leg.003",
+      "Chair_Leg.004",
+      "Chair_Leg.005",
+      "Chair_Leg.006",
+      "Chair_Leg.007",
+      "SR_Rear_Gable_Infill"
+    ],
+    "SR_StoneSource": [
+      "SR_STONE_PREFAB_SOURCE",
+      "SR_STONE_CAP_LEFT",
+      "SR_STONE_CAP_RIGHT",
+      "SR_STONE_STRETCH_CENTRE",
+      "SR_STONE_TEXT_ANCHOR",
+      "SR_STONE_MOSS_CAP_LEFT",
+      "SR_STONE_MOSS_CAP_RIGHT",
+      "SR_STONE_MOSS_STRETCH_CENTRE"
+    ]
+  },
+  "all_renders": [
+    "01_reference_comparison.png",
+    "02_reference_polished.png",
+    "03_portrait_reading.png",
+    "04_reference_refined.png",
+    "05_portrait_room.png",
+    "06_reference_final.png",
+    "07_portrait_final.png",
+    "08_perspective_final.png",
+    "09_short_sentence_stones.png",
+    "10_long_sentence_stones.png",
+    "11_exterior_preserved.png"
+  ]
+}

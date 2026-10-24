@@ -1,0 +1,14 @@
+{
+    "status": "complete",
+    "scene": "Assets/Scenes/SC_LibraryRedesignPreview.unity",
+    "source": "C:\\Users\\11113930\\sReader4\\GeneratedAssets\\LibraryRedesign\\20261017_184255\\sReader_Library_FINAL.blend",
+    "message": "Preview scene saved, three Unity camera captures written, interior restored.",
+    "objects": 389,
+    "triangles": 73904,
+    "materials": 24,
+    "lights": 4,
+    "rendererIndex": 1,
+    "sceneBackups": [],
+    "viewSwitchesVerified": true,
+    "runtimeVerified": true
+}

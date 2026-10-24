@@ -159,6 +159,7 @@ namespace SReader.Game.ReadingHouse
             {
                 activity.Close(); Save(); RefreshTray(); FocusDisplay(false);
                 Say("No rush — that word will wait in Later.");
+                FlowOn();
             }
         }
 
@@ -230,11 +231,12 @@ namespace SReader.Game.ReadingHouse
                 Solved = () =>
                 {
                     session.SolveActiveGate(); activity.Close(); Save(); FocusDisplay(false);
-                    ShowSentence(session.CurrentSentenceIndex, announce: false);
+                    RefreshTray();
                     OnWordSolved();
+                    FlowOn();
                     if (session.CanComplete) Say("Every word restored — tap Finish to hand it in!");
                 },
-                Later = () => { session.DeferActiveGate(); activity.Close(); Save(); RefreshTray(); FocusDisplay(false); Say("Saved for Later — on to the next word."); },
+                Later = () => { session.DeferActiveGate(); activity.Close(); Save(); RefreshTray(); FocusDisplay(false); Say("Saved for Later — on to the next word."); FlowOn(); },
             });
             DressActivity(gate);
             FocusDisplay(true);
@@ -371,7 +373,11 @@ namespace SReader.Game.ReadingHouse
             if (gate != null && liveVm != null) TryOpenGate(gate, stone);
         }
 
-        public void NextPage() { if (page < pageStarts.Count - 1) { page++; RefreshTray(); } }
+        public void NextPage()
+        {
+            if (page < pageStarts.Count - 1) { page++; RefreshTray(); }
+            else if (flow != null) skipWait = true;                       // the next sentence now
+        }
         public void PreviousPage() { if (page > 0) { page--; RefreshTray(); } }
 
         void OnApplicationPause(bool pause)
@@ -465,12 +471,72 @@ namespace SReader.Game.ReadingHouse
             Debug.Log($"[ReadingHouse] Live assignment '{a.Title}' ({a.Id}): {trail.Sentences.Count} sentences, " +
                       $"{trail.Gates.Count} key words, {session.SolvedGates} solved, {session.Points} points" +
                       (progress != null ? " (resumed)" : ""), this);
-            ShowSentence(session.CurrentSentenceIndex);
+            bool fresh = session.SolvedGates == 0 && session.DeferredCount == 0 && session.ActiveGate == null;
+            StopFlow();
+            ShowSentence(fresh ? 0 : session.CurrentSentenceIndex);
+            FlowOn();
+        }
+
+        // ── sentence flow: one sentence at a time, in order ──────────────────
+        // The stones only ever carry the sentence being read. When it has no key word left to restore,
+        // the next sentence follows by itself after a moment to read it: the stones sink and the next
+        // sentence's stones rise, until the sentence of the next key word is on the rug (TrekSession
+        // decides which word is next; this only paces the sentences in between). › skips the wait.
+
+        [Header("Sentence flow")]
+        [Tooltip("Seconds a sentence stays per word before the next one follows (no key word left in it).")]
+        public float readSecondsPerWord = 0.38f;
+        public Vector2 readSecondsRange = new Vector2(2.4f, 7f);
+
+        Coroutine flow;
+        bool skipWait;
+
+        void StopFlow()
+        {
+            if (flow != null) StopCoroutine(flow);
+            flow = null;
+        }
+
+        /// <summary>Carry on through the passage towards the sentence of the next key word.</summary>
+        void FlowOn()
+        {
+            if (!Application.isPlaying || session == null || trail == null || !isActiveAndEnabled) return;
+            StopFlow();
+            flow = StartCoroutine(Flow());
+        }
+
+        bool SentenceHasWork(int index)
+        {
+            foreach (var g in trail.Gates)
+                if (g.SentenceIndex == index && !Solved(g) && (g.State != GateState.Deferred || session.ActiveGate == g || session.PeekNextGate() == g)) return true;
+            return false;
+        }
+
+        IEnumerator Flow()
+        {
+            while (session != null && trail != null)
+            {
+                int target = session.CanComplete ? trail.Sentences.Count - 1 : session.CurrentSentenceIndex;
+                if (target < sentenceIndex) { ShowSentence(target); break; }    // a word saved for Later, back up the page
+                if (SentenceHasWork(sentenceIndex) || sentenceIndex >= target) break;
+                float wait = Mathf.Clamp(words.Count * readSecondsPerWord, readSecondsRange.x, readSecondsRange.y);
+                skipWait = false;
+                for (float t = 0f; t < wait && !skipWait; t += Time.deltaTime)
+                {
+                    if (AttemptUIOpen) t = 0f;                                  // never move on under an open activity
+                    yield return null;
+                }
+                // a long sentence shows its later pages before the next sentence comes
+                if (page < pageStarts.Count - 1) { page++; RefreshTray(); continue; }
+                ShowSentence(sentenceIndex + 1, announce: false);
+            }
+            flow = null;
         }
 
         /// <summary>No assignment chosen yet: an empty board that sends the student to the chalkboard.</summary>
         public void ShowNoAssignment()
         {
+            StopFlow();
             liveView = null; liveVm = null; onExit = null;
             trail = null; session = null; selected = null; words.Clear();
             dashboard.SetHeader("Choose an assignment", 0, 0);
@@ -542,7 +608,7 @@ namespace SReader.Game.ReadingHouse
 
             dashboard.SetHeader(trail.Title, sentenceIndex + 1, trail.Sentences.Count);
             if (chalkboard != null) chalkboard.Show(trail);
-            dashboard.SetSentence(sentence.Trim());
+            dashboard.SetSentence(MaskedSentence());
             dashboard.SetPoints(session.Points);
 
             // Long sentences are paged: as many stones as fit on the two rows, the page with the
@@ -590,8 +656,30 @@ namespace SReader.Game.ReadingHouse
                 for (int i = start; i < end; i++) labels.Add(words[i].text);
                 tray.Show(labels, i => StateOfWord(start + i));
             }
+            dashboard.SetSentence(MaskedSentence());
             dashboard.SetPoints(session.Points);
             if (chalkboard != null) chalkboard.Show(trail);
+        }
+
+        /// <summary>
+        /// The sentence on the dashboard with its key words hidden (a blank for each) until they are restored:
+        /// the student finds them on the stones, not by reading them off the screen.
+        /// </summary>
+        string MaskedSentence()
+        {
+            var span = trail.Sentences[sentenceIndex];
+            var text = new System.Text.StringBuilder(trail.PassageText.Substring(span.Start, span.Length));
+            foreach (var g in trail.Gates)
+            {
+                int at = g.PassageCharIndex - span.Start;
+                if (Solved(g) || at < 0 || at >= text.Length) continue;
+                // the whole word the key word sits in (its letters only: punctuation stays)
+                int a = at, b = at;
+                while (a > 0 && char.IsLetterOrDigit(text[a - 1])) a--;
+                while (b < text.Length && (char.IsLetterOrDigit(text[b]) || text[b] == '-' || text[b] == '\'')) b++;
+                for (int i = a; i < b; i++) text[i] = '_';
+            }
+            return text.ToString().Trim();
         }
 
         void SplitWords(string sentence, int offset)

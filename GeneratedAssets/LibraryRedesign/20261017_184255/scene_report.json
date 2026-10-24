@@ -1,0 +1,24 @@
+{
+  "original_objects_preserved": 642,
+  "render_geometry_objects": 389,
+  "evaluated_triangles": 73904,
+  "triangles_by_collection": {
+    "Architecture": 21232,
+    "Roof": 3020,
+    "Interior": 15928,
+    "Interactive Props": 27164,
+    "Lighting": 0,
+    "Landscaping": 6560
+  },
+  "active_materials": 24,
+  "lights": 4,
+  "shelf_modules": [
+    "SR_Bookshelf_Module_West_1",
+    "SR_Bookshelf_Module_West_2",
+    "SR_Bookshelf_Module_East_1",
+    "SR_Bookshelf_Module_East_2"
+  ],
+  "backup_before_changes": "C:\\Users\\11113930\\sReader4\\GeneratedAssets\\LibraryRedesign\\20261017_184255\\sReader_Library_v00_original.blend",
+  "final_file": "C:\\Users\\11113930\\sReader4\\GeneratedAssets\\LibraryRedesign\\20261017_184255\\sReader_Library_FINAL.blend",
+  "unity_code_changes": false
+}

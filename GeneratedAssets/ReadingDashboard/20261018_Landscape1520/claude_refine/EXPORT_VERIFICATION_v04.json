@@ -1,0 +1,100 @@
+{
+ "summary": {
+  "EXPORT_Environment": {
+   "objects": 162,
+   "tris": 31629,
+   "materials": 26,
+   "curves_or_text_to_convert": 31
+  },
+  "EXPORT_Dashboard": {
+   "objects": 63,
+   "tris": 33916,
+   "materials": 12,
+   "curves_or_text_to_convert": 1
+  },
+  "EXPORT_StoneModule": {
+   "objects": 9,
+   "tris": 756,
+   "materials": 7,
+   "curves_or_text_to_convert": 0
+  },
+  "EXPORT_Characters": {
+   "objects": 81,
+   "tris": 31521,
+   "materials": 15,
+   "curves_or_text_to_convert": 0
+  },
+  "EXPORT_Cameras": {
+   "objects": 7,
+   "tris": 0,
+   "materials": 0,
+   "curves_or_text_to_convert": 0
+  }
+ },
+ "issues": [],
+ "missing": [],
+ "fonts_in_export": [
+  "SR_Brand"
+ ],
+ "stone": {
+  "root": "SR_STONE_PREFAB_SOURCE",
+  "children": {
+   "SR_STONE_CAP_LEFT": [
+    -0.5,
+    0.0,
+    0.0
+   ],
+   "SR_STONE_CAP_RIGHT": [
+    0.5,
+    0.0,
+    0.0
+   ],
+   "SR_STONE_MOSS_CAP_LEFT": [
+    -0.5,
+    0.0,
+    0.0
+   ],
+   "SR_STONE_MOSS_CAP_RIGHT": [
+    0.5,
+    0.0,
+    0.0
+   ],
+   "SR_STONE_MOSS_STRETCH_CENTRE": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "SR_STONE_STRETCH_CENTRE": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "SR_STONE_TEXT_ANCHOR": [
+    0.0,
+    -0.136,
+    0.241
+   ],
+   "SR_STONE_TEXT_ANCHOR_TOP": [
+    0.0,
+    -0.06,
+    0.43
+   ]
+  },
+  "props": {
+   "width_rule": "Move caps to +/- centre_width/2; scale centre X only; scale moss centre separately. Fixed cap radius .18; height .46; thickness .24.",
+   "pivot": "Bottom centre of moss contact footprint, Blender local Z up; metres.",
+   "centre_width_m": 0.32,
+   "fixed_cap_radius_x_m": 0.18,
+   "total_width_rule": "totalWidth = centreWidth + 0.36; move caps to +/- centreWidth/2; scale centre X only",
+   "label_rule": "Exactly one dynamic word, use front anchor in overview or top anchor in elevated interaction view. Never stretch text or caps.",
+   "face_flat_height_m": 0.156,
+   "text_cap_height_m": 0.12,
+   "text_padding_x_m": 0.1,
+   "cap_width_m": 0.2,
+   "centre_unit_width_m": 1.0,
+   "min_stone_width_m": 0.5,
+   "moss_overhang_m": 0.044,
+   "rule": "stone_width = max(0.50, text_width + 0.20); centre.scaleX = stone_width - 0.40; caps at +/-(stone_width-0.40)/2; text anchor never scaled"
+  }
+ }
+}

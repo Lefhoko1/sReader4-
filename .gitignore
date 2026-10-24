@@ -79,3 +79,13 @@ TextDump.txt
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Android build intermediates and Unity crash-recovery scenes
+/.utmp/
+/*_BurstDebugInformation_DoNotShip/
+/*_BackUpThisFolder_ButDontShipItWithYourGame/
+/[Aa]ssets/_Recovery/
+/[Aa]ssets/_Recovery.meta
+/GeneratedAssets/**/build/
+/GeneratedAssets/**/android/
+*_BackUpThisFolder_ButDontShipItWithYourGame/

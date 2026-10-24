@@ -15,6 +15,7 @@ namespace SReader.Game.Trek
         VisualElement overlay;
         Label page;
         TrailData trail;
+        bool showFullPassage;
 
         public bool IsOpen => overlay != null;
 
@@ -24,10 +25,11 @@ namespace SReader.Game.Trek
         /// (e.g. "Start the trek") for the R-3 "Read first" flow.
         /// </summary>
         public void Open(VisualElement host, TrailData trailData, int currentSentence,
-            System.Action onClose, (string label, System.Action onStart)? startAction = null)
+            System.Action onClose, (string label, System.Action onStart)? startAction = null, bool classroomMode = false)
         {
             if (IsOpen) return;
             trail = trailData;
+            showFullPassage = classroomMode;
 
             overlay = new VisualElement();
             overlay.style.position = Position.Absolute;
@@ -39,11 +41,18 @@ namespace SReader.Game.Trek
             card.style.marginLeft = card.style.marginRight = 14;
             card.style.marginTop = 40;
             card.style.marginBottom = 20;
-            card.style.backgroundColor = TrekTheme.Paper;
-            TrekTheme.Round(card, 18);
+            card.style.backgroundColor = classroomMode ? new UnityEngine.Color(.96f,.92f,.81f) : TrekTheme.Paper;
+            TrekTheme.Round(card, classroomMode ? 3 : 18);
             TrekTheme.Border(card, TrekTheme.Line, 1);
             card.style.paddingLeft = card.style.paddingRight = 18;
             card.style.paddingTop = card.style.paddingBottom = 14;
+            if (classroomMode)
+            {
+                card.style.position = Position.Absolute;
+                card.style.left = card.style.right = 14;
+                card.style.top = Length.Percent(35); card.style.bottom = 14;
+                card.style.marginLeft = card.style.marginRight = card.style.marginTop = card.style.marginBottom = 0;
+            }
             overlay.Add(card);
 
             var head = new VisualElement();
@@ -53,6 +62,7 @@ namespace SReader.Game.Trek
 
             var title = TrekTheme.Title(string.IsNullOrEmpty(trail.Title) ? "The passage" : trail.Title, 18);
             title.style.flexGrow = 1;
+            title.style.flexShrink = 1;
             head.Add(title);
             if (startAction.HasValue)
             {
@@ -60,17 +70,20 @@ namespace SReader.Game.Trek
                 start.style.marginRight = 8;
                 head.Add(start);
             }
-            head.Add(TrekTheme.Ghost(startAction.HasValue ? "✕ Close" : "✕ Back to trail", () => Close(onClose)));
+            head.Add(TrekTheme.Ghost(classroomMode ? "Close book" : startAction.HasValue ? "✕ Close" : "✕ Back to trail", () => Close(onClose)));
 
-            card.Add(TrekTheme.Sub("Sealed words open as you clear their gates. Won words are lit — tap-to-hear arrives with read-aloud."));
+            var guidance = TrekTheme.Sub(classroomMode ? "Read the full passage. Restore its words on the teaching board." : "Sealed words open as you clear their gates. Won words are lit — tap-to-hear arrives with read-aloud.");
+            if(classroomMode) guidance.style.color = new UnityEngine.Color(.32f,.34f,.28f);
+            card.Add(guidance);
 
             var scroll = new ScrollView(ScrollViewMode.Vertical);
             scroll.style.flexGrow = 1;
+            scroll.style.minHeight = 0;
             scroll.style.marginTop = 10;
             card.Add(scroll);
 
             page = new Label { enableRichText = true };
-            page.style.fontSize = 16;
+            page.style.fontSize = classroomMode ? 19 : 16;
             page.style.color = TrekTheme.Ink;
             page.style.whiteSpace = WhiteSpace.Normal;
             scroll.Add(page);
@@ -91,6 +104,7 @@ namespace SReader.Game.Trek
         {
             if (page == null || trail == null) return;
 
+            if (showFullPassage) { page.enableRichText = false; page.text = trail.PassageText; return; }
             var sb = new StringBuilder(trail.PassageText.Length + 256);
             for (int i = 0; i < trail.Sentences.Count; i++)
             {

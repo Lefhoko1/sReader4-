@@ -1,0 +1,14 @@
+{
+  "backed_up": [
+    "Assets/Scenes/SC_LibraryRedesignPreview.unity",
+    "Assets/Scripts/EnvironmentPreview/LibraryRedesignPreview.cs",
+    "Assets/Editor/LibraryRedesignSceneBuilder.cs",
+    "Assets/Scripts/UI/Views/Home/Assignments/StudentAssignmentsView.cs",
+    "ProjectSettings/QualitySettings.asset",
+    "ProjectSettings/ProjectSettings.asset",
+    "ProjectSettings/EditorBuildSettings.asset",
+    "Assets/Settings/UniversalRP.asset",
+    "Assets/Art/LibraryRedesign/LibraryPreviewPost.asset"
+  ],
+  "source_blend": "GeneratedAssets/LibraryRedesign/20261017_184255/sReader_Library_FINAL.blend"
+}

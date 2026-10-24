@@ -1,0 +1,12 @@
+{
+  "blend": "C:\\Users\\11113930\\sReader4\\GeneratedAssets\\MagicalClassroom\\20261017_195009\\sReader_Classroom_v02.blend",
+  "geometry_changed": false,
+  "fbx": "Assets/Art/MagicalClassroom/Models/SM_MagicalClassroom.fbx",
+  "unity_live_components": [
+    "Current assignment text",
+    "Touch input",
+    "Camera transitions",
+    "Reading UI",
+    "TrekSession feedback"
+  ]
+}

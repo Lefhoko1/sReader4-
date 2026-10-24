@@ -9,9 +9,11 @@ namespace SReader.Game.ReadingHouse
     /// The dashboard's big display as a game screen. While the student reads at the dashboard it carries a
     /// small toolbar (Read · Finish · ‹ ›) over the picture; when a word activity or the passage reader opens,
     /// it fills the display — the same activities (GatePanelHost) and reader (ReadingViewController) the
-    /// Classroom uses, recoloured from their light mobile-card look into the dashboard's game palette: deep
-    /// navy glass, a gold rim, gold titles, cream words, pieces that look like word stones, and orange /
-    /// violet / teal action buttons. Taps on the display reach the page (see <see cref="WorldUIScreen"/>).
+    /// Classroom uses, recoloured from their light mobile-card look into the dashboard's game palette:
+    /// no panel behind the words (the display's illustration shows through), gold titles and cream words
+    /// with a navy outline, pieces that look like word stones, and orange / violet / teal action buttons
+    /// that squash and bounce with a soft pop when pressed. A tall activity slides as one piece under the
+    /// finger (<see cref="SlideDrag"/>). Taps on the display reach the page (see <see cref="WorldUIScreen"/>).
     /// Presentation only.
     /// </summary>
     public sealed class DashboardScreen : WorldUIScreen
@@ -78,6 +80,7 @@ namespace SReader.Game.ReadingHouse
             b.style.paddingLeft = 20; b.style.paddingRight = 20; b.style.paddingTop = 8; b.style.paddingBottom = 8;
             b.style.marginLeft = 10;
             Round(b, 22f); Border(b, Gold, 3f);
+            Touchable(b);
             toolbar.Add(b);
             return b;
         }
@@ -95,35 +98,33 @@ namespace SReader.Game.ReadingHouse
             prev.SetEnabled(canPrev); next.SetEnabled(canNext);
         }
 
-        /// <summary>Keep the action row fixed; only the challenge body scrolls.</summary>
+        /// <summary>
+        /// Dress an activity for the display: its sentence above it, one compact heading, big buttons — and the
+        /// whole sheet (actions included) slides as one piece when it is taller than the display.
+        /// </summary>
         public void PresentActivity(VisualElement sheet, string sentence)
         {
             sheet.AddToClassList("rh-activity");
-            sheet.style.height = Length.Percent(94);
             sheet.style.minHeight = 0;
             sheet.style.flexShrink = 0;
+            sheet.style.maxHeight = StyleKeyword.None;
             sheet.style.paddingTop = sheet.style.paddingBottom = 12;
             sheet.style.paddingLeft = sheet.style.paddingRight = 18;
 
-            var footer = sheet.Q<VisualElement>("gate-actions");
-            footer?.RemoveFromHierarchy();
-            var body = new ScrollView(ScrollViewMode.Vertical) { name = "rh-activity-body" };
-            body.style.flexGrow = 1;
-            body.style.flexShrink = 1;
-            body.style.minHeight = 0;
-            body.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
-            body.verticalScrollerVisibility = ScrollerVisibility.Auto;
             var children = new System.Collections.Generic.List<VisualElement>(sheet.Children());
-            foreach (var child in children) { child.style.flexShrink = 0; body.Add(child); }
+            var footer = sheet.Q<VisualElement>("gate-actions");
+            foreach (var child in children) child.style.flexShrink = 0;
+            int insertAt = 0;
             if (!string.IsNullOrWhiteSpace(sentence))
             {
                 var context = new Label(sentence) { name = "rh-activity-context" };
                 context.style.whiteSpace = WhiteSpace.Normal;
-                context.style.fontSize = 15;
+                context.style.fontSize = 17;
                 context.style.color = Cream;
                 context.style.marginBottom = 8;
                 context.style.flexShrink = 0;
-                body.Insert(0, context);
+                sheet.Insert(0, context);
+                insertAt = 1;
             }
             // A single compact heading replaces three stacked header rows.
             if (children.Count >= 3 && footer != null)
@@ -135,43 +136,38 @@ namespace SReader.Game.ReadingHouse
                 heading.style.flexWrap = Wrap.Wrap;
                 heading.style.flexShrink = 0;
                 heading.style.marginBottom = 6;
-                children[1].style.fontSize = 20;
-                children[2].style.fontSize = 14;
+                children[1].style.fontSize = 22;
+                children[2].style.fontSize = 15;
                 children[2].style.marginLeft = 18;
                 heading.Add(children[1]); heading.Add(children[2]);
-                body.Insert(string.IsNullOrWhiteSpace(sentence) ? 0 : 1, heading);
+                sheet.Insert(insertAt, heading);
             }
-            body.Query<Label>().ForEach(l =>
+            sheet.Query<Label>().ForEach(l =>
             {
                 l.style.marginTop = 0; l.style.marginBottom = 4;
                 l.style.paddingTop = l.style.paddingBottom = 0;
                 l.style.paddingLeft = l.style.paddingRight = 0;
             });
-            sheet.Add(body);
             if (footer != null)
             {
+                footer.BringToFront();                                           // actions close the sheet
                 footer.style.flexShrink = 0;
-                footer.style.marginTop = 8;
-                footer.style.paddingTop = 6;
-                footer.style.borderTopWidth = 1;
-                footer.style.borderTopColor = new Color(Gold.r, Gold.g, Gold.b, 0.35f);
-                sheet.Add(footer);
+                footer.style.marginTop = 10;
             }
             sheet.Query<Button>().ForEach(b =>
             {
-                b.style.minHeight = 48;
-                b.style.minWidth = 48;
-                b.style.fontSize = 19;
+                b.style.minHeight = 52;
+                b.style.minWidth = 52;
+                b.style.fontSize = 20;
                 b.style.whiteSpace = WhiteSpace.Normal;
                 b.style.flexShrink = 0;
             });
-            var bar = body.verticalScroller;
-            bar.style.width = 8;
-            bar.lowButton.style.display = bar.highButton.style.display = DisplayStyle.None;
-            var track = bar.slider.Q("unity-tracker");
-            var thumb = bar.slider.Q("unity-dragger");
-            if (track != null) { track.style.backgroundColor = NavyDeep; Round(track, 4); }
-            if (thumb != null) { thumb.style.backgroundColor = StoneEdge; Round(thumb, 4); }
+            var frame = sheet.parent;
+            if (frame != null)
+            {
+                frame.style.overflow = Overflow.Hidden;
+                sheet.AddManipulator(SlideDrag.ForSheet(sheet, frame));
+            }
         }
 
         static void RefreshActivityLayout(VisualElement overlay)
@@ -195,7 +191,7 @@ namespace SReader.Game.ReadingHouse
         {
             // The activities rebuild their pieces as the student plays: keep recolouring what appears.
             if (Host == null || Host.childCount == 0 || Time.unscaledTime < nextStyle) return;
-            nextStyle = Time.unscaledTime + 0.1f;
+            nextStyle = Time.unscaledTime + 0.25f;
             foreach (var overlay in Host.Children()) { Restyle(overlay, top: true); RefreshActivityLayout(overlay); }
         }
 
@@ -204,9 +200,15 @@ namespace SReader.Game.ReadingHouse
         {
             if (top)
             {
-                e.style.backgroundColor = new Color(NavyDeep.r, NavyDeep.g, NavyDeep.b, 0.82f);
+                e.style.backgroundColor = Color.clear;                        // the display's picture shows through
                 e.style.justifyContent = Justify.Center;
                 e.style.alignItems = Align.Center;
+            }
+            if (e is ScrollView sv && !sv.ClassListContains("rh-drag"))
+            {
+                sv.AddToClassList("rh-drag");
+                sv.AddManipulator(SlideDrag.ForScrollView(sv));
+                sv.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             }
             var bg = e.style.backgroundColor.value;
             if (e is Button b)
@@ -219,21 +221,27 @@ namespace SReader.Game.ReadingHouse
                 {
                     if (t.StartsWith("Hint")) Fill(b, Violet, Color.white, new Color32(190, 175, 255, 255));
                     else if (t.Contains("Later")) Fill(b, Teal, Color.white, new Color32(150, 230, 220, 255));
-                    else Fill(b, new Color(1f, 1f, 1f, 0.1f), Cream, new Color(1f, 1f, 1f, 0.25f));
+                    else Fill(b, new Color(NavyDeep.r, NavyDeep.g, NavyDeep.b, 0.55f), Cream, new Color(Gold.r, Gold.g, Gold.b, 0.6f));
                 }
+                Touchable(b);
             }
             else
             {
                 if (Same(bg, TrekTheme.Card))
                 {
-                    e.style.backgroundColor = new Color(Navy.r, Navy.g, Navy.b, 0.97f);
-                    Border(e, Gold, 3f); Round(e, 24f);
-                    e.style.width = Length.Percent(94); e.style.maxHeight = Length.Percent(94);
+                    // No card: the words stand straight on the display's picture.
+                    e.style.backgroundColor = Color.clear;
+                    Border(e, Color.clear, 0f);
+                    e.style.width = Length.Percent(94);
+                    if (!e.ClassListContains("rh-activity")) e.style.maxHeight = Length.Percent(94);
                     e.style.marginLeft = 0; e.style.marginRight = 0; e.style.marginBottom = 0;
                 }
-                else if (Same(bg, TrekTheme.Paper) || Same(bg, TrekTheme.Line)) e.style.backgroundColor = new Color(1f, 1f, 1f, 0.07f);
+                else if (Same(bg, TrekTheme.Paper) || Same(bg, TrekTheme.Line)) e.style.backgroundColor = Color.clear;
                 if (e is Label l)
                 {
+                    l.style.unityTextOutlineColor = NavyDeep;
+                    l.style.unityTextOutlineWidth = 0.18f;
+                    l.style.textShadow = new TextShadow { offset = new Vector2(0f, 2f), blurRadius = 3f, color = new Color(NavyDeep.r, NavyDeep.g, NavyDeep.b, 0.85f) };
                     var c = l.style.color.value;
                     if (Same(c, TrekTheme.Ink) && l.style.fontSize.value.value >= 18f) l.style.color = GoldText;
                     else if (Same(c, TrekTheme.Ink) || l.style.color.keyword == StyleKeyword.Null) l.style.color = Cream;   // unset = inherited dark ink
@@ -241,6 +249,48 @@ namespace SReader.Game.ReadingHouse
                 }
             }
             foreach (var child in e.Children()) Restyle(child);
+        }
+
+        /// <summary>A press squashes the button a little and lets it spring back with a soft pop.</summary>
+        static void Touchable(Button b)
+        {
+            if (b.ClassListContains("rh-touch")) return;
+            b.AddToClassList("rh-touch");
+            b.style.transitionProperty = new System.Collections.Generic.List<StylePropertyName> { new StylePropertyName("scale") };
+            b.style.transitionDuration = new System.Collections.Generic.List<TimeValue> { new TimeValue(0.18f) };
+            b.style.transitionTimingFunction = new System.Collections.Generic.List<EasingFunction> { new EasingFunction(EasingMode.EaseOutBack) };
+            b.RegisterCallback<PointerDownEvent>(_ => { b.style.scale = new Scale(new Vector2(0.9f, 0.9f)); Pop(); }, TrickleDown.TrickleDown);
+            b.RegisterCallback<PointerUpEvent>(_ => b.style.scale = new Scale(Vector2.one), TrickleDown.TrickleDown);
+            b.RegisterCallback<PointerLeaveEvent>(_ => b.style.scale = new Scale(Vector2.one));
+            b.RegisterCallback<PointerCaptureOutEvent>(_ => b.style.scale = new Scale(Vector2.one));
+        }
+
+        static AudioSource popSource;
+        static AudioClip popClip;
+
+        /// <summary>A short soft "pop" (synthesised once, like the stones' chime).</summary>
+        static void Pop()
+        {
+            if (popClip == null)
+            {
+                const int rate = 22050; int n = rate / 12;
+                var data = new float[n];
+                for (int i = 0; i < n; i++)
+                {
+                    float t = i / (float)rate;
+                    float f = Mathf.Lerp(900f, 420f, t * 12f);
+                    data[i] = Mathf.Exp(-t * 45f) * 0.45f * Mathf.Sin(2f * Mathf.PI * f * t);
+                }
+                popClip = AudioClip.Create("DashboardPop", n, 1, rate, false);
+                popClip.SetData(data, 0);
+            }
+            if (popSource == null)
+            {
+                var go = new GameObject("Dashboard Pop") { hideFlags = HideFlags.DontSave };
+                popSource = go.AddComponent<AudioSource>();
+                popSource.playOnAwake = false; popSource.spatialBlend = 0f; popSource.volume = 0.5f;
+            }
+            popSource.PlayOneShot(popClip);
         }
 
         static void Fill(Button b, Color fill, Color text, Color rim)

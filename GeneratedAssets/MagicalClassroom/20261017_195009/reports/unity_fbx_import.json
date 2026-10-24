@@ -1,0 +1,13 @@
+{
+    "blend": "sReader_Classroom_v01.blend",
+    "model": "Assets/Art/MagicalClassroom/Models/SM_MagicalClassroom.fbx",
+    "renderers": 414,
+    "shelfModules": 4,
+    "axisAlignmentError": 0.0,
+    "boardSocket": {
+        "x": 4.059999942779541,
+        "y": 2.25,
+        "z": 0.09999988973140717
+    },
+    "linkedModel": true
+}

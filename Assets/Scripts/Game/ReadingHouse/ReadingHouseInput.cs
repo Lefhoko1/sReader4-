@@ -24,9 +24,12 @@ namespace SReader.Game.ReadingHouse
         public ReadingHouseExploreDirector director;
         public TouchJoystick joystick;
         public float maxTapDragPixels = 24f;
+        [Tooltip("Dragging empty space swings the view: degrees per screen pixel, and metres of height per pixel.")]
+        public float orbitDegreesPerPixel = 0.25f;
+        public float orbitHeightPerPixel = 0.006f;
 
-        Vector2 pressPosition;
-        bool pressing;
+        Vector2 pressPosition, lastDrag;
+        bool pressing, orbiting;
 
 #if ENABLE_INPUT_SYSTEM
         void Update()
@@ -34,7 +37,18 @@ namespace SReader.Game.ReadingHouse
             var pointer = Pointer.current;
             if (pointer != null)
             {
-                if (pointer.press.wasPressedThisFrame) { pressing = true; pressPosition = pointer.position.ReadValue(); }
+                if (pointer.press.wasPressedThisFrame)
+                {
+                    pressing = true; pressPosition = lastDrag = pointer.position.ReadValue();
+                    orbiting = CanOrbitFrom(pressPosition);
+                }
+                if (pressing && orbiting && pointer.press.isPressed)
+                {
+                    var p = pointer.position.ReadValue();
+                    if ((p - pressPosition).magnitude > maxTapDragPixels)
+                        director.follow.Orbit((p - lastDrag).x * orbitDegreesPerPixel, -(p - lastDrag).y * orbitHeightPerPixel);
+                    lastDrag = p;
+                }
                 if (pressing && pointer.press.wasReleasedThisFrame)
                 {
                     pressing = false;
@@ -43,12 +57,22 @@ namespace SReader.Game.ReadingHouse
                 }
             }
             // Android's system Back arrives as the Escape key.
-            if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+            if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame && !TextInputFocus.Typing)
             {
                 if (director != null && director.BoardOpen) director.CloseChalkboard();   // leave the chalkboard first
                 else presenter.RequestExit();
             }
-            if (Debug.isDebugBuild) DevelopmentKeys();
+            if (Debug.isDebugBuild && !TextInputFocus.Typing) DevelopmentKeys();
+        }
+
+        /// <summary>A press on empty scene (not the stick, a HUD control, the knob or an open page) may swing the view round.</summary>
+        bool CanOrbitFrom(Vector2 p)
+        {
+            if (director == null || director.follow == null || !director.Active || !director.follow.Engaged) return false;
+            if (director.OverlayOpen || director.BoardFocus > 0.001f || director.Current == ReadingHouseExploreDirector.State.Reading) return false;
+            if (joystick != null && joystick.Claims(p)) return false;
+            if (director.hud != null && (director.hud.KnobBusy || director.hud.IsOverUI(p))) return false;
+            return true;
         }
 
         void DevelopmentKeys()

@@ -1,0 +1,19 @@
+{
+  "status": "Succeeded",
+  "apk": "C:\\Users\\11113930\\sReader4\\GeneratedAssets\\MagicalClassroom\\20261017_195009\\android\\sReader_Classroom_Development.apk",
+  "apk_bytes": 232897081,
+  "apk_mib": 222.1,
+  "sha256": "b470560087e5c6630b5debf343a9cd3e3d26c91cd2675088760d8502201f8c85",
+  "startup_scene": "Assets/Scenes/SC_LibraryRedesignPreview.unity",
+  "default_build_index": 0,
+  "classroom_scene_confirmed_in_apk": true,
+  "signature": "Verified using Android APK Signature Scheme v2",
+  "architectures": [
+    "armeabi-v7a",
+    "arm64-v8a"
+  ],
+  "build_seconds": 712.8783837,
+  "unity_report_errors": 13,
+  "unity_report_warnings": 795,
+  "device_tested": false
+}

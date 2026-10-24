@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7639919883416699693
+--- !u!1 &5262464543068368227
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5569572574118096827}
-  - component: {fileID: 1647191237388595241}
+  - component: {fileID: 5126665817680930420}
+  - component: {fileID: 2936242765464389628}
   m_Layer: 0
   m_Name: Light_Candle
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5569572574118096827
+--- !u!4 &5126665817680930420
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7639919883416699693}
+  m_GameObject: {fileID: 5262464543068368227}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7573379529288979234}
+  m_Father: {fileID: 1417024534726648906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &1647191237388595241
+--- !u!108 &2936242765464389628
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7639919883416699693}
+  m_GameObject: {fileID: 5262464543068368227}
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 2
@@ -97,7 +97,7 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1001 &1204043037192165273
+--- !u!1001 &7639752050800468209
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -145,10 +145,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: c7516dee0edc3d74e9e38034c358fd70, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: dca42b5e6c3e18b4b8e663851638c9c3, type: 2}
     - target: {fileID: -6855939333182667005, guid: c7516dee0edc3d74e9e38034c358fd70, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 20
@@ -161,20 +157,16 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 87
       objectReference: {fileID: 0}
-    - target: {fileID: 5600960325664070172, guid: c7516dee0edc3d74e9e38034c358fd70, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 41d499de77d3fd84eab1aba7a7bee267, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8768387859567805627, guid: c7516dee0edc3d74e9e38034c358fd70, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5569572574118096827}
+      addedObject: {fileID: 5126665817680930420}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7516dee0edc3d74e9e38034c358fd70, type: 3}
---- !u!4 &7573379529288979234 stripped
+--- !u!4 &1417024534726648906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8768387859567805627, guid: c7516dee0edc3d74e9e38034c358fd70, type: 3}
-  m_PrefabInstance: {fileID: 1204043037192165273}
+  m_PrefabInstance: {fileID: 7639752050800468209}
   m_PrefabAsset: {fileID: 0}

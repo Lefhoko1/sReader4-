@@ -1,0 +1,1 @@
+{"name":"SReader.Classroom.TestDriver","references":["UnityEngine.TestRunner","UnityEditor.TestRunner"],"includePlatforms":["Editor"],"autoReferenced":true}

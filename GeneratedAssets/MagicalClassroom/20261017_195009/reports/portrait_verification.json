@@ -1,0 +1,19 @@
+{
+    "passed": true,
+    "error": "",
+    "checks": [
+        "Runtime renders at 720 x 1280",
+        "Full passage reader opens at portrait height 1280",
+        "Reading text wraps within portrait safe-area width 1280",
+        "Close book target fits portrait viewport 1280",
+        "Runtime renders at 720 x 1600",
+        "Full passage reader opens at portrait height 1600",
+        "Reading text wraps within portrait safe-area width 1600",
+        "Close book target fits portrait viewport 1600",
+        "World-space word targets exceed 44 logical pixels at 720 x 1520",
+        "Runtime renders at 720 x 1520",
+        "Full passage reader opens at portrait height 1520",
+        "Reading text wraps within portrait safe-area width 1520",
+        "Close book target fits portrait viewport 1520"
+    ]
+}

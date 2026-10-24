@@ -43,6 +43,25 @@ namespace SReader.UI.Navigation
         public void ShowTutorHome()      => ShowPage(tutorHomePage, "Tutor Home");
         public void ShowTrek()           => ShowPage(trekPage, "Story Trek");
 
+        // A page created in code rather than placed in the scene (e.g. the 3D
+        // Reading House wrapper). It takes part in the same one-page-at-a-time
+        // rule: showing it hides every other page, and showing any other page
+        // hides it again (which lets it clean up in OnDisable).
+        GameObject runtimePage;
+
+        /// <summary>Show a page that was created at runtime (not assigned in the Inspector).</summary>
+        public void ShowRuntimePage(GameObject page, string pageName)
+        {
+            if (page == null)
+            {
+                Debug.LogError($"[NavigationManager] Runtime page '{pageName}' is null — staying on the current page.", this);
+                return;
+            }
+            SetAllPagesInactive();
+            runtimePage = page;
+            page.SetActive(true);
+        }
+
         /// <summary>
         /// Post-login landing: each role lands on the home built for what they do.
         /// Teachers reuse the tutor home; administrators fall back to the profile
@@ -89,6 +108,7 @@ namespace SReader.UI.Navigation
             SetPageActive(guardianHomePage, false);
             SetPageActive(tutorHomePage, false);
             SetPageActive(trekPage, false);
+            SetPageActive(runtimePage, false);
         }
 
         private void SetPageActive(GameObject page, bool isActive)

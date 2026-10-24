@@ -1,0 +1,24 @@
+{
+  "required_names": {
+    "SR_DISPLAY_MAIN": true,
+    "SR_BUTTON_MULTIPLAYER": true,
+    "SR_BUTTON_MENU": true,
+    "SR_PANEL_POINTS": true,
+    "SR_STONE_PREFAB_SOURCE": true,
+    "SR_STONE_TRAY_ANCHOR": true,
+    "SR_STONE_PLACEMENT_REGION": true,
+    "SR_STONE_TEXT_ANCHOR": true,
+    "SR_ANCHOR_ASSIGNMENT_HEADER": true,
+    "SR_ANCHOR_SENTENCE_PROGRESS": true,
+    "SR_ANCHOR_MULTIPLAYER": true,
+    "SR_ANCHOR_READING_CONTENT": true,
+    "CAM_ROOM_OVERVIEW": true,
+    "CAM_DASHBOARD_CLOSEUP": true,
+    "CAM_STONES_CLOSEUP": true,
+    "CAM_CHARACTER_VIEW": true
+  },
+  "packed_landscape": true,
+  "all_review_renders_exist": true,
+  "source": "C:\\Users\\11113930\\sReader4\\GeneratedAssets\\ReadingDashboard\\20261018_ReferencePolish\\sReader_ReadingHouse_Reference_FINAL.blend",
+  "unity_files_modified": false
+}

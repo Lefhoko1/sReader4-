@@ -1,0 +1,11 @@
+{
+    "environment": "Unity Editor on workstation; not Huawei Y5",
+    "samples": 2685,
+    "drawCalls": 197.0,
+    "batches": 0.0,
+    "setPassCalls": 32.86480446927374,
+    "mainThreadMs": 33.14780770949721,
+    "usedMemoryMB": 2838.533006668091,
+    "drawCounterValid": true,
+    "mainCounterValid": true
+}

@@ -1,0 +1,5902 @@
+{
+ "summary": {
+  "EXPORT_Environment": {
+   "objects": 162,
+   "meshes": 127,
+   "curves_text": 31,
+   "empties": 4,
+   "cameras": 0
+  },
+  "EXPORT_Dashboard": {
+   "objects": 63,
+   "meshes": 40,
+   "curves_text": 1,
+   "empties": 22,
+   "cameras": 0
+  },
+  "EXPORT_StoneModule": {
+   "objects": 9,
+   "meshes": 6,
+   "curves_text": 0,
+   "empties": 3,
+   "cameras": 0
+  },
+  "EXPORT_Characters": {
+   "objects": 81,
+   "meshes": 71,
+   "curves_text": 0,
+   "empties": 10,
+   "cameras": 0
+  },
+  "EXPORT_Cameras": {
+   "objects": 7,
+   "meshes": 0,
+   "curves_text": 0,
+   "empties": 0,
+   "cameras": 7
+  }
+ },
+ "anchors": [
+  "SR_ANCHOR_ASSIGNMENTS",
+  "SR_ANCHOR_ASSIGNMENT_HEADER",
+  "SR_ANCHOR_ENCOURAGER_SPEECH",
+  "SR_ANCHOR_ENCOURAGER_SPEECH_OPT",
+  "SR_ANCHOR_INSTRUCTIONS",
+  "SR_ANCHOR_MENU",
+  "SR_ANCHOR_MULTIPLAYER",
+  "SR_ANCHOR_MULTIPLAYER_ICON",
+  "SR_ANCHOR_NEXT_SENTENCE",
+  "SR_ANCHOR_PASSAGE_BOTTOM_RIGHT",
+  "SR_ANCHOR_PASSAGE_PAGINATION",
+  "SR_ANCHOR_PASSAGE_SCROLL",
+  "SR_ANCHOR_PASSAGE_TOP_LEFT",
+  "SR_ANCHOR_POINTS",
+  "SR_ANCHOR_PREVIOUS_SENTENCE",
+  "SR_ANCHOR_PROGRESS_BAR",
+  "SR_ANCHOR_READING_CONTENT",
+  "SR_ANCHOR_READ_PASSAGE",
+  "SR_ANCHOR_SENTENCE_PROGRESS",
+  "SR_ANCHOR_STUDENT_GAMEPLAY",
+  "SR_ANCHOR_STUDENT_OVERVIEW",
+  "SR_ANCHOR_TRAY_ROW_0",
+  "SR_ANCHOR_TRAY_ROW_1",
+  "SR_ANCHOR_ZOMBIE_SPEECH",
+  "SR_ANCHOR_ZOMBIE_SPEECH_OPT",
+  "SR_STONE_PLACEMENT_REGION",
+  "SR_STONE_TEXT_ANCHOR",
+  "SR_STONE_TEXT_ANCHOR_TOP",
+  "SR_STONE_TRAY_ANCHOR"
+ ],
+ "issues": [
+  "EXPORT_Environment: SR_Bookshelf_Module_West_1 unapplied scale [1.0, 1.0, 0.74]",
+  "EXPORT_Environment: SR_Bookshelf_Module_West_2 unapplied scale [1.0, 1.0, 0.74]",
+  "EXPORT_Environment: SR_Bookshelf_Module_East_2 unapplied scale [1.0, 1.0, 0.74]",
+  "EXPORT_Environment: SR_Low_Sage unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Low_Sage.001 unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Low_Sage.002 unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Low_Sage.003 unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Low_Sage.004 unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Low_Sage.005 unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Low_Sage.006 unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Low_Sage.007 unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Low_Sage.008 unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Low_Sage.009 unapplied scale [0.25, 0.23, 0.24]",
+  "EXPORT_Environment: SR_Plant_Leaf unapplied scale [0.08, 0.055, 0.333]",
+  "EXPORT_Environment: SR_Plant_Leaf.001 unapplied scale [0.08, 0.055, 0.393]",
+  "EXPORT_Environment: SR_Plant_Leaf.002 unapplied scale [0.08, 0.055, 0.38]",
+  "EXPORT_Environment: SR_Plant_Leaf.003 unapplied scale [0.08, 0.055, 0.353]",
+  "EXPORT_Environment: SR_Plant_Leaf.004 unapplied scale [0.08, 0.055, 0.345]",
+  "EXPORT_Environment: SR_Plant_Leaf.005 unapplied scale [0.08, 0.055, 0.532]",
+  "EXPORT_Environment: SR_Plant_Leaf.006 unapplied scale [0.08, 0.055, 0.392]",
+  "EXPORT_Environment: SR_Plant_Leaf.007 unapplied scale [0.08, 0.055, 0.525]",
+  "EXPORT_Environment: SR_Plant_Leaf.008 unapplied scale [0.08, 0.055, 0.423]",
+  "EXPORT_Environment: SR_Plant_Leaf.009 unapplied scale [0.08, 0.055, 0.275]",
+  "EXPORT_Environment: SR_Plant_Leaf.010 unapplied scale [0.08, 0.055, 0.565]",
+  "EXPORT_Environment: SR_Plant_Leaf.011 unapplied scale [0.08, 0.055, 0.515]",
+  "EXPORT_Environment: SR_Plant_Leaf.012 unapplied scale [0.08, 0.055, 0.546]",
+  "EXPORT_Environment: SR_Plant_Leaf.013 unapplied scale [0.08, 0.055, 0.537]",
+  "EXPORT_Environment: Chair_Leg unapplied scale [0.045, 0.045, 0.311]",
+  "EXPORT_Environment: Chair_Leg.001 unapplied scale [0.045, 0.045, 0.311]",
+  "EXPORT_Environment: Chair_Leg.002 unapplied scale [0.045, 0.045, 0.311]",
+  "EXPORT_Environment: Chair_Leg.003 unapplied scale [0.045, 0.045, 0.311]",
+  "EXPORT_Environment: Chair_Leg.004 unapplied scale [0.045, 0.045, 0.311]",
+  "EXPORT_Environment: Chair_Leg.005 unapplied scale [0.045, 0.045, 0.311]",
+  "EXPORT_Environment: Chair_Leg.006 unapplied scale [0.045, 0.045, 0.311]",
+  "EXPORT_Environment: Chair_Leg.007 unapplied scale [0.045, 0.045, 0.311]",
+  "EXPORT_Characters: SR_STUDENT_BODY_blue_OPT unapplied scale [0.31, 0.2, 0.43]",
+  "EXPORT_Characters: SR_STUDENT_BODY_eye_OPT unapplied scale [0.17, 0.275, 0.062]",
+  "EXPORT_Characters: SR_STUDENT_BODY_skin_OPT unapplied scale [0.075, 0.075, 0.184]",
+  "EXPORT_Characters: SR_STUDENT_HEAD_eye_OPT unapplied scale [0.013, 0.004, 0.018]",
+  "EXPORT_Characters: SR_STUDENT_HEAD_hair_OPT unapplied scale [0.07, 0.065, 0.075]",
+  "EXPORT_Characters: SR_STUDENT_HEAD_iris_OPT unapplied scale [0.047, 0.017, 0.062]",
+  "EXPORT_Characters: SR_STUDENT_HEAD_skin_OPT unapplied scale [0.073, 0.052, 0.1]",
+  "EXPORT_Characters: Encourager_Lip_OPT unapplied scale [0.07, 0.013, 0.016]",
+  "EXPORT_Characters: Encourager_Smile_OPT unapplied scale [0.131, 0.045, 0.047]",
+  "EXPORT_Characters: SR_ENCOURAGER_HEAD_blue_OPT unapplied scale [0.318, 0.275, 0.2]",
+  "EXPORT_Characters: SR_ENCOURAGER_HEAD_eye_OPT unapplied scale [0.013, 0.004, 0.018]",
+  "EXPORT_Characters: SR_ENCOURAGER_HEAD_hair_OPT unapplied scale [0.024, 0.008, 0.041]",
+  "EXPORT_Characters: SR_ENCOURAGER_HEAD_iris_OPT unapplied scale [0.047, 0.017, 0.062]",
+  "EXPORT_Characters: SR_ENCOURAGER_HEAD_skin_OPT unapplied scale [0.028, 0.02, 0.049]",
+  "EXPORT_Characters: SR_ENCOURAGER_HEAD_skin2_OPT unapplied scale [0.073, 0.052, 0.1]",
+  "EXPORT_Characters: SR_ENCOURAGER_BODY_blue_OPT unapplied scale [0.28, 0.19, 0.33]",
+  "EXPORT_Characters: SR_ENCOURAGER_BODY_eye_OPT unapplied scale [0.17, 0.275, 0.062]",
+  "EXPORT_Characters: SR_ENCOURAGER_BODY_pants_OPT unapplied scale [0.09, 0.09, 0.266]",
+  "EXPORT_Characters: SR_ENCOURAGER_BODY_skin2_OPT unapplied scale [0.075, 0.075, 0.172]",
+  "EXPORT_Characters: SR_ZOMBIE_BODY_eye_OPT unapplied scale [0.17, 0.275, 0.062]",
+  "EXPORT_Characters: SR_ZOMBIE_BODY_hood_OPT unapplied scale [0.28, 0.19, 0.33]",
+  "EXPORT_Characters: SR_ZOMBIE_BODY_pants_OPT unapplied scale [0.09, 0.09, 0.266]",
+  "EXPORT_Characters: SR_ZOMBIE_BODY_shoe_OPT unapplied scale [0.15, 0.245, 0.1]",
+  "EXPORT_Characters: SR_ZOMBIE_BODY_zskin_OPT unapplied scale [0.08, 0.07, 0.11]",
+  "EXPORT_Characters: SR_ZOMBIE_HEAD_eye_OPT unapplied scale [0.013, 0.004, 0.018]",
+  "EXPORT_Characters: SR_ZOMBIE_HEAD_hair_OPT unapplied scale [0.024, 0.008, 0.041]",
+  "EXPORT_Characters: SR_ZOMBIE_HEAD_hood_OPT unapplied scale [0.035, 0.035, 0.115]",
+  "EXPORT_Characters: SR_ZOMBIE_HEAD_iris_OPT unapplied scale [0.047, 0.017, 0.062]",
+  "EXPORT_Characters: SR_ZOMBIE_HEAD_zshade_OPT unapplied scale [0.056, 0.012, 0.031]",
+  "EXPORT_Characters: SR_ZOMBIE_HEAD_zskin_OPT unapplied scale [0.073, 0.052, 0.1]"
+ ],
+ "objects": {
+  "EXPORT_Environment": [
+   {
+    "name": "SR_Foundation",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.12
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Wood_Floor",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.285
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Floor"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.13,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.737,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.002",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.344,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -2.951,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.004",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -2.558,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.005",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -2.165,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.006",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -1.772,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.007",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -1.379,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.008",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -0.986,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.009",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -0.593,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.010",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -0.2,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.011",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.193,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.012",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.586,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.013",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.979,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.014",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     1.372,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.015",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     1.765,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.016",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     2.158,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.017",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     2.551,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.018",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     2.944,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.019",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.337,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.020",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.73,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Plank_Seam.021",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.123,
+     0.0,
+     0.333
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Wall_Rear",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     4.05,
+     2.42
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Stone_Skirting",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.5,
+     0.0,
+     0.47
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Stone_Skirting.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.5,
+     0.0,
+     0.47
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Stone_Skirting.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     4.15,
+     0.47
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Corner_Timber.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.38,
+     4.13,
+     2.48
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Corner_Band.002",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.38,
+     4.115,
+     0.8
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Corner_Band.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.38,
+     4.115,
+     3.9
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Corner_Timber.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.38,
+     4.13,
+     2.48
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Corner_Band.006",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.38,
+     4.115,
+     0.8
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Corner_Band.007",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.38,
+     4.115,
+     3.9
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Entry_Hinge_-1",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -1.12,
+     -4.18,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_Entry_Hinge_1",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     1.12,
+     -4.18,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_Side_Window_-1_-1.8_glazing",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Amber_Glass"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_-1.8_stone_arch",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_-1.8_inner_bronze",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_-1.8_sill",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.54,
+     1.8,
+     1.27
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_-1.8_mullion",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_-1.8_transom",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_-1.8_transom.001",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_-1.8_lead",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_-1.8_lead.001",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Arch_spandrel",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Arch_apron",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.5,
+     1.8,
+     0.845
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_1.8_glazing",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Amber_Glass"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_1.8_stone_arch",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_1.8_inner_bronze",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_1.8_sill",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.54,
+     -1.8,
+     1.27
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_1.8_mullion",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_1.8_transom",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_1.8_transom.001",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_1.8_lead",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_-1_1.8_lead.001",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Arch_spandrel.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Arch_apron.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.5,
+     -1.8,
+     0.845
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Pier",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.5,
+     3.34,
+     2.42
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Pier.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.5,
+     0.0,
+     2.42
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_-1.8_glazing",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Amber_Glass"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_-1.8_stone_arch",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_-1.8_inner_bronze",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_-1.8_sill",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.54,
+     -1.8,
+     1.27
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_-1.8_mullion",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_-1.8_transom",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_-1.8_transom.001",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_-1.8_lead",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_-1.8_lead.001",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Arch_spandrel.002",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Arch_apron.002",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.5,
+     -1.8,
+     0.845
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_1.8_glazing",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Amber_Glass"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_1.8_stone_arch",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_1.8_inner_bronze",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_1.8_sill",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.54,
+     1.8,
+     1.27
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_1.8_mullion",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_1.8_transom",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_1.8_transom.001",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_1.8_lead",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Window_1_1.8_lead.001",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Arch_spandrel.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Arch_apron.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.5,
+     1.8,
+     0.845
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Pier.004",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.5,
+     -0.0,
+     2.42
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Side_Wall_Pier.005",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     4.5,
+     3.34,
+     2.42
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment",
+     "SR_MAT_Wall_Interior_Warm"
+    ]
+   },
+   {
+    "name": "SR_Bookshelf_Module_West_1",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.03,
+     1.22,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     0.74
+    ],
+    "slots": [
+     "SR_Walnut",
+     "SR_Book_1",
+     "SR_Book_2",
+     "SR_Book_3",
+     "SR_Book_4",
+     "SR_Book_5",
+     "SR_Book_0",
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "SR_Bookshelf_Module_West_2",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.03,
+     3.06,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     0.74
+    ],
+    "slots": [
+     "SR_Walnut",
+     "SR_Book_2",
+     "SR_Book_3",
+     "SR_Book_4",
+     "SR_Book_5",
+     "SR_Book_0",
+     "SR_Book_1",
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "SR_Bookshelf_Module_East_2",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -4.03,
+     -0.62,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     0.74
+    ],
+    "slots": [
+     "SR_Walnut",
+     "SR_Book_5",
+     "SR_Book_0",
+     "SR_Book_1",
+     "SR_Book_2",
+     "SR_Book_3",
+     "SR_Book_4",
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "SR_Interior_Lantern_Stem",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Interior_Lantern_Glass",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.65,
+     3.29,
+     2.47
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Amber_Glass"
+    ]
+   },
+   {
+    "name": "SR_Interior_Lantern_Stem.001",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Gold"
+    ]
+   },
+   {
+    "name": "SR_Interior_Lantern_Glass.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.65,
+     3.29,
+     2.47
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Amber_Glass"
+    ]
+   },
+   {
+    "name": "SR_Interior_Ceiling",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     4.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Ceiling_Warm"
+    ]
+   },
+   {
+    "name": "SR_Interior_Ceiling_Cove",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     4.5
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Orange"
+    ]
+   },
+   {
+    "name": "SR_tree_trunk_-5.8",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_tree_crown_-5.8_2.5",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_tree_crown_-5.8_3.1",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_tree_crown_-5.8_3.7",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_tree_trunk_5.8",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Walnut"
+    ]
+   },
+   {
+    "name": "SR_tree_crown_5.8_2.5",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_tree_crown_5.8_3.1",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_tree_crown_5.8_3.7",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Garden_Plinth",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     -0.5,
+     -0.25
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Slate"
+    ]
+   },
+   {
+    "name": "SR_Garden_Moss",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     -0.5,
+     -0.025
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Moss"
+    ]
+   },
+   {
+    "name": "SR_Path_Flagstone",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     -5.95,
+     0.055
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Path_Flagstone.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.065,
+     -6.39,
+     0.055
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Path_Flagstone.002",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.119,
+     -6.83,
+     0.055
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Path_Flagstone.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.152,
+     -7.27,
+     0.055
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Path_Flagstone.004",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.159,
+     -7.71,
+     0.055
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Path_Flagstone.005",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.138,
+     -8.15,
+     0.055
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Carved_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Planter",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.15,
+     -4.88,
+     0.23
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Planter_Soil",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.15,
+     -4.88,
+     0.41
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Garden_Soil"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.85,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.5,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage.002",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.15,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -2.8,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage.004",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -2.45,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Planter.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.15,
+     -4.88,
+     0.23
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Limestone"
+    ]
+   },
+   {
+    "name": "SR_Planter_Soil.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.15,
+     -4.88,
+     0.41
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Garden_Soil"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage.005",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     2.45,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage.006",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     2.8,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage.007",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.15,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage.008",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.5,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Low_Sage.009",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.85,
+     -4.88,
+     0.53
+    ],
+    "scale": [
+     0.25,
+     0.23,
+     0.24
+    ],
+    "slots": [
+     "SR_Sage_Leaves"
+    ]
+   },
+   {
+    "name": "SR_Chair",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -3.28,
+     0.08,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "Chair_Seat",
+    "type": "MESH",
+    "parent": "SR_Chair",
+    "loc": [
+     -3.28,
+     0.08,
+     0.94
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "Chair_Back",
+    "type": "MESH",
+    "parent": "SR_Chair",
+    "loc": [
+     -3.28,
+     0.38,
+     1.29
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "SR_Chair.001",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     3.28,
+     0.08,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "Chair_Seat.001",
+    "type": "MESH",
+    "parent": "SR_Chair.001",
+    "loc": [
+     3.28,
+     0.08,
+     0.94
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "Chair_Back.001",
+    "type": "MESH",
+    "parent": "SR_Chair.001",
+    "loc": [
+     3.28,
+     0.38,
+     1.29
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "SR_Rug",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     -0.7,
+     0.353
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_rugblue"
+    ]
+   },
+   {
+    "name": "SR_Rug_Gold_Inlay",
+    "type": "CURVE",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "SR_Plant_Pot",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.72,
+     2.6,
+     0.65
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_white"
+    ]
+   },
+   {
+    "name": "SR_Plant_Rim",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.72,
+     2.6,
+     0.94
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.57,
+     2.6,
+     1.188
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.333
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.626,
+     2.694,
+     1.252
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.393
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.002",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.753,
+     2.717,
+     1.245
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.38
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.855,
+     2.652,
+     1.21
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.353
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.004",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.855,
+     2.548,
+     1.202
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.345
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.005",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.753,
+     2.483,
+     1.371
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.532
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.006",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.626,
+     2.506,
+     1.251
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.392
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Pot.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.72,
+     2.6,
+     0.65
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_white"
+    ]
+   },
+   {
+    "name": "SR_Plant_Rim.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.72,
+     2.6,
+     0.94
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.007",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.87,
+     2.6,
+     1.355
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.525
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.008",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.814,
+     2.694,
+     1.278
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.423
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.009",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.687,
+     2.717,
+     1.153
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.275
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.010",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.585,
+     2.652,
+     1.39
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.565
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.011",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.585,
+     2.548,
+     1.349
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.515
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.012",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.687,
+     2.483,
+     1.382
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.546
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Plant_Leaf.013",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.814,
+     2.506,
+     1.372
+    ],
+    "scale": [
+     0.08,
+     0.055,
+     0.537
+    ],
+    "slots": [
+     "SR_REF_moss"
+    ]
+   },
+   {
+    "name": "SR_Wall_Light_Frame",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.91,
+     2.4,
+     3.25
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "SR_Wall_Light_Glass",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.91,
+     2.23,
+     3.25
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_light"
+    ]
+   },
+   {
+    "name": "SR_Wall_Light_Frame.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.91,
+     2.4,
+     3.25
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "SR_Wall_Light_Glass.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.91,
+     2.23,
+     3.25
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_light"
+    ]
+   },
+   {
+    "name": "Chair_Leg",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.58,
+     -0.19,
+     0.635
+    ],
+    "scale": [
+     0.045,
+     0.045,
+     0.311
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "Chair_Leg.001",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -3.58,
+     0.35,
+     0.635
+    ],
+    "scale": [
+     0.045,
+     0.045,
+     0.311
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "Chair_Leg.002",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -2.98,
+     -0.19,
+     0.635
+    ],
+    "scale": [
+     0.045,
+     0.045,
+     0.311
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "Chair_Leg.003",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -2.98,
+     0.35,
+     0.635
+    ],
+    "scale": [
+     0.045,
+     0.045,
+     0.311
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "Chair_Leg.004",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     2.98,
+     -0.19,
+     0.635
+    ],
+    "scale": [
+     0.045,
+     0.045,
+     0.311
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "Chair_Leg.005",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     2.98,
+     0.35,
+     0.635
+    ],
+    "scale": [
+     0.045,
+     0.045,
+     0.311
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "Chair_Leg.006",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.58,
+     -0.19,
+     0.635
+    ],
+    "scale": [
+     0.045,
+     0.045,
+     0.311
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "Chair_Leg.007",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     3.58,
+     0.35,
+     0.635
+    ],
+    "scale": [
+     0.045,
+     0.045,
+     0.311
+    ],
+    "slots": [
+     "SR_Oak"
+    ]
+   },
+   {
+    "name": "SR_Rear_Gable_Infill",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_Parchment"
+    ]
+   }
+  ],
+  "EXPORT_Dashboard": [
+   {
+    "name": "SR_DASHBOARD_ROOT",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_Brand",
+    "type": "FONT",
+    "parent": null,
+    "loc": [
+     0.0,
+     1.935,
+     3.72
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_ANCHOR_ASSIGNMENT_HEADER",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -2.72,
+     1.995,
+     4.175
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_SENTENCE_PROGRESS",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -2.72,
+     1.995,
+     4.035
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_MULTIPLAYER",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     2.3,
+     2.02,
+     4.08
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_READING_CONTENT",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     2.165,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_STONE_TRAY_ANCHOR",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     1.4,
+     1.29
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_POINTS",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -2.0,
+     0.5,
+     0.84
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_MENU",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     2.0,
+     0.5,
+     0.84
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_PREVIOUS_SENTENCE",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -3.3,
+     1.95,
+     1.37
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_NEXT_SENTENCE",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     3.3,
+     1.95,
+     1.37
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_READ_PASSAGE",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.5,
+     1.04
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_ASSIGNMENTS",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -2.97,
+     1.98,
+     4.08
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_INSTRUCTIONS",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     2.165,
+     1.92
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_STONE_PLACEMENT_REGION",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     1.4,
+     1.29
+    ],
+    "scale": [
+     3.3,
+     0.6,
+     0.02
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_PASSAGE_TOP_LEFT",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -2.9,
+     2.165,
+     3.4
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_PASSAGE_BOTTOM_RIGHT",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     2.9,
+     2.165,
+     1.76
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_PASSAGE_SCROLL",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     2.85,
+     2.165,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_PASSAGE_PAGINATION",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     2.4,
+     2.165,
+     1.82
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_DB_Plinth",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     1.42,
+     0.46
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Navy"
+    ]
+   },
+   {
+    "name": "SR_DB_Fascia",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     1.38,
+     1.19
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_DeepBlue"
+    ]
+   },
+   {
+    "name": "SR_DB_Tray_Rim",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     1.4,
+     1.36
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_DB_Tray_Floor",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     1.4,
+     1.29
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Cyan"
+    ]
+   },
+   {
+    "name": "SR_DB_Tower_Shell",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     2.2,
+     2.76
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_DeepBlue"
+    ]
+   },
+   {
+    "name": "SR_PANEL_POINTS",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -2.0,
+     0.53,
+     0.84
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Navy"
+    ]
+   },
+   {
+    "name": "SR_BUTTON_MENU",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     2.0,
+     0.53,
+     0.84
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Navy"
+    ]
+   },
+   {
+    "name": "SR_DB_Console_Light_Housing",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     0.54,
+     1.04
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_DB_Console_Light",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     0.52,
+     1.04
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Light_Warm"
+    ]
+   },
+   {
+    "name": "SR_Points_Star",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     -2.72,
+     0.5,
+     0.84
+    ],
+    "scale": [
+     1.15,
+     1.15,
+     1.15
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_Menu_Star",
+    "type": "MESH",
+    "parent": null,
+    "loc": [
+     1.42,
+     0.5,
+     0.84
+    ],
+    "scale": [
+     1.15,
+     1.15,
+     1.15
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_ANCHOR_TRAY_ROW_0",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.95,
+     1.29
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_TRAY_ROW_1",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     1.85,
+     1.29
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_DB_Tower_Orange_Frame",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     2.1,
+     2.76
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Orange"
+    ]
+   },
+   {
+    "name": "SR_DB_Screen_Recess",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     2.19,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Navy"
+    ]
+   },
+   {
+    "name": "SR_DB_Screen_Bezel",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     2.1,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_DeepBlue"
+    ]
+   },
+   {
+    "name": "SR_DISPLAY_MAIN",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     2.175,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Display_Blank"
+    ]
+   },
+   {
+    "name": "SR_DB_Side_Light_Housing_L",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -3.51,
+     2.02,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_DB_Side_Light_L",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -3.51,
+     1.995,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Light_Warm"
+    ]
+   },
+   {
+    "name": "SR_DB_Side_Light_Housing_R",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     3.51,
+     2.02,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_DB_Side_Light_R",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     3.51,
+     1.995,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Light_Warm"
+    ]
+   },
+   {
+    "name": "SR_Nameplate_Gold",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     1.99,
+     3.72
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_Nameplate_Blue",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     1.965,
+     3.72
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Navy"
+    ]
+   },
+   {
+    "name": "SR_Assignment_Housing",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -2.05,
+     2.06,
+     4.08
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Housing_Cream"
+    ]
+   },
+   {
+    "name": "SR_BUTTON_MULTIPLAYER",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     2.1,
+     2.05,
+     4.08
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Purple"
+    ]
+   },
+   {
+    "name": "SR_DB_Multiplayer_Highlight",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     2.1,
+     2.037,
+     4.23
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_PurpleHi"
+    ]
+   },
+   {
+    "name": "SR_DB_PANEL_POINTS_Trim",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -2.0,
+     0.53,
+     0.84
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_DB_BUTTON_MENU_Trim",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     2.0,
+     0.53,
+     0.84
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_DB_Assignment_Trim",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -2.05,
+     2.06,
+     4.08
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_DB_Tray_Front_Lip",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     1.4,
+     1.365
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Orange"
+    ]
+   },
+   {
+    "name": "SR_DB_Tower_Gold_Piping",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     2.1,
+     2.76
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_DB_Screen_Gold_Trim",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     0.0,
+     2.1,
+     2.58
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Trim_Gold"
+    ]
+   },
+   {
+    "name": "SR_HEADER_BOOK_ICON_Cover",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -2.97,
+     2.01,
+     4.07
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_DeepBlue"
+    ]
+   },
+   {
+    "name": "SR_HEADER_BOOK_ICON_PageL",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -3.052,
+     1.992,
+     4.08
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Housing_Cream"
+    ]
+   },
+   {
+    "name": "SR_HEADER_BOOK_ICON_PageR",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -2.888,
+     1.992,
+     4.08
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Housing_Cream"
+    ]
+   },
+   {
+    "name": "SR_HEADER_BOOK_ICON_Leaf",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -2.84,
+     1.97,
+     4.2
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Moss"
+    ]
+   },
+   {
+    "name": "SR_HEADER_PROGRESS_TRACK",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -1.92,
+     2.005,
+     3.925
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Plastic_Navy"
+    ]
+   },
+   {
+    "name": "SR_HEADER_PROGRESS_FILL",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     -2.72,
+     1.996,
+     3.925
+    ],
+    "scale": [
+     0.2,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Progress_Fill"
+    ]
+   },
+   {
+    "name": "SR_ANCHOR_PROGRESS_BAR",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -2.72,
+     1.995,
+     3.925
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_BTN_MULTI_ICON_Back_Head",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     1.485,
+     2.018,
+     4.145
+    ],
+    "scale": [
+     1.0,
+     0.55,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Housing_Cream"
+    ]
+   },
+   {
+    "name": "SR_BTN_MULTI_ICON_Back_Body",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     1.485,
+     2.018,
+     4.025
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Housing_Cream"
+    ]
+   },
+   {
+    "name": "SR_BTN_MULTI_ICON_Front_Head",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     1.375,
+     2.008,
+     4.14
+    ],
+    "scale": [
+     1.0,
+     0.55,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Housing_Cream"
+    ]
+   },
+   {
+    "name": "SR_BTN_MULTI_ICON_Front_Body",
+    "type": "MESH",
+    "parent": "SR_DASHBOARD_ROOT",
+    "loc": [
+     1.375,
+     2.008,
+     4.031
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Housing_Cream"
+    ]
+   },
+   {
+    "name": "SR_ANCHOR_MULTIPLAYER_ICON",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     1.42,
+     2.0,
+     4.08
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   }
+  ],
+  "EXPORT_StoneModule": [
+   {
+    "name": "SR_STONE_PREFAB_SOURCE",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_STONE_CAP_LEFT",
+    "type": "MESH",
+    "parent": "SR_STONE_PREFAB_SOURCE",
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_STONE_STATE_Normal",
+     "SR_STONE_STATE_Selected",
+     "SR_STONE_STATE_Correct",
+     "SR_STONE_STATE_Completed",
+     "SR_STONE_STATE_Deferred",
+     "SR_STONE_STATE_Disabled"
+    ]
+   },
+   {
+    "name": "SR_STONE_CAP_RIGHT",
+    "type": "MESH",
+    "parent": "SR_STONE_PREFAB_SOURCE",
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_STONE_STATE_Normal",
+     "SR_STONE_STATE_Selected",
+     "SR_STONE_STATE_Correct",
+     "SR_STONE_STATE_Completed",
+     "SR_STONE_STATE_Deferred",
+     "SR_STONE_STATE_Disabled"
+    ]
+   },
+   {
+    "name": "SR_STONE_MOSS_CAP_LEFT",
+    "type": "MESH",
+    "parent": "SR_STONE_PREFAB_SOURCE",
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Moss"
+    ]
+   },
+   {
+    "name": "SR_STONE_MOSS_CAP_RIGHT",
+    "type": "MESH",
+    "parent": "SR_STONE_PREFAB_SOURCE",
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Moss"
+    ]
+   },
+   {
+    "name": "SR_STONE_MOSS_STRETCH_CENTRE",
+    "type": "MESH",
+    "parent": "SR_STONE_PREFAB_SOURCE",
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_MAT_Moss"
+    ]
+   },
+   {
+    "name": "SR_STONE_STRETCH_CENTRE",
+    "type": "MESH",
+    "parent": "SR_STONE_PREFAB_SOURCE",
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_STONE_STATE_Normal",
+     "SR_STONE_STATE_Selected",
+     "SR_STONE_STATE_Correct",
+     "SR_STONE_STATE_Completed",
+     "SR_STONE_STATE_Deferred",
+     "SR_STONE_STATE_Disabled"
+    ]
+   },
+   {
+    "name": "SR_STONE_TEXT_ANCHOR",
+    "type": "EMPTY",
+    "parent": "SR_STONE_PREFAB_SOURCE",
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_STONE_TEXT_ANCHOR_TOP",
+    "type": "EMPTY",
+    "parent": "SR_STONE_PREFAB_SOURCE",
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   }
+  ],
+  "EXPORT_Characters": [
+   {
+    "name": "SR_CHARACTER_STUDENT_OPT",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.16,
+     1.16,
+     1.16
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_STUDENT_BODY_blue_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     1.662
+    ],
+    "scale": [
+     0.31,
+     0.2,
+     0.43
+    ],
+    "slots": [
+     "SR_REF_blue"
+    ]
+   },
+   {
+    "name": "SR_STUDENT_BODY_brown_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     0.0,
+     -1.021,
+     1.488
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_brown"
+    ]
+   },
+   {
+    "name": "SR_STUDENT_BODY_eye_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     0.186,
+     -0.454,
+     0.427
+    ],
+    "scale": [
+     0.17,
+     0.275,
+     0.062
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_STUDENT_BODY_golden_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     0.0,
+     -1.075,
+     1.778
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "SR_STUDENT_BODY_pack_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     0.0,
+     -0.837,
+     1.651
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_pack"
+    ]
+   },
+   {
+    "name": "SR_STUDENT_BODY_skin_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     0.406,
+     -0.55,
+     1.5
+    ],
+    "scale": [
+     0.075,
+     0.075,
+     0.184
+    ],
+    "slots": [
+     "SR_REF_skin"
+    ]
+   },
+   {
+    "name": "SR_STUDENT_BODY_white_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.373,
+     1.999
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_white"
+    ]
+   },
+   {
+    "name": "Student_Backpack_Handle_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_brown"
+    ]
+   },
+   {
+    "name": "Student_Backpack_Strap_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_brown"
+    ]
+   },
+   {
+    "name": "Student_Backpack_Strap.001_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_brown"
+    ]
+   },
+   {
+    "name": "Student_Head_Pivot_OPT",
+    "type": "EMPTY",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     2.393
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_STUDENT_HEAD_eye_OPT",
+    "type": "MESH",
+    "parent": "Student_Head_Pivot_OPT",
+    "loc": [
+     0.145,
+     -0.237,
+     2.484
+    ],
+    "scale": [
+     0.013,
+     0.004,
+     0.018
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_STUDENT_HEAD_hair_OPT",
+    "type": "MESH",
+    "parent": "Student_Head_Pivot_OPT",
+    "loc": [
+     0.213,
+     -0.35,
+     2.46
+    ],
+    "scale": [
+     0.07,
+     0.065,
+     0.075
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "SR_STUDENT_HEAD_iris_OPT",
+    "type": "MESH",
+    "parent": "Student_Head_Pivot_OPT",
+    "loc": [
+     0.13,
+     -0.264,
+     2.451
+    ],
+    "scale": [
+     0.047,
+     0.017,
+     0.062
+    ],
+    "slots": [
+     "SR_REF_iris"
+    ]
+   },
+   {
+    "name": "SR_STUDENT_HEAD_skin_OPT",
+    "type": "MESH",
+    "parent": "Student_Head_Pivot_OPT",
+    "loc": [
+     0.331,
+     -0.564,
+     2.376
+    ],
+    "scale": [
+     0.073,
+     0.052,
+     0.1
+    ],
+    "slots": [
+     "SR_REF_skin"
+    ]
+   },
+   {
+    "name": "Student_Brow_OPT",
+    "type": "MESH",
+    "parent": "Student_Head_Pivot_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     2.393
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "Student_Brow.001_OPT",
+    "type": "MESH",
+    "parent": "Student_Head_Pivot_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     2.393
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "Student_Shoe_Lace_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Student_Shoe_Lace.001_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Student_Shoe_Lace.002_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Student_Shoe_Lace.003_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Student_Shoe_Lace.004_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Student_Shoe_Lace.005_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_STUDENT_OPT",
+    "loc": [
+     -0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_CHARACTER_ENCOURAGER_OPT",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "Encourager_Head_Pivot_OPT",
+    "type": "EMPTY",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "Encourager_Brow_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "Encourager_Brow.001_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "Encourager_Lip_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.233,
+     -0.208,
+     1.662
+    ],
+    "scale": [
+     0.07,
+     0.013,
+     0.016
+    ],
+    "slots": [
+     "SR_REF_skin"
+    ]
+   },
+   {
+    "name": "Encourager_Smile_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.24,
+     -0.184,
+     1.709
+    ],
+    "scale": [
+     0.131,
+     0.045,
+     0.047
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "Encourager_Teeth_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.236,
+     -0.226,
+     1.721
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_HEAD_blue_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.296,
+     0.033,
+     2.084
+    ],
+    "scale": [
+     0.318,
+     0.275,
+     0.2
+    ],
+    "slots": [
+     "SR_REF_blue"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_HEAD_eye_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.373,
+     -0.27,
+     1.928
+    ],
+    "scale": [
+     0.013,
+     0.004,
+     0.018
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_HEAD_golden_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.27,
+     -0.244,
+     2.169
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_HEAD_hair_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.359,
+     -0.261,
+     1.904
+    ],
+    "scale": [
+     0.024,
+     0.008,
+     0.041
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_HEAD_iris_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.361,
+     -0.246,
+     1.901
+    ],
+    "scale": [
+     0.047,
+     0.017,
+     0.062
+    ],
+    "slots": [
+     "SR_REF_iris"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_HEAD_skin_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.583,
+     -0.048,
+     1.823
+    ],
+    "scale": [
+     0.028,
+     0.02,
+     0.049
+    ],
+    "slots": [
+     "SR_REF_skin"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_HEAD_skin2_OPT",
+    "type": "MESH",
+    "parent": "Encourager_Head_Pivot_OPT",
+    "loc": [
+     -3.558,
+     -0.009,
+     1.822
+    ],
+    "scale": [
+     0.073,
+     0.052,
+     0.1
+    ],
+    "slots": [
+     "SR_REF_skin2"
+    ]
+   },
+   {
+    "name": "Encourager_Sneaker_Lace_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Encourager_Sneaker_Lace.001_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Encourager_Sneaker_Lace.002_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Encourager_Sneaker_Lace.003_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Encourager_Sneaker_Lace.004_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Encourager_Sneaker_Lace.005_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_ANCHOR_ENCOURAGER_SPEECH_OPT",
+    "type": "EMPTY",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.268,
+     -0.049,
+     2.53
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ENCOURAGER_BODY_blue_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.279,
+     0.04,
+     1.37
+    ],
+    "scale": [
+     0.28,
+     0.19,
+     0.33
+    ],
+    "slots": [
+     "SR_REF_blue"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_BODY_eye_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.455,
+     -0.505,
+     0.435
+    ],
+    "scale": [
+     0.17,
+     0.275,
+     0.062
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_BODY_golden_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.391,
+     -0.366,
+     1.19
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_golden"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_BODY_pants_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.47,
+     -0.341,
+     0.755
+    ],
+    "scale": [
+     0.09,
+     0.09,
+     0.266
+    ],
+    "slots": [
+     "SR_REF_pants"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_BODY_skin2_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.529,
+     -0.262,
+     1.245
+    ],
+    "scale": [
+     0.075,
+     0.075,
+     0.172
+    ],
+    "slots": [
+     "SR_REF_skin2"
+    ]
+   },
+   {
+    "name": "SR_ENCOURAGER_BODY_white_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ENCOURAGER_OPT",
+    "loc": [
+     -3.258,
+     -0.134,
+     1.44
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_white"
+    ]
+   },
+   {
+    "name": "SR_CHARACTER_ZOMBIE_OPT",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_ZOMBIE_SPEECH_OPT",
+    "type": "EMPTY",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.268,
+     -0.049,
+     2.53
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ZOMBIE_BODY_eye_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     2.978,
+     -0.447,
+     0.435
+    ],
+    "scale": [
+     0.17,
+     0.275,
+     0.062
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_BODY_hood_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.279,
+     0.04,
+     1.37
+    ],
+    "scale": [
+     0.28,
+     0.19,
+     0.33
+    ],
+    "slots": [
+     "SR_REF_hood"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_BODY_pants_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.003,
+     -0.284,
+     0.755
+    ],
+    "scale": [
+     0.09,
+     0.09,
+     0.266
+    ],
+    "slots": [
+     "SR_REF_pants"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_BODY_shoe_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     2.979,
+     -0.438,
+     0.505
+    ],
+    "scale": [
+     0.15,
+     0.245,
+     0.1
+    ],
+    "slots": [
+     "SR_REF_shoe"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_BODY_zskin_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.109,
+     -0.282,
+     1.67
+    ],
+    "scale": [
+     0.08,
+     0.07,
+     0.11
+    ],
+    "slots": [
+     "SR_REF_zskin"
+    ]
+   },
+   {
+    "name": "Zombie_Head_Pivot_OPT",
+    "type": "EMPTY",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ZOMBIE_HEAD_eye_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.129,
+     -0.241,
+     1.952
+    ],
+    "scale": [
+     0.013,
+     0.004,
+     0.018
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_HEAD_hair_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.14,
+     -0.234,
+     1.926
+    ],
+    "scale": [
+     0.024,
+     0.008,
+     0.041
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_HEAD_hood_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.145,
+     0.155,
+     2.173
+    ],
+    "scale": [
+     0.035,
+     0.035,
+     0.115
+    ],
+    "slots": [
+     "SR_REF_hood"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_HEAD_iris_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.142,
+     -0.219,
+     1.923
+    ],
+    "scale": [
+     0.047,
+     0.017,
+     0.062
+    ],
+    "slots": [
+     "SR_REF_iris"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_HEAD_lid_L_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_zskin"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_HEAD_lid_R_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_zskin"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_HEAD_white_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.262,
+     -0.218,
+     1.687
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_white"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_HEAD_zshade_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.053,
+     -0.154,
+     1.783
+    ],
+    "scale": [
+     0.056,
+     0.012,
+     0.031
+    ],
+    "slots": [
+     "SR_REF_zshade"
+    ]
+   },
+   {
+    "name": "SR_ZOMBIE_HEAD_zskin_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     2.994,
+     0.059,
+     1.879
+    ],
+    "scale": [
+     0.073,
+     0.052,
+     0.1
+    ],
+    "slots": [
+     "SR_REF_zskin"
+    ]
+   },
+   {
+    "name": "Zombie_Brow_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "Zombie_Brow.001_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_hair"
+    ]
+   },
+   {
+    "name": "Zombie_EyeBag_L_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_zshade"
+    ]
+   },
+   {
+    "name": "Zombie_EyeBag_R_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_zshade"
+    ]
+   },
+   {
+    "name": "Zombie_Mouth_OPT",
+    "type": "MESH",
+    "parent": "Zombie_Head_Pivot_OPT",
+    "loc": [
+     3.278,
+     0.03,
+     1.86
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_zshade"
+    ]
+   },
+   {
+    "name": "Zombie_Sneaker_Lace_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Zombie_Sneaker_Lace.001_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Zombie_Sneaker_Lace.002_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Zombie_Sneaker_Lace.003_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Zombie_Sneaker_Lace.004_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "Zombie_Sneaker_Lace.005_OPT",
+    "type": "MESH",
+    "parent": "SR_CHARACTER_ZOMBIE_OPT",
+    "loc": [
+     3.28,
+     0.05,
+     0.35
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": [
+     "SR_REF_eye"
+    ]
+   },
+   {
+    "name": "SR_ANCHOR_STUDENT_OVERVIEW",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     0.0,
+     -0.57,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "SR_ANCHOR_STUDENT_GAMEPLAY",
+    "type": "EMPTY",
+    "parent": null,
+    "loc": [
+     -2.4,
+     -1.6,
+     0.34
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   }
+  ],
+  "EXPORT_Cameras": [
+   {
+    "name": "CAM_ROOM_OVERVIEW",
+    "type": "CAMERA",
+    "parent": null,
+    "loc": [
+     0.0,
+     -9.8,
+     3.85
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "CAM_GAMEPLAY_LANDSCAPE",
+    "type": "CAMERA",
+    "parent": null,
+    "loc": [
+     0.0,
+     -3.6,
+     3.8
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "CAM_GAMEPLAY_TRAY_FOCUS",
+    "type": "CAMERA",
+    "parent": null,
+    "loc": [
+     0.0,
+     -1.8,
+     4.25
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "CAM_DASHBOARD_CLOSEUP",
+    "type": "CAMERA",
+    "parent": null,
+    "loc": [
+     0.0,
+     -3.4,
+     2.55
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "CAM_STONES_CLOSEUP",
+    "type": "CAMERA",
+    "parent": null,
+    "loc": [
+     0.0,
+     -0.9,
+     4.3
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "CAM_CHARACTER_VIEW",
+    "type": "CAMERA",
+    "parent": null,
+    "loc": [
+     2.6,
+     -2.9,
+     2.2
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   },
+   {
+    "name": "CAM_EXTERIOR_FINAL",
+    "type": "CAMERA",
+    "parent": null,
+    "loc": [
+     12.0,
+     -17.0,
+     11.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "slots": []
+   }
+  ]
+ }
+}
