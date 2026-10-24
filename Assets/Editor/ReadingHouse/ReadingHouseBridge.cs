@@ -46,6 +46,17 @@ namespace SReader.EditorTools.ReadingHouse
 
         /// <summary>Append the Reading House scene to Build Settings (needed to load it at runtime). Order and other entries are untouched.</summary>
         [MenuItem("Tools/sReader/Reading House/Add Scene To Build Settings")]
+        /// <summary>The Pavilion sample scene: out of the build list and deleted (it only made the APK bigger).</summary>
+        static void DropPavilion()
+        {
+            const string folder = "Assets/PavilionPort";
+            EditorBuildSettings.scenes = EditorBuildSettings.scenes.Where(sc => !sc.path.StartsWith(folder)).ToArray();
+            bool deleted = AssetDatabase.DeleteAsset(folder);
+            AssetDatabase.SaveAssets();
+            Debug.Log($"[Bridge] Pavilion removed from the build list; folder deleted: {deleted}. Build scenes now: " +
+                      string.Join(", ", EditorBuildSettings.scenes.Select(sc => sc.path)));
+        }
+
         public static void AddSceneToBuild()
         {
             var scenes = EditorBuildSettings.scenes.ToList();
@@ -86,6 +97,11 @@ namespace SReader.EditorTools.ReadingHouse
                     case "probe": ReadingHouseProbe.Run(); break;
                     case "readingmat": ReadingMatSetup.Run(); break;
                     case "backdrop": WorldBackdropSetup.Run(); break;
+                    case "signpost": SignpostSetup.Run(); break;
+                    case "signpostcapture": SignpostCapture.Start(); break;
+                    case "diegame": DieGameSetup.Run(); break;
+                    case "diecapture": DieGameCapture.Start(); break;
+                    case "droppavilion": DropPavilion(); break;
                     case "chalkboardcapture": ChalkboardCapture.Start(); break;
                     case "patch": ReadingHouseScenePatcher.Apply(); break;
                     case "patchcapture": ReadingHouseScenePatcher.Apply(); ReadingHouseViewCapture.Run(); break;

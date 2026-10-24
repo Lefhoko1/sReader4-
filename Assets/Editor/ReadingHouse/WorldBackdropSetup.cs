@@ -13,10 +13,11 @@ namespace SReader.EditorTools.ReadingHouse
     /// curved backdrop far behind and beside the house, so the opening shot and every view through the
     /// windows and doors look out on a storybook landscape instead of a flat sky colour.
     ///
-    /// The picture is <c>Assets/Art/ReadingHouse/Backdrop/T_WorldBackdrop.png</c>. Replace that file with
-    /// the painted world image (a wide landscape, about 4:1, horizon a third of the way up) and it
-    /// appears in the scene: nothing else to change. Until then a soft generated placeholder is used.
-    /// Unlit and shadow-free (one draw call). Also sets the student's steady walking pace.
+    /// The picture is <c>Assets/Art/ReadingHouse/Backdrop/T_WorldBackdrop.png</c> (a wide landscape, horizon
+    /// about <see cref="HorizonFraction"/> of the way up). The backdrop's height follows the picture's aspect
+    /// so it is never stretched, and its horizon is put at the opening camera's eye height. A meadow ground
+    /// (<c>T_MeadowGround.png</c>, tiled) runs from the island out to the backdrop, so no sky colour shows
+    /// below the horizon. Both unlit-cheap: two draw calls. Also sets the student's steady walking pace.
     /// Re-running replaces only what this adds.
     /// </summary>
     public static class WorldBackdropSetup
@@ -25,7 +26,11 @@ namespace SReader.EditorTools.ReadingHouse
         const string TexturePath = Folder + "/T_WorldBackdrop.png";
         const string MaterialPath = Folder + "/M_WorldBackdrop.mat";
         const string MeshPath = Folder + "/SM_WorldBackdrop.asset";
-        const float Radius = 70f, Height = 46f, ArcDegrees = 240f, Sink = 6f;
+        const string GroundTexturePath = Folder + "/T_MeadowGround.png";
+        const string GroundMaterialPath = Folder + "/M_MeadowGround.mat";
+        const string GroundMeshPath = Folder + "/SM_MeadowGround.asset";
+        const float Radius = 70f, ArcDegrees = 240f, HorizonFraction = 0.31f, GroundTileMetres = 7f;
+        static float Height = 46f;
 
         [MenuItem("Tools/sReader/Reading House/Set Up World Backdrop")]
         public static void Run()
@@ -39,7 +44,7 @@ namespace SReader.EditorTools.ReadingHouse
             SceneManager.SetActiveScene(scene);
             try
             {
-                foreach (var old in scene.GetRootGameObjects().Where(g => g.name == "World Backdrop").ToArray())
+                foreach (var old in scene.GetRootGameObjects().Where(g => g.name == "World Backdrop" || g.name == "Meadow Ground").ToArray())
                     Object.DestroyImmediate(old);
                 var all = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Transform>(true)).ToArray();
                 var door = all.Select(t => t.GetComponent<HouseDoor>()).First(d => d != null);
@@ -56,6 +61,7 @@ namespace SReader.EditorTools.ReadingHouse
                 importer.SetPlatformTextureSettings(new TextureImporterPlatformSettings { name = "Android", overridden = true, maxTextureSize = 2048, format = TextureImporterFormat.ASTC_6x6 });
                 importer.SaveAndReimport();
                 var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(TexturePath);
+                Height = Radius * ArcDegrees * Mathf.Deg2Rad * tex.height / tex.width;     // the picture's own aspect: no stretching
 
                 var mat = AssetDatabase.LoadAssetAtPath<Material>(MaterialPath);
                 if (mat == null)
@@ -76,8 +82,11 @@ namespace SReader.EditorTools.ReadingHouse
                 // Centred on the house, the arc's middle straight behind it (seen from the front path).
                 var centre = door.houseCentre.position;
                 var outward = Vector3.ProjectOnPlane(door.transform.position - centre, Vector3.up).normalized;
+                var director = all.Select(t => t.GetComponent<ReadingHouseExploreDirector>()).FirstOrDefault(d => d != null);
+                float groundY = director != null && director.studentStart != null ? director.studentStart.position.y : centre.y + 0.34f;
+                float eyeY = director != null && director.exteriorCameraPos != null ? director.exteriorCameraPos.position.y : groundY + 3f;
                 var go = new GameObject("World Backdrop");
-                go.transform.SetPositionAndRotation(new Vector3(centre.x, centre.y - Sink, centre.z), Quaternion.LookRotation(-outward, Vector3.up));
+                go.transform.SetPositionAndRotation(new Vector3(centre.x, eyeY - HorizonFraction * Height, centre.z), Quaternion.LookRotation(-outward, Vector3.up));
                 go.AddComponent<MeshFilter>().sharedMesh = mesh;
                 var mr = go.AddComponent<MeshRenderer>();
                 mr.sharedMaterial = mat;
@@ -86,6 +95,9 @@ namespace SReader.EditorTools.ReadingHouse
                 mr.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
                 mr.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
                 GameObjectUtility.SetStaticEditorFlags(go, 0);
+
+                BuildGround(new Vector3(centre.x, groundY - 0.04f, centre.z));
+                if (director != null && director.studentStart != null) MatchLawn(director.studentStart.position);
 
                 var cam = presenter.cameraRig.viewCamera;
                 if (cam.farClipPlane < Radius * 2.2f) cam.farClipPlane = Radius * 2.2f;
@@ -107,6 +119,74 @@ namespace SReader.EditorTools.ReadingHouse
                 if (previousActive.IsValid() && previousActive != scene) SceneManager.SetActiveScene(previousActive);
                 if (!wasOpen) EditorSceneManager.CloseScene(scene, true);
             }
+        }
+
+        /// <summary>The island's own lawn takes the meadow's green, so the house sits in one continuous field.</summary>
+        static void MatchLawn(Vector3 onLawn)
+        {
+            Physics.SyncTransforms();
+            var meadow = new Color32(138, 148, 52, 255);
+            foreach (var h in Physics.RaycastAll(onLawn + Vector3.up * 2f, Vector3.down, 5f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore).OrderBy(h => h.distance))
+            {
+                var r = h.collider.GetComponent<Renderer>();
+                if (r == null) continue;
+                foreach (var m in r.sharedMaterials)
+                {
+                    if (m == null || !m.HasProperty("_BaseColor")) continue;
+                    var c = m.GetColor("_BaseColor");
+                    if (!(c.g >= c.r && c.g > c.b)) continue;                   // only a green (lawn) material
+                    Debug.Log($"[WorldBackdrop] Lawn material {m.name}: {c} -> {(Color)meadow}");
+                    m.SetColor("_BaseColor", meadow);
+                    EditorUtility.SetDirty(m);
+                }
+                break;
+            }
+        }
+
+        /// <summary>The meadow: a flat disc out to the backdrop, tiled with the picture's own grass.</summary>
+        static void BuildGround(Vector3 at)
+        {
+            if (File.Exists(GroundTexturePath))
+            {
+                AssetDatabase.ImportAsset(GroundTexturePath);
+                var imp = (TextureImporter)AssetImporter.GetAtPath(GroundTexturePath);
+                imp.wrapMode = TextureWrapMode.Repeat;
+                imp.SetPlatformTextureSettings(new TextureImporterPlatformSettings { name = "Android", overridden = true, maxTextureSize = 512, format = TextureImporterFormat.ASTC_6x6 });
+                imp.SaveAndReimport();
+            }
+            var mat = AssetDatabase.LoadAssetAtPath<Material>(GroundMaterialPath);
+            if (mat == null) { mat = new Material(Shader.Find("Universal Render Pipeline/Simple Lit")); AssetDatabase.CreateAsset(mat, GroundMaterialPath); }
+            var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(GroundTexturePath);
+            mat.SetTexture("_BaseMap", tex); mat.mainTexture = tex;
+            mat.SetColor("_BaseColor", Color.white);
+            mat.SetFloat("_Smoothness", 0f);
+            EditorUtility.SetDirty(mat);
+
+            var mesh = AssetDatabase.LoadAssetAtPath<Mesh>(GroundMeshPath);
+            if (mesh == null) { mesh = new Mesh { name = "SM_MeadowGround" }; AssetDatabase.CreateAsset(mesh, GroundMeshPath); }
+            const int n = 64; float r = Radius + 2f;
+            var verts = new Vector3[n + 1]; var uvs = new Vector2[n + 1]; var tris = new int[n * 3];
+            verts[0] = Vector3.zero; uvs[0] = Vector2.zero;
+            for (int i = 0; i < n; i++)
+            {
+                float a = i / (float)n * Mathf.PI * 2f;
+                verts[i + 1] = new Vector3(Mathf.Cos(a) * r, 0f, Mathf.Sin(a) * r);
+                uvs[i + 1] = new Vector2(verts[i + 1].x, verts[i + 1].z) / GroundTileMetres;
+                tris[i * 3] = 0; tris[i * 3 + 1] = (i + 1) % n + 1; tris[i * 3 + 2] = i + 1;
+            }
+            mesh.Clear(); mesh.vertices = verts; mesh.uv = uvs; mesh.triangles = tris;
+            mesh.RecalculateNormals(); mesh.RecalculateBounds();
+            if (mesh.normals[0].y < 0f) { for (int t = 0; t < tris.Length; t += 3) (tris[t + 1], tris[t + 2]) = (tris[t + 2], tris[t + 1]); mesh.triangles = tris; mesh.RecalculateNormals(); }
+            EditorUtility.SetDirty(mesh);
+
+            var go = new GameObject("Meadow Ground");
+            go.transform.position = at;
+            go.AddComponent<MeshFilter>().sharedMesh = mesh;
+            var mr = go.AddComponent<MeshRenderer>();
+            mr.sharedMaterial = mat;
+            mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            mr.receiveShadows = true;
+            mr.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
         }
 
         /// <summary>The inside of a cylinder segment (faces inward), the picture's middle at local +Z.</summary>

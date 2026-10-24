@@ -22,7 +22,7 @@ namespace SReader.Game.ReadingHouse
     ///  2. Placeholder mode (GEN-4): the bundled sample book.
     ///  3. The stone-layout test passage (5, 11 and 20-word sentences), on request.
     /// </summary>
-    public sealed class ReadingHousePresenter : MonoBehaviour
+    public sealed partial class ReadingHousePresenter : MonoBehaviour
     {
         [Header("Scene wiring")]
         public ReadingHouseDashboard dashboard;
@@ -161,6 +161,7 @@ namespace SReader.Game.ReadingHouse
                 Say("No rush — that word will wait in Later.");
                 FlowOn();
             }
+            else if (DieGateOpen && session.TickTimer(Time.deltaTime)) DieGateTimedOut();
         }
 
         /// <summary>Activities and the reader fill the dashboard's display: the camera comes in close while they are open.</summary>
@@ -339,6 +340,7 @@ namespace SReader.Game.ReadingHouse
         {
             if (dashboardScreen == null || !dashboardScreen.IsOpen) return;
             bool show = reading && IsLive && !AttemptUIOpen;
+            if (DieMode) { dashboardScreen.SetToolbar(false, false, false, false, false); UpdateDiePanel(); return; }   // the game panel has Read and Finish
             dashboardScreen.SetToolbar(show && CanRead, show && CanFinish, show && PageCount > 1, Page > 0, Page < PageCount - 1);
         }
 
@@ -353,7 +355,7 @@ namespace SReader.Game.ReadingHouse
         }
 
         /// <summary>The student walked away from the dashboard (the walk-in house): its screen closes.</summary>
-        public void LeaveReading() => CloseDashboardScreen();
+        public void LeaveReading() { CloseDieGame(); CloseDashboardScreen(); }
 
         void CloseDashboardScreen()
         {
@@ -471,9 +473,9 @@ namespace SReader.Game.ReadingHouse
             Debug.Log($"[ReadingHouse] Live assignment '{a.Title}' ({a.Id}): {trail.Sentences.Count} sentences, " +
                       $"{trail.Gates.Count} key words, {session.SolvedGates} solved, {session.Points} points" +
                       (progress != null ? " (resumed)" : ""), this);
-            bool fresh = session.SolvedGates == 0 && session.DeferredCount == 0 && session.ActiveGate == null;
             StopFlow();
-            ShowSentence(fresh ? 0 : session.CurrentSentenceIndex);
+            builtSentences.Clear(); streak = 0;
+            ShowSentence(0);                                                  // every attempt reads from the first sentence
             FlowOn();
         }
 
@@ -500,7 +502,7 @@ namespace SReader.Game.ReadingHouse
         /// <summary>Carry on through the passage towards the sentence of the next key word.</summary>
         void FlowOn()
         {
-            if (!Application.isPlaying || session == null || trail == null || !isActiveAndEnabled) return;
+            if (!Application.isPlaying || session == null || trail == null || !isActiveAndEnabled || DieMode) return;   // the die game paces itself
             StopFlow();
             flow = StartCoroutine(Flow());
         }
@@ -537,6 +539,7 @@ namespace SReader.Game.ReadingHouse
         public void ShowNoAssignment()
         {
             StopFlow();
+            CloseDieGame();
             liveView = null; liveVm = null; onExit = null;
             trail = null; session = null; selected = null; words.Clear();
             dashboard.SetHeader("Choose an assignment", 0, 0);
@@ -608,7 +611,7 @@ namespace SReader.Game.ReadingHouse
 
             dashboard.SetHeader(trail.Title, sentenceIndex + 1, trail.Sentences.Count);
             if (chalkboard != null) chalkboard.Show(trail);
-            dashboard.SetSentence(MaskedSentence());
+            dashboard.SetSentence(StyledSentence());
             dashboard.SetPoints(session.Points);
 
             // Long sentences are paged: as many stones as fit on the two rows, the page with the
@@ -624,6 +627,7 @@ namespace SReader.Game.ReadingHouse
                 for (int w = 0; w < words.Count; w++)
                     if (GateInWord(w) == focus) { page = PageOf(w); break; }
             RefreshTray();
+            if (DieMode && dieBoard != null) BeginSentence();
             if (announce && encourager != null && Application.isPlaying && liveVm != null) encourager.Encourage();
         }
 
@@ -640,7 +644,13 @@ namespace SReader.Game.ReadingHouse
             if (trail == null || pageStarts.Count == 0) { tray.HideAll(); return; }
             int start = pageStarts[page];
             int end = page + 1 < pageStarts.Count ? pageStarts[page + 1] : words.Count;
-            if (matStones != null)
+            if (DieMode)
+            {
+                // The die game: no stones; the dashboard keeps the sentence with its key words hidden.
+                tray.HideAll();
+                if (matStones != null) matStones.HideAll();
+            }
+            else if (matStones != null)
             {
                 tray.HideAll();
                 var all = new List<string>(words.Count);
@@ -656,30 +666,41 @@ namespace SReader.Game.ReadingHouse
                 for (int i = start; i < end; i++) labels.Add(words[i].text);
                 tray.Show(labels, i => StateOfWord(start + i));
             }
-            dashboard.SetSentence(MaskedSentence());
+            dashboard.SetSentence(StyledSentence());
             dashboard.SetPoints(session.Points);
             if (chalkboard != null) chalkboard.Show(trail);
         }
 
         /// <summary>
-        /// The sentence on the dashboard with its key words hidden (a blank for each) until they are restored:
-        /// the student finds them on the stones, not by reading them off the screen.
+        /// The sentence styled as in the app's reading game (AssignmentGameView): a fill-in word is never
+        /// shown, only its blank; define words read gold and underlined, picture (illustrate) words pink and
+        /// underlined; restored words turn green. With <paramref name="pickedUpTo"/> ≥ 0 (the die game), the
+        /// plain words not picked yet are dimmed. Rich text for both TextMeshPro and UI Toolkit.
         /// </summary>
-        string MaskedSentence()
+        string StyledSentence(int pickedUpTo = -1)
         {
-            var span = trail.Sentences[sentenceIndex];
-            var text = new System.Text.StringBuilder(trail.PassageText.Substring(span.Start, span.Length));
-            foreach (var g in trail.Gates)
+            var sb = new System.Text.StringBuilder();
+            for (int i = 0; i < words.Count; i++)
             {
-                int at = g.PassageCharIndex - span.Start;
-                if (Solved(g) || at < 0 || at >= text.Length) continue;
-                // the whole word the key word sits in (its letters only: punctuation stays)
-                int a = at, b = at;
-                while (a > 0 && char.IsLetterOrDigit(text[a - 1])) a--;
-                while (b < text.Length && (char.IsLetterOrDigit(text[b]) || text[b] == '-' || text[b] == '\'')) b++;
-                for (int i = a; i < b; i++) text[i] = '_';
+                var w = words[i].text;
+                var g = GateInWord(i);
+                string piece;
+                if (g != null && !Solved(g))
+                {
+                    if (g.Type == GateType.Fill)
+                    {
+                        int end = w.Length; while (end > 0 && !char.IsLetterOrDigit(w[end - 1])) end--;
+                        piece = "<color=#FFD666>" + new string('_', Mathf.Max(4, end)) + "</color>" + w.Substring(end);
+                    }
+                    else if (g.Type == GateType.Illustrate) piece = "<color=#FF9BC0><u>" + w + "</u></color>";
+                    else piece = "<color=#FFD666><u>" + w + "</u></color>";
+                }
+                else if (g != null) piece = "<color=#8CE4C4>" + w + "</color>";
+                else piece = pickedUpTo >= 0 && i >= pickedUpTo ? "<color=#FFF4D670>" + w + "</color>" : w;
+                if (i > 0) sb.Append(' ');
+                sb.Append(piece);
             }
-            return text.ToString().Trim();
+            return sb.ToString();
         }
 
         void SplitWords(string sentence, int offset)
@@ -719,11 +740,12 @@ namespace SReader.Game.ReadingHouse
         /// <summary>Gameplay views always move the student to his gameplay spot first; he never stands in front of the tray.</summary>
         public void EnterView(ReadingHouseView view)
         {
-            if (view == ReadingHouseView.Overview) { studentMover.ToOverview(); CloseDashboardScreen(); }
+            if (view == ReadingHouseView.Overview) { studentMover.ToOverview(); CloseDieGame(); CloseDashboardScreen(); }
             else
             {
                 studentMover.ToGameplay();
                 if (Application.isPlaying) OpenDashboardScreen();
+                if (Application.isPlaying && trail != null) OpenDieGame();
                 if (Application.isPlaying) StartCoroutine(GreetStudent());
             }
             dashboard.SetDialogueLayout(view != ReadingHouseView.Overview);

@@ -51,16 +51,25 @@ namespace SReader.Game.ReadingHouse
         MeshRenderer quad;
         MeshCollider surface;
 
-        protected virtual void Awake()
+        /// <summary>
+        /// Where the screen is: by default from the slate (its thinnest horizontal axis is the wall normal, facing
+        /// the room). Screens that are not on a wall (e.g. a board leaning on the floor) say so themselves.
+        /// </summary>
+        protected virtual void Measure(out Vector3 normal, out Vector2 size, out Vector3 centre)
         {
-            // Screen geometry from the slate: its thinnest horizontal axis is the wall normal, facing the room.
             var b = slate.bounds;
             bool thinX = b.extents.x < b.extents.z;
             Vector3 n = thinX ? Vector3.right : Vector3.forward;
             if (roomCentre != null && Vector3.Dot(roomCentre.position - b.center, n) < 0f) n = -n;
-            Normal = n;
-            Size = new Vector2(2f * (thinX ? b.extents.z : b.extents.x), 2f * b.extents.y) * fill;
-            Centre = b.center + n * ((thinX ? b.extents.x : b.extents.z) + 0.012f);
+            normal = n;
+            size = new Vector2(2f * (thinX ? b.extents.z : b.extents.x), 2f * b.extents.y) * fill;
+            centre = b.center + n * ((thinX ? b.extents.x : b.extents.z) + 0.012f);
+        }
+
+        protected virtual void Awake()
+        {
+            Measure(out var n, out var size, out var centre);
+            Normal = n; Size = size; Centre = centre;
 
             transform.SetPositionAndRotation(Centre, Quaternion.LookRotation(-n, Vector3.up));   // the quad's face looks into the room
             transform.localScale = new Vector3(Size.x, Size.y, 1f);

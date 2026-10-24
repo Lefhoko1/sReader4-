@@ -29,7 +29,11 @@ namespace SReader.Game.ReadingHouse
         public float orbitHeightPerPixel = 0.006f;
 
         Vector2 pressPosition, lastDrag;
-        bool pressing, orbiting;
+        bool pressing, orbiting, pressOnDie;
+
+        bool OnDie(Vector2 screen) => viewCamera != null &&
+            Physics.Raycast(viewCamera.ScreenPointToRay(screen), out var hit, 80f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide) &&
+            hit.collider.GetComponentInParent<ReadingDie>() != null;
 
 #if ENABLE_INPUT_SYSTEM
         void Update()
@@ -41,6 +45,7 @@ namespace SReader.Game.ReadingHouse
                 {
                     pressing = true; pressPosition = lastDrag = pointer.position.ReadValue();
                     orbiting = CanOrbitFrom(pressPosition);
+                    pressOnDie = OnDie(pressPosition);
                 }
                 if (pressing && orbiting && pointer.press.isPressed)
                 {
@@ -54,6 +59,7 @@ namespace SReader.Game.ReadingHouse
                     pressing = false;
                     var p = pointer.position.ReadValue();
                     if ((p - pressPosition).magnitude <= maxTapDragPixels) Tap(p);
+                    else if (pressOnDie && Mathf.Abs((p - pressPosition).x) > maxTapDragPixels) presenter.OnDieFlip(p.x > pressPosition.x ? 1 : -1);   // a swipe flips the die
                 }
             }
             // Android's system Back arrives as the Escape key.
@@ -98,6 +104,12 @@ namespace SReader.Game.ReadingHouse
             if (director != null && director.hud != null && director.hud.KnobBusy) return;   // that was the board knob
             if (KeywordCard.HandleTap(screenPosition, viewCamera)) return;
             if (presenter.AttemptUIOpen) return;                                           // a word activity / the reader has the input
+            // The reading die: a tap on one of its faces is a pick.
+            if (Physics.Raycast(viewCamera.ScreenPointToRay(screenPosition), out var dieHit, 80f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide))
+            {
+                var die = dieHit.collider.GetComponentInParent<ReadingDie>();
+                if (die != null) { presenter.OnDieTapped(die.ChoiceAt(dieHit.point)); return; }
+            }
             // The Word Path stones on the rug have trigger colliders (the student walks over them): look for one first.
             var ray = viewCamera.ScreenPointToRay(screenPosition);
             foreach (var h in Physics.RaycastAll(ray, 80f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide))
@@ -109,6 +121,8 @@ namespace SReader.Game.ReadingHouse
             if (!Physics.Raycast(viewCamera.ScreenPointToRay(screenPosition), out var hit, 80f,
                     Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore)) return;
 
+            var sign = hit.collider.GetComponentInParent<SignpostButton>();
+            if (sign != null) { sign.Press(); director?.OnSignpost(sign.kind); return; }
             var panel = hit.collider.GetComponentInParent<DoorPanelTarget>();
             if (panel != null) { director?.OnDoorPanelTapped(panel.kind); return; }
             if (hit.collider.GetComponentInParent<AssignmentsBoardTarget>() != null) { director?.OnChalkboardTapped(); return; }

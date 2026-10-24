@@ -21,6 +21,8 @@ namespace SReader.Game.ReadingHouse
         public float moveSeconds = 0.8f;
 
         public bool AtGameplaySpot { get; private set; }
+        /// <summary>True while gliding him to a spot (the walker stays off meanwhile).</summary>
+        public bool Moving => motion != null;
         Coroutine motion;
 
         public void ToOverview(bool immediate = false) => MoveTo(overviewSpot, false, immediate);

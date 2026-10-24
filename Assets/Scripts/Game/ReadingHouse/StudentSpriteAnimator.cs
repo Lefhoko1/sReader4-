@@ -68,6 +68,9 @@ namespace SReader.Game.ReadingHouse
         [Tooltip("How far the feet press into the floor (m), so the soles sit on it rather than hover.")]
         public float footSink = 0.012f;
 
+        [Tooltip("Something to watch while standing still (e.g. the reading die): he faces towards it.")]
+        public Transform lookAt;
+
         [Tooltip("Hide him for a moment (e.g. while the camera faces the chalkboard). Position and state keep updating.")]
         public bool hidden;
 
@@ -163,6 +166,8 @@ namespace SReader.Game.ReadingHouse
                 float x = Vector3.Dot(v, right), z = Vector3.Dot(v, camFwd);
                 want = Mathf.Abs(x) > Mathf.Abs(z) * 0.9f ? (x > 0 ? Facing.Right : Facing.Left) : (z > 0 ? Facing.Back : Facing.Front);
             }
+            else if (!IsWalking && lookAt != null)                                             // watching the die
+                want = Vector3.Dot(Vector3.ProjectOnPlane(lookAt.position - pos, Vector3.up), camFwd) > -0.2f ? Facing.Back : Facing.Front;
             else if (!IsWalking && AtReadingSpot(pos)) want = Facing.Back;                 // reading: face the dashboard
             else if (!IsWalking && (CurrentFacing == Facing.Right || CurrentFacing == Facing.Left)) want = Facing.Front;
 

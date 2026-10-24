@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 using SReader.UI.Navigation;
 
 namespace SReader.Game.ReadingHouse
@@ -105,6 +106,7 @@ namespace SReader.Game.ReadingHouse
                 return;
             }
             presenter.standaloneExit = ExitReading;
+            joystick.viewCamera = cameraRig.viewCamera;
             if (presenter.matStones != null) presenter.matStones.walkingStudent = walker.transform;
             presenter.standaloneMenu = () => { ExitReading(); FocusBoard(); };   // the dashboard's Menu shows the app's menu on the board
             hud.KnobPressed += OnKnobPressed;
@@ -132,10 +134,18 @@ namespace SReader.Game.ReadingHouse
             // stones stay taps); pushing it walks him away from the dashboard — no menu in between.
             joystick.enabled = true;
             joystick.showStick = true;
-            joystick.interactive = !overlay && !presenter.AttemptUIOpen && !walkingToDashboard;
+            joystick.interactive = !overlay && !presenter.AttemptUIOpen && !autoWalking;
             joystick.compactZone = Current == State.Reading;
-            if (Current == State.Reading && joystick.Value.sqrMagnitude > 0.2f) ExitReading();
-            bool canWalk = Current != State.Reading && !overlay;
+            // While reading he can walk round the room to stand where he likes: the reading camera stays put and
+            // the game goes on. Only walking right away from the dashboard leaves reading.
+            bool canWalk = !overlay && !presenter.AttemptUIOpen;
+            if (Current == State.Reading)
+            {
+                if (joystick.Value.sqrMagnitude > 0.01f && !presenter.studentMover.Moving) walkedWhileReading = true;
+                canWalk &= walkedWhileReading;
+                var fromSpot = Vector3.ProjectOnPlane(walker.transform.position - presenter.studentMover.gameplaySpot.position, Vector3.up);
+                if (walkedWhileReading && (fromSpot.magnitude > leaveReadingDistance || !IsInside())) ExitReading();
+            }
             walker.enabled = canWalk;
 
             // Leaving the start spot by any means (stick, keys, or being moved) starts exploring.
@@ -172,7 +182,10 @@ namespace SReader.Game.ReadingHouse
             hud.SetHint(Time.time < flashUntil ? flash : StandingHint());
         }
 
-        bool wasInside, walkingToDashboard;
+        bool wasInside, autoWalking, walkedWhileReading;
+
+        [Tooltip("While reading, walking this far from the reading spot leaves reading (the camera follows him again).")]
+        public float leaveReadingDistance = 4.2f;
 
         /// <summary>The Encourager cheers whenever the (signed-in) student steps into the house.</summary>
         void WelcomeOnEntering()
@@ -207,7 +220,7 @@ namespace SReader.Game.ReadingHouse
             if (!Active) return;
             presenter.BindAssignment(view, vm);
             StopAllCoroutines();
-            walkingToDashboard = false; joystick.Simulated = null;
+            autoWalking = false; joystick.Simulated = null;
             StartCoroutine(WalkToDashboardAndRead());
         }
 
@@ -216,26 +229,122 @@ namespace SReader.Game.ReadingHouse
             CloseChalkboard();
             while (focus > 0.001f || focusTo >= 0f) yield return null;      // the room has turned back
             Flash("Off to the dashboard — let's read!");
-            var target = presenter.studentMover.gameplaySpot.position;
-            float giveUp = Time.time + 12f;
-            walkingToDashboard = true;
+            yield return WalkIndoors();
+            yield return WalkTo(presenter.studentMover.gameplaySpot.position, 0.9f, 12f);
+            yield return new WaitForSeconds(0.3f);
+            TryStartReading();
+        }
+
+        /// <summary>
+        /// Walk the student himself to <paramref name="target"/> (the stick is steered for him, so he walks
+        /// exactly as the player would: same pace, same turns, round the stones on the rug).
+        /// </summary>
+        IEnumerator WalkTo(Vector3 target, float arrive, float seconds)
+        {
+            float giveUp = Time.time + seconds;
+            autoWalking = true;
             while (Time.time < giveUp)
             {
-                var goal = presenter.matStones != null ? presenter.matStones.Waypoint(walker.transform.position, target) : target;
                 var to = Vector3.ProjectOnPlane(target - walker.transform.position, Vector3.up);
-                if (to.magnitude < 0.9f) break;
+                if (to.magnitude < arrive) break;
+                var goal = presenter.matStones != null ? presenter.matStones.Waypoint(walker.transform.position, target) : target;
                 to = Vector3.ProjectOnPlane(goal - walker.transform.position, Vector3.up);
                 var cam = cameraRig.viewCamera.transform;
                 var fwd = Vector3.ProjectOnPlane(cam.forward, Vector3.up).normalized;
                 var right = Vector3.Cross(Vector3.up, fwd);
                 var d = to.normalized;
-                joystick.Simulated = new Vector2(Vector3.Dot(d, right), Vector3.Dot(d, fwd)).normalized * 0.85f;
+                joystick.Simulated = new Vector2(Vector3.Dot(d, right), Vector3.Dot(d, fwd)).normalized;
                 yield return null;
             }
             joystick.Simulated = null;
-            walkingToDashboard = false;
-            yield return new WaitForSeconds(0.3f);
-            TryStartReading();
+            autoWalking = false;
+        }
+
+        /// <summary>From outside: up the path to the doors (they open for him), and in.</summary>
+        IEnumerator WalkIndoors()
+        {
+            if (IsInside()) yield break;
+            var outward = Vector3.ProjectOnPlane(door.transform.position - door.houseCentre.position, Vector3.up).normalized;
+            var front = door.transform.position + outward * 1.8f; front.y = walker.transform.position.y;
+            yield return WalkTo(front, 0.5f, 12f);
+            for (float t = 0f; t < 2f && !door.IsOpen; t += Time.deltaTime) yield return null;
+            yield return new WaitForSeconds(0.5f);                          // the doors swing wide
+            var inside = door.transform.position - outward * 2.2f; inside.y = walker.transform.position.y;
+            yield return WalkTo(inside, 0.6f, 8f);
+        }
+
+        // ── the signpost outside: the house's menu in the world ─────────────
+
+        /// <summary>
+        /// A sign on the signpost was tapped. Signed out, every sign leads to signing in. Signed in, the
+        /// student walks in himself and the app's page opens on the chalkboard:
+        ///   Library → the assignments; Play → straight to reading the chosen assignment (or the assignments
+        ///   to pick one); My Progress → completed assignments; Settings → the profile page.
+        /// </summary>
+        public void OnSignpost(SignpostButton.Kind kind)
+        {
+            if (!Active || OverlayOpen || autoWalking) return;
+            if (!door.Unlocked)
+            {
+                Flash("Sign in first: then the whole library is yours!");
+                if (signInNavigation != null) signInNavigation.ShowLogin();
+                return;
+            }
+            StopAllCoroutines();
+            joystick.Simulated = null; autoWalking = false;
+            switch (kind)
+            {
+                case SignpostButton.Kind.Play when presenter.LiveAssignment != null:
+                    StartCoroutine(WalkToDashboardAndRead());
+                    break;
+                case SignpostButton.Kind.Play:
+                    Flash("Pick an assignment, then tap Play solo!");
+                    StartCoroutine(WalkInAndOpenBoard("nav-assignments", null));
+                    break;
+                case SignpostButton.Kind.Progress:
+                    Flash("Here's how far you've come!");
+                    StartCoroutine(WalkInAndOpenBoard("nav-assignments", "Completed"));
+                    break;
+                case SignpostButton.Kind.Settings:
+                    StartCoroutine(WalkInAndOpenBoard("profile-button", null));
+                    break;
+                default:
+                    Flash("Welcome to the library!");
+                    StartCoroutine(WalkInAndOpenBoard("nav-assignments", null));
+                    break;
+            }
+        }
+
+        IEnumerator WalkInAndOpenBoard(string button, string thenButtonText)
+        {
+            if (Current == State.Reading) ExitReading();
+            yield return WalkIndoors();
+            if (!IsInside() || chalkboardScreen == null) yield break;
+            if (Current == State.Outside) { Current = State.Exploring; follow.Follow(); }
+            FocusBoard();
+            while (focus < 0.999f || focusTo >= 0f) yield return null;      // the room has turned to the board
+            yield return null;
+            var root = chalkboardScreen.page.rootVisualElement;
+            Submit(root?.Q<UnityEngine.UIElements.Button>(button));
+            if (string.IsNullOrEmpty(thenButtonText)) yield break;
+            for (float t = 0f; t < 3f; t += Time.deltaTime)                 // the page fills in as its data arrives
+            {
+                UnityEngine.UIElements.Button found = null;
+                root?.Query<UnityEngine.UIElements.Button>().ForEach(b => { if (found == null && b.text == thenButtonText && b.resolvedStyle.display != UnityEngine.UIElements.DisplayStyle.None) found = b; });
+                if (found != null) { Submit(found); yield break; }
+                yield return null;
+            }
+        }
+
+        /// <summary>Press a page's button the way a keyboard / controller "submit" does (its own click handler runs).</summary>
+        static void Submit(UnityEngine.UIElements.Button button)
+        {
+            if (button == null) return;
+            using (var e = UnityEngine.UIElements.NavigationSubmitEvent.GetPooled())
+            {
+                e.target = button;
+                button.SendEvent(e);
+            }
         }
 
         // ── called by ReadingHouseInput / DoorUnlockPage ───────────────────────
@@ -259,6 +368,7 @@ namespace SReader.Game.ReadingHouse
             Current = State.Reading;
             follow.Release();
             walker.enabled = false;
+            walkedWhileReading = false;
             presenter.EnterView(ReadingHouseView.Gameplay);
             return true;
         }
@@ -464,7 +574,7 @@ namespace SReader.Game.ReadingHouse
         string StandingHint()
         {
             if (Current == State.Reading || OverlayOpen) return null;
-            if (Current == State.Outside) return "Use the stick (or WASD) to walk to the door";
+            if (Current == State.Outside) return door.Unlocked ? "Tap a sign on the signpost, or walk in through the door" : "Tap a sign, or walk to the door to sign in";
             if (!door.Unlocked) return door.DistanceToStudent <= panelReach ? "Tap  Log in  or  Register  beside the door" : "Walk to the door to sign in";
             if (!IsInside()) return null;
             if (presenter.LiveAssignment?.Assignment != null)

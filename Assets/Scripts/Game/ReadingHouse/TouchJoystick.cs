@@ -25,6 +25,9 @@ namespace SReader.Game.ReadingHouse
         public bool interactive = true;
         [Tooltip("Only a press on the stick itself takes it (not the whole corner) — while reading, so taps on the stones stay taps.")]
         public bool compactZone;
+        [Tooltip("The scene camera (to tell a press on a sign from a press for the stick); Camera.main when empty.")]
+        public Camera viewCamera;
+        static Camera sceneCamera;
 
         public Vector2 Value { get; private set; }
         public bool OwnsPointer { get; private set; }
@@ -39,6 +42,7 @@ namespace SReader.Game.ReadingHouse
 
         void Update()
         {
+            if (viewCamera != null) sceneCamera = viewCamera;
             Vector2 stick = Vector2.zero;
 #if ENABLE_INPUT_SYSTEM
             var pointer = interactive ? Pointer.current : null;
@@ -46,7 +50,7 @@ namespace SReader.Game.ReadingHouse
             if (pointer != null)
             {
                 var p = pointer.position.ReadValue();
-                if (pointer.press.wasPressedThisFrame && (compactZone ? Vector2.Distance(p, RestCentre) <= radius * 1.4f : InZone(p))) { OwnsPointer = true; origin = compactZone ? RestCentre : p; }
+                if (pointer.press.wasPressedThisFrame && (compactZone ? Vector2.Distance(p, RestCentre) <= radius * 1.4f : InZone(p) && !OverSign(p))) { OwnsPointer = true; origin = compactZone ? RestCentre : p; }
                 if (OwnsPointer && pointer.press.isPressed)
                 {
                     current = p;
@@ -71,7 +75,17 @@ namespace SReader.Game.ReadingHouse
         /// <summary>Bottom-left quarter of the screen, in Input System coordinates (origin bottom-left).</summary>
         /// <summary>Would a press here take the stick (rather than being a tap / drag on the scene)?</summary>
         public bool Claims(Vector2 p) => isActiveAndEnabled && interactive &&
-            (compactZone ? Vector2.Distance(p, RestCentre) <= Screen.height * radiusFraction * 1.4f : InZone(p));
+            (compactZone ? Vector2.Distance(p, RestCentre) <= Screen.height * radiusFraction * 1.4f : InZone(p) && !OverSign(p));
+
+        /// <summary>A press on a signpost sign (outside the house) is a tap on it, even inside the stick's corner.</summary>
+        static bool OverSign(Vector2 p)
+        {
+            var cam = sceneCamera != null ? sceneCamera : Camera.main;
+            if (cam == null) return false;
+            if (Vector2.Distance(p, RestCentre) <= Screen.height * 0.11f) return false;   // the stick itself always wins
+            return Physics.Raycast(cam.ScreenPointToRay(p), out var hit, 120f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore)
+                   && hit.collider.GetComponentInParent<SignpostButton>() != null;
+        }
 
         static Vector2 RestCentre => new Vector2(Screen.width * 0.12f, Screen.height * 0.2f);
 

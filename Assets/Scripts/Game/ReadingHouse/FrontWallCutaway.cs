@@ -24,6 +24,8 @@ namespace SReader.Game.ReadingHouse
         public float hideWhenInsideBy = 0.6f;
         public float showWhenOutsideBy = 0.2f;
         public float fadeSeconds = 0.45f;
+        [Tooltip("The camera: the wall only fades while it stands between the camera and the room (looking in from the front). Swing the view round to the side and it comes back.")]
+        public Camera viewer;
 
         static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
         Material[][] originals;
@@ -46,14 +48,26 @@ namespace SReader.Game.ReadingHouse
         {
             if (student == null || doorway == null) return;
             float side = Vector3.Dot(student.position - doorway.position, outward.normalized);
-            if (!hidden && side < -hideWhenInsideBy) hidden = true;
-            else if (hidden && side > -showWhenOutsideBy) hidden = false;
+            if (!hidden && side < -hideWhenInsideBy && LooksInThroughWall()) hidden = true;
+            else if (hidden && (side > -showWhenOutsideBy || !LooksInThroughWall())) hidden = false;
 
             float target = hidden ? 0f : 1f;
             if (Mathf.Approximately(alpha, target)) return;
             float before = alpha;
             alpha = Mathf.MoveTowards(alpha, target, Time.deltaTime / fadeSeconds);
             Apply(before);
+        }
+
+        /// <summary>Is the camera out in front of the wall, looking in through it? (From the side it doesn't block anything.)</summary>
+        bool LooksInThroughWall()
+        {
+            if (viewer == null) { var rig = FindAnyObjectByType<ReadingHouseCameraRig>(); viewer = rig != null ? rig.viewCamera : Camera.main; }
+            if (viewer == null) return true;
+            var o = outward.normalized;
+            var cam = viewer.transform;
+            bool inFront = Vector3.Dot(cam.position - doorway.position, o) > 0.3f;
+            bool facingIn = Vector3.Dot(Vector3.ProjectOnPlane(cam.forward, Vector3.up).normalized, -o) > 0.5f;   // within ~60° of straight in
+            return inFront && facingIn;
         }
 
         void Apply(float before)
