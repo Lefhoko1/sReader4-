@@ -22,6 +22,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Leaf
+    second: {fileID: 2100000, guid: 6e21fd2f22eed2347ba5deb6c0db3800, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Navy
     second: {fileID: 2100000, guid: 1ff697c5a933a8845b6e6eecd7c77525, type: 2}
   - first:

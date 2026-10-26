@@ -214,6 +214,7 @@ namespace SReader.Game.ReadingHouse
             if (clip != set.idleFront) { frontSince = -1f; smileWeight = 0f; }   // expressions start afresh each time he faces you
 
             // Advance.
+            if (clip == null || clip.frames == null || clip.frames.Length == 0) return;   // no artwork (e.g. right after a script reload)
             int n = clip.frames.Length;
             if (walking) phase += stepDistance / Mathf.Max(0.1f, strideCycleMetres) * n;
             else if (clip == set.turnToBack) phase += dt * turnFps;

@@ -21,7 +21,7 @@ namespace SReader.EditorTools.ReadingHouse
         const string ModelPath = "Assets/Art/ReadingHouse/Models/Die/SM_ReadingDie.fbx";
         const string Folder = "Assets/Art/ReadingHouse/Die";
         const float DieSize = 1.1f;
-        static readonly Vector3 DieOnRug = new Vector3(0.55f, 0f, 0.35f);
+        static readonly Vector3 DieOnRug = new Vector3(0.45f, 0f, 1.05f);   // out on the floor, well clear of the dashboard
         static readonly Vector3 ReadingSpot = new Vector3(-1.0f, 0f, 1.7f);
         static readonly Vector3 CameraAt = new Vector3(0f, 3.7f, 5.2f), CameraAim = new Vector3(0f, 1.7f, -1.0f);
         const float CameraFov = 56f;
@@ -67,9 +67,9 @@ namespace SReader.EditorTools.ReadingHouse
                 foreach (var r in dieGo.GetComponentsInChildren<Renderer>()) b.Encapsulate(r.bounds);
                 float lift = dieGo.transform.position.y - b.min.y;
                 dieGo.transform.position = new Vector3(DieOnRug.x, rug.max.y + lift + 0.005f, DieOnRug.z);
-                // A corner towards the reading camera: two side faces and the top all read clearly.
+                // One face square to the reading camera: the word on it reads straight on, easy to tap.
                 var toCam = Vector3.ProjectOnPlane(CameraAt - dieGo.transform.position, Vector3.up).normalized;
-                dieGo.transform.rotation = Quaternion.LookRotation(toCam, Vector3.up) * Quaternion.Euler(0f, 45f, 0f);
+                dieGo.transform.rotation = Quaternion.LookRotation(toCam, Vector3.up);
                 var col = dieGo.AddComponent<BoxCollider>();
                 col.size = Vector3.one * 1.02f; col.center = Vector3.zero;
                 foreach (var r in dieGo.GetComponentsInChildren<Renderer>()) r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;

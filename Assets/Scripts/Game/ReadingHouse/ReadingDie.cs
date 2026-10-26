@@ -31,6 +31,8 @@ namespace SReader.Game.ReadingHouse
         public Material pictureMaterial;
         public ParticleSystem sparkle;
         public float rollSeconds = 0.42f;
+        [Tooltip("One word at a time on the face towards the camera (tap anywhere on the die to pick it; flip for the next).")]
+        public bool singleFace = true;
 
         /// <summary>One choice on a face: a word / letter, or a picture with its number.</summary>
         public struct Choice
@@ -157,6 +159,20 @@ namespace SReader.Game.ReadingHouse
         {
             var cam = viewCamera != null ? viewCamera.transform.position : transform.position + Vector3.back * 5f;
             var toCam = (cam - transform.position).normalized;
+            if (singleFace)
+            {
+                // Just the face looking at the camera (sides only: the word stands upright, easy to read and tap).
+                Face facing = null; float bestDot = -2f;
+                var flatToCam = Vector3.ProjectOnPlane(toCam, Vector3.up).normalized;
+                foreach (var f in faces)
+                {
+                    var n = rotation * f.dir;
+                    if (Mathf.Abs(n.y) > 0.5f) continue;
+                    float d = Vector3.Dot(n, flatToCam);
+                    if (d > bestDot) { bestDot = d; facing = f; }
+                }
+                return new List<Face> { facing };
+            }
             var flatRight = Vector3.Cross(Vector3.up, -Vector3.ProjectOnPlane(toCam, Vector3.up)).normalized;
             Face top = null; float best = -2f;
             foreach (var f in faces) { float y = (rotation * f.dir).y; if (y > best) { best = y; top = f; } }
@@ -213,6 +229,23 @@ namespace SReader.Game.ReadingHouse
             Assign(choices, target);
             motion = StartCoroutine(RollTo(target));
         }
+
+        /// <summary>
+        /// The die shuffles itself: a quick double roll (half a turn, alternating directions) with a burst of
+        /// sparkles round it, landing on the new choice.
+        /// </summary>
+        public void Spin(IReadOnlyList<Choice> choices)
+        {
+            if (motion != null) { StopCoroutine(motion); Settle(); }
+            spinSide = !spinSide;
+            var axis = spinSide ? NearestAxis(Vector3.up) : NearestAxis(CameraRight());
+            var target = Quaternion.AngleAxis(180f, axis) * transform.localRotation;
+            Assign(choices, target);
+            if (sparkle != null) { sparkle.Emit(16); }
+            motion = StartCoroutine(RollTo(target));
+        }
+
+        bool spinSide;
 
         Vector3 CameraRight()
         {
@@ -320,10 +353,18 @@ namespace SReader.Game.ReadingHouse
             }
         }
 
+        /// <summary>Where a choice's face is (its centre, in the world): for automated taps.</summary>
+        public bool TryGetChoicePoint(int choice, out Vector3 world)
+        {
+            foreach (var f in faces) if (f.choice == choice) { world = f.anchor.position; return true; }
+            world = default; return false;
+        }
+
         /// <summary>Which choice a tap landed on, from the hit point (−1: not a choice face, or mid-roll).</summary>
         public int ChoiceAt(Vector3 worldPoint)
         {
             if (motion != null) return -1;
+            if (singleFace) { foreach (var f in faces) if (f.choice >= 0) return f.choice; return -1; }   // a tap anywhere picks the word showing
             var local = transform.InverseTransformPoint(worldPoint);
             var dir = Snap(local);
             foreach (var f in faces) if (f.dir == dir) return f.choice;

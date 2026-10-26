@@ -20,6 +20,18 @@ namespace SReader.Game.ReadingHouse
     {
         protected override bool MarkAsBoard => false;
 
+        [Tooltip("Extra height (m) the screen grows upwards beyond the display's picture, so the passage has room.")]
+        public float extraHeightTop = 0.3f;
+        [Tooltip("Extra height (m) the screen grows downwards.")]
+        public float extraHeightBottom = 0.08f;
+
+        protected override void Measure(out Vector3 normal, out Vector2 size, out Vector3 centre)
+        {
+            base.Measure(out normal, out size, out centre);
+            size.y += extraHeightTop + extraHeightBottom;
+            centre += Vector3.up * ((extraHeightTop - extraHeightBottom) * 0.5f);
+        }
+
         /// <summary>Where the activities and the reader open (above the toolbar).</summary>
         public VisualElement Host { get; private set; }
 

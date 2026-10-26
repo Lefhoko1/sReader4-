@@ -102,6 +102,8 @@ namespace SReader.EditorTools.ReadingHouse
                     case "diegame": DieGameSetup.Run(); break;
                     case "diecapture": DieGameCapture.Start(); break;
                     case "droppavilion": DropPavilion(); break;
+                    case "dashprobe": DashboardProbe.Run(); break;
+                    case "chalkdash": DashboardChalkboardSetup.Run(); break;
                     case "chalkboardcapture": ChalkboardCapture.Start(); break;
                     case "patch": ReadingHouseScenePatcher.Apply(); break;
                     case "patchcapture": ReadingHouseScenePatcher.Apply(); ReadingHouseViewCapture.Run(); break;

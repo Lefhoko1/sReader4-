@@ -64,13 +64,34 @@ namespace SReader.EditorTools.ReadingHouse
                 var screenRight = Vector3.Cross(Vector3.up, view).normalized;
                 float groundY = director.studentStart.position.y;
 
-                var postAt = door.transform.position + outward * 1.2f - screenRight * 6.6f;
-                var post = Place(ModelFolder + "/SM_Signpost.fbx", "Signpost (menu)", Ground(postAt, groundY), camPos);
-                var benchAt = door.transform.position + outward * 3.0f + screenRight * 6.2f;
+                // Right at the house, as in the picture: the post just in front of its left front corner (the planks reach
+                // across towards the left window), the bench by the right front corner, turned towards the path.
+                var house = all.Select(t => t.GetComponent<Renderer>()).First(r => r != null && r.name == "SR_Foundation").bounds;
+                // The house's own axes (its front faces "outward"); "along" runs left → right across its front as seen from the path.
+                var along = Vector3.Cross(Vector3.up, outward).normalized;
+                if (Vector3.Dot(along, screenRight) < 0f) along = -along;
+                float halfW = Mathf.Abs(house.extents.x * along.x) + Mathf.Abs(house.extents.z * along.z);
+                float halfD = Mathf.Abs(house.extents.x * outward.x) + Mathf.Abs(house.extents.z * outward.z);
+                var frontMid = new Vector3(house.center.x, groundY, house.center.z) + outward * halfD;
+                var leftCorner = frontMid - along * halfW;
+                var rightCorner = frontMid + along * halfW;
+                var postAt = leftCorner + outward * 1.1f + along * 0.1f;
+                // Facing straight out from the house front (parallel to the wall, as in the picture), so the planks never reach into it.
+                var post = Place(ModelFolder + "/SM_Signpost.fbx", "Signpost (menu)", Ground(postAt, groundY), postAt + outward * 10f);
+                // Mirror left-to-right, so the planks reach towards the house and the arrow points at the door (as in the
+                // picture), the lantern on the outer side. The words and icons cancel the mirror (Decorate divides by lossyScale).
+                post.transform.localScale = new Vector3(-1f, 1f, 1f);
+                var benchAt = rightCorner + outward * 1.15f - along * 0.35f;
                 // The bench turned three-quarters towards the path (as in the picture), not square to the camera.
                 var pathPoint = door.transform.position + outward * 3.0f;
-                var benchLook = benchAt + (Vector3.ProjectOnPlane(camPos - benchAt, Vector3.up).normalized + Vector3.ProjectOnPlane(pathPoint - benchAt, Vector3.up).normalized * 1.3f);
+                var benchLook = benchAt + (Vector3.ProjectOnPlane(camPos - benchAt, Vector3.up).normalized + Vector3.ProjectOnPlane(pathPoint - benchAt, Vector3.up).normalized * 0.35f);   // facing the viewer, a little towards the path
                 var bench = Place(ModelFolder + "/SM_Bench.fbx", "Garden Bench", Ground(benchAt, groundY), benchLook);
+                // Make sure its seat (not its back) faces the way it should: turn it round if the export's front marker disagrees.
+                var seat = bench.GetComponentsInChildren<Renderer>().FirstOrDefault(r => r.name == "Seat_0");
+                var backrest = bench.GetComponentsInChildren<Renderer>().FirstOrDefault(r => r.name == "Back_1");
+                if (seat != null && backrest != null &&
+                    Vector3.Dot(seat.bounds.center - backrest.bounds.center, Vector3.ProjectOnPlane(benchLook - benchAt, Vector3.up)) < 0f)
+                    bench.transform.RotateAround(bench.transform.position, Vector3.up, 180f);
 
                 // Solid where it stands (the student walks round the post and the bench).
                 AddBlocker(post.transform, "Post", 0.5f);
@@ -103,13 +124,13 @@ namespace SReader.EditorTools.ReadingHouse
             }
         }
 
-        struct Mats { public Material wood, woodDark, navy, gold, iron, glass, icon, glow; }
+        struct Mats { public Material wood, woodDark, navy, gold, iron, glass, icon, glow, leaf; }
 
         static Mats Materials()
         {
             var lit = Shader.Find("Universal Render Pipeline/Simple Lit");
             var unlit = Shader.Find("Universal Render Pipeline/Unlit");
-            var woodTex = Tex(ArtFolder + "/T_SignWood.png", true);
+            var woodTex = Tex(ArtFolder + "/T_PlankWood.png", true);
             Material M(string name, Shader sh, Color c, Texture t = null, float smooth = 0.15f)
             {
                 string path = ArtFolder + "/" + name + ".mat";
@@ -131,7 +152,8 @@ namespace SReader.EditorTools.ReadingHouse
             return new Mats
             {
                 wood = M("M_Sign_Wood", lit, Color.white, woodTex),
-                woodDark = M("M_Sign_WoodDark", lit, new Color(0.68f, 0.6f, 0.55f), woodTex),
+                woodDark = M("M_Sign_WoodDark", lit, new Color(0.62f, 0.52f, 0.46f), woodTex),
+                leaf = M("M_Sign_Leaf", lit, new Color32(78, 148, 52, 255), null, 0.2f),
                 navy = M("M_Sign_Navy", lit, new Color32(24, 40, 86, 255), null, 0.35f),
                 gold = gold,
                 iron = M("M_Sign_Iron", lit, new Color32(38, 36, 40, 255), null, 0.3f),
@@ -175,7 +197,7 @@ namespace SReader.EditorTools.ReadingHouse
             imp.materialImportMode = ModelImporterMaterialImportMode.ImportStandard;
             void Map(string name, Material m) => imp.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material), name), m);
             Map("Wood", mats.wood); Map("WoodDark", mats.woodDark); Map("Navy", mats.navy);
-            Map("Gold", mats.gold); Map("Iron", mats.iron); Map("Glass", mats.glass);
+            Map("Gold", mats.gold); Map("Iron", mats.iron); Map("Glass", mats.glass); Map("Leaf", mats.leaf);
             imp.SaveAndReimport();
         }
 

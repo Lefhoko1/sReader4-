@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.IO;
 using System.Reflection;
 using UnityEditor;
@@ -16,13 +15,15 @@ namespace SReader.EditorTools.ReadingHouse
     /// <summary>
     /// Automated check of the die game. Plays SC_ReadingHouse_Integration, puts the student at the dashboard
     /// and, for the check only, binds the bundled sample book in memory (not live: nothing is saved or sent),
-    /// so key-word activities come up. It then plays: right picks, one wrong pick, flips, and every activity
-    /// it meets solved piece by piece. Screenshots + LOG.txt in GeneratedAssets/ReadingHouseUnity/diegame.
+    /// so key-word activities come up. Then it plays the passage as a student would: taps the glowing key word,
+    /// waits for the self-shuffling die to show the right piece and taps it through the house's input (one
+    /// wrong tap first), goes back to the passage, and so on until every key word is restored.
+    /// Screenshots + LOG.txt in GeneratedAssets/ReadingHouseUnity/diegame.
     /// </summary>
     [InitializeOnLoad]
     public static class DieGameCapture
     {
-        const string StepKey = "sReader.RH.Die.Step", ReturnKey = "sReader.RH.Die.Return", CountKey = "sReader.RH.Die.Count";
+        const string StepKey = "sReader.RH.Die.Step", ReturnKey = "sReader.RH.Die.Return", CountKey = "sReader.RH.Die.Count", ShotKey = "sReader.RH.Die.Shots";
         static readonly string Out = Path.GetFullPath(Path.Combine(Application.dataPath, "..", "GeneratedAssets", "ReadingHouseUnity", "diegame"));
         static double next;
         static readonly BindingFlags F = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public;
@@ -48,8 +49,7 @@ namespace SReader.EditorTools.ReadingHouse
             foreach (var f in Directory.GetFiles(Out)) File.Delete(f);
             SessionState.SetString(ReturnKey, SceneManager.GetActiveScene().path);
             SessionState.SetInt(CountKey, 0);
-            SessionState.EraseInt("sReader.RH.Die.GateShot");
-            SessionState.EraseInt("sReader.RH.Die.TierShot");
+            SessionState.SetString(ShotKey, "");
             EditorSceneManager.OpenScene(ReadingHouseSceneBuilder.ScenePath, OpenSceneMode.Single);
             SessionState.SetInt(StepKey, 0);
             EditorApplication.isPlaying = true;
@@ -66,42 +66,46 @@ namespace SReader.EditorTools.ReadingHouse
 
         static void Log(string s) => File.AppendAllText(Path.Combine(Out, "LOG.txt"), s + "\n");
         static object Get(object o, string name) => o.GetType().GetField(name, F)?.GetValue(o);
+        static void Call(object o, string name, params object[] args) => o.GetType().GetMethod(name, F).Invoke(o, args);
 
-        static string Clean(string word)
-        {
-            var sb = new System.Text.StringBuilder();
-            foreach (var c in word) if (char.IsLetterOrDigit(c) || c == '\'' || c == '-') sb.Append(c);
-            return sb.Length > 0 ? sb.ToString() : word;
-        }
-
-        /// <summary>The face carrying the right answer now (−1: not on the die, flip).</summary>
-        static int RightFace(ReadingHousePresenter p, out string what)
+        /// <summary>Is the die showing the piece that comes next?</summary>
+        static bool ShowingRight(ReadingHousePresenter p, out string what)
         {
             var keys = (System.Collections.Generic.List<string>)Get(p, "faceKeys");
-            var step = Get(p, "step").ToString();
-            what = step;
-            if (step == "Sentence")
+            var gate = (GateData)Get(p, "dieGate");
+            what = "";
+            if (gate == null || keys == null || keys.Count == 0) return false;
+            if (gate.Type == GateType.Illustrate)
             {
-                var words = (System.Collections.Generic.List<(string text, int start, int end)>)Get(p, "words");
-                int i = (int)Get(p, "buildIndex");
-                var want = Clean(words[i].text); what += " word '" + want + "'";
-                return keys.FindIndex(k => string.Equals(k, want, StringComparison.OrdinalIgnoreCase));
+                var token = (ContentToken)Get(p, "token");
+                what = "picture for " + token.text;
+                return keys[0] == token.correctImage;
             }
-            if (step == "Gate")
-            {
-                var gate = (GateData)Get(p, "dieGate");
-                if (gate.Type == GateType.Illustrate)
-                {
-                    var token = (SReader.Domains.Assignments.Models.ContentToken)Get(p, "token");
-                    what += " illustrate " + token.text;
-                    return keys.IndexOf(token.correctImage);
-                }
-                var correct = (System.Collections.Generic.List<string>)Get(p, "correct");
-                var answer = (System.Collections.Generic.List<string>)Get(p, "answer");
-                var want = correct[answer.Count]; what += $" {gate.Type} piece '{want}' ({answer.Count + 1}/{correct.Count})";
-                return keys.FindIndex(k => gate.Type == GateType.Define ? k == want : string.Equals(k, want, StringComparison.OrdinalIgnoreCase));
-            }
-            return -1;
+            var correct = (System.Collections.Generic.List<string>)Get(p, "correct");
+            var answer = (System.Collections.Generic.List<string>)Get(p, "answer");
+            if (answer.Count >= correct.Count) return false;
+            var want = correct[answer.Count];
+            what = $"{gate.Type} piece '{want}' ({answer.Count + 1}/{correct.Count}), die shows '{keys[0]}'";
+            return gate.Type == GateType.Define ? keys[0] == want : string.Equals(keys[0], want, StringComparison.OrdinalIgnoreCase);
+        }
+
+        /// <summary>Tap the die the way a finger does: through the house's input, at the face showing.</summary>
+        static void TapDie(ReadingHousePresenter p)
+        {
+            var input = Object.FindAnyObjectByType<ReadingHouseInput>();
+            if (!p.die.TryGetChoicePoint(0, out var world)) { Log("  no face showing"); return; }
+            var screen = (Vector2)p.cameraRig.viewCamera.WorldToScreenPoint(world);
+            int before = (int)Get(p, "streak");
+            input.Tap(screen);
+            Log($"  tapped die at {screen}: streak {before} -> {Get(p, "streak")}");
+        }
+
+        static bool FirstTime(string tag)
+        {
+            var done = SessionState.GetString(ShotKey, "");
+            if (done.Contains("|" + tag + "|")) return false;
+            SessionState.SetString(ShotKey, done + "|" + tag + "|");
+            return true;
         }
 
         static void Step(int step)
@@ -112,58 +116,63 @@ namespace SReader.EditorTools.ReadingHouse
             void Shot(string name)
             {
                 ScreenCapture.CaptureScreenshot(Path.Combine(Out, name + ".png"));
-                Log($"SHOT {name}: step {Get(p, "step")}, sentence {p.SentenceIndex + 1}, streak {Get(p, "streak")}, tier {p.die.Tier_}, solved {p.Session?.SolvedGates}/{p.Session?.TotalGates}");
+                Log($"SHOT {name}: playing {Get(p, "dieGate") != null}, solved {p.Session?.SolvedGates}/{p.Session?.TotalGates}, streak {Get(p, "streak")}, tier {p.die.Tier_}");
             }
             int count = SessionState.GetInt(CountKey, 0);
+            SessionState.SetInt(CountKey, count + 1);
+            if (count > 600) { Wait(0.2, 90); return; }
 
             switch (step)
             {
                 case 0:
                 {
                     // At the dashboard with the sample book (in memory only, for this check).
-                    if (d != null) d.enabled = false;
-                    var walker = d != null ? d.walker : null;
-                    if (walker != null) walker.enabled = false;
-                    if (d != null && d.follow != null) d.follow.Release();          // the reading camera takes over, as when reading starts
+                    if (d != null) { d.enabled = false; if (d.walker != null) d.walker.enabled = false; if (d.follow != null) d.follow.Release(); }
                     p.Bind(TrailBuilder.Build("sample", "Meadow at Dawn", AssignmentContentCodec.FromJson(p.sampleBook.text)));
                     p.EnterView(ReadingHouseView.Gameplay);
                     Log($"bound sample: {p.Trail.Sentences.Count} sentences, {p.Trail.Gates.Count} key words: " + string.Join(", ", p.Trail.Gates.ConvertAll(g => g.Type + " " + g.Word)));
                     Wait(2.5, 1); break;
                 }
-                case 1: Shot("01_die_at_dashboard"); Wait(0.3, 2); break;
-                case 2:
-                {
-                    // One wrong pick first.
-                    int right = RightFace(p, out var what);
-                    int wrong = right == 0 ? 1 : 0;
-                    Log($"wrong pick on face {wrong} ({what})");
-                    p.OnDieTapped(wrong);
-                    Wait(0.15, 3); break;
-                }
-                case 3: Shot("02_wrong_pick_shake"); Wait(0.6, 4); break;
+                case 1: Shot("01_passage_with_key_words"); Wait(0.3, 4); break;
                 case 4:
                 {
-                    // Play on: right picks; flip when the right piece is not showing.
-                    if (count > 160) { Wait(0.2, 90); break; }
-                    var st = Get(p, "step").ToString();
-                    if (st == "Done" && p.Session != null && p.Session.CanComplete && p.SentenceIndex >= p.Trail.Sentences.Count - 1) { Wait(1.6, 90); break; }   // passage complete
-                    if (st == "Done" || st == "Off") { Wait(0.4, 4); break; }
+                    var gate = (GateData)Get(p, "dieGate");
+                    bool solvedShowing = (bool)Get(p, "solvedShowing");
+                    if (gate == null)
+                    {
+                        if (p.Session.CanComplete) { Wait(1.0, 90); break; }
+                        var target = p.Session.ActiveGate ?? p.Session.PeekNextGate();
+                        int idx = p.Trail.Gates.IndexOf(target);
+                        if (FirstTime("outoforder") && p.Trail.Gates.Count > 1)
+                        {
+                            int other = idx == 0 ? 1 : 0;
+                            Log($"tap an out-of-order key word ({p.Trail.Gates[other].Word})");
+                            Call(p, "OnKeyWordPressed", other);
+                            Wait(1.0, 4); break;
+                        }
+                        Log($"tap key word {target.Word} ({target.Type})");
+                        Call(p, "OnKeyWordPressed", idx);
+                        Wait(1.2, FirstTime("play_" + target.Type) ? 11 : 4); break;
+                    }
+                    if (solvedShowing)
+                    {
+                        if (FirstTime("solved")) { Wait(0.6, 12); break; }
+                        Call(p, "BackToPassage");
+                        Wait(1.0, FirstTime("back") ? 13 : 4); break;
+                    }
                     if (p.die.Busy) { Wait(0.15, 4); break; }
-                    int right = RightFace(p, out var what);
-                    SessionState.SetInt(CountKey, count + 1);
-                    if (right < 0) { Log($"flip ({what})"); p.OnDieFlip(1); Wait(0.6, 4); break; }
-                    Log($"pick face {right}: {what}");
-                    bool gate = st == "Gate";
-                    p.OnDieTapped(right);
-                    // shots at the interesting moments
-                    if (count == 2) { Wait(0.7, 10); break; }
-                    if (gate && SessionState.GetInt("sReader.RH.Die.GateShot", 0) < 4) { SessionState.SetInt("sReader.RH.Die.GateShot", SessionState.GetInt("sReader.RH.Die.GateShot", 0) + 1); Wait(0.7, 11); break; }
-                    if (p.Session != null && p.Session.SolvedGates >= 3 && SessionState.GetInt("sReader.RH.Die.TierShot", 0) == 0) { SessionState.SetInt("sReader.RH.Die.TierShot", 1); Wait(1.2, 12); break; }
-                    Wait(0.55, 4); break;
+                    bool right = ShowingRight(p, out var what);
+                    if (!right && FirstTime("wrongtap")) { Log("wrong tap: " + what); TapDie(p); Wait(0.25, 14); break; }
+                    if (!right) { Wait(0.3, 4); break; }                       // the die shuffles itself: wait for the right piece
+                    Log("right: " + what);
+                    TapDie(p);
+                    Wait(0.15, FirstTime("fly") ? 15 : 4); break;
                 }
-                case 10: Shot("03_words_building"); Wait(0.2, 4); break;
-                case 11: Shot($"04_key_word_activity_{SessionState.GetInt("sReader.RH.Die.GateShot", 0)}"); Wait(0.2, 4); break;
-                case 12: Shot("05_precious_die_after_3_key_words"); Wait(0.2, 4); break;
+                case 11: Shot($"02_play_board_{((GateData)Get(p, "dieGate"))?.Type}"); Wait(0.2, 4); break;
+                case 12: Shot("04_restored"); Wait(0.2, 4); break;
+                case 13: Shot("05_back_to_passage"); Wait(0.2, 4); break;
+                case 14: Shot("03_wrong_tap_shake"); Wait(0.3, 4); break;
+                case 15: Shot("03b_piece_flying_to_slot"); Wait(0.5, 4); break;
                 case 90: Shot("06_end"); Wait(0.5, 91); break;
                 default: Stop(); break;
             }
@@ -171,8 +180,6 @@ namespace SReader.EditorTools.ReadingHouse
 
         static void Stop()
         {
-            SessionState.EraseInt("sReader.RH.Die.GateShot");
-            SessionState.EraseInt("sReader.RH.Die.TierShot");
             SessionState.SetInt(StepKey, 99);
             EditorApplication.isPlaying = false;
         }
