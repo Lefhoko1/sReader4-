@@ -52,7 +52,7 @@ namespace SReader.Game.ReadingHouse
         readonly Dictionary<int, VisualElement> keyButtons = new Dictionary<int, VisualElement>();
         int shownStreak;
         bool playing;
-        IVisualElementScheduledItem pulse;
+        IVisualElementScheduledItem pulse, scrollToNext;
 
         public bool Playing => playing;
 
@@ -207,6 +207,9 @@ namespace SReader.Game.ReadingHouse
         /// <summary>Lay out the whole passage, word by word; key words are buttons, the next one glows.</summary>
         public void SetPassage(IReadOnlyList<Word> words)
         {
+            // A redraw cancels what the last one scheduled (its words are gone now).
+            pulse?.Pause(); pulse = null;
+            scrollToNext?.Pause(); scrollToNext = null;
             passageWords.Clear(); keyButtons.Clear();
             VisualElement glowing = null;
             foreach (var w in words)
@@ -223,13 +226,18 @@ namespace SReader.Game.ReadingHouse
                 if (w.key >= 0) keyButtons[w.key] = el;
                 if (w.next) glowing = el;
             }
-            pulse?.Pause();
             if (glowing != null)
             {
                 // the next key word breathes, so the eye finds it
                 bool big = false;
                 pulse = glowing.schedule.Execute(() => { big = !big; glowing.style.scale = new Scale(big ? new Vector2(1.08f, 1.08f) : Vector2.one); }).Every(520);
-                passageScroll.schedule.Execute(() => passageScroll.ScrollTo(glowing)).StartingIn(60);
+                var target = glowing;
+                scrollToNext = passageScroll.schedule.Execute(() =>
+                {
+                    scrollToNext = null;
+                    // only while that word is still on the board (a later redraw replaces it)
+                    if (target.panel != null && passageScroll.contentContainer.Contains(target)) passageScroll.ScrollTo(target);
+                }).StartingIn(60);
             }
         }
 

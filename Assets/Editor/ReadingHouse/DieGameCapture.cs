@@ -141,6 +141,8 @@ namespace SReader.EditorTools.ReadingHouse
                     if (gate == null)
                     {
                         if (p.Session.CanComplete) { Wait(1.0, 90); break; }
+                        // after Start again: one key word played through proves the game still answers
+                        if (SessionState.GetString(ShotKey, "").Contains("|retried|") && p.Session.SolvedGates >= 1) { Wait(0.5, 97); break; }
                         var target = p.Session.ActiveGate ?? p.Session.PeekNextGate();
                         int idx = p.Trail.Gates.IndexOf(target);
                         if (FirstTime("outoforder") && p.Trail.Gates.Count > 1)
@@ -178,7 +180,8 @@ namespace SReader.EditorTools.ReadingHouse
                     Log("press Start again (confirmed)");
                     Call(p, "RetryAssignment");
                     Wait(1.5, 93); break;
-                case 93: Shot("07_after_start_again"); Wait(0.3, 94); break;
+                case 93: Shot("07_after_start_again"); FirstTime("retried"); Wait(0.3, 4); break;
+                case 97: Shot("07b_played_after_start_again"); Wait(0.3, 94); break;
                 case 94:
                     Log("press Other assignments");
                     if (d != null) { d.enabled = true; }
