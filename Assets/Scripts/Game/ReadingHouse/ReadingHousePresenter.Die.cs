@@ -44,6 +44,30 @@ namespace SReader.Game.ReadingHouse
         StudentSpriteAnimator studentLook;
         Transform encouragerUsualTarget;
         CandyBoard candy;
+        PointsCounter pointsBadge;                                    // the points badge on the mat (+1 right / −1 wrong tap)
+        int spinsWithoutRight;                                        // the die shows the right piece by its 5th spin at the latest
+
+        /// <summary>
+        /// The house's trek rules: TrekSession's own (R-11: the timer presses on pace and, at zero, the word waits in
+        /// Later), with each word's time fair for the die: at least the usual 45 s, more for words with many pieces
+        /// (~7 s per piece the die must land on, since it shuffles itself).
+        /// </summary>
+        TrekConfig HouseConfig()
+        {
+            var cfg = new TrekConfig();
+            int most = 0;
+            if (trail != null)
+                foreach (var g in trail.Gates)
+                {
+                    var t = g.ChallengePayload as ContentToken;
+                    if (t == null) continue;
+                    int n = g.Type == GateType.Illustrate ? GateSolving.IllustrateOptions(t).Count
+                          : g.Type == GateType.Define ? GateSolving.DefineCorrect(t).Count : GateSolving.FillCorrect(t).Count;
+                    most = Mathf.Max(most, n);
+                }
+            cfg.SecondsPerGate = Mathf.Max(cfg.SecondsPerGate, 30 + 7 * most);
+            return cfg;
+        }
 
         // the key word being played on the die
         GateData dieGate;
@@ -51,6 +75,7 @@ namespace SReader.Game.ReadingHouse
         List<string> correct, pool, answer, options;
         int locked, wrongTries, lastShown = -1;
         bool guided, solvedShowing, flying;                            // flying: a picked piece is on its way to its slot
+        float flyingSince;
         string clueText;
         Coroutine shuffler;
         readonly Dictionary<string, Texture2D> pictures = new Dictionary<string, Texture2D>();
@@ -74,11 +99,15 @@ namespace SReader.Game.ReadingHouse
                 dieBoard.LaterPressed += DieLater;
                 dieBoard.BackPressed += BackToPassage;
                 dieBoard.FinishPressed += FinishAttempt;
+                dieBoard.AssignmentsPressed += LeaveForAssignments;
+                dieBoard.RetryConfirmed += RetryAssignment;
                 if (dashboardScreen.Host != null) dashboardScreen.Host.BringToFront();   // the reader still opens on top
             }
             if (dashboard.sentenceText != null) dashboard.sentenceText.enabled = false;   // the panel shows the passage
             die.gameObject.SetActive(true);
             if (candy == null) candy = FindAnyObjectByType<CandyBoard>();
+            if (pointsBadge == null) pointsBadge = FindAnyObjectByType<PointsCounter>(FindObjectsInactive.Include);
+            if (pointsBadge != null) pointsBadge.gameObject.SetActive(true);
             if (matStones != null) matStones.HideAll();
             tray.HideAll();
             LookAtDie(true);
@@ -93,6 +122,7 @@ namespace SReader.Game.ReadingHouse
             dieBoard = null;
             if (dashboard != null && dashboard.sentenceText != null) dashboard.sentenceText.enabled = true;
             die.gameObject.SetActive(false);
+            if (pointsBadge != null) pointsBadge.gameObject.SetActive(false);
             dieGate = null; solvedShowing = false;
             LookAtDie(false);
         }
@@ -117,6 +147,7 @@ namespace SReader.Game.ReadingHouse
             if (dashboard.sentenceText != null && dashboard.sentenceText.enabled) dashboard.sentenceText.enabled = false;
             dieBoard.SetVisible(!reader.IsOpen);
             dieBoard.SetFinish(IsLive && CanFinish);
+            dieBoard.SetTimeLeft(DieGateOpen && session != null ? session.GateSecondsLeft : -1f);
         }
 
         /// <summary>Called when the shared flow shows a sentence: in the die game the passage simply refreshes.</summary>
@@ -180,7 +211,9 @@ namespace SReader.Game.ReadingHouse
                 });
             }
             dieBoard.SetPassage(list);
-            dieBoard.SetPassageTitle(trail.Title, $"{session.SolvedGates} of {session.TotalGates} key words restored");
+            dieBoard.SetPassageTitle(trail.Title, session.CanComplete
+                ? (submitted ? "All restored and handed in: play again, or pick another" : "All restored! Finish & submit, or play again")
+                : $"{session.SolvedGates} of {session.TotalGates} key words restored");
             dieBoard.ShowPassage();
             if (candy != null) candy.SetProgress(KeyProgress());
             // the die waits, showing a question mark
@@ -229,7 +262,7 @@ namespace SReader.Game.ReadingHouse
             dieGate = gate;
             solvedShowing = false; flying = false;
             token = gate.ChallengePayload as ContentToken;
-            wrongTries = 0; locked = 0; clueText = null; lastShown = -1;
+            wrongTries = 0; locked = 0; clueText = null; lastShown = -1; spinsWithoutRight = 0;
             guided = gate.HintsUsed >= 3;
             answer = new List<string>();
             sentenceIndex = gate.SentenceIndex;
@@ -358,7 +391,9 @@ namespace SReader.Game.ReadingHouse
             if (Illustrating)
             {
                 if (options.Count == 0) return;
-                int idx = guided ? Mathf.Max(0, options.IndexOf(token.correctImage)) : NextIndex(options.Count);
+                int want = Mathf.Max(0, options.IndexOf(token.correctImage));
+                int idx = guided || spinsWithoutRight >= 4 ? want : NextIndex(options.Count);
+                spinsWithoutRight = idx == want ? 0 : spinsWithoutRight + 1;
                 pictures.TryGetValue(options[idx], out var tex);
                 faceChoices.Add(tex != null ? ReadingDie.Choice.Picture(tex, idx + 1) : ReadingDie.Choice.Word((idx + 1).ToString()));
                 faceKeys.Add(options[idx]);
@@ -368,12 +403,12 @@ namespace SReader.Game.ReadingHouse
             {
                 if (pool.Count == 0) return;
                 int idx;
-                if (guided && answer.Count < correct.Count)
-                {
-                    var want = correct[answer.Count];
-                    idx = Mathf.Max(0, pool.FindIndex(p => Same(p, want)));
-                }
+                var want = answer.Count < correct.Count ? correct[answer.Count] : null;
+                int wantIdx = want != null ? Mathf.Max(0, pool.FindIndex(p => Same(p, want))) : 0;
+                // Guided: always the right piece. Otherwise random, but never more than 5 spins without it.
+                if (want != null && (guided || spinsWithoutRight >= 4)) idx = wantIdx;
                 else idx = NextIndex(pool.Count);
+                spinsWithoutRight = want != null && Same(pool[idx], want) ? 0 : spinsWithoutRight + 1;
                 faceChoices.Add(ReadingDie.Choice.Word(Filling ? pool[idx].ToUpperInvariant() : pool[idx]));
                 faceKeys.Add(pool[idx]);
                 die.Glow(guided ? 0 : -1);
@@ -396,6 +431,7 @@ namespace SReader.Game.ReadingHouse
         /// <summary>A tap on the die (forwarded by ReadingHouseInput): the piece it shows.</summary>
         public void OnDieTapped(int choice)
         {
+            if (flying && Time.time - flyingSince > 1.5f) { flying = false; StartShuffle(); }   // never let a lost landing block the die
             if (!DieMode || dieBoard == null || dieGate == null || solvedShowing || flying || choice < 0 || choice >= faceKeys.Count || submitting) return;
             GatePick(faceKeys[choice]);
         }
@@ -409,6 +445,7 @@ namespace SReader.Game.ReadingHouse
 
         void Right()
         {
+            if (pointsBadge != null) pointsBadge.Add(1);
             streak++;
             dieBoard.SetStreak(streak);
             die.SetSparkle(streak >= 10 ? 2 : streak >= 5 ? 1 : 0);
@@ -418,6 +455,7 @@ namespace SReader.Game.ReadingHouse
 
         void Wrong()
         {
+            if (pointsBadge != null) pointsBadge.Add(-1);
             streak = 0;
             dieBoard.SetStreak(0);
             die.SetSparkle(0);
@@ -452,6 +490,7 @@ namespace SReader.Game.ReadingHouse
             int slot = answer.Count;
             StopShuffle();
             flying = true;                                           // one piece at a time: further taps wait for it to land
+            flyingSince = Time.time;
             dieBoard.FlyToSlot(inPool, slot, () =>
             {
                 flying = false;
@@ -487,6 +526,50 @@ namespace SReader.Game.ReadingHouse
         }
 
         int TierNow() => session == null ? 0 : session.SolvedGates;
+
+        /// <summary>Where "Other assignments" goes: the walk-in director turns the room to the chalkboard's assignment list.</summary>
+        public System.Action openAssignments;
+
+        /// <summary>Leave this assignment (its progress is saved) for the list of assignments on the chalkboard.</summary>
+        void LeaveForAssignments()
+        {
+            if (submitting) return;
+            StopShuffle();
+            Save();
+            if (openAssignments != null) openAssignments();
+            else if (standaloneMenu != null) standaloneMenu();
+            else RequestExit();
+        }
+
+        /// <summary>
+        /// Start the assignment again (after the student confirmed): a fresh session with every key word hidden again,
+        /// the die back to wood, the gumballs dark, points 0. Progress saved on this device for it is cleared, so it does
+        /// not come back. An assignment already handed in plays again as practice: its submitted result is untouched.
+        /// </summary>
+        void RetryAssignment()
+        {
+            if (trail == null || submitting) return;
+            StopShuffle();
+            activity.Close(); reader.Close();
+            if (liveVm != null && !submitted)
+            {
+                liveVm.ClearProgress(trail.AssignmentId);
+                TrekCheckpointStore.Clear(liveVm.CurrentUserId, trail.AssignmentId);
+            }
+            // Every key word back to how TrailBuilder makes it (the session keeps its solved state on the words).
+            foreach (var g in trail.Gates) { g.State = GateState.Locked; g.HintsUsed = 0; }
+            session = new TrekSession(trail, HouseConfig());
+            streak = 0;
+            if (pointsBadge != null) pointsBadge.ResetTo(0);
+            die.SetTier(0); die.SetSparkle(0);
+            if (candy != null) candy.SetProgress(0f);
+            dashboard.SetPoints(0);
+            if (chalkboard != null) chalkboard.Show(trail);
+            ShowSentence(0, announce: false);
+            ShowPassage();
+            if (encourager != null) encourager.Encourage();
+            Say(submitted ? "Practice round: your handed-in result stays as it is." : "Fresh start: let's read!");
+        }
 
         /// <summary>Back to the passage (after restoring the word, or to read on first: the word stays where it was).</summary>
         void BackToPassage()

@@ -109,6 +109,7 @@ namespace SReader.Game.ReadingHouse
             joystick.viewCamera = cameraRig.viewCamera;
             if (presenter.matStones != null) presenter.matStones.walkingStudent = walker.transform;
             presenter.standaloneMenu = () => { ExitReading(); FocusBoard(); };   // the dashboard's Menu shows the app's menu on the board
+            presenter.openAssignments = () => OnSignpost(SignpostButton.Kind.Library);   // "Other assignments": the room turns to the board's list
             hud.KnobPressed += OnKnobPressed;
             hud.KnobDragged += OnKnobDragged;
             hud.KnobReleased += OnKnobReleased;

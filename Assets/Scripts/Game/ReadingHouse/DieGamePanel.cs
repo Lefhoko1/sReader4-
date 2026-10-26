@@ -21,6 +21,8 @@ namespace SReader.Game.ReadingHouse
     {
         public event Action<int> KeyWordPressed;                    // the key word's index (the presenter's id)
         public event Action HintPressed, GuidePressed, LaterPressed, BackPressed, FinishPressed;
+        /// <summary>Leave this assignment for the chalkboard's list / start it again (after the student confirms).</summary>
+        public event Action AssignmentsPressed, RetryConfirmed;
 
         /// <summary>How a word of the passage is drawn.</summary>
         public enum Mark { Plain, Define, Illustrate, Fill, Restored }
@@ -41,9 +43,10 @@ namespace SReader.Game.ReadingHouse
 
         readonly VisualElement root, passageView, playView, passageWords;
         readonly ScrollView passageScroll;
-        readonly Label passageTitle, passageStatus, playBadge, playTitle, playSentence, clue, streak;
+        readonly Label passageTitle, passageStatus, playBadge, playTitle, playSentence, clue, streak, timeLeft;
         readonly VisualElement slots, pool, pictures;
         readonly Button hint, guide, later, back, finish;
+        readonly VisualElement confirm;
         readonly List<Label> poolChips = new List<Label>();
         readonly List<Label> slotChips = new List<Label>();
         readonly Dictionary<int, VisualElement> keyButtons = new Dictionary<int, VisualElement>();
@@ -70,6 +73,8 @@ namespace SReader.Game.ReadingHouse
             var right = Row(); head.Add(right);
             passageStatus = Text(24, Cream); passageStatus.style.marginRight = 12; right.Add(passageStatus);
             finish = Pill(right, "Finish & submit", () => FinishPressed?.Invoke(), new Color32(34, 150, 86, 255));
+            Pill(right, "Start again", () => ShowConfirm(true), new Color32(123, 92, 255, 255));
+            Pill(right, "Other assignments", () => AssignmentsPressed?.Invoke(), new Color32(44, 70, 150, 255));
             passageScroll = new ScrollView(ScrollViewMode.Vertical);
             passageScroll.style.flexGrow = 1; passageScroll.style.marginTop = 6;
             passageScroll.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -85,6 +90,22 @@ namespace SReader.Game.ReadingHouse
             passageView.Add(legend);
             root.Add(passageView);
 
+            // "Start again?" asks before clearing anything.
+            confirm = new VisualElement();
+            confirm.style.position = Position.Absolute;
+            confirm.style.left = 0; confirm.style.right = 0; confirm.style.top = 0; confirm.style.bottom = 0;
+            confirm.style.backgroundColor = new Color(0.02f, 0.04f, 0.12f, 0.88f);
+            confirm.style.alignItems = Align.Center; confirm.style.justifyContent = Justify.Center;
+            var ask = Text(34, Cream, bold: true); ask.text = "Start this assignment again?";
+            var note = Text(24, new Color(Cream.r, Cream.g, Cream.b, 0.85f)); note.text = "Your restored words will be cleared.";
+            note.style.marginTop = 6;
+            var answers = Row(); answers.style.marginTop = 18;
+            Pill(answers, "Yes, start again", () => { ShowConfirm(false); RetryConfirmed?.Invoke(); }, new Color32(123, 92, 255, 255));
+            Pill(answers, "Cancel", () => ShowConfirm(false), new Color32(60, 70, 100, 255));
+            confirm.Add(ask); confirm.Add(note); confirm.Add(answers);
+            passageView.Add(confirm);
+            ShowConfirm(false);
+
             // ── the play board ──
             playView = Page();
             var phead = Row(); phead.style.justifyContent = Justify.SpaceBetween; playView.Add(phead);
@@ -96,7 +117,9 @@ namespace SReader.Game.ReadingHouse
             streak = Text(24, Back, bold: true);
             streak.style.backgroundColor = Gold; streak.style.paddingLeft = streak.style.paddingRight = 14;
             streak.style.paddingTop = streak.style.paddingBottom = 2; Round(streak, 14); Springy(streak, 0.22f);
-            phead.Add(streak);
+            var pright = Row(); phead.Add(pright);
+            timeLeft = Text(22, Cream, bold: true); timeLeft.style.marginRight = 12; pright.Add(timeLeft);
+            pright.Add(streak);
             playSentence = Text(32, Cream); playSentence.enableRichText = true; playSentence.style.whiteSpace = WhiteSpace.Normal;
             playSentence.style.marginTop = 6;
             playView.Add(playSentence);
@@ -248,6 +271,8 @@ namespace SReader.Game.ReadingHouse
 
         public void SetFinish(bool show) => finish.style.display = show ? DisplayStyle.Flex : DisplayStyle.None;
 
+        void ShowConfirm(bool on) => confirm.style.display = on ? DisplayStyle.Flex : DisplayStyle.None;
+
         // ── switching boards (a wipe) ──
 
         public void ShowPlay()
@@ -288,6 +313,16 @@ namespace SReader.Game.ReadingHouse
         }
 
         public void SetHintLabel(string text) => hint.text = text;
+
+        /// <summary>The word's time left (the trek timer); hidden when negative / untimed.</summary>
+        public void SetTimeLeft(float seconds)
+        {
+            if (seconds < 0f) { timeLeft.style.display = DisplayStyle.None; return; }
+            timeLeft.style.display = DisplayStyle.Flex;
+            int s = Mathf.CeilToInt(seconds);
+            timeLeft.text = $"Time  {s / 60}:{s % 60:00}";
+            timeLeft.style.color = s <= 10 ? Pink : Cream;
+        }
 
         public void SetStreak(int n)
         {
@@ -345,7 +380,7 @@ namespace SReader.Game.ReadingHouse
             from.style.backgroundColor = Gold; from.style.color = Back;
             from.style.translate = new Translate(delta.x, delta.y);
             from.style.scale = new Scale(new Vector2(1.2f, 1.2f));
-            from.schedule.Execute(() => landed?.Invoke()).StartingIn(420);
+            root.schedule.Execute(() => landed?.Invoke()).StartingIn(420);   // on the panel, not the chip: a redraw can't lose it
         }
 
         /// <summary>The pictures of an Illustrate word, numbered like the die's faces (null hides them).</summary>

@@ -46,7 +46,7 @@ namespace SReader.EditorTools.ReadingHouse
             SceneManager.SetActiveScene(scene);
             try
             {
-                foreach (var old in scene.GetRootGameObjects().Where(g => g.name == "Reading Die" || g.name == "Word Board (die game)").ToArray())
+                foreach (var old in scene.GetRootGameObjects().Where(g => g.name == "Reading Die" || g.name == "Word Board (die game)" || g.name == "Points Badge (mat)").ToArray())
                     Object.DestroyImmediate(old);
                 var all = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Transform>(true)).ToArray();
                 var presenter = all.Select(t => t.GetComponent<ReadingHousePresenter>()).First(p => p != null);
@@ -91,6 +91,9 @@ namespace SReader.EditorTools.ReadingHouse
                 presenter.die = die;
                 dieGo.SetActive(false);
 
+                // The points badge standing on the mat, left of the die as the student sees it.
+                BuildPointsBadge(rug, font, cam, die.sparkle != null ? die.sparkle.GetComponent<ParticleSystemRenderer>().sharedMaterial : null);
+
                 // The student's reading spot: front-left of the rug, so he never hides the Encourager, the die or the Zombie.
                 var spot = presenter.studentMover.gameplaySpot;
                 spot.position = new Vector3(ReadingSpot.x, spot.position.y, ReadingSpot.z);
@@ -114,6 +117,65 @@ namespace SReader.EditorTools.ReadingHouse
                 if (previousActive.IsValid() && previousActive != scene) SceneManager.SetActiveScene(previousActive);
                 if (!wasOpen) EditorSceneManager.CloseScene(scene, true);
             }
+        }
+
+        /// <summary>The winged gold "POINTS" badge (Assets/Art/ReadingHouse/UI/Points/T_PointsBadge.png) with its live number.</summary>
+        static void BuildPointsBadge(Bounds rug, TMPro.TMP_FontAsset font, Camera cam, Material glow)
+        {
+            const string texPath = "Assets/Art/ReadingHouse/UI/Points/T_PointsBadge.png";
+            AssetDatabase.ImportAsset(texPath);
+            var imp = (TextureImporter)AssetImporter.GetAtPath(texPath);
+            imp.alphaIsTransparency = true; imp.mipmapEnabled = true; imp.wrapMode = TextureWrapMode.Clamp;
+            imp.SetPlatformTextureSettings(new TextureImporterPlatformSettings { name = "Android", overridden = true, maxTextureSize = 1024, format = TextureImporterFormat.ASTC_6x6 });
+            imp.SaveAndReimport();
+            var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(texPath);
+            var mat = Mat("M_PointsBadge", "Universal Render Pipeline/Unlit", Color.white, tex, 0f, 0f, false, 0.999f);
+
+            const float width = 1.35f;
+            float height = width * tex.height / tex.width;
+            var root = new GameObject("Points Badge (mat)");
+            var at = new Vector3(1.85f, rug.max.y, 1.15f);
+            var toCam = Vector3.ProjectOnPlane(at - CameraAt, Vector3.up).normalized;   // its face looks back at the reading camera
+            root.transform.SetPositionAndRotation(at, Quaternion.LookRotation(toCam, Vector3.up));
+
+            var quad = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            Object.DestroyImmediate(quad.GetComponent<Collider>());
+            quad.name = "Badge";
+            quad.transform.SetParent(root.transform, false);
+            quad.transform.localPosition = new Vector3(0f, height * 0.5f, 0f);
+            quad.transform.localScale = new Vector3(width, height, 1f);
+            var qr = quad.GetComponent<MeshRenderer>(); qr.sharedMaterial = mat; qr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
+            TMPro.TextMeshPro Label(string name, float y, float size)
+            {
+                var go = new GameObject(name);
+                go.transform.SetParent(root.transform, false);
+                go.transform.localPosition = new Vector3(0f, y, -0.02f);
+                var t = go.AddComponent<TMPro.TextMeshPro>();
+                if (font != null) t.font = font;
+                t.alignment = TMPro.TextAlignmentOptions.Center;
+                t.fontStyle = TMPro.FontStyles.Bold;
+                t.fontSize = size;
+                t.rectTransform.sizeDelta = new Vector2(width * 0.5f, height * 0.4f);
+                t.enableWordWrapping = false;
+                return t;
+            }
+            // the star's centre sits at (0.50, 0.65) of the picture
+            var number = Label("Number", height * 0.65f, 4.2f);
+            var floater = Label("Floater", height * 1.02f, 3.2f);
+
+            var ps = new GameObject("Sparkle").AddComponent<ParticleSystem>();
+            ps.transform.SetParent(root.transform, false);
+            ps.transform.localPosition = new Vector3(0f, height * 0.65f, -0.05f);
+            var main = ps.main; main.startLifetime = 0.8f; main.startSpeed = 0.9f; main.startSize = 0.08f; main.maxParticles = 60;
+            main.startColor = new ParticleSystem.MinMaxGradient(new Color(1f, 0.9f, 0.4f), new Color(1f, 1f, 0.85f)); main.playOnAwake = false;
+            var em = ps.emission; em.rateOverTime = 0f;
+            var sh = ps.shape; sh.shapeType = ParticleSystemShapeType.Sphere; sh.radius = 0.15f;
+            if (glow != null) ps.GetComponent<ParticleSystemRenderer>().sharedMaterial = glow;
+
+            var counter = root.AddComponent<PointsCounter>();
+            counter.number = number; counter.floater = floater; counter.sparkle = ps;
+            root.SetActive(false);                                          // shown while the die game is on
         }
 
         static Material Mat(string name, string shader, Color c, Texture tex = null, float smooth = 0.4f, float metal = 0f, bool emission = false, float alpha = 1f)

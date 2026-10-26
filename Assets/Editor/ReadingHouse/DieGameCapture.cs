@@ -173,7 +173,18 @@ namespace SReader.EditorTools.ReadingHouse
                 case 13: Shot("05_back_to_passage"); Wait(0.2, 4); break;
                 case 14: Shot("03_wrong_tap_shake"); Wait(0.3, 4); break;
                 case 15: Shot("03b_piece_flying_to_slot"); Wait(0.5, 4); break;
-                case 90: Shot("06_end"); Wait(0.5, 91); break;
+                case 90: Shot("06_end"); Wait(0.5, 92); break;
+                case 92:
+                    Log("press Start again (confirmed)");
+                    Call(p, "RetryAssignment");
+                    Wait(1.5, 93); break;
+                case 93: Shot("07_after_start_again"); Wait(0.3, 94); break;
+                case 94:
+                    Log("press Other assignments");
+                    if (d != null) { d.enabled = true; }
+                    Call(p, "LeaveForAssignments");
+                    Wait(6.0, 95); break;
+                case 95: Shot("08_other_assignments_board"); Log($"board open {d?.BoardOpen}, state {d?.Current}"); Wait(0.5, 96); break;
                 default: Stop(); break;
             }
         }

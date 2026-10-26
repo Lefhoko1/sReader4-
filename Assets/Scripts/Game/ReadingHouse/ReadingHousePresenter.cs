@@ -468,8 +468,8 @@ namespace SReader.Game.ReadingHouse
             var progress = vm.LoadProgress(a.Id);
             var checkpoint = TrekCheckpointStore.Load(vm.CurrentUserId, a.Id);
             session = progress != null || checkpoint != null
-                ? TrekSession.Restore(trail, new TrekConfig(), progress?.SolvedIndices, progress?.Score ?? checkpoint?.PointsSoFar ?? 0, checkpoint)
-                : new TrekSession(trail, new TrekConfig());
+                ? TrekSession.Restore(trail, HouseConfig(), progress?.SolvedIndices, progress?.Score ?? checkpoint?.PointsSoFar ?? 0, checkpoint)
+                : new TrekSession(trail, HouseConfig());
             Debug.Log($"[ReadingHouse] Live assignment '{a.Title}' ({a.Id}): {trail.Sentences.Count} sentences, " +
                       $"{trail.Gates.Count} key words, {session.SolvedGates} solved, {session.Points} points" +
                       (progress != null ? " (resumed)" : ""), this);
@@ -574,7 +574,7 @@ namespace SReader.Game.ReadingHouse
             trail = data;
             if (trail.IsTextOnlyFallback && !string.IsNullOrEmpty(trail.BuildWarning))
                 Debug.LogWarning($"[ReadingHouse] {trail.BuildWarning}", this);
-            session = new TrekSession(trail);
+            session = new TrekSession(trail, HouseConfig());
             ShowSentence(0);
         }
 
