@@ -1,0 +1,1 @@
+Camera moved inside the physical shell; full roof retained as the ceiling. Board camera clears the hero-book motes. Portrait layout inspected before activity integration.

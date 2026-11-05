@@ -1,0 +1,142 @@
+bound sample: 6 sentences, 4 key words: Fill dew, Define habitat, Illustrate butterfly, Define nectar
+SHOT 01_passage_with_key_words: playing False, solved 0/4, streak 0, tier 0
+tap an out-of-order key word (habitat)
+tap key word dew (Fill)
+SHOT 02_play_board_Fill: playing True, solved 0/4, streak 0, tier 0
+wrong tap: Fill piece 'd' (1/3), die shows 'w'
+  tapped die at (695.46, 157.26): streak 0 -> 0
+SHOT 03_wrong_tap_shake: playing True, solved 0/4, streak 0, tier 0
+right: Fill piece 'd' (1/3), die shows 'd'
+  tapped die at (695.46, 157.26): streak 0 -> 1
+SHOT 03b_piece_flying_to_slot: playing True, solved 0/4, streak 1, tier 0
+right: Fill piece 'e' (2/3), die shows 'e'
+  tapped die at (695.46, 157.26): streak 1 -> 2
+right: Fill piece 'e' (2/3), die shows 'e'
+  tapped die at (695.46, 157.26): streak 2 -> 2
+right: Fill piece 'e' (2/3), die shows 'e'
+  tapped die at (695.46, 157.26): streak 2 -> 2
+right: Fill piece 'w' (3/3), die shows 'w'
+  tapped die at (695.46, 157.26): streak 2 -> 3
+right: Fill piece 'w' (3/3), die shows 'w'
+  tapped die at (695.46, 157.26): streak 3 -> 3
+right: Fill piece 'w' (3/3), die shows 'w'
+  tapped die at (695.46, 157.26): streak 3 -> 3
+SHOT 04_restored: playing True, solved 1/4, streak 3, tier 1
+SHOT 05_back_to_passage: playing False, solved 1/4, streak 3, tier 1
+tap key word habitat (Define)
+SHOT 02_play_board_Define: playing True, solved 1/4, streak 3, tier 1
+right: Define piece 'the' (1/8), die shows 'the'
+  tapped die at (695.46, 157.26): streak 3 -> 4
+right: Define piece 'the' (1/8), die shows 'the'
+  tapped die at (695.46, 157.26): streak 4 -> 4
+right: Define piece 'the' (1/8), die shows 'the'
+  tapped die at (695.46, 157.26): streak 4 -> 4
+right: Define piece 'natural' (2/8), die shows 'natural'
+  tapped die at (695.46, 157.26): streak 4 -> 5
+right: Define piece 'natural' (2/8), die shows 'natural'
+  tapped die at (695.46, 157.26): streak 5 -> 5
+right: Define piece 'natural' (2/8), die shows 'natural'
+  tapped die at (695.46, 157.26): streak 5 -> 5
+right: Define piece 'home' (3/8), die shows 'home'
+  tapped die at (695.46, 157.26): streak 5 -> 6
+right: Define piece 'home' (3/8), die shows 'home'
+  tapped die at (695.46, 157.26): streak 6 -> 6
+right: Define piece 'home' (3/8), die shows 'home'
+  tapped die at (695.46, 157.26): streak 6 -> 6
+right: Define piece 'of' (4/8), die shows 'of'
+  tapped die at (695.46, 157.26): streak 6 -> 7
+right: Define piece 'of' (4/8), die shows 'of'
+  tapped die at (695.46, 157.26): streak 7 -> 7
+right: Define piece 'of' (4/8), die shows 'of'
+  tapped die at (695.46, 157.26): streak 7 -> 7
+right: Define piece 'an' (5/8), die shows 'an'
+  tapped die at (695.46, 157.26): streak 7 -> 8
+right: Define piece 'an' (5/8), die shows 'an'
+  tapped die at (695.46, 157.26): streak 8 -> 8
+right: Define piece 'an' (5/8), die shows 'an'
+  tapped die at (695.46, 157.26): streak 8 -> 8
+right: Define piece 'animal' (6/8), die shows 'animal'
+  tapped die at (695.46, 157.26): streak 8 -> 9
+right: Define piece 'animal' (6/8), die shows 'animal'
+  tapped die at (695.46, 157.26): streak 9 -> 9
+right: Define piece 'animal' (6/8), die shows 'animal'
+  tapped die at (695.46, 157.26): streak 9 -> 9
+right: Define piece 'or' (7/8), die shows 'or'
+  tapped die at (695.46, 157.26): streak 9 -> 10
+right: Define piece 'or' (7/8), die shows 'or'
+  tapped die at (695.46, 157.26): streak 10 -> 10
+right: Define piece 'or' (7/8), die shows 'or'
+  tapped die at (695.46, 157.26): streak 10 -> 10
+right: Define piece 'plant' (8/8), die shows 'plant'
+  tapped die at (695.46, 157.26): streak 10 -> 11
+right: Define piece 'plant' (8/8), die shows 'plant'
+  tapped die at (695.46, 157.26): streak 11 -> 11
+right: Define piece 'plant' (8/8), die shows 'plant'
+  tapped die at (695.46, 157.26): streak 11 -> 11
+tap key word butterfly (Illustrate)
+SHOT 02_play_board_Illustrate: playing True, solved 2/4, streak 11, tier 2
+right: picture for butterfly
+  tapped die at (695.46, 157.26): streak 11 -> 12
+tap key word nectar (Define)
+right: Define piece 'a' (1/6), die shows 'a'
+  tapped die at (695.46, 157.26): streak 12 -> 13
+right: Define piece 'a' (1/6), die shows 'a'
+  tapped die at (695.46, 157.26): streak 13 -> 13
+right: Define piece 'a' (1/6), die shows 'a'
+  tapped die at (695.46, 157.26): streak 13 -> 13
+right: Define piece 'sweet' (2/6), die shows 'sweet'
+  tapped die at (695.46, 157.26): streak 13 -> 14
+right: Define piece 'sweet' (2/6), die shows 'sweet'
+  tapped die at (695.46, 157.26): streak 14 -> 14
+right: Define piece 'sweet' (2/6), die shows 'sweet'
+  tapped die at (695.46, 157.26): streak 14 -> 14
+right: Define piece 'liquid' (3/6), die shows 'liquid'
+  tapped die at (695.46, 157.26): streak 14 -> 15
+right: Define piece 'liquid' (3/6), die shows 'liquid'
+  tapped die at (695.46, 157.26): streak 15 -> 15
+right: Define piece 'liquid' (3/6), die shows 'liquid'
+  tapped die at (695.46, 157.26): streak 15 -> 15
+right: Define piece 'that' (4/6), die shows 'that'
+  tapped die at (695.46, 157.26): streak 15 -> 16
+right: Define piece 'that' (4/6), die shows 'that'
+  tapped die at (695.46, 157.26): streak 16 -> 16
+right: Define piece 'that' (4/6), die shows 'that'
+  tapped die at (695.46, 157.26): streak 16 -> 16
+right: Define piece 'flowers' (5/6), die shows 'flowers'
+  tapped die at (695.46, 157.26): streak 16 -> 17
+right: Define piece 'flowers' (5/6), die shows 'flowers'
+  tapped die at (695.46, 157.26): streak 17 -> 17
+right: Define piece 'flowers' (5/6), die shows 'flowers'
+  tapped die at (695.46, 157.26): streak 17 -> 17
+right: Define piece 'make' (6/6), die shows 'make'
+  tapped die at (695.46, 157.26): streak 17 -> 18
+right: Define piece 'make' (6/6), die shows 'make'
+  tapped die at (695.46, 157.26): streak 18 -> 18
+right: Define piece 'make' (6/6), die shows 'make'
+  tapped die at (695.46, 157.26): streak 18 -> 18
+SHOT 06_end: playing False, solved 4/4, streak 18, tier 4
+press Start again (confirmed)
+SHOT 07_after_start_again: playing False, solved 0/4, streak 0, tier 0
+tap key word dew (Fill)
+right: Fill piece 'd' (1/3), die shows 'd'
+  tapped die at (695.46, 157.26): streak 0 -> 1
+right: Fill piece 'd' (1/3), die shows 'd'
+  tapped die at (695.46, 157.26): streak 1 -> 1
+right: Fill piece 'd' (1/3), die shows 'd'
+  tapped die at (695.46, 157.26): streak 1 -> 1
+right: Fill piece 'e' (2/3), die shows 'e'
+  tapped die at (695.46, 157.26): streak 1 -> 2
+right: Fill piece 'e' (2/3), die shows 'e'
+  tapped die at (695.46, 157.26): streak 2 -> 2
+right: Fill piece 'e' (2/3), die shows 'e'
+  tapped die at (695.46, 157.26): streak 2 -> 2
+right: Fill piece 'w' (3/3), die shows 'w'
+  tapped die at (695.46, 157.26): streak 2 -> 3
+right: Fill piece 'w' (3/3), die shows 'w'
+  tapped die at (695.46, 157.26): streak 3 -> 3
+right: Fill piece 'w' (3/3), die shows 'w'
+  tapped die at (695.46, 157.26): streak 3 -> 3
+SHOT 07b_played_after_start_again: playing False, solved 1/4, streak 3, tier 1
+press Other assignments
+SHOT 08_other_assignments_board: playing False, solved 1/4, streak 3, tier 1
+board open True, state Exploring

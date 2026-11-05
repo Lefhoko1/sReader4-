@@ -1,0 +1,80 @@
+DASHBOARD root (0.00, 0.00, 0.00) parent Dashboard
+SR_DASHBOARD_ROOT active=True
+  SR_Assignment_Housing active=True centre (2.05, 4.08, -2.12) size (2.36, 0.52, 0.12) mat M_RH_SR_MAT_Housing_Cream [CONTROL Assignment] [col]
+  SR_BTN_MULTI_ICON_Back_Body active=True centre (-1.49, 4.03, -2.03) size (0.15, 0.11, 0.02) mat M_RH_SR_MAT_Housing_Cream [col]
+  SR_BTN_MULTI_ICON_Back_Head active=True centre (-1.49, 4.15, -2.02) size (0.09, 0.09, 0.05) mat M_RH_SR_MAT_Housing_Cream [col]
+  SR_BTN_MULTI_ICON_Front_Body active=True centre (-1.38, 4.03, -2.02) size (0.14, 0.10, 0.02) mat M_RH_SR_MAT_Housing_Cream [col]
+  SR_BTN_MULTI_ICON_Front_Head active=True centre (-1.38, 4.14, -2.01) size (0.08, 0.08, 0.04) mat M_RH_SR_MAT_Housing_Cream [col]
+  SR_BUTTON_MENU active=True centre (-1.85, 1.28, -2.13) size (2.20, 0.50, 0.08) mat M_RH_SR_MAT_Plastic_Navy [CONTROL Menu] [col]
+    Menu Label active=True centre (-2.00, 1.28, -2.05) size (0.00, 0.00, 0.00) mat LiberationSans SDF Material [TMP 'Menu']
+  SR_BUTTON_MULTIPLAYER active=True centre (-2.10, 4.08, -2.12) size (2.10, 0.52, 0.14) mat M_RH_SR_MAT_Plastic_Purple [CONTROL PlayWithOthers] [col]
+  SR_DB_Assignment_Trim active=True centre (2.05, 4.08, -2.06) size (2.40, 0.56, 0.04) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_DB_BUTTON_MENU_Trim active=True centre (-1.85, 1.28, -2.09) size (2.26, 0.56, 0.06) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_DB_Console_Light active=False centre (0.00, 1.04, -0.54) size (1.72, 0.08, 0.03) mat M_RH_SR_MAT_Light_Warm [col]
+  SR_DB_Console_Light_Housing active=False centre (0.00, 1.04, -0.57) size (1.90, 0.18, 0.06) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_DB_Fascia active=False centre (0.00, 0.82, -1.38) size (7.00, 0.74, 1.66) mat M_RH_SR_MAT_Plastic_DeepBlue [col]
+  SR_DB_Multiplayer_Highlight active=True centre (-2.10, 4.23, -2.04) size (1.70, 0.10, 0.01) mat M_RH_SR_MAT_Plastic_PurpleHi [col]
+  SR_DB_PANEL_POINTS_Trim active=True centre (1.85, 1.28, -2.09) size (2.26, 0.56, 0.06) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_DB_Plinth active=False centre (0.00, 0.40, -1.42) size (6.70, 0.13, 1.50) mat M_RH_SR_MAT_Plastic_Navy [col]
+  SR_DB_Screen_Bezel active=False centre (0.00, 2.58, -2.15) size (6.46, 2.24, 0.09) mat M_RH_SR_MAT_Plastic_DeepBlue [col]
+  SR_DB_Screen_Gold_Trim active=False centre (0.00, 2.58, -2.10) size (6.66, 2.44, 0.17) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_DB_Screen_Recess active=False centre (0.00, 2.58, -2.22) size (6.12, 1.90, 0.06) mat M_RH_SR_MAT_Plastic_Navy [col]
+  SR_DB_Side_Light_Housing_L active=False centre (3.51, 2.58, -2.06) size (0.18, 0.86, 0.08) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_DB_Side_Light_Housing_R active=False centre (-3.51, 2.58, -2.06) size (0.18, 0.86, 0.08) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_DB_Side_Light_L active=False centre (3.51, 2.58, -2.01) size (0.09, 0.70, 0.03) mat M_RH_SR_MAT_Light_Warm [col]
+  SR_DB_Side_Light_R active=False centre (-3.51, 2.58, -2.01) size (0.09, 0.70, 0.03) mat M_RH_SR_MAT_Light_Warm [col]
+  SR_DB_Tower_Gold_Piping active=False centre (0.00, 2.76, -2.10) size (7.33, 3.55, 0.12) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_DB_Tower_Orange_Frame active=False centre (0.00, 2.76, -2.18) size (7.22, 3.44, 0.16) mat M_RH_SR_MAT_Plastic_Orange [col]
+  SR_DB_Tower_Shell active=False centre (0.00, 2.76, -2.63) size (7.00, 3.22, 0.85) mat M_RH_SR_MAT_Plastic_DeepBlue [col]
+  SR_DB_Tray_Floor active=False centre (0.00, 1.24, -1.40) size (6.72, 0.10, 1.26) mat M_RH_SR_MAT_Plastic_Cyan [col]
+  SR_DB_Tray_Front_Lip active=False centre (0.00, 1.37, -1.40) size (7.17, 0.09, 1.71) mat M_RH_SR_MAT_Plastic_Orange [col]
+  SR_DB_Tray_Rim active=False centre (0.00, 1.28, -1.40) size (7.08, 0.17, 1.62) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_DISPLAY_ILLUSTRATION active=True centre (0.00, 2.58, -2.17) size (6.00, 1.80, 0.00) mat SR_PREVIEW_ONLY_Landscape [col]
+  SR_DISPLAY_MAIN active=True centre (0.00, 2.58, -2.18) size (6.00, 1.80, 0.00) mat SR_MAT_Display_Blank [col]
+  SR_HEADER_BOOK_ICON_Cover active=True centre (2.97, 4.07, -2.03) size (0.36, 0.24, 0.03) mat M_RH_SR_MAT_Plastic_DeepBlue [col]
+  SR_HEADER_BOOK_ICON_Leaf active=True centre (2.84, 4.20, -1.98) size (0.13, 0.14, 0.01) mat M_RH_SR_MAT_Moss [col]
+  SR_HEADER_BOOK_ICON_PageL active=True centre (3.05, 4.08, -2.00) size (0.16, 0.20, 0.05) mat M_RH_SR_MAT_Housing_Cream [col]
+  SR_HEADER_BOOK_ICON_PageR active=True centre (2.89, 4.08, -2.00) size (0.16, 0.20, 0.05) mat M_RH_SR_MAT_Housing_Cream [col]
+  SR_HEADER_PROGRESS_FILL active=True centre (2.56, 3.93, -2.00) size (0.32, 0.05, 0.01) mat SR_MAT_Progress_Fill [col]
+  SR_HEADER_PROGRESS_TRACK active=True centre (1.92, 3.93, -2.01) size (1.60, 0.06, 0.02) mat M_RH_SR_MAT_Plastic_Navy [col]
+  SR_Nameplate_Blue active=False centre (0.00, 3.72, -1.99) size (1.52, 0.34, 0.04) mat M_RH_SR_MAT_Plastic_Navy [col]
+  SR_Nameplate_Gold active=False centre (0.00, 3.72, -2.05) size (1.72, 0.50, 0.12) mat M_RH_SR_MAT_Trim_Gold [col]
+  SR_PANEL_POINTS active=True centre (1.85, 1.28, -2.13) size (2.20, 0.50, 0.08) mat M_RH_SR_MAT_Plastic_Navy [CONTROL Points] [col]
+    Points Label active=True centre (1.70, 1.38, -2.05) size (0.00, 0.00, 0.00) mat LiberationSans SDF Material [TMP 'Your Points']
+    Points Value active=True centre (1.70, 1.20, -2.05) size (0.00, 0.00, 0.00) mat LiberationSans SDF Material [TMP '0']
+LABEL Points Label 'Your Points' pos (1.70, 1.38, -2.05) rot (0, 180, 0) parent SR_PANEL_POINTS size 0,8333334 rect (1.40, 0.16) active True
+LABEL Points Value '0' pos (1.70, 1.20, -2.05) rot (0, 180, 0) parent SR_PANEL_POINTS size 1,666667 rect (1.40, 0.32) active True
+LABEL Menu Label 'Menu' pos (-2.00, 1.28, -2.05) rot (0, 180, 0) parent SR_BUTTON_MENU size 1,833333 rect (1.40, 0.35) active True
+LABEL Assignment Title 'Assignment' pos (2.72, 4.18, -1.98) rot (0, 180, 0) parent Dashboard Binder size 1,416667 rect (1.70, 0.27) active True
+NEAR-PLATE SR_Brand (MeshRenderer) centre (-0.01, 3.73, -1.94) size (0.81, 0.17, 0.00) parent Dashboard root Dashboard
+READER-TEXT Label 'sReader' pos (2.97, 3.82, 5.51) root Signpost (menu) parent Sign_Header active True
+TMP Menu Label 'Menu' pos (-2.00, 1.28, -2.05)
+TMP Points Label 'Your Points' pos (1.70, 1.38, -2.05)
+TMP Points Value '0' pos (1.70, 1.20, -2.05)
+SIGN post (4.73, 2.57, 5.43) library (3.79, 2.89, 5.65) header (3.25, 3.82, 5.43) lantern (5.27, 4.06, 5.43) cam (-3.40, 6.90, 17.18)
+SIGN library vs post: towards camera 0,71, screen-right 0,64; lantern screen-right -0,45
+BENCH seat-front vs back towards camera 0,71 (positive = we see its front)
+CANDY Candy_0 mat M_Candy_CandyOrange centre (2.92, 4.53, -2.10) scale (1.73, 1.35, 1.50) verts 559 normals 559
+CANDY Candy_0_Wrap_0 mat M_Candy_CandyOrange centre (3.28, 4.53, -2.10) scale (1.30, 1.30, 1.30) verts 196 normals 196
+CANDY Candy_0_Wrap_1 mat M_Candy_CandyOrange centre (2.56, 4.53, -2.10) scale (1.30, 1.30, 1.30) verts 196 normals 196
+CANDY Candy_1 mat M_Candy_CandyBlue centre (-2.92, 4.53, -2.10) scale (1.73, 1.35, 1.50) verts 559 normals 559
+CANDY Candy_1_Wrap_0 mat M_Candy_CandyBlue centre (-2.56, 4.53, -2.10) scale (1.30, 1.30, 1.30) verts 196 normals 196
+CANDY Candy_1_Wrap_1 mat M_Candy_CandyBlue centre (-3.28, 4.53, -2.10) scale (1.30, 1.30, 1.30) verts 196 normals 196
+CANDY Candy_2 mat M_Candy_CandyPurple centre (2.92, 0.97, -2.10) scale (1.73, 1.35, 1.50) verts 559 normals 559
+CANDY Candy_2_Wrap_0 mat M_Candy_CandyPurple centre (3.28, 0.97, -2.10) scale (1.30, 1.30, 1.30) verts 196 normals 196
+CANDY Candy_2_Wrap_1 mat M_Candy_CandyPurple centre (2.56, 0.97, -2.10) scale (1.30, 1.30, 1.30) verts 196 normals 196
+CANDY Candy_3 mat M_Candy_GumdropGreen centre (-2.92, 0.97, -2.10) scale (1.73, 1.35, 1.50) verts 559 normals 559
+CANDY Candy_3_Wrap_0 mat M_Candy_GumdropGreen centre (-2.56, 0.97, -2.10) scale (1.30, 1.30, 1.30) verts 196 normals 196
+CANDY Candy_3_Wrap_1 mat M_Candy_GumdropGreen centre (-3.28, 0.97, -2.10) scale (1.30, 1.30, 1.30) verts 196 normals 196
+CANDY JellyBean_0 mat M_Candy_CandyOrange centre (1.20, 0.88, -2.06) scale (1.60, 0.90, 0.90) verts 559 normals 559
+CANDY JellyBean_1 mat M_Candy_CandyBlue centre (0.88, 0.88, -2.06) scale (1.60, 0.90, 0.90) verts 561 normals 561
+CANDY JellyBean_2 mat M_Candy_CandyPurple centre (0.56, 0.88, -2.06) scale (1.60, 0.90, 0.90) verts 559 normals 559
+SHELF SR_Bookshelf_Module_East_2 parent Environment centre (4.03, 2.12, 0.62) size (0.94, 3.55, 1.82)
+SHELF SR_Bookshelf_Module_West_1 parent Environment centre (4.03, 2.12, -1.22) size (0.94, 3.55, 1.82)
+SHELF SR_Bookshelf_Module_West_2 parent Environment centre (4.03, 2.12, -3.06) size (0.94, 3.55, 1.82)
+SHELF SR_Emblem_Open_Book parent Environment centre (0.28, 5.27, 4.32) size (0.60, 0.55, 0.05)
+SHELF SR_Emblem_Open_Book.001 parent Environment centre (-0.28, 5.27, 4.32) size (0.60, 0.55, 0.05)
+SHELF SR_HEADER_BOOK_ICON_Cover parent SR_DASHBOARD_ROOT centre (2.97, 4.07, -2.03) size (0.36, 0.24, 0.03)
+SHELF SR_HEADER_BOOK_ICON_Leaf parent SR_DASHBOARD_ROOT centre (2.84, 4.20, -1.98) size (0.13, 0.14, 0.01)
+SHELF SR_HEADER_BOOK_ICON_PageL parent SR_DASHBOARD_ROOT centre (3.05, 4.08, -2.00) size (0.16, 0.20, 0.05)
+SHELF SR_HEADER_BOOK_ICON_PageR parent SR_DASHBOARD_ROOT centre (2.89, 4.08, -2.00) size (0.16, 0.20, 0.05)

@@ -1,0 +1,28 @@
+lowResolutionForAspectRatios : False
+forceLowResolutionAspectRatios : False
+selectedSizeIndex : 19
+currentGameViewSize : UnityEditor.GameViewSize
+targetRenderSize : (720.00, 1520.00)
+targetInContent : (x:-288.00, y:-608.00, width:576.00, height:1216.00)
+targetInView : (x:-73.05, y:-939.27, width:1152.00, height:2432.00)
+deviceFlippedTargetInView : (x:-73.05, y:1492.73, width:1152.00, height:-2432.00)
+targetInParent : (x:-72.05, y:-892.27, width:1152.00, height:2432.00)
+targetDisplay : 0
+targetSize : (720.00, 1520.00)
+minSize : (200.00, 200.00)
+maxSize : (4000.00, 4000.00)
+kWarningSize : (400.00, 140.00)
+prevSizeGroupType : 3
+m_SelectedSizes : System.Int32[]
+m_LastWindowPixelSize : (1227.50, 806.50)
+m_LowResolutionForAspectRatios : System.Boolean[]
+m_SizeChangeID : 275
+Size.baseText : Huawei Y5 2019 (720x1520)
+Size.sizeType : FixedResolution
+Size.width : 720
+Size.height : 1520
+Size.isFreeAspectRatio : False
+Size.aspectRatio : 0,4736842
+Size.displayText : Huawei Y5 2019 (720x1520)
+Size.sizeText : 720x1520
+Screen : 720 x 1520; Portrait

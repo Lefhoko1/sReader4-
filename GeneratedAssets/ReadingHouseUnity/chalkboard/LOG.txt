@@ -1,0 +1,21 @@
+C1_room_before_board: state Exploring, board open False, signed in True, assignment -
+C2a_turning: state Exploring, board open True, signed in True, assignment -
+C2b_turning: state Exploring, board open True, signed in True, assignment -
+C2_board_student_home: state Exploring, board open True, signed in True, assignment -
+tap 'nav-academies' at screen (541.12, 65.09) -> board (492.50, 880.00) -> picks 'nav-academies'
+C3_board_academies: state Exploring, board open True, signed in True, assignment -
+tap 'nav-assignments' at screen (978.88, 65.09) -> board (1107.50, 880.00) -> picks 'nav-assignments'
+C4_board_assignments: state Exploring, board open True, signed in True, assignment -
+tap 'profile-button' at screen (281.68, 566.69) -> board (128.00, 175.00) -> picks 'profile-button'
+C4b_board_profile: state Exploring, board open True, signed in True, assignment -
+tap 'back-button' on Profile (ProfileReal.uxml) -> picks 'back-button'
+C4c_board_back_home: state Exploring, board open True, signed in True, assignment -
+database: 2 assignments; readable & not submitted: Titration
+Play solo handled by the house: True
+C5_walking_to_dashboard: state Exploring, board open False, signed in True, assignment Titration
+C6_reading_attempt_at_dashboard: state Reading, board open False, signed in True, assignment Titration
+stones on the rug: 18
+no key word on this page opened an activity
+C7_word_activity_open: state Reading, board open False, signed in True, assignment Titration
+C8_back_at_dashboard: state Reading, board open False, signed in True, assignment Titration
+activity open after Back: False

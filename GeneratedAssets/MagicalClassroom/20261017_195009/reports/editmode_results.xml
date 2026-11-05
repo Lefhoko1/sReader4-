@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="35" result="Passed" total="35" passed="35" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0,3974423">
+  <test-suite type="TestSuite" id="1000" name="sReader4" fullname="sReader4" runstate="Runnable" testcasecount="35" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.397442" total="35" passed="35" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1043" name="SReader.Game.Trek.Tests.dll" fullname="C:/Users/11113930/sReader4/Library/ScriptAssemblies/SReader.Game.Trek.Tests.dll" runstate="Runnable" testcasecount="35" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.367543" total="35" passed="35" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="33644" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1044" name="SReader" fullname="SReader" runstate="Runnable" testcasecount="35" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.365244" total="35" passed="35" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1045" name="Game" fullname="SReader.Game" runstate="Runnable" testcasecount="35" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.363608" total="35" passed="35" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1046" name="Trek" fullname="SReader.Game.Trek" runstate="Runnable" testcasecount="35" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.361549" total="35" passed="35" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1047" name="Tests" fullname="SReader.Game.Trek.Tests" runstate="Runnable" testcasecount="35" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.359560" total="35" passed="35" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1037" name="GateSolvingTests" fullname="SReader.Game.Trek.Tests.GateSolvingTests" classname="SReader.Game.Trek.Tests.GateSolvingTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.128560" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1039" name="Define_OrdinalOrderedMatch" fullname="SReader.Game.Trek.Tests.GateSolvingTests.Define_OrdinalOrderedMatch" methodname="Define_OrdinalOrderedMatch" classname="SReader.Game.Trek.Tests.GateSolvingTests" runstate="Runnable" seed="626770697" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.028613" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1038" name="Fill_CaseInsensitive_OrderedMatch" fullname="SReader.Game.Trek.Tests.GateSolvingTests.Fill_CaseInsensitive_OrderedMatch" methodname="Fill_CaseInsensitive_OrderedMatch" classname="SReader.Game.Trek.Tests.GateSolvingTests" runstate="Runnable" seed="1908541938" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.006458" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1041" name="Hint2_RevealsHalfLetters_LocksTwoPieces_EliminatesTwoWrongImages" fullname="SReader.Game.Trek.Tests.GateSolvingTests.Hint2_RevealsHalfLetters_LocksTwoPieces_EliminatesTwoWrongImages" methodname="Hint2_RevealsHalfLetters_LocksTwoPieces_EliminatesTwoWrongImages" classname="SReader.Game.Trek.Tests.GateSolvingTests" runstate="Runnable" seed="566455328" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.033142" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1040" name="Illustrate_MatchesCorrectImageOnly" fullname="SReader.Game.Trek.Tests.GateSolvingTests.Illustrate_MatchesCorrectImageOnly" methodname="Illustrate_MatchesCorrectImageOnly" classname="SReader.Game.Trek.Tests.GateSolvingTests" runstate="Runnable" seed="884798677" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.001525" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1042" name="SamePiecesWrongOrder_GivesTheNudge" fullname="SReader.Game.Trek.Tests.GateSolvingTests.SamePiecesWrongOrder_GivesTheNudge" methodname="SamePiecesWrongOrder_GivesTheNudge" classname="SReader.Game.Trek.Tests.GateSolvingTests" runstate="Runnable" seed="325030315" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.002698" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1002" name="SampleBookContractTests" fullname="SReader.Game.Trek.Tests.SampleBookContractTests" classname="SReader.Game.Trek.Tests.SampleBookContractTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.151544" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1009" name="NatureBook_BuildsExpectedGatesInPassageOrder" fullname="SReader.Game.Trek.Tests.SampleBookContractTests.NatureBook_BuildsExpectedGatesInPassageOrder" methodname="NatureBook_BuildsExpectedGatesInPassageOrder" classname="SReader.Game.Trek.Tests.SampleBookContractTests" runstate="Runnable" seed="1578799699" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.101684" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-suite type="ParameterizedMethod" id="1005" name="SampleBook_Deserialises_WithTwoPagesAndFourActivities" fullname="SReader.Game.Trek.Tests.SampleBookContractTests.SampleBook_Deserialises_WithTwoPagesAndFourActivities" classname="SReader.Game.Trek.Tests.SampleBookContractTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.023366" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1003" name="SampleBook_Deserialises_WithTwoPagesAndFourActivities(&quot;Books/SampleBook_Nature_MeadowAtDawn&quot;)" fullname="SReader.Game.Trek.Tests.SampleBookContractTests.SampleBook_Deserialises_WithTwoPagesAndFourActivities(&quot;Books/SampleBook_Nature_MeadowAtDawn&quot;)" methodname="SampleBook_Deserialises_WithTwoPagesAndFourActivities" classname="SReader.Game.Trek.Tests.SampleBookContractTests" runstate="Runnable" seed="1996461091" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.006769" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1004" name="SampleBook_Deserialises_WithTwoPagesAndFourActivities(&quot;Books/SampleBook_Science_FirstMachines&quot;)" fullname="SReader.Game.Trek.Tests.SampleBookContractTests.SampleBook_Deserialises_WithTwoPagesAndFourActivities(&quot;Books/SampleBook_Science_FirstMachines&quot;)" methodname="SampleBook_Deserialises_WithTwoPagesAndFourActivities" classname="SReader.Game.Trek.Tests.SampleBookContractTests" runstate="Runnable" seed="122516713" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.014509" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-suite type="ParameterizedMethod" id="1008" name="SampleBook_RoundTrips_PreservingActivities" fullname="SReader.Game.Trek.Tests.SampleBookContractTests.SampleBook_RoundTrips_PreservingActivities" classname="SReader.Game.Trek.Tests.SampleBookContractTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.020144" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1006" name="SampleBook_RoundTrips_PreservingActivities(&quot;Books/SampleBook_Nature_MeadowAtDawn&quot;)" fullname="SReader.Game.Trek.Tests.SampleBookContractTests.SampleBook_RoundTrips_PreservingActivities(&quot;Books/SampleBook_Nature_MeadowAtDawn&quot;)" methodname="SampleBook_RoundTrips_PreservingActivities" classname="SReader.Game.Trek.Tests.SampleBookContractTests" runstate="Runnable" seed="240968031" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.014734" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1007" name="SampleBook_RoundTrips_PreservingActivities(&quot;Books/SampleBook_Science_FirstMachines&quot;)" fullname="SReader.Game.Trek.Tests.SampleBookContractTests.SampleBook_RoundTrips_PreservingActivities(&quot;Books/SampleBook_Science_FirstMachines&quot;)" methodname="SampleBook_RoundTrips_PreservingActivities" classname="SReader.Game.Trek.Tests.SampleBookContractTests" runstate="Runnable" seed="1806561347" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.003835" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-case id="1010" name="ScienceBook_BuildsExpectedGatesInPassageOrder" fullname="SReader.Game.Trek.Tests.SampleBookContractTests.ScienceBook_BuildsExpectedGatesInPassageOrder" methodname="ScienceBook_BuildsExpectedGatesInPassageOrder" classname="SReader.Game.Trek.Tests.SampleBookContractTests" runstate="Runnable" seed="51217928" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.002481" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1011" name="TrailBuilderTests" fullname="SReader.Game.Trek.Tests.TrailBuilderTests" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.025756" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1014" name="Build_ContentWithNoActivities_IsValidReadingOnlyTrail_NotFallback" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_ContentWithNoActivities_IsValidReadingOnlyTrail_NotFallback" methodname="Build_ContentWithNoActivities_IsValidReadingOnlyTrail_NotFallback" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="88736856" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.003310" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1021" name="Build_DefaultsBiome_WhenBlank" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_DefaultsBiome_WhenBlank" methodname="Build_DefaultsBiome_WhenBlank" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="1717510857" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000579" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1013" name="Build_EmptyPages_ReturnsTextOnlyFallback" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_EmptyPages_ReturnsTextOnlyFallback" methodname="Build_EmptyPages_ReturnsTextOnlyFallback" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="1817989046" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000430" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1018" name="Build_MapsActivityTypesToGateTypes" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_MapsActivityTypesToGateTypes" methodname="Build_MapsActivityTypesToGateTypes" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="416100422" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000771" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1017" name="Build_MultipleActivities_GatesInPassageOrder" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_MultipleActivities_GatesInPassageOrder" methodname="Build_MultipleActivities_GatesInPassageOrder" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="1374213789" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.001811" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1012" name="Build_NullContent_ReturnsTextOnlyFallback" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_NullContent_ReturnsTextOnlyFallback" methodname="Build_NullContent_ReturnsTextOnlyFallback" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="6627786" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000679" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1016" name="Build_OneActivityWord_CreatesOneGate_AtCorrectCharIndex" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_OneActivityWord_CreatesOneGate_AtCorrectCharIndex" methodname="Build_OneActivityWord_CreatesOneGate_AtCorrectCharIndex" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="2137427438" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.002081" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1015" name="Build_PassageText_IsVerbatimConcatenationOfTokens" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_PassageText_IsVerbatimConcatenationOfTokens" methodname="Build_PassageText_IsVerbatimConcatenationOfTokens" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="2105266061" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000641" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1020" name="Build_ResolvesGateSentenceIndex_AcrossTwoSentences" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_ResolvesGateSentenceIndex_AcrossTwoSentences" methodname="Build_ResolvesGateSentenceIndex_AcrossTwoSentences" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="828158089" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.002404" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1019" name="Build_UsesTokenPoints_AndClampsNegativeToZero" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.Build_UsesTokenPoints_AndClampsNegativeToZero" methodname="Build_UsesTokenPoints_AndClampsNegativeToZero" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="883288440" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000732" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1022" name="BuildFromPlainText_ProducesReadingOnlyTrail_WithSentences" fullname="SReader.Game.Trek.Tests.TrailBuilderTests.BuildFromPlainText_ProducesReadingOnlyTrail_WithSentences" methodname="BuildFromPlainText_ProducesReadingOnlyTrail_WithSentences" classname="SReader.Game.Trek.Tests.TrailBuilderTests" runstate="Runnable" seed="2014335446" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.002563" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1023" name="TrekSessionTests" fullname="SReader.Game.Trek.Tests.TrekSessionTests" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.047380" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1034" name="Checkpoint_RoundTrips_GateStates_DeferredQueue_HintsAndTime" fullname="SReader.Game.Trek.Tests.TrekSessionTests.Checkpoint_RoundTrips_GateStates_DeferredQueue_HintsAndTime" methodname="Checkpoint_RoundTrips_GateStates_DeferredQueue_HintsAndTime" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="728963426" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.016468" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1024" name="Gates_OpenInPassageOrder_AndSolveAdvances" fullname="SReader.Game.Trek.Tests.TrekSessionTests.Gates_OpenInPassageOrder_AndSolveAdvances" methodname="Gates_OpenInPassageOrder_AndSolveAdvances" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="1045275168" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000990" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1035" name="HintReport_ListsPerWordUsage" fullname="SReader.Game.Trek.Tests.TrekSessionTests.HintReport_ListsPerWordUsage" methodname="HintReport_ListsPerWordUsage" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="498361644" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.003816" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1030" name="R10_DeferralAlone_CostsNothing" fullname="SReader.Game.Trek.Tests.TrekSessionTests.R10_DeferralAlone_CostsNothing" methodname="R10_DeferralAlone_CostsNothing" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="552034169" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000596" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1029" name="R10_Marks_ScaleToAssignmentMaxScore" fullname="SReader.Game.Trek.Tests.TrekSessionTests.R10_Marks_ScaleToAssignmentMaxScore" methodname="R10_Marks_ScaleToAssignmentMaxScore" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="905727084" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000794" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1033" name="R11_PausedTimer_DoesNotTick" fullname="SReader.Game.Trek.Tests.TrekSessionTests.R11_PausedTimer_DoesNotTick" methodname="R11_PausedTimer_DoesNotTick" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="1074012547" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000682" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1032" name="R11_TimerExpiry_AutoDefers_WithSmallPenalty_TrekContinues" fullname="SReader.Game.Trek.Tests.TrekSessionTests.R11_TimerExpiry_AutoDefers_WithSmallPenalty_TrekContinues" methodname="R11_TimerExpiry_AutoDefers_WithSmallPenalty_TrekContinues" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="1692606320" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.001709" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1025" name="R6_CannotComplete_WhileAnyGateUnsolved" fullname="SReader.Game.Trek.Tests.TrekSessionTests.R6_CannotComplete_WhileAnyGateUnsolved" methodname="R6_CannotComplete_WhileAnyGateUnsolved" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="629133660" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.005024" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1026" name="R7_DeferredGates_RequeueAtCleanupCamp_InOrder" fullname="SReader.Game.Trek.Tests.TrekSessionTests.R7_DeferredGates_RequeueAtCleanupCamp_InOrder" methodname="R7_DeferredGates_RequeueAtCleanupCamp_InOrder" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="698049168" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.001216" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1027" name="R7_TrailWithTwoDeferredGates_CannotComplete_UntilCampClearsThem" fullname="SReader.Game.Trek.Tests.TrekSessionTests.R7_TrailWithTwoDeferredGates_CannotComplete_UntilCampClearsThem" methodname="R7_TrailWithTwoDeferredGates_CannotComplete_UntilCampClearsThem" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="826176094" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000855" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1028" name="R8_HintLadder_Deductions" fullname="SReader.Game.Trek.Tests.TrekSessionTests.R8_HintLadder_Deductions" methodname="R8_HintLadder_Deductions" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="2135906211" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.001247" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1031" name="Stars_DeriveFromFraction" fullname="SReader.Game.Trek.Tests.TrekSessionTests.Stars_DeriveFromFraction" methodname="Stars_DeriveFromFraction" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="1894436747" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.001456" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1036" name="TextOnlyTrail_ZeroGates_CanCompleteImmediately" fullname="SReader.Game.Trek.Tests.TrekSessionTests.TextOnlyTrail_ZeroGates_CanCompleteImmediately" methodname="TextOnlyTrail_ZeroGates_CanCompleteImmediately" classname="SReader.Game.Trek.Tests.TrekSessionTests" runstate="Runnable" seed="1246966251" result="Passed" start-time="2026-10-17 21:07:54Z" end-time="2026-10-17 21:07:54Z" duration="0.000919" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: C:/Users/11113930/AppData/LocalLow/DefaultCompany/sReader4\TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

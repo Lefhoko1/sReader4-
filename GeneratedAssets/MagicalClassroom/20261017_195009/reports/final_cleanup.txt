@@ -1,0 +1,1 @@
+Legacy scene geometry preserved as Backup prefabs and in scene checkpoints, excluded from the active scene to reduce loaded meshes. Current render geometry remains linked to the Blender FBX.

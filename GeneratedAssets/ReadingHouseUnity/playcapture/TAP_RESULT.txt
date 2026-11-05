@@ -1,0 +1,1 @@
+Log in panel tap opened the card.

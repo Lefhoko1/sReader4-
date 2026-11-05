@@ -1,0 +1,3 @@
+Default startup scene (build index 0): Assets/Scenes/SC_LibraryRedesignPreview.unity
+Existing application scenes retained after the classroom.
+APK command explicitly builds the classroom as its only scene.

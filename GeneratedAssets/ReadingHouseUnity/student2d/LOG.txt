@@ -1,0 +1,11 @@
+01_outside_idle_front: facing Front, walking False, sprite idle_front_12, flipX False, pos (2.80, 0.02, 7.18), stick (0.00, 0.00), walker on True, cam fwd (0.22, 0.00, -0.98), state Outside, door open False
+02_walk_right: facing Right, walking True, sprite walk_right_01, flipX False, pos (1.59, 0.03, 6.99), stick (1.00, 0.00), walker on True, cam fwd (0.03, 0.00, -1.00), state Exploring, door open False
+03_walk_left: facing Left, walking True, sprite walk_right_11, flipX True, pos (2.42, 0.03, 7.52), stick (-1.00, 0.00), walker on True, cam fwd (0.00, 0.00, -1.00), state Exploring, door open False
+04_walk_toward_camera: facing Front, walking True, sprite walk_toward_03, flipX False, pos (2.67, 0.03, 8.17), stick (0.00, -1.00), walker on True, cam fwd (0.00, 0.00, -1.00), state Exploring, door open False
+05_walk_away: facing Back, walking True, sprite walk_away_21, flipX False, pos (3.20, 0.03, 6.57), stick (0.00, 1.00), walker on True, cam fwd (0.00, 0.00, -1.00), state Exploring, door open False
+06_stopped_facing_away_idle_back: facing Back, walking False, sprite idle_back_08, flipX False, pos (3.20, 0.03, 6.57), stick (0.00, 0.00), walker on True, cam fwd (0.00, 0.00, -1.00), state Exploring, door open False
+07_walking_into_house: facing Back, walking True, sprite walk_away_12, flipX False, pos (0.01, 0.34, 3.05), stick (0.00, 1.00), walker on True, cam fwd (0.00, 0.00, -1.00), state Exploring, door open True
+08_inside_idle: facing Back, walking False, sprite idle_back_06, flipX False, pos (0.01, 0.34, 3.05), stick (0.00, 0.00), walker on True, cam fwd (0.00, 0.00, -1.00), state Exploring, door open True
+09_reading_view_back_at_dashboard: facing Back, walking False, sprite idle_back_26, flipX False, pos (0.01, 0.34, 3.05), stick (0.00, 0.00), walker on True, cam fwd (0.00, 0.00, -1.00), state Exploring, door open True
+10_point_at_dashboard: facing Back, walking False, sprite point_back_10, flipX False, pos (0.01, 0.34, 3.05), stick (0.00, 0.00), walker on True, cam fwd (0.00, 0.00, -1.00), state Exploring, door open True
+11_encourager_after_cheer: facing Back, walking False, sprite idle_back_29, flipX False, pos (0.01, 0.34, 3.05), stick (0.00, 0.00), walker on True, cam fwd (0.00, 0.00, -1.00), state Exploring, door open True

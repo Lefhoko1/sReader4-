@@ -1,0 +1,4 @@
+A1_inside_by_chalkboard: state Exploring, board open False, live assignment -, sentence 1, chalkboard SR_CHALKBOARD_Slate
+A2_assignments_board_open: state Exploring, board open True, live assignment -, sentence 1, chalkboard SR_CHALKBOARD_Slate
+A3_assignment_chosen_on_chalkboard: state Exploring, board open False, live assignment Meadow at Dawn, sentence 2, chalkboard SR_CHALKBOARD_Slate
+A4_reading_the_assignment: state Reading, board open False, live assignment Meadow at Dawn, sentence 2, chalkboard SR_CHALKBOARD_Slate

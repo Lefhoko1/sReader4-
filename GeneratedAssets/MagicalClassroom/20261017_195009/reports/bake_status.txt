@@ -1,0 +1,1 @@
+Completed. Lightmap atlases: 2; probes: 27

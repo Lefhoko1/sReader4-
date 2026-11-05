@@ -1,0 +1,3 @@
+Frame Debugger enabled for Editor player.
+Event count: 0
+Captured event records: 0

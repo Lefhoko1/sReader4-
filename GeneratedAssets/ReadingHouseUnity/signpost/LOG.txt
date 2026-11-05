@@ -1,0 +1,7 @@
+01_outside_signpost: state Outside, inside door unlocked False, board open False, focus 0,00, student (2.80, 0.02, 7.18)
+tap Library at screen (369.95, 418.25)
+02_library_sign_knocked: state Outside, inside door unlocked False, board open False, focus 0,00, student (2.80, 0.02, 7.18)
+03_walking_in: state Outside, inside door unlocked False, board open False, focus 0,00, student (2.80, 0.02, 7.18)
+04_library_on_board: state Outside, inside door unlocked True, board open False, focus 0,00, student (2.80, 0.02, 7.18)
+05_my_progress_on_board: state Exploring, inside door unlocked True, board open True, focus 1,00, student (0.05, 0.34, 2.58)
+06_settings_on_board: state Exploring, inside door unlocked True, board open True, focus 1,00, student (0.05, 0.34, 2.58)

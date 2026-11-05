@@ -1,0 +1,278 @@
+DrawingMultiCustomPost
+DrawingMultiCustom
+DrawingMultiCustomPre
+Drawing
+BatchRendererGroup.AddReader
+BatchRendererGroup.AcquireWrite
+BatchRendererGroup.IncorporateCacheDelta
+BatchRendererGroup.InvalidateStaleBatches
+BatchRendererGroup.InvalidateMetadata
+BatchRendererGroup.GetCacheDeltaWritable
+BatchRendererGroup.UpdateMetadataCache
+BatchRendererGroup.CreateMissingMetadata
+GUITexture.Draw
+BatchRenderer.RenderSingle
+BatchRenderer.Flush
+InstantiateMultiple.DeserializeClones.BatchJob
+Graphics.DrawProcedural
+Mesh.DrawVBO
+Billboard.BatchJob
+StaticBatching.MakeBatch
+StaticBatching.KickOffBatching
+StaticBatching.Finish
+StaticBatching.CollectBatches
+StaticBatching.BakeTransforms
+StaticBatching.SortObjects
+StaticBatching.FilterObjects
+MeshSkinning.GPUBatchedSkinInPlace
+MeshSkinning.GPUBatchedSkin
+MeshSkinning.GPUBatchedBlendShape
+MeshSkinning.GPUBatchedCopy
+MeshSkinning.SkinOnGPUNonBatched
+Shadows.ExecuteDrawShadows
+Shadows.PrepareDrawShadows
+Shadows.DrawSRPBatcher
+Shadows.Draw
+SRPBatcher.DrawCommandsInjection
+RenderLoop.ScheduleDraw
+RenderLoop.DrawSRPBatcher
+RenderLoop.Draw
+SRPBatcher.InstancedFill
+SRPBatcher.Flush
+BatchQuery.ResultsJob
+BatchDeleteObjectsThread
+BatchDeleteObjects
+DrawBuffersBatchMode
+Batch.FillInstanceProperties
+Batch.DrawInstanced
+Batch.ProcessGeometryJob
+Batch.DrawDynamic
+Batch.DrawStatic
+MaterialRenderer.MeshDraw
+Gfx.DrawDynamic
+Physics.SyncBatchQueries
+Physics.SyncRigidbodyTransformBatchJob
+Physics.SyncColliderTransformBatchJob
+BatchQuery.ExecuteSpherecastJob
+BatchQuery.ExecuteRaycastJob
+BatchQuery.ExecuteOverlapSphereJob
+BatchQuery.ExecuteOverlapCapsuleJob
+BatchQuery.ExecuteOverlapBoxJob
+BatchQuery.ExecuteClosestPointJob
+BatchQuery.ExecuteCapsulecastJob
+BatchQuery.ExecuteBoxcastJob
+LowLevelPhysics2D.DrawWorld.CompileDrawResults
+LowLevelPhysics2D.DrawWorld.UpdateLifetimes
+LowLevelPhysics2D.PhysicsJoint.Debug.Draw
+LowLevelPhysics2D.PhysicsJoint.DestroyBatch
+LowLevelPhysics2D.PhysicsShape.Debug.Draw
+LowLevelPhysics2D.PhysicsShape.DestroyBatch
+LowLevelPhysics2D.PhysicsShape.CreateShapeBatch
+LowLevelPhysics2D.PhysicsBody.Debug.Draw
+LowLevelPhysics2D.PhysicsBody.SetBatchTransform,
+LowLevelPhysics2D.PhysicsBody.SetBatchImpulse
+LowLevelPhysics2D.PhysicsBody.SetBatchForce
+LowLevelPhysics2D.PhysicsBody.SetBatchVelocity
+LowLevelPhysics2D.PhysicsBody.DestroyBatch
+LowLevelPhysics2D.PhysicsBody.CreateBatch
+LowLevelPhysics2D.PhysicsWorld.DrawTransformAxis
+LowLevelPhysics2D.PhysicsWorld.DrawBox
+LowLevelPhysics2D.PhysicsWorld.DrawLineStrip
+LowLevelPhysics2D.PhysicsWorld.DrawLine
+LowLevelPhysics2D.PhysicsWorld.DrawPoint
+LowLevelPhysics2D.PhysicsWorld.DrawCapsule
+LowLevelPhysics2D.PhysicsWorld.DrawCircle
+LowLevelPhysics2D.PhysicsWorld.DrawSegmentGeometry
+LowLevelPhysics2D.PhysicsWorld.DrawPolygonGeometry
+LowLevelPhysics2D.PhysicsWorld.DrawCapsuleGeometry
+LowLevelPhysics2D.PhysicsWorld.DrawCircleGeometry
+LowLevelPhysics2D.PhysicsWorld.Draw
+LowLevelPhysics2D.PhysicsWorld.SimulateBatch
+LowLevelPhysics2D.PhysicsComposer.AddRawGeometryPath
+TilemapRenderer.PrepareSRPBatchMode
+TilemapRenderer.CleanupSRPBatchJob
+TilemapRenderer.ExecuteSRPBatchJob
+TilemapRenderer.ScheduleSRPBatch
+VFX.ParticleSystem.BatchUpdateStrip
+VFX.ParticleSystem.BatchReadbackCount
+VFX.ParticleSystem.BatchReadbackBounds
+VFX.ParticleSystem.BatchUpdate
+VFX.ParticleSystem.BatchInit
+VFX.ParticleSystem.BatchCopyDeadListCount
+VFX.ParticleSystem.BatchUploadVisibleIndirectionBuffer
+VFX.ParticleSystem.BatchUploadStepData
+VFX.GetBatchedEffectInfo
+VFXBatch.PostUpdate
+VFXBatch.PreUpdate
+VFXBatch.Update
+VirtualTexturingBatchUploader.UploadRectangle
+VirtualTexturingBatchUploader.FlushUploads
+UGUI.Rendering.UpdateBatches
+Canvas.RenderSubBatch
+Canvas.PrepareBatches
+Canvas.PrepareBatchesJob
+Canvas.BuildBatch
+NavMesh.DebugDraw
+ParticleSystem.Draw
+ParticleSystem.DrawSystem
+DetailInstances.BatchingWithCB
+QuadTreeBatchNode.Render
+DetailInstances.Batching
+UIR.DrawChain
+UIR.DrawRanges
+GizmoRenderer.RenderBatches
+GizmoManager.DrawAllGizmos
+SceneCamera.PrepareRenderBatch
+SceneCamera.RenderBatch
+Physics2D.DrawGizmoRigidbody2D
+Physics2D.DrawGizmoCustomCollider2D
+Physics2D.DrawGizmoCompositeCollider2D
+Physics2D.DrawGizmoPolygonCollider2D
+Physics2D.DrawGizmoBoxCollider2D
+Physics2D.DrawGizmoEdgeCollider2D
+Physics2D.DrawGizmoCapsuleCollider2D
+Physics2D.DrawGizmoCircleCollider2D
+AssetDatabase.V2.RemoteAssetCacheGetArtifactFromCacheServerBatched
+Physics2D.DrawGizmoTilemapCollider2D
+TimelineView.DrawLabels
+TimelineView.DrawMeshes
+TimelineView.Draw
+Physics.RecordShapeDraws
+Physics.IssueDraws
+Physics.DrawAllActors
+DSPGraph.JobBatchSubmit
+SRP Batcher Instances Count
+Standard Draw Calls Count
+Standard Indirect Draw Calls Count
+Standard Instanced Draw Calls Count
+SRP Batcher Draw Calls Count
+BRG Draw Calls Count
+BRG Indirect Draw Calls Count
+Null Geometry Draw Calls Count
+Null Geometry Indirect Draw Calls Count
+Dynamic Batches Count
+Dynamic Batched Draw Calls Count
+Dynamic Batched Triangles Count
+Dynamic Batched Vertices Count
+Static Batches Count
+Static Batched Draw Calls Count
+Static Batched Triangles Count
+Static Batched Vertices Count
+Instanced Batches Count
+Instanced Batched Draw Calls Count
+Instanced Batched Triangles Count
+Instanced Batched Vertices Count
+Dynamic Batching Time
+GPUResidentDrawer:FindRenderersFromMaterialOrMeshJob
+GPUResidentDrawer:FindRenderersFromMaterialOrMeshJob (Burst)
+GPUResidentDrawer:FindRenderersFromMaterialOrMeshJob (Cleanup)
+PrefixSumDrawsAndInstances
+PrefixSumDrawsAndInstances (Burst)
+PrefixSumDrawsAndInstances (Cleanup)
+AllocateBinsPerBatch
+AllocateBinsPerBatch (Burst)
+AllocateBinsPerBatch (Cleanup)
+PrefixSumDrawInstancesJob
+PrefixSumDrawInstancesJob (Burst)
+PrefixSumDrawInstancesJob (Cleanup)
+BuildDrawListsJob
+BuildDrawListsJob (Burst)
+BuildDrawListsJob (Cleanup)
+DrawCommandOutputPerBatch
+DrawCommandOutputPerBatch (Burst)
+DrawCommandOutputPerBatch (Cleanup)
+FindDrawInstancesJob
+FindDrawInstancesJob (Burst)
+FindDrawInstancesJob (Cleanup)
+DrawCommandOutputFiltering
+DrawCommandOutputFiltering (Burst)
+DrawCommandOutputFiltering (Cleanup)
+FindMaterialDrawInstancesJob
+FindMaterialDrawInstancesJob (Burst)
+FindMaterialDrawInstancesJob (Cleanup)
+InstanceDataSystem:CalculateInterpolatedLightAndOcclusionProbesBatchJob
+InstanceDataSystem:CalculateInterpolatedLightAndOcclusionProbesBatchJob (Burst)
+InstanceDataSystem:CalculateInterpolatedLightAndOcclusionProbesBatchJob (Cleanup)
+ParallelSortExtensions:RadixSortBatchPrefixSumJob
+ParallelSortExtensions:RadixSortBatchPrefixSumJob (Burst)
+ParallelSortExtensions:RadixSortBatchPrefixSumJob (Cleanup)
+CPUBackend:BatchNormalizationJob
+CPUBackend:BatchNormalizationJob (Burst)
+CPUBackend:BatchNormalizationJob (Cleanup)
+CPUBackend:BatchMatrixMultiplyJob
+CPUBackend:BatchMatrixMultiplyJob (Burst)
+CPUBackend:BatchMatrixMultiplyJob (Cleanup)
+CPUBackend:BatchMatrixMultiplyWithPluginJob
+CPUBackend:BatchMatrixMultiplyWithPluginJob (Burst)
+CPUBackend:BatchMatrixMultiplyWithPluginJob (Cleanup)
+BoneDeformBatchedJob
+BoneDeformBatchedJob (Burst)
+BoneDeformBatchedJob (Cleanup)
+SkinDeformBatchedJob`1
+SkinDeformBatchedJob`1 (Burst)
+SkinDeformBatchedJob`1 (Cleanup)
+UIR.MeshGenerationContext.DrawVectorImage
+MeshGenerator.DrawRectangle
+MeshGenerator.DrawBorder
+MeshGenerator.DrawVectorImage
+MeshGenerator.DrawRectangleRepeat
+UIR.BeforeDraw
+DrawDepthNormalPrepass
+Inl_DrawDepthNormalPrepass
+DrawOpaqueObjects
+Inl_DrawOpaqueObjects
+DrawTransparentObjects
+Inl_DrawTransparentObjects
+DrawScreenSpaceUI
+Inl_DrawScreenSpaceUI
+DrawMotionVectors
+Inl_DrawMotionVectors
+DrawFullscreen
+Inl_DrawFullscreen
+DrawSkybox
+Inl_DrawSkybox
+DrawNormal2DPass
+Inl_DrawNormal2DPass
+DrawLight2DPass
+Inl_DrawLight2DPass
+DrawShadow2DPass
+Inl_DrawShadow2DPass
+DrawRenderer2DPass
+Inl_DrawRenderer2DPass
+Draw Upscale
+Inl_Draw Upscale
+DrawScreenSpaceUIPass
+Inl_DrawScreenSpaceUIPass
+Draw Main Light Shadowmap
+Inl_Draw Main Light Shadowmap
+Draw Additional Lights Shadowmap
+Inl_Draw Additional Lights Shadowmap
+Draw XR Occlusion Mesh
+Inl_Draw XR Occlusion Mesh
+Draw Depth Only
+Inl_Draw Depth Only
+DrawObjectsPass
+Inl_DrawObjectsPass
+DrawObjectsWithRenderingLayersPass
+Inl_DrawObjectsWithRenderingLayersPass
+DrawSkyboxPass
+Inl_DrawSkyboxPass
+DecalCreateDrawCallSystem.Execute
+Inl_DecalCreateDrawCallSystem.Execute
+DecalDrawErrorSystem.Execute
+Inl_DecalDrawErrorSystem.Execute
+DecalDrawScreenSpaceSystem.Execute
+Inl_DecalDrawScreenSpaceSystem.Execute
+Draw Decal Screen Space
+Inl_Draw Decal Screen Space
+DrawGizmos
+Inl_DrawGizmos
+DrawWireOverlay
+Inl_DrawWireOverlay
+EditorApplication.update: UnityEditor.Rendering.Universal.SceneViewDrawMode.UpdateSceneViewStates
+BaseDeformationSystem.GetSpriteSkinBatchData
+BaseDeformationSystem.SetBatchDeformableBufferAndLocalAABB
+BaseDeformationSystem.SetBatchBoneTransformIndexAndLocalAABB
+PostLateUpdate.UIElementsRenderBatchModeOffscreen
+PostLateUpdate.BatchModeUpdate
+StaticBatching.Combine

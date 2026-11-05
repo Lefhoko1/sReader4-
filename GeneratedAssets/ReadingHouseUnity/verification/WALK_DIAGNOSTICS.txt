@@ -1,0 +1,29 @@
+student root 'SR_CHARACTER_STUDENT_OPT' pos (0.00, 0.34, 0.57) rot (0.00, 180.00, 0.00) lossyScale (1.16, 1.16, 1.16) parent Characters
+cc center (0.00, 1.17, 0.00) height 2,3 radius 0,42 enabled True bounds (0.00, 1.70, 0.57) (0.97, 2.67, 0.97)
+start (2.80, 0.02, 7.18)
+ray down at (2.80, 0.02, 7.18):
+   hit SR_Garden_Moss (MeshCollider) at y 0,015 normal (0.00, 1.00, 0.00)
+   hit SR_Garden_Plinth (MeshCollider) at y -0,040 normal (0.00, 1.00, 0.00)
+ray down at (0.00, 0.54, 4.18):
+   hit SR_Front_Eaves (MeshCollider) at y 4,540 normal (0.00, 1.00, 0.00)
+   hit SR_Entry_spandrel (MeshCollider) at y 4,500 normal (0.00, 1.00, 0.00)
+   hit SR_Roof_Gable (MeshCollider) at y 4,500 normal (0.00, 1.00, 0.00)
+   hit SR_Entry_Carved_Portal (MeshCollider) at y 3,987 normal (0.05, 0.92, -0.38)
+   hit Front Door (BoxCollider) at y 3,340 normal (0.00, 1.00, 0.00)
+   hit SR_Entrance_Step_0 (MeshCollider) at y 0,330 normal (0.00, 1.00, 0.00)
+   hit SR_Foundation (MeshCollider) at y 0,240 normal (0.00, 1.00, 0.00)
+   hit SR_Garden_Moss (MeshCollider) at y 0,015 normal (0.00, 1.00, 0.00)
+   hit SR_Garden_Plinth (MeshCollider) at y -0,040 normal (0.00, 1.00, 0.00)
+ray down at (0.00, 0.34, 0.57):
+   hit SR_Interior_Ceiling (MeshCollider) at y 4,580 normal (0.00, 1.00, 0.00)
+   hit SR_CHARACTER_STUDENT_OPT (CharacterController) at y 2,764 normal (0.00, 1.00, 0.00)
+   hit SR_Rug (MeshCollider) at y 0,376 normal (0.00, 1.00, 0.00)
+   hit SR_Wood_Floor (MeshCollider) at y 0,330 normal (0.00, 1.00, 0.00)
+   hit SR_Foundation (MeshCollider) at y 0,240 normal (0.00, 1.00, 0.00)
+   hit SR_Garden_Moss (MeshCollider) at y 0,015 normal (0.00, 1.00, 0.00)
+   hit SR_Garden_Plinth (MeshCollider) at y -0,040 normal (0.00, 1.00, 0.00)
+mesh colliders in scene: 383
+SR_Foundation: collider yes enabled True mesh SR_Foundation v72 readable False bounds Center: (0.00, 0.12, 0.00), Extents: (4.83, 0.12, 4.33) rot (0.00, 0.00, 0.00) scale (1.00, 1.00, 1.00)
+SR_Wood_Floor: collider yes enabled True mesh SR_Wood_Floor v72 readable False bounds Center: (0.00, 0.29, 0.00), Extents: (4.36, 0.04, 3.86) rot (0.00, 0.00, 0.00) scale (1.00, 1.00, 1.00)
+SR_Garden_Plinth: collider yes enabled True mesh SR_Garden_Plinth v72 readable False bounds Center: (0.00, -0.25, 0.50), Extents: (7.30, 0.21, 8.10) rot (0.00, 0.00, 0.00) scale (1.00, 1.00, 1.00)
+SR_Garden_Moss: collider yes enabled True mesh SR_Garden_Moss v72 readable False bounds Center: (0.00, -0.03, 0.50), Extents: (7.15, 0.04, 7.95) rot (0.00, 0.00, 0.00) scale (1.00, 1.00, 1.00)
