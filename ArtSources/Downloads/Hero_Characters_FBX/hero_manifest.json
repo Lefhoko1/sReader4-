@@ -1,0 +1,96 @@
+[
+  {
+    "name": "SM_Book_Hero_Open",
+    "tris": 1816,
+    "kind": "hero",
+    "status": "OK",
+    "children": [
+      "SM_Book_Hero_Open_Gem",
+      "SM_Book_Hero_Open_Pages",
+      "SOCKET_PageCenter",
+      "SOCKET_SpineGem"
+    ]
+  },
+  {
+    "name": "SM_Librarian_Desk",
+    "tris": 1404,
+    "kind": "hero",
+    "status": "OK",
+    "children": [
+      "SOCKET_Bell",
+      "SOCKET_Books",
+      "SOCKET_Lamp"
+    ]
+  },
+  {
+    "name": "SM_Fountain_Dry",
+    "tris": 1604,
+    "kind": "hero",
+    "status": "OK",
+    "children": [
+      "SOCKET_KnowledgeGlow"
+    ]
+  },
+  {
+    "name": "SM_Fountain_Flowing",
+    "tris": 1736,
+    "kind": "hero",
+    "status": "OK",
+    "children": [
+      "SM_Fountain_Flowing_Water_Glass",
+      "SOCKET_KnowledgeGlow.001",
+      "SOCKET_WaterFX"
+    ]
+  },
+  {
+    "name": "SM_Door_Rune_Sealed",
+    "tris": 1540,
+    "kind": "hero",
+    "status": "OK",
+    "children": [
+      "SM_Door_Rune_Sealed_RunePlate_01",
+      "SM_Door_Rune_Sealed_RunePlate_02",
+      "SM_Door_Rune_Sealed_RunePlate_03",
+      "SM_Door_Rune_Sealed_RunePlate_04",
+      "SM_Door_Rune_Sealed_RunePlate_05",
+      "SM_Door_Rune_Sealed_RunePlate_06",
+      "SOCKET_UnsealFX"
+    ]
+  },
+  {
+    "name": "SM_Lexicon_Pedestal",
+    "tris": 864,
+    "kind": "hero",
+    "status": "OK",
+    "children": [
+      "SM_Lexicon_Pedestal_Ring",
+      "SOCKET_BookRest",
+      "SOCKET_WordOrbit"
+    ]
+  },
+  {
+    "name": "SK_Owl",
+    "tris": 1696,
+    "kind": "character",
+    "status": "OK",
+    "clips": [
+      "Owl_Fly_Short",
+      "Owl_Hint_Point",
+      "Owl_Idle_Perch",
+      "Owl_Idle_Sleep",
+      "Owl_React_Happy",
+      "Owl_React_Lean"
+    ]
+  },
+  {
+    "name": "SK_BookSpirit",
+    "tris": 212,
+    "kind": "character",
+    "status": "OK",
+    "clips": [
+      "Spirit_Flutter_Happy",
+      "Spirit_Idle_Float",
+      "Spirit_Talk"
+    ]
+  }
+]
